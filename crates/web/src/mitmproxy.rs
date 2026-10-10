@@ -143,7 +143,7 @@ pub fn inspect_mitmproxy_capture(
         .filter_map(|&ord| all_records.get(ord).cloned())
         .collect();
 
-    let mut limitations: Vec<String> = vec![
+    let limitations: Vec<String> = vec![
         "This is retained producer evidence, without live browser transaction IDs, scenario provenance, execution attribution or deployment authenticity. Recorded URLs are never fetched.".to_string(),
         "Every record is decoded before selection; no partial success is returned on malformed input or a resource limit.".to_string(),
         "Known authentication headers/cookies and explicitly marked literal values are excluded. Unknown extension names do not establish sensitivity.".to_string(),

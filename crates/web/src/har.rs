@@ -5,7 +5,6 @@ use regex::Regex;
 use serde::{Deserialize, Serialize};
 use serde_json::{Map, Value};
 use sha2::{Digest, Sha256};
-use tracewise_domain::canonical::canonical_sha256;
 use tracewise_domain::evidence::{
     create_evidence, DigestSha256, Evidence, EvidenceAuthority, EvidenceConfidence,
     EvidenceLocation, EvidenceObservation, EvidenceProvider, EvidenceSubject,
@@ -145,9 +144,8 @@ fn is_har_credential(pointer: &str, parent: &Map<String, Value>) -> bool {
         }
     }
 
-    let is_cookie = (pointer.starts_with("/request/cookies/") || pointer.starts_with("/response/cookies/"))
-        && pointer.ends_with("/value");
-    is_cookie
+    (pointer.starts_with("/request/cookies/") || pointer.starts_with("/response/cookies/"))
+        && pointer.ends_with("/value")
 }
 
 fn is_har_transport_url(pointer: &str, parent: Option<&Map<String, Value>>) -> bool {
@@ -453,7 +451,7 @@ pub fn inspect_har_capture(
     });
 
     let mut container_raw = raw.clone();
-    if let Some(log_obj) = container_raw.get_mut("log").and_then(|v| v.as_mut_object()) {
+    if let Some(log_obj) = container_raw.get_mut("log").and_then(|v| v.as_object_mut()) {
         log_obj.insert("entries".to_string(), Value::Null);
     }
     let container_projected = project_har_value(&container_raw, &input.sensitive_values, true)?;

@@ -99,6 +99,7 @@ async fn execute_tool(
         "import_evidence_bundle" => handle_import_evidence_bundle(session, args),
         "get_evidence_bundle" => handle_get_evidence_bundle(session, args),
         "compare_bundles" => handle_compare_bundles(session, args),
+        "inspect_web_network_capture" => handle_inspect_web_network_capture(session, args),
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
@@ -420,6 +421,32 @@ fn handle_compare_bundles(
         },
     )
     .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+
+    let _ = session.ledger.lock().unwrap().record(ev.clone());
+
+    let val = serde_json::to_value(&ev)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_inspect_web_network_capture(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input: tracewise_web::har::InspectWebNetworkCaptureInput = serde_json::from_value(args.clone())
+        .map_err(|e| McpError::invalid_params(format!("Invalid inspect_web_network_capture input: {e}"), None))?;
+
+    let ev = match input.format.as_str() {
+        "har" => tracewise_web::har::inspect_har_capture(input)
+            .map_err(|e| McpError::invalid_params(e.to_string(), None))?,
+        "mitmproxy" => tracewise_web::mitmproxy::inspect_mitmproxy_capture(input)
+            .map_err(|e| McpError::invalid_params(e.to_string(), None))?,
+        _ => return Err(McpError::invalid_params(
+            format!("Unsupported format: '{}'. Supported formats are 'har' and 'mitmproxy'.", input.format),
+            None,
+        )),
+    };
 
     let _ = session.ledger.lock().unwrap().record(ev.clone());
 

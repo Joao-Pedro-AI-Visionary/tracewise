@@ -8,6 +8,7 @@ authors.workspace = true
 [dependencies]
 tracewise-domain = { path = "../domain" }
 tracewise-contracts = { path = "../contracts" }
+tracewise-web = { path = "../web" }
 rmcp.workspace = true
 tokio.workspace = true
 serde.workspace = true

@@ -1981,6 +1981,7 @@ dependencies = [
  "tokio",
  "tracewise-contracts",
  "tracewise-domain",
+ "tracewise-web",
  "tracing",
 ]
 

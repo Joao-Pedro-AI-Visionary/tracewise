@@ -1,0 +1,449 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_4ced44265011cef738bf90c66b05060e84f98b1409fb2a2c92aec691bbb40d58\",\"subject\":{\"name\":\"demo.mitm\",\"digest\":{\"sha256\":\"a649d207be255dd717db45828d59a6a9e6069a22790fe69b93595239de51372c\"},\"format\":\"file\",\"architecture\":null,\"local_path\":\"/workspace/tracewise/fixtures/web/demo.mitm\"},\"provider\":{\"id\":\"mitmproxy-native-tnetstring\",\"name\":\"REA offline native mitmproxy adapter\",\"version\":\"12.2.3\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_web_network_capture\",\"parameters\":{\"capture_path\":\"/workspace/tracewise/fixtures/web/demo.mitm\",\"format\":\"mitmproxy\",\"record_ordinals\":[0],\"sensitive_value_count\":0},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/tracewise/fixtures/web/demo.mitm\",\"sha256\":\"a649d207be255dd717db45828d59a6a9e6069a22790fe69b93595239de51372c\",\"bytes\":1744},\"format\":\"mitmproxy\",\"decoder\":{\"id\":\"mitmproxy-native-tnetstring\",\"name\":\"REA offline native mitmproxy adapter\",\"version\":\"12.2.3\"},\"container\":{\"reported\":null,\"numeric_literals\":[],\"redactions\":[],\"records_pointer\":null},\"total_records\":1,\"records\":[{\"ordinal\":0,\"location\":{\"kind\":\"byte-range\",\"offset\":0,\"bytes\":1744},\"reported\":{\"websocket\":null,\"response\":{\"reason\":\"OK\",\"status_code\":200,\"timestamp_end\":1791675012.0379794,\"timestamp_start\":1791675012.0379791,\"trailers\":null,\"content\":\"{\\\"hello\\\": \\\"world\\\"}\",\"headers\":[[\"Content-Type\",\"application/json\"],[\"Set-Cookie\",null],[\"content-length\",\"18\"]],\"http_version\":\"HTTP/1.1\"},\"request\":{\"path\":\"/api/test\",\"authority\":\"\",\"scheme\":\"http\",\"method\":\"GET\",\"port\":80,\"host\":\"example.com\",\"timestamp_end\":1791675012.0365493,\"timestamp_start\":1791675012.0365493,\"trailers\":null,\"content\":\"\",\"headers\":[[\"Authorization\",null],[\"Accept\",\"application/json\"],[\"content-length\",\"0\"]],\"http_version\":\"HTTP/1.1\"},\"backup\":null,\"timestamp_created\":1791675012.0365286,\"comment\":\"\",\"metadata\":{},\"marked\":\"\",\"is_replay\":null,\"intercepted\":false,\"server_conn\":{\"via\":null,\"timestamp_tcp_setup\":null,\"address\":[\"example.com\",80],\"timestamp_tls_setup\":null,\"timestamp_end\":null,\"timestamp_start\":null,\"sni\":null,\"tls_version\":null,\"cipher_list\":[],\"cipher\":null,\"alpn_offers\":[],\"alpn\":null,\"certificate_list\":[],\"tls\":false,\"error\":null,\"transport_protocol\":\"tcp\",\"id\":\"9f4c401c-83f1-419a-bf03-4c293173651c\",\"sockname\":null,\"peername\":null},\"client_conn\":{\"proxy_mode\":\"regular\",\"mitmcert\":null,\"timestamp_tls_setup\":null,\"timestamp_end\":null,\"timestamp_start\":1791675012.0365036,\"sni\":null,\"tls_version\":null,\"cipher_list\":[],\"cipher\":null,\"alpn_offers\":[],\"alpn\":null,\"certificate_list\":[],\"tls\":false,\"error\":null,\"transport_protocol\":\"tcp\",\"id\":\"dc40db08-5550-4267-bd7c-a99996544ae0\",\"sockname\":[\"127.0.0.1\",8080],\"peername\":[\"127.0.0.1\",12345]},\"error\":null,\"id\":\"b5184836-158a-444e-befb-b0429f18e5e0\",\"type\":\"http\",\"version\":21},\"binary_fields\":[{\"pointer\":\"/response/reason\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"T0s=\",\"bytes\":2,\"sha256\":\"565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3\"},{\"pointer\":\"/response/content\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"eyJoZWxsbyI6ICJ3b3JsZCJ9\",\"bytes\":18,\"sha256\":\"5f8f04f6a3a892aaabbddb6cf273894493773960d4a325b105fee46eef4304f1\"},{\"pointer\":\"/response/headers/0/0\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"Q29udGVudC1UeXBl\",\"bytes\":12,\"sha256\":\"85eb00994d09e4d052a0480491f909eaf1674566972877d1a5932d0f014444b7\"},{\"pointer\":\"/response/headers/0/1\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"YXBwbGljYXRpb24vanNvbg==\",\"bytes\":16,\"sha256\":\"bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea\"},{\"pointer\":\"/response/headers/1/0\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"U2V0LUNvb2tpZQ==\",\"bytes\":10,\"sha256\":\"678b7f08b25dbfafa0cda7d8634b8741b20bb0a0636d8aa4defecc4004a3d0ae\"},{\"pointer\":\"/response/headers/1/1\",\"representation\":\"producer-bytes\",\"state\":\"redacted\",\"content_base64\":null,\"bytes\":null,\"sha256\":null},{\"pointer\":\"/response/headers/2/0\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"Y29udGVudC1sZW5ndGg=\",\"bytes\":14,\"sha256\":\"67853e7f375520a3fdf6629db771eb31fc8af955236085281d1d4f857b374108\"},{\"pointer\":\"/response/headers/2/1\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"MTg=\",\"bytes\":2,\"sha256\":\"4ec9599fc203d176a301536c2e091a19bc852759b255bd6818810a42c5fed14a\"},{\"pointer\":\"/response/http_version\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"SFRUUC8xLjE=\",\"bytes\":8,\"sha256\":\"c7b7e1d08e579f897ed5222e28f251b4b02106cb067eeac4aaed7d8ae44586c9\"},{\"pointer\":\"/request/path\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"L2FwaS90ZXN0\",\"bytes\":9,\"sha256\":\"8b410ca4d423589ae1a59a7fe7681d8d4f7b9fe5c35c64f216a31c1ecb18500b\"},{\"pointer\":\"/request/authority\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"\",\"bytes\":0,\"sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"},{\"pointer\":\"/request/scheme\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"aHR0cA==\",\"bytes\":4,\"sha256\":\"e0603c499aae47eb89343ad0ef3178e044c62e70ae2309b35591d1d49a3211ec\"},{\"pointer\":\"/request/method\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"R0VU\",\"bytes\":3,\"sha256\":\"14e30cd163c732912e048c4c837e15c4e90c062ebb795ab947d57706e2d10dd8\"},{\"pointer\":\"/request/content\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"\",\"bytes\":0,\"sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"},{\"pointer\":\"/request/headers/0/0\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"QXV0aG9yaXphdGlvbg==\",\"bytes\":13,\"sha256\":\"ca5839e38a15433e62b39767d6a86eaafba17ea6b3ea61e3b89e2ac46baa874c\"},{\"pointer\":\"/request/headers/0/1\",\"representation\":\"producer-bytes\",\"state\":\"redacted\",\"content_base64\":null,\"bytes\":null,\"sha256\":null},{\"pointer\":\"/request/headers/1/0\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"QWNjZXB0\",\"bytes\":6,\"sha256\":\"89713b9c9c1b8f659c9f49db25e4a47886dd673fee248c3f650391f09a759cef\"},{\"pointer\":\"/request/headers/1/1\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"YXBwbGljYXRpb24vanNvbg==\",\"bytes\":16,\"sha256\":\"bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea\"},{\"pointer\":\"/request/headers/2/0\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"Y29udGVudC1sZW5ndGg=\",\"bytes\":14,\"sha256\":\"67853e7f375520a3fdf6629db771eb31fc8af955236085281d1d4f857b374108\"},{\"pointer\":\"/request/headers/2/1\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"MA==\",\"bytes\":1,\"sha256\":\"5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9\"},{\"pointer\":\"/request/http_version\",\"representation\":\"producer-bytes\",\"state\":\"retained\",\"content_base64\":\"SFRUUC8xLjE=\",\"bytes\":8,\"sha256\":\"c7b7e1d08e579f897ed5222e28f251b4b02106cb067eeac4aaed7d8ae44586c9\"}],\"numeric_literals\":[{\"pointer\":\"/response/status_code\",\"producer_type\":\"integer\",\"literal\":\"200\"},{\"pointer\":\"/response/timestamp_end\",\"producer_type\":\"float\",\"literal\":\"1791675012.0379794\"},{\"pointer\":\"/response/timestamp_start\",\"producer_type\":\"float\",\"literal\":\"1791675012.0379791\"},{\"pointer\":\"/request/port\",\"producer_type\":\"integer\",\"literal\":\"80\"},{\"pointer\":\"/request/timestamp_end\",\"producer_type\":\"float\",\"literal\":\"1791675012.0365493\"},{\"pointer\":\"/request/timestamp_start\",\"producer_type\":\"float\",\"literal\":\"1791675012.0365493\"},{\"pointer\":\"/timestamp_created\",\"producer_type\":\"float\",\"literal\":\"1791675012.0365286\"},{\"pointer\":\"/server_conn/address/1\",\"producer_type\":\"integer\",\"literal\":\"80\"},{\"pointer\":\"/client_conn/timestamp_start\",\"producer_type\":\"float\",\"literal\":\"1791675012.0365036\"},{\"pointer\":\"/client_conn/sockname/1\",\"producer_type\":\"integer\",\"literal\":\"8080\"},{\"pointer\":\"/client_conn/peername/1\",\"producer_type\":\"integer\",\"literal\":\"12345\"},{\"pointer\":\"/version\",\"producer_type\":\"integer\",\"literal\":\"21\"}],\"redactions\":[{\"pointer\":\"/response/headers/1/1\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/headers/0/1\",\"reason\":\"transport-credential\"}],\"limitations\":[\"Fields are original native states without FlowReader migration. Binary fields contain exact producer bytes; reported UTF-8 strings for those fields are derived display views. Unknown flow/version extensions are retained without interpretation.\"]}],\"runtime_attribution\":\"unknown\",\"limitations\":[\"This is retained producer evidence, without live browser transaction IDs, scenario provenance, execution attribution or deployment authenticity. Recorded URLs are never fetched.\",\"Every record is decoded before selection; no partial success is returned on malformed input or a resource limit.\",\"Known authentication headers/cookies and explicitly marked literal values are excluded. Unknown extension names do not establish sensitivity.\",\"A 32 MiB input, 96 MiB reply and 64-level nesting budget bound complete evidence. HAR uses a 192 MiB Node old-generation heap; native decoding uses a 768 MiB Linux address-space limit. Each owned command has a 30-second deadline with independent cleanup.\"]},\"confidence\":\"observed\",\"authority\":\"historical-reference\",\"environment\":null,\"limitations\":[\"This is retained producer evidence, without live browser transaction IDs, scenario provenance, execution attribution or deployment authenticity. Recorded URLs are never fetched.\",\"Every record is decoded before selection; no partial success is returned on malformed input or a resource limit.\",\"Known authentication headers/cookies and explicitly marked literal values are excluded. Unknown extension names do not establish sensitivity.\",\"A 32 MiB input, 96 MiB reply and 64-level nesting budget bound complete evidence. HAR uses a 192 MiB Node old-generation heap; native decoding uses a 768 MiB Linux address-space limit. Each owned command has a 30-second deadline with independent cleanup.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/tracewise/fixtures/web/demo.mitm\"}],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_4ced44265011cef738bf90c66b05060e84f98b1409fb2a2c92aec691bbb40d58",
+    "subject": {
+      "name": "demo.mitm",
+      "digest": {
+        "sha256": "a649d207be255dd717db45828d59a6a9e6069a22790fe69b93595239de51372c"
+      },
+      "format": "file",
+      "architecture": null,
+      "local_path": "/workspace/tracewise/fixtures/web/demo.mitm"
+    },
+    "provider": {
+      "id": "mitmproxy-native-tnetstring",
+      "name": "REA offline native mitmproxy adapter",
+      "version": "12.2.3"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis",
+    "operation": "inspect_web_network_capture",
+    "parameters": {
+      "capture_path": "/workspace/tracewise/fixtures/web/demo.mitm",
+      "format": "mitmproxy",
+      "record_ordinals": [
+        0
+      ],
+      "sensitive_value_count": 0
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "artifact": {
+        "path": "/workspace/tracewise/fixtures/web/demo.mitm",
+        "sha256": "a649d207be255dd717db45828d59a6a9e6069a22790fe69b93595239de51372c",
+        "bytes": 1744
+      },
+      "format": "mitmproxy",
+      "decoder": {
+        "id": "mitmproxy-native-tnetstring",
+        "name": "REA offline native mitmproxy adapter",
+        "version": "12.2.3"
+      },
+      "container": {
+        "reported": null,
+        "numeric_literals": [],
+        "redactions": [],
+        "records_pointer": null
+      },
+      "total_records": 1,
+      "records": [
+        {
+          "ordinal": 0,
+          "location": {
+            "kind": "byte-range",
+            "offset": 0,
+            "bytes": 1744
+          },
+          "reported": {
+            "websocket": null,
+            "response": {
+              "reason": "OK",
+              "status_code": 200,
+              "timestamp_end": 1791675012.0379794,
+              "timestamp_start": 1791675012.0379791,
+              "trailers": null,
+              "content": "{\"hello\": \"world\"}",
+              "headers": [
+                [
+                  "Content-Type",
+                  "application/json"
+                ],
+                [
+                  "Set-Cookie",
+                  null
+                ],
+                [
+                  "content-length",
+                  "18"
+                ]
+              ],
+              "http_version": "HTTP/1.1"
+            },
+            "request": {
+              "path": "/api/test",
+              "authority": "",
+              "scheme": "http",
+              "method": "GET",
+              "port": 80,
+              "host": "example.com",
+              "timestamp_end": 1791675012.0365493,
+              "timestamp_start": 1791675012.0365493,
+              "trailers": null,
+              "content": "",
+              "headers": [
+                [
+                  "Authorization",
+                  null
+                ],
+                [
+                  "Accept",
+                  "application/json"
+                ],
+                [
+                  "content-length",
+                  "0"
+                ]
+              ],
+              "http_version": "HTTP/1.1"
+            },
+            "backup": null,
+            "timestamp_created": 1791675012.0365286,
+            "comment": "",
+            "metadata": {},
+            "marked": "",
+            "is_replay": null,
+            "intercepted": false,
+            "server_conn": {
+              "via": null,
+              "timestamp_tcp_setup": null,
+              "address": [
+                "example.com",
+                80
+              ],
+              "timestamp_tls_setup": null,
+              "timestamp_end": null,
+              "timestamp_start": null,
+              "sni": null,
+              "tls_version": null,
+              "cipher_list": [],
+              "cipher": null,
+              "alpn_offers": [],
+              "alpn": null,
+              "certificate_list": [],
+              "tls": false,
+              "error": null,
+              "transport_protocol": "tcp",
+              "id": "9f4c401c-83f1-419a-bf03-4c293173651c",
+              "sockname": null,
+              "peername": null
+            },
+            "client_conn": {
+              "proxy_mode": "regular",
+              "mitmcert": null,
+              "timestamp_tls_setup": null,
+              "timestamp_end": null,
+              "timestamp_start": 1791675012.0365036,
+              "sni": null,
+              "tls_version": null,
+              "cipher_list": [],
+              "cipher": null,
+              "alpn_offers": [],
+              "alpn": null,
+              "certificate_list": [],
+              "tls": false,
+              "error": null,
+              "transport_protocol": "tcp",
+              "id": "dc40db08-5550-4267-bd7c-a99996544ae0",
+              "sockname": [
+                "127.0.0.1",
+                8080
+              ],
+              "peername": [
+                "127.0.0.1",
+                12345
+              ]
+            },
+            "error": null,
+            "id": "b5184836-158a-444e-befb-b0429f18e5e0",
+            "type": "http",
+            "version": 21
+          },
+          "binary_fields": [
+            {
+              "pointer": "/response/reason",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "T0s=",
+              "bytes": 2,
+              "sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+            },
+            {
+              "pointer": "/response/content",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "eyJoZWxsbyI6ICJ3b3JsZCJ9",
+              "bytes": 18,
+              "sha256": "5f8f04f6a3a892aaabbddb6cf273894493773960d4a325b105fee46eef4304f1"
+            },
+            {
+              "pointer": "/response/headers/0/0",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "Q29udGVudC1UeXBl",
+              "bytes": 12,
+              "sha256": "85eb00994d09e4d052a0480491f909eaf1674566972877d1a5932d0f014444b7"
+            },
+            {
+              "pointer": "/response/headers/0/1",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "YXBwbGljYXRpb24vanNvbg==",
+              "bytes": 16,
+              "sha256": "bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea"
+            },
+            {
+              "pointer": "/response/headers/1/0",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "U2V0LUNvb2tpZQ==",
+              "bytes": 10,
+              "sha256": "678b7f08b25dbfafa0cda7d8634b8741b20bb0a0636d8aa4defecc4004a3d0ae"
+            },
+            {
+              "pointer": "/response/headers/1/1",
+              "representation": "producer-bytes",
+              "state": "redacted",
+              "content_base64": null,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "pointer": "/response/headers/2/0",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "Y29udGVudC1sZW5ndGg=",
+              "bytes": 14,
+              "sha256": "67853e7f375520a3fdf6629db771eb31fc8af955236085281d1d4f857b374108"
+            },
+            {
+              "pointer": "/response/headers/2/1",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "MTg=",
+              "bytes": 2,
+              "sha256": "4ec9599fc203d176a301536c2e091a19bc852759b255bd6818810a42c5fed14a"
+            },
+            {
+              "pointer": "/response/http_version",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "SFRUUC8xLjE=",
+              "bytes": 8,
+              "sha256": "c7b7e1d08e579f897ed5222e28f251b4b02106cb067eeac4aaed7d8ae44586c9"
+            },
+            {
+              "pointer": "/request/path",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "L2FwaS90ZXN0",
+              "bytes": 9,
+              "sha256": "8b410ca4d423589ae1a59a7fe7681d8d4f7b9fe5c35c64f216a31c1ecb18500b"
+            },
+            {
+              "pointer": "/request/authority",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "",
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "pointer": "/request/scheme",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "aHR0cA==",
+              "bytes": 4,
+              "sha256": "e0603c499aae47eb89343ad0ef3178e044c62e70ae2309b35591d1d49a3211ec"
+            },
+            {
+              "pointer": "/request/method",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "R0VU",
+              "bytes": 3,
+              "sha256": "14e30cd163c732912e048c4c837e15c4e90c062ebb795ab947d57706e2d10dd8"
+            },
+            {
+              "pointer": "/request/content",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "",
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "pointer": "/request/headers/0/0",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "QXV0aG9yaXphdGlvbg==",
+              "bytes": 13,
+              "sha256": "ca5839e38a15433e62b39767d6a86eaafba17ea6b3ea61e3b89e2ac46baa874c"
+            },
+            {
+              "pointer": "/request/headers/0/1",
+              "representation": "producer-bytes",
+              "state": "redacted",
+              "content_base64": null,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "pointer": "/request/headers/1/0",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "QWNjZXB0",
+              "bytes": 6,
+              "sha256": "89713b9c9c1b8f659c9f49db25e4a47886dd673fee248c3f650391f09a759cef"
+            },
+            {
+              "pointer": "/request/headers/1/1",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "YXBwbGljYXRpb24vanNvbg==",
+              "bytes": 16,
+              "sha256": "bacb769b46f6d169fb227ea026550f411d46cbe66a9c2a6ba36449c8cf8e4dea"
+            },
+            {
+              "pointer": "/request/headers/2/0",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "Y29udGVudC1sZW5ndGg=",
+              "bytes": 14,
+              "sha256": "67853e7f375520a3fdf6629db771eb31fc8af955236085281d1d4f857b374108"
+            },
+            {
+              "pointer": "/request/headers/2/1",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "MA==",
+              "bytes": 1,
+              "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+            },
+            {
+              "pointer": "/request/http_version",
+              "representation": "producer-bytes",
+              "state": "retained",
+              "content_base64": "SFRUUC8xLjE=",
+              "bytes": 8,
+              "sha256": "c7b7e1d08e579f897ed5222e28f251b4b02106cb067eeac4aaed7d8ae44586c9"
+            }
+          ],
+          "numeric_literals": [
+            {
+              "pointer": "/response/status_code",
+              "producer_type": "integer",
+              "literal": "200"
+            },
+            {
+              "pointer": "/response/timestamp_end",
+              "producer_type": "float",
+              "literal": "1791675012.0379794"
+            },
+            {
+              "pointer": "/response/timestamp_start",
+              "producer_type": "float",
+              "literal": "1791675012.0379791"
+            },
+            {
+              "pointer": "/request/port",
+              "producer_type": "integer",
+              "literal": "80"
+            },
+            {
+              "pointer": "/request/timestamp_end",
+              "producer_type": "float",
+              "literal": "1791675012.0365493"
+            },
+            {
+              "pointer": "/request/timestamp_start",
+              "producer_type": "float",
+              "literal": "1791675012.0365493"
+            },
+            {
+              "pointer": "/timestamp_created",
+              "producer_type": "float",
+              "literal": "1791675012.0365286"
+            },
+            {
+              "pointer": "/server_conn/address/1",
+              "producer_type": "integer",
+              "literal": "80"
+            },
+            {
+              "pointer": "/client_conn/timestamp_start",
+              "producer_type": "float",
+              "literal": "1791675012.0365036"
+            },
+            {
+              "pointer": "/client_conn/sockname/1",
+              "producer_type": "integer",
+              "literal": "8080"
+            },
+            {
+              "pointer": "/client_conn/peername/1",
+              "producer_type": "integer",
+              "literal": "12345"
+            },
+            {
+              "pointer": "/version",
+              "producer_type": "integer",
+              "literal": "21"
+            }
+          ],
+          "redactions": [
+            {
+              "pointer": "/response/headers/1/1",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/headers/0/1",
+              "reason": "transport-credential"
+            }
+          ],
+          "limitations": [
+            "Fields are original native states without FlowReader migration. Binary fields contain exact producer bytes; reported UTF-8 strings for those fields are derived display views. Unknown flow/version extensions are retained without interpretation."
+          ]
+        }
+      ],
+      "runtime_attribution": "unknown",
+      "limitations": [
+        "This is retained producer evidence, without live browser transaction IDs, scenario provenance, execution attribution or deployment authenticity. Recorded URLs are never fetched.",
+        "Every record is decoded before selection; no partial success is returned on malformed input or a resource limit.",
+        "Known authentication headers/cookies and explicitly marked literal values are excluded. Unknown extension names do not establish sensitivity.",
+        "A 32 MiB input, 96 MiB reply and 64-level nesting budget bound complete evidence. HAR uses a 192 MiB Node old-generation heap; native decoding uses a 768 MiB Linux address-space limit. Each owned command has a 30-second deadline with independent cleanup."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "historical-reference",
+    "environment": null,
+    "limitations": [
+      "This is retained producer evidence, without live browser transaction IDs, scenario provenance, execution attribution or deployment authenticity. Recorded URLs are never fetched.",
+      "Every record is decoded before selection; no partial success is returned on malformed input or a resource limit.",
+      "Known authentication headers/cookies and explicitly marked literal values are excluded. Unknown extension names do not establish sensitivity.",
+      "A 32 MiB input, 96 MiB reply and 64-level nesting budget bound complete evidence. HAR uses a 192 MiB Node old-generation heap; native decoding uses a 768 MiB Linux address-space limit. Each owned command has a 30-second deadline with independent cleanup."
+    ],
+    "locations": [
+      {
+        "kind": "artifact-path",
+        "path": "/workspace/tracewise/fixtures/web/demo.mitm"
+      }
+    ],
+    "evidence_links": []
+  }
+}
