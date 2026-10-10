@@ -1,0 +1,26 @@
+[package]
+name = "tracewise-web"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+tracewise-domain = { path = "../domain" }
+tracewise-contracts = { path = "../contracts" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_jcs = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+regex = { workspace = true }
+url = { workspace = true }
+base64 = { workspace = true }
+sourcemap = { workspace = true }
+image = { workspace = true }
+
+[dev-dependencies]
+jsonschema = { workspace = true }

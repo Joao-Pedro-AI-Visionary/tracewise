@@ -1,0 +1,111 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_08e8050c6ecd56071be3b5c18e40742c8db51ec35432d3936c589e5ee874374f\",\"subject\":null,\"provider\":{\"id\":\"rea-cdp-browser\",\"name\":\"REA Chrome DevTools Protocol observation provider\",\"version\":\"2\"},\"analysis_profile\":null,\"predicate_type\":\"rea.web-capture-diff\",\"operation\":\"compare_web_captures\",\"parameters\":{\"before_target_id\":\"allowed-page\",\"before_capture_ended_at\":\"2026-10-10T23:00:47.462Z\",\"after_target_id\":\"allowed-page-2\",\"after_capture_ended_at\":\"2026-10-10T23:00:48.000Z\"},\"raw_result\":null,\"normalized_result\":{\"overall_status\":\"changed\",\"before_target\":{\"target_id\":\"allowed-page\",\"url\":\"http://127.0.0.1:41939/app?token=frame-secret\"},\"after_target\":{\"target_id\":\"allowed-page-2\",\"url\":\"http://127.0.0.1:41939/app?token=frame-secret\"},\"dimensions\":{\"dom_structure\":{\"total_changes\":0,\"changes\":[],\"status\":\"unknown\",\"reason\":\"DOM or frame capture was incomplete in at least one observation.\"},\"scripts\":{\"status\":\"changed\",\"total_changes\":1,\"changes\":[{\"identity\":\"scr_3d56312547b70bc9623bf0ca3cffaa304f803a8a0dc1ea6f978d321a46f1f664\",\"change\":\"modified\"}],\"reason\":null},\"resources\":{\"total_changes\":0,\"changes\":[],\"status\":\"unknown\",\"reason\":\"Resource inventory was incomplete in at least one observation.\"},\"network\":{\"total_changes\":0,\"changes\":[],\"status\":\"unknown\",\"reason\":\"Network capture or selected JSON body-shape coverage is attach-window limited, unavailable, or incomplete.\"},\"metadata\":{\"total_changes\":0,\"changes\":[],\"status\":\"unknown\",\"reason\":\"Safe metadata capture was incomplete in at least one observation.\"},\"webmcp\":{\"total_changes\":0,\"changes\":[],\"status\":\"unknown\",\"reason\":\"WebMCP discovery was unavailable or incomplete in at least one capture.\"},\"accessibility\":{\"total_changes\":0,\"changes\":[],\"status\":\"unknown\",\"reason\":\"Accessibility tree or text capture was incomplete in at least one observation.\"},\"storage\":{\"total_changes\":0,\"changes\":[],\"status\":\"unknown\",\"reason\":\"Storage fingerprints, inventories, usage, or quota were unavailable or truncated in at least one observation.\"}},\"limitations\":[\"A changed status proves an observed difference; an unknown status means absence could not be established from capture completeness.\",\"Network comparison covers only activity observed after each CDP attachment.\",\"Accessibility roles, ignored state, text, and hierarchy are compared only when the accessibility tree was fully captured and text capture was selected and not truncated.\",\"Storage key inventories are compared only when selected and complete; usage and quota are compared only when reported. Redacted content is compared through complete SHA-256 fingerprints.\"]},\"confidence\":\"observed\",\"authority\":\"external-service\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"A changed status proves an observed difference; an unknown status means absence could not be established from capture completeness.\",\"Network comparison covers only activity observed after each CDP attachment.\",\"Accessibility roles, ignored state, text, and hierarchy are compared only when the accessibility tree was fully captured and text capture was selected and not truncated.\",\"Storage key inventories are compared only when selected and complete; usage and quota are compared only when reported. Redacted content is compared through complete SHA-256 fingerprints.\"],\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_08e8050c6ecd56071be3b5c18e40742c8db51ec35432d3936c589e5ee874374f",
+    "subject": null,
+    "provider": {
+      "id": "rea-cdp-browser",
+      "name": "REA Chrome DevTools Protocol observation provider",
+      "version": "2"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.web-capture-diff",
+    "operation": "compare_web_captures",
+    "parameters": {
+      "before_target_id": "allowed-page",
+      "before_capture_ended_at": "2026-10-10T23:00:47.462Z",
+      "after_target_id": "allowed-page-2",
+      "after_capture_ended_at": "2026-10-10T23:00:48.000Z"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "overall_status": "changed",
+      "before_target": {
+        "target_id": "allowed-page",
+        "url": "http://127.0.0.1:41939/app?token=frame-secret"
+      },
+      "after_target": {
+        "target_id": "allowed-page-2",
+        "url": "http://127.0.0.1:41939/app?token=frame-secret"
+      },
+      "dimensions": {
+        "dom_structure": {
+          "total_changes": 0,
+          "changes": [],
+          "status": "unknown",
+          "reason": "DOM or frame capture was incomplete in at least one observation."
+        },
+        "scripts": {
+          "status": "changed",
+          "total_changes": 1,
+          "changes": [
+            {
+              "identity": "scr_3d56312547b70bc9623bf0ca3cffaa304f803a8a0dc1ea6f978d321a46f1f664",
+              "change": "modified"
+            }
+          ],
+          "reason": null
+        },
+        "resources": {
+          "total_changes": 0,
+          "changes": [],
+          "status": "unknown",
+          "reason": "Resource inventory was incomplete in at least one observation."
+        },
+        "network": {
+          "total_changes": 0,
+          "changes": [],
+          "status": "unknown",
+          "reason": "Network capture or selected JSON body-shape coverage is attach-window limited, unavailable, or incomplete."
+        },
+        "metadata": {
+          "total_changes": 0,
+          "changes": [],
+          "status": "unknown",
+          "reason": "Safe metadata capture was incomplete in at least one observation."
+        },
+        "webmcp": {
+          "total_changes": 0,
+          "changes": [],
+          "status": "unknown",
+          "reason": "WebMCP discovery was unavailable or incomplete in at least one capture."
+        },
+        "accessibility": {
+          "total_changes": 0,
+          "changes": [],
+          "status": "unknown",
+          "reason": "Accessibility tree or text capture was incomplete in at least one observation."
+        },
+        "storage": {
+          "total_changes": 0,
+          "changes": [],
+          "status": "unknown",
+          "reason": "Storage fingerprints, inventories, usage, or quota were unavailable or truncated in at least one observation."
+        }
+      },
+      "limitations": [
+        "A changed status proves an observed difference; an unknown status means absence could not be established from capture completeness.",
+        "Network comparison covers only activity observed after each CDP attachment.",
+        "Accessibility roles, ignored state, text, and hierarchy are compared only when the accessibility tree was fully captured and text capture was selected and not truncated.",
+        "Storage key inventories are compared only when selected and complete; usage and quota are compared only when reported. Redacted content is compared through complete SHA-256 fingerprints."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "external-service",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "A changed status proves an observed difference; an unknown status means absence could not be established from capture completeness.",
+      "Network comparison covers only activity observed after each CDP attachment.",
+      "Accessibility roles, ignored state, text, and hierarchy are compared only when the accessibility tree was fully captured and text capture was selected and not truncated.",
+      "Storage key inventories are compared only when selected and complete; usage and quota are compared only when reported. Redacted content is compared through complete SHA-256 fingerprints."
+    ],
+    "locations": [],
+    "evidence_links": []
+  }
+}

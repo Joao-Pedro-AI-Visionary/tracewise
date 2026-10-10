@@ -2,9 +2,10 @@ use rmcp::model::Tool;
 use serde::Deserialize;
 
 pub const PHASE0_TOOLS_JSON: &str = include_str!("../phase0_tools.json");
+pub const PHASE1_TOOLS_JSON: &str = include_str!("../phase1_tools.json");
 
 #[derive(Debug, Deserialize)]
-struct Phase0ToolsContainer {
+struct ToolsContainer {
     tools: Vec<Tool>,
 }
 
@@ -13,16 +14,51 @@ pub fn phase0_tools_json() -> &'static str {
     PHASE0_TOOLS_JSON
 }
 
+/// Returns the raw JSON string of Phase 1 tools.
+pub fn phase1_tools_json() -> &'static str {
+    PHASE1_TOOLS_JSON
+}
+
 /// Returns the parsed serde_json::Value of phase0_tools.json.
 pub fn phase0_tools_value() -> serde_json::Value {
     serde_json::from_str(PHASE0_TOOLS_JSON).expect("phase0_tools.json must be valid JSON")
 }
 
+/// Returns the parsed serde_json::Value of phase1_tools.json.
+pub fn phase1_tools_value() -> serde_json::Value {
+    serde_json::from_str(PHASE1_TOOLS_JSON).expect("phase1_tools.json must be valid JSON")
+}
+
 /// Returns the 12 Phase 0 tools as rmcp::model::Tool instances with verbatim schemas.
 pub fn phase0_tools() -> Vec<Tool> {
-    let container: Phase0ToolsContainer = serde_json::from_str(PHASE0_TOOLS_JSON)
+    let container: ToolsContainer = serde_json::from_str(PHASE0_TOOLS_JSON)
         .expect("phase0_tools.json must deserialize to rmcp Tool definitions");
     container.tools
+}
+
+/// Returns the 15 Phase 1 tools as rmcp::model::Tool instances with verbatim schemas.
+pub fn phase1_tools() -> Vec<Tool> {
+    let container: ToolsContainer = serde_json::from_str(PHASE1_TOOLS_JSON)
+        .expect("phase1_tools.json must deserialize to rmcp Tool definitions");
+    container.tools
+}
+
+/// Returns all 27 tools (Phase 0 + Phase 1) as rmcp::model::Tool instances.
+pub fn all_tools() -> Vec<Tool> {
+    let mut tools = phase0_tools();
+    tools.extend(phase1_tools());
+    tools
+}
+
+/// Returns the combined parsed serde_json::Value for all 27 tools.
+pub fn all_tools_value() -> serde_json::Value {
+    let t0 = phase0_tools_value();
+    let t1 = phase1_tools_value();
+    let mut arr = t0["tools"].as_array().cloned().unwrap_or_default();
+    if let Some(arr1) = t1["tools"].as_array() {
+        arr.extend(arr1.iter().cloned());
+    }
+    serde_json::json!({ "tools": arr })
 }
 
 /// Returns the static list of the 12 Phase 0 tool names in canonical order.
@@ -41,4 +77,32 @@ pub fn phase0_tool_names() -> &'static [&'static str] {
         "update_unknown",
         "verify_unknown_resolution",
     ]
+}
+
+/// Returns the static list of the 15 Phase 1 tool names in canonical order.
+pub fn phase1_tool_names() -> &'static [&'static str] {
+    &[
+        "trace_web_module_imports",
+        "trace_web_source_location",
+        "observe_web_execution",
+        "inspect_web_event_listeners",
+        "inspect_web_network_capture",
+        "export_web_scripts",
+        "list_browser_targets",
+        "inspect_web_page",
+        "analyze_web_bundle",
+        "observe_web_session",
+        "discover_webmcp_tools",
+        "compare_web_captures",
+        "capture_web_screenshot",
+        "compare_web_screenshots",
+        "capture_browser_scenario",
+    ]
+}
+
+/// Returns the list of all 27 tool names in canonical order.
+pub fn all_tool_names() -> Vec<&'static str> {
+    let mut names = phase0_tool_names().to_vec();
+    names.extend_from_slice(phase1_tool_names());
+    names
 }

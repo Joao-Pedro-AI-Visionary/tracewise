@@ -1,7 +1,10 @@
 use std::path::{Path, PathBuf};
 
 use serde_json::Value;
-use tracewise_contracts::{phase0_tool_names, phase0_tools, phase0_tools_value};
+use tracewise_contracts::{
+    all_tool_names, all_tools, all_tools_value, phase0_tool_names, phase0_tools,
+    phase0_tools_value, phase1_tool_names, phase1_tools, phase1_tools_value,
+};
 
 fn fixture_path(name: &str) -> String {
     format!(
@@ -13,22 +16,44 @@ fn fixture_path(name: &str) -> String {
 
 #[test]
 fn test_tools_equal_fixtures() {
-    let fixture_raw = std::fs::read_to_string(fixture_path("phase0_tools.json"))
+    let fixture0_raw = std::fs::read_to_string(fixture_path("phase0_tools.json"))
         .expect("Failed to read fixtures/phase0_tools.json");
-    let fixture_val: Value =
-        serde_json::from_str(&fixture_raw).expect("Failed to parse fixtures/phase0_tools.json");
+    let fixture0_val: Value =
+        serde_json::from_str(&fixture0_raw).expect("Failed to parse fixtures/phase0_tools.json");
 
-    let contracts_val = phase0_tools_value();
+    let contracts0_val = phase0_tools_value();
     assert_eq!(
-        contracts_val, fixture_val,
+        contracts0_val, fixture0_val,
         "phase0_tools in contracts does not match fixtures/phase0_tools.json"
     );
 
-    let tools = phase0_tools();
-    assert_eq!(tools.len(), 12);
+    let tools0 = phase0_tools();
+    assert_eq!(tools0.len(), 12);
 
-    let names: Vec<&str> = tools.iter().map(|t| t.name.as_ref()).collect();
-    assert_eq!(names, phase0_tool_names());
+    let names0: Vec<&str> = tools0.iter().map(|t| t.name.as_ref()).collect();
+    assert_eq!(names0, phase0_tool_names());
+
+    let fixture1_raw = std::fs::read_to_string(fixture_path("phase1_tools.json"))
+        .expect("Failed to read fixtures/phase1_tools.json");
+    let fixture1_val: Value =
+        serde_json::from_str(&fixture1_raw).expect("Failed to parse fixtures/phase1_tools.json");
+
+    let contracts1_val = phase1_tools_value();
+    assert_eq!(
+        contracts1_val, fixture1_val,
+        "phase1_tools in contracts does not match fixtures/phase1_tools.json"
+    );
+
+    let tools1 = phase1_tools();
+    assert_eq!(tools1.len(), 15);
+
+    let names1: Vec<&str> = tools1.iter().map(|t| t.name.as_ref()).collect();
+    assert_eq!(names1, phase1_tool_names());
+
+    let all = all_tools();
+    assert_eq!(all.len(), 27);
+    let all_names: Vec<&str> = all.iter().map(|t| t.name.as_ref()).collect();
+    assert_eq!(all_names, all_tool_names());
 }
 
 #[test]
@@ -54,11 +79,17 @@ fn test_tools_equal_head_tools_if_exists() {
         .and_then(|v| v.as_array())
         .expect("Expected tools array in head tools.json");
 
-    let contracts_val = phase0_tools_value();
+    let contracts_val = all_tools_value();
     let contract_tools = contracts_val
         .get("tools")
         .and_then(|v| v.as_array())
         .expect("Expected tools array in contracts tools");
+
+    assert_eq!(
+        contract_tools.len(),
+        27,
+        "Expected 27 tools across Phase 0 and Phase 1"
+    );
 
     let head_map: std::collections::HashMap<&str, &Value> = head_tools
         .iter()
