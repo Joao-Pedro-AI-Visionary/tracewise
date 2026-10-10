@@ -1,13 +1,23 @@
 use serde_json::Value;
-use tracewise_domain::canonical::canonical_sha256;
+use tracewise_domain::canonical::{canonical_json, canonical_sha256};
 use tracewise_domain::evidence::Evidence;
+use tracewise_domain::ledger::EvidenceLedger;
+use tracewise_domain::parse_evidence_bundle;
 use tracewise_domain::unknown::{
     create_residual_unknown, update_residual_unknown, RecordUnknownInput, UpdateUnknownInput,
 };
 
+fn fixture_path(name: &str) -> String {
+    format!(
+        "{}/../../fixtures/{}",
+        env!("CARGO_MANIFEST_DIR"),
+        name
+    )
+}
+
 #[test]
 fn test_canonical_cases() {
-    let raw = std::fs::read_to_string("/workspace/tracewise/fixtures/canonical_cases.json")
+    let raw = std::fs::read_to_string(fixture_path("canonical_cases.json"))
         .expect("Failed to read canonical_cases.json");
     let cases: Vec<Value> = serde_json::from_str(&raw).expect("Failed to parse canonical_cases.json");
 
@@ -24,7 +34,7 @@ fn test_canonical_cases() {
 
 #[test]
 fn test_evidence_cases() {
-    let raw = std::fs::read_to_string("/workspace/tracewise/fixtures/evidence_cases.json")
+    let raw = std::fs::read_to_string(fixture_path("evidence_cases.json"))
         .expect("Failed to read evidence_cases.json");
     let cases: Vec<Value> = serde_json::from_str(&raw).expect("Failed to parse evidence_cases.json");
 
@@ -69,7 +79,7 @@ fn test_evidence_cases() {
 
 #[test]
 fn test_unknown_cases() {
-    let raw = std::fs::read_to_string("/workspace/tracewise/fixtures/unknown_cases.json")
+    let raw = std::fs::read_to_string(fixture_path("unknown_cases.json"))
         .expect("Failed to read unknown_cases.json");
     let cases: Value = serde_json::from_str(&raw).expect("Failed to parse unknown_cases.json");
 
@@ -153,5 +163,42 @@ fn test_unknown_cases() {
     assert_eq!(
         rev2.revision_digest,
         expected_rev2_val["revision_digest"].as_str().unwrap()
+    );
+}
+
+#[test]
+fn test_rea_bundle_roundtrip() {
+    let path = fixture_path("rea_bundle.json");
+    let file_bytes = std::fs::read(&path).expect("Failed to read rea_bundle.json");
+    let raw = String::from_utf8(file_bytes.clone()).expect("rea_bundle.json must be UTF-8");
+
+    let bundle = parse_evidence_bundle(&raw).expect("Failed to parse REA evidence bundle");
+
+    let mut ledger = EvidenceLedger::new();
+    ledger
+        .import(&bundle)
+        .expect("Failed to import REA evidence bundle into ledger");
+
+    for record in &bundle.records {
+        let computed_id = record
+            .compute_id()
+            .unwrap_or_else(|e| panic!("Failed to recompute evidence_id for {}: {e}", record.evidence_id));
+        assert_eq!(
+            computed_id, record.evidence_id,
+            "evidence_id re-authentication failed for {}",
+            record.evidence_id
+        );
+        assert!(
+            record.verify().is_ok(),
+            "evidence verify failed for {}",
+            record.evidence_id
+        );
+    }
+
+    let serialized = canonical_json(&bundle).expect("Failed to serialize evidence bundle");
+    assert_eq!(
+        serialized.as_bytes(),
+        file_bytes.as_slice(),
+        "re-serialized bundle must be byte-identical to fixtures/rea_bundle.json"
     );
 }
