@@ -1,0 +1,104 @@
+[
+  {
+    "name": "with_profile",
+    "evidence": {
+      "evidence_id": "ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757",
+      "subject": {
+        "name": "x.elf",
+        "digest": {
+          "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "format": "elf",
+        "architecture": "x86_64",
+        "local_path": "/tmp/x.elf"
+      },
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "11.1"
+      },
+      "analysis_profile": {
+        "provider": {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "11.1"
+        },
+        "parameters": {
+          "decompiler": "default",
+          "timeout_s": 30,
+          "flags": [
+            "a",
+            "b"
+          ]
+        },
+        "digest": "5ebbde264c065bc25258d100c31420606f9e882040c36836648a9ae76cb46cad"
+      },
+      "predicate_type": "rea.analysis",
+      "operation": "procedure_info",
+      "parameters": {
+        "address": "0x10"
+      },
+      "raw_result": null,
+      "normalized_result": {
+        "name": "f"
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [],
+      "locations": [],
+      "evidence_links": []
+    }
+  },
+  {
+    "name": "with_profile_2",
+    "evidence": {
+      "evidence_id": "ev_b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54",
+      "subject": {
+        "name": "x.elf",
+        "digest": {
+          "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "format": "elf",
+        "architecture": "x86_64",
+        "local_path": "/tmp/x.elf"
+      },
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "11.1"
+      },
+      "analysis_profile": {
+        "provider": {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "11.1"
+        },
+        "parameters": {
+          "decompiler": "default",
+          "timeout_s": 30,
+          "flags": [
+            "a",
+            "b"
+          ]
+        },
+        "digest": "5ebbde264c065bc25258d100c31420606f9e882040c36836648a9ae76cb46cad"
+      },
+      "predicate_type": "rea.analysis",
+      "operation": "procedure_info",
+      "parameters": {
+        "address": "0x10"
+      },
+      "raw_result": null,
+      "normalized_result": {
+        "name": "g"
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [],
+      "locations": [],
+      "evidence_links": []
+    }
+  }
+]

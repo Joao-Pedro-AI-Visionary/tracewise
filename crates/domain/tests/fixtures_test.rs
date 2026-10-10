@@ -202,3 +202,84 @@ fn test_rea_bundle_roundtrip() {
         "re-serialized bundle must be byte-identical to fixtures/rea_bundle.json"
     );
 }
+
+#[test]
+fn test_profile_evidence_cases() {
+    let raw = std::fs::read_to_string(fixture_path("profile_evidence_cases.json"))
+        .expect("Failed to read profile_evidence_cases.json");
+    let cases: Vec<Value> =
+        serde_json::from_str(&raw).expect("Failed to parse profile_evidence_cases.json");
+
+    for case in cases {
+        let name = case["name"].as_str().unwrap();
+        let ev_val = &case["evidence"];
+        let evidence: Evidence = serde_json::from_value(ev_val.clone())
+            .unwrap_or_else(|e| panic!("Failed to deserialize evidence in case '{name}': {e}"));
+
+        // 1. Evidence id matches
+        let computed_id = evidence
+            .compute_id()
+            .unwrap_or_else(|e| panic!("Failed to compute id in case '{name}': {e}"));
+        assert_eq!(
+            computed_id, evidence.evidence_id,
+            "Case '{name}' ID mismatch: expected {}, got {}",
+            evidence.evidence_id, computed_id
+        );
+
+        // 2. Profile digest must be recomputed and verified
+        let profile_val = evidence
+            .analysis_profile
+            .as_ref()
+            .expect("profile_evidence_cases must have non-null analysis_profile");
+        let profile: tracewise_domain::evidence::AnalysisProfile =
+            serde_json::from_value(profile_val.clone())
+                .unwrap_or_else(|e| panic!("Failed to deserialize profile in case '{name}': {e}"));
+        let computed_digest = profile
+            .compute_digest()
+            .unwrap_or_else(|e| panic!("Failed to compute profile digest in case '{name}': {e}"));
+        assert_eq!(
+            computed_digest, profile.digest,
+            "Case '{name}' profile digest mismatch: expected {}, got {}",
+            profile.digest, computed_digest
+        );
+        assert!(
+            profile.verify().is_ok(),
+            "Case '{name}' profile verify failed"
+        );
+
+        // 3. Evidence verification passes
+        assert!(
+            evidence.verify().is_ok(),
+            "Case '{name}' evidence verify failed"
+        );
+    }
+}
+
+#[test]
+fn test_compare_bundles_cases() {
+    let raw = std::fs::read_to_string(fixture_path("compare_bundles_cases.json"))
+        .expect("Failed to read compare_bundles_cases.json");
+    let cases: Vec<Value> =
+        serde_json::from_str(&raw).expect("Failed to parse compare_bundles_cases.json");
+
+    for case in cases {
+        let name = case["name"].as_str().unwrap();
+        let left: tracewise_domain::EvidenceBundle =
+            serde_json::from_value(case["left"].clone()).unwrap();
+        let right: tracewise_domain::EvidenceBundle =
+            serde_json::from_value(case["right"].clone()).unwrap();
+        let record_pairs: Vec<tracewise_domain::RecordPair> =
+            serde_json::from_value(case["record_pairs"].clone()).unwrap();
+        let expected_result = &case["result"];
+
+        let actual = tracewise_domain::compare_bundles(&left, &right, &record_pairs)
+            .unwrap_or_else(|e| panic!("compare_bundles failed on case '{name}': {e}"));
+        let actual_val = serde_json::to_value(&actual).unwrap();
+
+        assert_eq!(
+            actual_val, *expected_result,
+            "Case '{name}' compare_bundles result did not match fixture exactly"
+        );
+    }
+}
+

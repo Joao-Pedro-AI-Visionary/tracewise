@@ -1,0 +1,887 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393\",\"subject\":{\"name\":\"demo.har\",\"digest\":{\"sha256\":\"e124b767913c48857b518860aa73f0919488d39a593d58f0e1c891c8ce525ef6\"},\"format\":\"file\",\"architecture\":null,\"local_path\":\"/workspace/tracewise/fixtures/web/demo.har\"},\"provider\":{\"id\":\"har-schema/lossless-json\",\"name\":\"REA HAR capture adapter\",\"version\":\"har-schema@2.0.0;jsonc-parser@3.3.1;lossless-json@4.3.1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_web_network_capture\",\"parameters\":{\"capture_path\":\"/workspace/tracewise/fixtures/web/demo.har\",\"format\":\"har\",\"record_ordinals\":[0,1,2,3,4],\"sensitive_value_count\":0},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/tracewise/fixtures/web/demo.har\",\"sha256\":\"e124b767913c48857b518860aa73f0919488d39a593d58f0e1c891c8ce525ef6\",\"bytes\":10391},\"format\":\"har\",\"decoder\":{\"id\":\"har-schema/lossless-json\",\"name\":\"REA HAR capture adapter\",\"version\":\"har-schema@2.0.0;jsonc-parser@3.3.1;lossless-json@4.3.1\"},\"container\":{\"reported\":{\"log\":{\"version\":\"1.2\",\"creator\":{\"name\":\"tracewise-demo\",\"version\":\"1\"},\"entries\":null}},\"numeric_literals\":[],\"redactions\":[],\"records_pointer\":\"/log/entries\"},\"total_records\":5,\"records\":[{\"ordinal\":0,\"location\":{\"kind\":\"json-pointer\",\"pointer\":\"/log/entries/0\"},\"reported\":{\"startedDateTime\":\"2026-10-10T12:00:00.000Z\",\"time\":1,\"request\":{\"method\":\"GET\",\"url\":\"http://127.0.0.1:8765/api/me\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Authorization\",\"value\":null},{\"name\":\"Cookie\",\"value\":null},{\"name\":\"Accept\",\"value\":\"application/json\"}],\"cookies\":[{\"name\":\"session\",\"value\":null}],\"queryString\":[],\"headersSize\":-1,\"bodySize\":0},\"response\":{\"status\":200,\"statusText\":\"\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Server\",\"value\":\"DemoAPI/1.0 \"},{\"name\":\"Date\",\"value\":\"Sat, 10 Oct 2026 12:00:00 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json\"},{\"name\":\"Set-Cookie\",\"value\":null},{\"name\":\"Content-Length\",\"value\":\"55\"}],\"cookies\":[],\"content\":{\"size\":55,\"mimeType\":\"application/json\",\"text\":\"{\\\"id\\\": \\\"u1\\\", \\\"email\\\": \\\"dev@example.com\\\", \\\"plan\\\": \\\"pro\\\"}\"},\"redirectURL\":\"\",\"headersSize\":-1,\"bodySize\":55},\"cache\":{},\"timings\":{\"send\":0,\"wait\":1,\"receive\":0}},\"binary_fields\":[],\"numeric_literals\":[{\"pointer\":\"/time\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/request/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/request/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"0\"},{\"pointer\":\"/response/status\",\"producer_type\":\"json-number\",\"literal\":\"200\"},{\"pointer\":\"/response/content/size\",\"producer_type\":\"json-number\",\"literal\":\"55\"},{\"pointer\":\"/response/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/response/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"55\"},{\"pointer\":\"/timings/send\",\"producer_type\":\"json-number\",\"literal\":\"0\"},{\"pointer\":\"/timings/wait\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/timings/receive\",\"producer_type\":\"json-number\",\"literal\":\"0\"}],\"redactions\":[{\"pointer\":\"/request/headers/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/headers/1/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/cookies/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/response/headers/3/value\",\"reason\":\"transport-credential\"}],\"limitations\":[\"HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy.\"]},{\"ordinal\":1,\"location\":{\"kind\":\"json-pointer\",\"pointer\":\"/log/entries/1\"},\"reported\":{\"startedDateTime\":\"2026-10-10T12:00:00.000Z\",\"time\":1,\"request\":{\"method\":\"GET\",\"url\":\"http://127.0.0.1:8765/api/todos?limit=10&offset=0\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Authorization\",\"value\":null},{\"name\":\"Cookie\",\"value\":null},{\"name\":\"Accept\",\"value\":\"application/json\"}],\"cookies\":[{\"name\":\"session\",\"value\":null}],\"queryString\":[{\"name\":\"limit\",\"value\":\"10\"},{\"name\":\"offset\",\"value\":\"0\"}],\"headersSize\":-1,\"bodySize\":0},\"response\":{\"status\":200,\"statusText\":\"\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Server\",\"value\":\"DemoAPI/1.0 \"},{\"name\":\"Date\",\"value\":\"Sat, 10 Oct 2026 12:00:00 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json\"},{\"name\":\"Set-Cookie\",\"value\":null},{\"name\":\"Content-Length\",\"value\":\"88\"}],\"cookies\":[],\"content\":{\"size\":88,\"mimeType\":\"application/json\",\"text\":\"{\\\"items\\\": [{\\\"id\\\": 1, \\\"title\\\": \\\"buy milk\\\", \\\"done\\\": false, \\\"tags\\\": [\\\"home\\\"]}], \\\"total\\\": 1}\"},\"redirectURL\":\"\",\"headersSize\":-1,\"bodySize\":88},\"cache\":{},\"timings\":{\"send\":0,\"wait\":1,\"receive\":0}},\"binary_fields\":[],\"numeric_literals\":[{\"pointer\":\"/time\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/request/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/request/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"0\"},{\"pointer\":\"/response/status\",\"producer_type\":\"json-number\",\"literal\":\"200\"},{\"pointer\":\"/response/content/size\",\"producer_type\":\"json-number\",\"literal\":\"88\"},{\"pointer\":\"/response/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/response/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"88\"},{\"pointer\":\"/timings/send\",\"producer_type\":\"json-number\",\"literal\":\"0\"},{\"pointer\":\"/timings/wait\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/timings/receive\",\"producer_type\":\"json-number\",\"literal\":\"0\"}],\"redactions\":[{\"pointer\":\"/request/headers/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/headers/1/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/cookies/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/response/headers/3/value\",\"reason\":\"transport-credential\"}],\"limitations\":[\"HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy.\"]},{\"ordinal\":2,\"location\":{\"kind\":\"json-pointer\",\"pointer\":\"/log/entries/2\"},\"reported\":{\"startedDateTime\":\"2026-10-10T12:00:00.000Z\",\"time\":1,\"request\":{\"method\":\"GET\",\"url\":\"http://127.0.0.1:8765/api/todos/1\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Authorization\",\"value\":null},{\"name\":\"Cookie\",\"value\":null},{\"name\":\"Accept\",\"value\":\"application/json\"}],\"cookies\":[{\"name\":\"session\",\"value\":null}],\"queryString\":[],\"headersSize\":-1,\"bodySize\":0},\"response\":{\"status\":200,\"statusText\":\"\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Server\",\"value\":\"DemoAPI/1.0 \"},{\"name\":\"Date\",\"value\":\"Sat, 10 Oct 2026 12:00:00 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json\"},{\"name\":\"Set-Cookie\",\"value\":null},{\"name\":\"Content-Length\",\"value\":\"63\"}],\"cookies\":[],\"content\":{\"size\":63,\"mimeType\":\"application/json\",\"text\":\"{\\\"id\\\": 1, \\\"title\\\": \\\"buy milk\\\", \\\"done\\\": false, \\\"tags\\\": [\\\"home\\\"]}\"},\"redirectURL\":\"\",\"headersSize\":-1,\"bodySize\":63},\"cache\":{},\"timings\":{\"send\":0,\"wait\":1,\"receive\":0}},\"binary_fields\":[],\"numeric_literals\":[{\"pointer\":\"/time\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/request/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/request/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"0\"},{\"pointer\":\"/response/status\",\"producer_type\":\"json-number\",\"literal\":\"200\"},{\"pointer\":\"/response/content/size\",\"producer_type\":\"json-number\",\"literal\":\"63\"},{\"pointer\":\"/response/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/response/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"63\"},{\"pointer\":\"/timings/send\",\"producer_type\":\"json-number\",\"literal\":\"0\"},{\"pointer\":\"/timings/wait\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/timings/receive\",\"producer_type\":\"json-number\",\"literal\":\"0\"}],\"redactions\":[{\"pointer\":\"/request/headers/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/headers/1/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/cookies/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/response/headers/3/value\",\"reason\":\"transport-credential\"}],\"limitations\":[\"HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy.\"]},{\"ordinal\":3,\"location\":{\"kind\":\"json-pointer\",\"pointer\":\"/log/entries/3\"},\"reported\":{\"startedDateTime\":\"2026-10-10T12:00:00.000Z\",\"time\":1,\"request\":{\"method\":\"POST\",\"url\":\"http://127.0.0.1:8765/api/todos\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Authorization\",\"value\":null},{\"name\":\"Cookie\",\"value\":null},{\"name\":\"Accept\",\"value\":\"application/json\"},{\"name\":\"Content-Type\",\"value\":\"application/json\"}],\"cookies\":[{\"name\":\"session\",\"value\":null}],\"queryString\":[],\"headersSize\":-1,\"bodySize\":48,\"postData\":{\"mimeType\":\"application/json\",\"text\":\"{\\\"title\\\": \\\"write sdk\\\", \\\"tags\\\": [\\\"work\\\", \\\"rust\\\"]}\"}},\"response\":{\"status\":201,\"statusText\":\"\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Server\",\"value\":\"DemoAPI/1.0 \"},{\"name\":\"Date\",\"value\":\"Sat, 10 Oct 2026 12:00:00 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json\"},{\"name\":\"Set-Cookie\",\"value\":null},{\"name\":\"Content-Length\",\"value\":\"72\"}],\"cookies\":[],\"content\":{\"size\":72,\"mimeType\":\"application/json\",\"text\":\"{\\\"id\\\": 2, \\\"title\\\": \\\"write sdk\\\", \\\"done\\\": false, \\\"tags\\\": [\\\"work\\\", \\\"rust\\\"]}\"},\"redirectURL\":\"\",\"headersSize\":-1,\"bodySize\":72},\"cache\":{},\"timings\":{\"send\":0,\"wait\":1,\"receive\":0}},\"binary_fields\":[],\"numeric_literals\":[{\"pointer\":\"/time\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/request/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/request/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"48\"},{\"pointer\":\"/response/status\",\"producer_type\":\"json-number\",\"literal\":\"201\"},{\"pointer\":\"/response/content/size\",\"producer_type\":\"json-number\",\"literal\":\"72\"},{\"pointer\":\"/response/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/response/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"72\"},{\"pointer\":\"/timings/send\",\"producer_type\":\"json-number\",\"literal\":\"0\"},{\"pointer\":\"/timings/wait\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/timings/receive\",\"producer_type\":\"json-number\",\"literal\":\"0\"}],\"redactions\":[{\"pointer\":\"/request/headers/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/headers/1/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/cookies/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/response/headers/3/value\",\"reason\":\"transport-credential\"}],\"limitations\":[\"HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy.\"]},{\"ordinal\":4,\"location\":{\"kind\":\"json-pointer\",\"pointer\":\"/log/entries/4\"},\"reported\":{\"startedDateTime\":\"2026-10-10T12:00:00.000Z\",\"time\":1,\"request\":{\"method\":\"GET\",\"url\":\"http://127.0.0.1:8765/api/todos/99\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Authorization\",\"value\":null},{\"name\":\"Cookie\",\"value\":null},{\"name\":\"Accept\",\"value\":\"application/json\"}],\"cookies\":[{\"name\":\"session\",\"value\":null}],\"queryString\":[],\"headersSize\":-1,\"bodySize\":0},\"response\":{\"status\":404,\"statusText\":\"\",\"httpVersion\":\"HTTP/1.1\",\"headers\":[{\"name\":\"Server\",\"value\":\"DemoAPI/1.0 \"},{\"name\":\"Date\",\"value\":\"Sat, 10 Oct 2026 12:00:00 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json\"},{\"name\":\"Set-Cookie\",\"value\":null},{\"name\":\"Content-Length\",\"value\":\"22\"}],\"cookies\":[],\"content\":{\"size\":22,\"mimeType\":\"application/json\",\"text\":\"{\\\"error\\\": \\\"not found\\\"}\"},\"redirectURL\":\"\",\"headersSize\":-1,\"bodySize\":22},\"cache\":{},\"timings\":{\"send\":0,\"wait\":1,\"receive\":0}},\"binary_fields\":[],\"numeric_literals\":[{\"pointer\":\"/time\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/request/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/request/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"0\"},{\"pointer\":\"/response/status\",\"producer_type\":\"json-number\",\"literal\":\"404\"},{\"pointer\":\"/response/content/size\",\"producer_type\":\"json-number\",\"literal\":\"22\"},{\"pointer\":\"/response/headersSize\",\"producer_type\":\"json-number\",\"literal\":\"-1\"},{\"pointer\":\"/response/bodySize\",\"producer_type\":\"json-number\",\"literal\":\"22\"},{\"pointer\":\"/timings/send\",\"producer_type\":\"json-number\",\"literal\":\"0\"},{\"pointer\":\"/timings/wait\",\"producer_type\":\"json-number\",\"literal\":\"1\"},{\"pointer\":\"/timings/receive\",\"producer_type\":\"json-number\",\"literal\":\"0\"}],\"redactions\":[{\"pointer\":\"/request/headers/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/headers/1/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/request/cookies/0/value\",\"reason\":\"transport-credential\"},{\"pointer\":\"/response/headers/3/value\",\"reason\":\"transport-credential\"}],\"limitations\":[\"HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy.\"]}],\"runtime_attribution\":\"unknown\",\"limitations\":[\"This is retained producer evidence, without live browser transaction IDs, scenario provenance, execution attribution or deployment authenticity. Recorded URLs are never fetched.\",\"Every record is decoded before selection; no partial success is returned on malformed input or a resource limit.\",\"Known authentication headers/cookies and explicitly marked literal values are excluded. Unknown extension names do not establish sensitivity.\",\"A 32 MiB input, 96 MiB reply and 64-level nesting budget bound complete evidence. HAR uses a 192 MiB Node old-generation heap; native decoding uses a 768 MiB Linux address-space limit. Each owned command has a 30-second deadline with independent cleanup.\"]},\"confidence\":\"observed\",\"authority\":\"historical-reference\",\"environment\":null,\"limitations\":[\"This is retained producer evidence, without live browser transaction IDs, scenario provenance, execution attribution or deployment authenticity. Recorded URLs are never fetched.\",\"Every record is decoded before selection; no partial success is returned on malformed input or a resource limit.\",\"Known authentication headers/cookies and explicitly marked literal values are excluded. Unknown extension names do not establish sensitivity.\",\"A 32 MiB input, 96 MiB reply and 64-level nesting budget bound complete evidence. HAR uses a 192 MiB Node old-generation heap; native decoding uses a 768 MiB Linux address-space limit. Each owned command has a 30-second deadline with independent cleanup.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/tracewise/fixtures/web/demo.har\"}],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+    "subject": {
+      "name": "demo.har",
+      "digest": {
+        "sha256": "e124b767913c48857b518860aa73f0919488d39a593d58f0e1c891c8ce525ef6"
+      },
+      "format": "file",
+      "architecture": null,
+      "local_path": "/workspace/tracewise/fixtures/web/demo.har"
+    },
+    "provider": {
+      "id": "har-schema/lossless-json",
+      "name": "REA HAR capture adapter",
+      "version": "har-schema@2.0.0;jsonc-parser@3.3.1;lossless-json@4.3.1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis",
+    "operation": "inspect_web_network_capture",
+    "parameters": {
+      "capture_path": "/workspace/tracewise/fixtures/web/demo.har",
+      "format": "har",
+      "record_ordinals": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sensitive_value_count": 0
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "artifact": {
+        "path": "/workspace/tracewise/fixtures/web/demo.har",
+        "sha256": "e124b767913c48857b518860aa73f0919488d39a593d58f0e1c891c8ce525ef6",
+        "bytes": 10391
+      },
+      "format": "har",
+      "decoder": {
+        "id": "har-schema/lossless-json",
+        "name": "REA HAR capture adapter",
+        "version": "har-schema@2.0.0;jsonc-parser@3.3.1;lossless-json@4.3.1"
+      },
+      "container": {
+        "reported": {
+          "log": {
+            "version": "1.2",
+            "creator": {
+              "name": "tracewise-demo",
+              "version": "1"
+            },
+            "entries": null
+          }
+        },
+        "numeric_literals": [],
+        "redactions": [],
+        "records_pointer": "/log/entries"
+      },
+      "total_records": 5,
+      "records": [
+        {
+          "ordinal": 0,
+          "location": {
+            "kind": "json-pointer",
+            "pointer": "/log/entries/0"
+          },
+          "reported": {
+            "startedDateTime": "2026-10-10T12:00:00.000Z",
+            "time": 1,
+            "request": {
+              "method": "GET",
+              "url": "http://127.0.0.1:8765/api/me",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Authorization",
+                  "value": null
+                },
+                {
+                  "name": "Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "cookies": [
+                {
+                  "name": "session",
+                  "value": null
+                }
+              ],
+              "queryString": [],
+              "headersSize": -1,
+              "bodySize": 0
+            },
+            "response": {
+              "status": 200,
+              "statusText": "",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Server",
+                  "value": "DemoAPI/1.0 "
+                },
+                {
+                  "name": "Date",
+                  "value": "Sat, 10 Oct 2026 12:00:00 GMT"
+                },
+                {
+                  "name": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "name": "Set-Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Content-Length",
+                  "value": "55"
+                }
+              ],
+              "cookies": [],
+              "content": {
+                "size": 55,
+                "mimeType": "application/json",
+                "text": "{\"id\": \"u1\", \"email\": \"dev@example.com\", \"plan\": \"pro\"}"
+              },
+              "redirectURL": "",
+              "headersSize": -1,
+              "bodySize": 55
+            },
+            "cache": {},
+            "timings": {
+              "send": 0,
+              "wait": 1,
+              "receive": 0
+            }
+          },
+          "binary_fields": [],
+          "numeric_literals": [
+            {
+              "pointer": "/time",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/request/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/request/bodySize",
+              "producer_type": "json-number",
+              "literal": "0"
+            },
+            {
+              "pointer": "/response/status",
+              "producer_type": "json-number",
+              "literal": "200"
+            },
+            {
+              "pointer": "/response/content/size",
+              "producer_type": "json-number",
+              "literal": "55"
+            },
+            {
+              "pointer": "/response/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/response/bodySize",
+              "producer_type": "json-number",
+              "literal": "55"
+            },
+            {
+              "pointer": "/timings/send",
+              "producer_type": "json-number",
+              "literal": "0"
+            },
+            {
+              "pointer": "/timings/wait",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/timings/receive",
+              "producer_type": "json-number",
+              "literal": "0"
+            }
+          ],
+          "redactions": [
+            {
+              "pointer": "/request/headers/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/headers/1/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/cookies/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/response/headers/3/value",
+              "reason": "transport-credential"
+            }
+          ],
+          "limitations": [
+            "HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy."
+          ]
+        },
+        {
+          "ordinal": 1,
+          "location": {
+            "kind": "json-pointer",
+            "pointer": "/log/entries/1"
+          },
+          "reported": {
+            "startedDateTime": "2026-10-10T12:00:00.000Z",
+            "time": 1,
+            "request": {
+              "method": "GET",
+              "url": "http://127.0.0.1:8765/api/todos?limit=10&offset=0",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Authorization",
+                  "value": null
+                },
+                {
+                  "name": "Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "cookies": [
+                {
+                  "name": "session",
+                  "value": null
+                }
+              ],
+              "queryString": [
+                {
+                  "name": "limit",
+                  "value": "10"
+                },
+                {
+                  "name": "offset",
+                  "value": "0"
+                }
+              ],
+              "headersSize": -1,
+              "bodySize": 0
+            },
+            "response": {
+              "status": 200,
+              "statusText": "",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Server",
+                  "value": "DemoAPI/1.0 "
+                },
+                {
+                  "name": "Date",
+                  "value": "Sat, 10 Oct 2026 12:00:00 GMT"
+                },
+                {
+                  "name": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "name": "Set-Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Content-Length",
+                  "value": "88"
+                }
+              ],
+              "cookies": [],
+              "content": {
+                "size": 88,
+                "mimeType": "application/json",
+                "text": "{\"items\": [{\"id\": 1, \"title\": \"buy milk\", \"done\": false, \"tags\": [\"home\"]}], \"total\": 1}"
+              },
+              "redirectURL": "",
+              "headersSize": -1,
+              "bodySize": 88
+            },
+            "cache": {},
+            "timings": {
+              "send": 0,
+              "wait": 1,
+              "receive": 0
+            }
+          },
+          "binary_fields": [],
+          "numeric_literals": [
+            {
+              "pointer": "/time",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/request/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/request/bodySize",
+              "producer_type": "json-number",
+              "literal": "0"
+            },
+            {
+              "pointer": "/response/status",
+              "producer_type": "json-number",
+              "literal": "200"
+            },
+            {
+              "pointer": "/response/content/size",
+              "producer_type": "json-number",
+              "literal": "88"
+            },
+            {
+              "pointer": "/response/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/response/bodySize",
+              "producer_type": "json-number",
+              "literal": "88"
+            },
+            {
+              "pointer": "/timings/send",
+              "producer_type": "json-number",
+              "literal": "0"
+            },
+            {
+              "pointer": "/timings/wait",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/timings/receive",
+              "producer_type": "json-number",
+              "literal": "0"
+            }
+          ],
+          "redactions": [
+            {
+              "pointer": "/request/headers/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/headers/1/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/cookies/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/response/headers/3/value",
+              "reason": "transport-credential"
+            }
+          ],
+          "limitations": [
+            "HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy."
+          ]
+        },
+        {
+          "ordinal": 2,
+          "location": {
+            "kind": "json-pointer",
+            "pointer": "/log/entries/2"
+          },
+          "reported": {
+            "startedDateTime": "2026-10-10T12:00:00.000Z",
+            "time": 1,
+            "request": {
+              "method": "GET",
+              "url": "http://127.0.0.1:8765/api/todos/1",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Authorization",
+                  "value": null
+                },
+                {
+                  "name": "Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "cookies": [
+                {
+                  "name": "session",
+                  "value": null
+                }
+              ],
+              "queryString": [],
+              "headersSize": -1,
+              "bodySize": 0
+            },
+            "response": {
+              "status": 200,
+              "statusText": "",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Server",
+                  "value": "DemoAPI/1.0 "
+                },
+                {
+                  "name": "Date",
+                  "value": "Sat, 10 Oct 2026 12:00:00 GMT"
+                },
+                {
+                  "name": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "name": "Set-Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Content-Length",
+                  "value": "63"
+                }
+              ],
+              "cookies": [],
+              "content": {
+                "size": 63,
+                "mimeType": "application/json",
+                "text": "{\"id\": 1, \"title\": \"buy milk\", \"done\": false, \"tags\": [\"home\"]}"
+              },
+              "redirectURL": "",
+              "headersSize": -1,
+              "bodySize": 63
+            },
+            "cache": {},
+            "timings": {
+              "send": 0,
+              "wait": 1,
+              "receive": 0
+            }
+          },
+          "binary_fields": [],
+          "numeric_literals": [
+            {
+              "pointer": "/time",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/request/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/request/bodySize",
+              "producer_type": "json-number",
+              "literal": "0"
+            },
+            {
+              "pointer": "/response/status",
+              "producer_type": "json-number",
+              "literal": "200"
+            },
+            {
+              "pointer": "/response/content/size",
+              "producer_type": "json-number",
+              "literal": "63"
+            },
+            {
+              "pointer": "/response/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/response/bodySize",
+              "producer_type": "json-number",
+              "literal": "63"
+            },
+            {
+              "pointer": "/timings/send",
+              "producer_type": "json-number",
+              "literal": "0"
+            },
+            {
+              "pointer": "/timings/wait",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/timings/receive",
+              "producer_type": "json-number",
+              "literal": "0"
+            }
+          ],
+          "redactions": [
+            {
+              "pointer": "/request/headers/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/headers/1/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/cookies/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/response/headers/3/value",
+              "reason": "transport-credential"
+            }
+          ],
+          "limitations": [
+            "HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy."
+          ]
+        },
+        {
+          "ordinal": 3,
+          "location": {
+            "kind": "json-pointer",
+            "pointer": "/log/entries/3"
+          },
+          "reported": {
+            "startedDateTime": "2026-10-10T12:00:00.000Z",
+            "time": 1,
+            "request": {
+              "method": "POST",
+              "url": "http://127.0.0.1:8765/api/todos",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Authorization",
+                  "value": null
+                },
+                {
+                  "name": "Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "name": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookies": [
+                {
+                  "name": "session",
+                  "value": null
+                }
+              ],
+              "queryString": [],
+              "headersSize": -1,
+              "bodySize": 48,
+              "postData": {
+                "mimeType": "application/json",
+                "text": "{\"title\": \"write sdk\", \"tags\": [\"work\", \"rust\"]}"
+              }
+            },
+            "response": {
+              "status": 201,
+              "statusText": "",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Server",
+                  "value": "DemoAPI/1.0 "
+                },
+                {
+                  "name": "Date",
+                  "value": "Sat, 10 Oct 2026 12:00:00 GMT"
+                },
+                {
+                  "name": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "name": "Set-Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Content-Length",
+                  "value": "72"
+                }
+              ],
+              "cookies": [],
+              "content": {
+                "size": 72,
+                "mimeType": "application/json",
+                "text": "{\"id\": 2, \"title\": \"write sdk\", \"done\": false, \"tags\": [\"work\", \"rust\"]}"
+              },
+              "redirectURL": "",
+              "headersSize": -1,
+              "bodySize": 72
+            },
+            "cache": {},
+            "timings": {
+              "send": 0,
+              "wait": 1,
+              "receive": 0
+            }
+          },
+          "binary_fields": [],
+          "numeric_literals": [
+            {
+              "pointer": "/time",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/request/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/request/bodySize",
+              "producer_type": "json-number",
+              "literal": "48"
+            },
+            {
+              "pointer": "/response/status",
+              "producer_type": "json-number",
+              "literal": "201"
+            },
+            {
+              "pointer": "/response/content/size",
+              "producer_type": "json-number",
+              "literal": "72"
+            },
+            {
+              "pointer": "/response/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/response/bodySize",
+              "producer_type": "json-number",
+              "literal": "72"
+            },
+            {
+              "pointer": "/timings/send",
+              "producer_type": "json-number",
+              "literal": "0"
+            },
+            {
+              "pointer": "/timings/wait",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/timings/receive",
+              "producer_type": "json-number",
+              "literal": "0"
+            }
+          ],
+          "redactions": [
+            {
+              "pointer": "/request/headers/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/headers/1/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/cookies/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/response/headers/3/value",
+              "reason": "transport-credential"
+            }
+          ],
+          "limitations": [
+            "HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy."
+          ]
+        },
+        {
+          "ordinal": 4,
+          "location": {
+            "kind": "json-pointer",
+            "pointer": "/log/entries/4"
+          },
+          "reported": {
+            "startedDateTime": "2026-10-10T12:00:00.000Z",
+            "time": 1,
+            "request": {
+              "method": "GET",
+              "url": "http://127.0.0.1:8765/api/todos/99",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Authorization",
+                  "value": null
+                },
+                {
+                  "name": "Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "cookies": [
+                {
+                  "name": "session",
+                  "value": null
+                }
+              ],
+              "queryString": [],
+              "headersSize": -1,
+              "bodySize": 0
+            },
+            "response": {
+              "status": 404,
+              "statusText": "",
+              "httpVersion": "HTTP/1.1",
+              "headers": [
+                {
+                  "name": "Server",
+                  "value": "DemoAPI/1.0 "
+                },
+                {
+                  "name": "Date",
+                  "value": "Sat, 10 Oct 2026 12:00:00 GMT"
+                },
+                {
+                  "name": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "name": "Set-Cookie",
+                  "value": null
+                },
+                {
+                  "name": "Content-Length",
+                  "value": "22"
+                }
+              ],
+              "cookies": [],
+              "content": {
+                "size": 22,
+                "mimeType": "application/json",
+                "text": "{\"error\": \"not found\"}"
+              },
+              "redirectURL": "",
+              "headersSize": -1,
+              "bodySize": 22
+            },
+            "cache": {},
+            "timings": {
+              "send": 0,
+              "wait": 1,
+              "receive": 0
+            }
+          },
+          "binary_fields": [],
+          "numeric_literals": [
+            {
+              "pointer": "/time",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/request/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/request/bodySize",
+              "producer_type": "json-number",
+              "literal": "0"
+            },
+            {
+              "pointer": "/response/status",
+              "producer_type": "json-number",
+              "literal": "404"
+            },
+            {
+              "pointer": "/response/content/size",
+              "producer_type": "json-number",
+              "literal": "22"
+            },
+            {
+              "pointer": "/response/headersSize",
+              "producer_type": "json-number",
+              "literal": "-1"
+            },
+            {
+              "pointer": "/response/bodySize",
+              "producer_type": "json-number",
+              "literal": "22"
+            },
+            {
+              "pointer": "/timings/send",
+              "producer_type": "json-number",
+              "literal": "0"
+            },
+            {
+              "pointer": "/timings/wait",
+              "producer_type": "json-number",
+              "literal": "1"
+            },
+            {
+              "pointer": "/timings/receive",
+              "producer_type": "json-number",
+              "literal": "0"
+            }
+          ],
+          "redactions": [
+            {
+              "pointer": "/request/headers/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/headers/1/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/request/cookies/0/value",
+              "reason": "transport-credential"
+            },
+            {
+              "pointer": "/response/headers/3/value",
+              "reason": "transport-credential"
+            }
+          ],
+          "limitations": [
+            "HAR text is producer-decoded Unicode. Original body bytes remain unknown unless content explicitly uses valid base64; declared sizes are preserved independently of retained bytes. mitmproxy 12.2.3 SaveHar may report null optional postData.text; that null is retained and omitted only from the upstream validation copy."
+          ]
+        }
+      ],
+      "runtime_attribution": "unknown",
+      "limitations": [
+        "This is retained producer evidence, without live browser transaction IDs, scenario provenance, execution attribution or deployment authenticity. Recorded URLs are never fetched.",
+        "Every record is decoded before selection; no partial success is returned on malformed input or a resource limit.",
+        "Known authentication headers/cookies and explicitly marked literal values are excluded. Unknown extension names do not establish sensitivity.",
+        "A 32 MiB input, 96 MiB reply and 64-level nesting budget bound complete evidence. HAR uses a 192 MiB Node old-generation heap; native decoding uses a 768 MiB Linux address-space limit. Each owned command has a 30-second deadline with independent cleanup."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "historical-reference",
+    "environment": null,
+    "limitations": [
+      "This is retained producer evidence, without live browser transaction IDs, scenario provenance, execution attribution or deployment authenticity. Recorded URLs are never fetched.",
+      "Every record is decoded before selection; no partial success is returned on malformed input or a resource limit.",
+      "Known authentication headers/cookies and explicitly marked literal values are excluded. Unknown extension names do not establish sensitivity.",
+      "A 32 MiB input, 96 MiB reply and 64-level nesting budget bound complete evidence. HAR uses a 192 MiB Node old-generation heap; native decoding uses a 768 MiB Linux address-space limit. Each owned command has a 30-second deadline with independent cleanup."
+    ],
+    "locations": [
+      {
+        "kind": "artifact-path",
+        "path": "/workspace/tracewise/fixtures/web/demo.har"
+      }
+    ],
+    "evidence_links": []
+  }
+}

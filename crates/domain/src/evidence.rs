@@ -24,6 +24,60 @@ pub struct EvidenceProvider {
     pub version: Option<String>,
 }
 
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct CommittedProviderIdentity {
+    pub id: String,
+    pub name: String,
+    pub version: String,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct AnalysisProfile {
+    pub provider: CommittedProviderIdentity,
+    pub parameters: serde_json::Value,
+    pub digest: String,
+}
+
+impl AnalysisProfile {
+    pub fn compute_digest(&self) -> Result<String, DomainError> {
+        let unsigned = serde_json::json!({
+            "provider": self.provider,
+            "parameters": self.parameters,
+        });
+        crate::canonical::canonical_sha256(&unsigned)
+    }
+
+    pub fn verify(&self) -> Result<(), EvidenceError> {
+        let computed = self
+            .compute_digest()
+            .map_err(|e| EvidenceError::InvalidField(e.to_string()))?;
+        if computed != self.digest {
+            return Err(EvidenceError::ProfileDigestMismatch {
+                expected: self.digest.clone(),
+                actual: computed,
+            });
+        }
+        Ok(())
+    }
+}
+
+pub fn create_analysis_profile(
+    provider: CommittedProviderIdentity,
+    parameters: serde_json::Value,
+) -> Result<AnalysisProfile, DomainError> {
+    let unsigned = serde_json::json!({
+        "provider": provider,
+        "parameters": parameters,
+    });
+    let digest = crate::canonical::canonical_sha256(&unsigned)?;
+    Ok(AnalysisProfile {
+        provider,
+        parameters,
+        digest,
+    })
+}
+
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 pub enum EvidenceConfidence {
@@ -165,21 +219,22 @@ impl Evidence {
             return Err(EvidenceError::InvalidId(self.evidence_id.clone()));
         }
 
-        // Validate analysis profile provider if present
-        if let Some(ref profile) = self.analysis_profile {
-            if let Some(prof_prov) = profile.get("provider") {
-                let id = prof_prov.get("id").and_then(|v| v.as_str());
-                let name = prof_prov.get("name").and_then(|v| v.as_str());
-                if let (Some(id), Some(name)) = (id, name) {
-                    if id != self.provider.id || name != self.provider.name {
-                        return Err(EvidenceError::ProfileProviderMismatch {
-                            profile: format!("{id}:{name}"),
-                            provider: format!("{}:{}", self.provider.id, self.provider.name),
-                        });
-                    }
-                }
+        // Validate analysis profile provider and digest if present
+        if let Some(ref profile_val) = self.analysis_profile {
+            let profile: AnalysisProfile = serde_json::from_value(profile_val.clone())
+                .map_err(|e| EvidenceError::InvalidField(format!("Invalid analysis_profile: {e}")))?;
+            if profile.provider.id != self.provider.id
+                || profile.provider.name != self.provider.name
+                || self.provider.version.as_deref() != Some(profile.provider.version.as_str())
+            {
+                return Err(EvidenceError::ProfileProviderMismatch {
+                    profile: format!("{}:{}", profile.provider.id, profile.provider.name),
+                    provider: format!("{}:{}", self.provider.id, self.provider.name),
+                });
             }
+            profile.verify()?;
         }
+
 
         let computed = self.compute_id().map_err(|e| EvidenceError::InvalidField(e.to_string()))?;
         if computed != self.evidence_id {

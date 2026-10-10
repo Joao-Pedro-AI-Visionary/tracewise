@@ -30,6 +30,43 @@ tracewise hash <file.json>
 tracewise tools
 ```
 
+## Registering the MCP server
+
+### Claude Code
+
+Using the CLI:
+```bash
+claude mcp add tracewise -- /abs/path/tracewise mcp
+```
+
+Or configure via `.mcp.json` in your project root:
+```json
+{
+  "mcpServers": {
+    "tracewise": {
+      "command": "/abs/path/tracewise",
+      "args": ["mcp"]
+    }
+  }
+}
+```
+
+### Cursor
+
+Add to your Cursor MCP settings (`~/.cursor/mcp.json`):
+```json
+{
+  "mcpServers": {
+    "tracewise": {
+      "command": "/abs/path/tracewise",
+      "args": ["mcp"]
+    }
+  }
+}
+```
+
+For more detailed setup, verification steps, and client support, see [docs/mcp-registration.md](docs/mcp-registration.md).
+
 ## License
 
 Licensed under the MIT License. See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

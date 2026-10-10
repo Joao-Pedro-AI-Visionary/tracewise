@@ -1,0 +1,1119 @@
+[
+  {
+    "name": "unpaired",
+    "left": {
+      "artifacts": [
+        {
+          "digest": {
+            "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          },
+          "format": "elf",
+          "architecture": "x86_64"
+        }
+      ],
+      "providers": [
+        {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "11.1"
+        }
+      ],
+      "environments": [],
+      "scenarios": [],
+      "captures": [],
+      "unknowns": [
+        {
+          "unknown_id": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "revision": 1,
+          "previous_revision_digest": null,
+          "revision_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "scope_digest": null,
+          "question": "Q?",
+          "status": "open",
+          "severity": "medium",
+          "domain": "d",
+          "supporting_evidence_ids": [],
+          "contradicting_evidence_ids": [],
+          "required_authority": null,
+          "required_confidence": "observed",
+          "required_environment": null,
+          "recommended_probes": [],
+          "relationships": [],
+          "resolution": null,
+          "mutation_evidence_ids": [
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ]
+        }
+      ],
+      "records": [
+        {
+          "evidence_id": "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "record_unknown",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": null,
+          "confidence": "derived",
+          "authority": "analyst-inference",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "list_strings",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": [
+            "s"
+          ],
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757",
+          "subject": {
+            "name": "x.elf",
+            "digest": {
+              "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+            },
+            "format": "elf",
+            "architecture": "x86_64",
+            "local_path": "/tmp/x.elf"
+          },
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": {
+            "provider": {
+              "id": "ghidra",
+              "name": "Ghidra",
+              "version": "11.1"
+            },
+            "parameters": {
+              "decompiler": "default",
+              "timeout_s": 30,
+              "flags": [
+                "a",
+                "b"
+              ]
+            },
+            "digest": "5ebbde264c065bc25258d100c31420606f9e882040c36836648a9ae76cb46cad"
+          },
+          "predicate_type": "rea.analysis",
+          "operation": "procedure_info",
+          "parameters": {
+            "address": "0x10"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "name": "f"
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": []
+        }
+      ]
+    },
+    "right": {
+      "artifacts": [
+        {
+          "digest": {
+            "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          },
+          "format": "elf",
+          "architecture": "x86_64"
+        }
+      ],
+      "providers": [
+        {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "11.1"
+        }
+      ],
+      "environments": [],
+      "scenarios": [],
+      "captures": [],
+      "unknowns": [
+        {
+          "unknown_id": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "revision": 1,
+          "previous_revision_digest": null,
+          "revision_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "scope_digest": null,
+          "question": "Q?",
+          "status": "open",
+          "severity": "medium",
+          "domain": "d",
+          "supporting_evidence_ids": [],
+          "contradicting_evidence_ids": [],
+          "required_authority": null,
+          "required_confidence": "observed",
+          "required_environment": null,
+          "recommended_probes": [],
+          "relationships": [],
+          "resolution": null,
+          "mutation_evidence_ids": [
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ]
+        },
+        {
+          "unknown_id": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "revision": 2,
+          "previous_revision_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "revision_digest": "274e7bde026e22eb145f63d168636b2017ed9c2f24c099f7def5c089b3f61be6",
+          "scope_digest": null,
+          "question": "Q?",
+          "status": "investigating",
+          "severity": "high",
+          "domain": "d",
+          "supporting_evidence_ids": [],
+          "contradicting_evidence_ids": [],
+          "required_authority": null,
+          "required_confidence": "observed",
+          "required_environment": null,
+          "recommended_probes": [],
+          "relationships": [],
+          "resolution": null,
+          "mutation_evidence_ids": [
+            "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ]
+        }
+      ],
+      "records": [
+        {
+          "evidence_id": "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "update_unknown",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": null,
+          "confidence": "derived",
+          "authority": "analyst-inference",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "record_unknown",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": null,
+          "confidence": "derived",
+          "authority": "analyst-inference",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54",
+          "subject": {
+            "name": "x.elf",
+            "digest": {
+              "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+            },
+            "format": "elf",
+            "architecture": "x86_64",
+            "local_path": "/tmp/x.elf"
+          },
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": {
+            "provider": {
+              "id": "ghidra",
+              "name": "Ghidra",
+              "version": "11.1"
+            },
+            "parameters": {
+              "decompiler": "default",
+              "timeout_s": 30,
+              "flags": [
+                "a",
+                "b"
+              ]
+            },
+            "digest": "5ebbde264c065bc25258d100c31420606f9e882040c36836648a9ae76cb46cad"
+          },
+          "predicate_type": "rea.analysis",
+          "operation": "procedure_info",
+          "parameters": {
+            "address": "0x10"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "name": "g"
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": []
+        }
+      ]
+    },
+    "record_pairs": [],
+    "result": {
+      "status": "unknown",
+      "left_bundle_sha256": "a4bb9e73c28e5c9bf5130a3b8380444e4a41a9776f80edb0f007ce6e02dcfcfb",
+      "right_bundle_sha256": "1e64c8b43722d866bcced12f2378124354febbd7c85015cc0f1cca02950e814d",
+      "summary": {
+        "records_unchanged": 1,
+        "records_added": 0,
+        "records_removed": 0,
+        "records_changed": 0,
+        "unknowns_unchanged": 0,
+        "unknowns_added": 0,
+        "unknowns_removed": 0,
+        "unknowns_advanced": 1,
+        "unknowns_diverged": 0,
+        "unresolved": 4
+      },
+      "changes": [
+        {
+          "entity": "evidence",
+          "key": "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+          "classification": "unknown",
+          "conclusion_kind": "unresolved_branch",
+          "left_evidence_ids": [],
+          "right_evidence_ids": [
+            "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc"
+          ],
+          "left_digest": null,
+          "right_digest": "27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+          "limitations": [
+            "EvidenceBundle has no inventory completeness marker; one-sided membership may reflect incomplete capture."
+          ]
+        },
+        {
+          "entity": "evidence",
+          "key": "ev_81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083",
+          "classification": "unknown",
+          "conclusion_kind": "unresolved_branch",
+          "left_evidence_ids": [
+            "ev_81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083"
+          ],
+          "right_evidence_ids": [],
+          "left_digest": "81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083",
+          "right_digest": null,
+          "limitations": [
+            "EvidenceBundle has no inventory completeness marker; one-sided membership may reflect incomplete capture."
+          ]
+        },
+        {
+          "entity": "evidence",
+          "key": "ev_b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54",
+          "classification": "unknown",
+          "conclusion_kind": "unresolved_branch",
+          "left_evidence_ids": [],
+          "right_evidence_ids": [
+            "ev_b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54"
+          ],
+          "left_digest": null,
+          "right_digest": "b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54",
+          "limitations": [
+            "EvidenceBundle has no inventory completeness marker; one-sided membership may reflect incomplete capture."
+          ]
+        },
+        {
+          "entity": "evidence",
+          "key": "ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757",
+          "classification": "unknown",
+          "conclusion_kind": "unresolved_branch",
+          "left_evidence_ids": [
+            "ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757"
+          ],
+          "right_evidence_ids": [],
+          "left_digest": "f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757",
+          "right_digest": null,
+          "limitations": [
+            "EvidenceBundle has no inventory completeness marker; one-sided membership may reflect incomplete capture."
+          ]
+        },
+        {
+          "entity": "residual_unknown",
+          "key": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "classification": "history_advanced",
+          "conclusion_kind": "observed_change",
+          "left_evidence_ids": [
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ],
+          "right_evidence_ids": [
+            "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ],
+          "left_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "right_digest": "274e7bde026e22eb145f63d168636b2017ed9c2f24c099f7def5c089b3f61be6",
+          "limitations": []
+        }
+      ],
+      "limitations": [
+        "EvidenceBundle has no inventory completeness marker; one-sided membership remains unknown."
+      ]
+    }
+  },
+  {
+    "name": "paired",
+    "left": {
+      "artifacts": [
+        {
+          "digest": {
+            "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          },
+          "format": "elf",
+          "architecture": "x86_64"
+        }
+      ],
+      "providers": [
+        {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "11.1"
+        }
+      ],
+      "environments": [],
+      "scenarios": [],
+      "captures": [],
+      "unknowns": [
+        {
+          "unknown_id": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "revision": 1,
+          "previous_revision_digest": null,
+          "revision_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "scope_digest": null,
+          "question": "Q?",
+          "status": "open",
+          "severity": "medium",
+          "domain": "d",
+          "supporting_evidence_ids": [],
+          "contradicting_evidence_ids": [],
+          "required_authority": null,
+          "required_confidence": "observed",
+          "required_environment": null,
+          "recommended_probes": [],
+          "relationships": [],
+          "resolution": null,
+          "mutation_evidence_ids": [
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ]
+        }
+      ],
+      "records": [
+        {
+          "evidence_id": "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "record_unknown",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": null,
+          "confidence": "derived",
+          "authority": "analyst-inference",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "list_strings",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": [
+            "s"
+          ],
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757",
+          "subject": {
+            "name": "x.elf",
+            "digest": {
+              "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+            },
+            "format": "elf",
+            "architecture": "x86_64",
+            "local_path": "/tmp/x.elf"
+          },
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": {
+            "provider": {
+              "id": "ghidra",
+              "name": "Ghidra",
+              "version": "11.1"
+            },
+            "parameters": {
+              "decompiler": "default",
+              "timeout_s": 30,
+              "flags": [
+                "a",
+                "b"
+              ]
+            },
+            "digest": "5ebbde264c065bc25258d100c31420606f9e882040c36836648a9ae76cb46cad"
+          },
+          "predicate_type": "rea.analysis",
+          "operation": "procedure_info",
+          "parameters": {
+            "address": "0x10"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "name": "f"
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": []
+        }
+      ]
+    },
+    "right": {
+      "artifacts": [
+        {
+          "digest": {
+            "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          },
+          "format": "elf",
+          "architecture": "x86_64"
+        }
+      ],
+      "providers": [
+        {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "11.1"
+        }
+      ],
+      "environments": [],
+      "scenarios": [],
+      "captures": [],
+      "unknowns": [
+        {
+          "unknown_id": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "revision": 1,
+          "previous_revision_digest": null,
+          "revision_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "scope_digest": null,
+          "question": "Q?",
+          "status": "open",
+          "severity": "medium",
+          "domain": "d",
+          "supporting_evidence_ids": [],
+          "contradicting_evidence_ids": [],
+          "required_authority": null,
+          "required_confidence": "observed",
+          "required_environment": null,
+          "recommended_probes": [],
+          "relationships": [],
+          "resolution": null,
+          "mutation_evidence_ids": [
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ]
+        },
+        {
+          "unknown_id": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "revision": 2,
+          "previous_revision_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "revision_digest": "274e7bde026e22eb145f63d168636b2017ed9c2f24c099f7def5c089b3f61be6",
+          "scope_digest": null,
+          "question": "Q?",
+          "status": "investigating",
+          "severity": "high",
+          "domain": "d",
+          "supporting_evidence_ids": [],
+          "contradicting_evidence_ids": [],
+          "required_authority": null,
+          "required_confidence": "observed",
+          "required_environment": null,
+          "recommended_probes": [],
+          "relationships": [],
+          "resolution": null,
+          "mutation_evidence_ids": [
+            "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ]
+        }
+      ],
+      "records": [
+        {
+          "evidence_id": "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "update_unknown",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": null,
+          "confidence": "derived",
+          "authority": "analyst-inference",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "record_unknown",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": null,
+          "confidence": "derived",
+          "authority": "analyst-inference",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54",
+          "subject": {
+            "name": "x.elf",
+            "digest": {
+              "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+            },
+            "format": "elf",
+            "architecture": "x86_64",
+            "local_path": "/tmp/x.elf"
+          },
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": {
+            "provider": {
+              "id": "ghidra",
+              "name": "Ghidra",
+              "version": "11.1"
+            },
+            "parameters": {
+              "decompiler": "default",
+              "timeout_s": 30,
+              "flags": [
+                "a",
+                "b"
+              ]
+            },
+            "digest": "5ebbde264c065bc25258d100c31420606f9e882040c36836648a9ae76cb46cad"
+          },
+          "predicate_type": "rea.analysis",
+          "operation": "procedure_info",
+          "parameters": {
+            "address": "0x10"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "name": "g"
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": []
+        }
+      ]
+    },
+    "record_pairs": [
+      {
+        "left_evidence_id": "ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757",
+        "right_evidence_id": "ev_b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54"
+      }
+    ],
+    "result": {
+      "status": "unknown",
+      "left_bundle_sha256": "a4bb9e73c28e5c9bf5130a3b8380444e4a41a9776f80edb0f007ce6e02dcfcfb",
+      "right_bundle_sha256": "1e64c8b43722d866bcced12f2378124354febbd7c85015cc0f1cca02950e814d",
+      "summary": {
+        "records_unchanged": 1,
+        "records_added": 0,
+        "records_removed": 0,
+        "records_changed": 1,
+        "unknowns_unchanged": 0,
+        "unknowns_added": 0,
+        "unknowns_removed": 0,
+        "unknowns_advanced": 1,
+        "unknowns_diverged": 0,
+        "unresolved": 2
+      },
+      "changes": [
+        {
+          "entity": "evidence",
+          "key": "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+          "classification": "unknown",
+          "conclusion_kind": "unresolved_branch",
+          "left_evidence_ids": [],
+          "right_evidence_ids": [
+            "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc"
+          ],
+          "left_digest": null,
+          "right_digest": "27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+          "limitations": [
+            "EvidenceBundle has no inventory completeness marker; one-sided membership may reflect incomplete capture."
+          ]
+        },
+        {
+          "entity": "evidence",
+          "key": "ev_81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083",
+          "classification": "unknown",
+          "conclusion_kind": "unresolved_branch",
+          "left_evidence_ids": [
+            "ev_81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083"
+          ],
+          "right_evidence_ids": [],
+          "left_digest": "81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083",
+          "right_digest": null,
+          "limitations": [
+            "EvidenceBundle has no inventory completeness marker; one-sided membership may reflect incomplete capture."
+          ]
+        },
+        {
+          "entity": "evidence",
+          "key": "pair:ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757:ev_b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54",
+          "classification": "changed",
+          "conclusion_kind": "observed_change",
+          "left_evidence_ids": [
+            "ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757"
+          ],
+          "right_evidence_ids": [
+            "ev_b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54"
+          ],
+          "left_digest": "f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757",
+          "right_digest": "b97edab33841d8fc2eeeb5fcbe2b703f4326e376331b2bb0c26bd8f3fae27d54",
+          "limitations": []
+        },
+        {
+          "entity": "residual_unknown",
+          "key": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "classification": "history_advanced",
+          "conclusion_kind": "observed_change",
+          "left_evidence_ids": [
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ],
+          "right_evidence_ids": [
+            "ev_27b5b7872e78675a7ae567f7009aa46bc2f0edf25613b4a197feefea8bc47afc",
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ],
+          "left_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "right_digest": "274e7bde026e22eb145f63d168636b2017ed9c2f24c099f7def5c089b3f61be6",
+          "limitations": []
+        }
+      ],
+      "limitations": [
+        "EvidenceBundle has no inventory completeness marker; one-sided membership remains unknown."
+      ]
+    }
+  },
+  {
+    "name": "identical",
+    "left": {
+      "artifacts": [
+        {
+          "digest": {
+            "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          },
+          "format": "elf",
+          "architecture": "x86_64"
+        }
+      ],
+      "providers": [
+        {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "11.1"
+        }
+      ],
+      "environments": [],
+      "scenarios": [],
+      "captures": [],
+      "unknowns": [
+        {
+          "unknown_id": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "revision": 1,
+          "previous_revision_digest": null,
+          "revision_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "scope_digest": null,
+          "question": "Q?",
+          "status": "open",
+          "severity": "medium",
+          "domain": "d",
+          "supporting_evidence_ids": [],
+          "contradicting_evidence_ids": [],
+          "required_authority": null,
+          "required_confidence": "observed",
+          "required_environment": null,
+          "recommended_probes": [],
+          "relationships": [],
+          "resolution": null,
+          "mutation_evidence_ids": [
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ]
+        }
+      ],
+      "records": [
+        {
+          "evidence_id": "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "record_unknown",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": null,
+          "confidence": "derived",
+          "authority": "analyst-inference",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "list_strings",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": [
+            "s"
+          ],
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757",
+          "subject": {
+            "name": "x.elf",
+            "digest": {
+              "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+            },
+            "format": "elf",
+            "architecture": "x86_64",
+            "local_path": "/tmp/x.elf"
+          },
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": {
+            "provider": {
+              "id": "ghidra",
+              "name": "Ghidra",
+              "version": "11.1"
+            },
+            "parameters": {
+              "decompiler": "default",
+              "timeout_s": 30,
+              "flags": [
+                "a",
+                "b"
+              ]
+            },
+            "digest": "5ebbde264c065bc25258d100c31420606f9e882040c36836648a9ae76cb46cad"
+          },
+          "predicate_type": "rea.analysis",
+          "operation": "procedure_info",
+          "parameters": {
+            "address": "0x10"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "name": "f"
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": []
+        }
+      ]
+    },
+    "right": {
+      "artifacts": [
+        {
+          "digest": {
+            "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          },
+          "format": "elf",
+          "architecture": "x86_64"
+        }
+      ],
+      "providers": [
+        {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "11.1"
+        }
+      ],
+      "environments": [],
+      "scenarios": [],
+      "captures": [],
+      "unknowns": [
+        {
+          "unknown_id": "unk_70d90e054ed8bd3018ce46671e0ffeb8f9375085c142a16b48a7cecf0573b90a",
+          "revision": 1,
+          "previous_revision_digest": null,
+          "revision_digest": "0fb28773fa6e380340c3ea36f8b53bae0fcca59d06e08bc0e91f1255721c7356",
+          "scope_digest": null,
+          "question": "Q?",
+          "status": "open",
+          "severity": "medium",
+          "domain": "d",
+          "supporting_evidence_ids": [],
+          "contradicting_evidence_ids": [],
+          "required_authority": null,
+          "required_confidence": "observed",
+          "required_environment": null,
+          "recommended_probes": [],
+          "relationships": [],
+          "resolution": null,
+          "mutation_evidence_ids": [
+            "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3"
+          ]
+        }
+      ],
+      "records": [
+        {
+          "evidence_id": "ev_676dae5cd16f29843f0432e0532f699402acb788f875a6b79bdbdacd459c82b3",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "record_unknown",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": null,
+          "confidence": "derived",
+          "authority": "analyst-inference",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_81901a32a045ae3751b95b5037ded1e72f00b34d9e4bd6a67526a25e708f2083",
+          "subject": null,
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "list_strings",
+          "parameters": {},
+          "raw_result": null,
+          "normalized_result": [
+            "s"
+          ],
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [
+            "Artifact identity is unavailable for this observation."
+          ],
+          "locations": [],
+          "evidence_links": []
+        },
+        {
+          "evidence_id": "ev_f75f76926e57b2eb0d1a4eb5449d57f64737aabf23741e0ef3b0ce8995eed757",
+          "subject": {
+            "name": "x.elf",
+            "digest": {
+              "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+            },
+            "format": "elf",
+            "architecture": "x86_64",
+            "local_path": "/tmp/x.elf"
+          },
+          "provider": {
+            "id": "ghidra",
+            "name": "Ghidra",
+            "version": "11.1"
+          },
+          "analysis_profile": {
+            "provider": {
+              "id": "ghidra",
+              "name": "Ghidra",
+              "version": "11.1"
+            },
+            "parameters": {
+              "decompiler": "default",
+              "timeout_s": 30,
+              "flags": [
+                "a",
+                "b"
+              ]
+            },
+            "digest": "5ebbde264c065bc25258d100c31420606f9e882040c36836648a9ae76cb46cad"
+          },
+          "predicate_type": "rea.analysis",
+          "operation": "procedure_info",
+          "parameters": {
+            "address": "0x10"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "name": "f"
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": []
+        }
+      ]
+    },
+    "record_pairs": [],
+    "result": {
+      "status": "unchanged",
+      "left_bundle_sha256": "a4bb9e73c28e5c9bf5130a3b8380444e4a41a9776f80edb0f007ce6e02dcfcfb",
+      "right_bundle_sha256": "a4bb9e73c28e5c9bf5130a3b8380444e4a41a9776f80edb0f007ce6e02dcfcfb",
+      "summary": {
+        "records_unchanged": 3,
+        "records_added": 0,
+        "records_removed": 0,
+        "records_changed": 0,
+        "unknowns_unchanged": 1,
+        "unknowns_added": 0,
+        "unknowns_removed": 0,
+        "unknowns_advanced": 0,
+        "unknowns_diverged": 0,
+        "unresolved": 0
+      },
+      "changes": [],
+      "limitations": []
+    }
+  }
+]

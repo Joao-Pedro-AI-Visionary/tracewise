@@ -11,8 +11,9 @@ pub use canonical::{canonical_bytes, canonical_json, canonical_sha256};
 pub use comparison::{compare_bundles, BundleComparisonResult, RecordPair};
 pub use error::{BundleError, DomainError, EvidenceError, UnknownError};
 pub use evidence::{
-    create_evidence, Evidence, EvidenceAuthority, EvidenceConfidence, EvidenceLocation,
-    EvidenceObservation, EvidenceProvider, EvidenceSubject, ExecutionEnvironment,
+    create_analysis_profile, create_evidence, AnalysisProfile, CommittedProviderIdentity, Evidence,
+    EvidenceAuthority, EvidenceConfidence, EvidenceLocation, EvidenceObservation, EvidenceProvider,
+    EvidenceSubject, ExecutionEnvironment,
 };
 pub use ledger::{EvidenceLedger, ImportDelta, RecordResult, UnknownResolutionVerification};
 pub use unknown::{

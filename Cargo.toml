@@ -4,6 +4,7 @@ members = [
     "crates/contracts",
     "crates/server",
     "crates/cli",
+    "crates/proc-supervisor",
 ]
 resolver = "2"
 

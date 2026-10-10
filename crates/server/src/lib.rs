@@ -55,9 +55,9 @@ impl ServerHandler for TracewiseServer {
     async fn call_tool(
         &self,
         request: CallToolRequestParam,
-        _context: RequestContext<RoleServer>,
+        context: RequestContext<RoleServer>,
     ) -> Result<CallToolResult, McpError> {
-        handlers::dispatch_tool(&self.session, request).await
+        handlers::dispatch_tool(&self.session, request, Some(&context)).await
     }
 }
 

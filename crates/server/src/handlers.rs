@@ -1,7 +1,9 @@
 use std::path::Path;
 
-use rmcp::model::{CallToolRequestParam, CallToolResult};
+use rmcp::model::{CallToolRequestParam, CallToolResult, ErrorCode, ProgressNotificationParam};
+use rmcp::service::RequestContext;
 use rmcp::ErrorData as McpError;
+use rmcp::RoleServer;
 use serde_json::{json, Value};
 use tracewise_domain::bundle::parse_evidence_bundle;
 use tracewise_domain::comparison::{compare_bundles, RecordPair};
@@ -15,30 +17,124 @@ use crate::session::BinarySession;
 pub async fn dispatch_tool(
     session: &BinarySession,
     request: CallToolRequestParam,
+    context: Option<&RequestContext<RoleServer>>,
 ) -> Result<CallToolResult, McpError> {
-    let name = request.name.as_ref();
+    let name = request.name.to_string();
     let args_map = request.arguments.unwrap_or_default();
     let args = Value::Object(args_map);
 
-    match name {
-        "open_binary" => handle_open_binary(session, &args),
-        "close_binary" => handle_close_binary(session, &args),
-        "binary_session" => handle_binary_session(session, &args),
-        "inspect_analysis_view" => handle_inspect_analysis_view(session, &args),
-        "record_unknown" => handle_record_unknown(session, &args),
-        "update_unknown" => handle_update_unknown(session, &args),
-        "list_unknowns" => handle_list_unknowns(session, &args),
-        "verify_unknown_resolution" => handle_verify_unknown_resolution(session, &args),
-        "export_evidence_bundle" => handle_export_evidence_bundle(session, &args),
-        "import_evidence_bundle" => handle_import_evidence_bundle(session, &args),
-        "get_evidence_bundle" => handle_get_evidence_bundle(session, &args),
-        "compare_bundles" => handle_compare_bundles(session, &args),
+    if let Some(ctx) = context {
+        if ctx.ct.is_cancelled() {
+            return Err(McpError::new(
+                ErrorCode(-32800),
+                "Request cancelled",
+                None,
+            ));
+        }
+
+        let ct = ctx.ct.clone();
+        let peer = ctx.peer.clone();
+        let progress_token = ctx.meta.get_progress_token().or_else(|| {
+            args.get("_meta")
+                .and_then(|m| m.get("progressToken"))
+                .and_then(|t| serde_json::from_value(t.clone()).ok())
+        });
+
+        tokio::select! {
+            _ = ct.cancelled() => {
+                Err(McpError::new(
+                    ErrorCode(-32800),
+                    "Request cancelled",
+                    None,
+                ))
+            }
+            res = execute_tool(session, &name, &args, Some((&peer, progress_token.as_ref()))) => {
+                res
+            }
+        }
+    } else {
+        execute_tool(session, &name, &args, None).await
+    }
+}
+
+pub async fn call_tool_local(
+    session: &BinarySession,
+    request: CallToolRequestParam,
+) -> Result<CallToolResult, McpError> {
+    dispatch_tool(session, request, None).await
+}
+
+async fn execute_tool(
+    session: &BinarySession,
+    name: &str,
+    args: &Value,
+    progress: Option<(&rmcp::service::Peer<RoleServer>, Option<&rmcp::model::ProgressToken>)>,
+) -> Result<CallToolResult, McpError> {
+    if let Ok(delay_str) = std::env::var("TRACEWISE_TEST_DELAY_MS") {
+        if let Ok(ms) = delay_str.parse::<u64>() {
+            tokio::time::sleep(std::time::Duration::from_millis(ms)).await;
+        }
+    }
+
+    if let Some((peer, Some(token))) = progress {
+        let start_msg = progress_message(name, true);
+        let _ = peer.notify_progress(ProgressNotificationParam {
+            progress_token: (*token).clone(),
+            progress: 0.0,
+            total: Some(1.0),
+            message: Some(start_msg),
+        }).await;
+    }
+
+    let result = match name {
+        "open_binary" => handle_open_binary(session, args),
+        "close_binary" => handle_close_binary(session, args),
+        "binary_session" => handle_binary_session(session, args),
+        "inspect_analysis_view" => handle_inspect_analysis_view(session, args),
+        "record_unknown" => handle_record_unknown(session, args),
+        "update_unknown" => handle_update_unknown(session, args),
+        "list_unknowns" => handle_list_unknowns(session, args),
+        "verify_unknown_resolution" => handle_verify_unknown_resolution(session, args),
+        "export_evidence_bundle" => handle_export_evidence_bundle(session, args),
+        "import_evidence_bundle" => handle_import_evidence_bundle(session, args),
+        "get_evidence_bundle" => handle_get_evidence_bundle(session, args),
+        "compare_bundles" => handle_compare_bundles(session, args),
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
         )),
+    };
+
+    if result.is_ok() {
+        if let Some((peer, Some(token))) = progress {
+            let end_msg = progress_message(name, false);
+            let _ = peer.notify_progress(ProgressNotificationParam {
+                progress_token: (*token).clone(),
+                progress: 1.0,
+                total: Some(1.0),
+                message: Some(end_msg),
+            }).await;
+        }
+    }
+
+    result
+}
+
+fn progress_message(tool_name: &str, start: bool) -> String {
+    match (tool_name, start) {
+        ("open_binary", true) => "Hashing and inspecting target binary...".to_string(),
+        ("open_binary", false) => "Target binary inspected and opened".to_string(),
+        ("export_evidence_bundle", true) => "Exporting evidence bundle...".to_string(),
+        ("export_evidence_bundle", false) => "Evidence bundle exported".to_string(),
+        ("import_evidence_bundle", true) => "Importing and validating evidence bundle...".to_string(),
+        ("import_evidence_bundle", false) => "Evidence bundle imported".to_string(),
+        ("compare_bundles", true) => "Comparing evidence bundles...".to_string(),
+        ("compare_bundles", false) => "Evidence bundles compared".to_string(),
+        (name, true) => format!("Starting operation: {name}"),
+        (name, false) => format!("Completed operation: {name}"),
     }
 }
+
 
 fn handle_open_binary(session: &BinarySession, args: &Value) -> Result<CallToolResult, McpError> {
     let path = args
@@ -253,7 +349,7 @@ fn handle_import_evidence_bundle(
 
     Ok(CallToolResult::structured(json!({
         "result": {
-            "imported": delta,
+            "imported": delta.records_added,
             "unknowns_added": delta.unknowns_added,
             "total": total
         }

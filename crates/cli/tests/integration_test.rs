@@ -134,7 +134,7 @@ async fn test_mcp_stdio_lifecycle() {
         serde_json::from_str(&line).expect("Failed to parse binary_session response");
     assert_eq!(call_resp["id"], 3);
     assert!(
-        call_resp["result"]["structuredContent"]["result"]["server_identity"]["name"]
+        call_resp["result"]["structuredContent"]["result"]["server_identity"]["server"]["name"]
             == "tracewise"
     );
 
@@ -180,6 +180,238 @@ async fn test_mcp_stdio_lifecycle() {
     );
 
     // Clean up
+    drop(stdin);
+    let _ = child.kill().await;
+}
+
+#[tokio::test]
+async fn test_mcp_cancellation() {
+    let bin_path = env!("CARGO_BIN_EXE_tracewise");
+
+    let mut child = Command::new(bin_path)
+        .arg("mcp")
+        .env("TRACEWISE_TEST_DELAY_MS", "3000")
+        .stdin(Stdio::piped())
+        .stdout(Stdio::piped())
+        .stderr(Stdio::inherit())
+        .spawn()
+        .expect("Failed to spawn tracewise mcp");
+
+    let mut stdin = child.stdin.take().expect("Failed to open stdin");
+    let stdout = child.stdout.take().expect("Failed to open stdout");
+    let mut reader = BufReader::new(stdout).lines();
+
+    // 1. Initialize
+    let init_req = serde_json::json!({
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "initialize",
+        "params": {
+            "protocolVersion": "2024-11-05",
+            "capabilities": {},
+            "clientInfo": { "name": "test-client", "version": "1.0.0" }
+        }
+    });
+    stdin
+        .write_all(format!("{}\n", init_req).as_bytes())
+        .await
+        .unwrap();
+    stdin.flush().await.unwrap();
+
+    let init_line = reader.next_line().await.unwrap().unwrap();
+    let init_resp: serde_json::Value = serde_json::from_str(&init_line).unwrap();
+    assert_eq!(init_resp["id"], 1);
+
+    // 2. Initialized notification
+    let init_notif = serde_json::json!({
+        "jsonrpc": "2.0",
+        "method": "notifications/initialized"
+    });
+    stdin
+        .write_all(format!("{}\n", init_notif).as_bytes())
+        .await
+        .unwrap();
+    stdin.flush().await.unwrap();
+
+    // 3. Send tools/call that will sleep for 3000ms
+    let start_time = std::time::Instant::now();
+    let call_req = serde_json::json!({
+        "jsonrpc": "2.0",
+        "id": 42,
+        "method": "tools/call",
+        "params": {
+            "name": "binary_session",
+            "arguments": {}
+        }
+    });
+    stdin
+        .write_all(format!("{}\n", call_req).as_bytes())
+        .await
+        .unwrap();
+    stdin.flush().await.unwrap();
+
+    // Wait 100ms so the request enters execute_tool and starts sleeping
+    tokio::time::sleep(std::time::Duration::from_millis(100)).await;
+
+    // 4. Send cancellation notification
+    let cancel_notif = serde_json::json!({
+        "jsonrpc": "2.0",
+        "method": "notifications/cancelled",
+        "params": {
+            "requestId": 42,
+            "reason": "Test client requested cancellation"
+        }
+    });
+    stdin
+        .write_all(format!("{}\n", cancel_notif).as_bytes())
+        .await
+        .unwrap();
+    stdin.flush().await.unwrap();
+
+    // 5. Read response for id 42
+    let line = tokio::time::timeout(std::time::Duration::from_secs(2), reader.next_line())
+        .await
+        .expect("Timeout waiting for cancellation response")
+        .expect("Failed to read line")
+        .expect("EOF reading response");
+
+    let elapsed = start_time.elapsed();
+    assert!(
+        elapsed < std::time::Duration::from_millis(2500),
+        "Request took {:?}, expected to be cancelled early before 3000ms",
+        elapsed
+    );
+
+    let resp: serde_json::Value = serde_json::from_str(&line).expect("Failed to parse JSON");
+    assert_eq!(resp["id"], 42);
+    assert!(
+        resp.get("error").is_some(),
+        "Expected error response upon cancellation, got: {:?}",
+        resp
+    );
+    assert_eq!(resp["error"]["code"], -32800);
+
+    drop(stdin);
+    let _ = child.kill().await;
+}
+
+#[tokio::test]
+async fn test_mcp_progress() {
+    let bin_path = env!("CARGO_BIN_EXE_tracewise");
+
+    let mut child = Command::new(bin_path)
+        .arg("mcp")
+        .stdin(Stdio::piped())
+        .stdout(Stdio::piped())
+        .stderr(Stdio::inherit())
+        .spawn()
+        .expect("Failed to spawn tracewise mcp");
+
+    let mut stdin = child.stdin.take().expect("Failed to open stdin");
+    let stdout = child.stdout.take().expect("Failed to open stdout");
+    let mut reader = BufReader::new(stdout).lines();
+
+    // 1. Initialize
+    let init_req = serde_json::json!({
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "initialize",
+        "params": {
+            "protocolVersion": "2024-11-05",
+            "capabilities": {},
+            "clientInfo": { "name": "test-client", "version": "1.0.0" }
+        }
+    });
+    stdin
+        .write_all(format!("{}\n", init_req).as_bytes())
+        .await
+        .unwrap();
+    stdin.flush().await.unwrap();
+
+    let init_line = reader.next_line().await.unwrap().unwrap();
+    let init_resp: serde_json::Value = serde_json::from_str(&init_line).unwrap();
+    assert_eq!(init_resp["id"], 1);
+
+    // 2. Initialized notification
+    let init_notif = serde_json::json!({
+        "jsonrpc": "2.0",
+        "method": "notifications/initialized"
+    });
+    stdin
+        .write_all(format!("{}\n", init_notif).as_bytes())
+        .await
+        .unwrap();
+    stdin.flush().await.unwrap();
+
+    // Create temp file for open_binary
+    let temp_path = std::env::temp_dir().join(format!("test_prog_{}.bin", std::process::id()));
+    let dummy_elf = b"\x7fELF\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00";
+    std::fs::write(&temp_path, dummy_elf).unwrap();
+
+    // 3. Send tools/call with progressToken
+    let progress_token = "token-test-xyz";
+    let call_req = serde_json::json!({
+        "jsonrpc": "2.0",
+        "id": 10,
+        "method": "tools/call",
+        "params": {
+            "name": "open_binary",
+            "arguments": {
+                "path": temp_path.to_str().unwrap()
+            },
+            "_meta": {
+                "progressToken": progress_token
+            }
+        }
+    });
+    stdin
+        .write_all(format!("{}\n", call_req).as_bytes())
+        .await
+        .unwrap();
+    stdin.flush().await.unwrap();
+
+    // Read messages until we get the response for id 10
+    let mut progress_notifs = Vec::new();
+    let mut final_resp = None;
+
+    while let Ok(Ok(Some(line))) =
+        tokio::time::timeout(std::time::Duration::from_secs(5), reader.next_line()).await
+    {
+        let msg: serde_json::Value = serde_json::from_str(&line).unwrap();
+        if msg.get("id") == Some(&serde_json::json!(10)) {
+            final_resp = Some(msg);
+            break;
+        } else if msg.get("method") == Some(&serde_json::json!("notifications/progress")) {
+            progress_notifs.push(msg);
+        }
+    }
+
+    assert!(final_resp.is_some(), "Did not receive response for tool call");
+    assert!(
+        !progress_notifs.is_empty(),
+        "Expected at least one progress notification"
+    );
+
+    // Verify progress tokens match
+    for notif in &progress_notifs {
+        assert_eq!(notif["params"]["progressToken"], progress_token);
+    }
+
+    // Verify start (0.0) and end (1.0)
+    let progress_values: Vec<f64> = progress_notifs
+        .iter()
+        .map(|n| n["params"]["progress"].as_f64().unwrap())
+        .collect();
+    assert!(
+        progress_values.contains(&0.0),
+        "Expected 0.0 progress notification"
+    );
+    assert!(
+        progress_values.contains(&1.0),
+        "Expected 1.0 progress notification"
+    );
+
+    let _ = std::fs::remove_file(&temp_path);
     drop(stdin);
     let _ = child.kill().await;
 }

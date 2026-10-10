@@ -29,6 +29,9 @@ pub enum EvidenceError {
     #[error("Analysis profile provider ({profile:?}) does not match Evidence provider ({provider:?})")]
     ProfileProviderMismatch { profile: String, provider: String },
 
+    #[error("Analysis profile digest mismatch: expected '{expected}', found '{actual}'")]
+    ProfileDigestMismatch { expected: String, actual: String },
+
     #[error("Evidence field validation error: {0}")]
     InvalidField(String),
 }
