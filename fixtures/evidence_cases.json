@@ -1,0 +1,182 @@
+[
+  {
+    "name": "minimal_no_subject",
+    "evidence": {
+      "evidence_id": "ev_385f87a3a934d2e5ff7025839921b2d293d26d640ce0d268c4fffea64cce3072",
+      "subject": null,
+      "provider": {
+        "id": "hopper",
+        "name": "Hopper",
+        "version": "5.1"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.analysis",
+      "operation": "list_strings",
+      "parameters": {},
+      "raw_result": null,
+      "normalized_result": [],
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [
+        "Artifact identity is unavailable for this observation."
+      ],
+      "locations": [],
+      "evidence_links": []
+    }
+  },
+  {
+    "name": "with_subject",
+    "evidence": {
+      "evidence_id": "ev_dfb71b862163756de160468f80f8067d357f5991acf2748bfecc61596f1b2958",
+      "subject": {
+        "name": "a.out",
+        "digest": {
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "format": "mach-o",
+        "architecture": "arm64",
+        "local_path": "/tmp/bin/a.out"
+      },
+      "provider": {
+        "id": "hopper",
+        "name": "Hopper",
+        "version": "5.1"
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.analysis",
+      "operation": "procedure_info",
+      "parameters": {
+        "address": "0x1000",
+        "n": 3
+      },
+      "raw_result": null,
+      "normalized_result": {
+        "name": "main",
+        "size": 1.5e+21,
+        "f": 0.1,
+        "neg": 0,
+        "big": 123456789012345680000,
+        "small": 1e-7,
+        "int": 42
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [],
+      "locations": [],
+      "evidence_links": []
+    }
+  },
+  {
+    "name": "unicode_keys_and_strings",
+    "evidence": {
+      "evidence_id": "ev_68b95c86c1b064fa5b9ed3a9330b74afcb36a929003db5bcaaa381790f51d806",
+      "subject": {
+        "name": "x.apk",
+        "digest": {
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "format": "apk",
+        "architecture": null,
+        "local_path": "x.apk"
+      },
+      "provider": {
+        "id": "jadx",
+        "name": "JADX",
+        "version": null
+      },
+      "analysis_profile": null,
+      "predicate_type": "rea.analysis",
+      "operation": "op",
+      "parameters": {
+        "é": 1,
+        "a": 2,
+        "😀": 3,
+        "｡": 4,
+        "Z": 5
+      },
+      "raw_result": null,
+      "normalized_result": "ção \u0007 \"q\" \\ / \n\t  😀 \u0000 \u001f",
+      "confidence": "inferred",
+      "authority": "analyst-inference",
+      "environment": null,
+      "limitations": [
+        "l1"
+      ],
+      "locations": [
+        {
+          "kind": "address",
+          "address": "0x10"
+        },
+        {
+          "kind": "address-range",
+          "start": "0x1",
+          "end": "0x2"
+        },
+        {
+          "kind": "artifact-path",
+          "path": "a/b"
+        },
+        {
+          "kind": "file-offset",
+          "offset": 7
+        },
+        {
+          "kind": "file-offset-range",
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "evidence_links": [
+        "ev_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      ]
+    }
+  },
+  {
+    "name": "derived_env_raw",
+    "evidence": {
+      "evidence_id": "ev_1ad86770aebb009509c47dc51d42e149a323950ae5292f4dcd88a3e7c67d2175",
+      "subject": null,
+      "provider": {
+        "id": "hopper",
+        "name": "Hopper",
+        "version": "5.1"
+      },
+      "analysis_profile": null,
+      "predicate_type": "custom.pred",
+      "operation": "trace",
+      "parameters": {
+        "nested": {
+          "b": [
+            1,
+            {
+              "z": null,
+              "a": true
+            }
+          ],
+          "a": false
+        }
+      },
+      "raw_result": {
+        "raw": "1"
+      },
+      "normalized_result": {
+        "x": []
+      },
+      "confidence": "derived",
+      "authority": "controlled-replay",
+      "environment": {
+        "id": "e1",
+        "platform": "linux",
+        "architecture": "x86_64",
+        "isolation": "container"
+      },
+      "limitations": [
+        "no artifact"
+      ],
+      "locations": [],
+      "evidence_links": []
+    }
+  }
+]

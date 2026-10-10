@@ -1,0 +1,151 @@
+{
+  "record_input": {
+    "question": "What   does\tthe  ção 😀 parser do?",
+    "severity": "high",
+    "domain": "parsing",
+    "required_authority": null,
+    "required_confidence": "observed",
+    "required_environment": null,
+    "recommended_probes": [
+      {
+        "operation": "procedure_info",
+        "rationale": "check"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "related-to",
+        "unknown_id": "unk_ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      },
+      {
+        "type": "depends-on",
+        "unknown_id": "unk_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      }
+    ],
+    "supporting_evidence_ids": [
+      "ev_bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "ev_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "ev_bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ],
+    "contradicting_evidence_ids": []
+  },
+  "mutation_evidence_id": "ev_1111111111111111111111111111111111111111111111111111111111111111",
+  "scope_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "revision1": {
+    "unknown_id": "unk_4904fdc144987200441cfed0c639d9080ac2087f56dbfc1d676fa28d78c5f703",
+    "revision": 1,
+    "previous_revision_digest": null,
+    "revision_digest": "18e7b9f1e183ded76b424cca02231d98d508b28b58d4e670dcf6b2029d0304c9",
+    "scope_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "question": "What does the ção 😀 parser do?",
+    "status": "open",
+    "severity": "high",
+    "domain": "parsing",
+    "supporting_evidence_ids": [
+      "ev_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "ev_bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ],
+    "contradicting_evidence_ids": [],
+    "required_authority": null,
+    "required_confidence": "observed",
+    "required_environment": null,
+    "recommended_probes": [
+      {
+        "operation": "procedure_info",
+        "rationale": "check"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "depends-on",
+        "unknown_id": "unk_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      },
+      {
+        "type": "related-to",
+        "unknown_id": "unk_ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      }
+    ],
+    "resolution": null,
+    "mutation_evidence_ids": [
+      "ev_1111111111111111111111111111111111111111111111111111111111111111"
+    ]
+  },
+  "contradicted_no_scope": {
+    "unknown_id": "unk_e023efd467559e249b7e665434c6be69716e16638471b7a791c02c545a457464",
+    "revision": 1,
+    "previous_revision_digest": null,
+    "revision_digest": "33aeda56c69ccf4b22922a57b30347b9024fd69356484483c04ceec2413e244c",
+    "scope_digest": null,
+    "question": "What does the ção 😀 parser do?",
+    "status": "contradicted",
+    "severity": "high",
+    "domain": "parsing",
+    "supporting_evidence_ids": [
+      "ev_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "ev_bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ],
+    "contradicting_evidence_ids": [
+      "ev_cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    ],
+    "required_authority": null,
+    "required_confidence": "observed",
+    "required_environment": null,
+    "recommended_probes": [
+      {
+        "operation": "procedure_info",
+        "rationale": "check"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "depends-on",
+        "unknown_id": "unk_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      },
+      {
+        "type": "related-to",
+        "unknown_id": "unk_ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      }
+    ],
+    "resolution": null,
+    "mutation_evidence_ids": [
+      "ev_2222222222222222222222222222222222222222222222222222222222222222"
+    ]
+  },
+  "revision2": {
+    "unknown_id": "unk_4904fdc144987200441cfed0c639d9080ac2087f56dbfc1d676fa28d78c5f703",
+    "revision": 2,
+    "previous_revision_digest": "18e7b9f1e183ded76b424cca02231d98d508b28b58d4e670dcf6b2029d0304c9",
+    "revision_digest": "5c791a64eb99f941325caec9b9ba7cdb12495d3f2ba4044c07871353c5f30b15",
+    "scope_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "question": "What does the ção 😀 parser do?",
+    "status": "resolved",
+    "severity": "low",
+    "domain": "parsing",
+    "supporting_evidence_ids": [
+      "ev_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ],
+    "contradicting_evidence_ids": [],
+    "required_authority": "shipped-artifact",
+    "required_confidence": "derived",
+    "required_environment": {
+      "id": null,
+      "platform": "linux",
+      "architecture": null,
+      "isolation": "process"
+    },
+    "recommended_probes": [],
+    "relationships": [],
+    "resolution": {
+      "disposition": "verified",
+      "rationale": "seen",
+      "evidence_ids": [
+        "ev_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      ]
+    },
+    "mutation_evidence_ids": [
+      "ev_0000000000000000000000000000000000000000000000000000000000000000",
+      "ev_1111111111111111111111111111111111111111111111111111111111111111"
+    ]
+  },
+  "update_mutation_evidence_id": "ev_0000000000000000000000000000000000000000000000000000000000000000"
+}

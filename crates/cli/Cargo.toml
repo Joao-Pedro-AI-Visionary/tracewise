@@ -1,0 +1,22 @@
+[package]
+name = "tracewise"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "tracewise"
+path = "src/main.rs"
+
+[dependencies]
+tracewise-domain = { path = "../domain" }
+tracewise-contracts = { path = "../contracts" }
+tracewise-server = { path = "../server" }
+clap.workspace = true
+tokio.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full", "process", "io-util"] }
+serde_json.workspace = true

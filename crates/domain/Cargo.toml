@@ -1,0 +1,18 @@
+[package]
+name = "tracewise-domain"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+serde_jcs.workspace = true
+sha2.workspace = true
+hex.workspace = true
+thiserror.workspace = true
+regex.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
