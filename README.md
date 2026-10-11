@@ -23,6 +23,8 @@ cargo test
 # Run MCP stdio server
 tracewise mcp
 
+Live browser tools `list_browser_targets` and `capture_web_screenshot` attach to a loopback Chrome DevTools endpoint (`http://127.0.0.1:<port>` or `http://[::1]:<port>`). `allowed_origins` is an optional list of exact `http`/`https` origins: an empty list lists every HTTP(S) page, and a screenshot with no filter is limited to that target's current origin. URLs keep query and fragment; only userinfo credentials are removed.
+
 # Hash a JSON file canonically
 tracewise hash <file.json>
 

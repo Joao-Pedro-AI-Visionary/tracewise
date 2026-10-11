@@ -143,6 +143,17 @@ impl ProcessSupervisor {
         self
     }
 
+    /// Discard the child's stdin, stdout, and stderr.
+    ///
+    /// Long-running processes such as headless Chrome keep writing logs. An
+    /// inherited pipe that nobody reads will eventually stall the child.
+    pub fn null_stdio(&mut self) -> &mut Self {
+        self.command.stdin(std::process::Stdio::null());
+        self.command.stdout(std::process::Stdio::null());
+        self.command.stderr(std::process::Stdio::null());
+        self
+    }
+
     /// Spawns the child in its own process group, returning a `SupervisedChild`
     pub fn spawn(&mut self) -> Result<SupervisedChild, std::io::Error> {
         self.command.process_group(0);

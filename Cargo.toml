@@ -35,3 +35,4 @@ jsonschema = "0.29"
 tokio-tungstenite = { version = "0.26", default-features = false, features = ["connect"] }
 reqwest = { version = "0.12", default-features = false, features = ["json"] }
 futures-util = "0.3"
+chrono = { version = "0.4", default-features = false, features = ["std", "clock"] }

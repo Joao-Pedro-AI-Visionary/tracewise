@@ -18,6 +18,21 @@ pub enum WebError {
         user_message: String,
     },
 
+    #[error("Browser observation {operation} failed: {reason}")]
+    BrowserObservation {
+        operation: String,
+        reason: String,
+        code: String,
+        user_message: String,
+    },
+
+    #[error("CDP command rejected during {operation}: {code} {message}")]
+    CdpCommandRejected {
+        operation: String,
+        code: i64,
+        message: String,
+    },
+
     #[error("Format error: {0}")]
     Format(String),
 

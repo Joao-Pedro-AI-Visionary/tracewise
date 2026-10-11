@@ -105,6 +105,8 @@ async fn execute_tool(
         "trace_web_source_location" => handle_trace_web_source_location(session, args),
         "compare_web_captures" => handle_compare_web_captures(session, args),
         "compare_web_screenshots" => handle_compare_web_screenshots(session, args),
+        "list_browser_targets" => handle_list_browser_targets(session, args).await,
+        "capture_web_screenshot" => handle_capture_web_screenshot(session, args).await,
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
@@ -146,6 +148,10 @@ fn progress_message(tool_name: &str, start: bool) -> String {
         ("compare_web_captures", false) => "Web captures compared".to_string(),
         ("compare_web_screenshots", true) => "Comparing web screenshots...".to_string(),
         ("compare_web_screenshots", false) => "Web screenshots compared".to_string(),
+        ("list_browser_targets", true) => "Discovering browser targets...".to_string(),
+        ("list_browser_targets", false) => "Browser targets listed".to_string(),
+        ("capture_web_screenshot", true) => "Capturing web screenshot...".to_string(),
+        ("capture_web_screenshot", false) => "Screenshot capture complete".to_string(),
         (name, true) => format!("Starting operation: {name}"),
         (name, false) => format!("Completed operation: {name}"),
     }
@@ -568,3 +574,54 @@ fn handle_compare_web_screenshots(
     Ok(CallToolResult::structured(val))
 }
 
+
+/// Browser observation failures are tool results (`isError`), not protocol errors.
+fn browser_tool_result(
+    session: &BinarySession,
+    outcome: Result<tracewise_domain::evidence::Evidence, tracewise_web::error::WebError>,
+) -> Result<CallToolResult, McpError> {
+    let ev = match outcome {
+        Ok(ev) => ev,
+        Err(e) => {
+            return match tracewise_web::browser_observation::browser_error_body(&e) {
+                Some(body) => Ok(CallToolResult::error(vec![rmcp::model::Content::text(
+                    body.to_string(),
+                )])),
+                None => Err(McpError::invalid_params(e.to_string(), None)),
+            }
+        }
+    };
+
+    let _ = session.ledger.lock().unwrap().record(ev.clone());
+
+    let val = serde_json::to_value(&ev)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+
+    Ok(CallToolResult::structured(val))
+}
+
+async fn handle_list_browser_targets(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_web::browser_targets::parse_list_browser_targets_input(args)
+        .map_err(|e| McpError::invalid_params(format!("Invalid list_browser_targets input: {e}"), None))?;
+
+    browser_tool_result(
+        session,
+        tracewise_web::browser_targets::list_browser_targets(&input).await,
+    )
+}
+
+async fn handle_capture_web_screenshot(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_web::web_screenshot::parse_capture_web_screenshot_input(args)
+        .map_err(|e| McpError::invalid_params(format!("Invalid capture_web_screenshot input: {e}"), None))?;
+
+    browser_tool_result(
+        session,
+        tracewise_web::web_screenshot::capture_web_screenshot(&input).await,
+    )
+}

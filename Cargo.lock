@@ -2035,6 +2035,7 @@ dependencies = [
  "base64 0.22.1",
  "hex",
  "jsonschema 0.58.6",
+ "proc-supervisor",
  "rmcp",
  "serde",
  "serde_json",
@@ -2052,6 +2053,7 @@ name = "tracewise-web"
 version = "0.1.0"
 dependencies = [
  "base64 0.22.1",
+ "chrono",
  "futures-util",
  "hex",
  "image",

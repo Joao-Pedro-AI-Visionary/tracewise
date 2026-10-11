@@ -28,3 +28,16 @@
 ## 2026-10-10 21:54 — phase1b: CDP targets, screenshot, page, session
 - commit: (ver git log)
 - testes: 26 ok
+
+## Correção (2026-10-11)
+- ffa217e NÃO implementa as ferramentas CDP: só adicionou dependências (AGY caiu 3x por timeout). Entradas "a4" anteriores eram falsas e foram desfeitas (reset local).
+- Trabalho parcial da a4 (Cursor codex + Claude Code) guardado em `git stash` "a4-partial-cursor+claude-2026-10-10" e mantido na working tree como base.
+- Cadeia de CLIs a partir de agora: Cursor grok-4.7-high -> Cursor composer-2.5 -> AGY Gemini 3.1 Pro. Claude (OAuth expirado) e Fable não usados.
+
+## 2026-10-11 — phase1b: list_browser_targets, capture_web_screenshot
+- crates/web: cliente CDP mínimo (HTTP `/json/version` + `/json/list`, WebSocket tokio-tungstenite) e as duas ferramentas, com `allowed_origins` no mesmo critério do REA (vazio lista toda página HTTP(S); lista explícita é match exato de origem; screenshot sem filtro fica preso à origem atual do alvo).
+- crates/server: despacho das duas ferramentas; falha de observação volta como resultado `isError`.
+- teste: `crates/server/tests/cdp_test.rs` sobe Chrome headless, serve um HTML local, navega um alvo e valida `structuredContent` contra o `outputSchema` de cada ferramenta. Pula se `/usr/bin/google-chrome` não existir.
+
+## 2026-10-11 07:27 — phase1b: list_browser_targets + capture_web_screenshot (CLI: cursor:grok-4.7-high)
+- testes ok: 37
