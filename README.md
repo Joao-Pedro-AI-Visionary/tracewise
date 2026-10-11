@@ -23,7 +23,9 @@ cargo test
 # Run MCP stdio server
 tracewise mcp
 
-Live browser tools `list_browser_targets` and `capture_web_screenshot` attach to a loopback Chrome DevTools endpoint (`http://127.0.0.1:<port>` or `http://[::1]:<port>`). `allowed_origins` is an optional list of exact `http`/`https` origins: an empty list lists every HTTP(S) page, and a screenshot with no filter is limited to that target's current origin. URLs keep query and fragment; only userinfo credentials are removed.
+Live browser tools attach to a loopback Chrome DevTools endpoint (`http://127.0.0.1:<port>` or `http://[::1]:<port>`). `allowed_origins` is an optional list of exact `http`/`https` origins: an empty list lists every HTTP(S) page, and a capture with no filter is limited to that target's current origin. URLs keep query and fragment; only userinfo credentials are removed.
+
+`inspect_web_page` passively records one page (DOM, accessibility, scripts, resources, attach-window network and console metadata, workers, redacted storage). It does not navigate or evaluate JavaScript. `Cookie`, `Set-Cookie`, and `Authorization` are removed from captured network data; response metadata keeps an allowlist and `values_redacted` stays true. `observe_web_session` records a navigation timeline for `observation_ms` (default 10000, minimum 1) and does not retain headers, bodies, or cookies.
 
 # Hash a JSON file canonically
 tracewise hash <file.json>

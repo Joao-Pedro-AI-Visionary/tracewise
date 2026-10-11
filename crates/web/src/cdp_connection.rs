@@ -203,6 +203,60 @@ impl CdpConnection {
         self.events.drain(..).collect()
     }
 
+    /// Read the socket until `duration` elapses, queueing CDP events.
+    ///
+    /// The observation window has no outstanding command. Events that arrive
+    /// while we wait would otherwise sit unread until the next `send`.
+    pub async fn collect_for(&mut self, duration: Duration) -> Result<(), WebError> {
+        if self.protocol_failed {
+            return Err(self.fail(BrowserFailureReason::ProtocolError));
+        }
+        if self.closed {
+            return Err(self.fail(BrowserFailureReason::Disconnected));
+        }
+        if duration.is_zero() {
+            return Ok(());
+        }
+        let deadline = tokio::time::Instant::now() + duration;
+        loop {
+            let remaining = deadline.saturating_duration_since(tokio::time::Instant::now());
+            if remaining.is_zero() {
+                return Ok(());
+            }
+            match tokio::time::timeout(remaining, self.socket.next()).await {
+                Err(_) => return Ok(()),
+                Ok(Some(Ok(Message::Text(text)))) => self.ingest_idle_frame(text.as_str())?,
+                Ok(Some(Ok(Message::Binary(bytes)))) => {
+                    let text = String::from_utf8(bytes.to_vec()).map_err(|_| self.protocol_failure())?;
+                    self.ingest_idle_frame(&text)?;
+                }
+                Ok(Some(Ok(Message::Ping(payload)))) => {
+                    if self.socket.send(Message::Pong(payload)).await.is_err() {
+                        self.closed = true;
+                        return Err(self.fail(BrowserFailureReason::Disconnected));
+                    }
+                }
+                Ok(Some(Ok(Message::Close(_))) | None | Some(Err(_))) => {
+                    self.closed = true;
+                    return Err(self.fail(BrowserFailureReason::Disconnected));
+                }
+                Ok(Some(Ok(_))) => {}
+            }
+        }
+    }
+
+    fn ingest_idle_frame(&mut self, text: &str) -> Result<(), WebError> {
+        let Ok(Value::Object(message)) = serde_json::from_str::<Value>(text) else {
+            return Err(self.protocol_failure());
+        };
+        if message.contains_key("id") {
+            return Ok(());
+        }
+        let event = self.parse_event(message)?;
+        self.events.push_back(event);
+        Ok(())
+    }
+
     /// Close only our socket; never close the browser or selected page.
     pub async fn close(&mut self) {
         if self.closed {

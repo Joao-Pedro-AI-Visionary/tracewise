@@ -107,6 +107,8 @@ async fn execute_tool(
         "compare_web_screenshots" => handle_compare_web_screenshots(session, args),
         "list_browser_targets" => handle_list_browser_targets(session, args).await,
         "capture_web_screenshot" => handle_capture_web_screenshot(session, args).await,
+        "inspect_web_page" => handle_inspect_web_page(session, args).await,
+        "observe_web_session" => handle_observe_web_session(session, args).await,
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
@@ -152,6 +154,10 @@ fn progress_message(tool_name: &str, start: bool) -> String {
         ("list_browser_targets", false) => "Browser targets listed".to_string(),
         ("capture_web_screenshot", true) => "Capturing web screenshot...".to_string(),
         ("capture_web_screenshot", false) => "Screenshot capture complete".to_string(),
+        ("inspect_web_page", true) => "Inspecting web page...".to_string(),
+        ("inspect_web_page", false) => "Web page inspected".to_string(),
+        ("observe_web_session", true) => "Observing web session...".to_string(),
+        ("observe_web_session", false) => "Web session observed".to_string(),
         (name, true) => format!("Starting operation: {name}"),
         (name, false) => format!("Completed operation: {name}"),
     }
@@ -623,5 +629,31 @@ async fn handle_capture_web_screenshot(
     browser_tool_result(
         session,
         tracewise_web::web_screenshot::capture_web_screenshot(&input).await,
+    )
+}
+
+async fn handle_inspect_web_page(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_web::page_inspection::parse_inspect_web_page_input(args)
+        .map_err(|e| McpError::invalid_params(format!("Invalid inspect_web_page input: {e}"), None))?;
+
+    browser_tool_result(
+        session,
+        tracewise_web::page_inspection::inspect_web_page(&input).await,
+    )
+}
+
+async fn handle_observe_web_session(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_web::session_observation::parse_observe_web_session_input(args)
+        .map_err(|e| McpError::invalid_params(format!("Invalid observe_web_session input: {e}"), None))?;
+
+    browser_tool_result(
+        session,
+        tracewise_web::session_observation::observe_web_session(&input).await,
     )
 }

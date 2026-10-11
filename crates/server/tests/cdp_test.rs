@@ -1,4 +1,4 @@
-//! Live Chrome CDP coverage for `list_browser_targets` and `capture_web_screenshot`.
+//! Live Chrome CDP coverage for browser observation tools.
 //!
 //! Skips when `/usr/bin/google-chrome` is absent. The browser is started on a
 //! free loopback port and killed with its process group when the test ends.
@@ -132,6 +132,122 @@ async fn live_cdp_lists_targets_and_captures_screenshot() {
         denied_text.contains("target_not_allowed"),
         "disallowed origin must be rejected, got {denied_text}"
     );
+}
+
+const SECRET_TOKEN: &str = "tracewise-secret-token";
+const SECRET_COOKIE: &str = "tracewise-secret-cookie";
+
+#[tokio::test]
+async fn live_cdp_inspects_page_and_observes_session() {
+    if !std::path::Path::new(CHROME).is_file() {
+        eprintln!("skipping live CDP test: {CHROME} is missing");
+        return;
+    }
+
+    let page = HtmlServer::start_scripted();
+    let origin = format!("http://127.0.0.1:{}", page.port);
+    let page_url = format!("{origin}/");
+    let chrome = ChromeDebug::launch();
+    navigate_page(&chrome.endpoint, &page_url).await;
+
+    let session = BinarySession::new();
+    let inspected = call_ok(
+        &session,
+        "inspect_web_page",
+        json!({
+            "cdp_endpoint": chrome.endpoint,
+            "allowed_origins": [origin],
+            "target_id": page_target_id(&session, &chrome.endpoint, &origin).await,
+            "observation_ms": 1500,
+        }),
+    )
+    .await;
+    let inspected_body = structured_of("inspect_web_page", &inspected);
+    assert_output_schema("inspect_web_page", inspected_body);
+    let normalized = &inspected_body["normalized_result"];
+    let script_urls: Vec<&str> = normalized["scripts"]["items"]
+        .as_array()
+        .expect("scripts")
+        .iter()
+        .filter_map(|script| script["url"].as_str())
+        .collect();
+    assert!(
+        script_urls.iter().any(|url| url.ends_with("/app.js")),
+        "expected /app.js in scripts, got {script_urls:?}"
+    );
+    let request_urls: Vec<&str> = normalized["network"]["requests"]
+        .as_array()
+        .expect("requests")
+        .iter()
+        .filter_map(|request| request["url"].as_str())
+        .collect();
+    assert!(
+        request_urls.iter().any(|url| url.contains("/api")),
+        "expected fetch /api in network, got {request_urls:?}\n{normalized}"
+    );
+    let encoded = normalized.to_string();
+    assert!(
+        !encoded.contains(SECRET_TOKEN),
+        "Authorization value leaked into inspect_web_page output"
+    );
+    assert!(
+        !encoded.contains(SECRET_COOKIE),
+        "cookie value leaked into inspect_web_page output"
+    );
+    assert_eq!(normalized["network"]["prior_activity_available"], false);
+    assert_eq!(normalized["metadata"]["headers_allowlisted"], true);
+    assert_eq!(normalized["storage"]["values_redacted"], true);
+
+    let observed = call_ok(
+        &session,
+        "observe_web_session",
+        json!({
+            "cdp_endpoint": chrome.endpoint,
+            "allowed_origins": [origin],
+            "target_id": page_target_id(&session, &chrome.endpoint, &origin).await,
+            "observation_ms": 400,
+        }),
+    )
+    .await;
+    let observed_body = structured_of("observe_web_session", &observed);
+    assert_output_schema("observe_web_session", observed_body);
+    let session_result = &observed_body["normalized_result"];
+    assert_eq!(session_result["window"]["end_reason"], "window_elapsed");
+    assert_eq!(session_result["window"]["requested_ms"], 400);
+    let initial_url = session_result["target"]["initial_url"].as_str().unwrap_or("");
+    assert!(
+        initial_url.starts_with(&origin),
+        "initial_url {initial_url} should stay on {origin}"
+    );
+    assert!(
+        !session_result.to_string().contains(SECRET_TOKEN),
+        "session timeline retained the Authorization secret"
+    );
+    assert!(
+        !session_result.to_string().contains(SECRET_COOKIE),
+        "session timeline retained the cookie secret"
+    );
+}
+
+async fn page_target_id(session: &BinarySession, endpoint: &str, origin: &str) -> String {
+    let listed = call_ok(
+        session,
+        "list_browser_targets",
+        json!({
+            "cdp_endpoint": endpoint,
+            "allowed_origins": [origin],
+        }),
+    )
+    .await;
+    let body = structured_of("list_browser_targets", &listed);
+    body["normalized_result"]["targets"]
+        .as_array()
+        .expect("targets")
+        .iter()
+        .find(|target| target["origin"] == origin)
+        .and_then(|target| target["target_id"].as_str())
+        .expect("scripted page target")
+        .to_string()
 }
 
 fn structured_of<'a>(tool: &str, result: &'a CallToolResult) -> &'a Value {
@@ -287,6 +403,12 @@ async fn wait_for_discovery(endpoint: &str) -> tracewise_web::cdp_endpoint::CdpE
     panic!("CDP endpoint {endpoint} was not ready: {last_error}");
 }
 
+#[derive(Clone, Copy)]
+enum PageMode {
+    Plain,
+    Scripted,
+}
+
 struct HtmlServer {
     port: u16,
     stop: Arc<AtomicBool>,
@@ -295,6 +417,14 @@ struct HtmlServer {
 
 impl HtmlServer {
     fn start() -> Self {
+        Self::start_mode(PageMode::Plain)
+    }
+
+    fn start_scripted() -> Self {
+        Self::start_mode(PageMode::Scripted)
+    }
+
+    fn start_mode(mode: PageMode) -> Self {
         let listener = TcpListener::bind("127.0.0.1:0").expect("bind local html server");
         let port = listener.local_addr().expect("html port").port();
         listener
@@ -305,7 +435,7 @@ impl HtmlServer {
         let thread = std::thread::spawn(move || {
             while !stop_flag.load(Ordering::Relaxed) {
                 match listener.accept() {
-                    Ok((stream, _)) => write_html(stream),
+                    Ok((stream, _)) => write_html(stream, mode),
                     Err(err) if err.kind() == std::io::ErrorKind::WouldBlock => {
                         std::thread::sleep(Duration::from_millis(20));
                     }
@@ -330,18 +460,45 @@ impl Drop for HtmlServer {
     }
 }
 
-fn write_html(mut stream: TcpStream) {
+fn write_html(mut stream: TcpStream, mode: PageMode) {
     let _ = stream.set_read_timeout(Some(Duration::from_millis(500)));
     let _ = stream.set_write_timeout(Some(Duration::from_millis(500)));
-    let mut buf = [0_u8; 1024];
-    let _ = stream.read(&mut buf);
-    let body = b"<!DOCTYPE html><html><head><title>tracewise</title></head><body><h1>tracewise-cdp</h1></body></html>";
+    let mut buf = [0_u8; 2048];
+    let n = stream.read(&mut buf).unwrap_or(0);
+    let request = String::from_utf8_lossy(&buf[..n]);
+    let path = request.split_whitespace().nth(1).unwrap_or("/");
+    let path = path.split('?').next().unwrap_or("/");
+    let (content_type, extra, body): (&str, String, Vec<u8>) = match (mode, path) {
+        (PageMode::Scripted, "/app.js") => (
+            "text/javascript; charset=utf-8",
+            String::new(),
+            format!(
+                "setInterval(function(){{fetch('/api',{{headers:{{Authorization:'Bearer {SECRET_TOKEN}'}}}}).catch(function(){{}});}},100);\n"
+            )
+            .into_bytes(),
+        ),
+        (PageMode::Scripted, "/api") => (
+            "application/json",
+            format!("Set-Cookie: sid={SECRET_COOKIE}; Path=/\r\n"),
+            b"{\"ok\":true}".to_vec(),
+        ),
+        (PageMode::Scripted, _) => (
+            "text/html; charset=utf-8",
+            String::new(),
+            b"<!DOCTYPE html><html><head><title>tracewise</title><script src=\"/app.js\"></script></head><body><h1>tracewise-cdp</h1></body></html>".to_vec(),
+        ),
+        (PageMode::Plain, _) => (
+            "text/html; charset=utf-8",
+            String::new(),
+            b"<!DOCTYPE html><html><head><title>tracewise</title></head><body><h1>tracewise-cdp</h1></body></html>".to_vec(),
+        ),
+    };
     let header = format!(
-        "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: {}\r\nConnection: close\r\n\r\n",
+        "HTTP/1.1 200 OK\r\nContent-Type: {content_type}\r\n{extra}Content-Length: {}\r\nConnection: close\r\n\r\n",
         body.len()
     );
     let _ = stream.write_all(header.as_bytes());
-    let _ = stream.write_all(body);
+    let _ = stream.write_all(&body);
 }
 
 struct ChromeDebug {

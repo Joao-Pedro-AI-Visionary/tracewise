@@ -41,3 +41,11 @@
 
 ## 2026-10-11 07:27 — phase1b: list_browser_targets + capture_web_screenshot (CLI: cursor:grok-4.7-high)
 - testes ok: 37
+
+## 2026-10-11 — phase1b: inspect_web_page + observe_web_session
+- crates/web: inspeção passiva e sessão de observação no cliente CDP existente. Rede da inspeção não retém `Cookie`/`Set-Cookie`/`Authorization`; metadados de resposta ficam na allowlist. `observe_web_session` guarda só a timeline de navegação.
+- crates/server: despacho das duas ferramentas; falha de observação volta como `isError`.
+- teste: `cdp_test.rs` serve uma página com `/app.js` e `fetch('/api')` (Authorization no pedido, Set-Cookie na resposta) e valida `structuredContent` contra o `outputSchema`. Segredos não aparecem no resultado.
+
+## 2026-10-11 07:44 — phase1b: inspect_web_page + observe_web_session (CLI: cursor:grok-4.7-high)
+- testes ok: 41
