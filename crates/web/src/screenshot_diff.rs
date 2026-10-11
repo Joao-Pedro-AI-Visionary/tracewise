@@ -44,40 +44,67 @@ fn limitations() -> Vec<String> {
 
 fn validate_artifact(artifact: &WebScreenshotArtifact, label: &str) -> Result<Vec<u8>, WebError> {
     if artifact.media_type != "image/png" {
-        return Err(WebError::InvalidInput(format!(
-            "{label}: media_type must be image/png, got {}",
-            artifact.media_type
-        )));
+        return Err(WebError::Input {
+            operation: "compare_web_screenshots".to_string(),
+            path: vec![label.to_string(), "media_type".to_string()],
+            reason: "invalid_value".to_string(),
+            message: format!(
+                "{label}: media_type must be image/png, got {}",
+                artifact.media_type
+            ),
+        });
     }
+    #[allow(clippy::manual_is_multiple_of)]
     if artifact.data_base64.is_empty() || artifact.data_base64.len() % 4 != 0 {
-        return Err(WebError::InvalidInput(format!(
-            "{label}: invalid canonical base64 length"
-        )));
+        return Err(WebError::Input {
+            operation: "compare_web_screenshots".to_string(),
+            path: vec![label.to_string(), "data_base64".to_string()],
+            reason: "invalid_value".to_string(),
+            message: format!("{label}: invalid canonical base64 length"),
+        });
     }
     let decoded = BASE64_STANDARD
         .decode(&artifact.data_base64)
-        .map_err(|e| WebError::InvalidInput(format!("{label}: base64 decode failed: {e}")))?;
+        .map_err(|e| WebError::Input {
+            operation: "compare_web_screenshots".to_string(),
+            path: vec![label.to_string(), "data_base64".to_string()],
+            reason: "invalid_value".to_string(),
+            message: format!("{label}: base64 decode failed: {e}"),
+        })?;
 
     if BASE64_STANDARD.encode(&decoded) != artifact.data_base64 {
-        return Err(WebError::InvalidInput(format!(
-            "{label}: non-canonical base64"
-        )));
+        return Err(WebError::Input {
+            operation: "compare_web_screenshots".to_string(),
+            path: vec![label.to_string(), "data_base64".to_string()],
+            reason: "invalid_value".to_string(),
+            message: format!("{label}: non-canonical base64"),
+        });
     }
 
     if decoded.len() as u64 != artifact.bytes {
-        return Err(WebError::InvalidInput(format!(
-            "{label}: byte length mismatch: expected {}, got {}",
-            artifact.bytes,
-            decoded.len()
-        )));
+        return Err(WebError::Input {
+            operation: "compare_web_screenshots".to_string(),
+            path: vec![label.to_string(), "bytes".to_string()],
+            reason: "invalid_value".to_string(),
+            message: format!(
+                "{label}: byte length mismatch: expected {}, got {}",
+                artifact.bytes,
+                decoded.len()
+            ),
+        });
     }
 
     let actual_sha256 = hex::encode(Sha256::digest(&decoded));
     if actual_sha256 != artifact.sha256 {
-        return Err(WebError::InvalidInput(format!(
-            "{label}: sha256 mismatch: expected {}, got {}",
-            artifact.sha256, actual_sha256
-        )));
+        return Err(WebError::Input {
+            operation: "compare_web_screenshots".to_string(),
+            path: vec![label.to_string(), "sha256".to_string()],
+            reason: "invalid_value".to_string(),
+            message: format!(
+                "{label}: sha256 mismatch: expected {}, got {}",
+                artifact.sha256, actual_sha256
+            ),
+        });
     }
 
     Ok(decoded)
@@ -88,9 +115,19 @@ pub fn compare_web_screenshots(input: CompareWebScreenshotsInput) -> Result<Evid
     let after_bytes = validate_artifact(&input.after, "after")?;
 
     let before_img = image::load_from_memory(&before_bytes)
-        .map_err(|e| WebError::InvalidInput(format!("Failed to decode before PNG: {e}")))?;
+        .map_err(|e| WebError::Input {
+            operation: "compare_web_screenshots".to_string(),
+            path: vec!["before".to_string()],
+            reason: "invalid_value".to_string(),
+            message: format!("Failed to decode before PNG: {e}"),
+        })?;
     let after_img = image::load_from_memory(&after_bytes)
-        .map_err(|e| WebError::InvalidInput(format!("Failed to decode after PNG: {e}")))?;
+        .map_err(|e| WebError::Input {
+            operation: "compare_web_screenshots".to_string(),
+            path: vec!["after".to_string()],
+            reason: "invalid_value".to_string(),
+            message: format!("Failed to decode after PNG: {e}"),
+        })?;
 
     let (before_w, before_h) = (before_img.width(), before_img.height());
     let (after_w, after_h) = (after_img.width(), after_img.height());
@@ -127,6 +164,7 @@ pub fn compare_web_screenshots(input: CompareWebScreenshotsInput) -> Result<Evid
         let mut maximum_delta = 0u8;
         let mut total_delta = 0u64;
 
+        #[allow(clippy::chunks_exact_to_as_chunks)]
         for (b_px, a_px) in b_raw.chunks_exact(4).zip(a_raw.chunks_exact(4)) {
             let mut px_changed = false;
             for c in 0..4 {
@@ -230,6 +268,52 @@ pub fn compare_web_screenshots(input: CompareWebScreenshotsInput) -> Result<Evid
         evidence_links: Some(vec![]),
     };
 
-    create_evidence(None, provider, observation)
-        .map_err(|e| WebError::Other(format!("Failed to create evidence: {e}")))
+    create_evidence(None, provider, observation).map_err(WebError::from)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_screenshot_diff_against_oracle() {
+        let bytes_a = std::fs::read("/workspace/tracewise/fixtures/web/shot_a.png").unwrap();
+        let bytes_b = std::fs::read("/workspace/tracewise/fixtures/web/shot_b.png").unwrap();
+
+        let sha_a = hex::encode(Sha256::digest(&bytes_a));
+        let sha_b = hex::encode(Sha256::digest(&bytes_b));
+
+        let art_a = WebScreenshotArtifact {
+            sha256: sha_a,
+            bytes: bytes_a.len() as u64,
+            media_type: "image/png".to_string(),
+            data_base64: BASE64_STANDARD.encode(&bytes_a),
+        };
+        let art_b = WebScreenshotArtifact {
+            sha256: sha_b,
+            bytes: bytes_b.len() as u64,
+            media_type: "image/png".to_string(),
+            data_base64: BASE64_STANDARD.encode(&bytes_b),
+        };
+
+        let ev = compare_web_screenshots(CompareWebScreenshotsInput {
+            before: art_a,
+            after: art_b,
+            channel_threshold: 0,
+        })
+        .unwrap();
+
+        let oracle_str = std::fs::read_to_string(
+            "/workspace/tracewise/fixtures/web/oracle_compare_web_screenshots.json",
+        )
+        .unwrap();
+        let oracle: serde_json::Value = serde_json::from_str(&oracle_str).unwrap();
+        let oracle_sc = &oracle["structuredContent"];
+
+        let ev_val = serde_json::to_value(&ev).unwrap();
+        assert_eq!(ev_val["evidence_id"], oracle_sc["evidence_id"]);
+        assert_eq!(ev_val["normalized_result"], oracle_sc["normalized_result"]);
+        assert_eq!(ev_val, *oracle_sc);
+    }
+}
+

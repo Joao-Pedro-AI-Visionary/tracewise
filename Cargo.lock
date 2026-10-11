@@ -1971,6 +1971,7 @@ dependencies = [
 name = "tracewise-server"
 version = "0.1.0"
 dependencies = [
+ "base64 0.22.1",
  "hex",
  "jsonschema 0.58.6",
  "rmcp",

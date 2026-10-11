@@ -103,6 +103,8 @@ async fn execute_tool(
         "export_web_scripts" => handle_export_web_scripts(session, args),
         "trace_web_module_imports" => handle_trace_web_module_imports(session, args),
         "trace_web_source_location" => handle_trace_web_source_location(session, args),
+        "compare_web_captures" => handle_compare_web_captures(session, args),
+        "compare_web_screenshots" => handle_compare_web_screenshots(session, args),
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
@@ -140,6 +142,10 @@ fn progress_message(tool_name: &str, start: bool) -> String {
         ("trace_web_module_imports", false) => "Web module imports traced".to_string(),
         ("trace_web_source_location", true) => "Tracing web source location...".to_string(),
         ("trace_web_source_location", false) => "Web source location traced".to_string(),
+        ("compare_web_captures", true) => "Comparing web captures...".to_string(),
+        ("compare_web_captures", false) => "Web captures compared".to_string(),
+        ("compare_web_screenshots", true) => "Comparing web screenshots...".to_string(),
+        ("compare_web_screenshots", false) => "Web screenshots compared".to_string(),
         (name, true) => format!("Starting operation: {name}"),
         (name, false) => format!("Completed operation: {name}"),
     }
@@ -518,3 +524,47 @@ fn handle_trace_web_source_location(
 
     Ok(CallToolResult::structured(val))
 }
+
+fn handle_compare_web_captures(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    if args.get("before_scenario").is_some() || args.get("after_scenario").is_some() {
+        return Err(McpError::invalid_params(
+            "Browser scenario comparison is not yet implemented",
+            None,
+        ));
+    }
+
+    let input: tracewise_web::capture_diff::CompareWebCapturesInput = serde_json::from_value(args.clone())
+        .map_err(|e| McpError::invalid_params(format!("Invalid compare_web_captures input: {e}"), None))?;
+
+    let ev = tracewise_web::capture_diff::compare_web_captures(input)
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+
+    let _ = session.ledger.lock().unwrap().record(ev.clone());
+
+    let val = serde_json::to_value(&ev)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_compare_web_screenshots(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input: tracewise_web::screenshot_diff::CompareWebScreenshotsInput = serde_json::from_value(args.clone())
+        .map_err(|e| McpError::invalid_params(format!("Invalid compare_web_screenshots input: {e}"), None))?;
+
+    let ev = tracewise_web::screenshot_diff::compare_web_screenshots(input)
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+
+    let _ = session.ledger.lock().unwrap().record(ev.clone());
+
+    let val = serde_json::to_value(&ev)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+
+    Ok(CallToolResult::structured(val))
+}
+
