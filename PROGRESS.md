@@ -55,7 +55,7 @@
 - crates/server: despacho das três; falha de observação volta como `isError`.
 - teste: `cdp_test.rs` serve uma página com listener de click e `fetch('/api')` e valida `structuredContent` contra o `outputSchema`.
 
-## 2026-10-11 07:44 — phase1b: bundle, execution, listeners (CLI: cursor:grok-4.7-high)
+## 2026-10-11 07:44 — phase1b: inspect_web_page + observe_web_session (CLI: cursor:grok-4.7-high)
 - testes ok: 43
 
 ## 2026-10-11 08:03 — phase1b: analyze_web_bundle, observe_web_execution, inspect_web_event_listeners (CLI: cursor:grok-4.7-high)
@@ -87,11 +87,13 @@
 ## 2026-10-11 09:20 — phase1c: generate_api_client (CLI: cursor:grok-4.7-high)
 - testes ok: 50
 
-## 2026-10-11 09:49 — phase1c: generate_api_client (CLI: cursor:grok-4.7-high)
-- testes ok: 50
-
 ## 2026-10-11 — phase1c: scripts/demo.sh
 - `scripts/demo.sh` sobe `fixtures/web/server.py`, grava HAR, infere o spec, gera SDKs TS+Python com replay, compila com tsc, roda `node --test` e `python3 -m unittest`, chama os SDKs no servidor ainda no ar e recusa `SECRET-` no spec, no SDK e nos logs. README: "Demo: site -> spec -> SDK".
 
 ## 2026-10-11 09:58 — phase1c: demo.sh end-to-end (CLI: cursor:grok-4.7-high)
 - testes ok: 50
+
+## Fase 1 — fechada (2026-10-11)
+- Commits reais: b73cd8c, 4d89a1c, 486dda4, 1569047 (offline, AGY Gemini); d1e6766, 02aee4f, 267d9df (CDP, Cursor grok-4.7-high); ad2f6f6 (Cursor composer-2.5); 708624a, b34deff, d8ac228 (Cursor grok-4.7-high).
+- ffa217e só tem dependências (não conta como implementação).
+- Demo: `bash scripts/demo.sh` -> "demo ok" (verificado pelo revisor em 2026-10-11 11:15).
