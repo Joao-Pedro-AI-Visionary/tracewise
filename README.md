@@ -27,6 +27,8 @@ Live browser tools attach to a loopback Chrome DevTools endpoint (`http://127.0.
 
 `inspect_web_page` passively records one page (DOM, accessibility, scripts, resources, attach-window network and console metadata, workers, redacted storage). It does not navigate or evaluate JavaScript. `Cookie`, `Set-Cookie`, and `Authorization` are removed from captured network data; response metadata keeps an allowlist and `values_redacted` stays true. `observe_web_session` records a navigation timeline for `observation_ms` (default 10000, minimum 1) and does not retain headers, bodies, or cookies.
 
+`analyze_web_bundle` reuses that passive capture with script source retained and reports static chunk, route, endpoint, WebMCP and vendor findings. It does not execute the captured JavaScript. `fetch_source_maps` defaults to false. `observe_web_execution` arms one precise-coverage window (`observation_ms` default 10000, minimum 1) and records request initiators for that window; counters reset until coverage is stopped, and the page stays externally owned. `inspect_web_event_listeners` reads native listener descriptors for the first main-document CSS match and does not dispatch the event.
+
 # Hash a JSON file canonically
 tracewise hash <file.json>
 

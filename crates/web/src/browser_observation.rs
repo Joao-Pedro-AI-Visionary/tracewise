@@ -316,23 +316,26 @@ pub fn create_browser_evidence(
     parameters: Value,
     result: Value,
 ) -> Result<Evidence, WebError> {
-    let browser = &result["browser"];
-    let environment = ExecutionEnvironment {
+    // Bundle analysis has no browser identity; runtime and page tools do.
+    // A missing browser object is an absent environment, not a synthetic "@".
+    let environment = result.get("browser").and_then(Value::as_object).map(|browser| ExecutionEnvironment {
         id: format!(
             "{}@{}",
-            browser["product"].as_str().unwrap_or_default(),
-            browser["revision"].as_str().unwrap_or_default()
+            browser.get("product").and_then(Value::as_str).unwrap_or_default(),
+            browser.get("revision").and_then(Value::as_str).unwrap_or_default()
         ),
         platform: "unknown".to_string(),
         architecture: "unknown".to_string(),
         isolation: IsolationLevel::None,
-    };
+    });
     let mut limitations =
         vec!["Artifact identity is unavailable for this observation.".to_string()];
     if let Some(items) = result["limitations"].as_array() {
         limitations.extend(items.iter().filter_map(|l| l.as_str().map(str::to_string)));
     }
-    limitations.push("Browser host platform and architecture were not observed.".to_string());
+    if environment.is_some() {
+        limitations.push("Browser host platform and architecture were not observed.".to_string());
+    }
 
     let provider = EvidenceProvider {
         id: CDP_BROWSER_PROVIDER_ID.to_string(),
@@ -348,7 +351,7 @@ pub fn create_browser_evidence(
         analysis_profile: None,
         confidence: Some(EvidenceConfidence::Observed),
         authority: Some(EvidenceAuthority::ExternalService),
-        environment: Some(environment),
+        environment,
         limitations: Some(limitations),
         locations: Some(vec![]),
         evidence_links: Some(vec![]),

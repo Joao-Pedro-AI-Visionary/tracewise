@@ -49,3 +49,14 @@
 
 ## 2026-10-11 07:44 — phase1b: inspect_web_page + observe_web_session (CLI: cursor:grok-4.7-high)
 - testes ok: 41
+
+## 2026-10-11 — phase1b: analyze_web_bundle, observe_web_execution, inspect_web_event_listeners
+- crates/web: as três ferramentas no cliente CDP existente. `observe_web_execution` arma cobertura precisa e retém iniciadores de rede da janela. `inspect_web_event_listeners` lê descritores nativos do primeiro match CSS no documento principal, sem disparar o evento. `analyze_web_bundle` reusa a inspeção passiva com fonte de script e extrai chunks, rotas, endpoints, WebMCP e vendors; source maps só quando `fetch_source_maps` é true.
+- crates/server: despacho das três; falha de observação volta como `isError`.
+- teste: `cdp_test.rs` serve uma página com listener de click e `fetch('/api')` e valida `structuredContent` contra o `outputSchema`.
+
+## 2026-10-11 07:44 — phase1b: bundle, execution, listeners (CLI: cursor:grok-4.7-high)
+- testes ok: 43
+
+## 2026-10-11 08:03 — phase1b: analyze_web_bundle, observe_web_execution, inspect_web_event_listeners (CLI: cursor:grok-4.7-high)
+- testes ok: 43

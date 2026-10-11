@@ -229,6 +229,107 @@ async fn live_cdp_inspects_page_and_observes_session() {
     );
 }
 
+#[tokio::test]
+async fn live_cdp_analyzes_bundle_observes_execution_and_inspects_listeners() {
+    if !std::path::Path::new(CHROME).is_file() {
+        eprintln!("skipping live CDP test: {CHROME} is missing");
+        return;
+    }
+
+    let page = HtmlServer::start_listeners();
+    let origin = format!("http://127.0.0.1:{}", page.port);
+    let page_url = format!("{origin}/");
+    let chrome = ChromeDebug::launch();
+    navigate_page(&chrome.endpoint, &page_url).await;
+
+    let session = BinarySession::new();
+    let target_id = page_target_id(&session, &chrome.endpoint, &origin).await;
+    let listeners = call_ok(
+        &session,
+        "inspect_web_event_listeners",
+        json!({
+            "cdp_endpoint": chrome.endpoint,
+            "allowed_origins": [origin],
+            "target_id": target_id,
+            "selector": "#go",
+        }),
+    )
+    .await;
+    let listeners_body = structured_of("inspect_web_event_listeners", &listeners);
+    assert_output_schema("inspect_web_event_listeners", listeners_body);
+    let listener_result = &listeners_body["normalized_result"];
+    assert_eq!(listener_result["selected_node"]["match"], "found");
+    assert_eq!(listener_result["selected_node"]["selector"], "#go");
+    assert_eq!(listener_result["cleanup"], "confirmed");
+    let click_listeners: Vec<&Value> = listener_result["listeners"]
+        .as_array()
+        .expect("listeners")
+        .iter()
+        .filter(|listener| listener["type"] == "click")
+        .collect();
+    assert!(
+        !click_listeners.is_empty(),
+        "expected a click listener on #go, got {}",
+        listener_result["listeners"]
+    );
+    assert_eq!(click_listeners[0]["execution"], "unknown");
+    assert!(listener_result["sources"].as_array().is_some_and(|items| !items.is_empty()));
+
+    let execution = call_ok(
+        &session,
+        "observe_web_execution",
+        json!({
+            "cdp_endpoint": chrome.endpoint,
+            "allowed_origins": [origin],
+            "target_id": target_id,
+            "observation_ms": 500,
+        }),
+    )
+    .await;
+    let execution_body = structured_of("observe_web_execution", &execution);
+    assert_output_schema("observe_web_execution", execution_body);
+    let execution_result = &execution_body["normalized_result"];
+    assert_eq!(execution_result["window"]["end_reason"], "window_elapsed");
+    assert_eq!(execution_result["window"]["requested_ms"], 500);
+    assert_eq!(execution_result["instrumentation"]["executes_selected_code"], false);
+    assert_eq!(execution_result["instrumentation"]["cleanup"], "confirmed");
+    assert_eq!(execution_result["coverage"]["offset_units"], "utf16-code-units");
+    let request_urls: Vec<&str> = execution_result["requests"]
+        .as_array()
+        .expect("requests")
+        .iter()
+        .filter_map(|request| request["url"].as_str())
+        .collect();
+    assert!(
+        request_urls.iter().any(|url| url.contains("/api")),
+        "expected an armed-window fetch /api, got {request_urls:?}"
+    );
+
+    let analyzed = call_ok(
+        &session,
+        "analyze_web_bundle",
+        json!({
+            "cdp_endpoint": chrome.endpoint,
+            "allowed_origins": [origin],
+            "target_id": target_id,
+            "observation_ms": 200,
+            "include_script_sources": true,
+            "fetch_source_maps": false,
+        }),
+    )
+    .await;
+    let analyzed_body = structured_of("analyze_web_bundle", &analyzed);
+    assert_output_schema("analyze_web_bundle", analyzed_body);
+    let bundle = &analyzed_body["normalized_result"];
+    assert!(bundle["capture"]["scripts_analyzed"].as_i64().unwrap_or(0) >= 1);
+    assert_eq!(bundle["observations"]["source_maps"]["status"], "not_requested");
+    let endpoints = bundle["observations"]["endpoints"].as_array().expect("endpoints");
+    assert!(
+        endpoints.iter().any(|item| item["value"].as_str().unwrap_or("").contains("/api")),
+        "expected fetch('/api') in bundle endpoints, got {endpoints:?}"
+    );
+}
+
 async fn page_target_id(session: &BinarySession, endpoint: &str, origin: &str) -> String {
     let listed = call_ok(
         session,
@@ -407,6 +508,7 @@ async fn wait_for_discovery(endpoint: &str) -> tracewise_web::cdp_endpoint::CdpE
 enum PageMode {
     Plain,
     Scripted,
+    Listeners,
 }
 
 struct HtmlServer {
@@ -422,6 +524,10 @@ impl HtmlServer {
 
     fn start_scripted() -> Self {
         Self::start_mode(PageMode::Scripted)
+    }
+
+    fn start_listeners() -> Self {
+        Self::start_mode(PageMode::Listeners)
     }
 
     fn start_mode(mode: PageMode) -> Self {
@@ -486,6 +592,21 @@ fn write_html(mut stream: TcpStream, mode: PageMode) {
             "text/html; charset=utf-8",
             String::new(),
             b"<!DOCTYPE html><html><head><title>tracewise</title><script src=\"/app.js\"></script></head><body><h1>tracewise-cdp</h1></body></html>".to_vec(),
+        ),
+        (PageMode::Listeners, "/app.js") => (
+            "text/javascript; charset=utf-8",
+            String::new(),
+            b"function arm(){var el=document.getElementById('go');if(el){el.addEventListener('click',function onGo(){});}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',arm);}else{arm();}setInterval(function(){fetch('/api').catch(function(){});},100);\n".to_vec(),
+        ),
+        (PageMode::Listeners, "/api") => (
+            "application/json",
+            String::new(),
+            b"{\"ok\":true}".to_vec(),
+        ),
+        (PageMode::Listeners, _) => (
+            "text/html; charset=utf-8",
+            String::new(),
+            b"<!DOCTYPE html><html><head><title>tracewise</title><script src=\"/app.js\"></script></head><body><button id=\"go\">go</button><h1>tracewise-cdp</h1></body></html>".to_vec(),
         ),
         (PageMode::Plain, _) => (
             "text/html; charset=utf-8",

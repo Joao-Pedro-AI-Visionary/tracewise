@@ -109,6 +109,9 @@ async fn execute_tool(
         "capture_web_screenshot" => handle_capture_web_screenshot(session, args).await,
         "inspect_web_page" => handle_inspect_web_page(session, args).await,
         "observe_web_session" => handle_observe_web_session(session, args).await,
+        "analyze_web_bundle" => handle_analyze_web_bundle(session, args).await,
+        "observe_web_execution" => handle_observe_web_execution(session, args).await,
+        "inspect_web_event_listeners" => handle_inspect_web_event_listeners(session, args).await,
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
@@ -158,6 +161,12 @@ fn progress_message(tool_name: &str, start: bool) -> String {
         ("inspect_web_page", false) => "Web page inspected".to_string(),
         ("observe_web_session", true) => "Observing web session...".to_string(),
         ("observe_web_session", false) => "Web session observed".to_string(),
+        ("analyze_web_bundle", true) => "Analyzing web bundle...".to_string(),
+        ("analyze_web_bundle", false) => "Web bundle analyzed".to_string(),
+        ("observe_web_execution", true) => "Observing web execution...".to_string(),
+        ("observe_web_execution", false) => "Web execution observed".to_string(),
+        ("inspect_web_event_listeners", true) => "Inspecting web event listeners...".to_string(),
+        ("inspect_web_event_listeners", false) => "Web event listeners inspected".to_string(),
         (name, true) => format!("Starting operation: {name}"),
         (name, false) => format!("Completed operation: {name}"),
     }
@@ -655,5 +664,45 @@ async fn handle_observe_web_session(
     browser_tool_result(
         session,
         tracewise_web::session_observation::observe_web_session(&input).await,
+    )
+}
+
+async fn handle_analyze_web_bundle(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_web::bundle_analysis::parse_analyze_web_bundle_input(args)
+        .map_err(|e| McpError::invalid_params(format!("Invalid analyze_web_bundle input: {e}"), None))?;
+
+    browser_tool_result(
+        session,
+        tracewise_web::bundle_analysis::analyze_web_bundle(&input).await,
+    )
+}
+
+async fn handle_observe_web_execution(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_web::web_execution::parse_observe_web_execution_input(args)
+        .map_err(|e| McpError::invalid_params(format!("Invalid observe_web_execution input: {e}"), None))?;
+
+    browser_tool_result(
+        session,
+        tracewise_web::web_execution::observe_web_execution(&input).await,
+    )
+}
+
+async fn handle_inspect_web_event_listeners(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_web::web_listeners::parse_inspect_web_event_listeners_input(args).map_err(|e| {
+        McpError::invalid_params(format!("Invalid inspect_web_event_listeners input: {e}"), None)
+    })?;
+
+    browser_tool_result(
+        session,
+        tracewise_web::web_listeners::inspect_web_event_listeners(&input).await,
     )
 }
