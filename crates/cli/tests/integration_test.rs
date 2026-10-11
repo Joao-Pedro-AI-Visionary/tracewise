@@ -85,7 +85,7 @@ async fn test_mcp_stdio_lifecycle() {
     let tools = tools_resp["result"]["tools"]
         .as_array()
         .expect("Expected tools array");
-    assert_eq!(tools.len(), 12, "Expected exactly 12 tools");
+    assert_eq!(tools.len(), 28, "Expected 27 REA tools plus infer_api_spec");
 
     let expected_names = [
         "inspect_analysis_view",
@@ -100,6 +100,22 @@ async fn test_mcp_stdio_lifecycle() {
         "record_unknown",
         "update_unknown",
         "verify_unknown_resolution",
+        "trace_web_module_imports",
+        "trace_web_source_location",
+        "observe_web_execution",
+        "inspect_web_event_listeners",
+        "inspect_web_network_capture",
+        "export_web_scripts",
+        "list_browser_targets",
+        "inspect_web_page",
+        "analyze_web_bundle",
+        "observe_web_session",
+        "discover_webmcp_tools",
+        "compare_web_captures",
+        "capture_web_screenshot",
+        "compare_web_screenshots",
+        "capture_browser_scenario",
+        "infer_api_spec",
     ];
 
     let actual_names: Vec<&str> = tools
@@ -414,4 +430,25 @@ async fn test_mcp_progress() {
     let _ = std::fs::remove_file(&temp_path);
     drop(stdin);
     let _ = child.kill().await;
+}
+
+#[tokio::test]
+async fn test_infer_api_spec_cli() {
+    let bin_path = env!("CARGO_BIN_EXE_tracewise");
+    let output = std::env::temp_dir().join(format!("tracewise-cli-spec-{}.json", std::process::id()));
+    let status = Command::new(bin_path)
+        .arg("infer-api-spec")
+        .arg("/workspace/tracewise/fixtures/web/demo.har")
+        .arg("-o")
+        .arg(&output)
+        .status()
+        .await
+        .expect("spawn infer-api-spec");
+    assert!(status.success(), "infer-api-spec exited {status}");
+    let text = std::fs::read_to_string(&output).expect("read spec");
+    assert!(!text.contains("SECRET-"));
+    let spec: serde_json::Value = serde_json::from_str(&text).expect("parse spec");
+    assert!(spec["paths"].get("/api/todos/{id}").is_some());
+    assert_eq!(spec["openapi"], "3.1.0");
+    let _ = std::fs::remove_file(&output);
 }

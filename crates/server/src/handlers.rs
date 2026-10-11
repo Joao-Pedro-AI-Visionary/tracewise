@@ -114,6 +114,7 @@ async fn execute_tool(
         "inspect_web_event_listeners" => handle_inspect_web_event_listeners(session, args).await,
         "discover_webmcp_tools" => handle_discover_webmcp_tools(session, args).await,
         "capture_browser_scenario" => handle_capture_browser_scenario(session, args).await,
+        "infer_api_spec" => handle_infer_api_spec(session, args),
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
@@ -173,6 +174,8 @@ fn progress_message(tool_name: &str, start: bool) -> String {
         ("discover_webmcp_tools", false) => "WebMCP tools discovered".to_string(),
         ("capture_browser_scenario", true) => "Capturing browser scenario...".to_string(),
         ("capture_browser_scenario", false) => "Browser scenario captured".to_string(),
+        ("infer_api_spec", true) => "Inferring OpenAPI spec from redacted capture...".to_string(),
+        ("infer_api_spec", false) => "OpenAPI spec inferred".to_string(),
         (name, true) => format!("Starting operation: {name}"),
         (name, false) => format!("Completed operation: {name}"),
     }
@@ -738,4 +741,82 @@ async fn handle_capture_browser_scenario(
         session,
         tracewise_web::browser_scenario_run::capture_browser_scenario(&input).await,
     )
+}
+
+fn handle_infer_api_spec(session: &BinarySession, args: &Value) -> Result<CallToolResult, McpError> {
+    let input: tracewise_web::api_spec::InferApiSpecInput = serde_json::from_value(args.clone())
+        .map_err(|e| McpError::invalid_params(format!("Invalid infer_api_spec input: {e}"), None))?;
+
+    if input.evidence_ids.is_some() && input.capture_path.is_some() {
+        return Err(McpError::invalid_params(
+            "infer_api_spec accepts evidence_ids or capture_path, not both",
+            None,
+        ));
+    }
+
+    let (fresh_sources, inferred) = if let Some(path) = input.capture_path.clone() {
+        let source = tracewise_web::api_spec::inspect_capture_for_spec(&path)
+            .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+        let inferred = tracewise_web::api_spec::infer_from_captures(
+            &input,
+            std::slice::from_ref(&source),
+        )
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+        (vec![source], inferred)
+    } else {
+        let ids = input.evidence_ids.clone().ok_or_else(|| {
+            McpError::invalid_params(
+                "infer_api_spec requires evidence_ids or capture_path",
+                None,
+            )
+        })?;
+        if ids.is_empty() {
+            return Err(McpError::invalid_params(
+                "infer_api_spec requires at least one evidence_id",
+                None,
+            ));
+        }
+        let ledger = session.ledger.lock().unwrap();
+        let mut sources = Vec::with_capacity(ids.len());
+        for id in &ids {
+            let ev = ledger.get(id).cloned().ok_or_else(|| {
+                McpError::invalid_params(
+                    format!("Evidence '{id}' is not in the session ledger"),
+                    None,
+                )
+            })?;
+            sources.push(ev);
+        }
+        drop(ledger);
+        let inferred = tracewise_web::api_spec::infer_from_captures(&input, &sources)
+            .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+        (Vec::new(), inferred)
+    };
+
+    let mut ledger = session.ledger.lock().unwrap();
+    for source in fresh_sources {
+        if !ledger.has(&source.evidence_id) {
+            ledger
+                .record(source)
+                .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+        }
+    }
+    if !ledger.has(&inferred.evidence.evidence_id) {
+        ledger
+            .record(inferred.evidence.clone())
+            .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    }
+    for unknown in &inferred.unknowns {
+        match ledger.record_unknown(unknown, inferred.evidence.clone()) {
+            Ok(_) => {}
+            Err(tracewise_domain::DomainError::Unknown(
+                tracewise_domain::UnknownError::AlreadyExists(_),
+            )) => {}
+            Err(e) => return Err(McpError::internal_error(e.to_string(), None)),
+        }
+    }
+
+    let val = serde_json::to_value(&inferred.evidence)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
 }

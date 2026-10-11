@@ -68,3 +68,12 @@
 
 ## 2026-10-11 08:33 — phase1b: discover_webmcp_tools + capture_browser_scenario; all 27 dispatch (CLI: cursor:composer-2.5)
 - testes ok: 46
+
+## 2026-10-11 — phase1c: infer_api_spec
+- crates/web: `infer_api_spec` agrupa pedidos redatados de HAR/mitmproxy em paths `{id}`, infere schemas JSON e grava um OpenAPI 3.1. Cada operação, parâmetro e propriedade leva `x-tracewise-evidence` e `x-tracewise-confidence`. O que não foi observado vira ResidualUnknown no ledger. Credenciais não entram no documento.
+- crates/contracts: catálogo tracewise (`tracewise_tools.json`). `tools/list` passa a 28 ferramentas; as 27 do REA permanecem byte-idênticas.
+- CLI: `tracewise infer-api-spec <capture> -o spec.json`.
+- teste: snapshot OpenAPI de `fixtures/web/demo.har` (`/api/todos/1` e `/api/todos/99` no mesmo path), outputSchema, unknowns e ausência de `SECRET-`.
+
+## 2026-10-11 09:05 — phase1c: infer_api_spec (CLI: cursor:grok-4.7-high)
+- testes ok: 48

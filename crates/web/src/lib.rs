@@ -1,3 +1,5 @@
+pub mod api_spec;
+pub mod api_spec_schema;
 pub mod browser_observation;
 pub mod browser_scenario;
 pub mod browser_scenario_actions;

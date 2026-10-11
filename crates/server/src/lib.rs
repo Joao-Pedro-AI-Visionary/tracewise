@@ -46,7 +46,7 @@ impl ServerHandler for TracewiseServer {
         _context: RequestContext<RoleServer>,
     ) -> Result<ListToolsResult, McpError> {
         Ok(ListToolsResult {
-            tools: tracewise_contracts::phase0_tools(),
+            tools: tracewise_contracts::listed_tools(),
             next_cursor: None,
             meta: None,
         })

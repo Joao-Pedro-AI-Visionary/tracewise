@@ -1,6 +1,7 @@
 use std::path::PathBuf;
 
 use clap::{Parser, Subcommand};
+use serde_json::json;
 use tracewise_domain::canonical_sha256;
 
 #[derive(Parser)]
@@ -21,6 +22,20 @@ enum Commands {
     },
     /// Print available tool names
     Tools,
+    /// Infer an OpenAPI 3.1 document from a HAR or mitmproxy capture
+    InferApiSpec {
+        /// HAR or mitmproxy capture path
+        capture: PathBuf,
+        /// Write the OpenAPI document to this path
+        #[arg(short, long)]
+        output: PathBuf,
+        /// Server URL used to filter requests and relativize paths
+        #[arg(long)]
+        base_url: Option<String>,
+        /// OpenAPI info.title
+        #[arg(long)]
+        title: Option<String>,
+    },
 }
 
 #[tokio::main]
@@ -41,6 +56,34 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             for name in tracewise_contracts::phase0_tool_names() {
                 println!("{name}");
             }
+        }
+        Commands::InferApiSpec {
+            capture,
+            output,
+            base_url,
+            title,
+        } => {
+            let capture = std::fs::canonicalize(&capture)?;
+            let mut args = json!({
+                "capture_path": capture.to_string_lossy(),
+                "output_path": output.to_string_lossy(),
+            });
+            if let Some(base_url) = base_url {
+                args["base_url"] = json!(base_url);
+            }
+            if let Some(title) = title {
+                args["title"] = json!(title);
+            }
+            let session = tracewise_server::session::BinarySession::new();
+            tracewise_server::handlers::call_tool_local(
+                &session,
+                rmcp::model::CallToolRequestParam {
+                    name: "infer_api_spec".into(),
+                    arguments: Some(args.as_object().expect("arguments object").clone()),
+                },
+            )
+            .await
+            .map_err(|err| std::io::Error::other(format!("infer_api_spec failed: {err}")))?;
         }
     }
 

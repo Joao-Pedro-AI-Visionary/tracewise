@@ -2,8 +2,9 @@ use std::path::{Path, PathBuf};
 
 use serde_json::Value;
 use tracewise_contracts::{
-    all_tool_names, all_tools, all_tools_value, phase0_tool_names, phase0_tools,
-    phase0_tools_value, phase1_tool_names, phase1_tools, phase1_tools_value,
+    all_tool_names, all_tools, all_tools_value, listed_tool_names, listed_tools, listed_tools_value,
+    phase0_tool_names, phase0_tools, phase0_tools_value, phase1_tool_names, phase1_tools,
+    phase1_tools_value,
 };
 
 fn fixture_path(name: &str) -> String {
@@ -54,6 +55,21 @@ fn test_tools_equal_fixtures() {
     assert_eq!(all.len(), 27);
     let all_names: Vec<&str> = all.iter().map(|t| t.name.as_ref()).collect();
     assert_eq!(all_names, all_tool_names());
+
+    let listed = listed_tools();
+    assert_eq!(listed.len(), 28);
+    let listed_names: Vec<&str> = listed.iter().map(|t| t.name.as_ref()).collect();
+    assert_eq!(listed_names, listed_tool_names());
+    assert_eq!(listed_names[27], "infer_api_spec");
+
+    let listed_val = listed_tools_value();
+    let listed_arr = listed_val["tools"].as_array().expect("listed tools");
+    let rea_arr = all_tools_value()["tools"]
+        .as_array()
+        .expect("rea tools")
+        .clone();
+    assert_eq!(listed_arr.len(), 28);
+    assert_eq!(&listed_arr[..27], rea_arr.as_slice());
 }
 
 #[test]

@@ -1,0 +1,714 @@
+{
+  "components": {
+    "securitySchemes": {
+      "authorization": {
+        "description": "Authorization header was observed with a redacted value. The authentication scheme is unknown.",
+        "scheme": "unknown",
+        "type": "http",
+        "x-tracewise-confidence": "inferred",
+        "x-tracewise-evidence": [
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 0
+          },
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 1
+          },
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 2
+          },
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 3
+          },
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 4
+          }
+        ]
+      },
+      "cookie": {
+        "description": "Cookie header was observed with a redacted value. The cookie name and authentication scheme are unknown.",
+        "in": "header",
+        "name": "Cookie",
+        "type": "apiKey",
+        "x-tracewise-confidence": "inferred",
+        "x-tracewise-evidence": [
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 0
+          },
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 1
+          },
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 2
+          },
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 3
+          },
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 4
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "description": "OpenAPI 3.1 document inferred from redacted network captures. Credential values are omitted. Unobserved aspects are residual unknowns.",
+    "title": "Inferred API",
+    "version": "0.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/me": {
+      "get": {
+        "description": "Inferred from captured network records.",
+        "operationId": "getApiMe",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "email": {
+                      "type": "string",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 0
+                        }
+                      ]
+                    },
+                    "id": {
+                      "type": "string",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 0
+                        }
+                      ]
+                    },
+                    "plan": {
+                      "type": "string",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 0
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "email",
+                    "id",
+                    "plan"
+                  ],
+                  "type": "object",
+                  "x-tracewise-confidence": "inferred",
+                  "x-tracewise-evidence": [
+                    {
+                      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                      "ordinal": 0
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Observed 200 response.",
+            "x-tracewise-confidence": "observed",
+            "x-tracewise-evidence": [
+              {
+                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                "ordinal": 0
+              }
+            ]
+          }
+        },
+        "security": [
+          {
+            "authorization": [],
+            "cookie": []
+          }
+        ],
+        "x-tracewise-confidence": "observed",
+        "x-tracewise-evidence": [
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 0
+          }
+        ]
+      }
+    },
+    "/api/todos": {
+      "get": {
+        "description": "Inferred from captured network records.",
+        "operationId": "getApiTodos",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "limit",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "x-tracewise-confidence": "inferred",
+              "x-tracewise-evidence": [
+                {
+                  "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                  "ordinal": 1
+                }
+              ]
+            },
+            "x-tracewise-confidence": "inferred",
+            "x-tracewise-evidence": [
+              {
+                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                "ordinal": 1
+              }
+            ]
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "x-tracewise-confidence": "inferred",
+              "x-tracewise-evidence": [
+                {
+                  "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                  "ordinal": 1
+                }
+              ]
+            },
+            "x-tracewise-confidence": "inferred",
+            "x-tracewise-evidence": [
+              {
+                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                "ordinal": 1
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "items": {
+                      "items": {
+                        "properties": {
+                          "done": {
+                            "type": "boolean",
+                            "x-tracewise-confidence": "observed",
+                            "x-tracewise-evidence": [
+                              {
+                                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                                "ordinal": 1
+                              }
+                            ]
+                          },
+                          "id": {
+                            "type": "integer",
+                            "x-tracewise-confidence": "observed",
+                            "x-tracewise-evidence": [
+                              {
+                                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                                "ordinal": 1
+                              }
+                            ]
+                          },
+                          "tags": {
+                            "items": {
+                              "type": "string",
+                              "x-tracewise-confidence": "observed",
+                              "x-tracewise-evidence": [
+                                {
+                                  "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                                  "ordinal": 1
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "x-tracewise-confidence": "observed",
+                            "x-tracewise-evidence": [
+                              {
+                                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                                "ordinal": 1
+                              }
+                            ]
+                          },
+                          "title": {
+                            "type": "string",
+                            "x-tracewise-confidence": "observed",
+                            "x-tracewise-evidence": [
+                              {
+                                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                                "ordinal": 1
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "done",
+                          "id",
+                          "tags",
+                          "title"
+                        ],
+                        "type": "object",
+                        "x-tracewise-confidence": "inferred",
+                        "x-tracewise-evidence": [
+                          {
+                            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                            "ordinal": 1
+                          }
+                        ]
+                      },
+                      "type": "array",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 1
+                        }
+                      ]
+                    },
+                    "total": {
+                      "type": "integer",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 1
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "items",
+                    "total"
+                  ],
+                  "type": "object",
+                  "x-tracewise-confidence": "inferred",
+                  "x-tracewise-evidence": [
+                    {
+                      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                      "ordinal": 1
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Observed 200 response.",
+            "x-tracewise-confidence": "observed",
+            "x-tracewise-evidence": [
+              {
+                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                "ordinal": 1
+              }
+            ]
+          }
+        },
+        "security": [
+          {
+            "authorization": [],
+            "cookie": []
+          }
+        ],
+        "x-tracewise-confidence": "observed",
+        "x-tracewise-evidence": [
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 1
+          }
+        ]
+      },
+      "post": {
+        "description": "Inferred from captured network records.",
+        "operationId": "postApiTodos",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "tags": {
+                    "items": {
+                      "type": "string",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 3
+                        }
+                      ]
+                    },
+                    "type": "array",
+                    "x-tracewise-confidence": "observed",
+                    "x-tracewise-evidence": [
+                      {
+                        "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                        "ordinal": 3
+                      }
+                    ]
+                  },
+                  "title": {
+                    "type": "string",
+                    "x-tracewise-confidence": "observed",
+                    "x-tracewise-evidence": [
+                      {
+                        "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                        "ordinal": 3
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "tags",
+                  "title"
+                ],
+                "type": "object",
+                "x-tracewise-confidence": "inferred",
+                "x-tracewise-evidence": [
+                  {
+                    "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                    "ordinal": 3
+                  }
+                ]
+              }
+            }
+          },
+          "required": true,
+          "x-tracewise-confidence": "inferred",
+          "x-tracewise-evidence": [
+            {
+              "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+              "ordinal": 3
+            }
+          ]
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "done": {
+                      "type": "boolean",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 3
+                        }
+                      ]
+                    },
+                    "id": {
+                      "type": "integer",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 3
+                        }
+                      ]
+                    },
+                    "tags": {
+                      "items": {
+                        "type": "string",
+                        "x-tracewise-confidence": "observed",
+                        "x-tracewise-evidence": [
+                          {
+                            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                            "ordinal": 3
+                          }
+                        ]
+                      },
+                      "type": "array",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 3
+                        }
+                      ]
+                    },
+                    "title": {
+                      "type": "string",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 3
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "done",
+                    "id",
+                    "tags",
+                    "title"
+                  ],
+                  "type": "object",
+                  "x-tracewise-confidence": "inferred",
+                  "x-tracewise-evidence": [
+                    {
+                      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                      "ordinal": 3
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Observed 201 response.",
+            "x-tracewise-confidence": "observed",
+            "x-tracewise-evidence": [
+              {
+                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                "ordinal": 3
+              }
+            ]
+          }
+        },
+        "security": [
+          {
+            "authorization": [],
+            "cookie": []
+          }
+        ],
+        "x-tracewise-confidence": "observed",
+        "x-tracewise-evidence": [
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 3
+          }
+        ]
+      }
+    },
+    "/api/todos/{id}": {
+      "get": {
+        "description": "Inferred from captured network records.",
+        "operationId": "getApiTodosById",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "x-tracewise-confidence": "inferred",
+              "x-tracewise-evidence": [
+                {
+                  "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                  "ordinal": 2
+                },
+                {
+                  "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                  "ordinal": 4
+                }
+              ]
+            },
+            "x-tracewise-confidence": "inferred",
+            "x-tracewise-evidence": [
+              {
+                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                "ordinal": 2
+              },
+              {
+                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                "ordinal": 4
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "done": {
+                      "type": "boolean",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 2
+                        }
+                      ]
+                    },
+                    "id": {
+                      "type": "integer",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 2
+                        }
+                      ]
+                    },
+                    "tags": {
+                      "items": {
+                        "type": "string",
+                        "x-tracewise-confidence": "observed",
+                        "x-tracewise-evidence": [
+                          {
+                            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                            "ordinal": 2
+                          }
+                        ]
+                      },
+                      "type": "array",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 2
+                        }
+                      ]
+                    },
+                    "title": {
+                      "type": "string",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 2
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "done",
+                    "id",
+                    "tags",
+                    "title"
+                  ],
+                  "type": "object",
+                  "x-tracewise-confidence": "inferred",
+                  "x-tracewise-evidence": [
+                    {
+                      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                      "ordinal": 2
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Observed 200 response.",
+            "x-tracewise-confidence": "observed",
+            "x-tracewise-evidence": [
+              {
+                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                "ordinal": 2
+              }
+            ]
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "x-tracewise-confidence": "observed",
+                      "x-tracewise-evidence": [
+                        {
+                          "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                          "ordinal": 4
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "error"
+                  ],
+                  "type": "object",
+                  "x-tracewise-confidence": "inferred",
+                  "x-tracewise-evidence": [
+                    {
+                      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                      "ordinal": 4
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Observed 404 response.",
+            "x-tracewise-confidence": "observed",
+            "x-tracewise-evidence": [
+              {
+                "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+                "ordinal": 4
+              }
+            ]
+          }
+        },
+        "security": [
+          {
+            "authorization": [],
+            "cookie": []
+          }
+        ],
+        "x-tracewise-confidence": "inferred",
+        "x-tracewise-evidence": [
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 2
+          },
+          {
+            "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+            "ordinal": 4
+          }
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8765"
+    }
+  ],
+  "x-tracewise-confidence": "inferred",
+  "x-tracewise-evidence": [
+    {
+      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+      "ordinal": 0
+    },
+    {
+      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+      "ordinal": 1
+    },
+    {
+      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+      "ordinal": 2
+    },
+    {
+      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+      "ordinal": 3
+    },
+    {
+      "evidence_id": "ev_7ca18fcf907c14fda90695b355d8dd7101a9f93303ba34d48150f33fb77ac393",
+      "ordinal": 4
+    }
+  ],
+  "x-tracewise-unknowns": [
+    "The authentication scheme for the redacted Authorization header is unknown.",
+    "The cookie name and attributes for the redacted Cookie header are unknown.",
+    "The Set-Cookie contract is unknown because response cookie values were redacted.",
+    "Response shapes for status codes other than 200, 201 and 404 are unknown.",
+    "Whether observed string values form a complete enumeration is unknown.",
+    "Object properties absent from every captured sample are unknown.",
+    "Query parameters absent from the captured samples are unknown."
+  ]
+}

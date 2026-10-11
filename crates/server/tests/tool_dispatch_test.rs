@@ -5,7 +5,7 @@
 
 use rmcp::model::CallToolRequestParam;
 use serde_json::json;
-use tracewise_contracts::all_tool_names;
+use tracewise_contracts::{all_tool_names, tracewise_tool_names};
 use tracewise_server::handlers::call_tool_local;
 use tracewise_server::session::BinarySession;
 
@@ -37,6 +37,31 @@ async fn every_rea_tool_dispatches_to_an_implementation() {
             !folded.contains("not yet implemented"),
             "{name} is still a stub: {message}"
         );
+        assert!(
+            !folded.contains("unknown tool"),
+            "{name} did not dispatch to an implementation: {message}"
+        );
+    }
+
+    for name in tracewise_tool_names() {
+        let result = call_tool_local(
+            &session,
+            CallToolRequestParam {
+                name: (*name).to_string().into(),
+                arguments: Some(json!({}).as_object().unwrap().clone()),
+            },
+        )
+        .await;
+        let message = match &result {
+            Ok(output) => output
+                .content
+                .iter()
+                .map(|item| format!("{item:?}"))
+                .collect::<Vec<_>>()
+                .join("\n"),
+            Err(error) => error.to_string(),
+        };
+        let folded = message.to_ascii_lowercase();
         assert!(
             !folded.contains("unknown tool"),
             "{name} did not dispatch to an implementation: {message}"

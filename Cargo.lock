@@ -1999,6 +1999,7 @@ name = "tracewise"
 version = "0.1.0"
 dependencies = [
  "clap",
+ "rmcp",
  "serde_json",
  "tokio",
  "tracewise-contracts",
