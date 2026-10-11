@@ -29,6 +29,8 @@ Live browser tools attach to a loopback Chrome DevTools endpoint (`http://127.0.
 
 `analyze_web_bundle` reuses that passive capture with script source retained and reports static chunk, route, endpoint, WebMCP and vendor findings. It does not execute the captured JavaScript. `fetch_source_maps` defaults to false. `observe_web_execution` arms one precise-coverage window (`observation_ms` default 10000, minimum 1) and records request initiators for that window; counters reset until coverage is stopped, and the page stays externally owned. `inspect_web_event_listeners` reads native listener descriptors for the first main-document CSS match and does not dispatch the event.
 
+`discover_webmcp_tools` inventories page-registered WebMCP tools through `WebMCP.enable` and `toolsAdded` / `toolsRemoved` (`observation_ms` default 100). Metadata is page-declared and untrusted; discovered tools are never registered or invoked. `capture_browser_scenario` runs one explicit action sequence. `browser.mode = "launch"` starts Chrome through the process supervisor with an owned temporary profile and terminates that process when the capture ends; `connect` attaches to an existing loopback target and leaves it running. Secret values are read from environment variables for the duration of the capture and are redacted from retained URLs, DOM, storage fingerprints and errors. They are not written into the evidence parameters.
+
 # Hash a JSON file canonically
 tracewise hash <file.json>
 

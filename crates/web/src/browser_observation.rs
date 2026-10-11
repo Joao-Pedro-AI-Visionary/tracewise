@@ -15,6 +15,12 @@ pub const CDP_BROWSER_PROVIDER_ID: &str = "rea-cdp-browser";
 pub const CDP_BROWSER_PROVIDER_NAME: &str = "REA Chrome DevTools Protocol observation provider";
 pub const CDP_BROWSER_PROVIDER_VERSION: &str = "2";
 
+/// Chrome switches required for the experimental WebMCP CDP domain and page tools.
+pub const CHROME_WEBMCP_LAUNCH_ARGS: &[&str] = &[
+    "--enable-experimental-web-platform-features",
+    "--enable-features=WebMCP,DevToolsWebMCPSupport",
+];
+
 /// Stable failure reasons shared by the CDP adapters.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum BrowserFailureReason {
@@ -234,6 +240,17 @@ pub struct SanitizedBrowserUrl {
     pub origin: Option<String>,
     pub query_parameter_names: Vec<String>,
     pub redacted: bool,
+}
+
+impl SanitizedBrowserUrl {
+    pub fn to_json(&self) -> Value {
+        json!({
+            "url": self.url,
+            "origin": self.origin,
+            "query_parameter_names": self.query_parameter_names,
+            "redacted": self.redacted,
+        })
+    }
 }
 
 /// Preserve local URL data while removing only URL userinfo credentials.

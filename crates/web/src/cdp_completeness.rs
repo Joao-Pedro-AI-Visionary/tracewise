@@ -94,6 +94,10 @@ impl CdpCaptureCompleteness {
         self.truncated.insert(section);
     }
 
+    pub fn dropped_total(&self) -> i64 {
+        self.dropped.values().copied().sum()
+    }
+
     pub fn drop_events(&mut self, kind: &'static str, count: i64) {
         if let Some(slot) = self.dropped.get_mut(kind) {
             *slot = slot.saturating_add(count);

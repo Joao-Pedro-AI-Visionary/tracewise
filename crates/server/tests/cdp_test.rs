@@ -134,6 +134,109 @@ async fn live_cdp_lists_targets_and_captures_screenshot() {
     );
 }
 
+const SCENARIO_SECRET: &str = "tracewise-scenario-secret-value";
+
+#[tokio::test]
+async fn live_cdp_discovers_webmcp_and_captures_scenario() {
+    if !std::path::Path::new(CHROME).is_file() {
+        eprintln!("skipping live CDP test: {CHROME} is missing");
+        return;
+    }
+    std::env::set_var("TRACEWISE_SCENARIO_SECRET", SCENARIO_SECRET);
+
+    let page = HtmlServer::start_webmcp();
+    let origin = format!("http://127.0.0.1:{}", page.port);
+    let page_url = format!("{origin}/");
+    let chrome = ChromeDebug::launch();
+    navigate_page(&chrome.endpoint, &page_url).await;
+
+    let session = BinarySession::new();
+    let target_id = page_target_id(&session, &chrome.endpoint, &origin).await;
+    let discovered = call_ok(
+        &session,
+        "discover_webmcp_tools",
+        json!({
+            "cdp_endpoint": chrome.endpoint,
+            "allowed_origins": [origin],
+            "target_id": target_id,
+            "observation_ms": 500,
+        }),
+    )
+    .await;
+    let discovered_body = structured_of("discover_webmcp_tools", &discovered);
+    assert_output_schema("discover_webmcp_tools", discovered_body);
+    let webmcp = &discovered_body["normalized_result"];
+    assert_eq!(webmcp["target"]["origin"], origin);
+    assert_eq!(webmcp["target"]["target_id"], target_id);
+    let limitations = webmcp["limitations"].as_array().expect("webmcp limitations");
+    assert!(limitations.iter().any(|item| {
+        item.as_str()
+            .unwrap_or("")
+            .contains("WebMCP.invokeTool is never called")
+    }));
+    if webmcp["status"] == "available" {
+        let names: Vec<&str> = webmcp["tools"]["items"]
+            .as_array()
+            .expect("tools")
+            .iter()
+            .filter_map(|tool| tool["name"].as_str())
+            .collect();
+        assert!(
+            names.iter().any(|name| *name == "tracewise_echo"),
+            "expected navigator.modelContext tool, got {names:?}\n{webmcp}"
+        );
+    }
+
+    let captured = call_ok(
+        &session,
+        "capture_browser_scenario",
+        json!({
+            "browser": {
+                "mode": "launch",
+                "executable_path": CHROME,
+                "headless": true
+            },
+            "start_url": { "url": page_url },
+            "actions": [
+                {
+                    "step_id": "type_token",
+                    "action": "fill",
+                    "locator": { "kind": "test_id", "value": "secret" },
+                    "value": { "source": "secret", "secret_id": "token" }
+                },
+                {
+                    "step_id": "press_go",
+                    "action": "click",
+                    "locator": { "kind": "test_id", "value": "go" }
+                }
+            ],
+            "secrets": [
+                { "secret_id": "token", "environment_variable": "TRACEWISE_SCENARIO_SECRET" }
+            ],
+            "capture": { "at_end": ["url", "dom"] }
+        }),
+    )
+    .await;
+    let captured_body = structured_of("capture_browser_scenario", &captured);
+    assert_output_schema("capture_browser_scenario", captured_body);
+    let scenario = &captured_body["normalized_result"];
+    assert_eq!(scenario["browser"]["mode"], "launch");
+    assert_eq!(scenario["browser"]["process_ownership"], "provider-owned");
+    assert_eq!(scenario["browser"]["cleanup"], "terminated-owned-process");
+    assert_eq!(scenario["scenario"]["start_origin"], origin);
+    assert_eq!(scenario["scenario"]["action_count"], 2);
+    assert_eq!(scenario["steps"].as_array().expect("steps").len(), 3);
+    for step in scenario["steps"].as_array().expect("steps") {
+        assert_eq!(step["status"], "completed", "step failed: {step}");
+    }
+    let encoded = captured_body.to_string();
+    assert!(
+        !encoded.contains(SCENARIO_SECRET),
+        "scenario secret was persisted in the tool result"
+    );
+    assert!(encoded.contains("[REDACTED:token]"), "filled secret should be redacted in the DOM snapshot");
+}
+
 const SECRET_TOKEN: &str = "tracewise-secret-token";
 const SECRET_COOKIE: &str = "tracewise-secret-cookie";
 
@@ -509,6 +612,7 @@ enum PageMode {
     Plain,
     Scripted,
     Listeners,
+    WebMcp,
 }
 
 struct HtmlServer {
@@ -528,6 +632,10 @@ impl HtmlServer {
 
     fn start_listeners() -> Self {
         Self::start_mode(PageMode::Listeners)
+    }
+
+    fn start_webmcp() -> Self {
+        Self::start_mode(PageMode::WebMcp)
     }
 
     fn start_mode(mode: PageMode) -> Self {
@@ -608,6 +716,11 @@ fn write_html(mut stream: TcpStream, mode: PageMode) {
             String::new(),
             b"<!DOCTYPE html><html><head><title>tracewise</title><script src=\"/app.js\"></script></head><body><button id=\"go\">go</button><h1>tracewise-cdp</h1></body></html>".to_vec(),
         ),
+        (PageMode::WebMcp, _) => (
+            "text/html; charset=utf-8",
+            String::new(),
+            b"<!DOCTYPE html><html><head><title>tracewise</title></head><body><form toolname=\"tracewise_echo\" tooldescription=\"Echo a short string\" toolinputschema='{\"type\":\"object\",\"properties\":{\"text\":{\"type\":\"string\"}},\"required\":[\"text\"]}'></form><script>(function(){var tool={name:'tracewise_echo',description:'Echo a short string',inputSchema:{type:'object',properties:{text:{type:'string'}},required:['text']},execute:function(args){return Promise.resolve(String(args&&args.text||''));}};var ctx=navigator.modelContext;if(ctx&&typeof ctx.registerTool==='function')ctx.registerTool(tool);else if(ctx&&typeof ctx.provideContext==='function')ctx.provideContext({tools:[tool]});else if(ctx&&typeof ctx.registerTools==='function')ctx.registerTools([tool]);})();</script><input id=\"secret\" data-testid=\"secret\"><button id=\"go\" data-testid=\"go\">go</button><h1>tracewise-webmcp</h1></body></html>".to_vec(),
+        ),
         (PageMode::Plain, _) => (
             "text/html; charset=utf-8",
             String::new(),
@@ -651,6 +764,9 @@ impl ChromeDebug {
         supervisor.null_stdio();
         for arg in args {
             supervisor.arg(arg);
+        }
+        for arg in tracewise_web::browser_observation::CHROME_WEBMCP_LAUNCH_ARGS {
+            supervisor.arg(*arg);
         }
         // A separate `--user-data-dir <path>` is parsed as a second headless
         // target. Chrome only accepts the switch when the path is attached.

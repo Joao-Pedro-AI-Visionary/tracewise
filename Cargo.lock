@@ -2058,6 +2058,7 @@ dependencies = [
  "hex",
  "image",
  "jsonschema 0.29.1",
+ "proc-supervisor",
  "regex",
  "reqwest",
  "serde",

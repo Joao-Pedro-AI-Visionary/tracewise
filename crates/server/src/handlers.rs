@@ -112,6 +112,8 @@ async fn execute_tool(
         "analyze_web_bundle" => handle_analyze_web_bundle(session, args).await,
         "observe_web_execution" => handle_observe_web_execution(session, args).await,
         "inspect_web_event_listeners" => handle_inspect_web_event_listeners(session, args).await,
+        "discover_webmcp_tools" => handle_discover_webmcp_tools(session, args).await,
+        "capture_browser_scenario" => handle_capture_browser_scenario(session, args).await,
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
@@ -167,6 +169,10 @@ fn progress_message(tool_name: &str, start: bool) -> String {
         ("observe_web_execution", false) => "Web execution observed".to_string(),
         ("inspect_web_event_listeners", true) => "Inspecting web event listeners...".to_string(),
         ("inspect_web_event_listeners", false) => "Web event listeners inspected".to_string(),
+        ("discover_webmcp_tools", true) => "Discovering WebMCP tools...".to_string(),
+        ("discover_webmcp_tools", false) => "WebMCP tools discovered".to_string(),
+        ("capture_browser_scenario", true) => "Capturing browser scenario...".to_string(),
+        ("capture_browser_scenario", false) => "Browser scenario captured".to_string(),
         (name, true) => format!("Starting operation: {name}"),
         (name, false) => format!("Completed operation: {name}"),
     }
@@ -551,10 +557,11 @@ fn handle_compare_web_captures(
     args: &Value,
 ) -> Result<CallToolResult, McpError> {
     if args.get("before_scenario").is_some() || args.get("after_scenario").is_some() {
-        return Err(McpError::invalid_params(
-            "Browser scenario comparison is not yet implemented",
-            None,
-        ));
+        let ev = tracewise_web::scenario_diff::compare_browser_scenarios(args)
+            .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+        let _ = session.ledger.lock().unwrap().record(ev.clone());
+        let val = serde_json::to_value(&ev).map_err(|e| McpError::internal_error(e.to_string(), None))?;
+        return Ok(CallToolResult::structured(val));
     }
 
     let input: tracewise_web::capture_diff::CompareWebCapturesInput = serde_json::from_value(args.clone())
@@ -704,5 +711,31 @@ async fn handle_inspect_web_event_listeners(
     browser_tool_result(
         session,
         tracewise_web::web_listeners::inspect_web_event_listeners(&input).await,
+    )
+}
+
+async fn handle_discover_webmcp_tools(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_web::webmcp_discovery::parse_discover_webmcp_tools_input(args)
+        .map_err(|e| McpError::invalid_params(format!("Invalid discover_webmcp_tools input: {e}"), None))?;
+
+    browser_tool_result(
+        session,
+        tracewise_web::webmcp_discovery::discover_webmcp_tools(&input).await,
+    )
+}
+
+async fn handle_capture_browser_scenario(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_web::browser_scenario::parse_capture_browser_scenario_input(args)
+        .map_err(|e| McpError::invalid_params(format!("Invalid capture_browser_scenario input: {e}"), None))?;
+
+    browser_tool_result(
+        session,
+        tracewise_web::browser_scenario_run::capture_browser_scenario(&input).await,
     )
 }

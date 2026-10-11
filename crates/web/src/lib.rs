@@ -1,4 +1,8 @@
 pub mod browser_observation;
+pub mod browser_scenario;
+pub mod browser_scenario_actions;
+pub mod browser_scenario_run;
+pub mod browser_scenario_secrets;
 pub mod browser_targets;
 pub mod bundle_analysis;
 pub mod capture_diff;
@@ -14,6 +18,7 @@ pub mod mitmproxy;
 pub mod module_trace;
 pub mod page_inspection;
 pub mod runtime_cdp;
+pub mod scenario_diff;
 pub mod screenshot_diff;
 pub mod scripts_export;
 pub mod session_observation;
@@ -22,5 +27,6 @@ pub mod web_execution;
 pub mod web_inventory;
 pub mod web_listeners;
 pub mod web_screenshot;
+pub mod webmcp_discovery;
 
 

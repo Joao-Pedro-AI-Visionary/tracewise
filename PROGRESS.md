@@ -60,3 +60,11 @@
 
 ## 2026-10-11 08:03 — phase1b: analyze_web_bundle, observe_web_execution, inspect_web_event_listeners (CLI: cursor:grok-4.7-high)
 - testes ok: 43
+
+## 2026-10-11 — phase1b: discover_webmcp_tools, capture_browser_scenario
+- crates/web: descoberta passiva WebMCP no cliente CDP existente (`WebMCP.enable` / `toolsAdded` / `toolsRemoved`, sem invocação) e captura de cenário. Launch sobe o Chrome pelo `proc-supervisor`, encerra o processo e apaga o perfil. Segredos ficam só em memória e são redatados dos artefatos.
+- crates/server: despacho das duas ferramentas. `compare_web_captures` compara cenários alinhados por `step_id` em vez do stub "not yet implemented".
+- teste: `cdp_test.rs` serve uma página com `navigator.modelContext` e valida `structuredContent` contra o `outputSchema`. Um teste separa garante que as 27 ferramentas despacham para implementação real.
+
+## 2026-10-11 08:33 — phase1b: discover_webmcp_tools + capture_browser_scenario; all 27 dispatch (CLI: cursor:composer-2.5)
+- testes ok: 46
