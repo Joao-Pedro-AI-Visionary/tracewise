@@ -36,6 +36,23 @@ enum Commands {
         #[arg(long)]
         title: Option<String>,
     },
+    /// Generate typed API clients from an OpenAPI document
+    GenerateApiClient {
+        /// OpenAPI document path
+        spec: PathBuf,
+        /// Languages to generate: ts, typescript, py, python (comma-separated)
+        #[arg(long, value_delimiter = ',')]
+        lang: Vec<String>,
+        /// Directory that receives the generated SDKs
+        #[arg(short, long)]
+        output: PathBuf,
+        /// HAR or mitmproxy capture whose redacted exchanges become replay tests
+        #[arg(long)]
+        replay: Option<PathBuf>,
+        /// Python module and npm package name
+        #[arg(long)]
+        package_name: Option<String>,
+    },
 }
 
 #[tokio::main]
@@ -84,6 +101,47 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             )
             .await
             .map_err(|err| std::io::Error::other(format!("infer_api_spec failed: {err}")))?;
+        }
+        Commands::GenerateApiClient {
+            spec,
+            lang,
+            output,
+            replay,
+            package_name,
+        } => {
+            let spec = std::fs::canonicalize(&spec)?;
+            std::fs::create_dir_all(&output)?;
+            let output = std::fs::canonicalize(&output)?;
+            let languages: Vec<String> = lang
+                .iter()
+                .map(|value| match value.as_str() {
+                    "ts" | "typescript" => "typescript".to_string(),
+                    "py" | "python" => "python".to_string(),
+                    other => other.to_string(),
+                })
+                .collect();
+            let mut args = json!({
+                "spec_path": spec.to_string_lossy(),
+                "languages": languages,
+                "output_directory": output.to_string_lossy(),
+            });
+            if let Some(replay) = replay {
+                let replay = std::fs::canonicalize(&replay)?;
+                args["replay_capture_path"] = json!(replay.to_string_lossy());
+            }
+            if let Some(package_name) = package_name {
+                args["package_name"] = json!(package_name);
+            }
+            let session = tracewise_server::session::BinarySession::new();
+            tracewise_server::handlers::call_tool_local(
+                &session,
+                rmcp::model::CallToolRequestParam {
+                    name: "generate_api_client".into(),
+                    arguments: Some(args.as_object().expect("arguments object").clone()),
+                },
+            )
+            .await
+            .map_err(|err| std::io::Error::other(format!("generate_api_client failed: {err}")))?;
         }
     }
 

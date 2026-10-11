@@ -115,6 +115,7 @@ async fn execute_tool(
         "discover_webmcp_tools" => handle_discover_webmcp_tools(session, args).await,
         "capture_browser_scenario" => handle_capture_browser_scenario(session, args).await,
         "infer_api_spec" => handle_infer_api_spec(session, args),
+        "generate_api_client" => handle_generate_api_client(session, args),
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
@@ -176,6 +177,8 @@ fn progress_message(tool_name: &str, start: bool) -> String {
         ("capture_browser_scenario", false) => "Browser scenario captured".to_string(),
         ("infer_api_spec", true) => "Inferring OpenAPI spec from redacted capture...".to_string(),
         ("infer_api_spec", false) => "OpenAPI spec inferred".to_string(),
+        ("generate_api_client", true) => "Generating typed API clients...".to_string(),
+        ("generate_api_client", false) => "API clients generated".to_string(),
         (name, true) => format!("Starting operation: {name}"),
         (name, false) => format!("Completed operation: {name}"),
     }
@@ -817,6 +820,30 @@ fn handle_infer_api_spec(session: &BinarySession, args: &Value) -> Result<CallTo
     }
 
     let val = serde_json::to_value(&inferred.evidence)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_generate_api_client(session: &BinarySession, args: &Value) -> Result<CallToolResult, McpError> {
+    let input: tracewise_web::api_client::GenerateApiClientInput = serde_json::from_value(args.clone())
+        .map_err(|e| McpError::invalid_params(format!("Invalid generate_api_client input: {e}"), None))?;
+    let generated = tracewise_web::api_client::generate_api_client(&input)
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+
+    let mut ledger = session.ledger.lock().unwrap();
+    if let Some(source) = generated.replay_source {
+        if !ledger.has(&source.evidence_id) {
+            ledger
+                .record(source)
+                .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+        }
+    }
+    if !ledger.has(&generated.evidence.evidence_id) {
+        ledger
+            .record(generated.evidence.clone())
+            .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    }
+    let val = serde_json::to_value(&generated.evidence)
         .map_err(|e| McpError::internal_error(e.to_string(), None))?;
     Ok(CallToolResult::structured(val))
 }

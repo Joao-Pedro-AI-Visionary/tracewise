@@ -25,6 +25,7 @@ tokio-tungstenite = { workspace = true }
 reqwest = { workspace = true }
 futures-util = { workspace = true }
 chrono = { workspace = true }
+minijinja = { workspace = true }
 proc-supervisor = { path = "../proc-supervisor" }
 
 [dev-dependencies]

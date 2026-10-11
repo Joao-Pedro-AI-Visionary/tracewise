@@ -1,0 +1,121 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { Client, type FetchLike } from "../src/client.js";
+{% if type_imports %}
+import type { {{ type_imports | join(", ") }} } from "../src/types.js";
+{% endif %}
+
+interface ReplaySample {
+  operation_id: string;
+  method: string;
+  concrete_path: string;
+  base_url: string;
+  status: number;
+  path_params: Record<string, unknown>;
+  query: Record<string, unknown>;
+  query_pairs: string[][];
+  body: unknown;
+  response: unknown;
+}
+
+function loadCases(): ReplaySample[] {
+  let dir = dirname(fileURLToPath(import.meta.url));
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    try {
+      const text = readFileSync(join(dir, "fixtures", "replay.json"), "utf8");
+      return JSON.parse(text) as ReplaySample[];
+    } catch {
+      dir = dirname(dir);
+    }
+  }
+  throw new Error("fixtures/replay.json not found");
+}
+
+function splitUrl(url: string): { path: string; query: string } {
+  const hashless = url.split("#")[0] ?? url;
+  const queryAt = hashless.indexOf("?");
+  const before = queryAt === -1 ? hashless : hashless.slice(0, queryAt);
+  const query = queryAt === -1 ? "" : hashless.slice(queryAt + 1);
+  const scheme = before.indexOf("://");
+  const pathStart = scheme === -1 ? 0 : before.indexOf("/", scheme + 3);
+  const path = pathStart === -1 ? "/" : before.slice(pathStart);
+  return { path, query };
+}
+
+function queryMap(query: string): Map<string, string> {
+  const map = new Map<string, string>();
+  if (query.length === 0) {
+    return map;
+  }
+  for (const part of query.split("&")) {
+    if (part.length === 0) {
+      continue;
+    }
+    const eq = part.indexOf("=");
+    const rawKey = eq === -1 ? part : part.slice(0, eq);
+    const rawValue = eq === -1 ? "" : part.slice(eq + 1);
+    const key = decodeURIComponent(rawKey.replace(/\+/g, " "));
+    const value = decodeURIComponent(rawValue.replace(/\+/g, " "));
+    map.set(key, value);
+  }
+  return map;
+}
+
+async function invoke(client: Client, sample: ReplaySample): Promise<{ status: number; body: unknown }> {
+  switch (sample.operation_id) {
+{% for op in operations %}
+    case {{ op.operation_literal }}:
+      return client.{{ op.operation_id }}(
+{% if op.has_path %}
+        sample.path_params as unknown as {{ op.path_type }},
+{% endif %}
+{% if op.has_query %}
+        sample.query as unknown as {{ op.query_type }},
+{% endif %}
+{% if op.has_body %}
+        sample.body as unknown as ({{ op.body_cast }}),
+{% endif %}
+      );
+{% endfor %}
+    default:
+      throw new Error("unknown operation " + sample.operation_id);
+  }
+}
+
+test("client constructs without calling the network", () => {
+  const client = new Client({ baseUrl: "http://127.0.0.1:9" });
+  assert.ok(client instanceof Client);
+});
+
+for (const sample of loadCases()) {
+  test(sample.operation_id + " " + String(sample.status) + " " + sample.concrete_path, async () => {
+    const responseText = JSON.stringify(sample.response);
+    const fetchImpl: FetchLike = async (url, init) => {
+      assert.equal(init?.method ?? "GET", sample.method);
+      const parts = splitUrl(url);
+      assert.equal(parts.path, sample.concrete_path);
+      const actual = queryMap(parts.query);
+      for (const pair of sample.query_pairs) {
+        const key = pair[0] ?? "";
+        const expected = pair[1] ?? "";
+        assert.equal(actual.get(key), expected);
+      }
+      if (sample.body === null) {
+        assert.equal(init?.body, undefined);
+      } else {
+        assert.deepEqual(JSON.parse(init?.body ?? "null") as unknown, sample.body);
+      }
+      return {
+        status: sample.status,
+        text: async () => responseText,
+      };
+    };
+    const client = new Client({ baseUrl: sample.base_url, fetch: fetchImpl });
+    const result = await invoke(client, sample);
+    assert.equal(result.status, sample.status);
+    assert.deepEqual(result.body, sample.response);
+  });
+}

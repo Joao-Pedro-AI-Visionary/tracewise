@@ -1,3 +1,7 @@
+mod api_client_emit;
+mod api_client_model;
+mod api_client_replay;
+pub mod api_client;
 pub mod api_spec;
 pub mod api_spec_schema;
 pub mod browser_observation;

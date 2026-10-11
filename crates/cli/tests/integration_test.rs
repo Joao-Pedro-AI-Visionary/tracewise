@@ -85,7 +85,7 @@ async fn test_mcp_stdio_lifecycle() {
     let tools = tools_resp["result"]["tools"]
         .as_array()
         .expect("Expected tools array");
-    assert_eq!(tools.len(), 28, "Expected 27 REA tools plus infer_api_spec");
+    assert_eq!(tools.len(), 29, "Expected 27 REA tools plus infer_api_spec and generate_api_client");
 
     let expected_names = [
         "inspect_analysis_view",
@@ -116,6 +116,7 @@ async fn test_mcp_stdio_lifecycle() {
         "compare_web_screenshots",
         "capture_browser_scenario",
         "infer_api_spec",
+        "generate_api_client",
     ];
 
     let actual_names: Vec<&str> = tools
@@ -451,4 +452,43 @@ async fn test_infer_api_spec_cli() {
     assert!(spec["paths"].get("/api/todos/{id}").is_some());
     assert_eq!(spec["openapi"], "3.1.0");
     let _ = std::fs::remove_file(&output);
+}
+
+#[tokio::test]
+async fn test_generate_api_client_cli() {
+    let bin_path = env!("CARGO_BIN_EXE_tracewise");
+    let root = std::env::temp_dir().join(format!("tracewise-cli-client-{}", std::process::id()));
+    let _ = std::fs::remove_dir_all(&root);
+    std::fs::create_dir_all(&root).expect("cli outdir");
+    let spec = root.join("spec.json");
+    let infer = Command::new(bin_path)
+        .arg("infer-api-spec")
+        .arg("/workspace/tracewise/fixtures/web/demo.har")
+        .arg("-o")
+        .arg(&spec)
+        .status()
+        .await
+        .expect("spawn infer-api-spec");
+    assert!(infer.success(), "infer-api-spec exited {infer}");
+    let outdir = root.join("sdk");
+    let status = Command::new(bin_path)
+        .arg("generate-api-client")
+        .arg(&spec)
+        .arg("--lang")
+        .arg("ts,py")
+        .arg("-o")
+        .arg(&outdir)
+        .arg("--replay")
+        .arg("/workspace/tracewise/fixtures/web/demo.har")
+        .status()
+        .await
+        .expect("spawn generate-api-client");
+    assert!(status.success(), "generate-api-client exited {status}");
+    let client = std::fs::read_to_string(outdir.join("python/inferred_api/client.py")).expect("python client");
+    assert!(client.contains("def get_api_todos_by_id"));
+    let ts = std::fs::read_to_string(outdir.join("typescript/src/client.ts")).expect("ts client");
+    assert!(ts.contains("getApiTodosById"));
+    assert!(!client.contains("SECRET-"));
+    assert!(!ts.contains("SECRET-"));
+    let _ = std::fs::remove_dir_all(&root);
 }

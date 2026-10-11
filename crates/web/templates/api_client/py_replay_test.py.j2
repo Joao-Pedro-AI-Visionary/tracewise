@@ -1,0 +1,102 @@
+"""Replay recorded responses through the generated client."""
+
+from __future__ import annotations
+
+import json
+import os
+import unittest
+import urllib.parse
+from dataclasses import is_dataclass
+
+from {{ package_name }}.client import Client
+{% if model_imports %}
+from {{ package_name }}.models import (
+{% for name in model_imports %}
+    {{ name }},
+{% endfor %}
+)
+{% endif %}
+
+
+def _load_cases():
+    here = os.path.dirname(os.path.abspath(__file__))
+    for _ in range(4):
+        candidate = os.path.join(here, "fixtures", "replay.json")
+        if os.path.isfile(candidate):
+            with open(candidate, encoding="utf-8") as handle:
+                return json.load(handle)
+        parent = os.path.dirname(here)
+        if parent == here:
+            break
+        here = parent
+    raise FileNotFoundError("fixtures/replay.json")
+
+
+def _to_plain(value):
+    if is_dataclass(value):
+        plain = {}
+        for key, spec in value.__dataclass_fields__.items():
+            item = getattr(value, key)
+            if item is None:
+                continue
+            json_name = spec.metadata.get("json", key)
+            plain[str(json_name)] = _to_plain(item)
+        return plain
+    if isinstance(value, list):
+        return [_to_plain(item) for item in value]
+    return value
+
+
+def _invoke(client, sample):
+    operation = sample["operation_id"]
+{% for op in operations %}
+    if operation == {{ op.operation_literal }}:
+        return client.{{ op.py_name }}(
+{% if op.has_path %}
+            {{ op.path_type }}.parse(sample["path_params"]),
+{% endif %}
+{% if op.has_query %}
+            {{ op.query_type }}.parse(sample["query"]),
+{% endif %}
+{% if op.has_body %}
+{% if op.body_class %}
+            {{ op.body_class }}.parse(sample["body"]),
+{% else %}
+            sample["body"],
+{% endif %}
+{% endif %}
+        )
+{% endfor %}
+    raise AssertionError("unknown operation " + str(operation))
+
+
+class ReplayTest(unittest.TestCase):
+    def test_client_constructs(self):
+        client = Client(base_url="http://127.0.0.1:9", transport=lambda *args: (0, ""))
+        self.assertIsInstance(client, Client)
+
+    def test_replay_cases(self):
+        for index, sample in enumerate(_load_cases()):
+            with self.subTest(index=index, operation=sample["operation_id"], status=sample["status"]):
+                def transport(method, url, headers, raw, sample=sample):
+                    self.assertEqual(method, sample["method"])
+                    parsed = urllib.parse.urlparse(url)
+                    self.assertEqual(parsed.path, sample["concrete_path"])
+                    actual = urllib.parse.parse_qs(parsed.query, keep_blank_values=True)
+                    for key, expected in sample["query_pairs"]:
+                        self.assertEqual(actual.get(key), [expected])
+                    if sample["body"] is None:
+                        self.assertIsNone(raw)
+                    else:
+                        self.assertIsNotNone(raw)
+                        self.assertEqual(json.loads(raw.decode("utf-8")), sample["body"])
+                    return sample["status"], json.dumps(sample["response"])
+
+                client = Client(base_url=sample["base_url"], transport=transport)
+                status, parsed = _invoke(client, sample)
+                self.assertEqual(status, sample["status"])
+                self.assertEqual(_to_plain(parsed), sample["response"])
+
+
+if __name__ == "__main__":
+    unittest.main()

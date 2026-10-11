@@ -74,7 +74,7 @@ pub fn all_tools_value() -> serde_json::Value {
     serde_json::json!({ "tools": arr })
 }
 
-/// Returns the 27 REA tools plus tracewise-owned tools (28 with infer_api_spec).
+/// Returns the 27 REA tools plus tracewise-owned tools (29 with infer_api_spec and generate_api_client).
 pub fn listed_tools() -> Vec<Tool> {
     let mut tools = all_tools();
     tools.extend(tracewise_tools());
@@ -145,7 +145,7 @@ pub fn all_tool_names() -> Vec<&'static str> {
 
 /// Tracewise-owned tool names appended after the 27 REA tools.
 pub fn tracewise_tool_names() -> &'static [&'static str] {
-    &["infer_api_spec"]
+    &["infer_api_spec", "generate_api_client"]
 }
 
 /// Names returned by tools/list: 27 REA tools, then tracewise-owned tools.

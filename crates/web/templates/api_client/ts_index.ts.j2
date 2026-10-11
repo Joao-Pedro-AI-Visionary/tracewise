@@ -1,0 +1,6 @@
+export { Client } from "./client.js";
+export type { ClientOptions, FetchLike } from "./client.js";
+{% for iface in interfaces %}
+export type { {{ iface.name }} } from "./types.js";
+export { {{ iface.parse_name }} } from "./types.js";
+{% endfor %}

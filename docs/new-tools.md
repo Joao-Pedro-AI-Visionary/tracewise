@@ -1,6 +1,6 @@
 # Tracewise-owned tools
 
-These tools are not part of REA. `tools/list` returns **28** tools: the 27 REA tools, byte-identical to the REA catalog, then the tools in this document. The machine-readable contract is [`crates/contracts/tracewise_tools.json`](../crates/contracts/tracewise_tools.json).
+These tools are not part of REA. `tools/list` returns **29** tools: the 27 REA tools, byte-identical to the REA catalog, then the tools in this document. The machine-readable contract is [`crates/contracts/tracewise_tools.json`](../crates/contracts/tracewise_tools.json).
 
 ## infer_api_spec
 
@@ -134,3 +134,140 @@ Optional flags: `--base-url` and `--title`. The file written by `-o` is the Open
 - `x-tracewise-evidence`: array of `{ "evidence_id", "ordinal" }` pointing at the redacted capture records that support the node.
 - `x-tracewise-confidence`: `observed` when the value was seen directly, `inferred` for templated parameters, merged types and required-ness.
 - Redacted `Authorization`, `Proxy-Authorization` and `Cookie` headers become security schemes whose scheme is `unknown`. The concrete credential is not stored.
+
+## generate_api_client
+
+| Field | Value |
+| --- | --- |
+| name | `generate_api_client` |
+| title | Generate API Client |
+| annotations | `readOnlyHint: false`, `destructiveHint: false`, `idempotentHint: true`, `openWorldHint: false` |
+
+### Description
+
+Generate typed TypeScript and Python clients from an OpenAPI document using templates embedded in the binary. Pass `spec_path` or an inline `spec` object, plus `languages` (`typescript` and/or `python`) and `output_directory`. `package_name` defaults to a slug of `info.title`. `replay_capture_path` is inspected with credential redaction first; the redacted exchanges become replay tests. TypeScript is a fetch client with interfaces from the schemas, `package.json`, `tsconfig.json`, and `node:test` cases that mock `fetch` with the recorded responses and assert the typed parse. Python is a standard-library `urllib` client with dataclasses and `unittest` cases that replay those responses. The tool result lists every generated file with its sha256 and emits Evidence (`predicate_type` `tracewise.api-client`, confidence `inferred`). Credential values are never copied into the SDK.
+
+### inputSchema
+
+Exactly one of `spec_path` or `spec` is required, along with `languages` and `output_directory`. Additional properties are rejected.
+
+```json
+{
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "spec_path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Absolute path of an OpenAPI JSON document."
+    },
+    "spec": {
+      "type": "object",
+      "description": "Inline OpenAPI document. Mutually exclusive with spec_path."
+    },
+    "languages": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["typescript", "python"] }
+    },
+    "output_directory": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Absolute directory that receives the generated files."
+    },
+    "package_name": { "type": "string", "minLength": 1 },
+    "replay_capture_path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Absolute HAR or mitmproxy capture used for redacted replay tests."
+    }
+  },
+  "oneOf": [
+    { "required": ["spec_path", "languages", "output_directory"], "not": { "required": ["spec"] } },
+    { "required": ["spec", "languages", "output_directory"], "not": { "required": ["spec_path"] } }
+  ]
+}
+```
+
+### outputSchema
+
+The tool result is Evidence. `normalized_result.files` lists each relative path with `sha256` and `bytes`. `confidence` is `inferred` and `authority` is `analyst-inference`.
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id", "subject", "provider", "analysis_profile", "predicate_type",
+    "operation", "parameters", "raw_result", "normalized_result", "confidence",
+    "authority", "environment", "limitations", "locations", "evidence_links"
+  ],
+  "properties": {
+    "evidence_id": { "type": "string", "pattern": "^ev_[a-f0-9]{64}$" },
+    "subject": { "type": ["object", "null"] },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "version"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "version": { "type": ["string", "null"] }
+      }
+    },
+    "analysis_profile": {},
+    "predicate_type": { "const": "tracewise.api-client" },
+    "operation": { "const": "generate_api_client" },
+    "parameters": { "type": "object" },
+    "raw_result": {},
+    "normalized_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["languages", "package_name", "output_directory", "files"],
+      "properties": {
+        "languages": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "enum": ["python", "typescript"] }
+        },
+        "package_name": { "type": "string" },
+        "output_directory": { "type": "string" },
+        "files": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "sha256", "bytes"],
+            "properties": {
+              "path": { "type": "string" },
+              "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+              "bytes": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    },
+    "confidence": { "const": "inferred" },
+    "authority": { "const": "analyst-inference" },
+    "environment": {},
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "locations": { "type": "array" },
+    "evidence_links": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^ev_[a-f0-9]{64}$" }
+    }
+  }
+}
+```
+
+### CLI
+
+```bash
+tracewise generate-api-client <spec> --lang ts,py -o outdir [--replay <capture>]
+```
+
+`--lang` accepts `ts`, `typescript`, `py` and `python`. `--package-name` overrides the slug of `info.title`. The command writes the SDK files and does not print the Evidence wrapper.

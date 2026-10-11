@@ -77,3 +77,15 @@
 
 ## 2026-10-11 09:05 — phase1c: infer_api_spec (CLI: cursor:grok-4.7-high)
 - testes ok: 48
+
+## 2026-10-11 — phase1c: generate_api_client
+- crates/web: `generate_api_client` lê um OpenAPI 3.1 (objeto ou arquivo, inclusive o envelope de evidência do `infer_api_spec`) e emite SDK TypeScript (fetch) e Python (dataclasses + urllib) por templates minijinja embutidos. Testes de replay usam a captura redatada; o gerador não grava credenciais.
+- crates/contracts: `tools/list` passa a 29 ferramentas; as 27 do REA permanecem byte-idênticas.
+- CLI: `tracewise generate-api-client <spec> --lang ts,py -o outdir [--replay <capture>]`.
+- teste: geração determinística a partir do spec de `fixtures/web/demo.har`, unittest Python, e `tsc` + `node --test` quando o Node de `/tmp/node-v22.20.0-linux-x64` existe.
+
+## 2026-10-11 09:20 — phase1c: generate_api_client (CLI: cursor:grok-4.7-high)
+- testes ok: 50
+
+## 2026-10-11 09:49 — phase1c: generate_api_client (CLI: cursor:grok-4.7-high)
+- testes ok: 50

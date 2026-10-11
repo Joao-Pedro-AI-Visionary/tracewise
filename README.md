@@ -8,8 +8,8 @@ This repository implements **Phase 0 (Foundation)**:
 - ResidualUnknown lifecycle with chained revision digests and optimistic concurrency control (`expected_revision`).
 - EvidenceBundle import/export with re-authentication and bundle comparison.
 - EvidenceLedger for in-memory session tracking.
-- MCP (Model Context Protocol) stdio server powered by `rmcp`. `tools/list` exposes 28 tools: the 27 REA tools verbatim, plus the tracewise-owned `infer_api_spec` tool.
-- CLI binary `tracewise` with `mcp`, `hash`, `tools`, and `infer-api-spec` subcommands.
+- MCP (Model Context Protocol) stdio server powered by `rmcp`. `tools/list` exposes 29 tools: the 27 REA tools verbatim, plus the tracewise-owned `infer_api_spec` and `generate_api_client` tools.
+- CLI binary `tracewise` with `mcp`, `hash`, `tools`, `infer-api-spec`, and `generate-api-client` subcommands.
 
 ## Usage
 
@@ -39,9 +39,14 @@ tracewise tools
 
 # Infer an OpenAPI 3.1 document from a redacted HAR or mitmproxy capture
 tracewise infer-api-spec <capture> -o spec.json
+
+# Generate typed TypeScript and Python clients from that document
+tracewise generate-api-client spec.json --lang ts,py -o outdir --replay <capture>
 ```
 
-`infer_api_spec` groups captured requests into templated endpoints and writes an OpenAPI 3.1 document. Credential values stay out of the spec; redacted authentication headers are recorded as a security scheme whose scheme is unknown, and every unobserved aspect is a residual unknown. The contract is in [docs/new-tools.md](docs/new-tools.md).
+`infer_api_spec` groups captured requests into templated endpoints and writes an OpenAPI 3.1 document. Credential values stay out of the spec; redacted authentication headers are recorded as a security scheme whose scheme is unknown, and every unobserved aspect is a residual unknown.
+
+`generate_api_client` renders a fetch-based TypeScript SDK and a stdlib Python SDK from that document. `--replay` turns the redacted capture into `node:test` and `unittest` cases. Each generated file is listed with its sha256. The contracts are in [docs/new-tools.md](docs/new-tools.md).
 
 ## Registering the MCP server
 
