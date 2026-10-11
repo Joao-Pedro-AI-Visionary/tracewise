@@ -3,6 +3,7 @@ members = [
     "crates/domain",
     "crates/contracts",
     "crates/web",
+    "crates/js",
     "crates/server",
     "crates/cli",
     "crates/proc-supervisor",

@@ -1,0 +1,284 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_c7f67ba4b4a584bf37be8be9bef10f67e917bc112f859fdc8d4ab62db664cf48\",\"subject\":{\"name\":\"app-b.zip\",\"digest\":{\"sha256\":\"e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/tracewise/fixtures/js/app-b.zip\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"inspection_id\":\"ai_42a6fa1dacd179b869694aaf1f3d14dfd6d74208d4e96dc5c3da64059e72c8e2\",\"subject\":{\"manifest_id\":\"agm_62687683a9108d7c379282438c23804f212a09594a33da7fdaf8ff15f89ab10e\",\"root_artifact_id\":\"art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca\",\"root_sha256\":\"e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94\",\"root_format\":\"zip\"},\"substeps\":[{\"substep_id\":\"ais_7a719d9dd7812a0bfd3aba7c90f8f52197687ed75a198b26835cee710b7531da\",\"operation\":\"inventory_artifact\",\"status\":\"completed\",\"evidence_id\":\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"evidence\":{\"evidence_id\":\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"subject\":{\"name\":\"app-b.zip\",\"digest\":{\"sha256\":\"e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/tracewise/fixtures/js/app-b.zip\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inventory_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"manifest\":{\"manifest_id\":\"agm_62687683a9108d7c379282438c23804f212a09594a33da7fdaf8ff15f89ab10e\",\"root_artifact_id\":\"art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca\",\"root_sha256\":\"e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94\",\"root_format\":\"zip\",\"graph_sha256\":\"63ca94a4edb4ff61c8e03d0fc9156bc671f194568d553d7fbcf48c9071248c5d\",\"node_count\":4,\"occurrence_count\":4,\"edge_count\":3},\"nodes\":[{\"artifact_id\":\"art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f\",\"format\":\"directory\",\"sha256\":\"9c5de0c71c818ac973886859584b976312c5348d9083b29164dbc60d61f91760\",\"size\":0,\"media_type\":null,\"architecture\":null,\"content_state\":\"virtual\",\"limitations\":[]},{\"artifact_id\":\"art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4\",\"format\":\"file\",\"sha256\":\"d223b78a13c314c518f5b3025065c5a73660432c3caa58aade066de7cc03b0af\",\"size\":21,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_e430b1ad109d8100923d152f8f75ee56b26a6e6bf2f18ba4d47688813fdcaf0f\",\"format\":\"file\",\"sha256\":\"a948904f2f0f479b8f8197694b30184b0d2ed1c1cd2a1ec0fb85d299a192a447\",\"size\":12,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca\",\"format\":\"zip\",\"sha256\":\"e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94\",\"size\":335,\"media_type\":null,\"architecture\":null,\"content_state\":\"materialized\",\"limitations\":[]}],\"occurrences\":[{\"occurrence_id\":\"occ_bfe009417e82f6824883c5dcd9eeb71e350c909e7f6c618e4a28bb54721d655c\",\"artifact_id\":\"art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca\",\"parent_occurrence_id\":null,\"logical_path\":\".\",\"entry_kind\":\"file\",\"artifact_kind\":\"container\",\"artifact_format\":\"zip\",\"declared_size\":335,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_cf549deda27e8b1a70010964d08cb04b88844c9aebe44c4dfc8b42c27c939b9d\",\"artifact_id\":\"art_e430b1ad109d8100923d152f8f75ee56b26a6e6bf2f18ba4d47688813fdcaf0f\",\"parent_occurrence_id\":\"occ_bfe009417e82f6824883c5dcd9eeb71e350c909e7f6c618e4a28bb54721d655c\",\"logical_path\":\"README.txt\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":12,\"compressed_size\":14,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_e83a0890ae2346ba05e446df5953e8dc3a14a4a6cd26f3acc717b475e2ad028a\",\"artifact_id\":\"art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f\",\"parent_occurrence_id\":\"occ_bfe009417e82f6824883c5dcd9eeb71e350c909e7f6c618e4a28bb54721d655c\",\"logical_path\":\"src\",\"entry_kind\":\"directory\",\"artifact_kind\":\"container\",\"artifact_format\":\"directory\",\"declared_size\":null,\"compressed_size\":null,\"executable\":true,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_66617e0eb0d13fd7b14db5ca1650c2fb57c2d3b7bed2857cb4669b9154549be7\",\"artifact_id\":\"art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4\",\"parent_occurrence_id\":\"occ_e83a0890ae2346ba05e446df5953e8dc3a14a4a6cd26f3acc717b475e2ad028a\",\"logical_path\":\"src/app.js\",\"entry_kind\":\"file\",\"artifact_kind\":\"javascript\",\"artifact_format\":\"javascript-bundle\",\"declared_size\":21,\"compressed_size\":23,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]}],\"edges\":[{\"edge_id\":\"edge_3ea7f86b76b8e5dd8ec1ebfe427de69b1ee3614a5c6e23b69de693ab6f597010\",\"ordinal\":0,\"parent_artifact_id\":\"art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_cf549deda27e8b1a70010964d08cb04b88844c9aebe44c4dfc8b42c27c939b9d\",\"producer\":null},{\"edge_id\":\"edge_977a88bc3dd0434cf7ebb3ae85ac7b8e621b96a2ecd57f7a4ae20debcf917978\",\"ordinal\":1,\"parent_artifact_id\":\"art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f\",\"relation\":\"contains\",\"occurrence_id\":\"occ_66617e0eb0d13fd7b14db5ca1650c2fb57c2d3b7bed2857cb4669b9154549be7\",\"producer\":null},{\"edge_id\":\"edge_f45f59f76b6523a69c89d47236a63729bac2eb5bf686bb4e02d72f78023b5cee\",\"ordinal\":2,\"parent_artifact_id\":\"art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_e83a0890ae2346ba05e446df5953e8dc3a14a4a6cd26f3acc717b475e2ad028a\",\"producer\":null}],\"provenance\":[],\"integrity_contradictions\":[],\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[]}}],\"observations\":[{\"observation_id\":\"aio_5f02e22d561d91a8b0ba25f48f7f06b3d8f0e50e392cd4c299f7c52200b12c1f\",\"kind\":\"root-manifest\",\"subject\":\"art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca\",\"value\":{\"manifest_id\":\"agm_62687683a9108d7c379282438c23804f212a09594a33da7fdaf8ff15f89ab10e\",\"root_artifact_id\":\"art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca\",\"root_sha256\":\"e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94\",\"root_format\":\"zip\",\"graph_sha256\":\"63ca94a4edb4ff61c8e03d0fc9156bc671f194568d553d7fbcf48c9071248c5d\",\"node_count\":4,\"occurrence_count\":4,\"edge_count\":3},\"evidence_id\":\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\"}],\"hypotheses\":[],\"contradictions\":[],\"unexplored_branches\":[],\"next_probes\":[],\"coverage\":{\"status\":\"complete-within-substeps\",\"substeps_completed\":1,\"observations_retained\":1,\"observations_omitted\":0,\"hypotheses_retained\":0,\"hypotheses_omitted\":0,\"unexplored_branches_retained\":0,\"unexplored_branches_omitted\":0,\"next_probes_retained\":0,\"next_probes_omitted\":0},\"evidence_links\":[\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\"],\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_c7f67ba4b4a584bf37be8be9bef10f67e917bc112f859fdc8d4ab62db664cf48",
+    "subject": {
+      "name": "app-b.zip",
+      "digest": {
+        "sha256": "e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94"
+      },
+      "format": "zip",
+      "architecture": null,
+      "local_path": "/workspace/tracewise/fixtures/js/app-b.zip"
+    },
+    "provider": {
+      "id": "rea-artifact-graph",
+      "name": "REA safe artifact graph provider",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis",
+    "operation": "inspect_artifact",
+    "parameters": {
+      "integrity_policy": "fail"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "inspection_id": "ai_42a6fa1dacd179b869694aaf1f3d14dfd6d74208d4e96dc5c3da64059e72c8e2",
+      "subject": {
+        "manifest_id": "agm_62687683a9108d7c379282438c23804f212a09594a33da7fdaf8ff15f89ab10e",
+        "root_artifact_id": "art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca",
+        "root_sha256": "e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94",
+        "root_format": "zip"
+      },
+      "substeps": [
+        {
+          "substep_id": "ais_7a719d9dd7812a0bfd3aba7c90f8f52197687ed75a198b26835cee710b7531da",
+          "operation": "inventory_artifact",
+          "status": "completed",
+          "evidence_id": "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+          "evidence": {
+            "evidence_id": "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+            "subject": {
+              "name": "app-b.zip",
+              "digest": {
+                "sha256": "e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94"
+              },
+              "format": "zip",
+              "architecture": null,
+              "local_path": "/workspace/tracewise/fixtures/js/app-b.zip"
+            },
+            "provider": {
+              "id": "rea-artifact-graph",
+              "name": "REA safe artifact graph provider",
+              "version": "1"
+            },
+            "analysis_profile": null,
+            "predicate_type": "rea.analysis",
+            "operation": "inventory_artifact",
+            "parameters": {
+              "integrity_policy": "fail"
+            },
+            "raw_result": null,
+            "normalized_result": {
+              "manifest": {
+                "manifest_id": "agm_62687683a9108d7c379282438c23804f212a09594a33da7fdaf8ff15f89ab10e",
+                "root_artifact_id": "art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca",
+                "root_sha256": "e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94",
+                "root_format": "zip",
+                "graph_sha256": "63ca94a4edb4ff61c8e03d0fc9156bc671f194568d553d7fbcf48c9071248c5d",
+                "node_count": 4,
+                "occurrence_count": 4,
+                "edge_count": 3
+              },
+              "nodes": [
+                {
+                  "artifact_id": "art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f",
+                  "format": "directory",
+                  "sha256": "9c5de0c71c818ac973886859584b976312c5348d9083b29164dbc60d61f91760",
+                  "size": 0,
+                  "media_type": null,
+                  "architecture": null,
+                  "content_state": "virtual",
+                  "limitations": []
+                },
+                {
+                  "artifact_id": "art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4",
+                  "format": "file",
+                  "sha256": "d223b78a13c314c518f5b3025065c5a73660432c3caa58aade066de7cc03b0af",
+                  "size": 21,
+                  "media_type": null,
+                  "architecture": null,
+                  "content_state": "embedded",
+                  "limitations": []
+                },
+                {
+                  "artifact_id": "art_e430b1ad109d8100923d152f8f75ee56b26a6e6bf2f18ba4d47688813fdcaf0f",
+                  "format": "file",
+                  "sha256": "a948904f2f0f479b8f8197694b30184b0d2ed1c1cd2a1ec0fb85d299a192a447",
+                  "size": 12,
+                  "media_type": null,
+                  "architecture": null,
+                  "content_state": "embedded",
+                  "limitations": []
+                },
+                {
+                  "artifact_id": "art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca",
+                  "format": "zip",
+                  "sha256": "e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94",
+                  "size": 335,
+                  "media_type": null,
+                  "architecture": null,
+                  "content_state": "materialized",
+                  "limitations": []
+                }
+              ],
+              "occurrences": [
+                {
+                  "occurrence_id": "occ_bfe009417e82f6824883c5dcd9eeb71e350c909e7f6c618e4a28bb54721d655c",
+                  "artifact_id": "art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca",
+                  "parent_occurrence_id": null,
+                  "logical_path": ".",
+                  "entry_kind": "file",
+                  "artifact_kind": "container",
+                  "artifact_format": "zip",
+                  "declared_size": 335,
+                  "compressed_size": null,
+                  "executable": false,
+                  "encrypted": false,
+                  "hash_status": "verified",
+                  "source_location": null,
+                  "limitations": []
+                },
+                {
+                  "occurrence_id": "occ_cf549deda27e8b1a70010964d08cb04b88844c9aebe44c4dfc8b42c27c939b9d",
+                  "artifact_id": "art_e430b1ad109d8100923d152f8f75ee56b26a6e6bf2f18ba4d47688813fdcaf0f",
+                  "parent_occurrence_id": "occ_bfe009417e82f6824883c5dcd9eeb71e350c909e7f6c618e4a28bb54721d655c",
+                  "logical_path": "README.txt",
+                  "entry_kind": "file",
+                  "artifact_kind": "resource",
+                  "artifact_format": "file",
+                  "declared_size": 12,
+                  "compressed_size": 14,
+                  "executable": false,
+                  "encrypted": false,
+                  "hash_status": "verified",
+                  "source_location": null,
+                  "limitations": []
+                },
+                {
+                  "occurrence_id": "occ_e83a0890ae2346ba05e446df5953e8dc3a14a4a6cd26f3acc717b475e2ad028a",
+                  "artifact_id": "art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f",
+                  "parent_occurrence_id": "occ_bfe009417e82f6824883c5dcd9eeb71e350c909e7f6c618e4a28bb54721d655c",
+                  "logical_path": "src",
+                  "entry_kind": "directory",
+                  "artifact_kind": "container",
+                  "artifact_format": "directory",
+                  "declared_size": null,
+                  "compressed_size": null,
+                  "executable": true,
+                  "encrypted": false,
+                  "hash_status": "verified",
+                  "source_location": null,
+                  "limitations": []
+                },
+                {
+                  "occurrence_id": "occ_66617e0eb0d13fd7b14db5ca1650c2fb57c2d3b7bed2857cb4669b9154549be7",
+                  "artifact_id": "art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4",
+                  "parent_occurrence_id": "occ_e83a0890ae2346ba05e446df5953e8dc3a14a4a6cd26f3acc717b475e2ad028a",
+                  "logical_path": "src/app.js",
+                  "entry_kind": "file",
+                  "artifact_kind": "javascript",
+                  "artifact_format": "javascript-bundle",
+                  "declared_size": 21,
+                  "compressed_size": 23,
+                  "executable": false,
+                  "encrypted": false,
+                  "hash_status": "verified",
+                  "source_location": null,
+                  "limitations": []
+                }
+              ],
+              "edges": [
+                {
+                  "edge_id": "edge_3ea7f86b76b8e5dd8ec1ebfe427de69b1ee3614a5c6e23b69de693ab6f597010",
+                  "ordinal": 0,
+                  "parent_artifact_id": "art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca",
+                  "relation": "contains",
+                  "occurrence_id": "occ_cf549deda27e8b1a70010964d08cb04b88844c9aebe44c4dfc8b42c27c939b9d",
+                  "producer": null
+                },
+                {
+                  "edge_id": "edge_977a88bc3dd0434cf7ebb3ae85ac7b8e621b96a2ecd57f7a4ae20debcf917978",
+                  "ordinal": 1,
+                  "parent_artifact_id": "art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f",
+                  "relation": "contains",
+                  "occurrence_id": "occ_66617e0eb0d13fd7b14db5ca1650c2fb57c2d3b7bed2857cb4669b9154549be7",
+                  "producer": null
+                },
+                {
+                  "edge_id": "edge_f45f59f76b6523a69c89d47236a63729bac2eb5bf686bb4e02d72f78023b5cee",
+                  "ordinal": 2,
+                  "parent_artifact_id": "art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca",
+                  "relation": "contains",
+                  "occurrence_id": "occ_e83a0890ae2346ba05e446df5953e8dc3a14a4a6cd26f3acc717b475e2ad028a",
+                  "producer": null
+                }
+              ],
+              "provenance": [],
+              "integrity_contradictions": [],
+              "limitations": [
+                "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+              ]
+            },
+            "confidence": "observed",
+            "authority": "shipped-artifact",
+            "environment": null,
+            "limitations": [
+              "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+            ],
+            "locations": [],
+            "evidence_links": []
+          }
+        }
+      ],
+      "observations": [
+        {
+          "observation_id": "aio_5f02e22d561d91a8b0ba25f48f7f06b3d8f0e50e392cd4c299f7c52200b12c1f",
+          "kind": "root-manifest",
+          "subject": "art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca",
+          "value": {
+            "manifest_id": "agm_62687683a9108d7c379282438c23804f212a09594a33da7fdaf8ff15f89ab10e",
+            "root_artifact_id": "art_f6943f4b930403340b6109262fe2a462e41028c1efb361cece431512d57bcfca",
+            "root_sha256": "e36cfba8435e51dd276b296b27624349619ad6d8e79be444181947c8bdccfd94",
+            "root_format": "zip",
+            "graph_sha256": "63ca94a4edb4ff61c8e03d0fc9156bc671f194568d553d7fbcf48c9071248c5d",
+            "node_count": 4,
+            "occurrence_count": 4,
+            "edge_count": 3
+          },
+          "evidence_id": "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df"
+        }
+      ],
+      "hypotheses": [],
+      "contradictions": [],
+      "unexplored_branches": [],
+      "next_probes": [],
+      "coverage": {
+        "status": "complete-within-substeps",
+        "substeps_completed": 1,
+        "observations_retained": 1,
+        "observations_omitted": 0,
+        "hypotheses_retained": 0,
+        "hypotheses_omitted": 0,
+        "unexplored_branches_retained": 0,
+        "unexplored_branches_omitted": 0,
+        "next_probes_retained": 0,
+        "next_probes_omitted": 0
+      },
+      "evidence_links": [
+        "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df"
+      ],
+      "limitations": [
+        "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+        "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+      "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df"
+    ]
+  }
+}

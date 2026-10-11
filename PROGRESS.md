@@ -108,3 +108,6 @@
 
 ## 2026-10-11 11:35 — phase2: contracts for 23 JS/Electron tools (CLI: cursor:grok-4.7-high)
 - testes ok: 50
+
+## 2026-10-11 12:06 — phase2: inspect/extract/compare artifacts (CLI: cursor:composer-2.5)
+- testes ok: 55

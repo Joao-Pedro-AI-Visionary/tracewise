@@ -1,0 +1,306 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_ea2ab6defbf5f355bd7ac023ad293426348f9beda601590008979d937040fe40\",\"subject\":{\"name\":\"app-a.asar\",\"digest\":{\"sha256\":\"27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74\"},\"format\":\"asar\",\"architecture\":null,\"local_path\":\"/workspace/tracewise/fixtures/js/app-a.asar\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"inspection_id\":\"ai_3ab8c71d9eb64bb8bf9d145712e243d8d25a41c4805c4db3c11affa8880aff6d\",\"subject\":{\"manifest_id\":\"agm_f290457aeca12439149883c2e129a097d3b861f1d28d581ab54af2aa4f7d9ab7\",\"root_artifact_id\":\"art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54\",\"root_sha256\":\"27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74\",\"root_format\":\"asar\"},\"substeps\":[{\"substep_id\":\"ais_b3a4f68f489ea19677ef929d3a409c9cf01a307094b36a3289f17af7ae21e998\",\"operation\":\"inventory_artifact\",\"status\":\"completed\",\"evidence_id\":\"ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630\",\"evidence\":{\"evidence_id\":\"ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630\",\"subject\":{\"name\":\"app-a.asar\",\"digest\":{\"sha256\":\"27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74\"},\"format\":\"asar\",\"architecture\":null,\"local_path\":\"/workspace/tracewise/fixtures/js/app-a.asar\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inventory_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"manifest\":{\"manifest_id\":\"agm_f290457aeca12439149883c2e129a097d3b861f1d28d581ab54af2aa4f7d9ab7\",\"root_artifact_id\":\"art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54\",\"root_sha256\":\"27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74\",\"root_format\":\"asar\",\"graph_sha256\":\"6cfe13a3e1a28cf86d095e5736978b2dc19d2b78571774323a49627dae3e7023\",\"node_count\":4,\"occurrence_count\":4,\"edge_count\":3},\"nodes\":[{\"artifact_id\":\"art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f\",\"format\":\"directory\",\"sha256\":\"9c5de0c71c818ac973886859584b976312c5348d9083b29164dbc60d61f91760\",\"size\":0,\"media_type\":null,\"architecture\":null,\"content_state\":\"virtual\",\"limitations\":[]},{\"artifact_id\":\"art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54\",\"format\":\"file\",\"sha256\":\"27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74\",\"size\":559,\"media_type\":null,\"architecture\":null,\"content_state\":\"materialized\",\"limitations\":[]},{\"artifact_id\":\"art_a950389b19d54f4300ed4f346db72de986c74f54d8e3830a685addcbc99f9f2f\",\"format\":\"file\",\"sha256\":\"5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03\",\"size\":6,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4\",\"format\":\"file\",\"sha256\":\"d223b78a13c314c518f5b3025065c5a73660432c3caa58aade066de7cc03b0af\",\"size\":21,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]}],\"occurrences\":[{\"occurrence_id\":\"occ_bb4b0b37a1ea44c4f49bee0ec1ed329da6b6165d6908b0b0d3459db628dad57d\",\"artifact_id\":\"art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54\",\"parent_occurrence_id\":null,\"logical_path\":\".\",\"entry_kind\":\"file\",\"artifact_kind\":\"container\",\"artifact_format\":\"asar\",\"declared_size\":559,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_0de84f2dcb2675a122bc1e4674e24d9be86a74332e066770d6c67f806b53b24a\",\"artifact_id\":\"art_a950389b19d54f4300ed4f346db72de986c74f54d8e3830a685addcbc99f9f2f\",\"parent_occurrence_id\":\"occ_bb4b0b37a1ea44c4f49bee0ec1ed329da6b6165d6908b0b0d3459db628dad57d\",\"logical_path\":\"README.txt\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":6,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_87589a6ff64263cf7ae08fb8634d66e38c82def27ea5bf9000776356d323b063\",\"artifact_id\":\"art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f\",\"parent_occurrence_id\":\"occ_bb4b0b37a1ea44c4f49bee0ec1ed329da6b6165d6908b0b0d3459db628dad57d\",\"logical_path\":\"src\",\"entry_kind\":\"directory\",\"artifact_kind\":\"container\",\"artifact_format\":\"directory\",\"declared_size\":null,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_2fe195da972112fa2bdaa0f99fe1bb6ccf7493d1c57f0fafd650b673fba01239\",\"artifact_id\":\"art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4\",\"parent_occurrence_id\":\"occ_87589a6ff64263cf7ae08fb8634d66e38c82def27ea5bf9000776356d323b063\",\"logical_path\":\"src/app.js\",\"entry_kind\":\"file\",\"artifact_kind\":\"javascript\",\"artifact_format\":\"javascript-bundle\",\"declared_size\":21,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]}],\"edges\":[{\"edge_id\":\"edge_385e1eb320302ceb5a6ae6a188537ba85f0990d8dffaccbf2587ab69d93f06d0\",\"ordinal\":0,\"parent_artifact_id\":\"art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54\",\"relation\":\"contains\",\"occurrence_id\":\"occ_0de84f2dcb2675a122bc1e4674e24d9be86a74332e066770d6c67f806b53b24a\",\"producer\":null},{\"edge_id\":\"edge_c9a6c51fd8277304803c174e5517695704568db51918eb616c81c0a16f5de240\",\"ordinal\":1,\"parent_artifact_id\":\"art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f\",\"relation\":\"contains\",\"occurrence_id\":\"occ_2fe195da972112fa2bdaa0f99fe1bb6ccf7493d1c57f0fafd650b673fba01239\",\"producer\":null},{\"edge_id\":\"edge_e089394874546173a809e249e2a682a1324c9556e7dbd421920d8e3d54dfeecc\",\"ordinal\":2,\"parent_artifact_id\":\"art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54\",\"relation\":\"contains\",\"occurrence_id\":\"occ_87589a6ff64263cf7ae08fb8634d66e38c82def27ea5bf9000776356d323b063\",\"producer\":null}],\"provenance\":[],\"integrity_contradictions\":[],\"limitations\":[]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[],\"locations\":[],\"evidence_links\":[]}}],\"observations\":[{\"observation_id\":\"aio_1965e5cfb1be0fe7813c3747e97199a2eada9289ee38461b4a40fe94a0b53ad3\",\"kind\":\"root-manifest\",\"subject\":\"art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54\",\"value\":{\"manifest_id\":\"agm_f290457aeca12439149883c2e129a097d3b861f1d28d581ab54af2aa4f7d9ab7\",\"root_artifact_id\":\"art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54\",\"root_sha256\":\"27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74\",\"root_format\":\"asar\",\"graph_sha256\":\"6cfe13a3e1a28cf86d095e5736978b2dc19d2b78571774323a49627dae3e7023\",\"node_count\":4,\"occurrence_count\":4,\"edge_count\":3},\"evidence_id\":\"ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630\"}],\"hypotheses\":[{\"hypothesis_id\":\"aih_4787f6c079eeed00f663607cf4d2bea4333f9819d83cdaabbf8574585f62990e\",\"statement\":\"The artifact may contain a recoverable JavaScript application graph.\",\"confidence\":\"low\",\"basis_evidence_ids\":[\"ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630\"],\"limitation\":\"Format classification proposes a bounded follow-up; it is not semantic proof.\"}],\"contradictions\":[],\"unexplored_branches\":[{\"branch_id\":\"aib_f625e9ded5b39053de8251f258eb5727a3b8f44e1db85622f9cdcb32e2acc79f\",\"reason\":\"format-specific-analysis-required\",\"detail\":\"analyze_javascript_application was not run by provider-neutral artifact inspection.\",\"next_probe\":{\"operation\":\"analyze_javascript_application\",\"rationale\":\"Recover bounded JavaScript modules, source maps, Electron boundaries, and application relationships.\",\"authority\":\"ast-static-analysis\"},\"evidence_id\":\"ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630\"}],\"next_probes\":[{\"operation\":\"analyze_javascript_application\",\"rationale\":\"Recover bounded JavaScript modules, source maps, Electron boundaries, and application relationships.\",\"authority\":\"ast-static-analysis\"}],\"coverage\":{\"status\":\"complete-within-substeps\",\"substeps_completed\":1,\"observations_retained\":1,\"observations_omitted\":0,\"hypotheses_retained\":1,\"hypotheses_omitted\":0,\"unexplored_branches_retained\":1,\"unexplored_branches_omitted\":0,\"next_probes_retained\":1,\"next_probes_omitted\":0},\"evidence_links\":[\"ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630\"],\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\"],\"locations\":[],\"evidence_links\":[\"ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_ea2ab6defbf5f355bd7ac023ad293426348f9beda601590008979d937040fe40",
+    "subject": {
+      "name": "app-a.asar",
+      "digest": {
+        "sha256": "27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74"
+      },
+      "format": "asar",
+      "architecture": null,
+      "local_path": "/workspace/tracewise/fixtures/js/app-a.asar"
+    },
+    "provider": {
+      "id": "rea-artifact-graph",
+      "name": "REA safe artifact graph provider",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis",
+    "operation": "inspect_artifact",
+    "parameters": {
+      "integrity_policy": "fail"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "inspection_id": "ai_3ab8c71d9eb64bb8bf9d145712e243d8d25a41c4805c4db3c11affa8880aff6d",
+      "subject": {
+        "manifest_id": "agm_f290457aeca12439149883c2e129a097d3b861f1d28d581ab54af2aa4f7d9ab7",
+        "root_artifact_id": "art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54",
+        "root_sha256": "27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74",
+        "root_format": "asar"
+      },
+      "substeps": [
+        {
+          "substep_id": "ais_b3a4f68f489ea19677ef929d3a409c9cf01a307094b36a3289f17af7ae21e998",
+          "operation": "inventory_artifact",
+          "status": "completed",
+          "evidence_id": "ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630",
+          "evidence": {
+            "evidence_id": "ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630",
+            "subject": {
+              "name": "app-a.asar",
+              "digest": {
+                "sha256": "27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74"
+              },
+              "format": "asar",
+              "architecture": null,
+              "local_path": "/workspace/tracewise/fixtures/js/app-a.asar"
+            },
+            "provider": {
+              "id": "rea-artifact-graph",
+              "name": "REA safe artifact graph provider",
+              "version": "1"
+            },
+            "analysis_profile": null,
+            "predicate_type": "rea.analysis",
+            "operation": "inventory_artifact",
+            "parameters": {
+              "integrity_policy": "fail"
+            },
+            "raw_result": null,
+            "normalized_result": {
+              "manifest": {
+                "manifest_id": "agm_f290457aeca12439149883c2e129a097d3b861f1d28d581ab54af2aa4f7d9ab7",
+                "root_artifact_id": "art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54",
+                "root_sha256": "27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74",
+                "root_format": "asar",
+                "graph_sha256": "6cfe13a3e1a28cf86d095e5736978b2dc19d2b78571774323a49627dae3e7023",
+                "node_count": 4,
+                "occurrence_count": 4,
+                "edge_count": 3
+              },
+              "nodes": [
+                {
+                  "artifact_id": "art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f",
+                  "format": "directory",
+                  "sha256": "9c5de0c71c818ac973886859584b976312c5348d9083b29164dbc60d61f91760",
+                  "size": 0,
+                  "media_type": null,
+                  "architecture": null,
+                  "content_state": "virtual",
+                  "limitations": []
+                },
+                {
+                  "artifact_id": "art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54",
+                  "format": "file",
+                  "sha256": "27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74",
+                  "size": 559,
+                  "media_type": null,
+                  "architecture": null,
+                  "content_state": "materialized",
+                  "limitations": []
+                },
+                {
+                  "artifact_id": "art_a950389b19d54f4300ed4f346db72de986c74f54d8e3830a685addcbc99f9f2f",
+                  "format": "file",
+                  "sha256": "5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03",
+                  "size": 6,
+                  "media_type": null,
+                  "architecture": null,
+                  "content_state": "embedded",
+                  "limitations": []
+                },
+                {
+                  "artifact_id": "art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4",
+                  "format": "file",
+                  "sha256": "d223b78a13c314c518f5b3025065c5a73660432c3caa58aade066de7cc03b0af",
+                  "size": 21,
+                  "media_type": null,
+                  "architecture": null,
+                  "content_state": "embedded",
+                  "limitations": []
+                }
+              ],
+              "occurrences": [
+                {
+                  "occurrence_id": "occ_bb4b0b37a1ea44c4f49bee0ec1ed329da6b6165d6908b0b0d3459db628dad57d",
+                  "artifact_id": "art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54",
+                  "parent_occurrence_id": null,
+                  "logical_path": ".",
+                  "entry_kind": "file",
+                  "artifact_kind": "container",
+                  "artifact_format": "asar",
+                  "declared_size": 559,
+                  "compressed_size": null,
+                  "executable": false,
+                  "encrypted": false,
+                  "hash_status": "verified",
+                  "source_location": null,
+                  "limitations": []
+                },
+                {
+                  "occurrence_id": "occ_0de84f2dcb2675a122bc1e4674e24d9be86a74332e066770d6c67f806b53b24a",
+                  "artifact_id": "art_a950389b19d54f4300ed4f346db72de986c74f54d8e3830a685addcbc99f9f2f",
+                  "parent_occurrence_id": "occ_bb4b0b37a1ea44c4f49bee0ec1ed329da6b6165d6908b0b0d3459db628dad57d",
+                  "logical_path": "README.txt",
+                  "entry_kind": "file",
+                  "artifact_kind": "resource",
+                  "artifact_format": "file",
+                  "declared_size": 6,
+                  "compressed_size": null,
+                  "executable": false,
+                  "encrypted": false,
+                  "hash_status": "verified",
+                  "source_location": null,
+                  "limitations": []
+                },
+                {
+                  "occurrence_id": "occ_87589a6ff64263cf7ae08fb8634d66e38c82def27ea5bf9000776356d323b063",
+                  "artifact_id": "art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f",
+                  "parent_occurrence_id": "occ_bb4b0b37a1ea44c4f49bee0ec1ed329da6b6165d6908b0b0d3459db628dad57d",
+                  "logical_path": "src",
+                  "entry_kind": "directory",
+                  "artifact_kind": "container",
+                  "artifact_format": "directory",
+                  "declared_size": null,
+                  "compressed_size": null,
+                  "executable": false,
+                  "encrypted": false,
+                  "hash_status": "verified",
+                  "source_location": null,
+                  "limitations": []
+                },
+                {
+                  "occurrence_id": "occ_2fe195da972112fa2bdaa0f99fe1bb6ccf7493d1c57f0fafd650b673fba01239",
+                  "artifact_id": "art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4",
+                  "parent_occurrence_id": "occ_87589a6ff64263cf7ae08fb8634d66e38c82def27ea5bf9000776356d323b063",
+                  "logical_path": "src/app.js",
+                  "entry_kind": "file",
+                  "artifact_kind": "javascript",
+                  "artifact_format": "javascript-bundle",
+                  "declared_size": 21,
+                  "compressed_size": null,
+                  "executable": false,
+                  "encrypted": false,
+                  "hash_status": "verified",
+                  "source_location": null,
+                  "limitations": []
+                }
+              ],
+              "edges": [
+                {
+                  "edge_id": "edge_385e1eb320302ceb5a6ae6a188537ba85f0990d8dffaccbf2587ab69d93f06d0",
+                  "ordinal": 0,
+                  "parent_artifact_id": "art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54",
+                  "relation": "contains",
+                  "occurrence_id": "occ_0de84f2dcb2675a122bc1e4674e24d9be86a74332e066770d6c67f806b53b24a",
+                  "producer": null
+                },
+                {
+                  "edge_id": "edge_c9a6c51fd8277304803c174e5517695704568db51918eb616c81c0a16f5de240",
+                  "ordinal": 1,
+                  "parent_artifact_id": "art_4a8d01b3db969eedca01c73c24d904cc312fd8e3125261a63b648f1eceb93c6f",
+                  "relation": "contains",
+                  "occurrence_id": "occ_2fe195da972112fa2bdaa0f99fe1bb6ccf7493d1c57f0fafd650b673fba01239",
+                  "producer": null
+                },
+                {
+                  "edge_id": "edge_e089394874546173a809e249e2a682a1324c9556e7dbd421920d8e3d54dfeecc",
+                  "ordinal": 2,
+                  "parent_artifact_id": "art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54",
+                  "relation": "contains",
+                  "occurrence_id": "occ_87589a6ff64263cf7ae08fb8634d66e38c82def27ea5bf9000776356d323b063",
+                  "producer": null
+                }
+              ],
+              "provenance": [],
+              "integrity_contradictions": [],
+              "limitations": []
+            },
+            "confidence": "observed",
+            "authority": "shipped-artifact",
+            "environment": null,
+            "limitations": [],
+            "locations": [],
+            "evidence_links": []
+          }
+        }
+      ],
+      "observations": [
+        {
+          "observation_id": "aio_1965e5cfb1be0fe7813c3747e97199a2eada9289ee38461b4a40fe94a0b53ad3",
+          "kind": "root-manifest",
+          "subject": "art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54",
+          "value": {
+            "manifest_id": "agm_f290457aeca12439149883c2e129a097d3b861f1d28d581ab54af2aa4f7d9ab7",
+            "root_artifact_id": "art_504d62f2d190de9bfd770e878879434fb7bbaaf0ed1c5638667c0dc191591d54",
+            "root_sha256": "27bf5d6a8923273ddc37c1a854ac31d36884f1f57b10b23b4731df1580224b74",
+            "root_format": "asar",
+            "graph_sha256": "6cfe13a3e1a28cf86d095e5736978b2dc19d2b78571774323a49627dae3e7023",
+            "node_count": 4,
+            "occurrence_count": 4,
+            "edge_count": 3
+          },
+          "evidence_id": "ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630"
+        }
+      ],
+      "hypotheses": [
+        {
+          "hypothesis_id": "aih_4787f6c079eeed00f663607cf4d2bea4333f9819d83cdaabbf8574585f62990e",
+          "statement": "The artifact may contain a recoverable JavaScript application graph.",
+          "confidence": "low",
+          "basis_evidence_ids": [
+            "ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630"
+          ],
+          "limitation": "Format classification proposes a bounded follow-up; it is not semantic proof."
+        }
+      ],
+      "contradictions": [],
+      "unexplored_branches": [
+        {
+          "branch_id": "aib_f625e9ded5b39053de8251f258eb5727a3b8f44e1db85622f9cdcb32e2acc79f",
+          "reason": "format-specific-analysis-required",
+          "detail": "analyze_javascript_application was not run by provider-neutral artifact inspection.",
+          "next_probe": {
+            "operation": "analyze_javascript_application",
+            "rationale": "Recover bounded JavaScript modules, source maps, Electron boundaries, and application relationships.",
+            "authority": "ast-static-analysis"
+          },
+          "evidence_id": "ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630"
+        }
+      ],
+      "next_probes": [
+        {
+          "operation": "analyze_javascript_application",
+          "rationale": "Recover bounded JavaScript modules, source maps, Electron boundaries, and application relationships.",
+          "authority": "ast-static-analysis"
+        }
+      ],
+      "coverage": {
+        "status": "complete-within-substeps",
+        "substeps_completed": 1,
+        "observations_retained": 1,
+        "observations_omitted": 0,
+        "hypotheses_retained": 1,
+        "hypotheses_omitted": 0,
+        "unexplored_branches_retained": 1,
+        "unexplored_branches_omitted": 0,
+        "next_probes_retained": 1,
+        "next_probes_omitted": 0
+      },
+      "evidence_links": [
+        "ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630"
+      ],
+      "limitations": [
+        "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_ba584f88d8c33d92ac5646bd3048c4f337f87f178bcd7e178a0637405ea7c630"
+    ]
+  }
+}

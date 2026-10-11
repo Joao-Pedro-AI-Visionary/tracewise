@@ -9,6 +9,7 @@ authors.workspace = true
 tracewise-domain = { path = "../domain" }
 tracewise-contracts = { path = "../contracts" }
 tracewise-web = { path = "../web" }
+tracewise-js = { path = "../js" }
 rmcp.workspace = true
 tokio.workspace = true
 serde.workspace = true

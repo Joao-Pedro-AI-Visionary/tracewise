@@ -1,0 +1,90 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_847cc882687bc279dae1e6f7dde5de4476623698ed80db20f22eb06b2e781d44\",\"subject\":{\"name\":\"app-a.zip\",\"digest\":{\"sha256\":\"3aee81fb003294201faf0863ef98aa0fbcf992c49c769fcecf33f392c5aecd5f\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/tracewise/fixtures/js/app-a.zip\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"extract_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"manifest\":{\"manifest_id\":\"agm_2eb45427e2c1b2a2154154632a957e998ba9f1661e2ebe221b9f57c13262f2c9\",\"root_artifact_id\":\"art_f75749dff00524f894bef44e5860d58974925932e70bb0babb0ea20ffa504628\",\"root_sha256\":\"3aee81fb003294201faf0863ef98aa0fbcf992c49c769fcecf33f392c5aecd5f\",\"root_format\":\"zip\",\"graph_sha256\":\"a17d9fc46edd563fa43748651105fc6cbedea5482853b83bd6f1513c42da221a\",\"node_count\":4,\"occurrence_count\":4,\"edge_count\":3},\"extraction_manifest\":{\"extraction_id\":\"aex_fbfe7cf2a2bc82ea5b77996af3859327e867b961e46692a31834d8c5bf40e8ae\",\"source_manifest_id\":\"agm_2eb45427e2c1b2a2154154632a957e998ba9f1661e2ebe221b9f57c13262f2c9\",\"selected_occurrence_ids\":[\"occ_1b3bf8864711a0c5e727f88d9840e62faeeff7f3cebcae0185d74b63d50053d1\",\"occ_f96e79a95724676556137d2ba9f55fa187e2623cc7cab86edcbbf73a9ba293ec\"],\"files_sha256\":\"caf76af992948a92029bb3df18c11bc9effabe4e2663d24ee563bcacb02fe195\",\"output_root_alias\":\"$OUTPUT_ROOT\"},\"output_root\":\"/tmp/rea-extracted-fbd2a2c6-5d63-4d4f-9cd2-e167b7d22c1b\",\"artifacts\":[{\"artifact_id\":\"art_a950389b19d54f4300ed4f346db72de986c74f54d8e3830a685addcbc99f9f2f\",\"relative_path\":\"README.txt\",\"sha256\":\"5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03\",\"bytes_written\":6,\"created\":true},{\"artifact_id\":\"art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4\",\"relative_path\":\"src/app.js\",\"sha256\":\"d223b78a13c314c518f5b3025065c5a73660432c3caa58aade066de7cc03b0af\",\"bytes_written\":21,\"created\":true}],\"containment_verified\":true,\"cleanup\":{\"attempted\":false,\"verified\":true,\"residual_paths\":[]},\"provenance\":[],\"integrity_contradictions\":[],\"limitations\":[\"All regular files in the active artifact were materialized; nested archive contents remain represented by their containing file.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"All regular files in the active artifact were materialized; nested archive contents remain represented by their containing file.\"],\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_847cc882687bc279dae1e6f7dde5de4476623698ed80db20f22eb06b2e781d44",
+    "subject": {
+      "name": "app-a.zip",
+      "digest": {
+        "sha256": "3aee81fb003294201faf0863ef98aa0fbcf992c49c769fcecf33f392c5aecd5f"
+      },
+      "format": "zip",
+      "architecture": null,
+      "local_path": "/workspace/tracewise/fixtures/js/app-a.zip"
+    },
+    "provider": {
+      "id": "rea-artifact-graph",
+      "name": "REA safe artifact graph provider",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis",
+    "operation": "extract_artifact",
+    "parameters": {
+      "integrity_policy": "fail"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "manifest": {
+        "manifest_id": "agm_2eb45427e2c1b2a2154154632a957e998ba9f1661e2ebe221b9f57c13262f2c9",
+        "root_artifact_id": "art_f75749dff00524f894bef44e5860d58974925932e70bb0babb0ea20ffa504628",
+        "root_sha256": "3aee81fb003294201faf0863ef98aa0fbcf992c49c769fcecf33f392c5aecd5f",
+        "root_format": "zip",
+        "graph_sha256": "a17d9fc46edd563fa43748651105fc6cbedea5482853b83bd6f1513c42da221a",
+        "node_count": 4,
+        "occurrence_count": 4,
+        "edge_count": 3
+      },
+      "extraction_manifest": {
+        "extraction_id": "aex_fbfe7cf2a2bc82ea5b77996af3859327e867b961e46692a31834d8c5bf40e8ae",
+        "source_manifest_id": "agm_2eb45427e2c1b2a2154154632a957e998ba9f1661e2ebe221b9f57c13262f2c9",
+        "selected_occurrence_ids": [
+          "occ_1b3bf8864711a0c5e727f88d9840e62faeeff7f3cebcae0185d74b63d50053d1",
+          "occ_f96e79a95724676556137d2ba9f55fa187e2623cc7cab86edcbbf73a9ba293ec"
+        ],
+        "files_sha256": "caf76af992948a92029bb3df18c11bc9effabe4e2663d24ee563bcacb02fe195",
+        "output_root_alias": "$OUTPUT_ROOT"
+      },
+      "output_root": "/tmp/rea-extracted-fbd2a2c6-5d63-4d4f-9cd2-e167b7d22c1b",
+      "artifacts": [
+        {
+          "artifact_id": "art_a950389b19d54f4300ed4f346db72de986c74f54d8e3830a685addcbc99f9f2f",
+          "relative_path": "README.txt",
+          "sha256": "5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03",
+          "bytes_written": 6,
+          "created": true
+        },
+        {
+          "artifact_id": "art_d75f1a7b5d9e4c9c8e565e83502ea4d1ac272cb9283b46d261ad7d6e47b788d4",
+          "relative_path": "src/app.js",
+          "sha256": "d223b78a13c314c518f5b3025065c5a73660432c3caa58aade066de7cc03b0af",
+          "bytes_written": 21,
+          "created": true
+        }
+      ],
+      "containment_verified": true,
+      "cleanup": {
+        "attempted": false,
+        "verified": true,
+        "residual_paths": []
+      },
+      "provenance": [],
+      "integrity_contradictions": [],
+      "limitations": [
+        "All regular files in the active artifact were materialized; nested archive contents remain represented by their containing file."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "All regular files in the active artifact were materialized; nested archive contents remain represented by their containing file."
+    ],
+    "locations": [],
+    "evidence_links": []
+  }
+}

@@ -6,16 +6,35 @@
 
 use rmcp::model::CallToolRequestParam;
 use serde_json::json;
-use tracewise_contracts::{all_tool_names, phase2_tool_names, tracewise_tool_names};
+use tracewise_contracts::{
+    all_tool_names, phase0_tool_names, phase1_tool_names, phase2_tool_names,
+    tracewise_tool_names,
+};
 use tracewise_server::handlers::call_tool_local;
 use tracewise_server::session::BinarySession;
+
+/// Phase 2 tools implemented in Rust (still listed under phase2 in contracts).
+const PHASE2_IMPLEMENTED: &[&str] = &[
+    "inspect_artifact",
+    "extract_artifact",
+    "compare_artifacts",
+];
 
 #[tokio::test]
 async fn every_rea_tool_dispatches_to_an_implementation() {
     let names = all_tool_names();
     assert_eq!(names.len(), 50, "REA exposes 50 tools");
-    let (implemented, pending) = names.split_at(27);
-    assert_eq!(pending, phase2_tool_names());
+    let pending: Vec<&str> = phase2_tool_names()
+        .iter()
+        .copied()
+        .filter(|name| !PHASE2_IMPLEMENTED.contains(name))
+        .collect();
+    assert_eq!(pending.len(), 20);
+    let mut implemented: Vec<&str> = Vec::new();
+    implemented.extend_from_slice(phase0_tool_names());
+    implemented.extend_from_slice(phase1_tool_names());
+    implemented.extend_from_slice(PHASE2_IMPLEMENTED);
+    assert_eq!(implemented.len(), 30, "27 phase0/1 + 3 artifact tools");
     let session = BinarySession::new();
     for name in implemented {
         let result = call_tool_local(

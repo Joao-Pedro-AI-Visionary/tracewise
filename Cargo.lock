@@ -214,6 +214,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "95832e849adfb21180ccb6826a99da14e5d266ae5c2e668e1602cf234f153797"
 
 [[package]]
+name = "byteorder"
+version = "1.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
+
+[[package]]
 name = "byteorder-lite"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -330,6 +336,12 @@ checksum = "01a7799fd6b852db0e61728dde9a204c423b44d689dbd432522543614b490e78"
 dependencies = [
  "cfg-if",
 ]
+
+[[package]]
+name = "crossbeam-utils"
+version = "0.8.23"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a31eee39dddec8330830986fcd7625edb5a24ec90ea038215273bbc3adb08ac6"
 
 [[package]]
 name = "crypto-common"
@@ -465,6 +477,12 @@ dependencies = [
  "regex-automata",
  "regex-syntax",
 ]
+
+[[package]]
+name = "fastrand"
+version = "2.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "da7c62ceae207dd37ea5b845da6a0696c799f85e97da1ab5b7910be3c1c80223"
 
 [[package]]
 name = "fdeflate"
@@ -1095,6 +1113,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ce5d3ddc6d3fa000eb1536d85e147bfe31aacaba692ed6a876f95cb7c855be78"
 
 [[package]]
+name = "linux-raw-sys"
+version = "0.12.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "32a66949e030da00e8c7d4434b251670a91556f4144941d37452769c25d58a53"
+
+[[package]]
 name = "litemap"
 version = "0.7.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1579,6 +1603,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6b1e7f9a428571be2dc5bc0505c13fb6bf936822b894ec87abf8a08a4e51742d"
 
 [[package]]
+name = "rustix"
+version = "1.1.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "891efababe418670775f199f0d233d84843c227a0949a883ce15b37c78d6629d"
+dependencies = [
+ "bitflags 2.13.2",
+ "errno",
+ "libc",
+ "linux-raw-sys",
+ "windows-sys",
+]
+
+[[package]]
 name = "rustversion"
 version = "1.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1595,6 +1632,15 @@ name = "ryu-js"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6518fc26bced4d53678a22d6e423e9d8716377def84545fe328236e3af070e7f"
+
+[[package]]
+name = "same-file"
+version = "1.0.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "93fc1dc3aaa9bfed95e02e6eadabb4baf7e3078b0bd1b4d7b6b0b68378900502"
+dependencies = [
+ "winapi-util",
+]
 
 [[package]]
 name = "schemars"
@@ -1883,6 +1929,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
 
 [[package]]
+name = "tempfile"
+version = "3.27.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "32497e9a4c7b38532efcdebeef879707aa9f794296a4f0244f6f69e9bc8574bd"
+dependencies = [
+ "fastrand",
+ "getrandom",
+ "once_cell",
+ "rustix",
+ "windows-sys",
+]
+
+[[package]]
 name = "thiserror"
 version = "2.0.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2047,6 +2106,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "tracewise-js"
+version = "0.1.0"
+dependencies = [
+ "hex",
+ "jsonschema 0.29.1",
+ "serde",
+ "serde_json",
+ "sha2",
+ "tempfile",
+ "thiserror",
+ "tracewise-domain",
+ "walkdir",
+ "zip",
+]
+
+[[package]]
 name = "tracewise-server"
 version = "0.1.0"
 dependencies = [
@@ -2062,6 +2137,7 @@ dependencies = [
  "tokio",
  "tracewise-contracts",
  "tracewise-domain",
+ "tracewise-js",
  "tracewise-web",
  "tracing",
 ]
@@ -2236,6 +2312,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5c3082ca00d5a5ef149bb8b555a72ae84c9c59f7250f013ac822ac2e49b19c64"
 
 [[package]]
+name = "walkdir"
+version = "2.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "29790946404f91d9c5d06f9874efddea1dc06c5efe94541a7d6863108e3a5e4b"
+dependencies = [
+ "same-file",
+ "winapi-util",
+]
+
+[[package]]
 name = "want"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2323,6 +2409,15 @@ checksum = "88261b9deccee56594c11a3460c462c41f58d148598fe70ad77070126a68aba4"
 dependencies = [
  "js-sys",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "winapi-util"
+version = "0.1.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
+dependencies = [
+ "windows-sys",
 ]
 
 [[package]]
@@ -2505,6 +2600,18 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.119",
+]
+
+[[package]]
+name = "zip"
+version = "0.6.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "760394e246e4c28189f19d488c058bf16f564016aefac5d32bb1f3b51d5e9261"
+dependencies = [
+ "byteorder",
+ "crc32fast",
+ "crossbeam-utils",
+ "flate2",
 ]
 
 [[package]]

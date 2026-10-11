@@ -40,11 +40,25 @@ impl BinarySession {
         provider_id: Option<String>,
     ) -> Result<Value, DomainError> {
         let p = Path::new(path);
-        let info = inspect_binary_file(p).map_err(|e| {
-            DomainError::Canonicalization(format!("Failed to read target file '{}': {e}", path))
-        })?;
+        let info = if p.is_dir() {
+            crate::format::BinaryInfo {
+                format: "directory".to_string(),
+                architecture: None,
+                sha256: "0".repeat(64),
+            }
+        } else {
+            inspect_binary_file(p).map_err(|e| {
+                DomainError::Canonicalization(format!("Failed to read target file '{}': {e}", path))
+            })?
+        };
 
-        let format = format_hint.unwrap_or(info.format);
+        let format = format_hint.unwrap_or_else(|| {
+            if info.format == "file" && path.to_lowercase().ends_with(".asar") {
+                "asar".to_string()
+            } else {
+                info.format.clone()
+            }
+        });
         let file_name = p
             .file_name()
             .map(|f| f.to_string_lossy().to_string())

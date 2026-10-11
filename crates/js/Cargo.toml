@@ -1,0 +1,21 @@
+[package]
+name = "tracewise-js"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+tracewise-domain = { path = "../domain" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+thiserror = { workspace = true }
+zip = { version = "0.6", default-features = false, features = ["deflate"] }
+walkdir = "2.5"
+tempfile = "3.14"
+
+[dev-dependencies]
+jsonschema = { workspace = true }

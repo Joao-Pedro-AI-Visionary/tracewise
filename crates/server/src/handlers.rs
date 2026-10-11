@@ -116,6 +116,9 @@ async fn execute_tool(
         "capture_browser_scenario" => handle_capture_browser_scenario(session, args).await,
         "infer_api_spec" => handle_infer_api_spec(session, args),
         "generate_api_client" => handle_generate_api_client(session, args),
+        "inspect_artifact" => handle_inspect_artifact(session, args),
+        "extract_artifact" => handle_extract_artifact(session, args),
+        "compare_artifacts" => handle_compare_artifacts(session, args),
         name if tracewise_contracts::phase2_tool_names().contains(&name) => {
             Err(McpError::internal_error(
                 format!("not yet implemented: {name}"),
@@ -826,6 +829,85 @@ fn handle_infer_api_spec(session: &BinarySession, args: &Value) -> Result<CallTo
     }
 
     let val = serde_json::to_value(&inferred.evidence)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_inspect_artifact(session: &BinarySession, args: &Value) -> Result<CallToolResult, McpError> {
+    let path = session
+        .active_target
+        .lock()
+        .unwrap()
+        .as_ref()
+        .map(|s| s.local_path.clone())
+        .ok_or_else(|| McpError::invalid_params("inspect_artifact requires an active binary target (open_binary first)", None))?;
+    let integrity_policy = args
+        .get("integrity_policy")
+        .and_then(|v| v.as_str())
+        .unwrap_or("fail");
+    let evidences = tracewise_js::inspect_artifact(&path, integrity_policy)
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+    let mut ledger = session.ledger.lock().unwrap();
+    for ev in &evidences {
+        ledger
+            .record(ev.clone())
+            .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    }
+    let inspect_ev = evidences
+        .last()
+        .ok_or_else(|| McpError::internal_error("inspect_artifact produced no evidence", None))?;
+    let val = serde_json::to_value(inspect_ev)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_extract_artifact(session: &BinarySession, args: &Value) -> Result<CallToolResult, McpError> {
+    let path = session
+        .active_target
+        .lock()
+        .unwrap()
+        .as_ref()
+        .map(|s| s.local_path.clone())
+        .ok_or_else(|| McpError::invalid_params("extract_artifact requires an active binary target (open_binary first)", None))?;
+    let integrity_policy = args
+        .get("integrity_policy")
+        .and_then(|v| v.as_str())
+        .unwrap_or("fail");
+    let ev = tracewise_js::extract_artifact_tool(&path, integrity_policy)
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+    let _ = session.ledger.lock().unwrap().record(ev.clone());
+    let val = serde_json::to_value(&ev)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_compare_artifacts(session: &BinarySession, args: &Value) -> Result<CallToolResult, McpError> {
+    let left: tracewise_domain::evidence::Evidence = serde_json::from_value(
+        args.get("left")
+            .cloned()
+            .ok_or_else(|| McpError::invalid_params("compare_artifacts requires 'left'", None))?,
+    )
+    .map_err(|e| McpError::invalid_params(format!("Invalid left evidence: {e}"), None))?;
+    let right: tracewise_domain::evidence::Evidence = serde_json::from_value(
+        args.get("right")
+            .cloned()
+            .ok_or_else(|| McpError::invalid_params("compare_artifacts requires 'right'", None))?,
+    )
+    .map_err(|e| McpError::invalid_params(format!("Invalid right evidence: {e}"), None))?;
+    let mut ledger = session.ledger.lock().unwrap();
+    for source in [&left, &right] {
+        if !ledger.has(&source.evidence_id) {
+            ledger
+                .record(source.clone())
+                .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+        }
+    }
+    let ev = tracewise_js::compare_artifacts_tool(&left, &right)
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+    ledger
+        .record(ev.clone())
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    let val = serde_json::to_value(&ev)
         .map_err(|e| McpError::internal_error(e.to_string(), None))?;
     Ok(CallToolResult::structured(val))
 }

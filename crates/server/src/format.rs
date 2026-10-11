@@ -80,6 +80,14 @@ fn detect_format_and_arch(bytes: &[u8]) -> (String, Option<String>) {
             return ("zip".to_string(), None);
         }
 
+        // Electron ASAR header pickle
+        if bytes.len() >= 17
+            && bytes[0..4] == [4, 0, 0, 0]
+            && bytes[16] == 0x7b
+        {
+            return ("asar".to_string(), None);
+        }
+
         // PE / MZ
         if bytes.starts_with(&[0x4d, 0x5a]) {
             if bytes.len() >= 0x40 {
