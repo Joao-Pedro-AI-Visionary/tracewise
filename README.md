@@ -8,7 +8,7 @@ This repository implements **Phase 0 (Foundation)**:
 - ResidualUnknown lifecycle with chained revision digests and optimistic concurrency control (`expected_revision`).
 - EvidenceBundle import/export with re-authentication and bundle comparison.
 - EvidenceLedger for in-memory session tracking.
-- MCP (Model Context Protocol) stdio server powered by `rmcp`. `tools/list` exposes 29 tools: the 27 REA tools verbatim, plus the tracewise-owned `infer_api_spec` and `generate_api_client` tools.
+- MCP (Model Context Protocol) stdio server powered by `rmcp`. `tools/list` exposes 52 tools: the 50 REA tools verbatim (Phase 0, Phase 1, and Phase 2), plus the tracewise-owned `infer_api_spec` and `generate_api_client` tools. Phase 2 tools are listed and return the MCP error `not yet implemented: <tool>`.
 - CLI binary `tracewise` with `mcp`, `hash`, `tools`, `infer-api-spec`, and `generate-api-client` subcommands.
 
 ## Usage

@@ -116,6 +116,12 @@ async fn execute_tool(
         "capture_browser_scenario" => handle_capture_browser_scenario(session, args).await,
         "infer_api_spec" => handle_infer_api_spec(session, args),
         "generate_api_client" => handle_generate_api_client(session, args),
+        name if tracewise_contracts::phase2_tool_names().contains(&name) => {
+            Err(McpError::internal_error(
+                format!("not yet implemented: {name}"),
+                None,
+            ))
+        }
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,

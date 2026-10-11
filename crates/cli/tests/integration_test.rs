@@ -85,7 +85,11 @@ async fn test_mcp_stdio_lifecycle() {
     let tools = tools_resp["result"]["tools"]
         .as_array()
         .expect("Expected tools array");
-    assert_eq!(tools.len(), 29, "Expected 27 REA tools plus infer_api_spec and generate_api_client");
+    assert_eq!(
+        tools.len(),
+        52,
+        "Expected 50 REA tools plus infer_api_spec and generate_api_client"
+    );
 
     let expected_names = [
         "inspect_analysis_view",
@@ -115,6 +119,29 @@ async fn test_mcp_stdio_lifecycle() {
         "capture_web_screenshot",
         "compare_web_screenshots",
         "capture_browser_scenario",
+        "inspect_artifact",
+        "extract_artifact",
+        "recover_javascript_sources",
+        "list_electron_targets",
+        "inspect_electron_page",
+        "analyze_javascript_application",
+        "reconcile_javascript_runtime",
+        "capture_electron_scenario",
+        "list_javascript_runtime_targets",
+        "observe_javascript_runtime",
+        "trace_application_feature",
+        "trace_javascript_semantics",
+        "compare_application_versions",
+        "compare_source_to_bundle",
+        "compare_javascript_export_shapes",
+        "build_reconstruction_obligation_ledger",
+        "evaluate_reconstruction_coverage",
+        "capture_process_scenario",
+        "compare_process_captures",
+        "compare_artifacts",
+        "find_changed_behavior",
+        "correlate_static_and_runtime",
+        "verify_reconstruction",
         "infer_api_spec",
         "generate_api_client",
     ];

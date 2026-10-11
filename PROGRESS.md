@@ -100,3 +100,11 @@
 
 ## 2026-10-11 11:30 — phase1: tighten export_web_scripts hash parity (CLI: cursor:grok-4.7-high)
 - testes ok: 50
+
+## 2026-10-11 — phase2: catalog of 23 tools (stubs)
+- crates/contracts: `phase2_tools.json` verbatim (23). `tools/list` passa a 52 ferramentas (50 REA + `infer_api_spec` e `generate_api_client`). O diff contra `/workspace/rea-map/tmp/head/tools.json` cobre as 50.
+- crates/server: as 23 ferramentas da fase 2 respondem com erro MCP `not yet implemented: <tool>`. Fases 0 e 1 continuam implementadas.
+- testes ok: 50
+
+## 2026-10-11 11:35 — phase2: contracts for 23 JS/Electron tools (CLI: cursor:grok-4.7-high)
+- testes ok: 50

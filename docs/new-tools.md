@@ -1,6 +1,6 @@
 # Tracewise-owned tools
 
-These tools are not part of REA. `tools/list` returns **29** tools: the 27 REA tools, byte-identical to the REA catalog, then the tools in this document. The machine-readable contract is [`crates/contracts/tracewise_tools.json`](../crates/contracts/tracewise_tools.json).
+These tools are not part of REA. `tools/list` returns **52** tools: the 50 REA tools, byte-identical to the REA catalog, then the tools in this document. The machine-readable contract is [`crates/contracts/tracewise_tools.json`](../crates/contracts/tracewise_tools.json).
 
 ## infer_api_spec
 
