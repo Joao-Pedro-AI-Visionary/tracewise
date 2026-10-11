@@ -100,10 +100,9 @@ pub fn export_web_scripts(input: ExportWebScriptsInput) -> Result<Evidence, WebE
         message: format!("Capture is not valid UTF-8 JSON evidence: {e}"),
     })?;
 
-    let (capture_kind, capture_completeness, source_evidence_id, captured_scripts, capture_limitations) =
-        extract_scripts_from_capture(&root_val)?;
+    let extracted = extract_scripts_from_capture(&root_val)?;
 
-    let planned = plan_web_script_export(&captured_scripts);
+    let planned = plan_web_script_export(&extracted.captured_scripts);
 
     std::fs::create_dir_all(output_directory)?;
     let files_dir = output_directory.join("files");
@@ -124,7 +123,7 @@ pub fn export_web_scripts(input: ExportWebScriptsInput) -> Result<Evidence, WebE
         exported_records.push(item.record);
     }
 
-    let mut limitations = capture_limitations;
+    let mut limitations = extracted.limitations;
     limitations.extend(EXPORT_LIMITATIONS.iter().map(|s| s.to_string()));
     if !any_exported {
         limitations.push(
@@ -144,9 +143,9 @@ pub fn export_web_scripts(input: ExportWebScriptsInput) -> Result<Evidence, WebE
     let manifest_val = serde_json::json!({
         "capture_path": input.capture_path,
         "capture_sha256": capture_sha256,
-        "capture_kind": capture_kind,
-        "source_evidence_id": source_evidence_id,
-        "capture_completeness": capture_completeness,
+        "capture_kind": extracted.capture_kind,
+        "source_evidence_id": extracted.source_evidence_id,
+        "capture_completeness": extracted.capture_completeness,
         "output_directory": input.output_directory,
         "analysis_input": analysis_input,
         "scripts": exported_records,
@@ -212,7 +211,8 @@ pub fn export_web_scripts(input: ExportWebScriptsInput) -> Result<Evidence, WebE
             path: manifest_file_path.to_str().unwrap().to_string(),
         }]),
         evidence_links: Some(
-            source_evidence_id
+            extracted
+                .source_evidence_id
                 .map(|id| vec![id])
                 .unwrap_or_default(),
         ),
@@ -221,9 +221,17 @@ pub fn export_web_scripts(input: ExportWebScriptsInput) -> Result<Evidence, WebE
     create_evidence(subject, provider, observation).map_err(WebError::from)
 }
 
+struct ExtractedCapture {
+    capture_kind: String,
+    capture_completeness: Value,
+    source_evidence_id: Option<String>,
+    captured_scripts: Vec<CapturedScript>,
+    limitations: Vec<String>,
+}
+
 fn extract_scripts_from_capture(
     raw: &Value,
-) -> Result<(String, Value, Option<String>, Vec<CapturedScript>, Vec<String>), WebError> {
+) -> Result<ExtractedCapture, WebError> {
     let (target, source_evidence_id) = if let Some(op) = raw.get("operation").and_then(|v| v.as_str()) {
         let ev_id = raw.get("evidence_id").and_then(|v| v.as_str()).map(|s| s.to_string());
         let norm = raw.get("normalized_result").unwrap_or(raw);
@@ -318,13 +326,13 @@ fn extract_scripts_from_capture(
             });
         }
 
-        Ok((
-            "page-inspection".to_string(),
-            completeness,
-            ev_id,
-            captured,
+        Ok(ExtractedCapture {
+            capture_kind: "page-inspection".to_string(),
+            capture_completeness: completeness,
+            source_evidence_id: ev_id,
+            captured_scripts: captured,
             limitations,
-        ))
+        })
     } else {
         Err(WebError::Input {
             operation: "export_web_scripts".to_string(),

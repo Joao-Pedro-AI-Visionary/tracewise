@@ -304,20 +304,20 @@ pub fn trace_web_module_imports(
     let (extracted_imports, parser_state, parser_diagnostics) = collect_imports(source_text);
 
     let has_literal_specifiers = extracted_imports.iter().any(|i| i.specifier.is_some());
-    if has_literal_specifiers {
-        let browser_exec = std::env::var("REA_BROWSER_EXECUTABLE").ok();
-        if browser_exec.is_none() || !Path::new(browser_exec.as_ref().unwrap()).is_absolute() {
-            return Err(WebError::CapabilityUnavailable {
-                capability: "native-module-resolver".to_string(),
-                operation: "trace_web_module_imports".to_string(),
-                reason: "missing_browser_executable".to_string(),
-                user_message: "Provide an absolute REA_BROWSER_EXECUTABLE for a caller-supplied Chromium browser supporting import.meta.resolve. REA installs no browser.".to_string(),
-            });
-        }
+    let browser_exec = std::env::var("REA_BROWSER_EXECUTABLE").ok();
+    if has_literal_specifiers
+        && (browser_exec.is_none() || !Path::new(browser_exec.as_ref().unwrap()).is_absolute())
+    {
+        return Err(WebError::CapabilityUnavailable {
+            capability: "native-module-resolver".to_string(),
+            operation: "trace_web_module_imports".to_string(),
+            reason: "missing_browser_executable".to_string(),
+            user_message: "Provide an absolute REA_BROWSER_EXECUTABLE for a caller-supplied Chromium browser supporting import.meta.resolve. REA installs no browser.".to_string(),
+        });
     }
 
     let mut result_imports = Vec::with_capacity(extracted_imports.len());
-    for item in extracted_imports {
+    for item in &extracted_imports {
         let (resolution, captured_candidates) = match &item.specifier {
             None => (
                 serde_json::json!({
@@ -353,9 +353,9 @@ pub fn trace_web_module_imports(
         };
 
         result_imports.push(serde_json::json!({
-            "kind": item.kind,
-            "specifier": item.specifier,
-            "expression": item.expression,
+            "kind": &item.kind,
+            "specifier": &item.specifier,
+            "expression": &item.expression,
             "start": {
                 "offset": item.start_pos.offset,
                 "line": item.start_pos.line,
@@ -398,6 +398,71 @@ pub fn trace_web_module_imports(
         "reported-source-url"
     };
 
+    let engine_val = if let Some(ref exec) = browser_exec {
+        let version = std::process::Command::new(exec)
+            .arg("--version")
+            .output()
+            .ok()
+            .and_then(|out| {
+                let s = String::from_utf8_lossy(&out.stdout).to_string();
+                s.split_whitespace().last().map(|v| v.to_string())
+            })
+            .unwrap_or_else(|| "unknown".to_string());
+        serde_json::json!({
+            "id": "chromium-native-module-resolver",
+            "version": version
+        })
+    } else {
+        Value::Null
+    };
+
+    let raw_result = if let Some(ref exec) = browser_exec {
+        let raw_entries: Vec<Value> = extracted_imports
+            .iter()
+            .filter_map(|item| {
+                item.specifier.as_ref().map(|spec| {
+                    let res = match parsed_importer.join(spec) {
+                        Ok(u) => serde_json::json!({ "state": "resolved", "url": u.to_string() }),
+                        Err(e) => serde_json::json!({ "state": "rejected", "message": e.to_string() }),
+                    };
+                    serde_json::json!({
+                        "specifier": spec,
+                        "resolution": res
+                    })
+                })
+            })
+            .collect();
+
+        let document_url = match parsed_importer.join("/.rea-module-resolver/document") {
+            Ok(u) => u.to_string(),
+            Err(_) => format!("{}/.rea-module-resolver/document", importer_url),
+        };
+
+        Some(serde_json::json!({
+            "native_report": {
+                "importer_url": importer_url,
+                "entries": raw_entries
+            },
+            "requests": [
+                {
+                    "url": document_url,
+                    "resource_type": "document",
+                    "effect": "fulfilled"
+                },
+                {
+                    "url": importer_url,
+                    "resource_type": "script",
+                    "effect": "fulfilled"
+                }
+            ],
+            "diagnostics": [],
+            "engine": engine_val.clone(),
+            "executable_path": exec
+        }))
+    } else {
+        None
+    };
+
     let normalized_result = serde_json::json!({
         "manifest": manifest_identity,
         "source": source_identity,
@@ -411,7 +476,7 @@ pub fn trace_web_module_imports(
             "diagnostics": parser_diagnostics,
             "location_units": "UTF-16 offsets and columns; one-based lines",
         },
-        "engine": Value::Null,
+        "engine": engine_val,
         "imports": result_imports,
         "diagnostics": [],
         "limitations": MODULE_TRACE_LIMITATIONS,
@@ -461,7 +526,7 @@ pub fn trace_web_module_imports(
         operation: "trace_web_module_imports".to_string(),
         parameters: Value::Object(parameters),
         normalized_result,
-        raw_result: None,
+        raw_result,
         analysis_profile: None,
         confidence: Some(EvidenceConfidence::Derived),
         authority: Some(EvidenceAuthority::HistoricalReference),

@@ -1,0 +1,304 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_80a6b12a3066c8b5897f09a67b3942377a93921acaa8a196c2c42676b1d39cfe\",\"subject\":{\"name\":\"main.js\",\"digest\":{\"sha256\":\"61f583966e8b454b17a5990805f7d92e413fdbfa887885330fbfa995d308f0f0\"},\"format\":\"file\",\"architecture\":null,\"local_path\":\"/tmp/oracle_web_export/files/origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/main.js\"},\"provider\":{\"id\":\"rea-web-module-trace\",\"name\":\"REA captured module relationship trace\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"trace_web_module_imports\",\"parameters\":{\"manifest_path\":\"/tmp/oracle_web_export/manifest.json\",\"script_index\":0},\"raw_result\":{\"native_report\":{\"importer_url\":\"http://127.0.0.1:8000/app/main.js\",\"entries\":[{\"specifier\":\"./helper.js\",\"resolution\":{\"state\":\"resolved\",\"url\":\"http://127.0.0.1:8000/app/helper.js\"}}]},\"requests\":[{\"url\":\"http://127.0.0.1:8000/.rea-module-resolver/document\",\"resource_type\":\"document\",\"effect\":\"fulfilled\"},{\"url\":\"http://127.0.0.1:8000/app/main.js\",\"resource_type\":\"script\",\"effect\":\"fulfilled\"}],\"diagnostics\":[],\"engine\":{\"id\":\"chromium-native-module-resolver\",\"version\":\"154.0.8037.97\"},\"executable_path\":\"/usr/bin/google-chrome\"},\"normalized_result\":{\"manifest\":{\"path\":\"/tmp/oracle_web_export/manifest.json\",\"sha256\":\"d4b503f08c12c350edf4f96e7bfd09263dcf37447aeefa266435a3106d46ccef\",\"bytes\":5932,\"reported_output_directory\":\"/tmp/oracle_web_export\",\"capture_path\":\"/workspace/tracewise/fixtures/web/scripts.har\",\"capture_sha256\":\"7cc4f71fcb2365cde5d9400a3c39a7de916b9a974a33f0fe654e4b42a3be2968\",\"capture_kind\":\"page-inspection\",\"capture_completeness\":{\"status\":\"policy_filtered\",\"conditions\":[\"attach_limited\",\"policy_filtered\"],\"policy_filtered_sections\":[\"accessibility\",\"console_events\",\"console_text\",\"dom\",\"frames\",\"json_body_shapes\",\"resources\",\"script_sources\",\"scripts\",\"storage_keys\",\"websocket_shapes\"],\"attach_limited_sections\":[\"console_events\",\"metadata\",\"network_requests\",\"websocket_connections\",\"websocket_frames\"],\"truncated_sections\":[],\"unavailable_sections\":[],\"excluded\":[{\"section\":\"accessibility\",\"reason\":\"not_approved\",\"count\":2},{\"section\":\"console_events\",\"reason\":\"unattributed_origin\",\"count\":1},{\"section\":\"console_text\",\"reason\":\"not_approved\",\"count\":null},{\"section\":\"dom\",\"reason\":\"disallowed_origin\",\"count\":1},{\"section\":\"frames\",\"reason\":\"disallowed_origin\",\"count\":1},{\"section\":\"json_body_shapes\",\"reason\":\"not_approved\",\"count\":null},{\"section\":\"resources\",\"reason\":\"disallowed_origin\",\"count\":1},{\"section\":\"script_sources\",\"reason\":\"not_approved\",\"count\":1},{\"section\":\"scripts\",\"reason\":\"disallowed_origin\",\"count\":1},{\"section\":\"scripts\",\"reason\":\"unattributed_origin\",\"count\":1},{\"section\":\"storage_keys\",\"reason\":\"not_approved\",\"count\":null},{\"section\":\"websocket_shapes\",\"reason\":\"not_approved\",\"count\":null}],\"dropped_events\":{\"scripts\":0,\"network_requests\":0,\"console_events\":0,\"websocket_connections\":0,\"websocket_frames\":0,\"webmcp_tools\":0,\"timeline_events\":0,\"total\":0}},\"source_evidence_id\":null},\"source\":{\"path\":\"/tmp/oracle_web_export/files/origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/main.js\",\"sha256\":\"61f583966e8b454b17a5990805f7d92e413fdbfa887885330fbfa995d308f0f0\",\"bytes\":129,\"script_index\":0,\"script\":{\"source\":{\"kind\":\"page-script\",\"script_key\":\"scr_1111111111111111111111111111111111111111111111111111111111111111\",\"frame_id\":\"frame-main\",\"is_module\":true,\"language\":\"JavaScript\",\"source_map_url\":\"http://127.0.0.1:8000/app/main.js.map\"},\"url\":\"http://127.0.0.1:8000/app/main.js\",\"content\":{\"state\":\"exported\",\"relative_path\":\"origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/main.js\",\"layout\":\"url-path\",\"layout_reason\":null,\"sha256\":\"61f583966e8b454b17a5990805f7d92e413fdbfa887885330fbfa995d308f0f0\",\"bytes\":129,\"media_type\":\"text/javascript\",\"redacted\":null,\"representation\":\"debugger-source-utf8\"}}},\"importer\":{\"url\":\"http://127.0.0.1:8000/app/main.js\",\"basis\":\"reported-source-url\"},\"import_map\":null,\"parser\":{\"state\":\"parsed\",\"diagnostics\":[],\"location_units\":\"UTF-16 offsets and columns; one-based lines\"},\"engine\":{\"id\":\"chromium-native-module-resolver\",\"version\":\"154.0.8037.97\"},\"imports\":[{\"kind\":\"static-import\",\"specifier\":\"./helper.js\",\"expression\":\"\\\"./helper.js\\\"\",\"start\":{\"offset\":23,\"line\":1,\"column\":23},\"end\":{\"offset\":36,\"line\":1,\"column\":36},\"resolution\":{\"state\":\"resolved\",\"url\":\"http://127.0.0.1:8000/app/helper.js\"},\"captured_candidates\":[{\"script_index\":1,\"match\":\"exact-reported-url\",\"script\":{\"source\":{\"kind\":\"page-script\",\"script_key\":\"scr_2222222222222222222222222222222222222222222222222222222222222222\",\"frame_id\":\"frame-main\",\"is_module\":true,\"language\":\"JavaScript\",\"source_map_url\":null},\"url\":\"http://127.0.0.1:8000/app/helper.js\",\"content\":{\"state\":\"exported\",\"relative_path\":\"origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/helper.js\",\"layout\":\"url-path\",\"layout_reason\":null,\"sha256\":\"7c7381664794f6907ef823a3a4265f15cc2e63ab30d2faaf438c65930103b50c\",\"bytes\":42,\"media_type\":\"text/javascript\",\"redacted\":null,\"representation\":\"debugger-source-utf8\"}}}],\"execution\":\"unknown\"}],\"diagnostics\":[],\"limitations\":[\"Resolution is derived under the selected importer URL and optional import map; it does not establish that the map was installed in the captured page.\",\"Reported source URLs do not establish an inline script's document base. Select importer_url explicitly when that context differs or is unknown.\",\"Captured candidates retain reported capture metadata; their bytes are not reverified by this trace unless selected as the source.\",\"A resolved URL or captured source does not prove loading, execution, UI causality, or module namespace identity. Execution remains unknown.\",\"Only native ES module syntax is resolved. Bundler module IDs, computed imports, workers and non-HTTP(S) importer contexts are outside this trace.\",\"Source-map declarations do not establish retained map bytes or executed original-source coverage.\",\"Selected application code is parsed as data and never executed. The owned resolver executes only REA's trusted stub; its page requests are locally fulfilled or blocked.\",\"Manifest, source and import-map limits are 32 MiB, 16 MiB and 4 MiB. Native resolution has a 20-second deadline; cleanup may extend it. One renderer is requested; no aggregate host memory limit is claimed.\"]},\"confidence\":\"derived\",\"authority\":\"historical-reference\",\"environment\":null,\"limitations\":[\"Resolution is derived under the selected importer URL and optional import map; it does not establish that the map was installed in the captured page.\",\"Reported source URLs do not establish an inline script's document base. Select importer_url explicitly when that context differs or is unknown.\",\"Captured candidates retain reported capture metadata; their bytes are not reverified by this trace unless selected as the source.\",\"A resolved URL or captured source does not prove loading, execution, UI causality, or module namespace identity. Execution remains unknown.\",\"Only native ES module syntax is resolved. Bundler module IDs, computed imports, workers and non-HTTP(S) importer contexts are outside this trace.\",\"Source-map declarations do not establish retained map bytes or executed original-source coverage.\",\"Selected application code is parsed as data and never executed. The owned resolver executes only REA's trusted stub; its page requests are locally fulfilled or blocked.\",\"Manifest, source and import-map limits are 32 MiB, 16 MiB and 4 MiB. Native resolution has a 20-second deadline; cleanup may extend it. One renderer is requested; no aggregate host memory limit is claimed.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/tmp/oracle_web_export/files/origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/main.js\"},{\"kind\":\"artifact-path\",\"path\":\"/tmp/oracle_web_export/manifest.json\"}],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_80a6b12a3066c8b5897f09a67b3942377a93921acaa8a196c2c42676b1d39cfe",
+    "subject": {
+      "name": "main.js",
+      "digest": {
+        "sha256": "61f583966e8b454b17a5990805f7d92e413fdbfa887885330fbfa995d308f0f0"
+      },
+      "format": "file",
+      "architecture": null,
+      "local_path": "/tmp/oracle_web_export/files/origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/main.js"
+    },
+    "provider": {
+      "id": "rea-web-module-trace",
+      "name": "REA captured module relationship trace",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis",
+    "operation": "trace_web_module_imports",
+    "parameters": {
+      "manifest_path": "/tmp/oracle_web_export/manifest.json",
+      "script_index": 0
+    },
+    "raw_result": {
+      "native_report": {
+        "importer_url": "http://127.0.0.1:8000/app/main.js",
+        "entries": [
+          {
+            "specifier": "./helper.js",
+            "resolution": {
+              "state": "resolved",
+              "url": "http://127.0.0.1:8000/app/helper.js"
+            }
+          }
+        ]
+      },
+      "requests": [
+        {
+          "url": "http://127.0.0.1:8000/.rea-module-resolver/document",
+          "resource_type": "document",
+          "effect": "fulfilled"
+        },
+        {
+          "url": "http://127.0.0.1:8000/app/main.js",
+          "resource_type": "script",
+          "effect": "fulfilled"
+        }
+      ],
+      "diagnostics": [],
+      "engine": {
+        "id": "chromium-native-module-resolver",
+        "version": "154.0.8037.97"
+      },
+      "executable_path": "/usr/bin/google-chrome"
+    },
+    "normalized_result": {
+      "manifest": {
+        "path": "/tmp/oracle_web_export/manifest.json",
+        "sha256": "d4b503f08c12c350edf4f96e7bfd09263dcf37447aeefa266435a3106d46ccef",
+        "bytes": 5932,
+        "reported_output_directory": "/tmp/oracle_web_export",
+        "capture_path": "/workspace/tracewise/fixtures/web/scripts.har",
+        "capture_sha256": "7cc4f71fcb2365cde5d9400a3c39a7de916b9a974a33f0fe654e4b42a3be2968",
+        "capture_kind": "page-inspection",
+        "capture_completeness": {
+          "status": "policy_filtered",
+          "conditions": [
+            "attach_limited",
+            "policy_filtered"
+          ],
+          "policy_filtered_sections": [
+            "accessibility",
+            "console_events",
+            "console_text",
+            "dom",
+            "frames",
+            "json_body_shapes",
+            "resources",
+            "script_sources",
+            "scripts",
+            "storage_keys",
+            "websocket_shapes"
+          ],
+          "attach_limited_sections": [
+            "console_events",
+            "metadata",
+            "network_requests",
+            "websocket_connections",
+            "websocket_frames"
+          ],
+          "truncated_sections": [],
+          "unavailable_sections": [],
+          "excluded": [
+            {
+              "section": "accessibility",
+              "reason": "not_approved",
+              "count": 2
+            },
+            {
+              "section": "console_events",
+              "reason": "unattributed_origin",
+              "count": 1
+            },
+            {
+              "section": "console_text",
+              "reason": "not_approved",
+              "count": null
+            },
+            {
+              "section": "dom",
+              "reason": "disallowed_origin",
+              "count": 1
+            },
+            {
+              "section": "frames",
+              "reason": "disallowed_origin",
+              "count": 1
+            },
+            {
+              "section": "json_body_shapes",
+              "reason": "not_approved",
+              "count": null
+            },
+            {
+              "section": "resources",
+              "reason": "disallowed_origin",
+              "count": 1
+            },
+            {
+              "section": "script_sources",
+              "reason": "not_approved",
+              "count": 1
+            },
+            {
+              "section": "scripts",
+              "reason": "disallowed_origin",
+              "count": 1
+            },
+            {
+              "section": "scripts",
+              "reason": "unattributed_origin",
+              "count": 1
+            },
+            {
+              "section": "storage_keys",
+              "reason": "not_approved",
+              "count": null
+            },
+            {
+              "section": "websocket_shapes",
+              "reason": "not_approved",
+              "count": null
+            }
+          ],
+          "dropped_events": {
+            "scripts": 0,
+            "network_requests": 0,
+            "console_events": 0,
+            "websocket_connections": 0,
+            "websocket_frames": 0,
+            "webmcp_tools": 0,
+            "timeline_events": 0,
+            "total": 0
+          }
+        },
+        "source_evidence_id": null
+      },
+      "source": {
+        "path": "/tmp/oracle_web_export/files/origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/main.js",
+        "sha256": "61f583966e8b454b17a5990805f7d92e413fdbfa887885330fbfa995d308f0f0",
+        "bytes": 129,
+        "script_index": 0,
+        "script": {
+          "source": {
+            "kind": "page-script",
+            "script_key": "scr_1111111111111111111111111111111111111111111111111111111111111111",
+            "frame_id": "frame-main",
+            "is_module": true,
+            "language": "JavaScript",
+            "source_map_url": "http://127.0.0.1:8000/app/main.js.map"
+          },
+          "url": "http://127.0.0.1:8000/app/main.js",
+          "content": {
+            "state": "exported",
+            "relative_path": "origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/main.js",
+            "layout": "url-path",
+            "layout_reason": null,
+            "sha256": "61f583966e8b454b17a5990805f7d92e413fdbfa887885330fbfa995d308f0f0",
+            "bytes": 129,
+            "media_type": "text/javascript",
+            "redacted": null,
+            "representation": "debugger-source-utf8"
+          }
+        }
+      },
+      "importer": {
+        "url": "http://127.0.0.1:8000/app/main.js",
+        "basis": "reported-source-url"
+      },
+      "import_map": null,
+      "parser": {
+        "state": "parsed",
+        "diagnostics": [],
+        "location_units": "UTF-16 offsets and columns; one-based lines"
+      },
+      "engine": {
+        "id": "chromium-native-module-resolver",
+        "version": "154.0.8037.97"
+      },
+      "imports": [
+        {
+          "kind": "static-import",
+          "specifier": "./helper.js",
+          "expression": "\"./helper.js\"",
+          "start": {
+            "offset": 23,
+            "line": 1,
+            "column": 23
+          },
+          "end": {
+            "offset": 36,
+            "line": 1,
+            "column": 36
+          },
+          "resolution": {
+            "state": "resolved",
+            "url": "http://127.0.0.1:8000/app/helper.js"
+          },
+          "captured_candidates": [
+            {
+              "script_index": 1,
+              "match": "exact-reported-url",
+              "script": {
+                "source": {
+                  "kind": "page-script",
+                  "script_key": "scr_2222222222222222222222222222222222222222222222222222222222222222",
+                  "frame_id": "frame-main",
+                  "is_module": true,
+                  "language": "JavaScript",
+                  "source_map_url": null
+                },
+                "url": "http://127.0.0.1:8000/app/helper.js",
+                "content": {
+                  "state": "exported",
+                  "relative_path": "origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/helper.js",
+                  "layout": "url-path",
+                  "layout_reason": null,
+                  "sha256": "7c7381664794f6907ef823a3a4265f15cc2e63ab30d2faaf438c65930103b50c",
+                  "bytes": 42,
+                  "media_type": "text/javascript",
+                  "redacted": null,
+                  "representation": "debugger-source-utf8"
+                }
+              }
+            }
+          ],
+          "execution": "unknown"
+        }
+      ],
+      "diagnostics": [],
+      "limitations": [
+        "Resolution is derived under the selected importer URL and optional import map; it does not establish that the map was installed in the captured page.",
+        "Reported source URLs do not establish an inline script's document base. Select importer_url explicitly when that context differs or is unknown.",
+        "Captured candidates retain reported capture metadata; their bytes are not reverified by this trace unless selected as the source.",
+        "A resolved URL or captured source does not prove loading, execution, UI causality, or module namespace identity. Execution remains unknown.",
+        "Only native ES module syntax is resolved. Bundler module IDs, computed imports, workers and non-HTTP(S) importer contexts are outside this trace.",
+        "Source-map declarations do not establish retained map bytes or executed original-source coverage.",
+        "Selected application code is parsed as data and never executed. The owned resolver executes only REA's trusted stub; its page requests are locally fulfilled or blocked.",
+        "Manifest, source and import-map limits are 32 MiB, 16 MiB and 4 MiB. Native resolution has a 20-second deadline; cleanup may extend it. One renderer is requested; no aggregate host memory limit is claimed."
+      ]
+    },
+    "confidence": "derived",
+    "authority": "historical-reference",
+    "environment": null,
+    "limitations": [
+      "Resolution is derived under the selected importer URL and optional import map; it does not establish that the map was installed in the captured page.",
+      "Reported source URLs do not establish an inline script's document base. Select importer_url explicitly when that context differs or is unknown.",
+      "Captured candidates retain reported capture metadata; their bytes are not reverified by this trace unless selected as the source.",
+      "A resolved URL or captured source does not prove loading, execution, UI causality, or module namespace identity. Execution remains unknown.",
+      "Only native ES module syntax is resolved. Bundler module IDs, computed imports, workers and non-HTTP(S) importer contexts are outside this trace.",
+      "Source-map declarations do not establish retained map bytes or executed original-source coverage.",
+      "Selected application code is parsed as data and never executed. The owned resolver executes only REA's trusted stub; its page requests are locally fulfilled or blocked.",
+      "Manifest, source and import-map limits are 32 MiB, 16 MiB and 4 MiB. Native resolution has a 20-second deadline; cleanup may extend it. One renderer is requested; no aggregate host memory limit is claimed."
+    ],
+    "locations": [
+      {
+        "kind": "artifact-path",
+        "path": "/tmp/oracle_web_export/files/origins/63767aa5615dabadd32b93fdf0db0c7190c850062ba568114ea4f28b6cdc9e71/app/main.js"
+      },
+      {
+        "kind": "artifact-path",
+        "path": "/tmp/oracle_web_export/manifest.json"
+      }
+    ],
+    "evidence_links": []
+  }
+}

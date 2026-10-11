@@ -100,6 +100,9 @@ async fn execute_tool(
         "get_evidence_bundle" => handle_get_evidence_bundle(session, args),
         "compare_bundles" => handle_compare_bundles(session, args),
         "inspect_web_network_capture" => handle_inspect_web_network_capture(session, args),
+        "export_web_scripts" => handle_export_web_scripts(session, args),
+        "trace_web_module_imports" => handle_trace_web_module_imports(session, args),
+        "trace_web_source_location" => handle_trace_web_source_location(session, args),
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
             None,
@@ -131,6 +134,12 @@ fn progress_message(tool_name: &str, start: bool) -> String {
         ("import_evidence_bundle", false) => "Evidence bundle imported".to_string(),
         ("compare_bundles", true) => "Comparing evidence bundles...".to_string(),
         ("compare_bundles", false) => "Evidence bundles compared".to_string(),
+        ("export_web_scripts", true) => "Exporting web scripts from capture...".to_string(),
+        ("export_web_scripts", false) => "Web scripts exported".to_string(),
+        ("trace_web_module_imports", true) => "Tracing web module imports...".to_string(),
+        ("trace_web_module_imports", false) => "Web module imports traced".to_string(),
+        ("trace_web_source_location", true) => "Tracing web source location...".to_string(),
+        ("trace_web_source_location", false) => "Web source location traced".to_string(),
         (name, true) => format!("Starting operation: {name}"),
         (name, false) => format!("Completed operation: {name}"),
     }
@@ -447,6 +456,60 @@ fn handle_inspect_web_network_capture(
             None,
         )),
     };
+
+    let _ = session.ledger.lock().unwrap().record(ev.clone());
+
+    let val = serde_json::to_value(&ev)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_export_web_scripts(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input: tracewise_web::scripts_export::ExportWebScriptsInput = serde_json::from_value(args.clone())
+        .map_err(|e| McpError::invalid_params(format!("Invalid export_web_scripts input: {e}"), None))?;
+
+    let ev = tracewise_web::scripts_export::export_web_scripts(input)
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+
+    let _ = session.ledger.lock().unwrap().record(ev.clone());
+
+    let val = serde_json::to_value(&ev)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_trace_web_module_imports(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input: tracewise_web::module_trace::TraceWebModuleImportsInput = serde_json::from_value(args.clone())
+        .map_err(|e| McpError::invalid_params(format!("Invalid trace_web_module_imports input: {e}"), None))?;
+
+    let ev = tracewise_web::module_trace::trace_web_module_imports(input)
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+
+    let _ = session.ledger.lock().unwrap().record(ev.clone());
+
+    let val = serde_json::to_value(&ev)
+        .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_trace_web_source_location(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input: tracewise_web::source_location::TraceWebSourceLocationInput = serde_json::from_value(args.clone())
+        .map_err(|e| McpError::invalid_params(format!("Invalid trace_web_source_location input: {e}"), None))?;
+
+    let ev = tracewise_web::source_location::trace_web_source_location(input)
+        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
 
     let _ = session.ledger.lock().unwrap().record(ev.clone());
 

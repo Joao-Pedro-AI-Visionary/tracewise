@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "main.js",
+  "sources": [
+    "main.ts"
+  ],
+  "sourcesContent": [
+    "import { helper } from \"./helper.js\";\nexport const result = helper();\n"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA"
+}
