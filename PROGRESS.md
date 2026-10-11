@@ -24,3 +24,7 @@
 ## 2026-10-10 21:18 — phase1a: capture and screenshot comparison
 - commit: (ver git log)
 - testes: 26 ok
+
+## 2026-10-10 21:54 — phase1b: CDP targets, screenshot, page, session
+- commit: (ver git log)
+- testes: 26 ok

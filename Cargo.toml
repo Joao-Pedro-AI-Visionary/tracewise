@@ -32,3 +32,6 @@ base64 = "0.22"
 sourcemap = "9.3.2"
 image = { version = "0.25", default-features = false, features = ["png"] }
 jsonschema = "0.29"
+tokio-tungstenite = { version = "0.26", default-features = false, features = ["connect"] }
+reqwest = { version = "0.12", default-features = false, features = ["json"] }
+futures-util = "0.3"
