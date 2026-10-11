@@ -13,6 +13,8 @@ serde_json = { workspace = true }
 sha2 = { workspace = true }
 hex = { workspace = true }
 thiserror = { workspace = true }
+sourcemap = { workspace = true }
+base64 = { workspace = true }
 zip = { version = "0.6", default-features = false, features = ["deflate"] }
 walkdir = "2.5"
 tempfile = "3.14"

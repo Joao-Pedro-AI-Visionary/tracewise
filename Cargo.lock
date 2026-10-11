@@ -2109,11 +2109,13 @@ dependencies = [
 name = "tracewise-js"
 version = "0.1.0"
 dependencies = [
+ "base64 0.22.1",
  "hex",
  "jsonschema 0.29.1",
  "serde",
  "serde_json",
  "sha2",
+ "sourcemap",
  "tempfile",
  "thiserror",
  "tracewise-domain",

@@ -111,3 +111,12 @@
 
 ## 2026-10-11 12:06 — phase2: inspect/extract/compare artifacts (CLI: cursor:composer-2.5)
 - testes ok: 55
+
+## 2026-10-11 — phase2: recover_javascript_sources, compare_source_to_bundle
+- crates/js: `recover_javascript_sources` copies `sourcesContent` from a version-3 source map (`sourcemap` 9.3.2). The original REA path requires `REA_WAKARU_COMMAND`, which is not installed, so oracle parity is not claimed for recovery. `compare_source_to_bundle` follows the REA signal weights and classifications.
+- fixtures: `fixtures/js/bundle-app` (bundle + source map), historical graph, application evidence from the REA analyzer, and `oracle_compare_source_to_bundle.json`.
+- crates/server: both tools dispatch. Comparison matches the oracle with no ignored fields. Recovery validates `outputSchema` and the recovered bytes.
+- testes ok: 57
+
+## 2026-10-11 12:31 — phase2: JS source recovery + source-to-bundle (CLI: cursor:grok-4.7-high)
+- testes ok: 57

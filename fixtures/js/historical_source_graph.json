@@ -1,0 +1,72 @@
+{
+  "schema": "HistoricalSourceGraph",
+  "authority": "historical-reference",
+  "root_alias": "$REFERENCE_ROOT",
+  "root_sha256": "33c7b650a3cb428400f77da82e7bc4993c0ffcae47a54695e2b0b32319227e74",
+  "inventory_state": "complete",
+  "entries": [
+    {
+      "path": "src",
+      "classifications": [
+        "source"
+      ],
+      "limitations": [],
+      "kind": "directory",
+      "tree_state": "enumerated"
+    },
+    {
+      "path": "src/greet.js",
+      "classifications": [
+        "source"
+      ],
+      "limitations": [],
+      "kind": "file",
+      "language": "JavaScript",
+      "sha256": "fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3",
+      "size": 55,
+      "content_state": "hashed"
+    },
+    {
+      "path": "src/legacy.js",
+      "classifications": [
+        "source"
+      ],
+      "limitations": [],
+      "kind": "file",
+      "language": "JavaScript",
+      "sha256": "7e6ceeac16d6e336c2ae290a397617900d3a6d528999fac0862d06514112dcdd",
+      "size": 36,
+      "content_state": "hashed"
+    },
+    {
+      "path": "src/math.js",
+      "classifications": [
+        "source"
+      ],
+      "limitations": [],
+      "kind": "file",
+      "language": "JavaScript",
+      "sha256": "405d8f5ebca0d588c15004a524e4e21a44bb291c3551393462f960c9a38dddb9",
+      "size": 28,
+      "content_state": "hashed"
+    }
+  ],
+  "relationships": [],
+  "parse_failures": [],
+  "exclusions": [],
+  "languages": [
+    "JavaScript"
+  ],
+  "manifests": [],
+  "vcs": {
+    "kind": "none",
+    "head": null,
+    "dirty": null
+  },
+  "provenance": {
+    "importer": "tracewise-fixture",
+    "importer_version": "1",
+    "caller": "compare-source-to-bundle"
+  },
+  "limitations": []
+}

@@ -1,0 +1,442 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_4d3a3ac5f87f1289d95bc1079a1b4fcfe02b48d6f20c220832dcb3efecc5c22a\",\"subject\":null,\"provider\":{\"id\":\"rea-javascript-application-workflows\",\"name\":\"REA JavaScript application workflows\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.source-to-bundle-comparison\",\"operation\":\"compare_source_to_bundle\",\"parameters\":{\"reference_root_sha256\":\"33c7b650a3cb428400f77da82e7bc4993c0ffcae47a54695e2b0b32319227e74\",\"application_evidence_id\":\"ev_edd71c98078c8a78cdbfc5e0204963407ba373a94438bc3f1bb68a3164bc1ece\"},\"raw_result\":null,\"normalized_result\":{\"comparison_id\":\"stbc_357e5e811074f534b6bb51a2641b8e04ab84de06fb1c5179015836a6cdbdcf8e\",\"reference\":{\"root_sha256\":\"33c7b650a3cb428400f77da82e7bc4993c0ffcae47a54695e2b0b32319227e74\",\"inventory_state\":\"complete\"},\"application\":{\"evidence_id\":\"ev_edd71c98078c8a78cdbfc5e0204963407ba373a94438bc3f1bb68a3164bc1ece\",\"graph_id\":\"jag_9498a1241be01b33acda0842899f2a018e57eedc686e53cac7e2f84b5c21f4b9\",\"root_artifact_sha256\":\"9982d650a9db20b09447c0f56307d860e3b8a1679e35052eb4d10e5127374736\"},\"scoring\":{\"algorithm\":\"rea-source-to-bundle-signals\",\"minimum_candidate_score\":20,\"weights\":[{\"signal\":\"exact-source-digest\",\"weight\":100},{\"signal\":\"source-map-original-path\",\"weight\":70},{\"signal\":\"current-path-exact\",\"weight\":60},{\"signal\":\"current-path-suffix\",\"weight\":40},{\"signal\":\"basename-match\",\"weight\":20},{\"signal\":\"language-extension\",\"weight\":5}]},\"summary\":{\"unchanged\":0,\"modified\":1,\"removed\":1,\"split\":0,\"merged\":0,\"duplicated\":1,\"unknown\":0},\"items\":[{\"mapping_id\":\"stbc_item_13e78c8feda129f4fa64a44e601bfd76028e95d8e44dca2d9303dd7596f6abc3\",\"source_path\":\"src/greet.js\",\"source_sha256\":\"fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3\",\"source_language\":\"JavaScript\",\"status\":\"duplicated\",\"confidence\":\"exact\",\"current_node_ids\":[\"jag_node_22319b06f66a5661aa250f2f4ce5fd72c806567a67ad8ef4d0e9001a5911521f\",\"jag_node_5b9e08c6d37117414f0227f2ac18aab95e77a5d59fe959f6017ccb0ad05d1602\"],\"candidates\":[{\"current_node_id\":\"jag_node_22319b06f66a5661aa250f2f4ce5fd72c806567a67ad8ef4d0e9001a5911521f\",\"current_node_kind\":\"source-module\",\"score\":195,\"confidence\":\"exact\",\"signals\":[{\"kind\":\"exact-source-digest\",\"weight\":100,\"source_value\":\"fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3\",\"current_values\":[\"fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3\"]},{\"kind\":\"source-map-original-path\",\"weight\":70,\"source_value\":\"src/greet.js\",\"current_values\":[\"src/greet.js\"]},{\"kind\":\"basename-match\",\"weight\":20,\"source_value\":\"greet.js\",\"current_values\":[\"src/greet.js\"]},{\"kind\":\"language-extension\",\"weight\":5,\"source_value\":\".js\",\"current_values\":[\"src/greet.js\"]}]},{\"current_node_id\":\"jag_node_5b9e08c6d37117414f0227f2ac18aab95e77a5d59fe959f6017ccb0ad05d1602\",\"current_node_kind\":\"javascript-asset\",\"score\":185,\"confidence\":\"exact\",\"signals\":[{\"kind\":\"exact-source-digest\",\"weight\":100,\"source_value\":\"fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3\",\"current_values\":[\"fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3\"]},{\"kind\":\"current-path-exact\",\"weight\":60,\"source_value\":\"src/greet.js\",\"current_values\":[\"src/greet.js\"]},{\"kind\":\"basename-match\",\"weight\":20,\"source_value\":\"greet.js\",\"current_values\":[\"src/greet.js\"]},{\"kind\":\"language-extension\",\"weight\":5,\"source_value\":\".js\",\"current_values\":[\"src/greet.js\"]}]},{\"current_node_id\":\"jag_node_10cbdda2b22e2895d2044f045e5eead3adb03417ff707e8fe98fc1b26f3ff98b\",\"current_node_kind\":\"javascript-module\",\"score\":85,\"confidence\":\"high\",\"signals\":[{\"kind\":\"current-path-exact\",\"weight\":60,\"source_value\":\"src/greet.js\",\"current_values\":[\"src/greet.js\"]},{\"kind\":\"basename-match\",\"weight\":20,\"source_value\":\"greet.js\",\"current_values\":[\"src/greet.js\"]},{\"kind\":\"language-extension\",\"weight\":5,\"source_value\":\".js\",\"current_values\":[\"src/greet.js\"]}]},{\"current_node_id\":\"jag_node_bc276a2f800addf340dcb86e33e07781675c9d3045ccddcd5f823ff53a5e9ff4\",\"current_node_kind\":\"javascript-module\",\"score\":85,\"confidence\":\"high\",\"signals\":[{\"kind\":\"current-path-exact\",\"weight\":60,\"source_value\":\"src/greet.js\",\"current_values\":[\"src/greet.js\"]},{\"kind\":\"basename-match\",\"weight\":20,\"source_value\":\"greet.js\",\"current_values\":[\"src/greet.js\"]},{\"kind\":\"language-extension\",\"weight\":5,\"source_value\":\".js\",\"current_values\":[\"src/greet.js\"]}]}],\"limitations\":[\"The same historical source digest occurs in multiple current graph nodes.\"]},{\"mapping_id\":\"stbc_item_f6ea85bff894d8b1600828fcb425e3f99056e64b66f324bc13e718a621dd3da8\",\"source_path\":\"src/legacy.js\",\"source_sha256\":\"7e6ceeac16d6e336c2ae290a397617900d3a6d528999fac0862d06514112dcdd\",\"source_language\":\"JavaScript\",\"status\":\"removed\",\"confidence\":\"high\",\"current_node_ids\":[],\"candidates\":[],\"limitations\":[\"No retained current node matched exact digest or path signals within complete static inventories.\"]},{\"mapping_id\":\"stbc_item_bff68bef653712c72370e6a9b57f487d6e04ef6b407ed30647943dc8de573434\",\"source_path\":\"src/math.js\",\"source_sha256\":\"405d8f5ebca0d588c15004a524e4e21a44bb291c3551393462f960c9a38dddb9\",\"source_language\":\"JavaScript\",\"status\":\"modified\",\"confidence\":\"high\",\"current_node_ids\":[\"jag_node_dd9c957cb84467639ebfed97ba0b4b24b52946dab3554b6a3396bfdcce439e89\"],\"candidates\":[{\"current_node_id\":\"jag_node_dd9c957cb84467639ebfed97ba0b4b24b52946dab3554b6a3396bfdcce439e89\",\"current_node_kind\":\"source-module\",\"score\":95,\"confidence\":\"high\",\"signals\":[{\"kind\":\"source-map-original-path\",\"weight\":70,\"source_value\":\"src/math.js\",\"current_values\":[\"src/math.js\"]},{\"kind\":\"basename-match\",\"weight\":20,\"source_value\":\"math.js\",\"current_values\":[\"src/math.js\"]},{\"kind\":\"language-extension\",\"weight\":5,\"source_value\":\".js\",\"current_values\":[\"src/math.js\"]}]},{\"current_node_id\":\"jag_node_028f1ec34e0ebaa99150790fbe97a863aeab974dbe31ab48590ac76524db12fa\",\"current_node_kind\":\"javascript-module\",\"score\":85,\"confidence\":\"high\",\"signals\":[{\"kind\":\"current-path-exact\",\"weight\":60,\"source_value\":\"src/math.js\",\"current_values\":[\"src/math.js\"]},{\"kind\":\"basename-match\",\"weight\":20,\"source_value\":\"math.js\",\"current_values\":[\"src/math.js\"]},{\"kind\":\"language-extension\",\"weight\":5,\"source_value\":\".js\",\"current_values\":[\"src/math.js\"]}]},{\"current_node_id\":\"jag_node_7619d3f115b8748bf48bed1ba649ce5c2d58b0142d5cad6d39ff50e9c4d358ca\",\"current_node_kind\":\"javascript-asset\",\"score\":85,\"confidence\":\"high\",\"signals\":[{\"kind\":\"current-path-exact\",\"weight\":60,\"source_value\":\"src/math.js\",\"current_values\":[\"src/math.js\"]},{\"kind\":\"basename-match\",\"weight\":20,\"source_value\":\"math.js\",\"current_values\":[\"src/math.js\"]},{\"kind\":\"language-extension\",\"weight\":5,\"source_value\":\".js\",\"current_values\":[\"src/math.js\"]}]},{\"current_node_id\":\"jag_node_8c9de72b5b41b3efe833f6bbc1dc0141f191fcc4be9a430a46dd492ca36a3009\",\"current_node_kind\":\"javascript-module\",\"score\":85,\"confidence\":\"high\",\"signals\":[{\"kind\":\"current-path-exact\",\"weight\":60,\"source_value\":\"src/math.js\",\"current_values\":[\"src/math.js\"]},{\"kind\":\"basename-match\",\"weight\":20,\"source_value\":\"math.js\",\"current_values\":[\"src/math.js\"]},{\"kind\":\"language-extension\",\"weight\":5,\"source_value\":\".js\",\"current_values\":[\"src/math.js\"]}]}],\"limitations\":[\"Location evidence links the source to the current node, but their source digests differ.\"]}],\"unmapped_current_node_ids\":[\"jag_node_028f1ec34e0ebaa99150790fbe97a863aeab974dbe31ab48590ac76524db12fa\",\"jag_node_10cbdda2b22e2895d2044f045e5eead3adb03417ff707e8fe98fc1b26f3ff98b\",\"jag_node_7619d3f115b8748bf48bed1ba649ce5c2d58b0142d5cad6d39ff50e9c4d358ca\",\"jag_node_812a5d6ad57d8bb6ad746429701c1d987c9eb2ff2e3bf70b40b47447b04e9bb6\",\"jag_node_8c9de72b5b41b3efe833f6bbc1dc0141f191fcc4be9a430a46dd492ca36a3009\",\"jag_node_8f50ee227a57a23a26cd808a42488964a436b061cd6df72cc5355284d81250a5\",\"jag_node_bc276a2f800addf340dcb86e33e07781675c9d3045ccddcd5f823ff53a5e9ff4\",\"jag_node_c38a9e2efdacb5ec2b6d1b5842471724e35cb3ba16ac89b1909a9ede9afc75eb\",\"jag_node_dfea84b4e5f6f3f60c76425fdab12fbff9cdb25fa3e6e50798ccbb27174c4d26\"],\"coverage\":{\"status\":\"complete-within-inputs\",\"reference_inventory_state\":\"complete\",\"application_graph_status\":\"complete\",\"retained_source_files\":3,\"retained_application_nodes\":12,\"candidate_evaluations\":8},\"evidence_links\":[\"ev_edd71c98078c8a78cdbfc5e0204963407ba373a94438bc3f1bb68a3164bc1ece\"],\"limitations\":[\"CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.\",\"JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.\",\"Static digest and location signals do not establish runtime behavior, semantic equivalence, or absence of dynamically generated modules.\",\"Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.\",\"Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.\",\"Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.\",\"JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.\",\"Static digest and location signals do not establish runtime behavior, semantic equivalence, or absence of dynamically generated modules.\",\"Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.\",\"Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.\",\"Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code.\"],\"locations\":[],\"evidence_links\":[\"ev_edd71c98078c8a78cdbfc5e0204963407ba373a94438bc3f1bb68a3164bc1ece\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_4d3a3ac5f87f1289d95bc1079a1b4fcfe02b48d6f20c220832dcb3efecc5c22a",
+    "subject": null,
+    "provider": {
+      "id": "rea-javascript-application-workflows",
+      "name": "REA JavaScript application workflows",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.source-to-bundle-comparison",
+    "operation": "compare_source_to_bundle",
+    "parameters": {
+      "reference_root_sha256": "33c7b650a3cb428400f77da82e7bc4993c0ffcae47a54695e2b0b32319227e74",
+      "application_evidence_id": "ev_edd71c98078c8a78cdbfc5e0204963407ba373a94438bc3f1bb68a3164bc1ece"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "comparison_id": "stbc_357e5e811074f534b6bb51a2641b8e04ab84de06fb1c5179015836a6cdbdcf8e",
+      "reference": {
+        "root_sha256": "33c7b650a3cb428400f77da82e7bc4993c0ffcae47a54695e2b0b32319227e74",
+        "inventory_state": "complete"
+      },
+      "application": {
+        "evidence_id": "ev_edd71c98078c8a78cdbfc5e0204963407ba373a94438bc3f1bb68a3164bc1ece",
+        "graph_id": "jag_9498a1241be01b33acda0842899f2a018e57eedc686e53cac7e2f84b5c21f4b9",
+        "root_artifact_sha256": "9982d650a9db20b09447c0f56307d860e3b8a1679e35052eb4d10e5127374736"
+      },
+      "scoring": {
+        "algorithm": "rea-source-to-bundle-signals",
+        "minimum_candidate_score": 20,
+        "weights": [
+          {
+            "signal": "exact-source-digest",
+            "weight": 100
+          },
+          {
+            "signal": "source-map-original-path",
+            "weight": 70
+          },
+          {
+            "signal": "current-path-exact",
+            "weight": 60
+          },
+          {
+            "signal": "current-path-suffix",
+            "weight": 40
+          },
+          {
+            "signal": "basename-match",
+            "weight": 20
+          },
+          {
+            "signal": "language-extension",
+            "weight": 5
+          }
+        ]
+      },
+      "summary": {
+        "unchanged": 0,
+        "modified": 1,
+        "removed": 1,
+        "split": 0,
+        "merged": 0,
+        "duplicated": 1,
+        "unknown": 0
+      },
+      "items": [
+        {
+          "mapping_id": "stbc_item_13e78c8feda129f4fa64a44e601bfd76028e95d8e44dca2d9303dd7596f6abc3",
+          "source_path": "src/greet.js",
+          "source_sha256": "fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3",
+          "source_language": "JavaScript",
+          "status": "duplicated",
+          "confidence": "exact",
+          "current_node_ids": [
+            "jag_node_22319b06f66a5661aa250f2f4ce5fd72c806567a67ad8ef4d0e9001a5911521f",
+            "jag_node_5b9e08c6d37117414f0227f2ac18aab95e77a5d59fe959f6017ccb0ad05d1602"
+          ],
+          "candidates": [
+            {
+              "current_node_id": "jag_node_22319b06f66a5661aa250f2f4ce5fd72c806567a67ad8ef4d0e9001a5911521f",
+              "current_node_kind": "source-module",
+              "score": 195,
+              "confidence": "exact",
+              "signals": [
+                {
+                  "kind": "exact-source-digest",
+                  "weight": 100,
+                  "source_value": "fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3",
+                  "current_values": [
+                    "fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3"
+                  ]
+                },
+                {
+                  "kind": "source-map-original-path",
+                  "weight": 70,
+                  "source_value": "src/greet.js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                },
+                {
+                  "kind": "basename-match",
+                  "weight": 20,
+                  "source_value": "greet.js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                },
+                {
+                  "kind": "language-extension",
+                  "weight": 5,
+                  "source_value": ".js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                }
+              ]
+            },
+            {
+              "current_node_id": "jag_node_5b9e08c6d37117414f0227f2ac18aab95e77a5d59fe959f6017ccb0ad05d1602",
+              "current_node_kind": "javascript-asset",
+              "score": 185,
+              "confidence": "exact",
+              "signals": [
+                {
+                  "kind": "exact-source-digest",
+                  "weight": 100,
+                  "source_value": "fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3",
+                  "current_values": [
+                    "fdb2d7db182f06b53593cfe42f9aca3d6ec1caa1bd0a4ad4305acca938eb9fc3"
+                  ]
+                },
+                {
+                  "kind": "current-path-exact",
+                  "weight": 60,
+                  "source_value": "src/greet.js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                },
+                {
+                  "kind": "basename-match",
+                  "weight": 20,
+                  "source_value": "greet.js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                },
+                {
+                  "kind": "language-extension",
+                  "weight": 5,
+                  "source_value": ".js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                }
+              ]
+            },
+            {
+              "current_node_id": "jag_node_10cbdda2b22e2895d2044f045e5eead3adb03417ff707e8fe98fc1b26f3ff98b",
+              "current_node_kind": "javascript-module",
+              "score": 85,
+              "confidence": "high",
+              "signals": [
+                {
+                  "kind": "current-path-exact",
+                  "weight": 60,
+                  "source_value": "src/greet.js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                },
+                {
+                  "kind": "basename-match",
+                  "weight": 20,
+                  "source_value": "greet.js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                },
+                {
+                  "kind": "language-extension",
+                  "weight": 5,
+                  "source_value": ".js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                }
+              ]
+            },
+            {
+              "current_node_id": "jag_node_bc276a2f800addf340dcb86e33e07781675c9d3045ccddcd5f823ff53a5e9ff4",
+              "current_node_kind": "javascript-module",
+              "score": 85,
+              "confidence": "high",
+              "signals": [
+                {
+                  "kind": "current-path-exact",
+                  "weight": 60,
+                  "source_value": "src/greet.js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                },
+                {
+                  "kind": "basename-match",
+                  "weight": 20,
+                  "source_value": "greet.js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                },
+                {
+                  "kind": "language-extension",
+                  "weight": 5,
+                  "source_value": ".js",
+                  "current_values": [
+                    "src/greet.js"
+                  ]
+                }
+              ]
+            }
+          ],
+          "limitations": [
+            "The same historical source digest occurs in multiple current graph nodes."
+          ]
+        },
+        {
+          "mapping_id": "stbc_item_f6ea85bff894d8b1600828fcb425e3f99056e64b66f324bc13e718a621dd3da8",
+          "source_path": "src/legacy.js",
+          "source_sha256": "7e6ceeac16d6e336c2ae290a397617900d3a6d528999fac0862d06514112dcdd",
+          "source_language": "JavaScript",
+          "status": "removed",
+          "confidence": "high",
+          "current_node_ids": [],
+          "candidates": [],
+          "limitations": [
+            "No retained current node matched exact digest or path signals within complete static inventories."
+          ]
+        },
+        {
+          "mapping_id": "stbc_item_bff68bef653712c72370e6a9b57f487d6e04ef6b407ed30647943dc8de573434",
+          "source_path": "src/math.js",
+          "source_sha256": "405d8f5ebca0d588c15004a524e4e21a44bb291c3551393462f960c9a38dddb9",
+          "source_language": "JavaScript",
+          "status": "modified",
+          "confidence": "high",
+          "current_node_ids": [
+            "jag_node_dd9c957cb84467639ebfed97ba0b4b24b52946dab3554b6a3396bfdcce439e89"
+          ],
+          "candidates": [
+            {
+              "current_node_id": "jag_node_dd9c957cb84467639ebfed97ba0b4b24b52946dab3554b6a3396bfdcce439e89",
+              "current_node_kind": "source-module",
+              "score": 95,
+              "confidence": "high",
+              "signals": [
+                {
+                  "kind": "source-map-original-path",
+                  "weight": 70,
+                  "source_value": "src/math.js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                },
+                {
+                  "kind": "basename-match",
+                  "weight": 20,
+                  "source_value": "math.js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                },
+                {
+                  "kind": "language-extension",
+                  "weight": 5,
+                  "source_value": ".js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                }
+              ]
+            },
+            {
+              "current_node_id": "jag_node_028f1ec34e0ebaa99150790fbe97a863aeab974dbe31ab48590ac76524db12fa",
+              "current_node_kind": "javascript-module",
+              "score": 85,
+              "confidence": "high",
+              "signals": [
+                {
+                  "kind": "current-path-exact",
+                  "weight": 60,
+                  "source_value": "src/math.js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                },
+                {
+                  "kind": "basename-match",
+                  "weight": 20,
+                  "source_value": "math.js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                },
+                {
+                  "kind": "language-extension",
+                  "weight": 5,
+                  "source_value": ".js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                }
+              ]
+            },
+            {
+              "current_node_id": "jag_node_7619d3f115b8748bf48bed1ba649ce5c2d58b0142d5cad6d39ff50e9c4d358ca",
+              "current_node_kind": "javascript-asset",
+              "score": 85,
+              "confidence": "high",
+              "signals": [
+                {
+                  "kind": "current-path-exact",
+                  "weight": 60,
+                  "source_value": "src/math.js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                },
+                {
+                  "kind": "basename-match",
+                  "weight": 20,
+                  "source_value": "math.js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                },
+                {
+                  "kind": "language-extension",
+                  "weight": 5,
+                  "source_value": ".js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                }
+              ]
+            },
+            {
+              "current_node_id": "jag_node_8c9de72b5b41b3efe833f6bbc1dc0141f191fcc4be9a430a46dd492ca36a3009",
+              "current_node_kind": "javascript-module",
+              "score": 85,
+              "confidence": "high",
+              "signals": [
+                {
+                  "kind": "current-path-exact",
+                  "weight": 60,
+                  "source_value": "src/math.js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                },
+                {
+                  "kind": "basename-match",
+                  "weight": 20,
+                  "source_value": "math.js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                },
+                {
+                  "kind": "language-extension",
+                  "weight": 5,
+                  "source_value": ".js",
+                  "current_values": [
+                    "src/math.js"
+                  ]
+                }
+              ]
+            }
+          ],
+          "limitations": [
+            "Location evidence links the source to the current node, but their source digests differ."
+          ]
+        }
+      ],
+      "unmapped_current_node_ids": [
+        "jag_node_028f1ec34e0ebaa99150790fbe97a863aeab974dbe31ab48590ac76524db12fa",
+        "jag_node_10cbdda2b22e2895d2044f045e5eead3adb03417ff707e8fe98fc1b26f3ff98b",
+        "jag_node_7619d3f115b8748bf48bed1ba649ce5c2d58b0142d5cad6d39ff50e9c4d358ca",
+        "jag_node_812a5d6ad57d8bb6ad746429701c1d987c9eb2ff2e3bf70b40b47447b04e9bb6",
+        "jag_node_8c9de72b5b41b3efe833f6bbc1dc0141f191fcc4be9a430a46dd492ca36a3009",
+        "jag_node_8f50ee227a57a23a26cd808a42488964a436b061cd6df72cc5355284d81250a5",
+        "jag_node_bc276a2f800addf340dcb86e33e07781675c9d3045ccddcd5f823ff53a5e9ff4",
+        "jag_node_c38a9e2efdacb5ec2b6d1b5842471724e35cb3ba16ac89b1909a9ede9afc75eb",
+        "jag_node_dfea84b4e5f6f3f60c76425fdab12fbff9cdb25fa3e6e50798ccbb27174c4d26"
+      ],
+      "coverage": {
+        "status": "complete-within-inputs",
+        "reference_inventory_state": "complete",
+        "application_graph_status": "complete",
+        "retained_source_files": 3,
+        "retained_application_nodes": 12,
+        "candidate_evaluations": 8
+      },
+      "evidence_links": [
+        "ev_edd71c98078c8a78cdbfc5e0204963407ba373a94438bc3f1bb68a3164bc1ece"
+      ],
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Static digest and location signals do not establish runtime behavior, semantic equivalence, or absence of dynamically generated modules.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ]
+    },
+    "confidence": "inferred",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+      "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+      "Static digest and location signals do not establish runtime behavior, semantic equivalence, or absence of dynamically generated modules.",
+      "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+      "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+      "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_edd71c98078c8a78cdbfc5e0204963407ba373a94438bc3f1bb68a3164bc1ece"
+    ]
+  }
+}

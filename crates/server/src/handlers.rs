@@ -119,6 +119,8 @@ async fn execute_tool(
         "inspect_artifact" => handle_inspect_artifact(session, args),
         "extract_artifact" => handle_extract_artifact(session, args),
         "compare_artifacts" => handle_compare_artifacts(session, args),
+        "recover_javascript_sources" => handle_recover_javascript_sources(session, args),
+        "compare_source_to_bundle" => handle_compare_source_to_bundle(session, args),
         name if tracewise_contracts::phase2_tool_names().contains(&name) => {
             Err(McpError::internal_error(
                 format!("not yet implemented: {name}"),
@@ -909,6 +911,94 @@ fn handle_compare_artifacts(session: &BinarySession, args: &Value) -> Result<Cal
         .map_err(|e| McpError::internal_error(e.to_string(), None))?;
     let val = serde_json::to_value(&ev)
         .map_err(|e| McpError::internal_error(e.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_recover_javascript_sources(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let path = args.get("path").and_then(|v| v.as_str()).ok_or_else(|| {
+        McpError::invalid_params("recover_javascript_sources requires 'path'", None)
+    })?;
+    let output_directory = args
+        .get("output_directory")
+        .and_then(|v| v.as_str())
+        .ok_or_else(|| {
+            McpError::invalid_params("recover_javascript_sources requires 'output_directory'", None)
+        })?;
+    let extraction_mode = args
+        .get("extraction_mode")
+        .and_then(|v| v.as_str())
+        .unwrap_or("structural");
+    let rewrite_level = args
+        .get("rewrite_level")
+        .and_then(|v| v.as_str())
+        .unwrap_or("standard");
+    let evidence = tracewise_js::recover_javascript_sources(
+        path,
+        output_directory,
+        extraction_mode,
+        rewrite_level,
+    )
+    .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
+    session
+        .ledger
+        .lock()
+        .unwrap()
+        .record(evidence.clone())
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    let val = serde_json::to_value(&evidence)
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_compare_source_to_bundle(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let reference = args.get("reference").cloned().ok_or_else(|| {
+        McpError::invalid_params("compare_source_to_bundle requires 'reference'", None)
+    })?;
+    let application_value = args.get("application").cloned().ok_or_else(|| {
+        McpError::invalid_params("compare_source_to_bundle requires 'application'", None)
+    })?;
+    let application = if application_value.get("kind").and_then(|v| v.as_str()) == Some("retained-evidence")
+    {
+        let evidence_id = application_value
+            .get("evidence_id")
+            .and_then(|v| v.as_str())
+            .ok_or_else(|| McpError::invalid_params("retained evidence requires evidence_id", None))?;
+        session
+            .ledger
+            .lock()
+            .unwrap()
+            .get(evidence_id)
+            .cloned()
+            .ok_or_else(|| {
+                McpError::invalid_params(
+                    format!("Evidence retained in this session is missing: {evidence_id}"),
+                    None,
+                )
+            })?
+    } else {
+        serde_json::from_value(application_value).map_err(|error| {
+            McpError::invalid_params(format!("Invalid application evidence: {error}"), None)
+        })?
+    };
+    let mut ledger = session.ledger.lock().unwrap();
+    if !ledger.has(&application.evidence_id) {
+        ledger
+            .record(application.clone())
+            .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    }
+    let evidence = tracewise_js::compare_source_to_bundle_tool(&reference, &application)
+        .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
+    ledger
+        .record(evidence.clone())
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    let val = serde_json::to_value(&evidence)
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
     Ok(CallToolResult::structured(val))
 }
 

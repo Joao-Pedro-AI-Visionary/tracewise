@@ -8,7 +8,7 @@ This repository implements **Phase 0 (Foundation)**:
 - ResidualUnknown lifecycle with chained revision digests and optimistic concurrency control (`expected_revision`).
 - EvidenceBundle import/export with re-authentication and bundle comparison.
 - EvidenceLedger for in-memory session tracking.
-- MCP (Model Context Protocol) stdio server powered by `rmcp`. `tools/list` exposes 52 tools: the 50 REA tools verbatim (Phase 0, Phase 1, and Phase 2), plus the tracewise-owned `infer_api_spec` and `generate_api_client` tools. Phase 2 tools are listed and return the MCP error `not yet implemented: <tool>`.
+- MCP (Model Context Protocol) stdio server powered by `rmcp`. `tools/list` exposes 52 tools: the 50 REA tools verbatim (Phase 0, Phase 1, and Phase 2), plus the tracewise-owned `infer_api_spec` and `generate_api_client` tools. Phase 2 currently implements artifact inventory (`inspect_artifact`, `extract_artifact`, `compare_artifacts`), source-map recovery (`recover_javascript_sources`), and historical-source comparison (`compare_source_to_bundle`). The remaining Phase 2 tools return the MCP error `not yet implemented: <tool>`.
 - CLI binary `tracewise` with `mcp`, `hash`, `tools`, `infer-api-spec`, and `generate-api-client` subcommands.
 
 ## Usage
@@ -47,6 +47,8 @@ tracewise generate-api-client spec.json --lang ts,py -o outdir --replay <capture
 `infer_api_spec` groups captured requests into templated endpoints and writes an OpenAPI 3.1 document. Credential values stay out of the spec; redacted authentication headers are recorded as a security scheme whose scheme is unknown, and every unobserved aspect is a residual unknown.
 
 `generate_api_client` renders a fetch-based TypeScript SDK and a stdlib Python SDK from that document. `--replay` turns the redacted capture into `node:test` and `unittest` cases. Each generated file is listed with its sha256. The contracts are in [docs/new-tools.md](docs/new-tools.md).
+
+`recover_javascript_sources` reads a local UTF-8 bundle and its version-3 source map (`sourceMappingURL` or a sibling `.map`) and writes `sourcesContent` into an absent output directory. It does not execute the bundle. The original REA tool shells out to a caller-supplied Wakaru binary; this port uses the `sourcemap` crate because that binary is not bundled. `compare_source_to_bundle` scores a `HistoricalSourceGraph` against authenticated `analyze_javascript_application` evidence with the same signal weights as REA.
 
 ## Demo: site -> spec -> SDK
 

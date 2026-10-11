@@ -9,9 +9,17 @@ mod inspection;
 mod inventory;
 mod paths;
 mod readers;
+mod source_bundle_classify;
+mod source_bundle_index;
+mod source_bundle_paths;
+mod source_map_load;
+mod source_map_recovery;
+mod source_to_bundle;
 mod tools;
 mod types;
 mod unicode;
 
 pub use error::JsError;
+pub use source_map_recovery::recover_javascript_sources;
+pub use source_to_bundle::compare_source_to_bundle_tool;
 pub use tools::{compare_artifacts_tool, extract_artifact_tool, inspect_artifact};
