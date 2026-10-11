@@ -1,5 +1,8 @@
+use std::path::Path;
+
 use rmcp::model::CallToolRequestParam;
 use serde_json::{json, Value};
+use sha2::{Digest, Sha256};
 use tracewise_server::handlers::call_tool_local;
 use tracewise_server::session::BinarySession;
 
@@ -58,53 +61,38 @@ async fn test_export_web_scripts() {
         );
     }
 
-    // 2. Oracle comparison
+    // 2. Oracle comparison.
+    // Ignored field (only this one):
+    // - evidence_id: semantic digest of the whole observation envelope. It covers
+    //   parameters.output_directory and normalized_result.manifest.sha256, both of
+    //   which embed the caller-chosen directory. Path strings are rewritten to the
+    //   oracle directory before comparison. Exported file sha256/bytes are checked
+    //   on the bytes after that same prefix rewrite (script bodies do not contain
+    //   the directory; manifest.json does).
     let oracle_str = std::fs::read_to_string(
         "/workspace/tracewise/fixtures/web/oracle_export_web_scripts.json",
     )
     .expect("Failed to read oracle json");
     let oracle: Value = serde_json::from_str(&oracle_str).expect("Failed to parse oracle json");
     let oracle_structured = &oracle["structuredContent"];
+    let oracle_dir = oracle_structured["parameters"]["output_directory"]
+        .as_str()
+        .expect("oracle output_directory");
 
-    // Compare non-path-dependent fields:
-    // Path/time-dependent fields ignored and why:
-    // - evidence_id: SHA-256 digest over the entire observation envelope, which embeds the host-dependent output_directory path.
-    // - parameters.output_directory: caller-selected temporary filesystem directory path.
-    // - normalized_result.output_directory: destination output path.
-    // - normalized_result.analysis_input.input_path: filesystem path to exported files directory.
-    // - normalized_result.manifest.path: filesystem path to manifest.json.
-    // - normalized_result.manifest.sha256: digest of manifest.json whose content contains output_directory path.
-    // - normalized_result.manifest.bytes: byte length of manifest.json (varies with output_directory path length).
-    // - locations: contains filesystem path to manifest.json.
+    let manifest_sha =
+        assert_exported_files_match_oracle(&temp_dir, &output_dir_str, structured, oracle_structured);
 
-    assert_eq!(structured["provider"], oracle_structured["provider"]);
-    assert_eq!(structured["predicate_type"], oracle_structured["predicate_type"]);
-    assert_eq!(structured["operation"], oracle_structured["operation"]);
-    assert_eq!(structured["confidence"], oracle_structured["confidence"]);
-    assert_eq!(structured["authority"], oracle_structured["authority"]);
-    assert_eq!(structured["limitations"], oracle_structured["limitations"]);
+    let mut actual = structured.clone();
+    rewrite_output_prefix(&mut actual, &output_dir_str, oracle_dir);
+    // The tool reports the digest of the file it wrote (host path included).
+    // The oracle digest is of the same document with the oracle directory prefix.
+    actual["normalized_result"]["manifest"]["sha256"] = json!(manifest_sha.sha256);
+    actual["normalized_result"]["manifest"]["bytes"] = json!(manifest_sha.bytes);
+    actual.as_object_mut().expect("object").remove("evidence_id");
 
-    // Subject
-    assert_eq!(structured["subject"]["name"], oracle_structured["subject"]["name"]);
-    assert_eq!(structured["subject"]["digest"], oracle_structured["subject"]["digest"]);
-    assert_eq!(structured["subject"]["format"], oracle_structured["subject"]["format"]);
-    assert_eq!(structured["subject"]["local_path"], oracle_structured["subject"]["local_path"]);
-
-    // Normalized result
-    let norm = &structured["normalized_result"];
-    let oracle_norm = &oracle_structured["normalized_result"];
-
-    assert_eq!(norm["capture_path"], oracle_norm["capture_path"]);
-    assert_eq!(norm["capture_sha256"], oracle_norm["capture_sha256"]);
-    assert_eq!(norm["capture_kind"], oracle_norm["capture_kind"]);
-    assert_eq!(norm["source_evidence_id"], oracle_norm["source_evidence_id"]);
-    assert_eq!(norm["capture_completeness"], oracle_norm["capture_completeness"]);
-    assert_eq!(norm["scripts"], oracle_norm["scripts"]);
-    assert_eq!(norm["limitations"], oracle_norm["limitations"]);
-
-    // Verify files were actually created in output directory
-    assert!(temp_dir.join("manifest.json").exists());
-    assert!(temp_dir.join("files").exists());
+    let mut expected = oracle_structured.clone();
+    expected.as_object_mut().expect("object").remove("evidence_id");
+    assert_eq!(actual, expected);
 
     // Verify ledger record
     let evidence_id = structured["evidence_id"].as_str().expect("evidence_id");
@@ -441,4 +429,160 @@ async fn test_trace_web_source_location() {
 
     // Cleanup
     let _ = std::fs::remove_dir_all(&temp_dir);
+}
+
+struct FileDigest {
+    sha256: String,
+    bytes: usize,
+}
+
+fn sha256_hex(bytes: &[u8]) -> String {
+    hex::encode(Sha256::digest(bytes))
+}
+
+/// Replace the caller-chosen output directory. Exported script bytes are
+/// independent of that directory; manifest.json embeds it as a path prefix.
+fn normalize_export_prefix(bytes: &[u8], from: &str, to: &str) -> Vec<u8> {
+    let from_bytes = from.as_bytes();
+    let to_bytes = to.as_bytes();
+    let mut out = Vec::with_capacity(bytes.len());
+    let mut index = 0;
+    while index < bytes.len() {
+        if bytes[index..].starts_with(from_bytes) {
+            out.extend_from_slice(to_bytes);
+            index += from_bytes.len();
+        } else {
+            out.push(bytes[index]);
+            index += 1;
+        }
+    }
+    out
+}
+
+fn rewrite_output_prefix(value: &mut Value, from: &str, to: &str) {
+    match value {
+        Value::String(text) => {
+            if text.contains(from) {
+                *text = text.replace(from, to);
+            }
+        }
+        Value::Array(items) => {
+            for item in items {
+                rewrite_output_prefix(item, from, to);
+            }
+        }
+        Value::Object(map) => {
+            for item in map.values_mut() {
+                rewrite_output_prefix(item, from, to);
+            }
+        }
+        Value::Null | Value::Bool(_) | Value::Number(_) => {}
+    }
+}
+
+fn list_export_files(root: &Path) -> Vec<String> {
+    let mut files = Vec::new();
+    let mut stack = vec![root.to_path_buf()];
+    while let Some(dir) = stack.pop() {
+        let mut entries: Vec<_> = std::fs::read_dir(&dir)
+            .unwrap_or_else(|err| panic!("read_dir {}: {err}", dir.display()))
+            .collect::<Result<Vec<_>, _>>()
+            .unwrap_or_else(|err| panic!("read_dir entry: {err}"));
+        entries.sort_by_key(|entry| entry.file_name());
+        for entry in entries {
+            let path = entry.path();
+            if path.is_dir() {
+                stack.push(path);
+            } else {
+                let relative = path
+                    .strip_prefix(root)
+                    .expect("export file stays under the output directory")
+                    .to_string_lossy()
+                    .replace('\\', "/");
+                files.push(relative);
+            }
+        }
+    }
+    files.sort();
+    files
+}
+
+fn assert_exported_files_match_oracle(
+    output_dir: &Path,
+    actual_prefix: &str,
+    structured: &Value,
+    oracle_structured: &Value,
+) -> FileDigest {
+    let oracle_norm = &oracle_structured["normalized_result"];
+    let oracle_dir = oracle_norm["output_directory"]
+        .as_str()
+        .expect("oracle output_directory");
+    assert_ne!(
+        actual_prefix, oracle_dir,
+        "normalization must rewrite a distinct output directory"
+    );
+
+    let manifest_raw = std::fs::read(output_dir.join("manifest.json")).expect("read manifest.json");
+    let reported = &structured["normalized_result"]["manifest"];
+    assert_eq!(
+        reported["sha256"].as_str().expect("reported manifest sha256"),
+        sha256_hex(&manifest_raw),
+        "reported manifest sha256 must be the digest of the written file"
+    );
+    assert_eq!(
+        reported["bytes"].as_u64().expect("reported manifest bytes") as usize,
+        manifest_raw.len(),
+        "reported manifest size must be the written file"
+    );
+    let manifest_norm = normalize_export_prefix(&manifest_raw, actual_prefix, oracle_dir);
+    let manifest = FileDigest {
+        sha256: sha256_hex(&manifest_norm),
+        bytes: manifest_norm.len(),
+    };
+    let oracle_manifest = &oracle_norm["manifest"];
+    assert_eq!(
+        manifest.bytes,
+        oracle_manifest["bytes"].as_u64().expect("oracle manifest bytes") as usize,
+        "manifest.json size after rewriting {actual_prefix} -> {oracle_dir}\n{}",
+        String::from_utf8_lossy(&manifest_norm)
+    );
+    assert_eq!(
+        manifest.sha256,
+        oracle_manifest["sha256"].as_str().expect("oracle manifest sha256"),
+        "manifest.json sha256 after rewriting {actual_prefix} -> {oracle_dir}\n{}",
+        String::from_utf8_lossy(&manifest_norm)
+    );
+
+    let mut expected_files = vec!["manifest.json".to_string()];
+    let scripts = oracle_norm["scripts"].as_array().expect("oracle scripts");
+    for script in scripts {
+        let content = &script["content"];
+        if content["state"] != "exported" {
+            continue;
+        }
+        let relative = content["relative_path"]
+            .as_str()
+            .expect("exported script relative_path");
+        let raw = std::fs::read(output_dir.join("files").join(relative))
+            .unwrap_or_else(|err| panic!("read exported script {relative}: {err}"));
+        let normalized = normalize_export_prefix(&raw, actual_prefix, oracle_dir);
+        assert_eq!(
+            normalized.len(),
+            content["bytes"].as_u64().expect("script bytes") as usize,
+            "{relative} size"
+        );
+        assert_eq!(
+            sha256_hex(&normalized),
+            content["sha256"].as_str().expect("script sha256"),
+            "{relative} sha256"
+        );
+        expected_files.push(format!("files/{relative}"));
+    }
+    expected_files.sort();
+    assert_eq!(
+        list_export_files(output_dir),
+        expected_files,
+        "export tree must be exactly the manifest and the oracle scripts"
+    );
+    manifest
 }

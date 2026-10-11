@@ -97,3 +97,6 @@
 - Commits reais: b73cd8c, 4d89a1c, 486dda4, 1569047 (offline, AGY Gemini); d1e6766, 02aee4f, 267d9df (CDP, Cursor grok-4.7-high); ad2f6f6 (Cursor composer-2.5); 708624a, b34deff, d8ac228 (Cursor grok-4.7-high).
 - ffa217e só tem dependências (não conta como implementação).
 - Demo: `bash scripts/demo.sh` -> "demo ok" (verificado pelo revisor em 2026-10-11 11:15).
+
+## 2026-10-11 11:30 — phase1: tighten export_web_scripts hash parity (CLI: cursor:grok-4.7-high)
+- testes ok: 50
