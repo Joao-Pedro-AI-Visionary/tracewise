@@ -48,6 +48,25 @@ tracewise generate-api-client spec.json --lang ts,py -o outdir --replay <capture
 
 `generate_api_client` renders a fetch-based TypeScript SDK and a stdlib Python SDK from that document. `--replay` turns the redacted capture into `node:test` and `unittest` cases. Each generated file is listed with its sha256. The contracts are in [docs/new-tools.md](docs/new-tools.md).
 
+## Demo: site -> spec -> SDK
+
+`scripts/demo.sh` walks the local fixture API through a redacted capture into typed clients:
+
+1. Starts `fixtures/web/server.py` on a free loopback port.
+2. Records a HAR with `fixtures/web/record_har.py`. The capture includes `Authorization` and `Cookie` values so redaction is exercised.
+3. Runs `tracewise infer-api-spec` and `tracewise generate-api-client --lang ts,py` with `--replay` pointed at that HAR.
+4. Compiles the TypeScript SDK with `tsc` (`npx -y -p typescript tsc`) using Node at `/tmp/node-v22.20.0-linux-x64/bin` when that tree exists, otherwise `node` and `npx` on `PATH`, then runs `node --test`.
+5. Runs `python3 -m unittest` for the Python SDK.
+6. Calls the generated Python and TypeScript clients against the server that is still running (`GET /api/me`, `GET /api/todos`, `GET /api/todos/1`, `POST /api/todos`, `GET /api/todos/99`).
+7. Fails if the marker `SECRET-` appears in the OpenAPI document, the generated SDK, or the command logs, then stops the server.
+
+```bash
+cargo build -p tracewise --bin tracewise
+./scripts/demo.sh
+```
+
+The script exits non-zero when any step fails. It uses `target/debug/tracewise` unless `TRACEWISE` points at another binary.
+
 ## Registering the MCP server
 
 ### Claude Code

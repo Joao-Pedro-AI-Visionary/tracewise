@@ -89,3 +89,9 @@
 
 ## 2026-10-11 09:49 — phase1c: generate_api_client (CLI: cursor:grok-4.7-high)
 - testes ok: 50
+
+## 2026-10-11 — phase1c: scripts/demo.sh
+- `scripts/demo.sh` sobe `fixtures/web/server.py`, grava HAR, infere o spec, gera SDKs TS+Python com replay, compila com tsc, roda `node --test` e `python3 -m unittest`, chama os SDKs no servidor ainda no ar e recusa `SECRET-` no spec, no SDK e nos logs. README: "Demo: site -> spec -> SDK".
+
+## 2026-10-11 09:58 — phase1c: demo.sh end-to-end (CLI: cursor:grok-4.7-high)
+- testes ok: 50
