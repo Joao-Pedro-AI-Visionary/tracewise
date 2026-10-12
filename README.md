@@ -52,6 +52,8 @@ tracewise generate-api-client spec.json --lang ts,py -o outdir --replay <capture
 
 `analyze_javascript_application` inventories a local JavaScript application directory and returns the REA application graph. Parsing and binding use oxc (parser + semantic) so node spans and symbol resolution match the original Babel walk on the `fixtures/js/app` fixture. The tool does not execute the application. Oracle comparison ignores `evidence_id`, `subject.local_path`, and `normalized_result.input_path`.
 
+`trace_javascript_semantics` walks that sealed graph. Directions are `forward-influence`, `backward-provenance`, `callers`, and `ownership`. Seeds are a semantic node, an application node, a function fingerprint, a literal, a property slot, an endpoint, an event name, or a boundary field. Candidate edges stay out unless `include_ambiguous_dynamic_edges` is true. The tool does not execute the application. On `fixtures/js/app` the oracle comparison ignores `evidence_id` only: `subject` is null, so there is no path or timestamp field. `parameters.application_evidence_id` and the trace `evidence_links` are compared and match the application evidence produced for that same fixture path.
+
 ## Demo: site -> spec -> SDK
 
 `scripts/demo.sh` walks the local fixture API through a redacted capture into typed clients:

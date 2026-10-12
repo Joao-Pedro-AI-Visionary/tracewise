@@ -2,8 +2,12 @@
 //!
 //! Ignored volatile fields when comparing to REA oracles:
 //! - `evidence_id` (content-addressed per observation envelope)
-//! - `subject.local_path` (host-specific absolute path)
-//! - `normalized_result.input_path` (same reason)
+//! - `subject.local_path` (host-specific absolute path; analysis only)
+//! - `normalized_result.input_path` (same reason; analysis only)
+//!
+//! `trace_javascript_semantics` has a null subject, so the path fields above
+//! are absent. No timestamp is part of the trace. The embedded
+//! `parameters.application_evidence_id` and `evidence_links` are compared.
 
 use rmcp::model::CallToolRequestParam;
 use serde_json::{json, Value};

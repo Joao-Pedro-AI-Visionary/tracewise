@@ -132,3 +132,13 @@
 
 ## 2026-10-11 21:27 — phase2: analyze_javascript_application (oxc) (CLI: cursor:grok-4.7-high)
 - testes ok: 61
+
+## 2026-10-11 — phase2: trace_javascript_semantics
+- crates/js: `trace_javascript_semantics` traverses the sealed semantic graph from `analyze_javascript_application`. Seed kinds, direction, candidate edges, coverage, and `jsrq_` query ids follow the REA query port. oxc is not re-run; the tool only reads the graph already stored on the application evidence.
+- crates/server: `handle_trace_javascript_semantics` accepts inline evidence or a `retained-evidence` reference already in the session ledger.
+- teste: `js_application_tools_test.rs` (`trace_javascript_semantics_matches_oracle`) valida `outputSchema` e paridade com `fixtures/js/oracle_trace_javascript_semantics.json`. Campo ignorado: `evidence_id`. Não há path nem timestamp no resultado (`subject` é null).
+- `generate_api_client_test` continua chamando `npx --yes --package=typescript -- tsc` para o `tsconfig.json` do SDK ser carregado.
+- testes ok: 61 (`cargo build --workspace`, `cargo test --workspace`, `cargo clippy --workspace --all-targets` sem erros)
+
+## 2026-10-11 21:58 — phase2: trace_javascript_semantics (oxc) (CLI: cursor:grok-4.7-high)
+- testes ok: 61

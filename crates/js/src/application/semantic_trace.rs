@@ -35,15 +35,18 @@ pub fn trace_javascript_semantics(
     query: &Value,
 ) -> Result<Evidence, JsError> {
     validate_application_evidence(application)?;
+    // Zod defaults `include_ambiguous_dynamic_edges` to false and `expected` to
+    // null before the query id is hashed. Omitting them must not change the id.
+    let query = normalize_query(query);
     let semantic = semantic_graph_from_result(&application.normalized_result)?;
     let graph_id = required_str(semantic, "graph_id")?;
-    let query_id = jsrq_id(graph_id, query)?;
-    let seeds = resolve_seeds(semantic, query)?;
-    let traversal = traverse(semantic, query, &seeds)?;
+    let query_id = jsrq_id(graph_id, &query)?;
+    let seeds = resolve_seeds(semantic, &query)?;
+    let traversal = traverse(semantic, &query, &seeds)?;
     let (nodes, relations) = retained_subgraph(semantic, &traversal);
-    let unknowns = relevant_unknowns(semantic, &traversal.node_ids, query);
-    let candidate_relations = relevant_candidate_relations(semantic, &traversal.node_ids, query);
-    let expected_match_node_ids = expected_match_node_ids(&nodes, &relations, query);
+    let unknowns = relevant_unknowns(semantic, &traversal.node_ids, &query);
+    let candidate_relations = relevant_candidate_relations(semantic, &traversal.node_ids, &query);
+    let expected_match_node_ids = expected_match_node_ids(&nodes, &relations, &query);
     let retained_context_ids = retained_context_ids(&nodes, &relations, &unknowns);
     let evidence_contexts = filter_evidence_contexts(semantic, &retained_context_ids);
     let assessment = assess_query(
@@ -147,11 +150,22 @@ fn required_str<'a>(value: &'a Value, key: &str) -> Result<&'a str, JsError> {
         .ok_or_else(|| JsError::InvalidInput(format!("{key} missing")))
 }
 
+fn normalize_query(query: &Value) -> Value {
+    let mut query = query.clone();
+    if let Some(obj) = query.as_object_mut() {
+        obj.entry("include_ambiguous_dynamic_edges".to_string())
+            .or_insert(json!(false));
+        obj.entry("expected".to_string()).or_insert(Value::Null);
+    }
+    query
+}
+
 fn resolve_seeds(graph: &Value, query: &Value) -> Result<Vec<String>, JsError> {
     let seed = query
         .get("seed")
         .ok_or_else(|| JsError::InvalidInput("query.seed missing".into()))?;
     let kind = required_str(seed, "kind")?;
+    let fingerprint_functions = fingerprint_function_ids(graph, seed, kind);
     let nodes = graph
         .get("nodes")
         .and_then(|v| v.as_array())
@@ -159,38 +173,83 @@ fn resolve_seeds(graph: &Value, query: &Value) -> Result<Vec<String>, JsError> {
     let mut ids = Vec::new();
     for node in nodes {
         let node_id = required_str(node, "node_id")?;
-        let matches = match kind {
-            "semantic-node" => seed.get("node_id").and_then(|v| v.as_str()) == Some(node_id),
-            "application-node" => {
-                seed.get("node_id").and_then(|v| v.as_str())
-                    == node
-                        .get("application_node_ids")
-                        .and_then(|v| v.as_array())
-                        .and_then(|arr| arr.first())
-                        .and_then(|v| v.as_str())
-            }
-            "function" => {
-                let fp = seed.get("fingerprint_sha256").and_then(|v| v.as_str());
-                node.get("kind").and_then(|v| v.as_str()) == Some("function")
-                    && graph
-                        .get("fingerprints")
-                        .and_then(|v| v.as_array())
-                        .map(|fps| {
-                            fps.iter().any(|entry| {
-                                entry.get("function_node_id").and_then(|v| v.as_str()) == Some(node_id)
-                                    && entry.get("fingerprint_sha256").and_then(|v| v.as_str()) == fp
-                            })
-                        })
-                        .unwrap_or(false)
-            }
-            _ => false,
-        };
-        if matches {
+        if seed_matches(node, node_id, seed, kind, &fingerprint_functions) {
             ids.push(node_id.to_string());
         }
     }
     ids.sort_by(|a, b| compare_unicode_code_points(a, b));
     Ok(ids)
+}
+
+fn fingerprint_function_ids(graph: &Value, seed: &Value, kind: &str) -> HashSet<String> {
+    if kind != "function" {
+        return HashSet::new();
+    }
+    let wanted = seed.get("fingerprint_sha256").and_then(|v| v.as_str());
+    graph
+        .get("fingerprints")
+        .and_then(|v| v.as_array())
+        .map(|entries| {
+            entries
+                .iter()
+                .filter(|entry| entry.get("fingerprint_sha256").and_then(|v| v.as_str()) == wanted)
+                .filter_map(|entry| {
+                    entry
+                        .get("function_node_id")
+                        .and_then(|v| v.as_str())
+                        .map(String::from)
+                })
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
+fn seed_matches(
+    node: &Value,
+    node_id: &str,
+    seed: &Value,
+    kind: &str,
+    fingerprint_functions: &HashSet<String>,
+) -> bool {
+    match kind {
+        "semantic-node" => seed.get("node_id").and_then(|v| v.as_str()) == Some(node_id),
+        "application-node" => node
+            .get("application_node_ids")
+            .and_then(|v| v.as_array())
+            .map(|ids| {
+                ids.iter()
+                    .any(|id| id.as_str() == seed.get("node_id").and_then(|v| v.as_str()))
+            })
+            .unwrap_or(false),
+        "function" => fingerprint_functions.contains(node_id),
+        "literal" => {
+            node.get("kind").and_then(|v| v.as_str()) == Some("literal")
+                && property_value(node, "value") == seed.get("value")
+        }
+        "property" => {
+            node.get("kind").and_then(|v| v.as_str()) == Some("property-slot")
+                && property_value(node, "name") == seed.get("name")
+        }
+        "endpoint" => {
+            node.get("kind").and_then(|v| v.as_str()) == Some("request")
+                && property_value(node, "endpoint") == seed.get("value")
+        }
+        "event" => {
+            matches!(
+                node.get("kind").and_then(|v| v.as_str()),
+                Some("event") | Some("listener")
+            ) && property_value(node, "event_name") == seed.get("name")
+        }
+        // Remaining schema member is `boundary-field`. Unknown kinds do not match.
+        _ => {
+            node.get("kind").and_then(|v| v.as_str()) == Some("boundary")
+                && property_value(node, "field") == seed.get("field")
+        }
+    }
+}
+
+fn property_value<'a>(node: &'a Value, key: &str) -> Option<&'a Value> {
+    node.get("properties").and_then(|props| props.get(key))
 }
 
 fn traverse(graph: &Value, query: &Value, seeds: &[String]) -> Result<Traversal, JsError> {
@@ -231,7 +290,9 @@ fn traverse(graph: &Value, query: &Value, seeds: &[String]) -> Result<Traversal,
     for id in &node_ids {
         retain_owners(nodes.get(id), &mut function_ids, &mut modules);
     }
-    let mut queue: VecDeque<String> = node_ids.iter().cloned().collect();
+    // Seed order is already Unicode-sorted. HashSet iteration would walk a
+    // different order than the original Set, which inserts seeds in that order.
+    let mut queue: VecDeque<String> = seeds.iter().cloned().collect();
     while let Some(current) = queue.pop_front() {
         for entry in adjacency.get(&current).map(|v| v.as_slice()).unwrap_or(&[]) {
             relation_ids.insert(entry.relation_id.clone());
