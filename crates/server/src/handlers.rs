@@ -126,6 +126,9 @@ async fn execute_tool(
         "trace_application_feature" => handle_trace_application_feature(session, args),
         "compare_application_versions" => handle_compare_application_versions(session, args),
         "compare_javascript_export_shapes" => handle_compare_javascript_export_shapes(session, args),
+        "list_javascript_runtime_targets" => handle_list_javascript_runtime_targets(session, args).await,
+        "observe_javascript_runtime" => handle_observe_javascript_runtime(session, args).await,
+        "reconcile_javascript_runtime" => handle_reconcile_javascript_runtime(session, args),
         name if tracewise_contracts::phase2_tool_names().contains(&name) => {
             Err(McpError::internal_error(
                 format!("not yet implemented: {name}"),
@@ -191,6 +194,12 @@ fn progress_message(tool_name: &str, start: bool) -> String {
         ("discover_webmcp_tools", false) => "WebMCP tools discovered".to_string(),
         ("capture_browser_scenario", true) => "Capturing browser scenario...".to_string(),
         ("capture_browser_scenario", false) => "Browser scenario captured".to_string(),
+        ("list_javascript_runtime_targets", true) => "Discovering V8 Inspector targets...".to_string(),
+        ("list_javascript_runtime_targets", false) => "V8 Inspector targets listed".to_string(),
+        ("observe_javascript_runtime", true) => "Observing JavaScript runtime...".to_string(),
+        ("observe_javascript_runtime", false) => "JavaScript runtime observed".to_string(),
+        ("reconcile_javascript_runtime", true) => "Reconciling static and runtime evidence...".to_string(),
+        ("reconcile_javascript_runtime", false) => "JavaScript runtime reconciled".to_string(),
         ("infer_api_spec", true) => "Inferring OpenAPI spec from redacted capture...".to_string(),
         ("infer_api_spec", false) => "OpenAPI spec inferred".to_string(),
         ("generate_api_client", true) => "Generating typed API clients...".to_string(),
@@ -1250,4 +1259,39 @@ fn handle_generate_api_client(session: &BinarySession, args: &Value) -> Result<C
     let val = serde_json::to_value(&generated.evidence)
         .map_err(|e| McpError::internal_error(e.to_string(), None))?;
     Ok(CallToolResult::structured(val))
+}
+
+async fn handle_list_javascript_runtime_targets(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_js::runtime::inspector::parse_list_runtime_targets_input(args).map_err(|e| {
+        McpError::invalid_params(format!("Invalid list_javascript_runtime_targets input: {e}"), None)
+    })?;
+    browser_tool_result(
+        session,
+        tracewise_js::runtime::inspector::list_javascript_runtime_targets(&input).await,
+    )
+}
+
+async fn handle_observe_javascript_runtime(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input = tracewise_js::runtime::inspector::parse_observe_runtime_input(args).map_err(|e| {
+        McpError::invalid_params(format!("Invalid observe_javascript_runtime input: {e}"), None)
+    })?;
+    browser_tool_result(
+        session,
+        tracewise_js::runtime::inspector::observe_javascript_runtime(&input).await,
+    )
+}
+
+fn handle_reconcile_javascript_runtime(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let evidence = tracewise_js::reconcile_javascript_runtime(args)
+        .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
+    remember_evidence(session, evidence)
 }

@@ -150,3 +150,14 @@
 
 ## 2026-10-12 08:08 — phase2: export shapes, version compare, feature trace (CLI: cursor:grok-4.7-high)
 - testes ok: 65
+
+## 2026-10-12 — phase2: list/observe/reconcile javascript runtime
+- crates/js: passive V8 Inspector (`Runtime.enable` + `Debugger.enable` only) over the existing CDP WebSocket client, plus static/runtime reconciliation of sealed application evidence.
+- crates/server: dispatch of `list_javascript_runtime_targets`, `observe_javascript_runtime`, and `reconcile_javascript_runtime`. Observation failures return `isError`.
+- teste: `js_runtime_tools_test.rs` valida `outputSchema`. Reconciliação contra o oráculo REA não ignora campo nenhum. Os testes ao vivo sobem `node --inspect=127.0.0.1:0` e ignoram só campos de processo: `evidence_id`, `inspector_endpoint`, `target_id`, `execution_contexts[].name`, `metadata_bytes_retained`.
+
+## 2026-10-12 08:50 — phase2: V8 Inspector runtime tools (CLI: cursor:grok-4.7-high)
+- testes ok: 80
+
+## 2026-10-12 08:46 — phase2: V8 inspector runtime tools (CLI: cursor:grok-4.7-high)
+- testes ok: 80

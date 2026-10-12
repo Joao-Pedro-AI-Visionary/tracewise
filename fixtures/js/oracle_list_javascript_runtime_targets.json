@@ -1,0 +1,74 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_749e200e0eb046e28edfbdc59ac730408962e71bc3c82ab0c502d0a88fc89479\",\"subject\":null,\"provider\":{\"id\":\"rea-v8-inspector\",\"name\":\"REA passive Node/Electron V8 Inspector provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.javascript-runtime-target-list\",\"operation\":\"list_javascript_runtime_targets\",\"parameters\":{\"inspector_endpoint\":\"http://127.0.0.1:9333\"},\"raw_result\":null,\"normalized_result\":{\"runtime\":{\"product\":\"node.js/v22.23.3\",\"protocol_version\":\"1.1\",\"v8_version\":null},\"targets\":[{\"target_id\":\"8b7cf812-3d3b-4f75-86e7-65a20ee18266\",\"protocol_type\":\"node\",\"attached\":false,\"location\":{\"kind\":\"file\",\"file_path\":\"/workspace/tracewise/fixtures/js/runtime/keepalive.cjs\"}}],\"excluded\":{\"unsupported_location\":0,\"unconnectable\":0},\"limitations\":[\"REA attaches to an already-running exact target and never launches, resumes, evaluates, pauses, or mutates it.\",\"Only Runtime.enable and Debugger.enable are sent; source text, object values, EventEmitter activity, and Electron IPC are not inspected.\",\"The selected endpoint and target ID authorize observation; discovery file locations can remain unresolved and do not prove filesystem identity.\",\"Node discovery reports a best-effort pathname rather than an encoded file URL; lossy Windows paths and ambiguous underscores are preserved without guessing a file path.\",\"Every target exposed by the selected Inspector endpoint is eligible for observation; target IDs and locations are not authenticated as operating-system process identity.\",\"No runtime graph depth is traversed because passive Inspector events do not establish require/import caller edges.\"]},\"confidence\":\"observed\",\"authority\":\"external-service\",\"environment\":{\"id\":\"node.js/v22.23.3@1.1\",\"platform\":\"unknown\",\"architecture\":\"unknown\",\"isolation\":\"none\"},\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"REA attaches to an already-running exact target and never launches, resumes, evaluates, pauses, or mutates it.\",\"Only Runtime.enable and Debugger.enable are sent; source text, object values, EventEmitter activity, and Electron IPC are not inspected.\",\"The selected endpoint and target ID authorize observation; discovery file locations can remain unresolved and do not prove filesystem identity.\",\"Node discovery reports a best-effort pathname rather than an encoded file URL; lossy Windows paths and ambiguous underscores are preserved without guessing a file path.\",\"Every target exposed by the selected Inspector endpoint is eligible for observation; target IDs and locations are not authenticated as operating-system process identity.\",\"No runtime graph depth is traversed because passive Inspector events do not establish require/import caller edges.\",\"Runtime host platform and architecture were not observed.\"],\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_749e200e0eb046e28edfbdc59ac730408962e71bc3c82ab0c502d0a88fc89479",
+    "subject": null,
+    "provider": {
+      "id": "rea-v8-inspector",
+      "name": "REA passive Node/Electron V8 Inspector provider",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.javascript-runtime-target-list",
+    "operation": "list_javascript_runtime_targets",
+    "parameters": {
+      "inspector_endpoint": "http://127.0.0.1:9333"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "runtime": {
+        "product": "node.js/v22.23.3",
+        "protocol_version": "1.1",
+        "v8_version": null
+      },
+      "targets": [
+        {
+          "target_id": "8b7cf812-3d3b-4f75-86e7-65a20ee18266",
+          "protocol_type": "node",
+          "attached": false,
+          "location": {
+            "kind": "file",
+            "file_path": "/workspace/tracewise/fixtures/js/runtime/keepalive.cjs"
+          }
+        }
+      ],
+      "excluded": {
+        "unsupported_location": 0,
+        "unconnectable": 0
+      },
+      "limitations": [
+        "REA attaches to an already-running exact target and never launches, resumes, evaluates, pauses, or mutates it.",
+        "Only Runtime.enable and Debugger.enable are sent; source text, object values, EventEmitter activity, and Electron IPC are not inspected.",
+        "The selected endpoint and target ID authorize observation; discovery file locations can remain unresolved and do not prove filesystem identity.",
+        "Node discovery reports a best-effort pathname rather than an encoded file URL; lossy Windows paths and ambiguous underscores are preserved without guessing a file path.",
+        "Every target exposed by the selected Inspector endpoint is eligible for observation; target IDs and locations are not authenticated as operating-system process identity.",
+        "No runtime graph depth is traversed because passive Inspector events do not establish require/import caller edges."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "external-service",
+    "environment": {
+      "id": "node.js/v22.23.3@1.1",
+      "platform": "unknown",
+      "architecture": "unknown",
+      "isolation": "none"
+    },
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "REA attaches to an already-running exact target and never launches, resumes, evaluates, pauses, or mutates it.",
+      "Only Runtime.enable and Debugger.enable are sent; source text, object values, EventEmitter activity, and Electron IPC are not inspected.",
+      "The selected endpoint and target ID authorize observation; discovery file locations can remain unresolved and do not prove filesystem identity.",
+      "Node discovery reports a best-effort pathname rather than an encoded file URL; lossy Windows paths and ambiguous underscores are preserved without guessing a file path.",
+      "Every target exposed by the selected Inspector endpoint is eligible for observation; target IDs and locations are not authenticated as operating-system process identity.",
+      "No runtime graph depth is traversed because passive Inspector events do not establish require/import caller edges.",
+      "Runtime host platform and architecture were not observed."
+    ],
+    "locations": [],
+    "evidence_links": []
+  }
+}

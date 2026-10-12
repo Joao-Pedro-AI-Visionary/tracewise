@@ -8,6 +8,7 @@ repository.workspace = true
 
 [dependencies]
 tracewise-domain = { path = "../domain" }
+tracewise-web = { path = "../web" }
 serde = { workspace = true }
 serde_json = { workspace = true }
 sha2 = { workspace = true }
@@ -31,6 +32,10 @@ zip = { version = "0.6", default-features = false, features = ["deflate"] }
 walkdir = "2.5"
 tempfile = "3.14"
 unicode-normalization = "0.1.24"
+tokio = { workspace = true }
+reqwest = { workspace = true }
+url = { workspace = true }
+percent-encoding = "2"
 
 [dev-dependencies]
 jsonschema = { workspace = true }

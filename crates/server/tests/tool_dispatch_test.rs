@@ -1,5 +1,5 @@
 //! Phase 0 and Phase 1 tools must reach a real handler.
-//! Phase 2 tools are registered and return `not yet implemented: <tool>`.
+//! Phase 2 tools not yet ported are registered and return `not yet implemented: <tool>`.
 //!
 //! Empty input may fail validation. It must not report that the tool is unknown.
 //! Phase 0 and Phase 1 must not report that the implementation is still missing.
@@ -25,6 +25,9 @@ const PHASE2_IMPLEMENTED: &[&str] = &[
     "trace_application_feature",
     "compare_application_versions",
     "compare_javascript_export_shapes",
+    "list_javascript_runtime_targets",
+    "observe_javascript_runtime",
+    "reconcile_javascript_runtime",
 ];
 
 #[tokio::test]
@@ -36,12 +39,12 @@ async fn every_rea_tool_dispatches_to_an_implementation() {
         .copied()
         .filter(|name| !PHASE2_IMPLEMENTED.contains(name))
         .collect();
-    assert_eq!(pending.len(), 13);
+    assert_eq!(pending.len(), 10);
     let mut implemented: Vec<&str> = Vec::new();
     implemented.extend_from_slice(phase0_tool_names());
     implemented.extend_from_slice(phase1_tool_names());
     implemented.extend_from_slice(PHASE2_IMPLEMENTED);
-    assert_eq!(implemented.len(), 37, "27 phase0/1 + 10 phase2 tools");
+    assert_eq!(implemented.len(), 40, "27 phase0/1 + 13 phase2 tools");
     let session = BinarySession::new();
     for name in implemented {
         let result = call_tool_local(

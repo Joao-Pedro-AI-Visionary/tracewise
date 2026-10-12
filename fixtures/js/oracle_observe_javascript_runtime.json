@@ -1,0 +1,1134 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_39815a6788a9e9bbed549a859d55009a7f7f89bfc0eb2675f2c1c7bbd2209b94\",\"subject\":null,\"provider\":{\"id\":\"rea-v8-inspector\",\"name\":\"REA passive Node/Electron V8 Inspector provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.javascript-runtime-observation\",\"operation\":\"observe_javascript_runtime\",\"parameters\":{\"inspector_endpoint\":\"http://127.0.0.1:9333\",\"target_id\":\"8b7cf812-3d3b-4f75-86e7-65a20ee18266\",\"runtime_kind\":\"node\",\"observation_ms\":100},\"raw_result\":null,\"normalized_result\":{\"runtime\":{\"product\":\"node.js/v22.23.3\",\"protocol_version\":\"1.1\",\"v8_version\":null},\"target\":{\"target_id\":\"8b7cf812-3d3b-4f75-86e7-65a20ee18266\",\"protocol_type\":\"node\",\"attached\":false,\"location\":{\"kind\":\"file\",\"file_path\":\"/workspace/tracewise/fixtures/js/runtime/keepalive.cjs\"},\"runtime_kind\":\"node\",\"runtime_kind_authority\":\"caller-declared-unverified\"},\"capture\":{\"observation_ms\":100,\"events_observed\":86,\"events_retained\":86,\"events_dropped\":0,\"metadata_bytes_retained\":64954,\"truncated\":false,\"truncation_reasons\":[]},\"scripts\":{\"items\":[{\"script_key\":\"v8_script_00328d8d692fd514ed73fc1d81b74cff3b79cb9fe9ae0c520401868fcceb020a\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/util/types\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"705ac21fa55d3e8e3b7813990dbf056b973aaea29c1c8bd1acceb55b48477805\",\"length\":2599,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_00dbdb9ec218bf5da55991c5e1ccc5e9c587ef6dfcf83dda8916bee5dd0dfa47\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/source_map/source_map_cache\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"fbd34e28c94cab4312976984465269e92bfef284bba5603685b63af05044ce7c\",\"length\":15983,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_04e52781a5838d0c8ee024766d9b7c7154a63b8ff16b3aa91438a42c3ec6554e\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/webstreams/queuingstrategies\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"95ab46454fba6353d2e63e4f895c57aa84f1536d02babd63e3a57cce2338196e\",\"length\":3292,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_0a321aeca0ec7dbab967a0b1f7893071f00fd5cdca45b401821e520e0aaae78d\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/vm\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"0bb0f714e14efb428688ecb559d7384d06eedba3391a27edbd4749a940f43fdf\",\"length\":8732,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_0a6f38ea91f241bf6e16f71ab20fbec98eba246eae2ddaaa5f5d87c1706b395e\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/process/per_thread\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"9fb576a173cf42cfde6a73798c538ff8ad470b03fa8c4d132083774aee0e2266\",\"length\":16689,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_0af1dc0b35532b9a240d87b05ae276c0e90921ffebb4c706c26aaa58bd365d57\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/errors\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"a03b0a92d4b62655d1fe8f05b039251ff63a1d826743c6354ca5a2920b7c1751\",\"length\":69419,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_0d2ad2cafe8c90a27fa5ac4338b6a6d3808ef35373d5c40f9b5a5b40b1356ec4\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/get_format\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"23e012d48bdbc92a2d7e4181283963b931dc2dc6651c50a065986aea5bc66f4c\",\"length\":9499,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_0f4abac360d757c65e3812b0ddb9f09a24b7cff604d2a5f6313b943773a8fffe\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:url\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"3cf9fa610fb1af97f3f46b96c49b8a15163c6693f685fa1fd6af66b02aff4603\",\"length\":32879,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_104ac866dcef108d26c23eafd50e8aca2933607ae2c688c03ac2dafb147b065a\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/utils\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"d5bb83ff0cf3fe43e813a0e5661fc9ec8a5d8a52094985b0c4c3fe89fb9ebaf1\",\"length\":13747,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_10d541aa1488e01ad7d2472a034ade45f646cdba97a6c163e70c7c7d912a0031\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/bootstrap/web/exposed-window-or-worker\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"e7ef38896193293a8351ab830f7bf283773a78a57d02b98484ce0f0aa343ad54\",\"length\":3570,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_111b6685e17e5148ceedba84f8966d522d7672edfb0372e04096f83a1b36fe1c\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/process/task_queues\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"bcacd88d13bda207276f20afb47b696e9512c6e54af74c04ef5096efea17c9a0\",\"length\":4567,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_1396b21a61e73316fb495ef9326c6b5e4ac23036a4eed1c196494a1f375c455e\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/webidl\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"9b7c16464e85c47d7f499d433471ef0a847fbea14af27486cccad2fc40efc9e5\",\"length\":9842,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_1894b9a23ca8a4b7dd0f7264192418fe807d4061fe2a51d158ab69dbc6a04d88\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/per_context/domexception\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"192c50403a1d20d67d0a9e06e46137255a13658f1511448c315ceb3ccdb0b7b1\",\"length\":6479,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_1d8e15dc8e76f64bde71b3a7d8654675d93dd9c1dca18c965317566f2f9f4a3b\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/run_main\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"cd282d78d962d34e9f6970c2e50fd34f0e42402b3bbc89c3a6038819b147e4c6\",\"length\":7147,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_232d93775c343fc4fefb7ea4074d885f4149c7bc251028dcb130a7b3f74e956c\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/validators\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"46bda12755d127cdefd237cfa25aa14d037216ca0a44a3de693fcd23b446401b\",\"length\":18481,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_2600ba8db3756426d375b593b5a34748bc85206b954b2f9445594c8d48ee7595\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/linkedlist\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"71560ae7794bfaff7dd2613dd12b65a5cfd3fe5fef459638acc5ea38e2273cec\",\"length\":1128,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_2d6053fcaab1538b7836ebf94f1d5742ab7b6343a1044f76025b962342765051\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/async_context_frame\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"4011e2d68ff594e52f67eaee719e909332870338459174d017b0f38a3d516133\",\"length\":1584,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_2f6e0d6a1a73644ccf20bb3969cccacca6ba63cfb4da179d744747b008989d7f\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/assert\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"48e9daf26d4f649bc225e4a655d912ed25dfbb856cfdc6a0a990da18a3f3882f\",\"length\":3885,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_30a7fb5e782aaf1f508b91c5f29fb8f35040c08dcc3a5132fd95a2b764a89e38\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/assert\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"03940c9b646255b631d3a95cf2a9ad156d587db8b0ac223d1a87f3fd5531a807\",\"length\":445,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_337458f03c63b9a814f1582ed44183087d9ccbad6965e4e9be4d61c5411b9361\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/data_url\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"e1d38b25c7c7351bcf20d2809a0bfc09740eddedeba84300eae31825ae5edefa\",\"length\":10194,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_35f266ee5af0c57d578da0bd3cda73ec9ba09bcf35a344dfafa66b9e04e9f12e\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/module_map\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"d20ff3764e9910877ff39cb97827b25f4199d7cb4885e2eac2fc11af65069ff4\",\"length\":3891,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_3924ffdcb82221e88a670921c00951df40bb8105a3ed5ba6493b9ed01e7c26c8\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/bootstrap/realm\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"bd8fcaf6ba0938f776833aa764ded021df9c1dd5ae41094e08147f7cb4fb2ad2\",\"length\":15330,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_4203720db46258643e8ca162f3cb8a0b1c55f5dda2ac9ad606cf3e473ae84389\",\"location\":{\"kind\":\"file\",\"file_path\":\"/workspace/tracewise/fixtures/js/app/src/math.js\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"857226a09230d8a275b5816aa131f12ba7817785c39248b1cd4790e109091913\",\"length\":60,\"is_module\":true,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_4312d8ecf86ee94e2a8ce8535c1e0df7528e2771904b350156b134995e679686\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/customization_hooks\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"b9dc43f66495716ff11cd80fef47f76dd1dabd482499ddb3f5a16654196f5203\",\"length\":13425,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_43af03a7e6d3cdb7e2a40b5329e4099e27e72f5def8a751a55800b1ebf28713d\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:timers\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"bf9393ecf31e41096610073e0c8fcf5657407bea2953e05c75a15e08cfac6752\",\"length\":8069,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_4418f4feb3bdb657a3665c530494a69becdb8e0f3ff4cfadc65f8352c76f2eb5\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/util/debuglog\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"4471d0ba1b85d272e583aef5ec9fe05c28377bf59b923523495bcba46a858fec\",\"length\":12596,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_4751c24816950c36282cfe14e734c0f3f28f2bdd1bef7f1908242ad9194a872b\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/util/inspect\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"2f2f01d7077800f8565d1be2bd1e6800f8ac02759482dc080eb6bc6005d67dd1\",\"length\":92841,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_4af9abd54dc0872c0c942569d97505b58b26b11bb8d1e2e18a792d25a1c3024c\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/per_context/primordials\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"9e3fe2fe051667172d6ed9d997eee99b3454a7e4ec779dd63c1f19d44b25b1ca\",\"length\":21705,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_4d0944a09c9c0e035eaf620d0eab5b13e9558dafd9eb94c743a11cb07f69b560\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/deps/cjs-module-lexer/lexer\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"38c6e2ee98eea2d2ffa5d6bc9f51d40c3b4f2b1125f826c6302b1ad773f408ca\",\"length\":57085,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_4f393441bee270559020cb0ee031d9c6b373a546b2e1d470943f682615776d02\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/formats\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"fd3355025387fbb336377d122db31a695240a1e1a956e81038d629efb4637dd5\",\"length\":1847,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_4f77812754cb2d888e8f15d894e2b3e9fe9dd28605e7d49d2c996c5d6dd2b9f5\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/bootstrap/node\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"4ad17b0ba3ced856586f4b776d4e51588c40eab08543c043ecc374de0714e620\",\"length\":15968,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_50092b00b7948c0681d131ad86a58dfb610a8d60effa94333ee82bfc9214196a\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/process/execution\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"c6b5eb6e9bf08913b7e2e628e1c93fbbb5aa42f1f18bd42a8998b06c418df1af\",\"length\":17028,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_55e7475d81488d59945d4277d5d9e708539e054d7e97be3ee7e29f59d5598d26\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:async_hooks\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"2e87e6ccddf488953432059d0592b068a4bf4037a989b0a89e22305f81d112e4\",\"length\":8490,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_55fabe1f3bd640a9d6ed819683dab5a96373954f7ed3802e55c910a181a509d6\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/util/inspector\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"96ff6b3a871860e1720964aae93835b4e416bd1c8564f192b7aabb1149b621d8\",\"length\":3929,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_58bbe50c9591511dfc8042fa4566b3e66ab14768e4c99ab243afae1c3d80e5ee\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:querystring\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"4035dd8989e502f3c69eeba0eaeb9851c7609d749674a6bcbb043a1a0a65b507\",\"length\":14574,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_5ad50b4671fa3e7239ed2ac0af7df2b0f8c34cd6463e897dbe0dbe4eea3d0f57\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:buffer\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"7d7626b71543b81ffa0649d176d0b8ccc24a57dbf38805875526b121c91f226b\",\"length\":40144,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_5d0d799c021914a79b589d348235bed936da1fa5c92e4c629a157276582fa4e4\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/buffer\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"1cb45b32eb686a4e00e6b37f0181ba773d3aa9d3427766ecfa43a2ead1088588\",\"length\":31428,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_694a6728ba00ee7325dfe3a700be77b387d8cedb413492a1fc2c621d8a25427e\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/v8/startup_snapshot\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"f26e2afef596dbbb38ea7f2f1b379df5261de2a4167254dc71bcd7e0e1d9b70e\",\"length\":3760,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_6ce87382dd8a69a1c7fcca12a1e618b524cce97444dac3e61c2e599760c1a398\",\"location\":{\"kind\":\"file\",\"file_path\":\"/workspace/tracewise/fixtures/js/runtime/keepalive.cjs\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"dd45be4d0be1e1213a8a3d2a8d0faf84bc9fc5cfcb6ecc7f1d465132605ddffb\",\"length\":105,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_721b7d806b598de8e29ad70849820e1b0614ffe767ab0d00488d0a6978dc971f\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/main/run_main_module\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"865acae8854762473654555a167f46bc6208c534fccef0356b744ea2bec8a879\",\"length\":1367,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_75ba0cd00b8483ad27c310a35ea0975b06897bfd2410671029a9c02638d1ea51\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/process/permission\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"2bd8c670dc01e7e6eea640d4135818c954ba3afa890275cbd4e25d3508767a13\",\"length\":1083,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_75cd9a9aa17dbc146e752e5119bcc4faa1a6aa614ee789efaab745a0add7ddaf\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/perf/utils\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"12aaefacd6f7b67360fb9758cdc94c8e0f2d43c36a1f71f313c3e4f776e80be0\",\"length\":810,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_762159ff520782aaee10efa1985713bb7f562714a8c1a9e19e05292458f41596\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/util\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"e962ae18fd72e5bb4211f01e6054251553cbbd910384ece00aae653d05dfa3f5\",\"length\":28659,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_77cc2f9a171694aca41f151568239f9c9a7e73de6df7f2fa2ada089e2ac8be43\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/translators\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"11371a822faeb2dc50926d40a4cedfe77f9bfcfef4a9c56040008fa26ad8ccf0\",\"length\":24788,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_77cedec221610437a15f09d6b27a6f5af7421c0bc2293af43815de3d712ca526\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/blob\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"17bed65986cfd91db219abfa9c4d7c69c1063bbeaf558bdc8b78b622690137a5\",\"length\":13392,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_782b6e64c76774cbfcd051e78fdcb6dfe4f0fe53a24a636dba1fa40f01ab95ad\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/module_job\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"827b5b4980549489d930f0592c39b5ac98ea037fdbc0dbf12f3c867575a3b41c\",\"length\":18190,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_7ad7bb1544904267542d12eb84be10ede46bc1195efbe0f5dc816045990a1aad\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/priority_queue\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"5e2b5101114b24354405eda2a905af10ce23967dd7bfa34aa7fdb42dc2187338\",\"length\":2755,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_7ff9a836ec36b5360b9baee90fee211b8cc28cb603c2cfbe3ce5707f510df79f\",\"location\":{\"kind\":\"file\",\"file_path\":\"/workspace/tracewise/fixtures/js/app/src/main.js\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"2e4065a0f8641add2ca49f638fa352b0801f8a5f7ee4972cd50ba4bb06d543b1\",\"length\":160,\"is_module\":true,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_8459437e48136d60bed53f158dad5c24bb8b2b6366fa87347dc4bec63e85c1f8\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/webstreams/util\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"f46b37ae4a9a5a358127f2909a41544a68e648d4e6d6d5d9d6e3f2ca9fe5aefd\",\"length\":7830,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_87311d3d91d2de76dec0ab5aa9f7b10a24fbfa1a90cc298af82cb0549fd5bc21\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/events/abort_listener\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"24b1fda65b188e7b9f2d5e29e797e7e3f48f0ffe18f44b24e8985a52107a2c3a\",\"length\":1333,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_8a1a80f02e57b17b85613b1f78db12990e296a41d52e5f8d02e20df58bfe2f06\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/streams/utils\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"76f2a40f2e1b799a575116036549bf5eca5f69b9038a77b1016eee823e51625f\",\"length\":8930,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_940c17cd998acaac4182ad26a37ac3d2901c9290b10cbf50c32aabd48f189255\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:path\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"fce96c4f2cf099ed8dd00499df8b80873a18811ca1340868f0ca87c148d38191\",\"length\":53049,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_995085e125c1f7c62dd33a09813f6ea013fc571f187431b31c60cdd070ac09cb\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/bootstrap/switches/does_own_process_state\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"eab185e4a26a807d21da8f3addba046b7a91e5ba2ca0bba86ef062663dd6f4aa\",\"length\":3835,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_9dfd15d7ab01f09bb87d1d3fce3c91d0cde3f21e46108bf282e83e4fa01bfe2d\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/url\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"99c0b26b868ead97ac2e6cc0f0d37458f45ab2fcd0a2ebae24676753e6fbfa4a\",\"length\":52777,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_a25ec18d002b6a19f4534bb95b54df61a4da84b048f449d984ddb3a785b4a46d\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/per_context/messageport\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"28bf223a668ddaa3ac43fdc84b7196e3c8e689d9d6c5d845d0d525a2fcb5410c\",\"length\":995,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_a2cbfdd30f905b1a2df1ad6e220e2c2bdfd60449ac952afa8e75d0feb697b951\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/resolve\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"293d95ffc3145b5b35ca0d49304b4e2b9dff100b6d340f7c89d059b05dabb58e\",\"length\":39375,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_a4be0cae07383fc8c909344d313cb2a73c38e42ab6fd8c04d9ea71c083eb051e\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/process/warning\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"b3abe35b1f8c98d6fb7ff34649d422fe4ae8b700968a533a5e20ade7bc471ee8\",\"length\":5861,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_a57ab500cd3ac95d874dad6b9388d6f89b79f5e31cb4da0f3df3f4d6f2cc18ce\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/fixed_queue\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"5fff3e6a7fa1218b41529de64dd628e1edf30e5de725f8acaf71796c23e93ab3\",\"length\":4261,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_a60abd58a9f2f1f2baa39aef3be24de0173d0fdc92636fcbf922ac7fc63033cf\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:fs\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"7ce17b5a74abfe1b988222f62522a70958bac154f1828a11b047379648c688b6\",\"length\":87228,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_aacffbd09a96b9f569f2f969285e21a00e766eb755a13a8e972c425f5464a561\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:events\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"c582ddd6009ed61d227e119d42c4c12bb2e7919cc8eb7227763679fbde006b1b\",\"length\":35849,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_ab7a470ce59db59360a49624471d24b0e5433086229fa3361bd3e037def8fa83\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/console/constructor\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"25fc515cd8749c0b123a3fc61f5ad168dba39ad396835ab986f38d4543c0bfd7\",\"length\":21364,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_ac29d51073f8b3d8895549cbf3687039d0899758f65b20b482e033587572fdfa\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/inspector_async_hook\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"775c25b5a23aa80325d69300264b41c3c6b8080d47c577c33fcdc8ebc2485238\",\"length\":1712,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_ad4ba26e72ec8ee6117d82b3647757e4d1c33e27821985a7de91b57fa870696a\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/helpers\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"e483d568322be909c123f9149fd47f7b2026600c97056d8fcf84b742dbd48463\",\"length\":14185,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_af8b7ed2a7dc82e76b8ac15dfb020fdd82ff2737c5e815b3a7c1868150d9fa1d\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/process/promises\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"465338eac7d7497c7448ebfdbb1c37f29e4403d104ed3259890eb592f6151ce3\",\"length\":13871,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_b027d672d630489e86a2f9fddbae4f1ba5f7b18072823da37af1332314a8e21b\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/process/pre_execution\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"2ce1ff6536d196e772e2c83a0ba5b8f5c23c89d183181cd993ad0a7a990413df\",\"length\":25265,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_b0f2f5599ec8f241e89a68fbfd9bd9463693407742ebdc8ec5dbd08ce3e1ad0e\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/bootstrap/switches/is_main_thread\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"44f135420f29c701af74ac03355a54830151401e1dbf8a913b4f919bfeda312d\",\"length\":8694,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_b655c43243fae9237557b52a575c43bdb37b67cfa40132c0e15cc9bf1e7b6ae6\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/process/signal\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"7f2b9926fe8fb8ef850b72a7e751db6db1708e637d9dfcca815d2c40818d1794\",\"length\":1180,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_b74429a7e46072eca8dc853d1bdbe85b435a79413b9ee6c7b6ae3f1b2f8a8500\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/encoding\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"f1e675d9864e06620ecfa85190ac2499f2e5a400230ed510bac107f21dba7116\",\"length\":17654,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_b9d5cd4fad5154d98b4d0ba9539d01938001271566338690942f608c0e3d8178\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/worker/js_transferable\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"6fe7b5324f4b5d6a135fd3b03a259fa74f9081ab4d63e7ad486aa8f1408494df\",\"length\":4076,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_bec2dc270032eec15b46283bf0f42c1e8fd5438c135f73ff989a95a69d5feaf9\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/package_json_reader\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"4f42d4a2cc15da5f283665a5fe6e138ee5b18a0d1abd6295a6a4a721af663f45\",\"length\":11423,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_c06bcc28dbb5537e39cdfa3eb2bb239b9a95d667b58f3a86d22e404ca3c07292\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/querystring\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"92d0cbd561d7cce93936b083d56d2a41063d177f3aa6772ae2c1871f160163d1\",\"length\":3316,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_c097960e4986ffb7e5ee2f29aecc6f26ab0a737e265eb957d47f38b6450cf1a4\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/cjs/loader\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"3df4fee40598eb80e88be00cfd25007aa347440ab344e0a5b93c46baf092d77b\",\"length\":71302,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_c488857dd4793eaa5ed58bdc51f8509e4eb0be7a2cec6584973c4a6a6cb42685\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/typescript\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"9105053ae69ff74dddc88cdfca336f95fa1cbf2f98139667fbb031d52827054c\",\"length\":5977,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_c64a34f885109dd605db6842178782ceae02607a16a5c31be86967bbbdc2a22a\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/dns/utils\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"551792e7d334ab57d7be038458753365bf089f0c550f27c4bc1a16575f2f64ff\",\"length\":10116,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_cd5e1b400a0f12ea7ca030024ab01f5fc45fdca9308b8f2733e9fe851c324427\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/loader\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"3a4cc4c015adeb96e2d4180e674a724170a1289dc366f04183363e1377f69b76\",\"length\":42998,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_d369582af531dc709f3127b1ba81ff7e2bf2e6bd1b80c18740a9a6a2c1cf65f6\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/modules/esm/load\"},\"execution_context_key\":\"1\",\"cdp_hash\":\"9ef82aef95b359642f12cbbb86da64c8763376573736ef4aa87624b98c7c512d\",\"length\":6428,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_d7d6d73a00921b7adca2e6b87d7109adb23f912291189bd8e28e7c4c846c6dd7\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/options\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"78decf2b0b84134a133b553dac5adf1ac3c3fe4a584a0c416b6ce3f3823231a6\",\"length\":3104,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_e46f8588885902f5bab6ed6b2ed0b300c3febe7a3674ee57b34b4ed52416a5f1\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/timers\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"ffac3b74e15a57e22cd4be4cf0776504bf489684b50f8fe2d82ae8fcba6c159b\",\"length\":20095,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_ea68144fa2f70c202ee912ac3542e40d81aed423b00e2cc274e66df744dc59b3\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/async_hooks\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"c15b9efe4ad71cbb767c0f3f6ed636f1f07b9fb76c9dd5872790a108ec24363a\",\"length\":20505,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_f05f7653dd6455a1532707a4b7f420e20cf128937598738cb9a40da798877f09\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/fs/utils\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"bd9f6e21d625098ee54c80180acef3d1ea66b126c8b30f031defe431538cd6da\",\"length\":27298,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_f6d93c5c3f965ae829953a244713053880cf7ef07ebb59bb367192d1643cbe4c\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/net\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"edbf1a195b68a7840be4fb11f8967cc4c4ca52ac2e1b1d368fd887491ba7918e\",\"length\":2787,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_f857727713928d508308119685aaa1d277399439fc8d93f93e12cadf4218f127\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/event_target\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"fabb64dd3ce6dc0b60a927750d7bf8e6270eb35f3f6b5fe67c7f712357e12641\",\"length\":31987,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_f91d1f676ae60ec801a6f87b6a3bfaa85e6f3348dff9219e439c7f3835b30770\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:util\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"51b7311c67d79ba630450afd19686ec0b38cff0de6df3a85801188496ba11d9c\",\"length\":22410,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_fb392253a3abfcc836e65ebcc37b9dabcb0eaf6f94f37e1c373f0dcd0809759e\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:diagnostics_channel\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"b32ab2ecb196b53047979c42a546dec9b1560635e1327c0fbe0f27dd184c73eb\",\"length\":10481,\"is_module\":false,\"status\":\"observed-loaded\"},{\"script_key\":\"v8_script_fe6eefc2924d1ba952dfd0b40c333e5944cb03cd1ef59dc0facdfc9a6234fa3b\",\"location\":{\"kind\":\"builtin\",\"specifier\":\"node:internal/mime\"},\"execution_context_key\":\"0\",\"cdp_hash\":\"a926034befba38450e6198f7d9a1b27a4fb3dcf285cc2ba026adf64f95414430\",\"length\":11291,\"is_module\":false,\"status\":\"observed-loaded\"}],\"observed_total\":85,\"excluded\":{\"unsupported_location\":0,\"invalid_protocol_value\":0}},\"execution_contexts\":[{\"context_key\":\"1\",\"state\":\"created\",\"name\":\"/tmp/node-v22.20.0-linux-x64/bin/node[186710]\",\"origin\":\"\"}],\"directly_observed\":[\"Debugger.scriptParsed established script presence within the bounded capture window.\",\"Runtime execution-context lifecycle events established context creation, destruction, or clearing.\"],\"unavailable_without_instrumentation\":[\"require/import caller-to-callee edges\",\"EventEmitter emissions and listener invocation\",\"Electron IPC messages and handlers\",\"script unload events\"],\"unknowns\":[\"Scripts collected before attachment may have been garbage-collected and therefore omitted.\",\"A bounded observation window cannot establish that an unobserved script or behavior never occurs.\",\"The declared Node/Electron process role is not authenticated by the Inspector protocol.\"],\"limitations\":[\"REA attaches to an already-running exact target and never launches, resumes, evaluates, pauses, or mutates it.\",\"Only Runtime.enable and Debugger.enable are sent; source text, object values, EventEmitter activity, and Electron IPC are not inspected.\",\"The selected endpoint and target ID authorize observation; discovery file locations can remain unresolved and do not prove filesystem identity.\",\"Node discovery reports a best-effort pathname rather than an encoded file URL; lossy Windows paths and ambiguous underscores are preserved without guessing a file path.\",\"Every target exposed by the selected Inspector endpoint is eligible for observation; target IDs and locations are not authenticated as operating-system process identity.\",\"No runtime graph depth is traversed because passive Inspector events do not establish require/import caller edges.\"]},\"confidence\":\"observed\",\"authority\":\"external-service\",\"environment\":{\"id\":\"node.js/v22.23.3@1.1\",\"platform\":\"unknown\",\"architecture\":\"unknown\",\"isolation\":\"none\"},\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"REA attaches to an already-running exact target and never launches, resumes, evaluates, pauses, or mutates it.\",\"Only Runtime.enable and Debugger.enable are sent; source text, object values, EventEmitter activity, and Electron IPC are not inspected.\",\"The selected endpoint and target ID authorize observation; discovery file locations can remain unresolved and do not prove filesystem identity.\",\"Node discovery reports a best-effort pathname rather than an encoded file URL; lossy Windows paths and ambiguous underscores are preserved without guessing a file path.\",\"Every target exposed by the selected Inspector endpoint is eligible for observation; target IDs and locations are not authenticated as operating-system process identity.\",\"No runtime graph depth is traversed because passive Inspector events do not establish require/import caller edges.\",\"Runtime host platform and architecture were not observed.\"],\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_39815a6788a9e9bbed549a859d55009a7f7f89bfc0eb2675f2c1c7bbd2209b94",
+    "subject": null,
+    "provider": {
+      "id": "rea-v8-inspector",
+      "name": "REA passive Node/Electron V8 Inspector provider",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.javascript-runtime-observation",
+    "operation": "observe_javascript_runtime",
+    "parameters": {
+      "inspector_endpoint": "http://127.0.0.1:9333",
+      "target_id": "8b7cf812-3d3b-4f75-86e7-65a20ee18266",
+      "runtime_kind": "node",
+      "observation_ms": 100
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "runtime": {
+        "product": "node.js/v22.23.3",
+        "protocol_version": "1.1",
+        "v8_version": null
+      },
+      "target": {
+        "target_id": "8b7cf812-3d3b-4f75-86e7-65a20ee18266",
+        "protocol_type": "node",
+        "attached": false,
+        "location": {
+          "kind": "file",
+          "file_path": "/workspace/tracewise/fixtures/js/runtime/keepalive.cjs"
+        },
+        "runtime_kind": "node",
+        "runtime_kind_authority": "caller-declared-unverified"
+      },
+      "capture": {
+        "observation_ms": 100,
+        "events_observed": 86,
+        "events_retained": 86,
+        "events_dropped": 0,
+        "metadata_bytes_retained": 64954,
+        "truncated": false,
+        "truncation_reasons": []
+      },
+      "scripts": {
+        "items": [
+          {
+            "script_key": "v8_script_00328d8d692fd514ed73fc1d81b74cff3b79cb9fe9ae0c520401868fcceb020a",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/util/types"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "705ac21fa55d3e8e3b7813990dbf056b973aaea29c1c8bd1acceb55b48477805",
+            "length": 2599,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_00dbdb9ec218bf5da55991c5e1ccc5e9c587ef6dfcf83dda8916bee5dd0dfa47",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/source_map/source_map_cache"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "fbd34e28c94cab4312976984465269e92bfef284bba5603685b63af05044ce7c",
+            "length": 15983,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_04e52781a5838d0c8ee024766d9b7c7154a63b8ff16b3aa91438a42c3ec6554e",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/webstreams/queuingstrategies"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "95ab46454fba6353d2e63e4f895c57aa84f1536d02babd63e3a57cce2338196e",
+            "length": 3292,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_0a321aeca0ec7dbab967a0b1f7893071f00fd5cdca45b401821e520e0aaae78d",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/vm"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "0bb0f714e14efb428688ecb559d7384d06eedba3391a27edbd4749a940f43fdf",
+            "length": 8732,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_0a6f38ea91f241bf6e16f71ab20fbec98eba246eae2ddaaa5f5d87c1706b395e",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/process/per_thread"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "9fb576a173cf42cfde6a73798c538ff8ad470b03fa8c4d132083774aee0e2266",
+            "length": 16689,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_0af1dc0b35532b9a240d87b05ae276c0e90921ffebb4c706c26aaa58bd365d57",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/errors"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "a03b0a92d4b62655d1fe8f05b039251ff63a1d826743c6354ca5a2920b7c1751",
+            "length": 69419,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_0d2ad2cafe8c90a27fa5ac4338b6a6d3808ef35373d5c40f9b5a5b40b1356ec4",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/get_format"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "23e012d48bdbc92a2d7e4181283963b931dc2dc6651c50a065986aea5bc66f4c",
+            "length": 9499,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_0f4abac360d757c65e3812b0ddb9f09a24b7cff604d2a5f6313b943773a8fffe",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:url"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "3cf9fa610fb1af97f3f46b96c49b8a15163c6693f685fa1fd6af66b02aff4603",
+            "length": 32879,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_104ac866dcef108d26c23eafd50e8aca2933607ae2c688c03ac2dafb147b065a",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/utils"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "d5bb83ff0cf3fe43e813a0e5661fc9ec8a5d8a52094985b0c4c3fe89fb9ebaf1",
+            "length": 13747,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_10d541aa1488e01ad7d2472a034ade45f646cdba97a6c163e70c7c7d912a0031",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/bootstrap/web/exposed-window-or-worker"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "e7ef38896193293a8351ab830f7bf283773a78a57d02b98484ce0f0aa343ad54",
+            "length": 3570,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_111b6685e17e5148ceedba84f8966d522d7672edfb0372e04096f83a1b36fe1c",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/process/task_queues"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "bcacd88d13bda207276f20afb47b696e9512c6e54af74c04ef5096efea17c9a0",
+            "length": 4567,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_1396b21a61e73316fb495ef9326c6b5e4ac23036a4eed1c196494a1f375c455e",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/webidl"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "9b7c16464e85c47d7f499d433471ef0a847fbea14af27486cccad2fc40efc9e5",
+            "length": 9842,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_1894b9a23ca8a4b7dd0f7264192418fe807d4061fe2a51d158ab69dbc6a04d88",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/per_context/domexception"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "192c50403a1d20d67d0a9e06e46137255a13658f1511448c315ceb3ccdb0b7b1",
+            "length": 6479,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_1d8e15dc8e76f64bde71b3a7d8654675d93dd9c1dca18c965317566f2f9f4a3b",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/run_main"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "cd282d78d962d34e9f6970c2e50fd34f0e42402b3bbc89c3a6038819b147e4c6",
+            "length": 7147,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_232d93775c343fc4fefb7ea4074d885f4149c7bc251028dcb130a7b3f74e956c",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/validators"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "46bda12755d127cdefd237cfa25aa14d037216ca0a44a3de693fcd23b446401b",
+            "length": 18481,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_2600ba8db3756426d375b593b5a34748bc85206b954b2f9445594c8d48ee7595",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/linkedlist"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "71560ae7794bfaff7dd2613dd12b65a5cfd3fe5fef459638acc5ea38e2273cec",
+            "length": 1128,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_2d6053fcaab1538b7836ebf94f1d5742ab7b6343a1044f76025b962342765051",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/async_context_frame"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "4011e2d68ff594e52f67eaee719e909332870338459174d017b0f38a3d516133",
+            "length": 1584,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_2f6e0d6a1a73644ccf20bb3969cccacca6ba63cfb4da179d744747b008989d7f",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/assert"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "48e9daf26d4f649bc225e4a655d912ed25dfbb856cfdc6a0a990da18a3f3882f",
+            "length": 3885,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_30a7fb5e782aaf1f508b91c5f29fb8f35040c08dcc3a5132fd95a2b764a89e38",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/assert"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "03940c9b646255b631d3a95cf2a9ad156d587db8b0ac223d1a87f3fd5531a807",
+            "length": 445,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_337458f03c63b9a814f1582ed44183087d9ccbad6965e4e9be4d61c5411b9361",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/data_url"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "e1d38b25c7c7351bcf20d2809a0bfc09740eddedeba84300eae31825ae5edefa",
+            "length": 10194,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_35f266ee5af0c57d578da0bd3cda73ec9ba09bcf35a344dfafa66b9e04e9f12e",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/module_map"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "d20ff3764e9910877ff39cb97827b25f4199d7cb4885e2eac2fc11af65069ff4",
+            "length": 3891,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_3924ffdcb82221e88a670921c00951df40bb8105a3ed5ba6493b9ed01e7c26c8",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/bootstrap/realm"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "bd8fcaf6ba0938f776833aa764ded021df9c1dd5ae41094e08147f7cb4fb2ad2",
+            "length": 15330,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_4203720db46258643e8ca162f3cb8a0b1c55f5dda2ac9ad606cf3e473ae84389",
+            "location": {
+              "kind": "file",
+              "file_path": "/workspace/tracewise/fixtures/js/app/src/math.js"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "857226a09230d8a275b5816aa131f12ba7817785c39248b1cd4790e109091913",
+            "length": 60,
+            "is_module": true,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_4312d8ecf86ee94e2a8ce8535c1e0df7528e2771904b350156b134995e679686",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/customization_hooks"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "b9dc43f66495716ff11cd80fef47f76dd1dabd482499ddb3f5a16654196f5203",
+            "length": 13425,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_43af03a7e6d3cdb7e2a40b5329e4099e27e72f5def8a751a55800b1ebf28713d",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:timers"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "bf9393ecf31e41096610073e0c8fcf5657407bea2953e05c75a15e08cfac6752",
+            "length": 8069,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_4418f4feb3bdb657a3665c530494a69becdb8e0f3ff4cfadc65f8352c76f2eb5",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/util/debuglog"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "4471d0ba1b85d272e583aef5ec9fe05c28377bf59b923523495bcba46a858fec",
+            "length": 12596,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_4751c24816950c36282cfe14e734c0f3f28f2bdd1bef7f1908242ad9194a872b",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/util/inspect"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "2f2f01d7077800f8565d1be2bd1e6800f8ac02759482dc080eb6bc6005d67dd1",
+            "length": 92841,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_4af9abd54dc0872c0c942569d97505b58b26b11bb8d1e2e18a792d25a1c3024c",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/per_context/primordials"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "9e3fe2fe051667172d6ed9d997eee99b3454a7e4ec779dd63c1f19d44b25b1ca",
+            "length": 21705,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_4d0944a09c9c0e035eaf620d0eab5b13e9558dafd9eb94c743a11cb07f69b560",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/deps/cjs-module-lexer/lexer"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "38c6e2ee98eea2d2ffa5d6bc9f51d40c3b4f2b1125f826c6302b1ad773f408ca",
+            "length": 57085,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_4f393441bee270559020cb0ee031d9c6b373a546b2e1d470943f682615776d02",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/formats"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "fd3355025387fbb336377d122db31a695240a1e1a956e81038d629efb4637dd5",
+            "length": 1847,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_4f77812754cb2d888e8f15d894e2b3e9fe9dd28605e7d49d2c996c5d6dd2b9f5",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/bootstrap/node"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "4ad17b0ba3ced856586f4b776d4e51588c40eab08543c043ecc374de0714e620",
+            "length": 15968,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_50092b00b7948c0681d131ad86a58dfb610a8d60effa94333ee82bfc9214196a",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/process/execution"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "c6b5eb6e9bf08913b7e2e628e1c93fbbb5aa42f1f18bd42a8998b06c418df1af",
+            "length": 17028,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_55e7475d81488d59945d4277d5d9e708539e054d7e97be3ee7e29f59d5598d26",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:async_hooks"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "2e87e6ccddf488953432059d0592b068a4bf4037a989b0a89e22305f81d112e4",
+            "length": 8490,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_55fabe1f3bd640a9d6ed819683dab5a96373954f7ed3802e55c910a181a509d6",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/util/inspector"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "96ff6b3a871860e1720964aae93835b4e416bd1c8564f192b7aabb1149b621d8",
+            "length": 3929,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_58bbe50c9591511dfc8042fa4566b3e66ab14768e4c99ab243afae1c3d80e5ee",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:querystring"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "4035dd8989e502f3c69eeba0eaeb9851c7609d749674a6bcbb043a1a0a65b507",
+            "length": 14574,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_5ad50b4671fa3e7239ed2ac0af7df2b0f8c34cd6463e897dbe0dbe4eea3d0f57",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:buffer"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "7d7626b71543b81ffa0649d176d0b8ccc24a57dbf38805875526b121c91f226b",
+            "length": 40144,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_5d0d799c021914a79b589d348235bed936da1fa5c92e4c629a157276582fa4e4",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/buffer"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "1cb45b32eb686a4e00e6b37f0181ba773d3aa9d3427766ecfa43a2ead1088588",
+            "length": 31428,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_694a6728ba00ee7325dfe3a700be77b387d8cedb413492a1fc2c621d8a25427e",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/v8/startup_snapshot"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "f26e2afef596dbbb38ea7f2f1b379df5261de2a4167254dc71bcd7e0e1d9b70e",
+            "length": 3760,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_6ce87382dd8a69a1c7fcca12a1e618b524cce97444dac3e61c2e599760c1a398",
+            "location": {
+              "kind": "file",
+              "file_path": "/workspace/tracewise/fixtures/js/runtime/keepalive.cjs"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "dd45be4d0be1e1213a8a3d2a8d0faf84bc9fc5cfcb6ecc7f1d465132605ddffb",
+            "length": 105,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_721b7d806b598de8e29ad70849820e1b0614ffe767ab0d00488d0a6978dc971f",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/main/run_main_module"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "865acae8854762473654555a167f46bc6208c534fccef0356b744ea2bec8a879",
+            "length": 1367,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_75ba0cd00b8483ad27c310a35ea0975b06897bfd2410671029a9c02638d1ea51",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/process/permission"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "2bd8c670dc01e7e6eea640d4135818c954ba3afa890275cbd4e25d3508767a13",
+            "length": 1083,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_75cd9a9aa17dbc146e752e5119bcc4faa1a6aa614ee789efaab745a0add7ddaf",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/perf/utils"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "12aaefacd6f7b67360fb9758cdc94c8e0f2d43c36a1f71f313c3e4f776e80be0",
+            "length": 810,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_762159ff520782aaee10efa1985713bb7f562714a8c1a9e19e05292458f41596",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/util"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "e962ae18fd72e5bb4211f01e6054251553cbbd910384ece00aae653d05dfa3f5",
+            "length": 28659,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_77cc2f9a171694aca41f151568239f9c9a7e73de6df7f2fa2ada089e2ac8be43",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/translators"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "11371a822faeb2dc50926d40a4cedfe77f9bfcfef4a9c56040008fa26ad8ccf0",
+            "length": 24788,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_77cedec221610437a15f09d6b27a6f5af7421c0bc2293af43815de3d712ca526",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/blob"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "17bed65986cfd91db219abfa9c4d7c69c1063bbeaf558bdc8b78b622690137a5",
+            "length": 13392,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_782b6e64c76774cbfcd051e78fdcb6dfe4f0fe53a24a636dba1fa40f01ab95ad",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/module_job"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "827b5b4980549489d930f0592c39b5ac98ea037fdbc0dbf12f3c867575a3b41c",
+            "length": 18190,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_7ad7bb1544904267542d12eb84be10ede46bc1195efbe0f5dc816045990a1aad",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/priority_queue"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "5e2b5101114b24354405eda2a905af10ce23967dd7bfa34aa7fdb42dc2187338",
+            "length": 2755,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_7ff9a836ec36b5360b9baee90fee211b8cc28cb603c2cfbe3ce5707f510df79f",
+            "location": {
+              "kind": "file",
+              "file_path": "/workspace/tracewise/fixtures/js/app/src/main.js"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "2e4065a0f8641add2ca49f638fa352b0801f8a5f7ee4972cd50ba4bb06d543b1",
+            "length": 160,
+            "is_module": true,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_8459437e48136d60bed53f158dad5c24bb8b2b6366fa87347dc4bec63e85c1f8",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/webstreams/util"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "f46b37ae4a9a5a358127f2909a41544a68e648d4e6d6d5d9d6e3f2ca9fe5aefd",
+            "length": 7830,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_87311d3d91d2de76dec0ab5aa9f7b10a24fbfa1a90cc298af82cb0549fd5bc21",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/events/abort_listener"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "24b1fda65b188e7b9f2d5e29e797e7e3f48f0ffe18f44b24e8985a52107a2c3a",
+            "length": 1333,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_8a1a80f02e57b17b85613b1f78db12990e296a41d52e5f8d02e20df58bfe2f06",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/streams/utils"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "76f2a40f2e1b799a575116036549bf5eca5f69b9038a77b1016eee823e51625f",
+            "length": 8930,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_940c17cd998acaac4182ad26a37ac3d2901c9290b10cbf50c32aabd48f189255",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:path"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "fce96c4f2cf099ed8dd00499df8b80873a18811ca1340868f0ca87c148d38191",
+            "length": 53049,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_995085e125c1f7c62dd33a09813f6ea013fc571f187431b31c60cdd070ac09cb",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/bootstrap/switches/does_own_process_state"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "eab185e4a26a807d21da8f3addba046b7a91e5ba2ca0bba86ef062663dd6f4aa",
+            "length": 3835,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_9dfd15d7ab01f09bb87d1d3fce3c91d0cde3f21e46108bf282e83e4fa01bfe2d",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/url"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "99c0b26b868ead97ac2e6cc0f0d37458f45ab2fcd0a2ebae24676753e6fbfa4a",
+            "length": 52777,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_a25ec18d002b6a19f4534bb95b54df61a4da84b048f449d984ddb3a785b4a46d",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/per_context/messageport"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "28bf223a668ddaa3ac43fdc84b7196e3c8e689d9d6c5d845d0d525a2fcb5410c",
+            "length": 995,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_a2cbfdd30f905b1a2df1ad6e220e2c2bdfd60449ac952afa8e75d0feb697b951",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/resolve"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "293d95ffc3145b5b35ca0d49304b4e2b9dff100b6d340f7c89d059b05dabb58e",
+            "length": 39375,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_a4be0cae07383fc8c909344d313cb2a73c38e42ab6fd8c04d9ea71c083eb051e",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/process/warning"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "b3abe35b1f8c98d6fb7ff34649d422fe4ae8b700968a533a5e20ade7bc471ee8",
+            "length": 5861,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_a57ab500cd3ac95d874dad6b9388d6f89b79f5e31cb4da0f3df3f4d6f2cc18ce",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/fixed_queue"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "5fff3e6a7fa1218b41529de64dd628e1edf30e5de725f8acaf71796c23e93ab3",
+            "length": 4261,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_a60abd58a9f2f1f2baa39aef3be24de0173d0fdc92636fcbf922ac7fc63033cf",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:fs"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "7ce17b5a74abfe1b988222f62522a70958bac154f1828a11b047379648c688b6",
+            "length": 87228,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_aacffbd09a96b9f569f2f969285e21a00e766eb755a13a8e972c425f5464a561",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:events"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "c582ddd6009ed61d227e119d42c4c12bb2e7919cc8eb7227763679fbde006b1b",
+            "length": 35849,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_ab7a470ce59db59360a49624471d24b0e5433086229fa3361bd3e037def8fa83",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/console/constructor"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "25fc515cd8749c0b123a3fc61f5ad168dba39ad396835ab986f38d4543c0bfd7",
+            "length": 21364,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_ac29d51073f8b3d8895549cbf3687039d0899758f65b20b482e033587572fdfa",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/inspector_async_hook"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "775c25b5a23aa80325d69300264b41c3c6b8080d47c577c33fcdc8ebc2485238",
+            "length": 1712,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_ad4ba26e72ec8ee6117d82b3647757e4d1c33e27821985a7de91b57fa870696a",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/helpers"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "e483d568322be909c123f9149fd47f7b2026600c97056d8fcf84b742dbd48463",
+            "length": 14185,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_af8b7ed2a7dc82e76b8ac15dfb020fdd82ff2737c5e815b3a7c1868150d9fa1d",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/process/promises"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "465338eac7d7497c7448ebfdbb1c37f29e4403d104ed3259890eb592f6151ce3",
+            "length": 13871,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_b027d672d630489e86a2f9fddbae4f1ba5f7b18072823da37af1332314a8e21b",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/process/pre_execution"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "2ce1ff6536d196e772e2c83a0ba5b8f5c23c89d183181cd993ad0a7a990413df",
+            "length": 25265,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_b0f2f5599ec8f241e89a68fbfd9bd9463693407742ebdc8ec5dbd08ce3e1ad0e",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/bootstrap/switches/is_main_thread"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "44f135420f29c701af74ac03355a54830151401e1dbf8a913b4f919bfeda312d",
+            "length": 8694,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_b655c43243fae9237557b52a575c43bdb37b67cfa40132c0e15cc9bf1e7b6ae6",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/process/signal"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "7f2b9926fe8fb8ef850b72a7e751db6db1708e637d9dfcca815d2c40818d1794",
+            "length": 1180,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_b74429a7e46072eca8dc853d1bdbe85b435a79413b9ee6c7b6ae3f1b2f8a8500",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/encoding"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "f1e675d9864e06620ecfa85190ac2499f2e5a400230ed510bac107f21dba7116",
+            "length": 17654,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_b9d5cd4fad5154d98b4d0ba9539d01938001271566338690942f608c0e3d8178",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/worker/js_transferable"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "6fe7b5324f4b5d6a135fd3b03a259fa74f9081ab4d63e7ad486aa8f1408494df",
+            "length": 4076,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_bec2dc270032eec15b46283bf0f42c1e8fd5438c135f73ff989a95a69d5feaf9",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/package_json_reader"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "4f42d4a2cc15da5f283665a5fe6e138ee5b18a0d1abd6295a6a4a721af663f45",
+            "length": 11423,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_c06bcc28dbb5537e39cdfa3eb2bb239b9a95d667b58f3a86d22e404ca3c07292",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/querystring"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "92d0cbd561d7cce93936b083d56d2a41063d177f3aa6772ae2c1871f160163d1",
+            "length": 3316,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_c097960e4986ffb7e5ee2f29aecc6f26ab0a737e265eb957d47f38b6450cf1a4",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/cjs/loader"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "3df4fee40598eb80e88be00cfd25007aa347440ab344e0a5b93c46baf092d77b",
+            "length": 71302,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_c488857dd4793eaa5ed58bdc51f8509e4eb0be7a2cec6584973c4a6a6cb42685",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/typescript"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "9105053ae69ff74dddc88cdfca336f95fa1cbf2f98139667fbb031d52827054c",
+            "length": 5977,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_c64a34f885109dd605db6842178782ceae02607a16a5c31be86967bbbdc2a22a",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/dns/utils"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "551792e7d334ab57d7be038458753365bf089f0c550f27c4bc1a16575f2f64ff",
+            "length": 10116,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_cd5e1b400a0f12ea7ca030024ab01f5fc45fdca9308b8f2733e9fe851c324427",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/loader"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "3a4cc4c015adeb96e2d4180e674a724170a1289dc366f04183363e1377f69b76",
+            "length": 42998,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_d369582af531dc709f3127b1ba81ff7e2bf2e6bd1b80c18740a9a6a2c1cf65f6",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/modules/esm/load"
+            },
+            "execution_context_key": "1",
+            "cdp_hash": "9ef82aef95b359642f12cbbb86da64c8763376573736ef4aa87624b98c7c512d",
+            "length": 6428,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_d7d6d73a00921b7adca2e6b87d7109adb23f912291189bd8e28e7c4c846c6dd7",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/options"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "78decf2b0b84134a133b553dac5adf1ac3c3fe4a584a0c416b6ce3f3823231a6",
+            "length": 3104,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_e46f8588885902f5bab6ed6b2ed0b300c3febe7a3674ee57b34b4ed52416a5f1",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/timers"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "ffac3b74e15a57e22cd4be4cf0776504bf489684b50f8fe2d82ae8fcba6c159b",
+            "length": 20095,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_ea68144fa2f70c202ee912ac3542e40d81aed423b00e2cc274e66df744dc59b3",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/async_hooks"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "c15b9efe4ad71cbb767c0f3f6ed636f1f07b9fb76c9dd5872790a108ec24363a",
+            "length": 20505,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_f05f7653dd6455a1532707a4b7f420e20cf128937598738cb9a40da798877f09",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/fs/utils"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "bd9f6e21d625098ee54c80180acef3d1ea66b126c8b30f031defe431538cd6da",
+            "length": 27298,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_f6d93c5c3f965ae829953a244713053880cf7ef07ebb59bb367192d1643cbe4c",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/net"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "edbf1a195b68a7840be4fb11f8967cc4c4ca52ac2e1b1d368fd887491ba7918e",
+            "length": 2787,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_f857727713928d508308119685aaa1d277399439fc8d93f93e12cadf4218f127",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/event_target"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "fabb64dd3ce6dc0b60a927750d7bf8e6270eb35f3f6b5fe67c7f712357e12641",
+            "length": 31987,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_f91d1f676ae60ec801a6f87b6a3bfaa85e6f3348dff9219e439c7f3835b30770",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:util"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "51b7311c67d79ba630450afd19686ec0b38cff0de6df3a85801188496ba11d9c",
+            "length": 22410,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_fb392253a3abfcc836e65ebcc37b9dabcb0eaf6f94f37e1c373f0dcd0809759e",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:diagnostics_channel"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "b32ab2ecb196b53047979c42a546dec9b1560635e1327c0fbe0f27dd184c73eb",
+            "length": 10481,
+            "is_module": false,
+            "status": "observed-loaded"
+          },
+          {
+            "script_key": "v8_script_fe6eefc2924d1ba952dfd0b40c333e5944cb03cd1ef59dc0facdfc9a6234fa3b",
+            "location": {
+              "kind": "builtin",
+              "specifier": "node:internal/mime"
+            },
+            "execution_context_key": "0",
+            "cdp_hash": "a926034befba38450e6198f7d9a1b27a4fb3dcf285cc2ba026adf64f95414430",
+            "length": 11291,
+            "is_module": false,
+            "status": "observed-loaded"
+          }
+        ],
+        "observed_total": 85,
+        "excluded": {
+          "unsupported_location": 0,
+          "invalid_protocol_value": 0
+        }
+      },
+      "execution_contexts": [
+        {
+          "context_key": "1",
+          "state": "created",
+          "name": "/tmp/node-v22.20.0-linux-x64/bin/node[186710]",
+          "origin": ""
+        }
+      ],
+      "directly_observed": [
+        "Debugger.scriptParsed established script presence within the bounded capture window.",
+        "Runtime execution-context lifecycle events established context creation, destruction, or clearing."
+      ],
+      "unavailable_without_instrumentation": [
+        "require/import caller-to-callee edges",
+        "EventEmitter emissions and listener invocation",
+        "Electron IPC messages and handlers",
+        "script unload events"
+      ],
+      "unknowns": [
+        "Scripts collected before attachment may have been garbage-collected and therefore omitted.",
+        "A bounded observation window cannot establish that an unobserved script or behavior never occurs.",
+        "The declared Node/Electron process role is not authenticated by the Inspector protocol."
+      ],
+      "limitations": [
+        "REA attaches to an already-running exact target and never launches, resumes, evaluates, pauses, or mutates it.",
+        "Only Runtime.enable and Debugger.enable are sent; source text, object values, EventEmitter activity, and Electron IPC are not inspected.",
+        "The selected endpoint and target ID authorize observation; discovery file locations can remain unresolved and do not prove filesystem identity.",
+        "Node discovery reports a best-effort pathname rather than an encoded file URL; lossy Windows paths and ambiguous underscores are preserved without guessing a file path.",
+        "Every target exposed by the selected Inspector endpoint is eligible for observation; target IDs and locations are not authenticated as operating-system process identity.",
+        "No runtime graph depth is traversed because passive Inspector events do not establish require/import caller edges."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "external-service",
+    "environment": {
+      "id": "node.js/v22.23.3@1.1",
+      "platform": "unknown",
+      "architecture": "unknown",
+      "isolation": "none"
+    },
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "REA attaches to an already-running exact target and never launches, resumes, evaluates, pauses, or mutates it.",
+      "Only Runtime.enable and Debugger.enable are sent; source text, object values, EventEmitter activity, and Electron IPC are not inspected.",
+      "The selected endpoint and target ID authorize observation; discovery file locations can remain unresolved and do not prove filesystem identity.",
+      "Node discovery reports a best-effort pathname rather than an encoded file URL; lossy Windows paths and ambiguous underscores are preserved without guessing a file path.",
+      "Every target exposed by the selected Inspector endpoint is eligible for observation; target IDs and locations are not authenticated as operating-system process identity.",
+      "No runtime graph depth is traversed because passive Inspector events do not establish require/import caller edges.",
+      "Runtime host platform and architecture were not observed."
+    ],
+    "locations": [],
+    "evidence_links": []
+  }
+}

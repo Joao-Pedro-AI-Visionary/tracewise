@@ -5,7 +5,7 @@ mod export_shapes;
 mod feature_trace;
 mod files;
 mod graph_ids;
-mod graph_seal;
+pub(crate) mod graph_seal;
 mod recover;
 mod reconstruct;
 mod semantic_graph;
