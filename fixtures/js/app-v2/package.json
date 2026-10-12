@@ -1,0 +1,7 @@
+{
+  "name": "tracewise-js-app-v2",
+  "private": true,
+  "type": "module",
+  "main": "src/main.js",
+  "version": "2.0.0"
+}

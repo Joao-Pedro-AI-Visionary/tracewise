@@ -142,3 +142,11 @@
 
 ## 2026-10-11 21:58 — phase2: trace_javascript_semantics (oxc) (CLI: cursor:grok-4.7-high)
 - testes ok: 61
+
+## 2026-10-12 — phase2: trace_application_feature, compare_application_versions, compare_javascript_export_shapes
+- crates/js: the three tools reuse the sealed application graph. `fixtures/js/app-v2` is a second pinned REA analysis (package name, `add` return, and `invoicePath`).
+- crates/server: dispatch plus `js_version_tools_test.rs`. Each result validates `outputSchema` and matches the REA oracle with no ignored fields (`subject` is null; no path or timestamp).
+- `fixtures/rea_oracle.py` accepts `@file` when the evidence JSON exceeds the single-argument size limit.
+
+## 2026-10-12 08:08 — phase2: export shapes, version compare, feature trace (CLI: cursor:grok-4.7-high)
+- testes ok: 65

@@ -8,7 +8,7 @@ use serde_json::{json, Value};
 use tracewise_domain::bundle::parse_evidence_bundle;
 use tracewise_domain::comparison::{compare_bundles, RecordPair};
 use tracewise_domain::evidence::{
-    create_evidence, EvidenceAuthority, EvidenceConfidence, EvidenceObservation,
+    create_evidence, Evidence, EvidenceAuthority, EvidenceConfidence, EvidenceObservation,
 };
 use tracewise_domain::unknown::{RecordUnknownInput, UpdateUnknownInput};
 
@@ -123,6 +123,9 @@ async fn execute_tool(
         "compare_source_to_bundle" => handle_compare_source_to_bundle(session, args),
         "analyze_javascript_application" => handle_analyze_javascript_application(session, args),
         "trace_javascript_semantics" => handle_trace_javascript_semantics(session, args),
+        "trace_application_feature" => handle_trace_application_feature(session, args),
+        "compare_application_versions" => handle_compare_application_versions(session, args),
+        "compare_javascript_export_shapes" => handle_compare_javascript_export_shapes(session, args),
         name if tracewise_contracts::phase2_tool_names().contains(&name) => {
             Err(McpError::internal_error(
                 format!("not yet implemented: {name}"),
@@ -1089,6 +1092,140 @@ fn handle_trace_javascript_semantics(
     let val = serde_json::to_value(&evidence)
         .map_err(|error| McpError::internal_error(error.to_string(), None))?;
     Ok(CallToolResult::structured(val))
+}
+
+fn resolve_evidence_input(
+    session: &BinarySession,
+    value: &Value,
+    label: &str,
+) -> Result<Evidence, McpError> {
+    let evidence = if value.get("kind").and_then(|v| v.as_str()) == Some("retained-evidence") {
+        let evidence_id = value.get("evidence_id").and_then(|v| v.as_str()).ok_or_else(|| {
+            McpError::invalid_params("retained evidence requires evidence_id", None)
+        })?;
+        session
+            .ledger
+            .lock()
+            .unwrap()
+            .get(evidence_id)
+            .cloned()
+            .ok_or_else(|| {
+                McpError::invalid_params(
+                    format!("Evidence retained in this session is missing: {evidence_id}"),
+                    None,
+                )
+            })?
+    } else {
+        serde_json::from_value(value.clone()).map_err(|error| {
+            McpError::invalid_params(format!("Invalid {label} evidence: {error}"), None)
+        })?
+    };
+    let mut ledger = session.ledger.lock().unwrap();
+    if !ledger.has(&evidence.evidence_id) {
+        ledger
+            .record(evidence.clone())
+            .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    }
+    Ok(evidence)
+}
+
+fn remember_evidence(session: &BinarySession, evidence: Evidence) -> Result<CallToolResult, McpError> {
+    session
+        .ledger
+        .lock()
+        .unwrap()
+        .record(evidence.clone())
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    let val = serde_json::to_value(&evidence)
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
+}
+
+fn evidence_list(value: Option<&Value>, label: &str) -> Result<Vec<Value>, McpError> {
+    match value {
+        None => Ok(Vec::new()),
+        Some(Value::Array(items)) => Ok(items.clone()),
+        Some(_) => Err(McpError::invalid_params(format!("{label} must be an array"), None)),
+    }
+}
+
+fn handle_trace_application_feature(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let application_value = args.get("application").cloned().ok_or_else(|| {
+        McpError::invalid_params("trace_application_feature requires 'application'", None)
+    })?;
+    let seed = args.get("seed").cloned().ok_or_else(|| {
+        McpError::invalid_params("trace_application_feature requires 'seed'", None)
+    })?;
+    let application = resolve_evidence_input(session, &application_value, "application")?;
+    let mut native = Vec::new();
+    for item in evidence_list(args.get("native_observations"), "native_observations")? {
+        native.push(resolve_evidence_input(session, &item, "native_observations")?);
+    }
+    let direction = args.get("direction").and_then(|v| v.as_str());
+    let evidence = tracewise_js::trace_application_feature(&application, &native, &seed, direction)
+        .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
+    remember_evidence(session, evidence)
+}
+
+fn handle_compare_application_versions(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let left_value = args.get("left").cloned().ok_or_else(|| {
+        McpError::invalid_params("compare_application_versions requires 'left'", None)
+    })?;
+    let right_value = args.get("right").cloned().ok_or_else(|| {
+        McpError::invalid_params("compare_application_versions requires 'right'", None)
+    })?;
+    let left = resolve_evidence_input(session, &left_value, "left")?;
+    let right = resolve_evidence_input(session, &right_value, "right")?;
+    let mut left_native = Vec::new();
+    for item in evidence_list(args.get("left_native_observations"), "left_native_observations")? {
+        left_native.push(resolve_evidence_input(session, &item, "left_native_observations")?);
+    }
+    let mut right_native = Vec::new();
+    for item in evidence_list(args.get("right_native_observations"), "right_native_observations")? {
+        right_native.push(resolve_evidence_input(session, &item, "right_native_observations")?);
+    }
+    let evidence = tracewise_js::compare_application_versions(&left, &right, &left_native, &right_native)
+        .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
+    remember_evidence(session, evidence)
+}
+
+fn handle_compare_javascript_export_shapes(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let text = |key: &str| {
+        args.get(key).and_then(|v| v.as_str()).map(str::to_string).ok_or_else(|| {
+            McpError::invalid_params(format!("compare_javascript_export_shapes requires '{key}'"), None)
+        })
+    };
+    let left_module_path = text("left_module_path")?;
+    let left_export_name = text("left_export_name")?;
+    let right_module_path = text("right_module_path")?;
+    let right_export_name = text("right_export_name")?;
+    let left_value = args.get("left").cloned().ok_or_else(|| {
+        McpError::invalid_params("compare_javascript_export_shapes requires 'left'", None)
+    })?;
+    let right_value = args.get("right").cloned().ok_or_else(|| {
+        McpError::invalid_params("compare_javascript_export_shapes requires 'right'", None)
+    })?;
+    let left = resolve_evidence_input(session, &left_value, "left")?;
+    let right = resolve_evidence_input(session, &right_value, "right")?;
+    let evidence = tracewise_js::compare_javascript_export_shapes(
+        &left,
+        &right,
+        &left_module_path,
+        &left_export_name,
+        &right_module_path,
+        &right_export_name,
+    )
+    .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
+    remember_evidence(session, evidence)
 }
 
 fn handle_generate_api_client(session: &BinarySession, args: &Value) -> Result<CallToolResult, McpError> {

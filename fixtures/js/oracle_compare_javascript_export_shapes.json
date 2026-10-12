@@ -1,0 +1,231 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_6c0decac6f07a8d29c6125597e764e71d8ed7246fd5980bc770561deb47a78a8\",\"subject\":null,\"provider\":{\"id\":\"rea-javascript-application-workflows\",\"name\":\"REA JavaScript application workflows\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.javascript-export-shape-comparison\",\"operation\":\"compare_javascript_export_shapes\",\"parameters\":{\"left_evidence_id\":\"ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6\",\"right_evidence_id\":\"ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f\",\"left_module_path\":\"src/math.js\",\"left_export_name\":\"add\",\"right_module_path\":\"src/math.js\",\"right_export_name\":\"add\"},\"raw_result\":null,\"normalized_result\":{\"comparison_id\":\"jesc_5df3b0c5faf8701fad5ee0ef162a06026e08cea1868017e57a370ca3ce136b28\",\"left\":{\"evidence_id\":\"ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6\",\"graph_id\":\"jag_532653d5bd92e5c3cbe7288b90c49aa7d5ac9908f7743ea4b230bf6c33b39e4c\",\"requested_module_path\":\"src/math.js\",\"requested_export_name\":\"add\",\"candidates\":[{\"node_id\":\"jag_node_52ba8eecbd42302ffe5c717f44ac5993b5dd447f68614acb8f08402d23d62f80\",\"module_path\":\"src/math.js\",\"export_name\":\"add\",\"matches_requested_module\":true,\"matches_requested_export\":true}],\"omitted_candidates\":0,\"status\":\"selected\",\"selected_node_id\":\"jag_node_52ba8eecbd42302ffe5c717f44ac5993b5dd447f68614acb8f08402d23d62f80\"},\"right\":{\"evidence_id\":\"ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f\",\"graph_id\":\"jag_c8076e450a7c17889e73b0a50019ec9286d99887c4fa29e9466ccf2a27a7ce1e\",\"requested_module_path\":\"src/math.js\",\"requested_export_name\":\"add\",\"candidates\":[{\"node_id\":\"jag_node_add5d44a3a8f9e60349a2d80b7cee79f1a1830f2d19ac467308d85e82bf631e0\",\"module_path\":\"src/math.js\",\"export_name\":\"add\",\"matches_requested_module\":true,\"matches_requested_export\":true}],\"omitted_candidates\":0,\"status\":\"selected\",\"selected_node_id\":\"jag_node_add5d44a3a8f9e60349a2d80b7cee79f1a1830f2d19ac467308d85e82bf631e0\"},\"property_inventories\":[{\"side\":\"left\",\"variant_index\":0,\"discriminant\":null,\"paired\":false,\"source_range\":{\"start\":{\"line\":2,\"column\":2},\"end\":{\"line\":2,\"column\":22}},\"properties\":[],\"property_coverage\":[]},{\"side\":\"right\",\"variant_index\":0,\"discriminant\":null,\"paired\":false,\"source_range\":{\"start\":{\"line\":2,\"column\":2},\"end\":{\"line\":2,\"column\":22}},\"properties\":[],\"property_coverage\":[]}],\"summary\":{\"added\":0,\"removed\":0,\"changed\":0,\"unknown\":2},\"changes\":[{\"change_id\":\"jesc_change_d2ceb645995b729c3d41ed6aeb1e44a47e9e82dc10b7e862787819305a1bc416\",\"status\":\"unknown\",\"path\":\"\",\"discriminant\":null,\"presence\":{\"left\":\"unknown-coverage\",\"right\":\"unknown-coverage\"},\"left\":{\"availability\":\"unknown\",\"reason\":\"No left return variant was uniquely paired with this right variant.\"},\"right\":{\"availability\":\"unknown\",\"reason\":\"Right return variant has no unique exact cross-version pairing.\"},\"left_source_range\":null,\"right_source_range\":{\"start\":{\"line\":2,\"column\":2},\"end\":{\"line\":2,\"column\":22}},\"evidence_links\":[\"ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6\",\"ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f\"],\"limitations\":[\"The return variant was not paired because no reciprocal unique literal discriminant exists.\"]},{\"change_id\":\"jesc_change_fa67f4ecf884e8b7fca0a16058b7bbe87b812c8d4c8a744703ce22fcf7cbb47e\",\"status\":\"unknown\",\"path\":\"\",\"discriminant\":null,\"presence\":{\"left\":\"unknown-coverage\",\"right\":\"unknown-coverage\"},\"left\":{\"availability\":\"unknown\",\"reason\":\"Left return variant has no unique exact cross-version pairing.\"},\"right\":{\"availability\":\"unknown\",\"reason\":\"No right return variant was uniquely paired with this left variant.\"},\"left_source_range\":{\"start\":{\"line\":2,\"column\":2},\"end\":{\"line\":2,\"column\":22}},\"right_source_range\":null,\"evidence_links\":[\"ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6\",\"ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f\"],\"limitations\":[\"The return variant was not paired because no reciprocal unique literal discriminant exists.\"]}],\"coverage\":{\"status\":\"partial\",\"left_graph_status\":\"complete\",\"right_graph_status\":\"complete\",\"paired_variants\":0,\"unpaired_left_variants\":1,\"unpaired_right_variants\":1,\"omitted_left_variants\":0,\"omitted_right_variants\":0,\"left_source_omitted_variants\":0,\"right_source_omitted_variants\":0,\"left_omitted_fields\":0,\"right_omitted_fields\":0,\"left_omitted_property_coverage\":0,\"right_omitted_property_coverage\":0,\"omitted_candidates\":0,\"omitted_changes\":0},\"evidence_links\":[\"ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6\",\"ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f\"],\"limitations\":[\"At least one selector, graph, return shape, or property boundary is incomplete.\",\"Dynamic values, incomplete object coverage, and ambiguous variants remain unknown.\",\"Return shapes are inferred from inert syntax and do not prove runtime behavior.\",\"Return variants are paired only by unique exact literal discriminants, never by source order.\",\"This static comparison cannot establish runtime semantics; run behavioral probes directly against the relevant application versions when that evidence is required.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"At least one selector, graph, return shape, or property boundary is incomplete.\",\"Dynamic values, incomplete object coverage, and ambiguous variants remain unknown.\",\"Return shapes are inferred from inert syntax and do not prove runtime behavior.\",\"Return variants are paired only by unique exact literal discriminants, never by source order.\",\"This static comparison cannot establish runtime semantics; run behavioral probes directly against the relevant application versions when that evidence is required.\"],\"locations\":[],\"evidence_links\":[\"ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6\",\"ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_6c0decac6f07a8d29c6125597e764e71d8ed7246fd5980bc770561deb47a78a8",
+    "subject": null,
+    "provider": {
+      "id": "rea-javascript-application-workflows",
+      "name": "REA JavaScript application workflows",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.javascript-export-shape-comparison",
+    "operation": "compare_javascript_export_shapes",
+    "parameters": {
+      "left_evidence_id": "ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6",
+      "right_evidence_id": "ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f",
+      "left_module_path": "src/math.js",
+      "left_export_name": "add",
+      "right_module_path": "src/math.js",
+      "right_export_name": "add"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "comparison_id": "jesc_5df3b0c5faf8701fad5ee0ef162a06026e08cea1868017e57a370ca3ce136b28",
+      "left": {
+        "evidence_id": "ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6",
+        "graph_id": "jag_532653d5bd92e5c3cbe7288b90c49aa7d5ac9908f7743ea4b230bf6c33b39e4c",
+        "requested_module_path": "src/math.js",
+        "requested_export_name": "add",
+        "candidates": [
+          {
+            "node_id": "jag_node_52ba8eecbd42302ffe5c717f44ac5993b5dd447f68614acb8f08402d23d62f80",
+            "module_path": "src/math.js",
+            "export_name": "add",
+            "matches_requested_module": true,
+            "matches_requested_export": true
+          }
+        ],
+        "omitted_candidates": 0,
+        "status": "selected",
+        "selected_node_id": "jag_node_52ba8eecbd42302ffe5c717f44ac5993b5dd447f68614acb8f08402d23d62f80"
+      },
+      "right": {
+        "evidence_id": "ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f",
+        "graph_id": "jag_c8076e450a7c17889e73b0a50019ec9286d99887c4fa29e9466ccf2a27a7ce1e",
+        "requested_module_path": "src/math.js",
+        "requested_export_name": "add",
+        "candidates": [
+          {
+            "node_id": "jag_node_add5d44a3a8f9e60349a2d80b7cee79f1a1830f2d19ac467308d85e82bf631e0",
+            "module_path": "src/math.js",
+            "export_name": "add",
+            "matches_requested_module": true,
+            "matches_requested_export": true
+          }
+        ],
+        "omitted_candidates": 0,
+        "status": "selected",
+        "selected_node_id": "jag_node_add5d44a3a8f9e60349a2d80b7cee79f1a1830f2d19ac467308d85e82bf631e0"
+      },
+      "property_inventories": [
+        {
+          "side": "left",
+          "variant_index": 0,
+          "discriminant": null,
+          "paired": false,
+          "source_range": {
+            "start": {
+              "line": 2,
+              "column": 2
+            },
+            "end": {
+              "line": 2,
+              "column": 22
+            }
+          },
+          "properties": [],
+          "property_coverage": []
+        },
+        {
+          "side": "right",
+          "variant_index": 0,
+          "discriminant": null,
+          "paired": false,
+          "source_range": {
+            "start": {
+              "line": 2,
+              "column": 2
+            },
+            "end": {
+              "line": 2,
+              "column": 22
+            }
+          },
+          "properties": [],
+          "property_coverage": []
+        }
+      ],
+      "summary": {
+        "added": 0,
+        "removed": 0,
+        "changed": 0,
+        "unknown": 2
+      },
+      "changes": [
+        {
+          "change_id": "jesc_change_d2ceb645995b729c3d41ed6aeb1e44a47e9e82dc10b7e862787819305a1bc416",
+          "status": "unknown",
+          "path": "",
+          "discriminant": null,
+          "presence": {
+            "left": "unknown-coverage",
+            "right": "unknown-coverage"
+          },
+          "left": {
+            "availability": "unknown",
+            "reason": "No left return variant was uniquely paired with this right variant."
+          },
+          "right": {
+            "availability": "unknown",
+            "reason": "Right return variant has no unique exact cross-version pairing."
+          },
+          "left_source_range": null,
+          "right_source_range": {
+            "start": {
+              "line": 2,
+              "column": 2
+            },
+            "end": {
+              "line": 2,
+              "column": 22
+            }
+          },
+          "evidence_links": [
+            "ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6",
+            "ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f"
+          ],
+          "limitations": [
+            "The return variant was not paired because no reciprocal unique literal discriminant exists."
+          ]
+        },
+        {
+          "change_id": "jesc_change_fa67f4ecf884e8b7fca0a16058b7bbe87b812c8d4c8a744703ce22fcf7cbb47e",
+          "status": "unknown",
+          "path": "",
+          "discriminant": null,
+          "presence": {
+            "left": "unknown-coverage",
+            "right": "unknown-coverage"
+          },
+          "left": {
+            "availability": "unknown",
+            "reason": "Left return variant has no unique exact cross-version pairing."
+          },
+          "right": {
+            "availability": "unknown",
+            "reason": "No right return variant was uniquely paired with this left variant."
+          },
+          "left_source_range": {
+            "start": {
+              "line": 2,
+              "column": 2
+            },
+            "end": {
+              "line": 2,
+              "column": 22
+            }
+          },
+          "right_source_range": null,
+          "evidence_links": [
+            "ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6",
+            "ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f"
+          ],
+          "limitations": [
+            "The return variant was not paired because no reciprocal unique literal discriminant exists."
+          ]
+        }
+      ],
+      "coverage": {
+        "status": "partial",
+        "left_graph_status": "complete",
+        "right_graph_status": "complete",
+        "paired_variants": 0,
+        "unpaired_left_variants": 1,
+        "unpaired_right_variants": 1,
+        "omitted_left_variants": 0,
+        "omitted_right_variants": 0,
+        "left_source_omitted_variants": 0,
+        "right_source_omitted_variants": 0,
+        "left_omitted_fields": 0,
+        "right_omitted_fields": 0,
+        "left_omitted_property_coverage": 0,
+        "right_omitted_property_coverage": 0,
+        "omitted_candidates": 0,
+        "omitted_changes": 0
+      },
+      "evidence_links": [
+        "ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6",
+        "ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f"
+      ],
+      "limitations": [
+        "At least one selector, graph, return shape, or property boundary is incomplete.",
+        "Dynamic values, incomplete object coverage, and ambiguous variants remain unknown.",
+        "Return shapes are inferred from inert syntax and do not prove runtime behavior.",
+        "Return variants are paired only by unique exact literal discriminants, never by source order.",
+        "This static comparison cannot establish runtime semantics; run behavioral probes directly against the relevant application versions when that evidence is required."
+      ]
+    },
+    "confidence": "inferred",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "At least one selector, graph, return shape, or property boundary is incomplete.",
+      "Dynamic values, incomplete object coverage, and ambiguous variants remain unknown.",
+      "Return shapes are inferred from inert syntax and do not prove runtime behavior.",
+      "Return variants are paired only by unique exact literal discriminants, never by source order.",
+      "This static comparison cannot establish runtime semantics; run behavioral probes directly against the relevant application versions when that evidence is required."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_8088c52b2c96c62e20b8ef1ac7bbd8c80d410df8b056d5b9e20d8681a39214c6",
+      "ev_29b382d9d8811de23c05715b85ad66110986e22fff7681c1805952311a29568f"
+    ]
+  }
+}

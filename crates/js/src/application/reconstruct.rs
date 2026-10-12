@@ -39,7 +39,7 @@ pub fn reconstruct_javascript_application(
             continue;
         }
         let facts = recover_module(&file.text, &file.path, &paths)?;
-        validate_fixture_module_facts(&file.path, &facts)?;
+        validate_fixture_module_facts(&file.path, &file.sha256, &facts)?;
     }
     let display_path = input_path.to_string();
     build_application_graph(&inventory, &files, &display_path)
@@ -47,10 +47,15 @@ pub fn reconstruct_javascript_application(
 
 fn validate_fixture_module_facts(
     path: &str,
+    sha256: &str,
     facts: &crate::application::recover::ModuleFacts,
 ) -> Result<(), JsError> {
+    // Only the original pinned fixture has exact Babel-walk counters. app-v2 is a
+    // second sealed REA graph; parsing it must succeed, but those counters do not apply.
+    let v1_main = "2e4065a0f8641add2ca49f638fa352b0801f8a5f7ee4972cd50ba4bb06d543b1";
+    let v1_math = "857226a09230d8a275b5816aa131f12ba7817785c39248b1cd4790e109091913";
     match path {
-        "src/main.js" => {
+        "src/main.js" if sha256 == v1_main => {
             if facts.visited_ast_nodes != 31 || facts.calls.len() != 1 {
                 return Err(JsError::InvalidInput(
                     "src/main.js static facts do not match the REA fixture".into(),
@@ -67,7 +72,7 @@ fn validate_fixture_module_facts(
                 ));
             }
         }
-        "src/math.js" => {
+        "src/math.js" if sha256 == v1_math => {
             if facts.visited_ast_nodes != 12 {
                 return Err(JsError::InvalidInput(
                     "src/math.js static facts do not match the REA fixture".into(),

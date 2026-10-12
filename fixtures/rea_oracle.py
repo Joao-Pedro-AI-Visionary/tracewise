@@ -16,7 +16,10 @@ def rq(m,params=None,notify=False):
         if r.get("id")==i: return r
 rq("initialize",{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"oracle","version":"1"}})
 rq("notifications/initialized",notify=True)
-r=rq("tools/call",{"name":sys.argv[1],"arguments":json.loads(sys.argv[2])})
+raw=sys.argv[2]
+if raw.startswith("@"):
+    raw=open(raw[1:],encoding="utf-8").read()
+r=rq("tools/call",{"name":sys.argv[1],"arguments":json.loads(raw)})
 out=json.dumps(r.get("result",r),indent=2)
 if len(sys.argv)>3: open(sys.argv[3],"w").write(out)
 else: print(out[:3000])

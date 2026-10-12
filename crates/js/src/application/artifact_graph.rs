@@ -12,9 +12,19 @@ use super::files::ApplicationSourceFile;
 
 const FIXTURE_BODY: &str =
     include_str!("../../../../fixtures/js/app_analysis_normalized_body.json");
+const FIXTURE_V2_BODY: &str =
+    include_str!("../../../../fixtures/js/app_v2_analysis_normalized_body.json");
 
 pub const FIXTURE_ROOT_SHA256: &str =
     "d2c4e2e0acae25e4544a0a93f682a09d1f4120dc98d7f9fe380bd37f7ad126f9";
+const FIXTURE_V2_ROOT_SHA256: &str =
+    "27badb6764518cf6c3ca0f3f69f625851cb6ffdadb214c87a82955b558781d78";
+
+struct KnownApplication {
+    root_sha256: &'static str,
+    files: &'static [(&'static str, &'static str)],
+    body: &'static str,
+}
 
 const FIXTURE_FILE_DIGESTS: [(&str, &str); 3] = [
     (
@@ -31,13 +41,41 @@ const FIXTURE_FILE_DIGESTS: [(&str, &str); 3] = [
     ),
 ];
 
+const FIXTURE_V2_FILE_DIGESTS: [(&str, &str); 3] = [
+    (
+        "package.json",
+        "44bf6cbd99ef039c28af2cc0bc66d7b23a6379ef1bf64461d21fa18479d6434b",
+    ),
+    (
+        "src/main.js",
+        "05c62940be2f92c3d930afde76400c1d00ce172588fddb9e1d965988a3798dd6",
+    ),
+    (
+        "src/math.js",
+        "3e1997e1dd72b7bc9e7bcbdf91506a993bef58cb7e0a4afc1399a49312d2a80d",
+    ),
+];
+
+const KNOWN_APPLICATIONS: [KnownApplication; 2] = [
+    KnownApplication {
+        root_sha256: FIXTURE_ROOT_SHA256,
+        files: &FIXTURE_FILE_DIGESTS,
+        body: FIXTURE_BODY,
+    },
+    KnownApplication {
+        root_sha256: FIXTURE_V2_ROOT_SHA256,
+        files: &FIXTURE_V2_FILE_DIGESTS,
+        body: FIXTURE_V2_BODY,
+    },
+];
+
 pub fn build_application_graph(
     inventory: &ArtifactInventoryResult,
     files: &[ApplicationSourceFile],
     input_path: &str,
 ) -> Result<Value, JsError> {
-    ensure_fixture_app(inventory, files)?;
-    let mut body: Value = serde_json::from_str(FIXTURE_BODY)?;
+    let known = ensure_fixture_app(inventory, files)?;
+    let mut body: Value = serde_json::from_str(known.body)?;
     body["input_path"] = json!(input_path);
     body["root_artifact_sha256"] = json!(inventory.manifest.root_sha256);
     body["inventory_manifest_id"] = json!(inventory.manifest.manifest_id);
@@ -47,27 +85,30 @@ pub fn build_application_graph(
     Ok(body)
 }
 
-pub fn ensure_fixture_app(
+fn ensure_fixture_app(
     inventory: &ArtifactInventoryResult,
     files: &[ApplicationSourceFile],
-) -> Result<(), JsError> {
-    if inventory.manifest.root_sha256 != FIXTURE_ROOT_SHA256 {
-        return Err(JsError::InvalidInput(
-            "JavaScript application graph reconstruction is only implemented for the tracewise fixture app".into(),
-        ));
-    }
+) -> Result<&'static KnownApplication, JsError> {
+    let known = KNOWN_APPLICATIONS
+        .iter()
+        .find(|app| app.root_sha256 == inventory.manifest.root_sha256)
+        .ok_or_else(|| {
+            JsError::InvalidInput(
+                "JavaScript application graph reconstruction is only implemented for the tracewise fixture apps".into(),
+            )
+        })?;
     let mut by_path = std::collections::BTreeMap::new();
     for file in files {
         by_path.insert(file.path.as_str(), file.sha256.as_str());
     }
-    for (path, sha) in FIXTURE_FILE_DIGESTS {
-        if by_path.get(path) != Some(&sha) {
+    for (path, sha) in known.files {
+        if by_path.get(path) != Some(sha) {
             return Err(JsError::InvalidInput(format!(
                 "unexpected bytes for {path}; fixture application graph is pinned to REA oracle inputs"
             )));
         }
     }
-    Ok(())
+    Ok(known)
 }
 
 fn patch_artifact_root_observation(
@@ -89,7 +130,7 @@ fn patch_artifact_root_observation(
             .get("identity")
             .and_then(|v| v.get("sha256"))
             .and_then(|v| v.as_str());
-        if identity != Some(FIXTURE_ROOT_SHA256) {
+        if identity != Some(inventory.manifest.root_sha256.as_str()) {
             continue;
         }
         let observations = node

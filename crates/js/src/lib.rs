@@ -20,7 +20,10 @@ mod tools;
 mod types;
 mod unicode;
 
-pub use application::{analyze_javascript_application, trace_javascript_semantics};
+pub use application::{
+    analyze_javascript_application, compare_application_versions, compare_javascript_export_shapes,
+    trace_application_feature, trace_javascript_semantics,
+};
 pub use error::JsError;
 pub use source_map_recovery::recover_javascript_sources;
 pub use source_to_bundle::compare_source_to_bundle_tool;
