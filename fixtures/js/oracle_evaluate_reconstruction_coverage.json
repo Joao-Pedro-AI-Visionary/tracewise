@@ -1,0 +1,317 @@
+{
+  "cases": [
+    {
+      "boundary_id": "boundary.ready",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"boundary_id\":\"boundary.ready\",\"status\":\"ready\",\"summary\":{\"required_surfaces\":1,\"required_claims\":1,\"reasons\":0},\"reasons\":[],\"recommended_probes\":[],\"evidence_ids\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\"]}"
+          }
+        ],
+        "structuredContent": {
+          "boundary_id": "boundary.ready",
+          "status": "ready",
+          "summary": {
+            "required_surfaces": 1,
+            "required_claims": 1,
+            "reasons": 0
+          },
+          "reasons": [],
+          "recommended_probes": [],
+          "evidence_ids": [
+            "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+            "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+            "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d"
+          ]
+        }
+      }
+    },
+    {
+      "boundary_id": "boundary.full",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"boundary_id\":\"boundary.full\",\"status\":\"failed\",\"summary\":{\"required_surfaces\":5,\"required_claims\":4,\"reasons\":15},\"reasons\":[{\"code\":\"active-contradiction\",\"subject_id\":\"contradiction.package\",\"detail\":\"Active contradiction affects the completion boundary.\"},{\"code\":\"active-unknown\",\"subject_id\":\"unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e\",\"detail\":\"Active residual unknown is not permitted by the completion boundary.\"},{\"code\":\"authority-routing-detected\",\"subject_id\":\"surface.package\",\"detail\":\"Reconstructed owner routes into the authority.\"},{\"code\":\"claim-missing\",\"subject_id\":\"claim.missing\",\"detail\":\"Required finite claim is absent.\"},{\"code\":\"dependency-surface-missing\",\"subject_id\":\"surface.package\",\"detail\":\"Declared dependency surface is absent: surface.absent\"},{\"code\":\"disposition-not-allowed\",\"subject_id\":\"surface.readme\",\"detail\":\"non-goal is not allowed by this completion boundary.\"},{\"code\":\"owner-duplicate\",\"subject_id\":\"surface.routing\",\"detail\":\"Required surface has conflicting ownership declarations.\"},{\"code\":\"owner-path-unknown\",\"subject_id\":\"surface.package\",\"detail\":\"Declared owner path has not been checked.\"},{\"code\":\"owner-undistributed\",\"subject_id\":\"surface.package\",\"detail\":\"Declared owner is absent from the distributable.\"},{\"code\":\"package-proof-failed\",\"subject_id\":\"clean-install\",\"detail\":\"Required package or integration proof failed.\"},{\"code\":\"package-proof-missing\",\"subject_id\":\"package-contents\",\"detail\":\"Required package or integration proof is missing.\"},{\"code\":\"package-proof-unknown\",\"subject_id\":\"runtime-routing\",\"detail\":\"Required package or integration proof is not passing.\"},{\"code\":\"surface-missing\",\"subject_id\":\"surface.missing\",\"detail\":\"Required surface is absent from the authoritative inventory.\"},{\"code\":\"verifier-missing\",\"subject_id\":\"claim.unverified\",\"detail\":\"No verifier contract covers this claim.\"},{\"code\":\"verifier-result-incompatible\",\"subject_id\":\"claim.package\",\"detail\":\"Latest verifier result does not match current artifacts, owners, dimensions, authority, normalization, repeats, or contract.\"}],\"recommended_probes\":[{\"operation\":\"resolve_contradiction\",\"subject_id\":\"contradiction.package\",\"rationale\":\"Active contradiction affects the completion boundary.\"},{\"operation\":\"probe_residual_unknown\",\"subject_id\":\"unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e\",\"rationale\":\"Active residual unknown is not permitted by the completion boundary.\"},{\"operation\":\"reconcile_reconstruction_owner\",\"subject_id\":\"surface.package\",\"rationale\":\"Reconstructed owner routes into the authority.\"},{\"operation\":\"update_authoritative_inventory\",\"subject_id\":\"claim.missing\",\"rationale\":\"Required finite claim is absent.\"},{\"operation\":\"update_authoritative_inventory\",\"subject_id\":\"surface.package\",\"rationale\":\"Declared dependency surface is absent: surface.absent\"},{\"operation\":\"update_authoritative_inventory\",\"subject_id\":\"surface.readme\",\"rationale\":\"non-goal is not allowed by this completion boundary.\"},{\"operation\":\"reconcile_reconstruction_owner\",\"subject_id\":\"surface.routing\",\"rationale\":\"Required surface has conflicting ownership declarations.\"},{\"operation\":\"reconcile_reconstruction_owner\",\"subject_id\":\"surface.package\",\"rationale\":\"Declared owner path has not been checked.\"},{\"operation\":\"reconcile_reconstruction_owner\",\"subject_id\":\"surface.package\",\"rationale\":\"Declared owner is absent from the distributable.\"},{\"operation\":\"verify_reconstruction_package\",\"subject_id\":\"clean-install\",\"rationale\":\"Required package or integration proof failed.\"},{\"operation\":\"verify_reconstruction_package\",\"subject_id\":\"package-contents\",\"rationale\":\"Required package or integration proof is missing.\"},{\"operation\":\"verify_reconstruction_package\",\"subject_id\":\"runtime-routing\",\"rationale\":\"Required package or integration proof is not passing.\"},{\"operation\":\"update_authoritative_inventory\",\"subject_id\":\"surface.missing\",\"rationale\":\"Required surface is absent from the authoritative inventory.\"},{\"operation\":\"run_reconstruction_verifier\",\"subject_id\":\"claim.unverified\",\"rationale\":\"No verifier contract covers this claim.\"},{\"operation\":\"run_reconstruction_verifier\",\"subject_id\":\"claim.package\",\"rationale\":\"Latest verifier result does not match current artifacts, owners, dimensions, authority, normalization, repeats, or contract.\"}],\"evidence_ids\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"]}"
+          }
+        ],
+        "structuredContent": {
+          "boundary_id": "boundary.full",
+          "status": "failed",
+          "summary": {
+            "required_surfaces": 5,
+            "required_claims": 4,
+            "reasons": 15
+          },
+          "reasons": [
+            {
+              "code": "active-contradiction",
+              "subject_id": "contradiction.package",
+              "detail": "Active contradiction affects the completion boundary."
+            },
+            {
+              "code": "active-unknown",
+              "subject_id": "unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e",
+              "detail": "Active residual unknown is not permitted by the completion boundary."
+            },
+            {
+              "code": "authority-routing-detected",
+              "subject_id": "surface.package",
+              "detail": "Reconstructed owner routes into the authority."
+            },
+            {
+              "code": "claim-missing",
+              "subject_id": "claim.missing",
+              "detail": "Required finite claim is absent."
+            },
+            {
+              "code": "dependency-surface-missing",
+              "subject_id": "surface.package",
+              "detail": "Declared dependency surface is absent: surface.absent"
+            },
+            {
+              "code": "disposition-not-allowed",
+              "subject_id": "surface.readme",
+              "detail": "non-goal is not allowed by this completion boundary."
+            },
+            {
+              "code": "owner-duplicate",
+              "subject_id": "surface.routing",
+              "detail": "Required surface has conflicting ownership declarations."
+            },
+            {
+              "code": "owner-path-unknown",
+              "subject_id": "surface.package",
+              "detail": "Declared owner path has not been checked."
+            },
+            {
+              "code": "owner-undistributed",
+              "subject_id": "surface.package",
+              "detail": "Declared owner is absent from the distributable."
+            },
+            {
+              "code": "package-proof-failed",
+              "subject_id": "clean-install",
+              "detail": "Required package or integration proof failed."
+            },
+            {
+              "code": "package-proof-missing",
+              "subject_id": "package-contents",
+              "detail": "Required package or integration proof is missing."
+            },
+            {
+              "code": "package-proof-unknown",
+              "subject_id": "runtime-routing",
+              "detail": "Required package or integration proof is not passing."
+            },
+            {
+              "code": "surface-missing",
+              "subject_id": "surface.missing",
+              "detail": "Required surface is absent from the authoritative inventory."
+            },
+            {
+              "code": "verifier-missing",
+              "subject_id": "claim.unverified",
+              "detail": "No verifier contract covers this claim."
+            },
+            {
+              "code": "verifier-result-incompatible",
+              "subject_id": "claim.package",
+              "detail": "Latest verifier result does not match current artifacts, owners, dimensions, authority, normalization, repeats, or contract."
+            }
+          ],
+          "recommended_probes": [
+            {
+              "operation": "resolve_contradiction",
+              "subject_id": "contradiction.package",
+              "rationale": "Active contradiction affects the completion boundary."
+            },
+            {
+              "operation": "probe_residual_unknown",
+              "subject_id": "unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e",
+              "rationale": "Active residual unknown is not permitted by the completion boundary."
+            },
+            {
+              "operation": "reconcile_reconstruction_owner",
+              "subject_id": "surface.package",
+              "rationale": "Reconstructed owner routes into the authority."
+            },
+            {
+              "operation": "update_authoritative_inventory",
+              "subject_id": "claim.missing",
+              "rationale": "Required finite claim is absent."
+            },
+            {
+              "operation": "update_authoritative_inventory",
+              "subject_id": "surface.package",
+              "rationale": "Declared dependency surface is absent: surface.absent"
+            },
+            {
+              "operation": "update_authoritative_inventory",
+              "subject_id": "surface.readme",
+              "rationale": "non-goal is not allowed by this completion boundary."
+            },
+            {
+              "operation": "reconcile_reconstruction_owner",
+              "subject_id": "surface.routing",
+              "rationale": "Required surface has conflicting ownership declarations."
+            },
+            {
+              "operation": "reconcile_reconstruction_owner",
+              "subject_id": "surface.package",
+              "rationale": "Declared owner path has not been checked."
+            },
+            {
+              "operation": "reconcile_reconstruction_owner",
+              "subject_id": "surface.package",
+              "rationale": "Declared owner is absent from the distributable."
+            },
+            {
+              "operation": "verify_reconstruction_package",
+              "subject_id": "clean-install",
+              "rationale": "Required package or integration proof failed."
+            },
+            {
+              "operation": "verify_reconstruction_package",
+              "subject_id": "package-contents",
+              "rationale": "Required package or integration proof is missing."
+            },
+            {
+              "operation": "verify_reconstruction_package",
+              "subject_id": "runtime-routing",
+              "rationale": "Required package or integration proof is not passing."
+            },
+            {
+              "operation": "update_authoritative_inventory",
+              "subject_id": "surface.missing",
+              "rationale": "Required surface is absent from the authoritative inventory."
+            },
+            {
+              "operation": "run_reconstruction_verifier",
+              "subject_id": "claim.unverified",
+              "rationale": "No verifier contract covers this claim."
+            },
+            {
+              "operation": "run_reconstruction_verifier",
+              "subject_id": "claim.package",
+              "rationale": "Latest verifier result does not match current artifacts, owners, dimensions, authority, normalization, repeats, or contract."
+            }
+          ],
+          "evidence_ids": [
+            "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+            "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+            "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+            "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+            "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+          ]
+        }
+      }
+    },
+    {
+      "boundary_id": "boundary.unknown",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"boundary_id\":\"boundary.unknown\",\"status\":\"unknown\",\"summary\":{\"required_surfaces\":1,\"required_claims\":1,\"reasons\":2},\"reasons\":[{\"code\":\"package-proof-unknown\",\"subject_id\":\"runtime-routing\",\"detail\":\"Required package or integration proof is not passing.\"},{\"code\":\"verifier-result-incompatible\",\"subject_id\":\"claim.package\",\"detail\":\"Latest verifier result does not match current artifacts, owners, dimensions, authority, normalization, repeats, or contract.\"}],\"recommended_probes\":[{\"operation\":\"verify_reconstruction_package\",\"subject_id\":\"runtime-routing\",\"rationale\":\"Required package or integration proof is not passing.\"},{\"operation\":\"run_reconstruction_verifier\",\"subject_id\":\"claim.package\",\"rationale\":\"Latest verifier result does not match current artifacts, owners, dimensions, authority, normalization, repeats, or contract.\"}],\"evidence_ids\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\"]}"
+          }
+        ],
+        "structuredContent": {
+          "boundary_id": "boundary.unknown",
+          "status": "unknown",
+          "summary": {
+            "required_surfaces": 1,
+            "required_claims": 1,
+            "reasons": 2
+          },
+          "reasons": [
+            {
+              "code": "package-proof-unknown",
+              "subject_id": "runtime-routing",
+              "detail": "Required package or integration proof is not passing."
+            },
+            {
+              "code": "verifier-result-incompatible",
+              "subject_id": "claim.package",
+              "detail": "Latest verifier result does not match current artifacts, owners, dimensions, authority, normalization, repeats, or contract."
+            }
+          ],
+          "recommended_probes": [
+            {
+              "operation": "verify_reconstruction_package",
+              "subject_id": "runtime-routing",
+              "rationale": "Required package or integration proof is not passing."
+            },
+            {
+              "operation": "run_reconstruction_verifier",
+              "subject_id": "claim.package",
+              "rationale": "Latest verifier result does not match current artifacts, owners, dimensions, authority, normalization, repeats, or contract."
+            }
+          ],
+          "evidence_ids": [
+            "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+            "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df"
+          ]
+        }
+      }
+    },
+    {
+      "boundary_id": "boundary.partial",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"boundary_id\":\"boundary.partial\",\"status\":\"partial\",\"summary\":{\"required_surfaces\":2,\"required_claims\":1,\"reasons\":3},\"reasons\":[{\"code\":\"package-proof-missing\",\"subject_id\":\"authority-independence\",\"detail\":\"Required package or integration proof is missing.\"},{\"code\":\"surface-missing\",\"subject_id\":\"surface.gone\",\"detail\":\"Required surface is absent from the authoritative inventory.\"},{\"code\":\"verifier-missing\",\"subject_id\":\"claim.unverified\",\"detail\":\"No verifier contract covers this claim.\"}],\"recommended_probes\":[{\"operation\":\"verify_reconstruction_package\",\"subject_id\":\"authority-independence\",\"rationale\":\"Required package or integration proof is missing.\"},{\"operation\":\"update_authoritative_inventory\",\"subject_id\":\"surface.gone\",\"rationale\":\"Required surface is absent from the authoritative inventory.\"},{\"operation\":\"run_reconstruction_verifier\",\"subject_id\":\"claim.unverified\",\"rationale\":\"No verifier contract covers this claim.\"}],\"evidence_ids\":[\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\"]}"
+          }
+        ],
+        "structuredContent": {
+          "boundary_id": "boundary.partial",
+          "status": "partial",
+          "summary": {
+            "required_surfaces": 2,
+            "required_claims": 1,
+            "reasons": 3
+          },
+          "reasons": [
+            {
+              "code": "package-proof-missing",
+              "subject_id": "authority-independence",
+              "detail": "Required package or integration proof is missing."
+            },
+            {
+              "code": "surface-missing",
+              "subject_id": "surface.gone",
+              "detail": "Required surface is absent from the authoritative inventory."
+            },
+            {
+              "code": "verifier-missing",
+              "subject_id": "claim.unverified",
+              "detail": "No verifier contract covers this claim."
+            }
+          ],
+          "recommended_probes": [
+            {
+              "operation": "verify_reconstruction_package",
+              "subject_id": "authority-independence",
+              "rationale": "Required package or integration proof is missing."
+            },
+            {
+              "operation": "update_authoritative_inventory",
+              "subject_id": "surface.gone",
+              "rationale": "Required surface is absent from the authoritative inventory."
+            },
+            {
+              "operation": "run_reconstruction_verifier",
+              "subject_id": "claim.unverified",
+              "rationale": "No verifier contract covers this claim."
+            }
+          ],
+          "evidence_ids": [
+            "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_fb9b911194d652ead87fa4f075571f8fc659fba178e7b99f10e084a6d12b1224\",\"subject\":null,\"provider\":{\"id\":\"rea-javascript-application-workflows\",\"name\":\"REA JavaScript application workflows\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.reconstruction-obligation-ledger\",\"operation\":\"build_reconstruction_obligation_ledger\",\"parameters\":{\"ledger_id\":\"rol_7a0c240d63fae197409ba84cd77e8f4eb3665bfbc30600812ed15580421e6dd5\",\"closure_digest\":\"a90262ad35191c45b79d3531dad5520fb6d56900a9404daacd9c3669253b0430\"},\"raw_result\":null,\"normalized_result\":{\"schema\":\"ReconstructionObligationLedger\",\"ledger_id\":\"rol_7a0c240d63fae197409ba84cd77e8f4eb3665bfbc30600812ed15580421e6dd5\",\"closure_digest\":\"a90262ad35191c45b79d3531dad5520fb6d56900a9404daacd9c3669253b0430\",\"status\":\"unknown\",\"coverage\":{\"status\":\"partial\"},\"summary\":{\"total\":0,\"required\":0,\"verified\":0,\"required_open\":0,\"by_status\":[{\"key\":\"unowned\",\"count\":0},{\"key\":\"characterized\",\"count\":0},{\"key\":\"implemented\",\"count\":0},{\"key\":\"verified\",\"count\":0},{\"key\":\"contradicted\",\"count\":0},{\"key\":\"blocked\",\"count\":0},{\"key\":\"out-of-scope\",\"count\":0},{\"key\":\"unknown\",\"count\":0}],\"by_application_layer\":[{\"key\":\"cli\",\"count\":0},{\"key\":\"protocol\",\"count\":0},{\"key\":\"electron\",\"count\":0},{\"key\":\"persistence\",\"count\":0},{\"key\":\"process\",\"count\":0},{\"key\":\"runtime\",\"count\":0},{\"key\":\"packaging\",\"count\":0},{\"key\":\"native-abi\",\"count\":0},{\"key\":\"application\",\"count\":0},{\"key\":\"other\",\"count\":0}],\"by_evidence_authority\":[{\"key\":\"candidate\",\"count\":0},{\"key\":\"observed\",\"count\":0},{\"key\":\"reviewed\",\"count\":0},{\"key\":\"unknown\",\"count\":0}]},\"reports\":{\"missing_owner_obligation_ids\":[],\"missing_verifier_obligation_ids\":[],\"contradicted_obligation_ids\":[],\"residual_unknown_ids\":[]},\"ownership_graph\":[],\"dependency_graph\":[],\"obligations\":[],\"evidence_links\":[],\"limitations\":[\"No reconstruction obligations were derived; closure cannot be claimed.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"No reconstruction obligations were derived; closure cannot be claimed.\"],\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_fb9b911194d652ead87fa4f075571f8fc659fba178e7b99f10e084a6d12b1224",
+    "subject": null,
+    "provider": {
+      "id": "rea-javascript-application-workflows",
+      "name": "REA JavaScript application workflows",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.reconstruction-obligation-ledger",
+    "operation": "build_reconstruction_obligation_ledger",
+    "parameters": {
+      "ledger_id": "rol_7a0c240d63fae197409ba84cd77e8f4eb3665bfbc30600812ed15580421e6dd5",
+      "closure_digest": "a90262ad35191c45b79d3531dad5520fb6d56900a9404daacd9c3669253b0430"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "schema": "ReconstructionObligationLedger",
+      "ledger_id": "rol_7a0c240d63fae197409ba84cd77e8f4eb3665bfbc30600812ed15580421e6dd5",
+      "closure_digest": "a90262ad35191c45b79d3531dad5520fb6d56900a9404daacd9c3669253b0430",
+      "status": "unknown",
+      "coverage": {
+        "status": "partial"
+      },
+      "summary": {
+        "total": 0,
+        "required": 0,
+        "verified": 0,
+        "required_open": 0,
+        "by_status": [
+          {
+            "key": "unowned",
+            "count": 0
+          },
+          {
+            "key": "characterized",
+            "count": 0
+          },
+          {
+            "key": "implemented",
+            "count": 0
+          },
+          {
+            "key": "verified",
+            "count": 0
+          },
+          {
+            "key": "contradicted",
+            "count": 0
+          },
+          {
+            "key": "blocked",
+            "count": 0
+          },
+          {
+            "key": "out-of-scope",
+            "count": 0
+          },
+          {
+            "key": "unknown",
+            "count": 0
+          }
+        ],
+        "by_application_layer": [
+          {
+            "key": "cli",
+            "count": 0
+          },
+          {
+            "key": "protocol",
+            "count": 0
+          },
+          {
+            "key": "electron",
+            "count": 0
+          },
+          {
+            "key": "persistence",
+            "count": 0
+          },
+          {
+            "key": "process",
+            "count": 0
+          },
+          {
+            "key": "runtime",
+            "count": 0
+          },
+          {
+            "key": "packaging",
+            "count": 0
+          },
+          {
+            "key": "native-abi",
+            "count": 0
+          },
+          {
+            "key": "application",
+            "count": 0
+          },
+          {
+            "key": "other",
+            "count": 0
+          }
+        ],
+        "by_evidence_authority": [
+          {
+            "key": "candidate",
+            "count": 0
+          },
+          {
+            "key": "observed",
+            "count": 0
+          },
+          {
+            "key": "reviewed",
+            "count": 0
+          },
+          {
+            "key": "unknown",
+            "count": 0
+          }
+        ]
+      },
+      "reports": {
+        "missing_owner_obligation_ids": [],
+        "missing_verifier_obligation_ids": [],
+        "contradicted_obligation_ids": [],
+        "residual_unknown_ids": []
+      },
+      "ownership_graph": [],
+      "dependency_graph": [],
+      "obligations": [],
+      "evidence_links": [],
+      "limitations": [
+        "No reconstruction obligations were derived; closure cannot be claimed."
+      ]
+    },
+    "confidence": "inferred",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "No reconstruction obligations were derived; closure cannot be claimed."
+    ],
+    "locations": [],
+    "evidence_links": []
+  }
+}

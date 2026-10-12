@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"error\":{\"code\":\"target_unavailable\",\"category\":\"unavailable\",\"message\":\"inspect_electron_page could not find the selected target at the debugging endpoint. Refresh target discovery for that endpoint and retry with a returned target ID.\",\"retryable\":false,\"remediation\":{\"action\":\"inspect_electron_page could not find the selected target at the debugging endpoint. Refresh target discovery for that endpoint and retry with a returned target ID.\"},\"details\":{\"operation\":\"inspect_electron_page\",\"reason\":\"target_not_found\"}}}"
+    }
+  ],
+  "isError": true
+}

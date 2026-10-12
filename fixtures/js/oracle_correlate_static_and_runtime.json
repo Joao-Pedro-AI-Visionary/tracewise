@@ -1,0 +1,210 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_a9b4062e6a1e76cc1d7e5e5e9cd7db43f1cbe6afe99e30013b6593b958dc1982\",\"subject\":null,\"provider\":{\"id\":\"rea-static-runtime-correlation\",\"name\":\"REA static/runtime correlation\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.static-runtime-correlation\",\"operation\":\"correlate_static_and_runtime\",\"parameters\":{\"mapping_count\":3},\"raw_result\":null,\"normalized_result\":{\"status\":\"unknown\",\"summary\":{\"hypotheses\":1,\"contradictions\":1,\"unresolved\":1},\"correlations\":{\"items\":[{\"correlation_id\":\"cor_0f7689d81a054a757c209470d26c50d871a10affe65617080b18f068586fe59e\",\"static\":{\"comparison_evidence_id\":\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"selector\":{\"kind\":\"artifact\",\"logical_path\":\".\"},\"status\":\"changed\",\"conclusion_kind\":\"derived_relationship\"},\"runtime\":{\"comparison_evidence_id\":\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"dimension\":\"terminal\",\"status\":\"changed\"},\"side_alignment\":\"left_to_left\",\"hypothesis\":{\"statement\":\"The changed module changes the printed total.\",\"expected_pattern\":\"cochanged\"},\"observed_pattern\":\"cochanged\",\"classification\":\"hypothesis\",\"evidence_links\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Side alignment is caller-declared and was not independently validated against source subjects or environments.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"This correlation tests an explicit hypothesis and does not establish causality.\"]},{\"correlation_id\":\"cor_1a9810fc7955a12440831801d5124dfbafe6562eae45cf801ccdce74aeef7a41\",\"static\":{\"comparison_evidence_id\":\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"selector\":{\"kind\":\"artifact\",\"logical_path\":\".\"},\"status\":\"changed\",\"conclusion_kind\":\"derived_relationship\"},\"runtime\":{\"comparison_evidence_id\":\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"dimension\":\"terminal\",\"status\":\"unchanged\"},\"side_alignment\":\"left_to_right\",\"hypothesis\":{\"statement\":\"The module change is invisible on the terminal.\",\"expected_pattern\":\"cochanged\"},\"observed_pattern\":\"static_only\",\"classification\":\"contradiction\",\"evidence_links\":[\"ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124\",\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Side alignment is caller-declared and was not independently validated against source subjects or environments.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"This correlation tests an explicit hypothesis and does not establish causality.\"]},{\"correlation_id\":\"cor_cdd44676a06d5132be9896e067429c6153c24bc6bbff83b2ad890fa1b6d0dbcf\",\"static\":{\"comparison_evidence_id\":\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"selector\":{\"kind\":\"artifact\",\"logical_path\":\".\"},\"status\":\"changed\",\"conclusion_kind\":\"derived_relationship\"},\"runtime\":{\"comparison_evidence_id\":\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"dimension\":\"filesystem\",\"status\":\"unknown\"},\"side_alignment\":\"left_to_left\",\"hypothesis\":{\"statement\":\"Filesystem effects follow the module.\",\"expected_pattern\":\"static_only\"},\"observed_pattern\":\"unknown\",\"classification\":\"unresolved_branch\",\"evidence_links\":[\"ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124\",\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Side alignment is caller-declared and was not independently validated against source subjects or environments.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"This correlation tests an explicit hypothesis and does not establish causality.\"]}]},\"evidence_links\":[\"ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124\",\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"limitations\":[\"Mappings are caller-declared hypotheses; consistency does not establish causality.\",\"Only explicit mappings were evaluated; similar unmapped observations were not correlated.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Mappings are caller-declared hypotheses; consistency does not establish causality.\",\"Only explicit mappings were evaluated; similar unmapped observations were not correlated.\"],\"locations\":[],\"evidence_links\":[\"ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124\",\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_a9b4062e6a1e76cc1d7e5e5e9cd7db43f1cbe6afe99e30013b6593b958dc1982",
+    "subject": null,
+    "provider": {
+      "id": "rea-static-runtime-correlation",
+      "name": "REA static/runtime correlation",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.static-runtime-correlation",
+    "operation": "correlate_static_and_runtime",
+    "parameters": {
+      "mapping_count": 3
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "status": "unknown",
+      "summary": {
+        "hypotheses": 1,
+        "contradictions": 1,
+        "unresolved": 1
+      },
+      "correlations": {
+        "items": [
+          {
+            "correlation_id": "cor_0f7689d81a054a757c209470d26c50d871a10affe65617080b18f068586fe59e",
+            "static": {
+              "comparison_evidence_id": "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+              "selector": {
+                "kind": "artifact",
+                "logical_path": "."
+              },
+              "status": "changed",
+              "conclusion_kind": "derived_relationship"
+            },
+            "runtime": {
+              "comparison_evidence_id": "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+              "dimension": "terminal",
+              "status": "changed"
+            },
+            "side_alignment": "left_to_left",
+            "hypothesis": {
+              "statement": "The changed module changes the printed total.",
+              "expected_pattern": "cochanged"
+            },
+            "observed_pattern": "cochanged",
+            "classification": "hypothesis",
+            "evidence_links": [
+              "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+              "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+              "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+              "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+              "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+            ],
+            "limitations": [
+              "Artifact identity is unavailable for this observation.",
+              "Filesystem observations are before/after snapshots, not syscall traces.",
+              "Inherited host environment variables are not recorded and may affect results.",
+              "Inherited host environment variables are not recorded.",
+              "Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Network activity is not observed by this capture.",
+              "No filesystem observation paths were selected; filesystem effects remain unknown.",
+              "Process trees are sampled and may omit short-lived descendants.",
+              "Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Side alignment is caller-declared and was not independently validated against source subjects or environments.",
+              "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+              "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+              "This correlation tests an explicit hypothesis and does not establish causality."
+            ]
+          },
+          {
+            "correlation_id": "cor_1a9810fc7955a12440831801d5124dfbafe6562eae45cf801ccdce74aeef7a41",
+            "static": {
+              "comparison_evidence_id": "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+              "selector": {
+                "kind": "artifact",
+                "logical_path": "."
+              },
+              "status": "changed",
+              "conclusion_kind": "derived_relationship"
+            },
+            "runtime": {
+              "comparison_evidence_id": "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+              "dimension": "terminal",
+              "status": "unchanged"
+            },
+            "side_alignment": "left_to_right",
+            "hypothesis": {
+              "statement": "The module change is invisible on the terminal.",
+              "expected_pattern": "cochanged"
+            },
+            "observed_pattern": "static_only",
+            "classification": "contradiction",
+            "evidence_links": [
+              "ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124",
+              "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+              "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+              "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+              "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+            ],
+            "limitations": [
+              "Artifact identity is unavailable for this observation.",
+              "Filesystem observations are before/after snapshots, not syscall traces.",
+              "Inherited host environment variables are not recorded and may affect results.",
+              "Inherited host environment variables are not recorded.",
+              "Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Network activity is not observed by this capture.",
+              "No filesystem observation paths were selected; filesystem effects remain unknown.",
+              "Process trees are sampled and may omit short-lived descendants.",
+              "Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Side alignment is caller-declared and was not independently validated against source subjects or environments.",
+              "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+              "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+              "This correlation tests an explicit hypothesis and does not establish causality."
+            ]
+          },
+          {
+            "correlation_id": "cor_cdd44676a06d5132be9896e067429c6153c24bc6bbff83b2ad890fa1b6d0dbcf",
+            "static": {
+              "comparison_evidence_id": "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+              "selector": {
+                "kind": "artifact",
+                "logical_path": "."
+              },
+              "status": "changed",
+              "conclusion_kind": "derived_relationship"
+            },
+            "runtime": {
+              "comparison_evidence_id": "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+              "dimension": "filesystem",
+              "status": "unknown"
+            },
+            "side_alignment": "left_to_left",
+            "hypothesis": {
+              "statement": "Filesystem effects follow the module.",
+              "expected_pattern": "static_only"
+            },
+            "observed_pattern": "unknown",
+            "classification": "unresolved_branch",
+            "evidence_links": [
+              "ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124",
+              "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+              "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+              "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+              "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+            ],
+            "limitations": [
+              "Artifact identity is unavailable for this observation.",
+              "Filesystem observations are before/after snapshots, not syscall traces.",
+              "Inherited host environment variables are not recorded and may affect results.",
+              "Inherited host environment variables are not recorded.",
+              "Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Network activity is not observed by this capture.",
+              "No filesystem observation paths were selected; filesystem effects remain unknown.",
+              "Process trees are sampled and may omit short-lived descendants.",
+              "Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Side alignment is caller-declared and was not independently validated against source subjects or environments.",
+              "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+              "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+              "This correlation tests an explicit hypothesis and does not establish causality."
+            ]
+          }
+        ]
+      },
+      "evidence_links": [
+        "ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124",
+        "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+        "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+        "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+        "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+        "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+        "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+        "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+      ],
+      "limitations": [
+        "Mappings are caller-declared hypotheses; consistency does not establish causality.",
+        "Only explicit mappings were evaluated; similar unmapped observations were not correlated."
+      ]
+    },
+    "confidence": "inferred",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "Mappings are caller-declared hypotheses; consistency does not establish causality.",
+      "Only explicit mappings were evaluated; similar unmapped observations were not correlated."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124",
+      "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+      "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+      "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+      "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+      "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+      "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+      "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+    ]
+  }
+}

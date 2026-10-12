@@ -129,11 +129,21 @@ async fn execute_tool(
         "list_javascript_runtime_targets" => handle_list_javascript_runtime_targets(session, args).await,
         "observe_javascript_runtime" => handle_observe_javascript_runtime(session, args).await,
         "reconcile_javascript_runtime" => handle_reconcile_javascript_runtime(session, args),
-        name if tracewise_contracts::phase2_tool_names().contains(&name) => {
-            Err(McpError::internal_error(
-                format!("not yet implemented: {name}"),
-                None,
-            ))
+        "list_electron_targets" => crate::electron_handlers::handle_list_electron_targets(session, args).await,
+        "inspect_electron_page" => crate::electron_handlers::handle_inspect_electron_page(session, args).await,
+        "capture_electron_scenario" => crate::electron_handlers::handle_capture_electron_scenario(session, args).await,
+        "capture_process_scenario" => crate::process_handlers::handle_capture_process_scenario(session, args).await,
+        "compare_process_captures" => crate::process_handlers::handle_compare_process_captures(session, args),
+        "build_reconstruction_obligation_ledger" => {
+            crate::reconstruction_handlers::handle_build_reconstruction_obligation_ledger(session, args)
+        }
+        "evaluate_reconstruction_coverage" => {
+            crate::reconstruction_handlers::handle_evaluate_reconstruction_coverage(session, args)
+        }
+        "verify_reconstruction" => crate::reconstruction_handlers::handle_verify_reconstruction(session, args),
+        "find_changed_behavior" => crate::reconstruction_handlers::handle_find_changed_behavior(session, args),
+        "correlate_static_and_runtime" => {
+            crate::reconstruction_handlers::handle_correlate_static_and_runtime(session, args)
         }
         _ => Err(McpError::invalid_request(
             format!("Unknown tool: '{name}'"),
@@ -629,7 +639,7 @@ fn handle_compare_web_screenshots(
 
 
 /// Browser observation failures are tool results (`isError`), not protocol errors.
-fn browser_tool_result(
+pub(crate) fn browser_tool_result(
     session: &BinarySession,
     outcome: Result<tracewise_domain::evidence::Evidence, tracewise_web::error::WebError>,
 ) -> Result<CallToolResult, McpError> {
@@ -1103,7 +1113,7 @@ fn handle_trace_javascript_semantics(
     Ok(CallToolResult::structured(val))
 }
 
-fn resolve_evidence_input(
+pub(crate) fn resolve_evidence_input(
     session: &BinarySession,
     value: &Value,
     label: &str,
@@ -1138,7 +1148,7 @@ fn resolve_evidence_input(
     Ok(evidence)
 }
 
-fn remember_evidence(session: &BinarySession, evidence: Evidence) -> Result<CallToolResult, McpError> {
+pub(crate) fn remember_evidence(session: &BinarySession, evidence: Evidence) -> Result<CallToolResult, McpError> {
     session
         .ledger
         .lock()

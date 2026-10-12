@@ -1,0 +1,187 @@
+{
+  "reviewed_obligations": [
+    {
+      "obligation_id": "reviewed.invoice-export",
+      "obligation_version": 2,
+      "title": "  Export invoice as PDF ",
+      "application_layer": "electron",
+      "family": "invoice-export",
+      "target": {
+        "artifact_sha256": null,
+        "application_node_id": null,
+        "semantic_node_id": null,
+        "location": "src/main.js"
+      },
+      "required": true,
+      "required_case_kinds": [
+        "positive",
+        "negative"
+      ],
+      "required_original_authority": "process",
+      "required_fixture_authority": "unit",
+      "required_verifier_authority": "integration",
+      "requires_parser_type": false,
+      "dependency_obligation_ids": [
+        "obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887",
+        "reviewed.absent"
+      ],
+      "residual_unknown_ids": [],
+      "unavailable_authority": [],
+      "required_next_evidence": [
+        "Capture the export round trip."
+      ],
+      "disposition": "active",
+      "review_evidence_ids": [
+        "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+        "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e"
+      ]
+    },
+    {
+      "obligation_id": "reviewed.printing",
+      "obligation_version": 1,
+      "title": "Printing",
+      "application_layer": "process",
+      "family": "printing",
+      "target": {
+        "artifact_sha256": null,
+        "application_node_id": null,
+        "semantic_node_id": null,
+        "location": "src/main.js"
+      },
+      "required": false,
+      "required_case_kinds": [
+        "positive"
+      ],
+      "required_original_authority": "external",
+      "required_fixture_authority": "external",
+      "required_verifier_authority": "external",
+      "requires_parser_type": false,
+      "dependency_obligation_ids": [],
+      "residual_unknown_ids": [
+        "unk.printer"
+      ],
+      "unavailable_authority": [
+        "No printer was available."
+      ],
+      "required_next_evidence": [],
+      "disposition": "out-of-scope",
+      "review_evidence_ids": [
+        "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e"
+      ]
+    }
+  ],
+  "manifest": {
+    "bindings": [
+      {
+        "obligation_id": "obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887",
+        "owner": {
+          "module_path": "src/invoice/render.rs",
+          "symbol": "render_invoice",
+          "owner_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+        },
+        "parser_type": null,
+        "original_cases": [
+          {
+            "kind": "positive",
+            "evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+            "location": "/normalized_result/exit"
+          },
+          {
+            "kind": "malformed",
+            "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+            "location": "/normalized_result/graph"
+          }
+        ],
+        "fixtures": [
+          {
+            "fixture_id": "fixture.positive",
+            "case_kind": "positive",
+            "authority": "protocol",
+            "evidence_ids": [
+              "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d"
+            ]
+          },
+          {
+            "fixture_id": "fixture.negative",
+            "case_kind": "negative",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e"
+            ]
+          }
+        ],
+        "verifier": {
+          "verifier_id": "verifier.endpoint",
+          "claim_id": "claim.endpoint",
+          "command": "cargo test endpoint",
+          "authority": "protocol",
+          "status": "fail",
+          "result_evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+          "enumerated_obligation_ids": [
+            "reviewed.invoice-export"
+          ],
+          "nondeterminism": {
+            "mode": "total-order",
+            "specification": "single request"
+          }
+        }
+      },
+      {
+        "obligation_id": "obl_565df239dc7c0012521a37b9e45469c784e20285832733f7a6a23abd3802ed3b",
+        "owner": {
+          "module_path": "src/process.rs",
+          "symbol": "run",
+          "owner_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        },
+        "parser_type": {
+          "parser": "clap",
+          "schema": "Cli",
+          "domain_type": "Command"
+        },
+        "original_cases": [],
+        "fixtures": [],
+        "verifier": null
+      },
+      {
+        "obligation_id": "obl_565df239dc7c0012521a37b9e45469c784e20285832733f7a6a23abd3802ed3b",
+        "owner": {
+          "module_path": "src/process2.rs",
+          "symbol": "run",
+          "owner_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        },
+        "parser_type": null,
+        "original_cases": [],
+        "fixtures": [],
+        "verifier": null
+      },
+      {
+        "obligation_id": "orphan.binding",
+        "owner": {
+          "module_path": "src/orphan.rs",
+          "symbol": "x",
+          "owner_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "parser_type": null,
+        "original_cases": [],
+        "fixtures": [],
+        "verifier": null
+      }
+    ],
+    "contradictions": [
+      {
+        "obligation_id": "obl_16a5707a1d1b754ceca418be9744ff2177b08e3ee3abd5587d6173cf89cb2a04",
+        "evidence_ids": [
+          "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+          "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e"
+        ]
+      },
+      {
+        "obligation_id": "obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887",
+        "evidence_ids": [
+          "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+          "ev_1111111111111111111111111111111111111111111111111111111111111111"
+        ]
+      }
+    ]
+  }
+}

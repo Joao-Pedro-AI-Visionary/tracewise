@@ -161,3 +161,16 @@
 
 ## 2026-10-12 08:46 — phase2: V8 inspector runtime tools (CLI: cursor:grok-4.7-high)
 - testes ok: 80
+
+## 2026-10-12 09:43 — FALHOU: phase2: V8 runtime, Electron CDP, process capture, reconstruction ledger; all 52 dispatch
+
+## 2026-10-12 — phase2: Electron CDP, process capture, reconstruction workflow (b8–b10)
+- crates/web + crates/js: `list_electron_targets` and `inspect_electron_page` over the existing CDP client. `capture_electron_scenario` validates input and paths as REA, then returns REA's provider-unavailable error (the Playwright active hook is not ported).
+- crates/js: `capture_process_scenario` (portable-pty 0.8 + vt100 0.15, not proc-supervisor because the PTY must be the child's stdio with setsid/TIOCSCTTY) and `compare_process_captures`. `pty_backend` stays `"node-pty"` (schema constant).
+- crates/js: `build_reconstruction_obligation_ledger`, `evaluate_reconstruction_coverage`, `verify_reconstruction`, `find_changed_behavior`, `correlate_static_and_runtime`. `fixtures/js/reconstruction_oracle_chain.py` regenerates the REA ground truth.
+- testes: `electron_tools_test.rs`, `process_tools_test.rs`, `reconstruction_tools_test.rs` validate `outputSchema` and REA parity. Ignored fields are documented in each test header (reconstruction: none; process capture: `evidence_id`, timestamps, `at_ms`, `elapsed_ms`; Electron live: process/target/frame ids and timestamps).
+- `tool_dispatch_test`: all 50 REA + 2 tracewise tools dispatch to real handlers; no stub marker in crates/server/src.
+- testes ok: 118 (`cargo build --workspace`, `cargo test --workspace`, `cargo clippy --workspace --all-targets` sem erros)
+
+## 2026-10-12 15:14 — phase2: V8 runtime, Electron CDP, process capture, reconstruction ledger; all 52 dispatch (CLI: claude)
+- testes ok: 118

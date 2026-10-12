@@ -1,0 +1,28 @@
+{
+  "specification": {
+    "name": "Invoice feature reconstruction",
+    "claims": [
+      {
+        "claim_id": "invoice.output",
+        "title": "Invoice total output",
+        "kind": "behavioral",
+        "dimension": "terminal",
+        "comparison_evidence_id": "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d"
+      },
+      {
+        "claim_id": "invoice.regression",
+        "title": "Regression build output",
+        "kind": "behavioral",
+        "dimension": "overall",
+        "comparison_evidence_id": "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d"
+      },
+      {
+        "claim_id": "package.contents",
+        "title": "Package contents",
+        "kind": "structural-artifact",
+        "dimension": "overall",
+        "comparison_evidence_id": "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963"
+      }
+    ]
+  }
+}

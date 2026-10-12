@@ -36,6 +36,12 @@ tokio = { workspace = true }
 reqwest = { workspace = true }
 url = { workspace = true }
 percent-encoding = "2"
+portable-pty = "0.8"
+vt100 = "0.15"
+# process_capture: lookaround regexes (REA port/pid normalization), POSIX process control, ISO timestamps
+fancy-regex = "0.14"
+libc = "0.2"
+chrono = { workspace = true }
 
 [dev-dependencies]
 jsonschema = { workspace = true }

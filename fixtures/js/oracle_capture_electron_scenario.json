@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"error\":{\"code\":\"invalid_request\",\"category\":\"invalid_input\",\"message\":\"Analysis input is invalid. Check the arguments and try again.\",\"retryable\":true,\"remediation\":{\"action\":\"Correct the listed arguments and retry.\"},\"details\":{\"operation\":\"capture_electron_scenario\",\"issues\":[{\"path\":[\"application_path\"],\"reason\":\"invalid_format\",\"message\":\"Electron executable, application, and root must resolve to existing paths\"}]}}}"
+    }
+  ],
+  "isError": true
+}

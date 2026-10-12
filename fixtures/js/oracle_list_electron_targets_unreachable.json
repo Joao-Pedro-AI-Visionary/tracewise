@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"error\":{\"code\":\"provider_unavailable\",\"category\":\"unavailable\",\"message\":\"list_electron_targets could not reach the selected loopback debugging endpoint. Verify that the target process is running with debugging enabled and that the endpoint's port matches it, then retry.\",\"retryable\":true,\"remediation\":{\"action\":\"list_electron_targets could not reach the selected loopback debugging endpoint. Verify that the target process is running with debugging enabled and that the endpoint's port matches it, then retry.\"},\"details\":{\"operation\":\"list_electron_targets\",\"reason\":\"endpoint_unreachable\"}}}"
+    }
+  ],
+  "isError": true
+}

@@ -1,0 +1,14 @@
+{
+  "specification": {
+    "name": "Rebuilt package matches original",
+    "claims": [
+      {
+        "claim_id": "package.contents",
+        "title": "  Package contents are identical  ",
+        "kind": "structural-artifact",
+        "dimension": "overall",
+        "comparison_evidence_id": "ev_5dca82ec2c588f8c94a8c320a09577ee5a28a6c68b5295d8ff26d87a9134d28f"
+      }
+    ]
+  }
+}

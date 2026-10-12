@@ -1,0 +1,1555 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_2f050d0677955404e2f2667900e9983a740c165f6a1ba3b7fb929ad812b3b0a5\",\"subject\":null,\"provider\":{\"id\":\"rea-javascript-application-workflows\",\"name\":\"REA JavaScript application workflows\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.reconstruction-obligation-ledger\",\"operation\":\"build_reconstruction_obligation_ledger\",\"parameters\":{\"ledger_id\":\"rol_612f74cdbfeb5c8be87f80a20895f846645abe82d3f00145cebbdccb6477a949\",\"closure_digest\":\"1a5de82b67f1a23dd5cb5ee1c6fb727d564fb45ddd693bf6b1f208ce2707bec6\"},\"raw_result\":null,\"normalized_result\":{\"schema\":\"ReconstructionObligationLedger\",\"ledger_id\":\"rol_612f74cdbfeb5c8be87f80a20895f846645abe82d3f00145cebbdccb6477a949\",\"closure_digest\":\"1a5de82b67f1a23dd5cb5ee1c6fb727d564fb45ddd693bf6b1f208ce2707bec6\",\"status\":\"failed\",\"coverage\":{\"status\":\"partial\"},\"summary\":{\"total\":19,\"required\":18,\"verified\":0,\"required_open\":18,\"by_status\":[{\"key\":\"unowned\",\"count\":14},{\"key\":\"characterized\",\"count\":0},{\"key\":\"implemented\",\"count\":1},{\"key\":\"verified\",\"count\":0},{\"key\":\"contradicted\",\"count\":1},{\"key\":\"blocked\",\"count\":1},{\"key\":\"out-of-scope\",\"count\":1},{\"key\":\"unknown\",\"count\":1}],\"by_application_layer\":[{\"key\":\"cli\",\"count\":0},{\"key\":\"protocol\",\"count\":3},{\"key\":\"electron\",\"count\":6},{\"key\":\"persistence\",\"count\":0},{\"key\":\"process\",\"count\":2},{\"key\":\"runtime\",\"count\":7},{\"key\":\"packaging\",\"count\":1},{\"key\":\"native-abi\",\"count\":0},{\"key\":\"application\",\"count\":0},{\"key\":\"other\",\"count\":0}],\"by_evidence_authority\":[{\"key\":\"candidate\",\"count\":16},{\"key\":\"observed\",\"count\":1},{\"key\":\"reviewed\",\"count\":2},{\"key\":\"unknown\",\"count\":0}]},\"reports\":{\"missing_owner_obligation_ids\":[\"obl_16a5707a1d1b754ceca418be9744ff2177b08e3ee3abd5587d6173cf89cb2a04\",\"obl_18e4ac297e807ad5c91e236773024e4ce2ca2156160aae223fccecc4894ab860\",\"obl_1fa253d6a107f6b382bd8f001b2cd94c69fe1cbe46e58b70489280b3a2ed2358\",\"obl_2add02cfa572cd3d3bd708207dc5afb61cf3cf2b02f3894decea970f6692021c\",\"obl_2b6909cf645e8f22bfbfd59600c8efb00736a96acb7d97c8dd9b1342a1a02dde\",\"obl_3b8f8d2650fb7fcf54ca7b0fab1bd518f450f30b2ad189ed55714ee817e4a14f\",\"obl_48d1c6ff016fac3708be805759106d880b4b6919ae2272a03089582f6c92f650\",\"obl_4e1a32d0105d64a4d6bba79c161f4a16d433bc5a3c3d55df35f5683eab9488f2\",\"obl_5b38542eefc353656c3233075f8746ba21ba338d02967dfff45a7c72e90188ee\",\"obl_633bb35f5beae0ffb58518003368629911b920d57e2d065e84fbce7eb179cd54\",\"obl_a440fda5269671d492cd77d0caea6a07ad69fd9e4782f2587f601b27f02770eb\",\"obl_ae94f7224092fe03a329edcef34e1eaf6166871969cbc86cc8fd5962701f6df4\",\"obl_b0a9cc209bc3d606b29dd9fff0817f53d15dadd056e2865bcc8ff146950b2a6f\",\"obl_fe58015d0885acc6dbe9caca1e994f5adb3389fb76ac0fd3805a92b281df4e8b\",\"obl_ffc1e2ae0c9a687d3d6c085c7e5a61a0866e0be947f914cf3baa239a6b98d039\",\"reviewed.invoice-export\",\"reviewed.printing\"],\"missing_verifier_obligation_ids\":[],\"contradicted_obligation_ids\":[\"obl_16a5707a1d1b754ceca418be9744ff2177b08e3ee3abd5587d6173cf89cb2a04\"],\"residual_unknown_ids\":[\"unk.printer\"]},\"ownership_graph\":[{\"obligation_id\":\"obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887\",\"module_path\":\"src/invoice/render.rs\",\"symbol\":\"render_invoice\"}],\"dependency_graph\":[{\"obligation_id\":\"reviewed.invoice-export\",\"depends_on_obligation_id\":\"obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887\"},{\"obligation_id\":\"reviewed.invoice-export\",\"depends_on_obligation_id\":\"reviewed.absent\"}],\"obligations\":[{\"obligation_id\":\"obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887\",\"obligation_version\":1,\"title\":\"network endpoint\",\"origin\":\"generated\",\"application_layer\":\"protocol\",\"family\":\"endpoint\",\"target\":{\"artifact_sha256\":\"0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f\",\"application_node_id\":\"jag_node_9b43016c9b6ca36d5aa0b4dd4245dd155535be217f1e934a65fd5079d93f14a0\",\"semantic_node_id\":null,\"location\":\"application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_9b43016c9b6ca36d5aa0b4dd4245dd155535be217f1e934a65fd5079d93f14a0\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_9b43016c9b6ca36d5aa0b4dd4245dd155535be217f1e934a65fd5079d93f14a0/observation/jag_observation_849d2b3872c6a489df186a3588cf9cbc1b5d5916eec0ee5f392c95386df8fa9e\"}],\"source_state\":\"candidate\",\"observed_cases\":[{\"kind\":\"malformed\",\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"location\":\"/normalized_result/graph\"},{\"kind\":\"positive\",\"evidence_id\":\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"location\":\"/normalized_result/exit\"}],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"malformed\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"protocol\",\"required_verifier_authority\":\"protocol\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite endpoint claim.\"],\"binding\":{\"obligation_id\":\"obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887\",\"owner\":{\"module_path\":\"src/invoice/render.rs\",\"symbol\":\"render_invoice\",\"owner_sha256\":\"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\"},\"parser_type\":null,\"original_cases\":[{\"kind\":\"positive\",\"evidence_id\":\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"location\":\"/normalized_result/exit\"},{\"kind\":\"malformed\",\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"location\":\"/normalized_result/graph\"}],\"fixtures\":[{\"fixture_id\":\"fixture.positive\",\"case_kind\":\"positive\",\"authority\":\"protocol\",\"evidence_ids\":[\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\"]},{\"fixture_id\":\"fixture.negative\",\"case_kind\":\"negative\",\"authority\":\"unit\",\"evidence_ids\":[\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\"]}],\"verifier\":{\"verifier_id\":\"verifier.endpoint\",\"claim_id\":\"claim.endpoint\",\"command\":\"cargo test endpoint\",\"authority\":\"protocol\",\"status\":\"fail\",\"result_evidence_id\":\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"enumerated_obligation_ids\":[\"reviewed.invoice-export\"],\"nondeterminism\":{\"mode\":\"total-order\",\"specification\":\"single request\"}}},\"status\":\"implemented\",\"diagnostics\":[{\"code\":\"contradiction-evidence-missing\",\"detail\":\"Contradiction references missing Evidence: ev_1111111111111111111111111111111111111111111111111111111111111111.\"},{\"code\":\"missing-case\",\"detail\":\"Required malformed fixture is missing.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"verifier-does-not-enumerate\",\"detail\":\"The verifier claim does not enumerate this obligation ID.\"},{\"code\":\"verifier-failed\",\"detail\":\"Latest verifier status is fail.\"},{\"code\":\"weak-fixture-authority\",\"detail\":\"negative fixture lacks protocol authority or authenticated Evidence.\"},{\"code\":\"weak-fixture-authority\",\"detail\":\"positive fixture lacks protocol authority or authenticated Evidence.\"},{\"code\":\"weak-original-case-authority\",\"detail\":\"Original malformed behavior lacks runtime Evidence.\"},{\"code\":\"weak-verifier-authority\",\"detail\":\"Verifier authority does not satisfy protocol.\"}]},{\"obligation_id\":\"obl_16a5707a1d1b754ceca418be9744ff2177b08e3ee3abd5587d6173cf89cb2a04\",\"obligation_version\":1,\"title\":\"invoice:print\",\"origin\":\"generated\",\"application_layer\":\"electron\",\"family\":\"ipc\",\"target\":{\"artifact_sha256\":\"0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f\",\"application_node_id\":\"jag_node_988427d0762a641d7e197d769910c3f7b64f6f4bbc4e36fd253351dfdbcd62b9\",\"semantic_node_id\":null,\"location\":\"application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_988427d0762a641d7e197d769910c3f7b64f6f4bbc4e36fd253351dfdbcd62b9\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_988427d0762a641d7e197d769910c3f7b64f6f4bbc4e36fd253351dfdbcd62b9/observation/jag_observation_ff6026497846e03af24037998fc27b7b449f0ca30e6c53e2b4d098ecfc740b7d\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"malformed\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"renderer\",\"required_verifier_authority\":\"renderer\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite ipc claim.\"],\"binding\":null,\"status\":\"contradicted\",\"diagnostics\":[{\"code\":\"contradiction\",\"detail\":\"Authenticated contradictory Evidence reopens this obligation.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original malformed behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_18e4ac297e807ad5c91e236773024e4ce2ca2156160aae223fccecc4894ab860\",\"obligation_version\":1,\"title\":\"awaited expression\",\"origin\":\"generated\",\"application_layer\":\"runtime\",\"family\":\"task-lifecycle\",\"target\":{\"artifact_sha256\":\"42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62\",\"application_node_id\":null,\"semantic_node_id\":\"jsrg_node_9b67028a20f95e86e47bb6d4ece9a1478bc758f4d7a95e73309bc8d90d43765d\",\"location\":\"semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_9b67028a20f95e86e47bb6d4ece9a1478bc758f4d7a95e73309bc8d90d43765d\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_9b67028a20f95e86e47bb6d4ece9a1478bc758f4d7a95e73309bc8d90d43765d\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"cancellation\",\"teardown\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"packaged-process\",\"required_verifier_authority\":\"packaged-process\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite task-lifecycle claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original cancellation behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original teardown behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_1fa253d6a107f6b382bd8f001b2cd94c69fe1cbe46e58b70489280b3a2ed2358\",\"obligation_version\":1,\"title\":\"invoice:export\",\"origin\":\"generated\",\"application_layer\":\"electron\",\"family\":\"ipc\",\"target\":{\"artifact_sha256\":\"0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f\",\"application_node_id\":\"jag_node_f02f7e89c6bbb809fdd56ebc40abb4b412fa83ae513816b5a27516855c8e7ca6\",\"semantic_node_id\":null,\"location\":\"application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_f02f7e89c6bbb809fdd56ebc40abb4b412fa83ae513816b5a27516855c8e7ca6\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_f02f7e89c6bbb809fdd56ebc40abb4b412fa83ae513816b5a27516855c8e7ca6/observation/jag_observation_3a7d64e1cbba633db7198712ccc5f5fc93b19a4f75614a3393ee008fde5b9509\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"malformed\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"renderer\",\"required_verifier_authority\":\"renderer\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite ipc claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original malformed behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_2add02cfa572cd3d3bd708207dc5afb61cf3cf2b02f3894decea970f6692021c\",\"obligation_version\":1,\"title\":\"data\",\"origin\":\"generated\",\"application_layer\":\"runtime\",\"family\":\"event\",\"target\":{\"artifact_sha256\":\"42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62\",\"application_node_id\":\"jag_node_187e8c5cde0075edfee167b13abe4e60d6f46a3ac1161244645063ab5f569661\",\"semantic_node_id\":\"jsrg_node_cec1e7a9b900369e1b4e15aa7bd0b81448aba71d0e731c8b12155a38a308a3bb\",\"location\":\"semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_cec1e7a9b900369e1b4e15aa7bd0b81448aba71d0e731c8b12155a38a308a3bb\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_cec1e7a9b900369e1b4e15aa7bd0b81448aba71d0e731c8b12155a38a308a3bb\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"cancellation\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"packaged-process\",\"required_verifier_authority\":\"packaged-process\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite event claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original cancellation behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_2b6909cf645e8f22bfbfd59600c8efb00736a96acb7d97c8dd9b1342a1a02dde\",\"obligation_version\":1,\"title\":\"awaited expression\",\"origin\":\"generated\",\"application_layer\":\"runtime\",\"family\":\"task-lifecycle\",\"target\":{\"artifact_sha256\":\"42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62\",\"application_node_id\":null,\"semantic_node_id\":\"jsrg_node_a7056ba440453d639f042b7f50005f2ce46c9e8e6731a9c78f2c62af48df6fd8\",\"location\":\"semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_a7056ba440453d639f042b7f50005f2ce46c9e8e6731a9c78f2c62af48df6fd8\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_a7056ba440453d639f042b7f50005f2ce46c9e8e6731a9c78f2c62af48df6fd8\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"cancellation\",\"teardown\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"packaged-process\",\"required_verifier_authority\":\"packaged-process\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite task-lifecycle claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original cancellation behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original teardown behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_3b8f8d2650fb7fcf54ca7b0fab1bd518f450f30b2ad189ed55714ee817e4a14f\",\"obligation_version\":1,\"title\":\"event\",\"origin\":\"generated\",\"application_layer\":\"runtime\",\"family\":\"event\",\"target\":{\"artifact_sha256\":\"42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62\",\"application_node_id\":\"jag_node_187e8c5cde0075edfee167b13abe4e60d6f46a3ac1161244645063ab5f569661\",\"semantic_node_id\":\"jsrg_node_820de06ef3e5bd32ef820c5595d192497e3c1821de578e4c010c3db6f8e9543d\",\"location\":\"semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_820de06ef3e5bd32ef820c5595d192497e3c1821de578e4c010c3db6f8e9543d\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_820de06ef3e5bd32ef820c5595d192497e3c1821de578e4c010c3db6f8e9543d\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"cancellation\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"packaged-process\",\"required_verifier_authority\":\"packaged-process\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite event claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original cancellation behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_48d1c6ff016fac3708be805759106d880b4b6919ae2272a03089582f6c92f650\",\"obligation_version\":1,\"title\":\"setTimeout\",\"origin\":\"generated\",\"application_layer\":\"runtime\",\"family\":\"timer\",\"target\":{\"artifact_sha256\":\"42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62\",\"application_node_id\":null,\"semantic_node_id\":\"jsrg_node_431b454ae32667bdca3d1f1200eda95e43e54148a940db648e544975ff6db3d0\",\"location\":\"semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_431b454ae32667bdca3d1f1200eda95e43e54148a940db648e544975ff6db3d0\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_431b454ae32667bdca3d1f1200eda95e43e54148a940db648e544975ff6db3d0\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"cancellation\",\"teardown\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"packaged-process\",\"required_verifier_authority\":\"packaged-process\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite timer claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original cancellation behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original teardown behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_4e1a32d0105d64a4d6bba79c161f4a16d433bc5a3c3d55df35f5683eab9488f2\",\"obligation_version\":1,\"title\":\"event\",\"origin\":\"generated\",\"application_layer\":\"runtime\",\"family\":\"event\",\"target\":{\"artifact_sha256\":\"42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62\",\"application_node_id\":\"jag_node_187e8c5cde0075edfee167b13abe4e60d6f46a3ac1161244645063ab5f569661\",\"semantic_node_id\":\"jsrg_node_459f47ca988da9d68f1a874d74929ae7ad63739b8b4c032ad76f5de4dc931467\",\"location\":\"semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_459f47ca988da9d68f1a874d74929ae7ad63739b8b4c032ad76f5de4dc931467\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_459f47ca988da9d68f1a874d74929ae7ad63739b8b4c032ad76f5de4dc931467\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"cancellation\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"packaged-process\",\"required_verifier_authority\":\"packaged-process\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite event claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original cancellation behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_565df239dc7c0012521a37b9e45469c784e20285832733f7a6a23abd3802ed3b\",\"obligation_version\":1,\"title\":\"Captured packaged-process lifecycle\",\"origin\":\"generated\",\"application_layer\":\"process\",\"family\":\"packaged-process-lifecycle\",\"target\":{\"artifact_sha256\":\"fde6a4bf8d0562f7751d1a2d6cb9b417c4cfe107bbcb0aa3e9a24e125e348f48\",\"application_node_id\":null,\"semantic_node_id\":null,\"location\":\"/evidence/ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d/normalized_result\"},\"authority_references\":[{\"evidence_id\":\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"authority\":\"controlled-replay\",\"state\":\"observed\",\"location\":\"/normalized_result\"}],\"source_state\":\"observed\",\"observed_cases\":[{\"kind\":\"cancellation\",\"evidence_id\":\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"location\":\"/normalized_result/exit\"},{\"kind\":\"positive\",\"evidence_id\":\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"location\":\"/normalized_result/exit\"},{\"kind\":\"teardown\",\"evidence_id\":\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"location\":\"/normalized_result/settlement\"}],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"cancellation\",\"teardown\"],\"required_original_authority\":\"process\",\"required_fixture_authority\":\"packaged-process\",\"required_verifier_authority\":\"packaged-process\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[\"process: Process trees are sampled and may omit short-lived descendants.\",\"process: The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"environment: Inherited host environment variables are not recorded.\",\"network: Network activity is not observed by this capture.\",\"filesystem: No filesystem observation paths were selected; filesystem effects remain unknown.\"],\"required_next_evidence\":[],\"binding\":null,\"status\":\"unknown\",\"diagnostics\":[{\"code\":\"ambiguous-owner\",\"detail\":\"Multiple reconstruction manifest bindings claim this obligation.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"unavailable-authority\",\"detail\":\"environment: Inherited host environment variables are not recorded.\"},{\"code\":\"unavailable-authority\",\"detail\":\"filesystem: No filesystem observation paths were selected; filesystem effects remain unknown.\"},{\"code\":\"unavailable-authority\",\"detail\":\"network: Network activity is not observed by this capture.\"},{\"code\":\"unavailable-authority\",\"detail\":\"process: Process trees are sampled and may omit short-lived descendants.\"},{\"code\":\"unavailable-authority\",\"detail\":\"process: The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\"}]},{\"obligation_id\":\"obl_5b38542eefc353656c3233075f8746ba21ba338d02967dfff45a7c72e90188ee\",\"obligation_version\":1,\"title\":\"invoice-desktop\",\"origin\":\"generated\",\"application_layer\":\"packaging\",\"family\":\"package-lifecycle\",\"target\":{\"artifact_sha256\":\"0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f\",\"application_node_id\":\"jag_node_47f4bccbb2a2ab054f580681bfdca83bfe7e0ba8bbb45e18b66f4111e8bda8a8\",\"semantic_node_id\":null,\"location\":\"application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_47f4bccbb2a2ab054f580681bfdca83bfe7e0ba8bbb45e18b66f4111e8bda8a8\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_47f4bccbb2a2ab054f580681bfdca83bfe7e0ba8bbb45e18b66f4111e8bda8a8/observation/jag_observation_1d5f3f6a811b408b84222022d9745bb7e575ccdedb0276015454e0c775c88d26\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"teardown\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"packaged-process\",\"required_verifier_authority\":\"packaged-process\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite package-lifecycle claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original teardown behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_633bb35f5beae0ffb58518003368629911b920d57e2d065e84fbce7eb179cd54\",\"obligation_version\":1,\"title\":\"arrayBuffer\",\"origin\":\"generated\",\"application_layer\":\"protocol\",\"family\":\"response\",\"target\":{\"artifact_sha256\":\"42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62\",\"application_node_id\":null,\"semantic_node_id\":\"jsrg_node_636c38c6a605471cff5ebfdc0189f0cbf150293392b7e8b10de5f3eeaaa1f178\",\"location\":\"semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_636c38c6a605471cff5ebfdc0189f0cbf150293392b7e8b10de5f3eeaaa1f178\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_636c38c6a605471cff5ebfdc0189f0cbf150293392b7e8b10de5f3eeaaa1f178\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"malformed\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"protocol\",\"required_verifier_authority\":\"protocol\",\"requires_parser_type\":true,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite response claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original malformed behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_a440fda5269671d492cd77d0caea6a07ad69fd9e4782f2587f601b27f02770eb\",\"obligation_version\":1,\"title\":\"fetch\",\"origin\":\"generated\",\"application_layer\":\"protocol\",\"family\":\"request\",\"target\":{\"artifact_sha256\":\"42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62\",\"application_node_id\":\"jag_node_9b43016c9b6ca36d5aa0b4dd4245dd155535be217f1e934a65fd5079d93f14a0\",\"semantic_node_id\":\"jsrg_node_e10e4bebf151a31158353f939f3ae604b8d98f16c7a8b39239fa445900099d11\",\"location\":\"semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_e10e4bebf151a31158353f939f3ae604b8d98f16c7a8b39239fa445900099d11\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_e10e4bebf151a31158353f939f3ae604b8d98f16c7a8b39239fa445900099d11\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"malformed\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"protocol\",\"required_verifier_authority\":\"protocol\",\"requires_parser_type\":true,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite request claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original malformed behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_ae94f7224092fe03a329edcef34e1eaf6166871969cbc86cc8fd5962701f6df4\",\"obligation_version\":1,\"title\":\"invoice:export\",\"origin\":\"generated\",\"application_layer\":\"electron\",\"family\":\"ipc\",\"target\":{\"artifact_sha256\":\"0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f\",\"application_node_id\":\"jag_node_f03ee3c73fc2c6c852e4d01fd3c3bd2114869d5d2021608b17314fe393101439\",\"semantic_node_id\":null,\"location\":\"application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_f03ee3c73fc2c6c852e4d01fd3c3bd2114869d5d2021608b17314fe393101439\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_f03ee3c73fc2c6c852e4d01fd3c3bd2114869d5d2021608b17314fe393101439/observation/jag_observation_827a7e7a1669a66cc7525c9d6aa9693f41ec0cc984be7dff53fc835318738f9a\"},{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_f03ee3c73fc2c6c852e4d01fd3c3bd2114869d5d2021608b17314fe393101439/observation/jag_observation_f165a981b54511e12690dca09fce084351ffee8fc63ff2bd46140d0a83ae5cdf\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"malformed\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"renderer\",\"required_verifier_authority\":\"renderer\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite ipc claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original malformed behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_b0a9cc209bc3d606b29dd9fff0817f53d15dadd056e2865bcc8ff146950b2a6f\",\"obligation_version\":1,\"title\":\"invoices\",\"origin\":\"generated\",\"application_layer\":\"electron\",\"family\":\"context-bridge\",\"target\":{\"artifact_sha256\":\"0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f\",\"application_node_id\":\"jag_node_ed4e7e25be43e5d4d8ebe2f73ba873ecffe8bf9ba78776bf4048bb05bcd37529\",\"semantic_node_id\":null,\"location\":\"application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_ed4e7e25be43e5d4d8ebe2f73ba873ecffe8bf9ba78776bf4048bb05bcd37529\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_ed4e7e25be43e5d4d8ebe2f73ba873ecffe8bf9ba78776bf4048bb05bcd37529/observation/jag_observation_c56d10f5d18fb558312d14c7fb5fbd4a6ea164180ef9a06a8ca3217a4df0588f\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"malformed\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"renderer\",\"required_verifier_authority\":\"renderer\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite context-bridge claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original malformed behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_fe58015d0885acc6dbe9caca1e994f5adb3389fb76ac0fd3805a92b281df4e8b\",\"obligation_version\":1,\"title\":\"Promise.then\",\"origin\":\"generated\",\"application_layer\":\"runtime\",\"family\":\"promise-ownership\",\"target\":{\"artifact_sha256\":\"42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62\",\"application_node_id\":null,\"semantic_node_id\":\"jsrg_node_6eb242e7e3c2c8b73ebb4ae57e1e393cc738472d9bbdfc1ef0f1d2c02237c8c0\",\"location\":\"semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_6eb242e7e3c2c8b73ebb4ae57e1e393cc738472d9bbdfc1ef0f1d2c02237c8c0\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_6eb242e7e3c2c8b73ebb4ae57e1e393cc738472d9bbdfc1ef0f1d2c02237c8c0\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"cancellation\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"packaged-process\",\"required_verifier_authority\":\"packaged-process\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite promise-ownership claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original cancellation behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"obl_ffc1e2ae0c9a687d3d6c085c7e5a61a0866e0be947f914cf3baa239a6b98d039\",\"obligation_version\":1,\"title\":\"invoice:print\",\"origin\":\"generated\",\"application_layer\":\"electron\",\"family\":\"ipc\",\"target\":{\"artifact_sha256\":\"0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f\",\"application_node_id\":\"jag_node_4be09f6e633d883978dfabb3251790756ba60a580984a8556027dec415eceb64\",\"semantic_node_id\":null,\"location\":\"application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_4be09f6e633d883978dfabb3251790756ba60a580984a8556027dec415eceb64\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_4be09f6e633d883978dfabb3251790756ba60a580984a8556027dec415eceb64/observation/jag_observation_05370f7fdcf3c1fd64360c2d16d351762f2c4169f71619b714497e73562c7301\"},{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_4be09f6e633d883978dfabb3251790756ba60a580984a8556027dec415eceb64/observation/jag_observation_6821290250043ca3d9a1fd99f58d1e0826b8ac33d0345307263d4de48d50ab46\"}],\"source_state\":\"candidate\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\",\"malformed\"],\"required_original_authority\":\"runtime\",\"required_fixture_authority\":\"renderer\",\"required_verifier_authority\":\"renderer\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Obtain runtime authority for this finite ipc claim.\"],\"binding\":null,\"status\":\"unowned\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original malformed behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"static-only\",\"detail\":\"No runtime authority characterizes the original finite behavior.\"}]},{\"obligation_id\":\"reviewed.invoice-export\",\"obligation_version\":2,\"title\":\"Export invoice as PDF\",\"origin\":\"reviewed\",\"application_layer\":\"electron\",\"family\":\"invoice-export\",\"target\":{\"artifact_sha256\":null,\"application_node_id\":null,\"semantic_node_id\":null,\"location\":\"src/main.js\"},\"authority_references\":[{\"evidence_id\":\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"authority\":\"controlled-replay\",\"state\":\"observed\",\"location\":\"/evidence/ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\"},{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"/evidence/ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\"}],\"source_state\":\"reviewed\",\"observed_cases\":[],\"required\":true,\"required_case_kinds\":[\"positive\",\"negative\"],\"required_original_authority\":\"process\",\"required_fixture_authority\":\"unit\",\"required_verifier_authority\":\"integration\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[\"obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887\",\"reviewed.absent\"],\"residual_unknown_ids\":[],\"unavailable_authority\":[],\"required_next_evidence\":[\"Capture the export round trip.\"],\"binding\":null,\"status\":\"blocked\",\"diagnostics\":[{\"code\":\"dependency-missing\",\"detail\":\"Dependency obligation is missing: reviewed.absent.\"},{\"code\":\"dependency-open\",\"detail\":\"Dependency obligation is not verified: obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original negative behavior has not been observed.\"},{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"}]},{\"obligation_id\":\"reviewed.printing\",\"obligation_version\":1,\"title\":\"Printing\",\"origin\":\"reviewed\",\"application_layer\":\"process\",\"family\":\"printing\",\"target\":{\"artifact_sha256\":null,\"application_node_id\":null,\"semantic_node_id\":null,\"location\":\"src/main.js\"},\"authority_references\":[{\"evidence_id\":\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\",\"authority\":\"shipped-artifact\",\"state\":\"candidate\",\"location\":\"/evidence/ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\"}],\"source_state\":\"reviewed\",\"observed_cases\":[],\"required\":false,\"required_case_kinds\":[\"positive\"],\"required_original_authority\":\"external\",\"required_fixture_authority\":\"external\",\"required_verifier_authority\":\"external\",\"requires_parser_type\":false,\"dependency_obligation_ids\":[],\"residual_unknown_ids\":[\"unk.printer\"],\"unavailable_authority\":[\"No printer was available.\"],\"required_next_evidence\":[],\"binding\":null,\"status\":\"out-of-scope\",\"diagnostics\":[{\"code\":\"missing-original-case\",\"detail\":\"Original positive behavior has not been observed.\"},{\"code\":\"missing-owner\",\"detail\":\"No reconstruction manifest binding owns this obligation.\"},{\"code\":\"out-of-scope\",\"detail\":\"Reviewed disposition marks this obligation out of scope; it remains visible.\"},{\"code\":\"residual-unknown\",\"detail\":\"Residual unknown remains visible: unk.printer.\"},{\"code\":\"static-only\",\"detail\":\"No external authority characterizes the original finite behavior.\"},{\"code\":\"unavailable-authority\",\"detail\":\"No printer was available.\"}]}],\"evidence_links\":[\"ev_1111111111111111111111111111111111111111111111111111111111111111\",\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\"],\"limitations\":[\"Manifest entries reference unknown obligations: orphan.binding.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Manifest entries reference unknown obligations: orphan.binding.\"],\"locations\":[],\"evidence_links\":[\"ev_1111111111111111111111111111111111111111111111111111111111111111\",\"ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d\",\"ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_2f050d0677955404e2f2667900e9983a740c165f6a1ba3b7fb929ad812b3b0a5",
+    "subject": null,
+    "provider": {
+      "id": "rea-javascript-application-workflows",
+      "name": "REA JavaScript application workflows",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.reconstruction-obligation-ledger",
+    "operation": "build_reconstruction_obligation_ledger",
+    "parameters": {
+      "ledger_id": "rol_612f74cdbfeb5c8be87f80a20895f846645abe82d3f00145cebbdccb6477a949",
+      "closure_digest": "1a5de82b67f1a23dd5cb5ee1c6fb727d564fb45ddd693bf6b1f208ce2707bec6"
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "schema": "ReconstructionObligationLedger",
+      "ledger_id": "rol_612f74cdbfeb5c8be87f80a20895f846645abe82d3f00145cebbdccb6477a949",
+      "closure_digest": "1a5de82b67f1a23dd5cb5ee1c6fb727d564fb45ddd693bf6b1f208ce2707bec6",
+      "status": "failed",
+      "coverage": {
+        "status": "partial"
+      },
+      "summary": {
+        "total": 19,
+        "required": 18,
+        "verified": 0,
+        "required_open": 18,
+        "by_status": [
+          {
+            "key": "unowned",
+            "count": 14
+          },
+          {
+            "key": "characterized",
+            "count": 0
+          },
+          {
+            "key": "implemented",
+            "count": 1
+          },
+          {
+            "key": "verified",
+            "count": 0
+          },
+          {
+            "key": "contradicted",
+            "count": 1
+          },
+          {
+            "key": "blocked",
+            "count": 1
+          },
+          {
+            "key": "out-of-scope",
+            "count": 1
+          },
+          {
+            "key": "unknown",
+            "count": 1
+          }
+        ],
+        "by_application_layer": [
+          {
+            "key": "cli",
+            "count": 0
+          },
+          {
+            "key": "protocol",
+            "count": 3
+          },
+          {
+            "key": "electron",
+            "count": 6
+          },
+          {
+            "key": "persistence",
+            "count": 0
+          },
+          {
+            "key": "process",
+            "count": 2
+          },
+          {
+            "key": "runtime",
+            "count": 7
+          },
+          {
+            "key": "packaging",
+            "count": 1
+          },
+          {
+            "key": "native-abi",
+            "count": 0
+          },
+          {
+            "key": "application",
+            "count": 0
+          },
+          {
+            "key": "other",
+            "count": 0
+          }
+        ],
+        "by_evidence_authority": [
+          {
+            "key": "candidate",
+            "count": 16
+          },
+          {
+            "key": "observed",
+            "count": 1
+          },
+          {
+            "key": "reviewed",
+            "count": 2
+          },
+          {
+            "key": "unknown",
+            "count": 0
+          }
+        ]
+      },
+      "reports": {
+        "missing_owner_obligation_ids": [
+          "obl_16a5707a1d1b754ceca418be9744ff2177b08e3ee3abd5587d6173cf89cb2a04",
+          "obl_18e4ac297e807ad5c91e236773024e4ce2ca2156160aae223fccecc4894ab860",
+          "obl_1fa253d6a107f6b382bd8f001b2cd94c69fe1cbe46e58b70489280b3a2ed2358",
+          "obl_2add02cfa572cd3d3bd708207dc5afb61cf3cf2b02f3894decea970f6692021c",
+          "obl_2b6909cf645e8f22bfbfd59600c8efb00736a96acb7d97c8dd9b1342a1a02dde",
+          "obl_3b8f8d2650fb7fcf54ca7b0fab1bd518f450f30b2ad189ed55714ee817e4a14f",
+          "obl_48d1c6ff016fac3708be805759106d880b4b6919ae2272a03089582f6c92f650",
+          "obl_4e1a32d0105d64a4d6bba79c161f4a16d433bc5a3c3d55df35f5683eab9488f2",
+          "obl_5b38542eefc353656c3233075f8746ba21ba338d02967dfff45a7c72e90188ee",
+          "obl_633bb35f5beae0ffb58518003368629911b920d57e2d065e84fbce7eb179cd54",
+          "obl_a440fda5269671d492cd77d0caea6a07ad69fd9e4782f2587f601b27f02770eb",
+          "obl_ae94f7224092fe03a329edcef34e1eaf6166871969cbc86cc8fd5962701f6df4",
+          "obl_b0a9cc209bc3d606b29dd9fff0817f53d15dadd056e2865bcc8ff146950b2a6f",
+          "obl_fe58015d0885acc6dbe9caca1e994f5adb3389fb76ac0fd3805a92b281df4e8b",
+          "obl_ffc1e2ae0c9a687d3d6c085c7e5a61a0866e0be947f914cf3baa239a6b98d039",
+          "reviewed.invoice-export",
+          "reviewed.printing"
+        ],
+        "missing_verifier_obligation_ids": [],
+        "contradicted_obligation_ids": [
+          "obl_16a5707a1d1b754ceca418be9744ff2177b08e3ee3abd5587d6173cf89cb2a04"
+        ],
+        "residual_unknown_ids": [
+          "unk.printer"
+        ]
+      },
+      "ownership_graph": [
+        {
+          "obligation_id": "obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887",
+          "module_path": "src/invoice/render.rs",
+          "symbol": "render_invoice"
+        }
+      ],
+      "dependency_graph": [
+        {
+          "obligation_id": "reviewed.invoice-export",
+          "depends_on_obligation_id": "obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887"
+        },
+        {
+          "obligation_id": "reviewed.invoice-export",
+          "depends_on_obligation_id": "reviewed.absent"
+        }
+      ],
+      "obligations": [
+        {
+          "obligation_id": "obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887",
+          "obligation_version": 1,
+          "title": "network endpoint",
+          "origin": "generated",
+          "application_layer": "protocol",
+          "family": "endpoint",
+          "target": {
+            "artifact_sha256": "0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f",
+            "application_node_id": "jag_node_9b43016c9b6ca36d5aa0b4dd4245dd155535be217f1e934a65fd5079d93f14a0",
+            "semantic_node_id": null,
+            "location": "application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_9b43016c9b6ca36d5aa0b4dd4245dd155535be217f1e934a65fd5079d93f14a0"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_9b43016c9b6ca36d5aa0b4dd4245dd155535be217f1e934a65fd5079d93f14a0/observation/jag_observation_849d2b3872c6a489df186a3588cf9cbc1b5d5916eec0ee5f392c95386df8fa9e"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [
+            {
+              "kind": "malformed",
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "location": "/normalized_result/graph"
+            },
+            {
+              "kind": "positive",
+              "evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+              "location": "/normalized_result/exit"
+            }
+          ],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "malformed"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "protocol",
+          "required_verifier_authority": "protocol",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite endpoint claim."
+          ],
+          "binding": {
+            "obligation_id": "obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887",
+            "owner": {
+              "module_path": "src/invoice/render.rs",
+              "symbol": "render_invoice",
+              "owner_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+            },
+            "parser_type": null,
+            "original_cases": [
+              {
+                "kind": "positive",
+                "evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+                "location": "/normalized_result/exit"
+              },
+              {
+                "kind": "malformed",
+                "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+                "location": "/normalized_result/graph"
+              }
+            ],
+            "fixtures": [
+              {
+                "fixture_id": "fixture.positive",
+                "case_kind": "positive",
+                "authority": "protocol",
+                "evidence_ids": [
+                  "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d"
+                ]
+              },
+              {
+                "fixture_id": "fixture.negative",
+                "case_kind": "negative",
+                "authority": "unit",
+                "evidence_ids": [
+                  "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e"
+                ]
+              }
+            ],
+            "verifier": {
+              "verifier_id": "verifier.endpoint",
+              "claim_id": "claim.endpoint",
+              "command": "cargo test endpoint",
+              "authority": "protocol",
+              "status": "fail",
+              "result_evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+              "enumerated_obligation_ids": [
+                "reviewed.invoice-export"
+              ],
+              "nondeterminism": {
+                "mode": "total-order",
+                "specification": "single request"
+              }
+            }
+          },
+          "status": "implemented",
+          "diagnostics": [
+            {
+              "code": "contradiction-evidence-missing",
+              "detail": "Contradiction references missing Evidence: ev_1111111111111111111111111111111111111111111111111111111111111111."
+            },
+            {
+              "code": "missing-case",
+              "detail": "Required malformed fixture is missing."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "verifier-does-not-enumerate",
+              "detail": "The verifier claim does not enumerate this obligation ID."
+            },
+            {
+              "code": "verifier-failed",
+              "detail": "Latest verifier status is fail."
+            },
+            {
+              "code": "weak-fixture-authority",
+              "detail": "negative fixture lacks protocol authority or authenticated Evidence."
+            },
+            {
+              "code": "weak-fixture-authority",
+              "detail": "positive fixture lacks protocol authority or authenticated Evidence."
+            },
+            {
+              "code": "weak-original-case-authority",
+              "detail": "Original malformed behavior lacks runtime Evidence."
+            },
+            {
+              "code": "weak-verifier-authority",
+              "detail": "Verifier authority does not satisfy protocol."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_16a5707a1d1b754ceca418be9744ff2177b08e3ee3abd5587d6173cf89cb2a04",
+          "obligation_version": 1,
+          "title": "invoice:print",
+          "origin": "generated",
+          "application_layer": "electron",
+          "family": "ipc",
+          "target": {
+            "artifact_sha256": "0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f",
+            "application_node_id": "jag_node_988427d0762a641d7e197d769910c3f7b64f6f4bbc4e36fd253351dfdbcd62b9",
+            "semantic_node_id": null,
+            "location": "application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_988427d0762a641d7e197d769910c3f7b64f6f4bbc4e36fd253351dfdbcd62b9"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_988427d0762a641d7e197d769910c3f7b64f6f4bbc4e36fd253351dfdbcd62b9/observation/jag_observation_ff6026497846e03af24037998fc27b7b449f0ca30e6c53e2b4d098ecfc740b7d"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "malformed"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "renderer",
+          "required_verifier_authority": "renderer",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite ipc claim."
+          ],
+          "binding": null,
+          "status": "contradicted",
+          "diagnostics": [
+            {
+              "code": "contradiction",
+              "detail": "Authenticated contradictory Evidence reopens this obligation."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original malformed behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_18e4ac297e807ad5c91e236773024e4ce2ca2156160aae223fccecc4894ab860",
+          "obligation_version": 1,
+          "title": "awaited expression",
+          "origin": "generated",
+          "application_layer": "runtime",
+          "family": "task-lifecycle",
+          "target": {
+            "artifact_sha256": "42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62",
+            "application_node_id": null,
+            "semantic_node_id": "jsrg_node_9b67028a20f95e86e47bb6d4ece9a1478bc758f4d7a95e73309bc8d90d43765d",
+            "location": "semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_9b67028a20f95e86e47bb6d4ece9a1478bc758f4d7a95e73309bc8d90d43765d"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_9b67028a20f95e86e47bb6d4ece9a1478bc758f4d7a95e73309bc8d90d43765d"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "cancellation",
+            "teardown"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "packaged-process",
+          "required_verifier_authority": "packaged-process",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite task-lifecycle claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original cancellation behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original teardown behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_1fa253d6a107f6b382bd8f001b2cd94c69fe1cbe46e58b70489280b3a2ed2358",
+          "obligation_version": 1,
+          "title": "invoice:export",
+          "origin": "generated",
+          "application_layer": "electron",
+          "family": "ipc",
+          "target": {
+            "artifact_sha256": "0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f",
+            "application_node_id": "jag_node_f02f7e89c6bbb809fdd56ebc40abb4b412fa83ae513816b5a27516855c8e7ca6",
+            "semantic_node_id": null,
+            "location": "application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_f02f7e89c6bbb809fdd56ebc40abb4b412fa83ae513816b5a27516855c8e7ca6"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_f02f7e89c6bbb809fdd56ebc40abb4b412fa83ae513816b5a27516855c8e7ca6/observation/jag_observation_3a7d64e1cbba633db7198712ccc5f5fc93b19a4f75614a3393ee008fde5b9509"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "malformed"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "renderer",
+          "required_verifier_authority": "renderer",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite ipc claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original malformed behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_2add02cfa572cd3d3bd708207dc5afb61cf3cf2b02f3894decea970f6692021c",
+          "obligation_version": 1,
+          "title": "data",
+          "origin": "generated",
+          "application_layer": "runtime",
+          "family": "event",
+          "target": {
+            "artifact_sha256": "42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62",
+            "application_node_id": "jag_node_187e8c5cde0075edfee167b13abe4e60d6f46a3ac1161244645063ab5f569661",
+            "semantic_node_id": "jsrg_node_cec1e7a9b900369e1b4e15aa7bd0b81448aba71d0e731c8b12155a38a308a3bb",
+            "location": "semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_cec1e7a9b900369e1b4e15aa7bd0b81448aba71d0e731c8b12155a38a308a3bb"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_cec1e7a9b900369e1b4e15aa7bd0b81448aba71d0e731c8b12155a38a308a3bb"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "cancellation"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "packaged-process",
+          "required_verifier_authority": "packaged-process",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite event claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original cancellation behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_2b6909cf645e8f22bfbfd59600c8efb00736a96acb7d97c8dd9b1342a1a02dde",
+          "obligation_version": 1,
+          "title": "awaited expression",
+          "origin": "generated",
+          "application_layer": "runtime",
+          "family": "task-lifecycle",
+          "target": {
+            "artifact_sha256": "42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62",
+            "application_node_id": null,
+            "semantic_node_id": "jsrg_node_a7056ba440453d639f042b7f50005f2ce46c9e8e6731a9c78f2c62af48df6fd8",
+            "location": "semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_a7056ba440453d639f042b7f50005f2ce46c9e8e6731a9c78f2c62af48df6fd8"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_a7056ba440453d639f042b7f50005f2ce46c9e8e6731a9c78f2c62af48df6fd8"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "cancellation",
+            "teardown"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "packaged-process",
+          "required_verifier_authority": "packaged-process",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite task-lifecycle claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original cancellation behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original teardown behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_3b8f8d2650fb7fcf54ca7b0fab1bd518f450f30b2ad189ed55714ee817e4a14f",
+          "obligation_version": 1,
+          "title": "event",
+          "origin": "generated",
+          "application_layer": "runtime",
+          "family": "event",
+          "target": {
+            "artifact_sha256": "42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62",
+            "application_node_id": "jag_node_187e8c5cde0075edfee167b13abe4e60d6f46a3ac1161244645063ab5f569661",
+            "semantic_node_id": "jsrg_node_820de06ef3e5bd32ef820c5595d192497e3c1821de578e4c010c3db6f8e9543d",
+            "location": "semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_820de06ef3e5bd32ef820c5595d192497e3c1821de578e4c010c3db6f8e9543d"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_820de06ef3e5bd32ef820c5595d192497e3c1821de578e4c010c3db6f8e9543d"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "cancellation"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "packaged-process",
+          "required_verifier_authority": "packaged-process",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite event claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original cancellation behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_48d1c6ff016fac3708be805759106d880b4b6919ae2272a03089582f6c92f650",
+          "obligation_version": 1,
+          "title": "setTimeout",
+          "origin": "generated",
+          "application_layer": "runtime",
+          "family": "timer",
+          "target": {
+            "artifact_sha256": "42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62",
+            "application_node_id": null,
+            "semantic_node_id": "jsrg_node_431b454ae32667bdca3d1f1200eda95e43e54148a940db648e544975ff6db3d0",
+            "location": "semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_431b454ae32667bdca3d1f1200eda95e43e54148a940db648e544975ff6db3d0"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_431b454ae32667bdca3d1f1200eda95e43e54148a940db648e544975ff6db3d0"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "cancellation",
+            "teardown"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "packaged-process",
+          "required_verifier_authority": "packaged-process",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite timer claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original cancellation behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original teardown behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_4e1a32d0105d64a4d6bba79c161f4a16d433bc5a3c3d55df35f5683eab9488f2",
+          "obligation_version": 1,
+          "title": "event",
+          "origin": "generated",
+          "application_layer": "runtime",
+          "family": "event",
+          "target": {
+            "artifact_sha256": "42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62",
+            "application_node_id": "jag_node_187e8c5cde0075edfee167b13abe4e60d6f46a3ac1161244645063ab5f569661",
+            "semantic_node_id": "jsrg_node_459f47ca988da9d68f1a874d74929ae7ad63739b8b4c032ad76f5de4dc931467",
+            "location": "semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_459f47ca988da9d68f1a874d74929ae7ad63739b8b4c032ad76f5de4dc931467"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_459f47ca988da9d68f1a874d74929ae7ad63739b8b4c032ad76f5de4dc931467"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "cancellation"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "packaged-process",
+          "required_verifier_authority": "packaged-process",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite event claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original cancellation behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_565df239dc7c0012521a37b9e45469c784e20285832733f7a6a23abd3802ed3b",
+          "obligation_version": 1,
+          "title": "Captured packaged-process lifecycle",
+          "origin": "generated",
+          "application_layer": "process",
+          "family": "packaged-process-lifecycle",
+          "target": {
+            "artifact_sha256": "fde6a4bf8d0562f7751d1a2d6cb9b417c4cfe107bbcb0aa3e9a24e125e348f48",
+            "application_node_id": null,
+            "semantic_node_id": null,
+            "location": "/evidence/ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d/normalized_result"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+              "authority": "controlled-replay",
+              "state": "observed",
+              "location": "/normalized_result"
+            }
+          ],
+          "source_state": "observed",
+          "observed_cases": [
+            {
+              "kind": "cancellation",
+              "evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+              "location": "/normalized_result/exit"
+            },
+            {
+              "kind": "positive",
+              "evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+              "location": "/normalized_result/exit"
+            },
+            {
+              "kind": "teardown",
+              "evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+              "location": "/normalized_result/settlement"
+            }
+          ],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "cancellation",
+            "teardown"
+          ],
+          "required_original_authority": "process",
+          "required_fixture_authority": "packaged-process",
+          "required_verifier_authority": "packaged-process",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [
+            "process: Process trees are sampled and may omit short-lived descendants.",
+            "process: The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+            "environment: Inherited host environment variables are not recorded.",
+            "network: Network activity is not observed by this capture.",
+            "filesystem: No filesystem observation paths were selected; filesystem effects remain unknown."
+          ],
+          "required_next_evidence": [],
+          "binding": null,
+          "status": "unknown",
+          "diagnostics": [
+            {
+              "code": "ambiguous-owner",
+              "detail": "Multiple reconstruction manifest bindings claim this obligation."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "unavailable-authority",
+              "detail": "environment: Inherited host environment variables are not recorded."
+            },
+            {
+              "code": "unavailable-authority",
+              "detail": "filesystem: No filesystem observation paths were selected; filesystem effects remain unknown."
+            },
+            {
+              "code": "unavailable-authority",
+              "detail": "network: Network activity is not observed by this capture."
+            },
+            {
+              "code": "unavailable-authority",
+              "detail": "process: Process trees are sampled and may omit short-lived descendants."
+            },
+            {
+              "code": "unavailable-authority",
+              "detail": "process: The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_5b38542eefc353656c3233075f8746ba21ba338d02967dfff45a7c72e90188ee",
+          "obligation_version": 1,
+          "title": "invoice-desktop",
+          "origin": "generated",
+          "application_layer": "packaging",
+          "family": "package-lifecycle",
+          "target": {
+            "artifact_sha256": "0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f",
+            "application_node_id": "jag_node_47f4bccbb2a2ab054f580681bfdca83bfe7e0ba8bbb45e18b66f4111e8bda8a8",
+            "semantic_node_id": null,
+            "location": "application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_47f4bccbb2a2ab054f580681bfdca83bfe7e0ba8bbb45e18b66f4111e8bda8a8"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_47f4bccbb2a2ab054f580681bfdca83bfe7e0ba8bbb45e18b66f4111e8bda8a8/observation/jag_observation_1d5f3f6a811b408b84222022d9745bb7e575ccdedb0276015454e0c775c88d26"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "teardown"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "packaged-process",
+          "required_verifier_authority": "packaged-process",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite package-lifecycle claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original teardown behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_633bb35f5beae0ffb58518003368629911b920d57e2d065e84fbce7eb179cd54",
+          "obligation_version": 1,
+          "title": "arrayBuffer",
+          "origin": "generated",
+          "application_layer": "protocol",
+          "family": "response",
+          "target": {
+            "artifact_sha256": "42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62",
+            "application_node_id": null,
+            "semantic_node_id": "jsrg_node_636c38c6a605471cff5ebfdc0189f0cbf150293392b7e8b10de5f3eeaaa1f178",
+            "location": "semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_636c38c6a605471cff5ebfdc0189f0cbf150293392b7e8b10de5f3eeaaa1f178"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_636c38c6a605471cff5ebfdc0189f0cbf150293392b7e8b10de5f3eeaaa1f178"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "malformed"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "protocol",
+          "required_verifier_authority": "protocol",
+          "requires_parser_type": true,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite response claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original malformed behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_a440fda5269671d492cd77d0caea6a07ad69fd9e4782f2587f601b27f02770eb",
+          "obligation_version": 1,
+          "title": "fetch",
+          "origin": "generated",
+          "application_layer": "protocol",
+          "family": "request",
+          "target": {
+            "artifact_sha256": "42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62",
+            "application_node_id": "jag_node_9b43016c9b6ca36d5aa0b4dd4245dd155535be217f1e934a65fd5079d93f14a0",
+            "semantic_node_id": "jsrg_node_e10e4bebf151a31158353f939f3ae604b8d98f16c7a8b39239fa445900099d11",
+            "location": "semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_e10e4bebf151a31158353f939f3ae604b8d98f16c7a8b39239fa445900099d11"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_e10e4bebf151a31158353f939f3ae604b8d98f16c7a8b39239fa445900099d11"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "malformed"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "protocol",
+          "required_verifier_authority": "protocol",
+          "requires_parser_type": true,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite request claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original malformed behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_ae94f7224092fe03a329edcef34e1eaf6166871969cbc86cc8fd5962701f6df4",
+          "obligation_version": 1,
+          "title": "invoice:export",
+          "origin": "generated",
+          "application_layer": "electron",
+          "family": "ipc",
+          "target": {
+            "artifact_sha256": "0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f",
+            "application_node_id": "jag_node_f03ee3c73fc2c6c852e4d01fd3c3bd2114869d5d2021608b17314fe393101439",
+            "semantic_node_id": null,
+            "location": "application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_f03ee3c73fc2c6c852e4d01fd3c3bd2114869d5d2021608b17314fe393101439"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_f03ee3c73fc2c6c852e4d01fd3c3bd2114869d5d2021608b17314fe393101439/observation/jag_observation_827a7e7a1669a66cc7525c9d6aa9693f41ec0cc984be7dff53fc835318738f9a"
+            },
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_f03ee3c73fc2c6c852e4d01fd3c3bd2114869d5d2021608b17314fe393101439/observation/jag_observation_f165a981b54511e12690dca09fce084351ffee8fc63ff2bd46140d0a83ae5cdf"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "malformed"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "renderer",
+          "required_verifier_authority": "renderer",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite ipc claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original malformed behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_b0a9cc209bc3d606b29dd9fff0817f53d15dadd056e2865bcc8ff146950b2a6f",
+          "obligation_version": 1,
+          "title": "invoices",
+          "origin": "generated",
+          "application_layer": "electron",
+          "family": "context-bridge",
+          "target": {
+            "artifact_sha256": "0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f",
+            "application_node_id": "jag_node_ed4e7e25be43e5d4d8ebe2f73ba873ecffe8bf9ba78776bf4048bb05bcd37529",
+            "semantic_node_id": null,
+            "location": "application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_ed4e7e25be43e5d4d8ebe2f73ba873ecffe8bf9ba78776bf4048bb05bcd37529"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_ed4e7e25be43e5d4d8ebe2f73ba873ecffe8bf9ba78776bf4048bb05bcd37529/observation/jag_observation_c56d10f5d18fb558312d14c7fb5fbd4a6ea164180ef9a06a8ca3217a4df0588f"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "malformed"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "renderer",
+          "required_verifier_authority": "renderer",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite context-bridge claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original malformed behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_fe58015d0885acc6dbe9caca1e994f5adb3389fb76ac0fd3805a92b281df4e8b",
+          "obligation_version": 1,
+          "title": "Promise.then",
+          "origin": "generated",
+          "application_layer": "runtime",
+          "family": "promise-ownership",
+          "target": {
+            "artifact_sha256": "42df816f5d735c27f46f6579fd3b3a5d359b149a4f2b2ec56789cb7f4e487a62",
+            "application_node_id": null,
+            "semantic_node_id": "jsrg_node_6eb242e7e3c2c8b73ebb4ae57e1e393cc738472d9bbdfc1ef0f1d2c02237c8c0",
+            "location": "semantic-graph:jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/nodes/jsrg_node_6eb242e7e3c2c8b73ebb4ae57e1e393cc738472d9bbdfc1ef0f1d2c02237c8c0"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jsrg_d1468ba37c4c29a2638b30597471783574920948e8702abcda3b55afdd8e11bd/node/jsrg_node_6eb242e7e3c2c8b73ebb4ae57e1e393cc738472d9bbdfc1ef0f1d2c02237c8c0"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "cancellation"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "packaged-process",
+          "required_verifier_authority": "packaged-process",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite promise-ownership claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original cancellation behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "obl_ffc1e2ae0c9a687d3d6c085c7e5a61a0866e0be947f914cf3baa239a6b98d039",
+          "obligation_version": 1,
+          "title": "invoice:print",
+          "origin": "generated",
+          "application_layer": "electron",
+          "family": "ipc",
+          "target": {
+            "artifact_sha256": "0816fe48e6460b6180a318be9479376dd9f8dcf2f3c5fa9dc8b1ae74da7a7e6f",
+            "application_node_id": "jag_node_4be09f6e633d883978dfabb3251790756ba60a580984a8556027dec415eceb64",
+            "semantic_node_id": null,
+            "location": "application-graph:jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/nodes/jag_node_4be09f6e633d883978dfabb3251790756ba60a580984a8556027dec415eceb64"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_4be09f6e633d883978dfabb3251790756ba60a580984a8556027dec415eceb64/observation/jag_observation_05370f7fdcf3c1fd64360c2d16d351762f2c4169f71619b714497e73562c7301"
+            },
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "jag_00882d3120c64bb441b83a89aa7dae9917f6462ec4a50daafbf2fea35d242e61/node/jag_node_4be09f6e633d883978dfabb3251790756ba60a580984a8556027dec415eceb64/observation/jag_observation_6821290250043ca3d9a1fd99f58d1e0826b8ac33d0345307263d4de48d50ab46"
+            }
+          ],
+          "source_state": "candidate",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative",
+            "malformed"
+          ],
+          "required_original_authority": "runtime",
+          "required_fixture_authority": "renderer",
+          "required_verifier_authority": "renderer",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Obtain runtime authority for this finite ipc claim."
+          ],
+          "binding": null,
+          "status": "unowned",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original malformed behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "static-only",
+              "detail": "No runtime authority characterizes the original finite behavior."
+            }
+          ]
+        },
+        {
+          "obligation_id": "reviewed.invoice-export",
+          "obligation_version": 2,
+          "title": "Export invoice as PDF",
+          "origin": "reviewed",
+          "application_layer": "electron",
+          "family": "invoice-export",
+          "target": {
+            "artifact_sha256": null,
+            "application_node_id": null,
+            "semantic_node_id": null,
+            "location": "src/main.js"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+              "authority": "controlled-replay",
+              "state": "observed",
+              "location": "/evidence/ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d"
+            },
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "/evidence/ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e"
+            }
+          ],
+          "source_state": "reviewed",
+          "observed_cases": [],
+          "required": true,
+          "required_case_kinds": [
+            "positive",
+            "negative"
+          ],
+          "required_original_authority": "process",
+          "required_fixture_authority": "unit",
+          "required_verifier_authority": "integration",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [
+            "obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887",
+            "reviewed.absent"
+          ],
+          "residual_unknown_ids": [],
+          "unavailable_authority": [],
+          "required_next_evidence": [
+            "Capture the export round trip."
+          ],
+          "binding": null,
+          "status": "blocked",
+          "diagnostics": [
+            {
+              "code": "dependency-missing",
+              "detail": "Dependency obligation is missing: reviewed.absent."
+            },
+            {
+              "code": "dependency-open",
+              "detail": "Dependency obligation is not verified: obl_1673dcaffeece96ff87ee8ca3abdffd4119c6681b40e7f75d9ab36d797cd6887."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original negative behavior has not been observed."
+            },
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            }
+          ]
+        },
+        {
+          "obligation_id": "reviewed.printing",
+          "obligation_version": 1,
+          "title": "Printing",
+          "origin": "reviewed",
+          "application_layer": "process",
+          "family": "printing",
+          "target": {
+            "artifact_sha256": null,
+            "application_node_id": null,
+            "semantic_node_id": null,
+            "location": "src/main.js"
+          },
+          "authority_references": [
+            {
+              "evidence_id": "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e",
+              "authority": "shipped-artifact",
+              "state": "candidate",
+              "location": "/evidence/ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e"
+            }
+          ],
+          "source_state": "reviewed",
+          "observed_cases": [],
+          "required": false,
+          "required_case_kinds": [
+            "positive"
+          ],
+          "required_original_authority": "external",
+          "required_fixture_authority": "external",
+          "required_verifier_authority": "external",
+          "requires_parser_type": false,
+          "dependency_obligation_ids": [],
+          "residual_unknown_ids": [
+            "unk.printer"
+          ],
+          "unavailable_authority": [
+            "No printer was available."
+          ],
+          "required_next_evidence": [],
+          "binding": null,
+          "status": "out-of-scope",
+          "diagnostics": [
+            {
+              "code": "missing-original-case",
+              "detail": "Original positive behavior has not been observed."
+            },
+            {
+              "code": "missing-owner",
+              "detail": "No reconstruction manifest binding owns this obligation."
+            },
+            {
+              "code": "out-of-scope",
+              "detail": "Reviewed disposition marks this obligation out of scope; it remains visible."
+            },
+            {
+              "code": "residual-unknown",
+              "detail": "Residual unknown remains visible: unk.printer."
+            },
+            {
+              "code": "static-only",
+              "detail": "No external authority characterizes the original finite behavior."
+            },
+            {
+              "code": "unavailable-authority",
+              "detail": "No printer was available."
+            }
+          ]
+        }
+      ],
+      "evidence_links": [
+        "ev_1111111111111111111111111111111111111111111111111111111111111111",
+        "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+        "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e"
+      ],
+      "limitations": [
+        "Manifest entries reference unknown obligations: orphan.binding."
+      ]
+    },
+    "confidence": "inferred",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "Manifest entries reference unknown obligations: orphan.binding."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_1111111111111111111111111111111111111111111111111111111111111111",
+      "ev_1ab667adbd1493f38f32372e6ad01210dd17d539b88e0dc8dc865cedb4d5e75d",
+      "ev_96e84c1db4d45c112744d417a7e1b1fb1a876ae6822d4a537eaacf413221f59e"
+    ]
+  }
+}

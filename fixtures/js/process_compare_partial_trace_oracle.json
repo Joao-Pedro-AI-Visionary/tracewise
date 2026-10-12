@@ -1,0 +1,318 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_627b0f711afffbc8014a15b2fee067371ce6683c436975ae777bcd2c2fa80df1\",\"subject\":null,\"provider\":{\"id\":\"rea-process\",\"name\":\"REA process capture\",\"version\":\"3\"},\"analysis_profile\":null,\"predicate_type\":\"rea.process-comparison\",\"operation\":\"compare_process_captures\",\"parameters\":{\"left_evidence_id\":\"ev_cd733f9fde8f81e47f7ca17a79d601a0d2a2c82141fafef1aee901c62b0f943e\",\"right_evidence_id\":\"ev_0ed5d0821ea3d795e4fd890b20594e23c767fbd5c10dfe7965a697212eac671f\",\"left_normalization\":{\"paths\":false,\"pids\":true,\"ports\":true,\"time_bucket_ms\":10,\"patterns\":[]},\"right_normalization\":{\"paths\":false,\"pids\":true,\"ports\":true,\"time_bucket_ms\":10,\"patterns\":[]},\"trace_spec\":{\"events\":[{\"id\":\"hello\",\"source\":\"terminal_raw\",\"exact\":{\"data\":\"hello\"},\"ignore_fields\":[\"sequence\",\"at_ms\"],\"cardinality\":{\"kind\":\"optional\"}},{\"id\":\"world\",\"source\":\"terminal_raw\",\"exact\":{\"data\":\"world\"},\"ignore_fields\":[\"sequence\",\"at_ms\"],\"cardinality\":{\"kind\":\"optional\"}},{\"id\":\"exit\",\"source\":\"lifecycle\",\"exact\":{\"event\":\"exit\",\"code\":0,\"signal\":0,\"reason\":\"exited\"},\"ignore_fields\":[\"elapsed_ms\"],\"cardinality\":{\"kind\":\"required\"}},{\"id\":\"settled\",\"source\":\"lifecycle\",\"exact\":{\"event\":\"settlement\",\"state\":\"quiesced\",\"cleanup_outcome\":\"not_required\"},\"ignore_fields\":[\"elapsed_ms\"],\"cardinality\":{\"kind\":\"required\"}}],\"language\":{\"kind\":\"partial_order\",\"happens_before\":[{\"before\":\"exit\",\"after\":\"settled\"}],\"not_before\":[{\"event\":\"hello\",\"anchor\":\"exit\"}],\"unordered_groups\":[{\"events\":[\"hello\",\"world\"]},{\"events\":[\"hello\",\"settled\"]},{\"events\":[\"world\",\"exit\"]},{\"events\":[\"world\",\"settled\"]}],\"prefix\":[],\"suffix\":[]}}},\"raw_result\":null,\"normalized_result\":{\"status\":\"changed\",\"terminal\":\"changed\",\"interaction\":\"unchanged\",\"exit\":\"changed\",\"filesystem\":\"unknown\",\"process\":\"unknown\",\"first_divergence\":{\"status\":\"found\",\"dimension\":\"terminal\",\"index\":0,\"left_at_ms\":30,\"right_at_ms\":10,\"left\":{\"kind\":\"raw\",\"sequence\":0,\"at_ms\":30,\"data\":\"hello\"},\"right\":{\"kind\":\"raw\",\"sequence\":0,\"at_ms\":10,\"data\":\"world\"}},\"trace\":{\"verdict\":\"different\",\"left\":{\"satisfied_constraints\":[],\"raw_trace\":[{\"event_id\":\"hello\",\"location\":{\"collection\":\"frames\",\"index\":0,\"capture_order\":1}},{\"event_id\":\"exit\",\"location\":{\"collection\":\"lifecycle\",\"index\":0,\"capture_order\":2}},{\"event_id\":\"settled\",\"location\":{\"collection\":\"lifecycle\",\"index\":1,\"capture_order\":4}}],\"status\":\"fail\",\"matched_variant\":null},\"right\":{\"satisfied_constraints\":[\"happens_before:exit:settled\",\"not_before:hello:exit\",\"unordered:hello:world\",\"unordered:hello:settled\",\"unordered:world:exit\",\"unordered:world:settled\"],\"raw_trace\":[{\"event_id\":\"world\",\"location\":{\"collection\":\"frames\",\"index\":0,\"capture_order\":1}},{\"event_id\":\"exit\",\"location\":{\"collection\":\"lifecycle\",\"index\":0,\"capture_order\":3}},{\"event_id\":\"settled\",\"location\":{\"collection\":\"lifecycle\",\"index\":1,\"capture_order\":4}}],\"status\":\"pass\",\"matched_variant\":null},\"diagnostic\":{\"kind\":\"edge\",\"side\":\"left\",\"message\":\"hello must not occur before exit.\",\"event_ids\":[\"hello\",\"exit\"],\"locations\":[{\"collection\":\"frames\",\"index\":0,\"capture_order\":1},{\"collection\":\"lifecycle\",\"index\":0,\"capture_order\":2}]}},\"limitations\":[\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\"]},\"confidence\":\"derived\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\"],\"locations\":[],\"evidence_links\":[\"ev_cd733f9fde8f81e47f7ca17a79d601a0d2a2c82141fafef1aee901c62b0f943e\",\"ev_0ed5d0821ea3d795e4fd890b20594e23c767fbd5c10dfe7965a697212eac671f\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_627b0f711afffbc8014a15b2fee067371ce6683c436975ae777bcd2c2fa80df1",
+    "subject": null,
+    "provider": {
+      "id": "rea-process",
+      "name": "REA process capture",
+      "version": "3"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.process-comparison",
+    "operation": "compare_process_captures",
+    "parameters": {
+      "left_evidence_id": "ev_cd733f9fde8f81e47f7ca17a79d601a0d2a2c82141fafef1aee901c62b0f943e",
+      "right_evidence_id": "ev_0ed5d0821ea3d795e4fd890b20594e23c767fbd5c10dfe7965a697212eac671f",
+      "left_normalization": {
+        "paths": false,
+        "pids": true,
+        "ports": true,
+        "time_bucket_ms": 10,
+        "patterns": []
+      },
+      "right_normalization": {
+        "paths": false,
+        "pids": true,
+        "ports": true,
+        "time_bucket_ms": 10,
+        "patterns": []
+      },
+      "trace_spec": {
+        "events": [
+          {
+            "id": "hello",
+            "source": "terminal_raw",
+            "exact": {
+              "data": "hello"
+            },
+            "ignore_fields": [
+              "sequence",
+              "at_ms"
+            ],
+            "cardinality": {
+              "kind": "optional"
+            }
+          },
+          {
+            "id": "world",
+            "source": "terminal_raw",
+            "exact": {
+              "data": "world"
+            },
+            "ignore_fields": [
+              "sequence",
+              "at_ms"
+            ],
+            "cardinality": {
+              "kind": "optional"
+            }
+          },
+          {
+            "id": "exit",
+            "source": "lifecycle",
+            "exact": {
+              "event": "exit",
+              "code": 0,
+              "signal": 0,
+              "reason": "exited"
+            },
+            "ignore_fields": [
+              "elapsed_ms"
+            ],
+            "cardinality": {
+              "kind": "required"
+            }
+          },
+          {
+            "id": "settled",
+            "source": "lifecycle",
+            "exact": {
+              "event": "settlement",
+              "state": "quiesced",
+              "cleanup_outcome": "not_required"
+            },
+            "ignore_fields": [
+              "elapsed_ms"
+            ],
+            "cardinality": {
+              "kind": "required"
+            }
+          }
+        ],
+        "language": {
+          "kind": "partial_order",
+          "happens_before": [
+            {
+              "before": "exit",
+              "after": "settled"
+            }
+          ],
+          "not_before": [
+            {
+              "event": "hello",
+              "anchor": "exit"
+            }
+          ],
+          "unordered_groups": [
+            {
+              "events": [
+                "hello",
+                "world"
+              ]
+            },
+            {
+              "events": [
+                "hello",
+                "settled"
+              ]
+            },
+            {
+              "events": [
+                "world",
+                "exit"
+              ]
+            },
+            {
+              "events": [
+                "world",
+                "settled"
+              ]
+            }
+          ],
+          "prefix": [],
+          "suffix": []
+        }
+      }
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "status": "changed",
+      "terminal": "changed",
+      "interaction": "unchanged",
+      "exit": "changed",
+      "filesystem": "unknown",
+      "process": "unknown",
+      "first_divergence": {
+        "status": "found",
+        "dimension": "terminal",
+        "index": 0,
+        "left_at_ms": 30,
+        "right_at_ms": 10,
+        "left": {
+          "kind": "raw",
+          "sequence": 0,
+          "at_ms": 30,
+          "data": "hello"
+        },
+        "right": {
+          "kind": "raw",
+          "sequence": 0,
+          "at_ms": 10,
+          "data": "world"
+        }
+      },
+      "trace": {
+        "verdict": "different",
+        "left": {
+          "satisfied_constraints": [],
+          "raw_trace": [
+            {
+              "event_id": "hello",
+              "location": {
+                "collection": "frames",
+                "index": 0,
+                "capture_order": 1
+              }
+            },
+            {
+              "event_id": "exit",
+              "location": {
+                "collection": "lifecycle",
+                "index": 0,
+                "capture_order": 2
+              }
+            },
+            {
+              "event_id": "settled",
+              "location": {
+                "collection": "lifecycle",
+                "index": 1,
+                "capture_order": 4
+              }
+            }
+          ],
+          "status": "fail",
+          "matched_variant": null
+        },
+        "right": {
+          "satisfied_constraints": [
+            "happens_before:exit:settled",
+            "not_before:hello:exit",
+            "unordered:hello:world",
+            "unordered:hello:settled",
+            "unordered:world:exit",
+            "unordered:world:settled"
+          ],
+          "raw_trace": [
+            {
+              "event_id": "world",
+              "location": {
+                "collection": "frames",
+                "index": 0,
+                "capture_order": 1
+              }
+            },
+            {
+              "event_id": "exit",
+              "location": {
+                "collection": "lifecycle",
+                "index": 0,
+                "capture_order": 3
+              }
+            },
+            {
+              "event_id": "settled",
+              "location": {
+                "collection": "lifecycle",
+                "index": 1,
+                "capture_order": 4
+              }
+            }
+          ],
+          "status": "pass",
+          "matched_variant": null
+        },
+        "diagnostic": {
+          "kind": "edge",
+          "side": "left",
+          "message": "hello must not occur before exit.",
+          "event_ids": [
+            "hello",
+            "exit"
+          ],
+          "locations": [
+            {
+              "collection": "frames",
+              "index": 0,
+              "capture_order": 1
+            },
+            {
+              "collection": "lifecycle",
+              "index": 0,
+              "capture_order": 2
+            }
+          ]
+        }
+      },
+      "limitations": [
+        "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+        "Process trees are sampled and may omit short-lived descendants.",
+        "Filesystem observations are before/after snapshots, not syscall traces.",
+        "Inherited host environment variables are not recorded and may affect results.",
+        "No filesystem observation paths were selected; filesystem effects remain unknown.",
+        "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+        "Process trees are sampled and may omit short-lived descendants.",
+        "Filesystem observations are before/after snapshots, not syscall traces.",
+        "Inherited host environment variables are not recorded and may affect results.",
+        "No filesystem observation paths were selected; filesystem effects remain unknown.",
+        "Process trees are sampled and may omit short-lived descendants.",
+        "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+        "Inherited host environment variables are not recorded.",
+        "Network activity is not observed by this capture.",
+        "No filesystem observation paths were selected; filesystem effects remain unknown.",
+        "Process trees are sampled and may omit short-lived descendants.",
+        "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+        "Inherited host environment variables are not recorded.",
+        "Network activity is not observed by this capture.",
+        "No filesystem observation paths were selected; filesystem effects remain unknown."
+      ]
+    },
+    "confidence": "derived",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+      "Process trees are sampled and may omit short-lived descendants.",
+      "Filesystem observations are before/after snapshots, not syscall traces.",
+      "Inherited host environment variables are not recorded and may affect results.",
+      "No filesystem observation paths were selected; filesystem effects remain unknown.",
+      "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+      "Process trees are sampled and may omit short-lived descendants.",
+      "Filesystem observations are before/after snapshots, not syscall traces.",
+      "Inherited host environment variables are not recorded and may affect results.",
+      "No filesystem observation paths were selected; filesystem effects remain unknown.",
+      "Process trees are sampled and may omit short-lived descendants.",
+      "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+      "Inherited host environment variables are not recorded.",
+      "Network activity is not observed by this capture.",
+      "No filesystem observation paths were selected; filesystem effects remain unknown.",
+      "Process trees are sampled and may omit short-lived descendants.",
+      "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+      "Inherited host environment variables are not recorded.",
+      "Network activity is not observed by this capture.",
+      "No filesystem observation paths were selected; filesystem effects remain unknown."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_cd733f9fde8f81e47f7ca17a79d601a0d2a2c82141fafef1aee901c62b0f943e",
+      "ev_0ed5d0821ea3d795e4fd890b20594e23c767fbd5c10dfe7965a697212eac671f"
+    ]
+  }
+}

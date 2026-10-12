@@ -703,7 +703,7 @@ fn dedup_hints(hints: &mut Vec<Value>) {
     });
 }
 
-fn iso_now() -> String {
+pub(crate) fn iso_now() -> String {
     chrono::Utc::now().format("%Y-%m-%dT%H:%M:%S%.3fZ").to_string()
 }
 

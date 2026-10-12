@@ -1,0 +1,90 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_97cfc638be39fe56687c0e97a3d4a445523da5134260ee1bd2bd3f0b14bd2b20\",\"subject\":null,\"provider\":{\"id\":\"rea-reconstruction-verifier\",\"name\":\"REA reconstruction verifier\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.reconstruction-verification\",\"operation\":\"verify_reconstruction\",\"parameters\":{\"specification_sha256\":\"55d963a3622460a4b371fb7c7e4ea989c73a758bb3ea0c3f98969cfc43211333\",\"claim_ids\":[\"package.contents\"]},\"raw_result\":null,\"normalized_result\":{\"status\":\"pass\",\"specification_sha256\":\"55d963a3622460a4b371fb7c7e4ea989c73a758bb3ea0c3f98969cfc43211333\",\"summary\":{\"total\":1,\"passed\":1,\"failed\":0,\"unknown\":0,\"behavioral\":0,\"structural\":1},\"claims\":{\"items\":[{\"claim_id\":\"package.contents\",\"kind\":\"structural-artifact\",\"dimension\":\"overall\",\"status\":\"pass\",\"observed_status\":\"unchanged\",\"comparison_evidence_id\":\"ev_5dca82ec2c588f8c94a8c320a09577ee5a28a6c68b5295d8ff26d87a9134d28f\",\"left_evidence_ids\":[\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"right_evidence_ids\":[\"ev_5f800613a3354533a85b71dfdbef2b19aaa05b9643cc866cad744e696ea9067b\"],\"evidence_links\":[\"ev_5dca82ec2c588f8c94a8c320a09577ee5a28a6c68b5295d8ff26d87a9134d28f\",\"ev_5f800613a3354533a85b71dfdbef2b19aaa05b9643cc866cad744e696ea9067b\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"unknown_ids\":[],\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]}]},\"recommended_probes\":[],\"evidence_links\":[\"ev_5dca82ec2c588f8c94a8c320a09577ee5a28a6c68b5295d8ff26d87a9134d28f\",\"ev_5f800613a3354533a85b71dfdbef2b19aaa05b9643cc866cad744e696ea9067b\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"limitations\":[\"Pass means every declared claim passed; it does not establish global implementation equivalence.\"]},\"confidence\":\"derived\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Pass means every declared claim passed; it does not establish global implementation equivalence.\"],\"locations\":[],\"evidence_links\":[\"ev_5dca82ec2c588f8c94a8c320a09577ee5a28a6c68b5295d8ff26d87a9134d28f\",\"ev_5f800613a3354533a85b71dfdbef2b19aaa05b9643cc866cad744e696ea9067b\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_97cfc638be39fe56687c0e97a3d4a445523da5134260ee1bd2bd3f0b14bd2b20",
+    "subject": null,
+    "provider": {
+      "id": "rea-reconstruction-verifier",
+      "name": "REA reconstruction verifier",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.reconstruction-verification",
+    "operation": "verify_reconstruction",
+    "parameters": {
+      "specification_sha256": "55d963a3622460a4b371fb7c7e4ea989c73a758bb3ea0c3f98969cfc43211333",
+      "claim_ids": [
+        "package.contents"
+      ]
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "status": "pass",
+      "specification_sha256": "55d963a3622460a4b371fb7c7e4ea989c73a758bb3ea0c3f98969cfc43211333",
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "unknown": 0,
+        "behavioral": 0,
+        "structural": 1
+      },
+      "claims": {
+        "items": [
+          {
+            "claim_id": "package.contents",
+            "kind": "structural-artifact",
+            "dimension": "overall",
+            "status": "pass",
+            "observed_status": "unchanged",
+            "comparison_evidence_id": "ev_5dca82ec2c588f8c94a8c320a09577ee5a28a6c68b5295d8ff26d87a9134d28f",
+            "left_evidence_ids": [
+              "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+            ],
+            "right_evidence_ids": [
+              "ev_5f800613a3354533a85b71dfdbef2b19aaa05b9643cc866cad744e696ea9067b"
+            ],
+            "evidence_links": [
+              "ev_5dca82ec2c588f8c94a8c320a09577ee5a28a6c68b5295d8ff26d87a9134d28f",
+              "ev_5f800613a3354533a85b71dfdbef2b19aaa05b9643cc866cad744e696ea9067b",
+              "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+            ],
+            "unknown_ids": [],
+            "limitations": [
+              "Artifact identity is unavailable for this observation.",
+              "Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+            ]
+          }
+        ]
+      },
+      "recommended_probes": [],
+      "evidence_links": [
+        "ev_5dca82ec2c588f8c94a8c320a09577ee5a28a6c68b5295d8ff26d87a9134d28f",
+        "ev_5f800613a3354533a85b71dfdbef2b19aaa05b9643cc866cad744e696ea9067b",
+        "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+      ],
+      "limitations": [
+        "Pass means every declared claim passed; it does not establish global implementation equivalence."
+      ]
+    },
+    "confidence": "derived",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "Pass means every declared claim passed; it does not establish global implementation equivalence."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_5dca82ec2c588f8c94a8c320a09577ee5a28a6c68b5295d8ff26d87a9134d28f",
+      "ev_5f800613a3354533a85b71dfdbef2b19aaa05b9643cc866cad744e696ea9067b",
+      "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+    ]
+  }
+}

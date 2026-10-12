@@ -1,0 +1,224 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_a4c7a223f9c6570d56b69d5577d2d38948400967e5c7ec17e01bf4d8d3c91ba6\",\"subject\":null,\"provider\":{\"id\":\"rea-reconstruction-verifier\",\"name\":\"REA reconstruction verifier\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.reconstruction-verification\",\"operation\":\"verify_reconstruction\",\"parameters\":{\"specification_sha256\":\"327f832e5a1332d329630991aaacf2d8b9cb341ddd138b3653793c1ea6f12e6f\",\"claim_ids\":[\"invoice.output\",\"invoice.regression\",\"package.contents\"]},\"raw_result\":null,\"normalized_result\":{\"status\":\"fail\",\"specification_sha256\":\"327f832e5a1332d329630991aaacf2d8b9cb341ddd138b3653793c1ea6f12e6f\",\"summary\":{\"total\":3,\"passed\":0,\"failed\":2,\"unknown\":1,\"behavioral\":2,\"structural\":1},\"claims\":{\"items\":[{\"claim_id\":\"invoice.output\",\"kind\":\"behavioral\",\"dimension\":\"terminal\",\"status\":\"unknown\",\"observed_status\":\"unchanged\",\"comparison_evidence_id\":\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"left_evidence_ids\":[\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\"],\"right_evidence_ids\":[\"ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124\"],\"evidence_links\":[\"ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\"],\"unknown_ids\":[\"unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e\",\"unk_59067d04465705f761db3617f26234b4d416aa2d8e2e417baa364fc42aca9cf9\",\"unk_86f7659a75eaa809953ac97ee9ee688cebd84cd952066a66e398ff8257693af8\",\"unk_a1e858b5c6329d9f076cebfd4aff9ebb93e15a6e688a61bf26a715c9b3659b36\",\"unk_bc29428e00bc2091b5269b0e813247b6cee1f7af0fa7cc90ee99f742fe82aa15\",\"unk_f5c0a23b5da92b5aa48f8f11c1b7bc101bf661c8569b75421f028e19c9147ba2\"],\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Residual unknown: Process captures disagree across: exit, filesystem, process (comparison ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d)\",\"Residual unknown: Process captures disagree across: terminal, exit, filesystem, process (comparison ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d)\",\"Residual unknown: Was environment behavior fully observed during capture?\",\"Residual unknown: Was filesystem behavior fully observed during capture?\",\"Residual unknown: Was network behavior fully observed during capture?\",\"Residual unknown: Was process behavior fully observed during capture?\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\"]},{\"claim_id\":\"invoice.regression\",\"kind\":\"behavioral\",\"dimension\":\"overall\",\"status\":\"fail\",\"observed_status\":\"changed\",\"comparison_evidence_id\":\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"left_evidence_ids\":[\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\"],\"right_evidence_ids\":[\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\"],\"evidence_links\":[\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\"],\"unknown_ids\":[\"unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e\",\"unk_59067d04465705f761db3617f26234b4d416aa2d8e2e417baa364fc42aca9cf9\",\"unk_86f7659a75eaa809953ac97ee9ee688cebd84cd952066a66e398ff8257693af8\",\"unk_a1e858b5c6329d9f076cebfd4aff9ebb93e15a6e688a61bf26a715c9b3659b36\",\"unk_bc29428e00bc2091b5269b0e813247b6cee1f7af0fa7cc90ee99f742fe82aa15\",\"unk_f5c0a23b5da92b5aa48f8f11c1b7bc101bf661c8569b75421f028e19c9147ba2\"],\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Residual unknown: Process captures disagree across: exit, filesystem, process (comparison ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d)\",\"Residual unknown: Process captures disagree across: terminal, exit, filesystem, process (comparison ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d)\",\"Residual unknown: Was environment behavior fully observed during capture?\",\"Residual unknown: Was filesystem behavior fully observed during capture?\",\"Residual unknown: Was network behavior fully observed during capture?\",\"Residual unknown: Was process behavior fully observed during capture?\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\"]},{\"claim_id\":\"package.contents\",\"kind\":\"structural-artifact\",\"dimension\":\"overall\",\"status\":\"fail\",\"observed_status\":\"changed\",\"comparison_evidence_id\":\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"left_evidence_ids\":[\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"right_evidence_ids\":[\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\"],\"evidence_links\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"unknown_ids\":[\"unk_74d2baf13fa7143fc14eced88110979af3fdcfb3e1392ff5f59c45fc05896d20\"],\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Residual unknown: Artifact comparison is changed (comparison ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963)\",\"Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]}]},\"recommended_probes\":[{\"operation\":\"capture_process_scenario\",\"rationale\":\"Repeat both scenarios under the same controlled environment.\",\"claim_ids\":[\"invoice.output\"],\"unknown_ids\":[\"unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e\",\"unk_59067d04465705f761db3617f26234b4d416aa2d8e2e417baa364fc42aca9cf9\",\"unk_86f7659a75eaa809953ac97ee9ee688cebd84cd952066a66e398ff8257693af8\",\"unk_a1e858b5c6329d9f076cebfd4aff9ebb93e15a6e688a61bf26a715c9b3659b36\",\"unk_bc29428e00bc2091b5269b0e813247b6cee1f7af0fa7cc90ee99f742fe82aa15\",\"unk_f5c0a23b5da92b5aa48f8f11c1b7bc101bf661c8569b75421f028e19c9147ba2\"]},{\"operation\":\"capture_process_scenario\",\"rationale\":\"Repeat with a scenario that observes the missing behavior.\",\"claim_ids\":[\"invoice.output\"],\"unknown_ids\":[\"unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e\",\"unk_59067d04465705f761db3617f26234b4d416aa2d8e2e417baa364fc42aca9cf9\",\"unk_86f7659a75eaa809953ac97ee9ee688cebd84cd952066a66e398ff8257693af8\",\"unk_a1e858b5c6329d9f076cebfd4aff9ebb93e15a6e688a61bf26a715c9b3659b36\",\"unk_bc29428e00bc2091b5269b0e813247b6cee1f7af0fa7cc90ee99f742fe82aa15\",\"unk_f5c0a23b5da92b5aa48f8f11c1b7bc101bf661c8569b75421f028e19c9147ba2\"]}],\"evidence_links\":[\"ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124\",\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"limitations\":[\"Pass means every declared claim passed; it does not establish global implementation equivalence.\"]},\"confidence\":\"derived\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Pass means every declared claim passed; it does not establish global implementation equivalence.\"],\"locations\":[],\"evidence_links\":[\"ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124\",\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_a4c7a223f9c6570d56b69d5577d2d38948400967e5c7ec17e01bf4d8d3c91ba6",
+    "subject": null,
+    "provider": {
+      "id": "rea-reconstruction-verifier",
+      "name": "REA reconstruction verifier",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.reconstruction-verification",
+    "operation": "verify_reconstruction",
+    "parameters": {
+      "specification_sha256": "327f832e5a1332d329630991aaacf2d8b9cb341ddd138b3653793c1ea6f12e6f",
+      "claim_ids": [
+        "invoice.output",
+        "invoice.regression",
+        "package.contents"
+      ]
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "status": "fail",
+      "specification_sha256": "327f832e5a1332d329630991aaacf2d8b9cb341ddd138b3653793c1ea6f12e6f",
+      "summary": {
+        "total": 3,
+        "passed": 0,
+        "failed": 2,
+        "unknown": 1,
+        "behavioral": 2,
+        "structural": 1
+      },
+      "claims": {
+        "items": [
+          {
+            "claim_id": "invoice.output",
+            "kind": "behavioral",
+            "dimension": "terminal",
+            "status": "unknown",
+            "observed_status": "unchanged",
+            "comparison_evidence_id": "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+            "left_evidence_ids": [
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea"
+            ],
+            "right_evidence_ids": [
+              "ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124"
+            ],
+            "evidence_links": [
+              "ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124",
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+              "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d"
+            ],
+            "unknown_ids": [
+              "unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e",
+              "unk_59067d04465705f761db3617f26234b4d416aa2d8e2e417baa364fc42aca9cf9",
+              "unk_86f7659a75eaa809953ac97ee9ee688cebd84cd952066a66e398ff8257693af8",
+              "unk_a1e858b5c6329d9f076cebfd4aff9ebb93e15a6e688a61bf26a715c9b3659b36",
+              "unk_bc29428e00bc2091b5269b0e813247b6cee1f7af0fa7cc90ee99f742fe82aa15",
+              "unk_f5c0a23b5da92b5aa48f8f11c1b7bc101bf661c8569b75421f028e19c9147ba2"
+            ],
+            "limitations": [
+              "Artifact identity is unavailable for this observation.",
+              "Filesystem observations are before/after snapshots, not syscall traces.",
+              "Inherited host environment variables are not recorded and may affect results.",
+              "Inherited host environment variables are not recorded.",
+              "Network activity is not observed by this capture.",
+              "No filesystem observation paths were selected; filesystem effects remain unknown.",
+              "Process trees are sampled and may omit short-lived descendants.",
+              "Residual unknown: Process captures disagree across: exit, filesystem, process (comparison ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d)",
+              "Residual unknown: Process captures disagree across: terminal, exit, filesystem, process (comparison ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d)",
+              "Residual unknown: Was environment behavior fully observed during capture?",
+              "Residual unknown: Was filesystem behavior fully observed during capture?",
+              "Residual unknown: Was network behavior fully observed during capture?",
+              "Residual unknown: Was process behavior fully observed during capture?",
+              "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+              "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed."
+            ]
+          },
+          {
+            "claim_id": "invoice.regression",
+            "kind": "behavioral",
+            "dimension": "overall",
+            "status": "fail",
+            "observed_status": "changed",
+            "comparison_evidence_id": "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+            "left_evidence_ids": [
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea"
+            ],
+            "right_evidence_ids": [
+              "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4"
+            ],
+            "evidence_links": [
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+              "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+              "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d"
+            ],
+            "unknown_ids": [
+              "unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e",
+              "unk_59067d04465705f761db3617f26234b4d416aa2d8e2e417baa364fc42aca9cf9",
+              "unk_86f7659a75eaa809953ac97ee9ee688cebd84cd952066a66e398ff8257693af8",
+              "unk_a1e858b5c6329d9f076cebfd4aff9ebb93e15a6e688a61bf26a715c9b3659b36",
+              "unk_bc29428e00bc2091b5269b0e813247b6cee1f7af0fa7cc90ee99f742fe82aa15",
+              "unk_f5c0a23b5da92b5aa48f8f11c1b7bc101bf661c8569b75421f028e19c9147ba2"
+            ],
+            "limitations": [
+              "Artifact identity is unavailable for this observation.",
+              "Filesystem observations are before/after snapshots, not syscall traces.",
+              "Inherited host environment variables are not recorded and may affect results.",
+              "Inherited host environment variables are not recorded.",
+              "Network activity is not observed by this capture.",
+              "No filesystem observation paths were selected; filesystem effects remain unknown.",
+              "Process trees are sampled and may omit short-lived descendants.",
+              "Residual unknown: Process captures disagree across: exit, filesystem, process (comparison ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d)",
+              "Residual unknown: Process captures disagree across: terminal, exit, filesystem, process (comparison ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d)",
+              "Residual unknown: Was environment behavior fully observed during capture?",
+              "Residual unknown: Was filesystem behavior fully observed during capture?",
+              "Residual unknown: Was network behavior fully observed during capture?",
+              "Residual unknown: Was process behavior fully observed during capture?",
+              "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+              "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed."
+            ]
+          },
+          {
+            "claim_id": "package.contents",
+            "kind": "structural-artifact",
+            "dimension": "overall",
+            "status": "fail",
+            "observed_status": "changed",
+            "comparison_evidence_id": "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+            "left_evidence_ids": [
+              "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+            ],
+            "right_evidence_ids": [
+              "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df"
+            ],
+            "evidence_links": [
+              "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+              "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+              "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+            ],
+            "unknown_ids": [
+              "unk_74d2baf13fa7143fc14eced88110979af3fdcfb3e1392ff5f59c45fc05896d20"
+            ],
+            "limitations": [
+              "Artifact identity is unavailable for this observation.",
+              "Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Residual unknown: Artifact comparison is changed (comparison ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963)",
+              "Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+            ]
+          }
+        ]
+      },
+      "recommended_probes": [
+        {
+          "operation": "capture_process_scenario",
+          "rationale": "Repeat both scenarios under the same controlled environment.",
+          "claim_ids": [
+            "invoice.output"
+          ],
+          "unknown_ids": [
+            "unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e",
+            "unk_59067d04465705f761db3617f26234b4d416aa2d8e2e417baa364fc42aca9cf9",
+            "unk_86f7659a75eaa809953ac97ee9ee688cebd84cd952066a66e398ff8257693af8",
+            "unk_a1e858b5c6329d9f076cebfd4aff9ebb93e15a6e688a61bf26a715c9b3659b36",
+            "unk_bc29428e00bc2091b5269b0e813247b6cee1f7af0fa7cc90ee99f742fe82aa15",
+            "unk_f5c0a23b5da92b5aa48f8f11c1b7bc101bf661c8569b75421f028e19c9147ba2"
+          ]
+        },
+        {
+          "operation": "capture_process_scenario",
+          "rationale": "Repeat with a scenario that observes the missing behavior.",
+          "claim_ids": [
+            "invoice.output"
+          ],
+          "unknown_ids": [
+            "unk_56a57f2651033b0b5cb961cd26b845d4b738e8d39390ec995a9f3bd7e80b4a0e",
+            "unk_59067d04465705f761db3617f26234b4d416aa2d8e2e417baa364fc42aca9cf9",
+            "unk_86f7659a75eaa809953ac97ee9ee688cebd84cd952066a66e398ff8257693af8",
+            "unk_a1e858b5c6329d9f076cebfd4aff9ebb93e15a6e688a61bf26a715c9b3659b36",
+            "unk_bc29428e00bc2091b5269b0e813247b6cee1f7af0fa7cc90ee99f742fe82aa15",
+            "unk_f5c0a23b5da92b5aa48f8f11c1b7bc101bf661c8569b75421f028e19c9147ba2"
+          ]
+        }
+      ],
+      "evidence_links": [
+        "ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124",
+        "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+        "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+        "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+        "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+        "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+        "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+        "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+      ],
+      "limitations": [
+        "Pass means every declared claim passed; it does not establish global implementation equivalence."
+      ]
+    },
+    "confidence": "derived",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "Pass means every declared claim passed; it does not establish global implementation equivalence."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_1c3137c224146b0612b181a8216b0b27344d7934195c2c37cba8c8d50b4c7124",
+      "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+      "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+      "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+      "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+      "ev_b0fa43ece799052d7584f8a07f75cb8c879e53e48b3bffe8ab3492c07ea0884d",
+      "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+      "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+    ]
+  }
+}

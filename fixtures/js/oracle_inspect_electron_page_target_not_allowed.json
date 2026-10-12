@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"error\":{\"code\":\"target_unavailable\",\"category\":\"unavailable\",\"message\":\"Analysis could not complete. Run `rea doctor`, then try again.\",\"retryable\":false,\"remediation\":{\"action\":\"Analysis could not complete. Run `rea doctor`, then try again.\"},\"details\":{\"operation\":\"inspect_electron_page\",\"reason\":\"target_not_allowed\"}}}"
+    }
+  ],
+  "isError": true
+}

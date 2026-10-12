@@ -1,0 +1,209 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_455d3714549a99165baba7bf85e50c6f042d640a8a3475ff1310f438bc86b911\",\"subject\":null,\"provider\":{\"id\":\"rea-changed-behavior\",\"name\":\"REA changed behavior investigation\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.changed-behavior\",\"operation\":\"find_changed_behavior\",\"parameters\":{\"comparison_evidence_ids\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\"]},\"raw_result\":null,\"normalized_result\":{\"behavior_status\":\"observed_changed\",\"summary\":{\"observed_changes\":2,\"static_candidates\":2,\"contradictions\":0,\"unresolved\":2},\"findings\":{\"items\":[{\"scope\":\"resource\",\"dimension\":\"filesystem\",\"classification\":\"unresolved_branch\",\"status\":\"unknown\",\"source_comparison_id\":\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"evidence_links\":[\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\"],\"limitations\":[\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\"]},{\"scope\":\"runtime\",\"dimension\":\"exit\",\"classification\":\"observed_change\",\"status\":\"changed\",\"source_comparison_id\":\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"evidence_links\":[\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\"],\"limitations\":[\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\"]},{\"scope\":\"runtime\",\"dimension\":\"process\",\"classification\":\"unresolved_branch\",\"status\":\"unknown\",\"source_comparison_id\":\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"evidence_links\":[\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\"],\"limitations\":[\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\"]},{\"scope\":\"runtime\",\"dimension\":\"terminal\",\"classification\":\"observed_change\",\"status\":\"changed\",\"source_comparison_id\":\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"evidence_links\":[\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\"],\"limitations\":[\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\"]},{\"scope\":\"static_candidate\",\"dimension\":\"artifact:.\",\"classification\":\"derived_relationship\",\"status\":\"changed\",\"source_comparison_id\":\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"evidence_links\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"limitations\":[\"Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},{\"scope\":\"static_candidate\",\"dimension\":\"artifact:README.txt\",\"classification\":\"derived_relationship\",\"status\":\"changed\",\"source_comparison_id\":\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"evidence_links\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"limitations\":[\"Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]}]},\"evidence_links\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"],\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Static differences are behavior candidates, not runtime observations.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\"]},\"confidence\":\"derived\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Artifact identity is unavailable for this observation.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"Inherited host environment variables are not recorded.\",\"Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\",\"Static differences are behavior candidates, not runtime observations.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\"],\"locations\":[],\"evidence_links\":[\"ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963\",\"ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea\",\"ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4\",\"ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df\",\"ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d\",\"ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_455d3714549a99165baba7bf85e50c6f042d640a8a3475ff1310f438bc86b911",
+    "subject": null,
+    "provider": {
+      "id": "rea-changed-behavior",
+      "name": "REA changed behavior investigation",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.changed-behavior",
+    "operation": "find_changed_behavior",
+    "parameters": {
+      "comparison_evidence_ids": [
+        "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+        "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d"
+      ]
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "behavior_status": "observed_changed",
+      "summary": {
+        "observed_changes": 2,
+        "static_candidates": 2,
+        "contradictions": 0,
+        "unresolved": 2
+      },
+      "findings": {
+        "items": [
+          {
+            "scope": "resource",
+            "dimension": "filesystem",
+            "classification": "unresolved_branch",
+            "status": "unknown",
+            "source_comparison_id": "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+            "evidence_links": [
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+              "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+              "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d"
+            ],
+            "limitations": [
+              "Filesystem observations are before/after snapshots, not syscall traces.",
+              "Inherited host environment variables are not recorded and may affect results.",
+              "Inherited host environment variables are not recorded.",
+              "Network activity is not observed by this capture.",
+              "No filesystem observation paths were selected; filesystem effects remain unknown.",
+              "Process trees are sampled and may omit short-lived descendants.",
+              "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+              "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed."
+            ]
+          },
+          {
+            "scope": "runtime",
+            "dimension": "exit",
+            "classification": "observed_change",
+            "status": "changed",
+            "source_comparison_id": "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+            "evidence_links": [
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+              "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+              "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d"
+            ],
+            "limitations": [
+              "Filesystem observations are before/after snapshots, not syscall traces.",
+              "Inherited host environment variables are not recorded and may affect results.",
+              "Inherited host environment variables are not recorded.",
+              "Network activity is not observed by this capture.",
+              "No filesystem observation paths were selected; filesystem effects remain unknown.",
+              "Process trees are sampled and may omit short-lived descendants.",
+              "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+              "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed."
+            ]
+          },
+          {
+            "scope": "runtime",
+            "dimension": "process",
+            "classification": "unresolved_branch",
+            "status": "unknown",
+            "source_comparison_id": "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+            "evidence_links": [
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+              "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+              "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d"
+            ],
+            "limitations": [
+              "Filesystem observations are before/after snapshots, not syscall traces.",
+              "Inherited host environment variables are not recorded and may affect results.",
+              "Inherited host environment variables are not recorded.",
+              "Network activity is not observed by this capture.",
+              "No filesystem observation paths were selected; filesystem effects remain unknown.",
+              "Process trees are sampled and may omit short-lived descendants.",
+              "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+              "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed."
+            ]
+          },
+          {
+            "scope": "runtime",
+            "dimension": "terminal",
+            "classification": "observed_change",
+            "status": "changed",
+            "source_comparison_id": "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+            "evidence_links": [
+              "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+              "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+              "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d"
+            ],
+            "limitations": [
+              "Filesystem observations are before/after snapshots, not syscall traces.",
+              "Inherited host environment variables are not recorded and may affect results.",
+              "Inherited host environment variables are not recorded.",
+              "Network activity is not observed by this capture.",
+              "No filesystem observation paths were selected; filesystem effects remain unknown.",
+              "Process trees are sampled and may omit short-lived descendants.",
+              "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+              "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed."
+            ]
+          },
+          {
+            "scope": "static_candidate",
+            "dimension": "artifact:.",
+            "classification": "derived_relationship",
+            "status": "changed",
+            "source_comparison_id": "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+            "evidence_links": [
+              "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+              "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+              "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+            ],
+            "limitations": [
+              "Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+            ]
+          },
+          {
+            "scope": "static_candidate",
+            "dimension": "artifact:README.txt",
+            "classification": "derived_relationship",
+            "status": "changed",
+            "source_comparison_id": "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+            "evidence_links": [
+              "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+              "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+              "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+            ],
+            "limitations": [
+              "Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+              "Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+            ]
+          }
+        ]
+      },
+      "evidence_links": [
+        "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+        "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+        "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+        "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+        "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+        "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+      ],
+      "limitations": [
+        "Artifact identity is unavailable for this observation.",
+        "Filesystem observations are before/after snapshots, not syscall traces.",
+        "Inherited host environment variables are not recorded and may affect results.",
+        "Inherited host environment variables are not recorded.",
+        "Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+        "Network activity is not observed by this capture.",
+        "No filesystem observation paths were selected; filesystem effects remain unknown.",
+        "Process trees are sampled and may omit short-lived descendants.",
+        "Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+        "Static differences are behavior candidates, not runtime observations.",
+        "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+        "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed."
+      ]
+    },
+    "confidence": "derived",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "Artifact identity is unavailable for this observation.",
+      "Filesystem observations are before/after snapshots, not syscall traces.",
+      "Inherited host environment variables are not recorded and may affect results.",
+      "Inherited host environment variables are not recorded.",
+      "Left: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+      "Network activity is not observed by this capture.",
+      "No filesystem observation paths were selected; filesystem effects remain unknown.",
+      "Process trees are sampled and may omit short-lived descendants.",
+      "Right: ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.",
+      "Static differences are behavior candidates, not runtime observations.",
+      "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+      "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_79ba28cced53e74bb32adcb2c2dcb4daadfe2003996eb603af6cfefd05e44963",
+      "ev_8eddb6f2801129afce1b8a7bd56e705a1105705629268ddd5d3babd66c7913ea",
+      "ev_9d68d3ffae2294306d95ffb0da8fb0ffafc47891d613d2075de47864da50feb4",
+      "ev_9e6db8dfb6d439b306f1dd8808eeffd400a182441964bfa791d7a215c3fdd0df",
+      "ev_bdc73d7508e44946b039efc127c5357cebefae43aabfb4965533cea58586b29d",
+      "ev_d917e4019dcb0b28a860810eb435e8209b3d27e618db8c5923793d033f1d36e5"
+    ]
+  }
+}

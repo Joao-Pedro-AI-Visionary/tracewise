@@ -1,0 +1,517 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_df097544906417c72b2dd2d2abb94db7b81f924be4971b454e59e49ae4abf4c1\",\"subject\":null,\"provider\":{\"id\":\"rea-cdp-electron\",\"name\":\"REA Electron file-page CDP observation provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.electron-page-inspection\",\"operation\":\"inspect_electron_page\",\"parameters\":{\"cdp_endpoint\":\"http://127.0.0.1:47914\",\"target_id\":\"0DCA29C8EDCFC4801C2446F29F93F264\",\"observation_ms\":0,\"include_script_sources\":true},\"raw_result\":null,\"normalized_result\":{\"browser\":{\"product\":\"Chrome/154.0.8037.97\",\"protocol_version\":\"1.3\",\"revision\":\"537.36 (@b510e9d7cd3a2fbd78d0ddc42234103206c5f78d)\",\"user_agent\":\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36\",\"js_version\":\"15.4.80.20\"},\"target\":{\"target_id\":\"0DCA29C8EDCFC4801C2446F29F93F264\",\"type\":\"page\",\"title\":\"Tracewise Electron Fixture\",\"file_path\":\"/workspace/tracewise/fixtures/web/electron_app/index.html\",\"attached\":false},\"capture_window\":{\"started_at\":\"2026-10-12T13:11:35.298Z\",\"ended_at\":\"2026-10-12T13:11:35.311Z\",\"observation_ms\":0},\"completeness\":{\"status\":\"policy_filtered\",\"conditions\":[\"policy_filtered\"],\"policy_filtered_sections\":[\"workers\"],\"attach_limited_sections\":[],\"truncated_sections\":[],\"unavailable_sections\":[],\"excluded\":[{\"section\":\"workers\",\"reason\":\"out_of_target_scope\",\"count\":1}],\"dropped_events\":{\"scripts\":0,\"network_requests\":0,\"console_events\":0,\"websocket_connections\":0,\"websocket_frames\":0,\"webmcp_tools\":0,\"timeline_events\":0,\"total\":0}},\"frames\":[{\"frame_id\":\"0DCA29C8EDCFC4801C2446F29F93F264\",\"parent_frame_id\":null,\"file_path\":\"/workspace/tracewise/fixtures/web/electron_app/index.html\"},{\"frame_id\":\"1E3F78BE58A983FFF7B01267D06D70AA\",\"parent_frame_id\":\"0DCA29C8EDCFC4801C2446F29F93F264\",\"file_path\":\"/workspace/tracewise/fixtures/web/electron_app/frame.html\"}],\"dom\":{\"total_nodes\":38,\"nodes\":[{\"index\":0,\"parent_index\":-1,\"node_type\":9,\"node_name\":\"#document\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":1,\"parent_index\":0,\"node_type\":10,\"node_name\":\"html\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":2,\"parent_index\":0,\"node_type\":1,\"node_name\":\"HTML\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":3,\"parent_index\":2,\"node_type\":1,\"node_name\":\"HEAD\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":4,\"parent_index\":3,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":5,\"parent_index\":3,\"node_type\":1,\"node_name\":\"META\",\"node_value_length\":0,\"attribute_names\":[\"charset\"]},{\"index\":6,\"parent_index\":3,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":7,\"parent_index\":3,\"node_type\":1,\"node_name\":\"TITLE\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":8,\"parent_index\":7,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":26,\"attribute_names\":[]},{\"index\":9,\"parent_index\":3,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":10,\"parent_index\":3,\"node_type\":1,\"node_name\":\"LINK\",\"node_value_length\":0,\"attribute_names\":[\"rel\",\"href\"]},{\"index\":11,\"parent_index\":3,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":3,\"attribute_names\":[]},{\"index\":12,\"parent_index\":2,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":3,\"attribute_names\":[]},{\"index\":13,\"parent_index\":2,\"node_type\":1,\"node_name\":\"BODY\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":14,\"parent_index\":13,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":15,\"parent_index\":13,\"node_type\":1,\"node_name\":\"H1\",\"node_value_length\":0,\"attribute_names\":[\"id\",\"class\"]},{\"index\":16,\"parent_index\":15,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":16,\"attribute_names\":[]},{\"index\":17,\"parent_index\":13,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":18,\"parent_index\":13,\"node_type\":1,\"node_name\":\"BUTTON\",\"node_value_length\":0,\"attribute_names\":[\"id\",\"type\"]},{\"index\":19,\"parent_index\":18,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":10,\"attribute_names\":[]},{\"index\":20,\"parent_index\":13,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":21,\"parent_index\":13,\"node_type\":1,\"node_name\":\"IFRAME\",\"node_value_length\":0,\"attribute_names\":[\"src\",\"title\"]},{\"index\":22,\"parent_index\":13,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":23,\"parent_index\":13,\"node_type\":1,\"node_name\":\"SCRIPT\",\"node_value_length\":0,\"attribute_names\":[\"src\"]},{\"index\":24,\"parent_index\":13,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":25,\"parent_index\":13,\"node_type\":1,\"node_name\":\"SCRIPT\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":26,\"parent_index\":25,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":47,\"attribute_names\":[]},{\"index\":27,\"parent_index\":13,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":28,\"parent_index\":-1,\"node_type\":9,\"node_name\":\"#document\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":29,\"parent_index\":28,\"node_type\":10,\"node_name\":\"html\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":30,\"parent_index\":28,\"node_type\":1,\"node_name\":\"HTML\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":31,\"parent_index\":30,\"node_type\":1,\"node_name\":\"HEAD\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":32,\"parent_index\":30,\"node_type\":1,\"node_name\":\"BODY\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":33,\"parent_index\":32,\"node_type\":1,\"node_name\":\"P\",\"node_value_length\":0,\"attribute_names\":[\"data-role\"]},{\"index\":34,\"parent_index\":33,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":5,\"attribute_names\":[]},{\"index\":35,\"parent_index\":32,\"node_type\":1,\"node_name\":\"SCRIPT\",\"node_value_length\":0,\"attribute_names\":[]},{\"index\":36,\"parent_index\":35,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":31,\"attribute_names\":[]},{\"index\":37,\"parent_index\":32,\"node_type\":3,\"node_name\":\"#text\",\"node_value_length\":1,\"attribute_names\":[]}]},\"scripts\":{\"total\":3,\"items\":[{\"script_key\":\"electron_script_136e3142c69e2865be3bddf5b38417f699eb2b9823d9a345923ed3e4f0cb9d80\",\"frame_id\":\"0DCA29C8EDCFC4801C2446F29F93F264\",\"file_path\":\"/workspace/tracewise/fixtures/web/electron_app/index.html\",\"cdp_hash\":\"d5e1309aeaadf39268ca2a7b64b991a951ec55ce28a7edcf24fe4e6fdde57ff2\",\"length\":47,\"is_module\":false,\"language\":\"JavaScript\",\"source\":{\"included\":true,\"artifact\":{\"sha256\":\"d5e1309aeaadf39268ca2a7b64b991a951ec55ce28a7edcf24fe4e6fdde57ff2\",\"bytes\":47,\"media_type\":\"text/javascript\",\"charset\":\"utf-8\",\"text\":\"window.inlineReady = () => document.readyState;\"}}},{\"script_key\":\"electron_script_54206b1c6e9c54a5a7472cd9f1b8aef2c87ca5fce875628278863eb55b56a8af\",\"frame_id\":\"1E3F78BE58A983FFF7B01267D06D70AA\",\"file_path\":\"/workspace/tracewise/fixtures/web/electron_app/frame.html\",\"cdp_hash\":\"55a900db3db84443c5c5cbb27a887e21561a6659535b60f4327fade470a97006\",\"length\":31,\"is_module\":false,\"language\":\"JavaScript\",\"source\":{\"included\":true,\"artifact\":{\"sha256\":\"55a900db3db84443c5c5cbb27a887e21561a6659535b60f4327fade470a97006\",\"bytes\":31,\"media_type\":\"text/javascript\",\"charset\":\"utf-8\",\"text\":\"window.panelReady = () => true;\"}}},{\"script_key\":\"electron_script_ad73bd4934828bbada1ef32a34f4cb290a6aea77ed843ece0255e0418e50bfcf\",\"frame_id\":\"0DCA29C8EDCFC4801C2446F29F93F264\",\"file_path\":\"/workspace/tracewise/fixtures/web/electron_app/app.js\",\"cdp_hash\":\"044a87ce68b3d8d4f0144209fb29d02f2a35764999f63f73d6a5243298a6a769\",\"length\":170,\"is_module\":false,\"language\":\"JavaScript\",\"source\":{\"included\":true,\"artifact\":{\"sha256\":\"044a87ce68b3d8d4f0144209fb29d02f2a35764999f63f73d6a5243298a6a769\",\"bytes\":170,\"media_type\":\"text/javascript\",\"charset\":\"utf-8\",\"text\":\"window.exportPdf = () => {\\n  document.getElementById(\\\"title\\\").textContent = \\\"exported\\\";\\n};\\ndocument.getElementById(\\\"export\\\").addEventListener(\\\"click\\\", window.exportPdf);\\n\"}}}]},\"resources\":[{\"resource_key\":\"electron_resource_854567f8b08d399ad2767176a0a26d3adede68df968041760decf9a77177e892\",\"file_path\":\"/workspace/tracewise/fixtures/web/electron_app/style.css\",\"type\":\"Stylesheet\",\"mime_type\":\"text/css\",\"content_size\":26},{\"resource_key\":\"electron_resource_fd944008aaa97c9a7fbb7391710e73063d88f41f50bfead7d5fa6dfe415f300f\",\"file_path\":\"/workspace/tracewise/fixtures/web/electron_app/app.js\",\"type\":\"Script\",\"mime_type\":\"text/javascript\",\"content_size\":170}],\"workers\":[],\"limitations\":[\"Local file paths exposed by the selected CDP target are retained in the observation.\",\"REA does not evaluate renderer JavaScript, invoke Electron APIs, navigate, click, or close the page.\",\"Select include_script_sources to retain script contents.\"]},\"confidence\":\"observed\",\"authority\":\"external-service\",\"environment\":{\"id\":\"Chrome/154.0.8037.97@537.36 (@b510e9d7cd3a2fbd78d0ddc42234103206c5f78d)\",\"platform\":\"unknown\",\"architecture\":\"unknown\",\"isolation\":\"none\"},\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"Local file paths exposed by the selected CDP target are retained in the observation.\",\"REA does not evaluate renderer JavaScript, invoke Electron APIs, navigate, click, or close the page.\",\"Select include_script_sources to retain script contents.\",\"Browser host platform and architecture were not observed.\"],\"locations\":[],\"evidence_links\":[]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_df097544906417c72b2dd2d2abb94db7b81f924be4971b454e59e49ae4abf4c1",
+    "subject": null,
+    "provider": {
+      "id": "rea-cdp-electron",
+      "name": "REA Electron file-page CDP observation provider",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.electron-page-inspection",
+    "operation": "inspect_electron_page",
+    "parameters": {
+      "cdp_endpoint": "http://127.0.0.1:47914",
+      "target_id": "0DCA29C8EDCFC4801C2446F29F93F264",
+      "observation_ms": 0,
+      "include_script_sources": true
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "browser": {
+        "product": "Chrome/154.0.8037.97",
+        "protocol_version": "1.3",
+        "revision": "537.36 (@b510e9d7cd3a2fbd78d0ddc42234103206c5f78d)",
+        "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "js_version": "15.4.80.20"
+      },
+      "target": {
+        "target_id": "0DCA29C8EDCFC4801C2446F29F93F264",
+        "type": "page",
+        "title": "Tracewise Electron Fixture",
+        "file_path": "/workspace/tracewise/fixtures/web/electron_app/index.html",
+        "attached": false
+      },
+      "capture_window": {
+        "started_at": "2026-10-12T13:11:35.298Z",
+        "ended_at": "2026-10-12T13:11:35.311Z",
+        "observation_ms": 0
+      },
+      "completeness": {
+        "status": "policy_filtered",
+        "conditions": [
+          "policy_filtered"
+        ],
+        "policy_filtered_sections": [
+          "workers"
+        ],
+        "attach_limited_sections": [],
+        "truncated_sections": [],
+        "unavailable_sections": [],
+        "excluded": [
+          {
+            "section": "workers",
+            "reason": "out_of_target_scope",
+            "count": 1
+          }
+        ],
+        "dropped_events": {
+          "scripts": 0,
+          "network_requests": 0,
+          "console_events": 0,
+          "websocket_connections": 0,
+          "websocket_frames": 0,
+          "webmcp_tools": 0,
+          "timeline_events": 0,
+          "total": 0
+        }
+      },
+      "frames": [
+        {
+          "frame_id": "0DCA29C8EDCFC4801C2446F29F93F264",
+          "parent_frame_id": null,
+          "file_path": "/workspace/tracewise/fixtures/web/electron_app/index.html"
+        },
+        {
+          "frame_id": "1E3F78BE58A983FFF7B01267D06D70AA",
+          "parent_frame_id": "0DCA29C8EDCFC4801C2446F29F93F264",
+          "file_path": "/workspace/tracewise/fixtures/web/electron_app/frame.html"
+        }
+      ],
+      "dom": {
+        "total_nodes": 38,
+        "nodes": [
+          {
+            "index": 0,
+            "parent_index": -1,
+            "node_type": 9,
+            "node_name": "#document",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 1,
+            "parent_index": 0,
+            "node_type": 10,
+            "node_name": "html",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 2,
+            "parent_index": 0,
+            "node_type": 1,
+            "node_name": "HTML",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 3,
+            "parent_index": 2,
+            "node_type": 1,
+            "node_name": "HEAD",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 4,
+            "parent_index": 3,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 5,
+            "parent_index": 3,
+            "node_type": 1,
+            "node_name": "META",
+            "node_value_length": 0,
+            "attribute_names": [
+              "charset"
+            ]
+          },
+          {
+            "index": 6,
+            "parent_index": 3,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 7,
+            "parent_index": 3,
+            "node_type": 1,
+            "node_name": "TITLE",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 8,
+            "parent_index": 7,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 26,
+            "attribute_names": []
+          },
+          {
+            "index": 9,
+            "parent_index": 3,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 10,
+            "parent_index": 3,
+            "node_type": 1,
+            "node_name": "LINK",
+            "node_value_length": 0,
+            "attribute_names": [
+              "rel",
+              "href"
+            ]
+          },
+          {
+            "index": 11,
+            "parent_index": 3,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 3,
+            "attribute_names": []
+          },
+          {
+            "index": 12,
+            "parent_index": 2,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 3,
+            "attribute_names": []
+          },
+          {
+            "index": 13,
+            "parent_index": 2,
+            "node_type": 1,
+            "node_name": "BODY",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 14,
+            "parent_index": 13,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 15,
+            "parent_index": 13,
+            "node_type": 1,
+            "node_name": "H1",
+            "node_value_length": 0,
+            "attribute_names": [
+              "id",
+              "class"
+            ]
+          },
+          {
+            "index": 16,
+            "parent_index": 15,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 16,
+            "attribute_names": []
+          },
+          {
+            "index": 17,
+            "parent_index": 13,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 18,
+            "parent_index": 13,
+            "node_type": 1,
+            "node_name": "BUTTON",
+            "node_value_length": 0,
+            "attribute_names": [
+              "id",
+              "type"
+            ]
+          },
+          {
+            "index": 19,
+            "parent_index": 18,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 10,
+            "attribute_names": []
+          },
+          {
+            "index": 20,
+            "parent_index": 13,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 21,
+            "parent_index": 13,
+            "node_type": 1,
+            "node_name": "IFRAME",
+            "node_value_length": 0,
+            "attribute_names": [
+              "src",
+              "title"
+            ]
+          },
+          {
+            "index": 22,
+            "parent_index": 13,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 23,
+            "parent_index": 13,
+            "node_type": 1,
+            "node_name": "SCRIPT",
+            "node_value_length": 0,
+            "attribute_names": [
+              "src"
+            ]
+          },
+          {
+            "index": 24,
+            "parent_index": 13,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 25,
+            "parent_index": 13,
+            "node_type": 1,
+            "node_name": "SCRIPT",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 26,
+            "parent_index": 25,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 47,
+            "attribute_names": []
+          },
+          {
+            "index": 27,
+            "parent_index": 13,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 28,
+            "parent_index": -1,
+            "node_type": 9,
+            "node_name": "#document",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 29,
+            "parent_index": 28,
+            "node_type": 10,
+            "node_name": "html",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 30,
+            "parent_index": 28,
+            "node_type": 1,
+            "node_name": "HTML",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 31,
+            "parent_index": 30,
+            "node_type": 1,
+            "node_name": "HEAD",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 32,
+            "parent_index": 30,
+            "node_type": 1,
+            "node_name": "BODY",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 33,
+            "parent_index": 32,
+            "node_type": 1,
+            "node_name": "P",
+            "node_value_length": 0,
+            "attribute_names": [
+              "data-role"
+            ]
+          },
+          {
+            "index": 34,
+            "parent_index": 33,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 5,
+            "attribute_names": []
+          },
+          {
+            "index": 35,
+            "parent_index": 32,
+            "node_type": 1,
+            "node_name": "SCRIPT",
+            "node_value_length": 0,
+            "attribute_names": []
+          },
+          {
+            "index": 36,
+            "parent_index": 35,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 31,
+            "attribute_names": []
+          },
+          {
+            "index": 37,
+            "parent_index": 32,
+            "node_type": 3,
+            "node_name": "#text",
+            "node_value_length": 1,
+            "attribute_names": []
+          }
+        ]
+      },
+      "scripts": {
+        "total": 3,
+        "items": [
+          {
+            "script_key": "electron_script_136e3142c69e2865be3bddf5b38417f699eb2b9823d9a345923ed3e4f0cb9d80",
+            "frame_id": "0DCA29C8EDCFC4801C2446F29F93F264",
+            "file_path": "/workspace/tracewise/fixtures/web/electron_app/index.html",
+            "cdp_hash": "d5e1309aeaadf39268ca2a7b64b991a951ec55ce28a7edcf24fe4e6fdde57ff2",
+            "length": 47,
+            "is_module": false,
+            "language": "JavaScript",
+            "source": {
+              "included": true,
+              "artifact": {
+                "sha256": "d5e1309aeaadf39268ca2a7b64b991a951ec55ce28a7edcf24fe4e6fdde57ff2",
+                "bytes": 47,
+                "media_type": "text/javascript",
+                "charset": "utf-8",
+                "text": "window.inlineReady = () => document.readyState;"
+              }
+            }
+          },
+          {
+            "script_key": "electron_script_54206b1c6e9c54a5a7472cd9f1b8aef2c87ca5fce875628278863eb55b56a8af",
+            "frame_id": "1E3F78BE58A983FFF7B01267D06D70AA",
+            "file_path": "/workspace/tracewise/fixtures/web/electron_app/frame.html",
+            "cdp_hash": "55a900db3db84443c5c5cbb27a887e21561a6659535b60f4327fade470a97006",
+            "length": 31,
+            "is_module": false,
+            "language": "JavaScript",
+            "source": {
+              "included": true,
+              "artifact": {
+                "sha256": "55a900db3db84443c5c5cbb27a887e21561a6659535b60f4327fade470a97006",
+                "bytes": 31,
+                "media_type": "text/javascript",
+                "charset": "utf-8",
+                "text": "window.panelReady = () => true;"
+              }
+            }
+          },
+          {
+            "script_key": "electron_script_ad73bd4934828bbada1ef32a34f4cb290a6aea77ed843ece0255e0418e50bfcf",
+            "frame_id": "0DCA29C8EDCFC4801C2446F29F93F264",
+            "file_path": "/workspace/tracewise/fixtures/web/electron_app/app.js",
+            "cdp_hash": "044a87ce68b3d8d4f0144209fb29d02f2a35764999f63f73d6a5243298a6a769",
+            "length": 170,
+            "is_module": false,
+            "language": "JavaScript",
+            "source": {
+              "included": true,
+              "artifact": {
+                "sha256": "044a87ce68b3d8d4f0144209fb29d02f2a35764999f63f73d6a5243298a6a769",
+                "bytes": 170,
+                "media_type": "text/javascript",
+                "charset": "utf-8",
+                "text": "window.exportPdf = () => {\n  document.getElementById(\"title\").textContent = \"exported\";\n};\ndocument.getElementById(\"export\").addEventListener(\"click\", window.exportPdf);\n"
+              }
+            }
+          }
+        ]
+      },
+      "resources": [
+        {
+          "resource_key": "electron_resource_854567f8b08d399ad2767176a0a26d3adede68df968041760decf9a77177e892",
+          "file_path": "/workspace/tracewise/fixtures/web/electron_app/style.css",
+          "type": "Stylesheet",
+          "mime_type": "text/css",
+          "content_size": 26
+        },
+        {
+          "resource_key": "electron_resource_fd944008aaa97c9a7fbb7391710e73063d88f41f50bfead7d5fa6dfe415f300f",
+          "file_path": "/workspace/tracewise/fixtures/web/electron_app/app.js",
+          "type": "Script",
+          "mime_type": "text/javascript",
+          "content_size": 170
+        }
+      ],
+      "workers": [],
+      "limitations": [
+        "Local file paths exposed by the selected CDP target are retained in the observation.",
+        "REA does not evaluate renderer JavaScript, invoke Electron APIs, navigate, click, or close the page.",
+        "Select include_script_sources to retain script contents."
+      ]
+    },
+    "confidence": "observed",
+    "authority": "external-service",
+    "environment": {
+      "id": "Chrome/154.0.8037.97@537.36 (@b510e9d7cd3a2fbd78d0ddc42234103206c5f78d)",
+      "platform": "unknown",
+      "architecture": "unknown",
+      "isolation": "none"
+    },
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "Local file paths exposed by the selected CDP target are retained in the observation.",
+      "REA does not evaluate renderer JavaScript, invoke Electron APIs, navigate, click, or close the page.",
+      "Select include_script_sources to retain script contents.",
+      "Browser host platform and architecture were not observed."
+    ],
+    "locations": [],
+    "evidence_links": []
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "finite": {
+    "events": [
+      {
+        "id": "hello",
+        "source": "terminal_raw",
+        "exact": {
+          "data": "hello"
+        },
+        "ignore_fields": [
+          "sequence",
+          "at_ms"
+        ],
+        "cardinality": {
+          "kind": "optional"
+        }
+      },
+      {
+        "id": "world",
+        "source": "terminal_raw",
+        "exact": {
+          "data": "world"
+        },
+        "ignore_fields": [
+          "sequence",
+          "at_ms"
+        ],
+        "cardinality": {
+          "kind": "optional"
+        }
+      },
+      {
+        "id": "exit",
+        "source": "lifecycle",
+        "exact": {
+          "event": "exit",
+          "code": 0,
+          "signal": 0,
+          "reason": "exited"
+        },
+        "ignore_fields": [
+          "elapsed_ms"
+        ]
+      },
+      {
+        "id": "settled",
+        "source": "lifecycle",
+        "exact": {
+          "event": "settlement",
+          "state": "quiesced",
+          "cleanup_outcome": "not_required"
+        },
+        "ignore_fields": [
+          "elapsed_ms"
+        ]
+      }
+    ],
+    "language": {
+      "kind": "finite_traces",
+      "variants": [
+        {
+          "id": "greets-hello",
+          "trace": [
+            "hello",
+            "exit",
+            "settled"
+          ]
+        },
+        {
+          "id": "greets-world",
+          "trace": [
+            "world",
+            "exit",
+            "settled"
+          ]
+        }
+      ]
+    }
+  },
+  "partial": {
+    "events": [
+      {
+        "id": "hello",
+        "source": "terminal_raw",
+        "exact": {
+          "data": "hello"
+        },
+        "ignore_fields": [
+          "sequence",
+          "at_ms"
+        ],
+        "cardinality": {
+          "kind": "optional"
+        }
+      },
+      {
+        "id": "world",
+        "source": "terminal_raw",
+        "exact": {
+          "data": "world"
+        },
+        "ignore_fields": [
+          "sequence",
+          "at_ms"
+        ],
+        "cardinality": {
+          "kind": "optional"
+        }
+      },
+      {
+        "id": "exit",
+        "source": "lifecycle",
+        "exact": {
+          "event": "exit",
+          "code": 0,
+          "signal": 0,
+          "reason": "exited"
+        },
+        "ignore_fields": [
+          "elapsed_ms"
+        ]
+      },
+      {
+        "id": "settled",
+        "source": "lifecycle",
+        "exact": {
+          "event": "settlement",
+          "state": "quiesced",
+          "cleanup_outcome": "not_required"
+        },
+        "ignore_fields": [
+          "elapsed_ms"
+        ]
+      }
+    ],
+    "language": {
+      "kind": "partial_order",
+      "happens_before": [
+        {
+          "before": "exit",
+          "after": "settled"
+        }
+      ],
+      "not_before": [
+        {
+          "event": "hello",
+          "anchor": "exit"
+        }
+      ],
+      "unordered_groups": [
+        {
+          "events": [
+            "hello",
+            "world"
+          ]
+        },
+        {
+          "events": [
+            "hello",
+            "settled"
+          ]
+        },
+        {
+          "events": [
+            "world",
+            "exit"
+          ]
+        },
+        {
+          "events": [
+            "world",
+            "settled"
+          ]
+        }
+      ]
+    }
+  }
+}

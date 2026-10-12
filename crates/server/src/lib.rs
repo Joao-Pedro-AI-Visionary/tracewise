@@ -1,5 +1,8 @@
+pub mod electron_handlers;
 pub mod format;
 pub mod handlers;
+pub mod process_handlers;
+pub mod reconstruction_handlers;
 pub mod session;
 
 use rmcp::model::*;

@@ -1,0 +1,201 @@
+{
+  "evidence_id": "ev_08e84218426740f661900853924dcf6c6374615bebb07ea6833879bd6ab35828",
+  "subject": null,
+  "provider": {
+    "id": "rea-function-comparison",
+    "name": "REA function comparison",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.function-comparison",
+  "operation": "compare_functions",
+  "parameters": {
+    "left_evidence_id": "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+    "right_evidence_id": "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "status": "changed",
+    "function_match": {
+      "status": "matched",
+      "method": "symbol",
+      "left_name": "main",
+      "right_name": "main"
+    },
+    "left_subject_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "right_subject_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "summary": {
+      "unchanged": 7,
+      "changed": 1,
+      "unknown": 0
+    },
+    "dimensions": [
+      {
+        "dimension": "identity",
+        "left_count": null,
+        "right_count": null,
+        "evidence_links": [
+          "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+          "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+        ],
+        "limitations": [],
+        "status": "unchanged",
+        "left_digest": "dd190a914de1bdf8f4bba97a2e74b439585874c567f28eb0ff41bc5388c66d65",
+        "right_digest": "dd190a914de1bdf8f4bba97a2e74b439585874c567f28eb0ff41bc5388c66d65",
+        "text_delta": null,
+        "conclusion_kind": "derived_relationship"
+      },
+      {
+        "dimension": "pseudocode",
+        "left_count": 9,
+        "right_count": 9,
+        "evidence_links": [
+          "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+          "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+        ],
+        "limitations": [],
+        "status": "changed",
+        "left_digest": "64abdfe133a114158fa0e185d0edec784e6ccf13a166a0fed8bc18bb0cc72554",
+        "right_digest": "c8e26d77640903b2d4c765ebcb7f7170b64dd320dd3911abbe8346e07cd593d1",
+        "text_delta": {
+          "added_lines": 1,
+          "removed_lines": 1,
+          "hunks": 2
+        },
+        "conclusion_kind": "derived_relationship"
+      },
+      {
+        "dimension": "assembly",
+        "left_count": 0,
+        "right_count": 0,
+        "evidence_links": [
+          "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+          "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+        ],
+        "limitations": [
+          "Assembly is opaque provider text; relocation normalization is unavailable."
+        ],
+        "status": "unchanged",
+        "left_digest": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "right_digest": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "text_delta": {
+          "added_lines": 0,
+          "removed_lines": 0,
+          "hunks": 0
+        },
+        "conclusion_kind": "derived_relationship"
+      },
+      {
+        "dimension": "comments",
+        "left_count": 0,
+        "right_count": 0,
+        "evidence_links": [
+          "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+          "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+        ],
+        "limitations": [],
+        "status": "unchanged",
+        "left_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "right_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "text_delta": null,
+        "conclusion_kind": "derived_relationship"
+      },
+      {
+        "dimension": "calls",
+        "left_count": 0,
+        "right_count": 0,
+        "evidence_links": [
+          "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+          "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+        ],
+        "limitations": [],
+        "status": "unchanged",
+        "left_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "right_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "text_delta": null,
+        "conclusion_kind": "derived_relationship"
+      },
+      {
+        "dimension": "references",
+        "left_count": 0,
+        "right_count": 0,
+        "evidence_links": [
+          "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+          "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+        ],
+        "limitations": [],
+        "status": "unchanged",
+        "left_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "right_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "text_delta": null,
+        "conclusion_kind": "derived_relationship"
+      },
+      {
+        "dimension": "strings_names",
+        "left_count": 0,
+        "right_count": 0,
+        "evidence_links": [
+          "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+          "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+        ],
+        "limitations": [],
+        "status": "unchanged",
+        "left_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "right_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "text_delta": null,
+        "conclusion_kind": "derived_relationship"
+      },
+      {
+        "dimension": "cfg",
+        "left_count": 1,
+        "right_count": 1,
+        "evidence_links": [
+          "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+          "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+        ],
+        "limitations": [],
+        "status": "unchanged",
+        "left_digest": "e947121f0d4cb8d2a2468a75a44872a29aa1239e6401712df80cfa36bf7df7a0",
+        "right_digest": "e947121f0d4cb8d2a2468a75a44872a29aa1239e6401712df80cfa36bf7df7a0",
+        "text_delta": null,
+        "conclusion_kind": "derived_relationship"
+      }
+    ],
+    "changes": [
+      {
+        "dimension": "pseudocode",
+        "left_count": 9,
+        "right_count": 9,
+        "evidence_links": [
+          "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+          "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+        ],
+        "limitations": [],
+        "status": "changed",
+        "left_digest": "64abdfe133a114158fa0e185d0edec784e6ccf13a166a0fed8bc18bb0cc72554",
+        "right_digest": "c8e26d77640903b2d4c765ebcb7f7170b64dd320dd3911abbe8346e07cd593d1",
+        "text_delta": {
+          "added_lines": 1,
+          "removed_lines": 1,
+          "hunks": 2
+        },
+        "conclusion_kind": "derived_relationship"
+      }
+    ],
+    "limitations": [
+      "Left: The fixture omits native API and value-flow observations.",
+      "Right: The fixture omits native API and value-flow observations."
+    ]
+  },
+  "confidence": "derived",
+  "authority": "analyst-inference",
+  "environment": null,
+  "limitations": [
+    "Artifact identity is unavailable for this observation."
+  ],
+  "locations": [],
+  "evidence_links": [
+    "ev_9040dcea4aee23f8bfd419e31275b85bc894b0cac03a036c1448a934a4420e3b",
+    "ev_58175b2b15ca88757f14f536abcf13a7dab92595403dc934842114a2d6134459"
+  ]
+}

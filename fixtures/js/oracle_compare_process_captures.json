@@ -1,0 +1,119 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_472c32af71a1e70213e04f4925998556fff72bfc2ad83982310ac8c893cbf74f\",\"subject\":null,\"provider\":{\"id\":\"rea-process\",\"name\":\"REA process capture\",\"version\":\"3\"},\"analysis_profile\":null,\"predicate_type\":\"rea.process-comparison\",\"operation\":\"compare_process_captures\",\"parameters\":{\"left_evidence_id\":\"ev_cd733f9fde8f81e47f7ca17a79d601a0d2a2c82141fafef1aee901c62b0f943e\",\"right_evidence_id\":\"ev_0ed5d0821ea3d795e4fd890b20594e23c767fbd5c10dfe7965a697212eac671f\",\"left_normalization\":{\"paths\":false,\"pids\":true,\"ports\":true,\"time_bucket_ms\":10,\"patterns\":[]},\"right_normalization\":{\"paths\":false,\"pids\":true,\"ports\":true,\"time_bucket_ms\":10,\"patterns\":[]}},\"raw_result\":null,\"normalized_result\":{\"status\":\"changed\",\"terminal\":\"changed\",\"interaction\":\"unchanged\",\"exit\":\"changed\",\"filesystem\":\"unknown\",\"process\":\"unknown\",\"first_divergence\":{\"status\":\"found\",\"dimension\":\"terminal\",\"index\":0,\"left_at_ms\":30,\"right_at_ms\":10,\"left\":{\"kind\":\"raw\",\"sequence\":0,\"at_ms\":30,\"data\":\"hello\"},\"right\":{\"kind\":\"raw\",\"sequence\":0,\"at_ms\":10,\"data\":\"world\"}},\"limitations\":[\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\"]},\"confidence\":\"derived\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Artifact identity is unavailable for this observation.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.\",\"Process trees are sampled and may omit short-lived descendants.\",\"Filesystem observations are before/after snapshots, not syscall traces.\",\"Inherited host environment variables are not recorded and may affect results.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\",\"Process trees are sampled and may omit short-lived descendants.\",\"The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.\",\"Inherited host environment variables are not recorded.\",\"Network activity is not observed by this capture.\",\"No filesystem observation paths were selected; filesystem effects remain unknown.\"],\"locations\":[],\"evidence_links\":[\"ev_cd733f9fde8f81e47f7ca17a79d601a0d2a2c82141fafef1aee901c62b0f943e\",\"ev_0ed5d0821ea3d795e4fd890b20594e23c767fbd5c10dfe7965a697212eac671f\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_472c32af71a1e70213e04f4925998556fff72bfc2ad83982310ac8c893cbf74f",
+    "subject": null,
+    "provider": {
+      "id": "rea-process",
+      "name": "REA process capture",
+      "version": "3"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.process-comparison",
+    "operation": "compare_process_captures",
+    "parameters": {
+      "left_evidence_id": "ev_cd733f9fde8f81e47f7ca17a79d601a0d2a2c82141fafef1aee901c62b0f943e",
+      "right_evidence_id": "ev_0ed5d0821ea3d795e4fd890b20594e23c767fbd5c10dfe7965a697212eac671f",
+      "left_normalization": {
+        "paths": false,
+        "pids": true,
+        "ports": true,
+        "time_bucket_ms": 10,
+        "patterns": []
+      },
+      "right_normalization": {
+        "paths": false,
+        "pids": true,
+        "ports": true,
+        "time_bucket_ms": 10,
+        "patterns": []
+      }
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "status": "changed",
+      "terminal": "changed",
+      "interaction": "unchanged",
+      "exit": "changed",
+      "filesystem": "unknown",
+      "process": "unknown",
+      "first_divergence": {
+        "status": "found",
+        "dimension": "terminal",
+        "index": 0,
+        "left_at_ms": 30,
+        "right_at_ms": 10,
+        "left": {
+          "kind": "raw",
+          "sequence": 0,
+          "at_ms": 30,
+          "data": "hello"
+        },
+        "right": {
+          "kind": "raw",
+          "sequence": 0,
+          "at_ms": 10,
+          "data": "world"
+        }
+      },
+      "limitations": [
+        "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+        "Process trees are sampled and may omit short-lived descendants.",
+        "Filesystem observations are before/after snapshots, not syscall traces.",
+        "Inherited host environment variables are not recorded and may affect results.",
+        "No filesystem observation paths were selected; filesystem effects remain unknown.",
+        "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+        "Process trees are sampled and may omit short-lived descendants.",
+        "Filesystem observations are before/after snapshots, not syscall traces.",
+        "Inherited host environment variables are not recorded and may affect results.",
+        "No filesystem observation paths were selected; filesystem effects remain unknown.",
+        "Process trees are sampled and may omit short-lived descendants.",
+        "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+        "Inherited host environment variables are not recorded.",
+        "Network activity is not observed by this capture.",
+        "No filesystem observation paths were selected; filesystem effects remain unknown.",
+        "Process trees are sampled and may omit short-lived descendants.",
+        "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+        "Inherited host environment variables are not recorded.",
+        "Network activity is not observed by this capture.",
+        "No filesystem observation paths were selected; filesystem effects remain unknown."
+      ]
+    },
+    "confidence": "derived",
+    "authority": "analyst-inference",
+    "environment": null,
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+      "Process trees are sampled and may omit short-lived descendants.",
+      "Filesystem observations are before/after snapshots, not syscall traces.",
+      "Inherited host environment variables are not recorded and may affect results.",
+      "No filesystem observation paths were selected; filesystem effects remain unknown.",
+      "The executable digest is a prelaunch file sample; matching path metadata immediately after spawn does not prove an atomic operating-system image binding.",
+      "Process trees are sampled and may omit short-lived descendants.",
+      "Filesystem observations are before/after snapshots, not syscall traces.",
+      "Inherited host environment variables are not recorded and may affect results.",
+      "No filesystem observation paths were selected; filesystem effects remain unknown.",
+      "Process trees are sampled and may omit short-lived descendants.",
+      "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+      "Inherited host environment variables are not recorded.",
+      "Network activity is not observed by this capture.",
+      "No filesystem observation paths were selected; filesystem effects remain unknown.",
+      "Process trees are sampled and may omit short-lived descendants.",
+      "The executable digest is a prelaunch file sample; operating-system image binding is not atomically observed.",
+      "Inherited host environment variables are not recorded.",
+      "Network activity is not observed by this capture.",
+      "No filesystem observation paths were selected; filesystem effects remain unknown."
+    ],
+    "locations": [],
+    "evidence_links": [
+      "ev_cd733f9fde8f81e47f7ca17a79d601a0d2a2c82141fafef1aee901c62b0f943e",
+      "ev_0ed5d0821ea3d795e4fd890b20594e23c767fbd5c10dfe7965a697212eac671f"
+    ]
+  }
+}
