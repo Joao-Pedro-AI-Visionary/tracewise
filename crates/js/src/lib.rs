@@ -1,3 +1,4 @@
+mod application;
 mod classify;
 mod comparison;
 mod digest;
@@ -19,6 +20,7 @@ mod tools;
 mod types;
 mod unicode;
 
+pub use application::{analyze_javascript_application, trace_javascript_semantics};
 pub use error::JsError;
 pub use source_map_recovery::recover_javascript_sources;
 pub use source_to_bundle::compare_source_to_bundle_tool;

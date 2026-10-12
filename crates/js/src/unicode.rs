@@ -18,7 +18,7 @@ pub fn compare_unicode_code_points(left: &str, right: &str) -> Ordering {
 }
 
 pub fn unique_sorted(strings: &[String]) -> Vec<String> {
-    let mut out: Vec<String> = strings.iter().cloned().collect();
+    let mut out: Vec<String> = strings.to_vec();
     out.sort_by(|a, b| compare_unicode_code_points(a, b));
     out.dedup();
     out

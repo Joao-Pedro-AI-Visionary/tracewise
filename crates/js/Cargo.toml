@@ -15,6 +15,18 @@ hex = { workspace = true }
 thiserror = { workspace = true }
 sourcemap = { workspace = true }
 base64 = { workspace = true }
+oxc_allocator = "=0.75.0"
+oxc_parser = "=0.75.0"
+oxc_ast = "=0.75.0"
+oxc_span = "=0.75.0"
+oxc_semantic = "=0.75.0"
+# 0.75.1 bumped MSRV to 1.86; keep the 1.85-compatible patch.
+oxc_ast_macros = "=0.75.0"
+oxc_data_structures = "=0.75.0"
+oxc_diagnostics = "=0.75.0"
+oxc_estree = "=0.75.0"
+# textwrap 0.16.3+ requires rustc 1.88 via icu_segmenter. oxc-miette accepts ^0.16.2.
+textwrap = "=0.16.2"
 zip = { version = "0.6", default-features = false, features = ["deflate"] }
 walkdir = "2.5"
 tempfile = "3.14"

@@ -182,7 +182,7 @@ async fn live_cdp_discovers_webmcp_and_captures_scenario() {
             .filter_map(|tool| tool["name"].as_str())
             .collect();
         assert!(
-            names.iter().any(|name| *name == "tracewise_echo"),
+            names.contains(&"tracewise_echo"),
             "expected navigator.modelContext tool, got {names:?}\n{webmcp}"
         );
     }

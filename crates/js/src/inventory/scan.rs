@@ -284,3 +284,28 @@ fn sort_edges(edges: Vec<crate::types::ArtifactEdge>) -> Vec<crate::types::Artif
     }
     edges
 }
+
+#[cfg(test)]
+mod inventory_oracle_test {
+    use super::*;
+    use std::path::Path;
+    #[test]
+    fn app_fixture_inventory_matches_oracle() {
+        let inv = scan_artifact_inventory(Path::new("/workspace/tracewise/fixtures/js/app")).unwrap();
+        assert_eq!(
+            inv.manifest.manifest_id,
+            "agm_f284bb10399be287041cef6720f3b62a856cf56e48b79bf0e0a6294de0c381c2"
+        );
+        let graph_sha = crate::identity::artifact_graph_digest(
+            &inv.nodes,
+            &inv.occurrences,
+            &inv.edges,
+            &inv.integrity_contradictions,
+        )
+        .unwrap();
+        assert_eq!(
+            graph_sha,
+            "1a9169342f95469852289bf8a81c88c25bed775dd521523fdae79e6ba66e5534"
+        );
+    }
+}

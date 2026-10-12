@@ -20,6 +20,8 @@ const PHASE2_IMPLEMENTED: &[&str] = &[
     "compare_artifacts",
     "recover_javascript_sources",
     "compare_source_to_bundle",
+    "analyze_javascript_application",
+    "trace_javascript_semantics",
 ];
 
 #[tokio::test]
@@ -31,12 +33,12 @@ async fn every_rea_tool_dispatches_to_an_implementation() {
         .copied()
         .filter(|name| !PHASE2_IMPLEMENTED.contains(name))
         .collect();
-    assert_eq!(pending.len(), 18);
+    assert_eq!(pending.len(), 16);
     let mut implemented: Vec<&str> = Vec::new();
     implemented.extend_from_slice(phase0_tool_names());
     implemented.extend_from_slice(phase1_tool_names());
     implemented.extend_from_slice(PHASE2_IMPLEMENTED);
-    assert_eq!(implemented.len(), 32, "27 phase0/1 + 5 phase2 tools");
+    assert_eq!(implemented.len(), 34, "27 phase0/1 + 7 phase2 tools");
     let session = BinarySession::new();
     for name in implemented {
         let result = call_tool_local(

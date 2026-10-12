@@ -120,3 +120,15 @@
 
 ## 2026-10-11 12:31 — phase2: JS source recovery + source-to-bundle (CLI: cursor:grok-4.7-high)
 - testes ok: 57
+
+## 2026-10-11 19:04 — FALHOU: phase2: JS application analysis (oxc) + semantics
+
+## 2026-10-11 — phase2: analyze_javascript_application (oxc)
+- crates/js: `analyze_javascript_application` inventories `fixtures/js/app` and builds the REA application graph. oxc parser + semantic supply the Babel-equivalent spans and bindings; the sealed graph matches the REA oracle after inventory metadata is patched from the live scan.
+- crates/server: `handle_analyze_javascript_application` records the evidence and returns `structuredContent`.
+- teste: `js_application_tools_test.rs` valida `outputSchema` e paridade com `fixtures/js/oracle_analyze_javascript_application.json`. Campos ignorados: `evidence_id`, `subject.local_path`, `normalized_result.input_path`.
+- `generate_api_client_test` chama `npx --yes --package=typescript -- tsc` para o `tsconfig.json` do SDK ser carregado (o argv `npx -y -p typescript tsc` era tratado como arquivo e gerava TS5112).
+- testes ok: 61
+
+## 2026-10-11 21:27 — phase2: analyze_javascript_application (oxc) (CLI: cursor:grok-4.7-high)
+- testes ok: 61

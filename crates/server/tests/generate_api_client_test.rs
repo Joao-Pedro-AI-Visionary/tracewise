@@ -194,10 +194,13 @@ async fn test_generate_api_client_from_demo_har() {
             std::env::var("PATH").unwrap_or_default()
         );
         let ts_dir = dir_a.join("typescript");
+        // `npx -y -p typescript tsc` is parsed as a file argument, so the
+        // compiler reports TS5112 (tsconfig present, files specified). The
+        // `--` separator makes npx invoke the typescript package's tsc.
         let tsc = Command::new(bin.join("npx"))
-            .arg("-y")
-            .arg("-p")
-            .arg("typescript")
+            .arg("--yes")
+            .arg("--package=typescript")
+            .arg("--")
             .arg("tsc")
             .arg("--pretty")
             .arg("false")

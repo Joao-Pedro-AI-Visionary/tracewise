@@ -121,6 +121,8 @@ async fn execute_tool(
         "compare_artifacts" => handle_compare_artifacts(session, args),
         "recover_javascript_sources" => handle_recover_javascript_sources(session, args),
         "compare_source_to_bundle" => handle_compare_source_to_bundle(session, args),
+        "analyze_javascript_application" => handle_analyze_javascript_application(session, args),
+        "trace_javascript_semantics" => handle_trace_javascript_semantics(session, args),
         name if tracewise_contracts::phase2_tool_names().contains(&name) => {
             Err(McpError::internal_error(
                 format!("not yet implemented: {name}"),
@@ -993,6 +995,93 @@ fn handle_compare_source_to_bundle(
             .map_err(|error| McpError::internal_error(error.to_string(), None))?;
     }
     let evidence = tracewise_js::compare_source_to_bundle_tool(&reference, &application)
+        .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
+    ledger
+        .record(evidence.clone())
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    let val = serde_json::to_value(&evidence)
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_analyze_javascript_application(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let input_path = args
+        .get("input_path")
+        .and_then(|v| v.as_str())
+        .ok_or_else(|| {
+            McpError::invalid_params(
+                "analyze_javascript_application requires 'input_path'",
+                None,
+            )
+        })?;
+    let format = args
+        .get("format")
+        .and_then(|v| v.as_str())
+        .unwrap_or("directory");
+    let integrity_policy = args
+        .get("integrity_policy")
+        .and_then(|v| v.as_str())
+        .unwrap_or("fail");
+    let evidence = tracewise_js::analyze_javascript_application(
+        input_path,
+        format,
+        integrity_policy,
+    )
+    .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
+    session
+        .ledger
+        .lock()
+        .unwrap()
+        .record(evidence.clone())
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    let val = serde_json::to_value(&evidence)
+        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    Ok(CallToolResult::structured(val))
+}
+
+fn handle_trace_javascript_semantics(
+    session: &BinarySession,
+    args: &Value,
+) -> Result<CallToolResult, McpError> {
+    let application_value = args.get("application").cloned().ok_or_else(|| {
+        McpError::invalid_params("trace_javascript_semantics requires 'application'", None)
+    })?;
+    let query = args.get("query").cloned().ok_or_else(|| {
+        McpError::invalid_params("trace_javascript_semantics requires 'query'", None)
+    })?;
+    let application = if application_value.get("kind").and_then(|v| v.as_str()) == Some("retained-evidence")
+    {
+        let evidence_id = application_value
+            .get("evidence_id")
+            .and_then(|v| v.as_str())
+            .ok_or_else(|| McpError::invalid_params("retained evidence requires evidence_id", None))?;
+        session
+            .ledger
+            .lock()
+            .unwrap()
+            .get(evidence_id)
+            .cloned()
+            .ok_or_else(|| {
+                McpError::invalid_params(
+                    format!("Evidence retained in this session is missing: {evidence_id}"),
+                    None,
+                )
+            })?
+    } else {
+        serde_json::from_value(application_value).map_err(|error| {
+            McpError::invalid_params(format!("Invalid application evidence: {error}"), None)
+        })?
+    };
+    let mut ledger = session.ledger.lock().unwrap();
+    if !ledger.has(&application.evidence_id) {
+        ledger
+            .record(application.clone())
+            .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    }
+    let evidence = tracewise_js::trace_javascript_semantics(&application, &query)
         .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
     ledger
         .record(evidence.clone())
