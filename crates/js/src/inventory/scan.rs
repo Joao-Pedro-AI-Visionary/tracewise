@@ -30,6 +30,14 @@ pub struct PendingContradiction {
 }
 
 pub fn scan_artifact_inventory(path: &Path) -> Result<ArtifactInventoryResult, JsError> {
+    scan_artifact_inventory_with_policy(path, "fail")
+}
+
+/// Inventory with REA's `integrity_policy` (`fail` or `record-and-continue`).
+pub fn scan_artifact_inventory_with_policy(
+    path: &Path,
+    integrity_policy: &str,
+) -> Result<ArtifactInventoryResult, JsError> {
     let canonical = std::fs::canonicalize(path)?;
     let meta = std::fs::metadata(&canonical)?;
     let is_directory = meta.is_dir();
@@ -51,7 +59,7 @@ pub fn scan_artifact_inventory(path: &Path) -> Result<ArtifactInventoryResult, J
     let reader = create_reader(&canonical, &root_format)?;
     let has_reader = reader.is_some();
     let (mut nodes, mut occurrences, pending) = if let Some(reader) = reader {
-        scan_reader(reader.as_ref(), "fail")?
+        scan_reader(reader.as_ref(), integrity_policy)?
     } else {
         (HashMap::new(), Vec::new(), Vec::new())
     };
@@ -294,7 +302,7 @@ mod inventory_oracle_test {
     use std::path::Path;
     #[test]
     fn app_fixture_inventory_matches_oracle() {
-        let inv = scan_artifact_inventory(Path::new("/workspace/tracewise/fixtures/js/app")).unwrap();
+        let inv = scan_artifact_inventory(Path::new(concat!(env!("CARGO_MANIFEST_DIR"), "/../../fixtures/js/app"))).unwrap();
         assert_eq!(
             inv.manifest.manifest_id,
             "agm_f284bb10399be287041cef6720f3b62a856cf56e48b79bf0e0a6294de0c381c2"

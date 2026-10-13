@@ -1,0 +1,143 @@
+with (a) {}
+var x = 010;
+"use strict"; var s = "\07";
+var s = '\07';
+var s = '\8';
+x = `\8`;
+function f(a, a) {}
+eval = 1;
+arguments = 1;
+var let = 1;
+var yield = 1;
+delete x;
+let a; let a;
+var a; let a;
+var a; var a;
+class A { constructor(){} constructor(){} }
+a = 1 = 2;
+1++;
+break;
+continue;
+new.target;
+return 5;
+label: label: ;
+({ __proto__: 1, __proto__: 2 });
+if (1) function f(){}
+async function f(){ var await; }
+function* g(){ var yield; }
+for (let x of y) { var x; }
+try {} catch (e) { let e; }
+function f(){ super(); }
+var static = 1; var implements = 2; var package = 3; var private = 4;
+var public;
+interface = 1;
+function eval(){}
+var arguments;
+(function(arguments){})
+'use strict'; function f(eval){}
+const a;
+let [a] ;
+for (const x;;) {}
+a?.b = 1;
+async () => await;
+({a} = 1);
+[a] = 1;
+({a:1} = 1);
+({a:b.c} = 1);
+class A extends B { constructor() { super(); } m() { super(); } }
+function f(a = 1) { 'use strict'; }
+var x = 08; var y = 09.5;
+var x = 0o8;
+/(/
+/a/gg
+x = 1_0_;
+0_1
+for (var i = 0 in x) {}
+for (let of x) {}
+let let = 1;
+function f() { let let; }
+export var a; export var a;
+import {a} from 'x'; import {a} from 'y';
+label: function* g(){}
+if (a) class A {}
+while (1) function f(){}
+a: { a: ; }
+function f(){ break a; }
+this = 1;
+(a, b) = 1;
+(a) = 1;
+((a)) = 1;
+[...a, b] = c;
+({...{a}} = c);
+function f(...a,){}
+async (a, a) => 1;
+(a, a) => 1;
+function f(a, [a]){}
+class A { static prototype(){} }
+class A { get constructor(){} }
+class A { #a; #a; }
+class A { m(){ this.#b } }
+x = a ?? b || c;
+x = -1 ** 2;
+function f(){ for await (x of y); }
+yield: 1;
+await: 1;
+new.target
+super.x
+function f(){ new.target = 1 }
+function f() { return }  return
+class A { static { return; } }
+class A { static { await 1; } }
+class A { static { arguments } }
+x = <div></span>;
+x = <a b=1/>;
+let x: number = ;
+class A { constructor(public a, public a) {} }
+abstract class A { abstract m() {} }
+function f(this: any, this: any) {}
+declare const x = 1;
+type T = number; type T = string;
+interface I {} interface I {} class I {}
+export default 1; export default 2;
+export {a};
+export {a as b, c as b}; var a, c;
+function f() { "use strict"; var public; }
+var x = { a: 1, a: 2 };
+"use strict"; var x = { a: 1, a: 2 };
+function f() { var a; let a; }
+function f(a) { let a; }
+switch (1) { case 1: let a; case 2: let a; }
+x = function eval() {};
+"use strict"; delete x.y; delete x;
+"use strict"; with (a) {}
+"use strict"; arguments++;
+'use strict'; 0777
+var a = 1; var a = 2;
+if (a) { function f(){} } function f(){}
+{ function f(){} function f(){} }
+async function f(){ function g(){ await x } }
+for (let x, y of z) {}
+for (var [a] = 1 of z) {}
+x = { set a(...b){} };
+x = { get a(b){} };
+try {} catch ([a, a]) {}
+function* f(){ yield = 1 }
+class A { 'constructor'(){} 'constructor'(){} }
+new.target = 1
+import('a', 'b', 'c')
+x = a ? b : c = d
+a => { "use strict"; }
+(a = 1) => { "use strict"; }
+class A { constructor(){ super(); } }
+class B extends A { constructor(){ function f(){ super(); } } }
+async function f(a = await 1){}
+function* g(a = yield){}
+x = { __proto__: 1, "__proto__": 2 }
+var s = '\033[31m';
+console.log('\033[31m' + x);
+var n = 0644; var m = 0777;
+function f() { with (o) { x = 1; } }
+var a = 0644; with (b) { c; } let d; let d;
+var s = "\08"; var t = '\1';
+x = 1; delete x; eval = 2; arguments = 3;
+function g(a, a) { return a; }

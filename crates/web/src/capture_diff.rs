@@ -1003,9 +1003,9 @@ mod tests {
     #[test]
     fn test_compare_web_captures_against_oracle() {
         let before_str =
-            std::fs::read_to_string("/workspace/tracewise/fixtures/web/capture_before.json").unwrap();
+            std::fs::read_to_string(concat!(env!("CARGO_MANIFEST_DIR"), "/../../fixtures/web/capture_before.json")).unwrap();
         let after_str =
-            std::fs::read_to_string("/workspace/tracewise/fixtures/web/capture_after.json").unwrap();
+            std::fs::read_to_string(concat!(env!("CARGO_MANIFEST_DIR"), "/../../fixtures/web/capture_after.json")).unwrap();
 
         let before_val: Value = serde_json::from_str(&before_str).unwrap();
         let after_val: Value = serde_json::from_str(&after_str).unwrap();
@@ -1023,7 +1023,7 @@ mod tests {
         .unwrap();
 
         let oracle_str = std::fs::read_to_string(
-            "/workspace/tracewise/fixtures/web/oracle_compare_web_captures.json",
+            concat!(env!("CARGO_MANIFEST_DIR"), "/../../fixtures/web/oracle_compare_web_captures.json"),
         )
         .unwrap();
         let oracle: Value = serde_json::from_str(&oracle_str).unwrap();

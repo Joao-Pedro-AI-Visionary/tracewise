@@ -91,6 +91,8 @@ Os testes que existiam **não** provavam o critério: `trace_application_feature
 
 **Lacuna fora desta trilha, não escondida: `analyze_javascript_application` só reconstrói as duas aplicações fixture do REA** (`fixtures/js/app` e `app-v2`; `crates/js/src/application/artifact_graph.rs` devolve o corpo gravado do REA, indexado pelo digest do artefato, e recusa qualquer outro com "only implemented for the tracewise fixture apps"). Logo o passo "rastrear a feature até o código" (`trace_application_feature`) não pode apontar para um app Electron de verdade, e o critério "encontra a feature em um app Electron real" do PORTING.md **segue aberto** até existir um construtor real do grafo de aplicação (oxc). No teste, o passo de rastreio é substituído pela observação em tempo de execução (passo 1), que é o que o ledger consome.
 
+> **Update (jsgraph track):** the recorded-answer builder described above was removed. `analyze_javascript_application` now runs the native pipeline (`crates/js/src/jsgraph/`, see [jsgraph.md](jsgraph.md)) on any application, and `trace_application_feature` is compared with the live REA MCP server on `fixtures/electron/invoice_app` and `readiness_app` (`crates/server/tests/jsgraph_mcp_parity_test.rs`). `electron_clone_e2e_test.rs` itself was not changed and still uses the runtime observation for the trace step; its header comment predates this change.
+
 ## Gate (resultado real)
 
 - `cargo clippy -p tracewise-web -p tracewise-js -p tracewise-server -p tracewise --all-targets`: sem warning nos arquivos da trilha (o único warning restante, `tracks/mod.rs::pending` nunca usada, é pré-existente e de outra trilha).

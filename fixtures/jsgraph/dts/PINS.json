@@ -1,0 +1,79 @@
+{
+  "note": "Unmodified declaration files copied from the installed REA dependency tree (npm packages). Licenses are the ones declared in each package.json; the license text of each package is kept next to its files.",
+  "packages": {
+    "types-node-26.6.4": {
+      "package": "@types/node",
+      "version": "26.6.4",
+      "license": "MIT",
+      "files": {
+        "LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+        "timers.d.ts": "e4156ddb25aa0e3b5303d372f26957b36778f0f6bbd4326359269873295e3058",
+        "buffer.d.ts": "575aa163c4c32e5b82e0e99b1f9f80806e1d78bfa259706e05139251c022277b",
+        "stream.d.ts": "5b26c4dd672d88336bb929787c9bfb55119e80ba89ec6dc923da1c063892843e",
+        "vfs.d.ts": "4a8c8fd951d9fd9e0775f0aae8ed1f8b528204e24a2600bea3a1228ea83de52c",
+        "web-globals/console.d.ts": "4b58e207b93a8f1c88bbf2a95ddc686ac83962b13830fe8ad3f404ffc7051fb4",
+        "test/reporters.d.ts": "7da83f6429c6298ebf2be43d296b56ecfc94c9c28f5471b2f23b87545b914cea",
+        "stream/iter.d.ts": "7286e4e5f80c0b1ab16addbdbbc9dd47fbae1c42034189261177b84d745cde3b"
+      }
+    },
+    "typescript-linux-x64-7.0.2": {
+      "package": "@typescript/typescript-linux-x64",
+      "version": "7.0.2",
+      "license": "Apache-2.0",
+      "files": {
+        "LICENSE": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47",
+        "NOTICE.txt": "f5c708b59114507b8b27b48181b6883d106bbca0c1634bbee45b5e344237b66b",
+        "lib/lib.es2025.iterator.d.ts": "996fb27b15277369c68a4ba46ed138b4e9e839a02fb4ec756f7997629242fd9f"
+      }
+    },
+    "isomorphic-git-1.38.7": {
+      "package": "isomorphic-git",
+      "version": "1.38.7",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "b916888fb16893c3a1df138543f994b96bb6892d74b6777c3a080d9cd2520c48",
+        "index.d.ts": "6078b67a3aee1aa961df2b67ea2028e3c8252ab051184bdb43e92789368cfc88",
+        "index.d.cts": "e274204ad84056fffb469bba9f268d63f02e63f1e8c4d6c028443d4a464b38f7",
+        "managers/index.d.ts": "94828a6dc72af1b6b8757f5a8cce30b3a2048ca69c05989fa25c4abedf0797e5"
+      }
+    },
+    "mdast-util-to-hast-13.2.1": {
+      "package": "mdast-util-to-hast",
+      "version": "13.2.1",
+      "license": "MIT",
+      "files": {
+        "license": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+        "lib/handlers/index.d.ts": "ba9f1dadadba633ba31572bc2a02246466888d04813d2319005aec2781eae134"
+      }
+    },
+    "jridgewell-trace-mapping-0.3.31": {
+      "package": "@jridgewell/trace-mapping",
+      "version": "0.3.31",
+      "license": "MIT",
+      "files": {
+        "LICENSE": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+        "types/sort.d.cts": "bdb5286f265f02985927b37222ea2493654dd62b6a53c482220fbeebc899d3fe",
+        "types/resolve.d.cts": "7aad6f4f525f3b80355197be0755b01023f7cf95dd15c1e4626d5461eb5395b8"
+      }
+    },
+    "jose-6.2.3": {
+      "package": "jose",
+      "version": "6.2.3",
+      "license": "MIT",
+      "files": {
+        "LICENSE.md": "8078b0829d6c3e9ecde2f003e1966e4cad3efc6e7a640efbab0313cc166b1af1",
+        "dist/types/jwt/encrypt.d.ts": "c92c9dc7415bf7969931ac5339f21c65687909b32d05ac89789b411372e52991",
+        "dist/types/jwt/sign.d.ts": "b6790300d245377671c085e76e9ef359b3cbba6821b913d6ce6b2739d00b9fb1"
+      }
+    },
+    "vfile-6.0.3": {
+      "package": "vfile",
+      "version": "6.0.3",
+      "license": "MIT",
+      "files": {
+        "license": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d",
+        "lib/index.d.ts": "8315094a7979a31e351522c5f9cce320fd112d6c52cdaf9c5f56bcfb09f89e90"
+      }
+    }
+  }
+}

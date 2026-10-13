@@ -1,0 +1,1 @@
+{"version":3,"file":"renderer.js","sourceRoot":"webpack://fixture/","sources":["src/renderer.ts"],"sourcesContent":["export const route = \"/items/:id\"; fetch(\"/api/items\");"],"names":[],"mappings":"AAAA"}

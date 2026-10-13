@@ -183,3 +183,19 @@
   `open_binary` em `.app`; correções do inventário de artefatos; clippy zerado; `cargo check` para aarch64-apple-darwin.
 - Detalhes, dependências e divergências por trilha em `docs/progress/`.
 - testes ok: 362, falhas 0 (`cargo test --workspace --no-fail-fast` com TRACEWISE_REQUIRE_ORACLE=1), clippy 0 avisos.
+
+## 2026-10-13 — trilha jsgraph fechada: pipeline nativo de análise JS (porte fiel de application/javascript + domain/javascript)
+- `analyze_javascript_application` e as ferramentas que dependem do grafo (trace_javascript_semantics, trace_application_feature,
+  compare_application_versions, compare_javascript_export_shapes, compare_source_to_bundle, reconstrução) rodam sobre o pipeline Rust real; o stub
+  com resposta gravada saiu (`include_str` só em `#[cfg(test)]`).
+- Camadas portadas: AST em formato Babel (sobre oxc, verificada nó a nó contra o Babel do REA), achados estáticos, núcleo semântico + coletores
+  derivados, grafo semântico, grafo de aplicação, orçamento de resposta MCP, limites de pilha/profundidade, cancelamento. Detalhes em
+  `docs/progress/jsgraph-static.md`, `jsgraph-semantic.md` e `jsgraph-semantic-derived.md`.
+- Paridade exata com o REA (oráculo ao vivo, `TRACEWISE_REQUIRE_ORACLE=1`): núcleo semântico 1189 arquivos / 0 diferenças; 17 chaves derivadas sem
+  diferença; paridade MCP em aplicações reais, entradas hostis e cancelamento verdes. Caso de profundidade 600 (scope_depth/rejection do REA) mantido.
+- testes ok: 422, falhas 0, ignorados 0 (87 suítes, `cargo test --workspace --no-fail-fast`), clippy 0 avisos.
+- Known gaps (camada AST; o oxc é estrito e o REA usa `errorRecovery`): ~22 trechos com erro recuperável do Babel que `Ast::error_count` não conta;
+  ~14 fontes que o Babel recupera e o oxc rejeita; `await (x)` ambíguo no topo (1); strings com surrogate solitário não cabem em `String`. Todos
+  contados e impressos a cada execução, nenhum silenciado.
+- Desempenho (build debug): ~2,7 s e ~115 MB por arquivo de 120 linhas no `analyze_javascript_application` (linear; o REA já passa do orçamento de
+  10 MB de resposta MCP com 25 desses arquivos). O teste de cancelamento usava 1500 arquivos (>15 GB, nunca terminava) e passou a usar 8, mesmas asserções.

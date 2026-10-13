@@ -300,10 +300,11 @@ pub fn create_artifact_edges(
         .iter()
         .map(|o| (o.occurrence_id.clone(), o))
         .collect();
-    let by_path: HashMap<_, _> = occurrences
-        .iter()
-        .map(|o| (o.logical_path.clone(), o))
-        .collect();
+    // REA `indexOccurrencesByPath`: the first occurrence of a path wins.
+    let mut by_path: HashMap<&str, &MutableOccurrence> = HashMap::new();
+    for occ in occurrences {
+        by_path.entry(occ.logical_path.as_str()).or_insert(occ);
+    }
     let mut edges = Vec::new();
     for occ in occurrences {
         if occ.parent_occurrence_id.is_none() || occ.artifact_id.is_none() {
@@ -318,18 +319,21 @@ pub fn create_artifact_edges(
         } else {
             "contains"
         };
-        let parent_artifact_id = if occ.logical_path.to_lowercase().ends_with(".map") {
-            let base = occ.logical_path.trim_end_matches(".map");
-            by_path
-                .get(base)
-                .and_then(|o| o.artifact_id.clone())
-                .unwrap_or_else(|| root_artifact_id.to_string())
+        // A map hangs under the bundle it maps (its path minus exactly four characters, once),
+        // when that bundle was observed and has content; otherwise under its parent, then the root.
+        let mapped_source = if occ.logical_path.to_lowercase().ends_with(".map") {
+            by_path.get(&occ.logical_path[..occ.logical_path.len() - ".map".len()])
         } else {
-            by_id
-                .get(occ.parent_occurrence_id.as_ref().unwrap())
-                .and_then(|p| p.artifact_id.clone())
-                .unwrap_or_else(|| root_artifact_id.to_string())
+            None
         };
+        let parent_artifact_id = mapped_source
+            .and_then(|o| o.artifact_id.clone())
+            .or_else(|| {
+                by_id
+                    .get(occ.parent_occurrence_id.as_ref().unwrap())
+                    .and_then(|p| p.artifact_id.clone())
+            })
+            .unwrap_or_else(|| root_artifact_id.to_string());
         let edge_id = artifact_edge_id(
             &parent_artifact_id,
             relation,

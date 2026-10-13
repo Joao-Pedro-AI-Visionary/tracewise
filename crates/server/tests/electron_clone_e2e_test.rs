@@ -15,12 +15,10 @@
 //!    clone. The active Electron capture is accepted as the original's `runtime` authority
 //!    (`missing-original-case` / `static-only` disappear); without it they come back.
 //!
-//! Known gap, outside this track and deliberately not hidden: `analyze_javascript_application`
-//! only reconstructs the two pinned REA fixture applications (`fixtures/js/app*`, plain ESM
-//! modules; `artifact_graph.rs` returns recorded REA bodies keyed by the artifact digest), so
-//! `trace_application_feature` cannot be pointed at this Electron app yet. Step "trace the feature
-//! to its code" of the PORTING.md demo needs a real application graph builder first. Until then
-//! the trace is replaced here by the runtime observation (step 1), which is what the ledger consumes.
+//! Scope note: `analyze_javascript_application` and `trace_application_feature` are native and
+//! can analyze this Electron app (`jsgraph_mcp_parity_test` traces `invoice_app` against the REA).
+//! This test does not call them: the feature is followed through the runtime observation (step 1),
+//! which is what the ledger consumes.
 //!
 //! Skips (printing why) without Electron or Xvfb, or without `node`; fails instead when
 //! `TRACEWISE_REQUIRE_ORACLE=1`.

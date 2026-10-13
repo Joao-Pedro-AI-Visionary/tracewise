@@ -1,0 +1,1 @@
+const value = require("./dep.js") as unknown;

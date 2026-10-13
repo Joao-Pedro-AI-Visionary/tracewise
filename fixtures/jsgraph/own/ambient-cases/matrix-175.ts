@@ -1,0 +1,2 @@
+export { A };
+class A {}

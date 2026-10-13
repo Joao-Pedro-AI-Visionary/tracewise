@@ -1,6 +1,6 @@
 use std::path::Path;
 
-use rmcp::model::{CallToolRequestParam, CallToolResult, ErrorCode, ProgressNotificationParam};
+use rmcp::model::{CallToolRequestParam, CallToolResult, Content, ErrorCode, ProgressNotificationParam};
 use rmcp::service::RequestContext;
 use rmcp::ErrorData as McpError;
 use rmcp::RoleServer;
@@ -121,7 +121,9 @@ async fn execute_tool(
         "compare_artifacts" => handle_compare_artifacts(session, args),
         "recover_javascript_sources" => handle_recover_javascript_sources(session, args),
         "compare_source_to_bundle" => handle_compare_source_to_bundle(session, args),
-        "analyze_javascript_application" => handle_analyze_javascript_application(session, args),
+        "analyze_javascript_application" => {
+            crate::js_application_handlers::handle_analyze_javascript_application(session, args).await
+        }
         "trace_javascript_semantics" => handle_trace_javascript_semantics(session, args),
         "trace_application_feature" => handle_trace_application_feature(session, args),
         "compare_application_versions" => handle_compare_application_versions(session, args),
@@ -984,6 +986,13 @@ fn handle_recover_javascript_sources(
         .map_err(|error| McpError::internal_error(error.to_string(), None))?;
     let val = serde_json::to_value(&evidence)
         .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    let val = crate::schema_order::reorder_to_schema(val, &evidence.operation);
+    // REA delivers a result only if both of its wire representations fit the response budget;
+    // otherwise the (already retained) Evidence is reported as a recoverable constraint.
+    if let Err(overflow) = crate::delivery::check_budget(&val, crate::delivery::result_budget_bytes(), true) {
+        let error = crate::delivery::budget_error(&evidence.operation, &evidence.evidence_id, &overflow);
+        return Ok(CallToolResult::error(vec![Content::text(error.to_body().to_string())]));
+    }
     Ok(CallToolResult::structured(val))
 }
 
@@ -1033,44 +1042,13 @@ fn handle_compare_source_to_bundle(
         .map_err(|error| McpError::internal_error(error.to_string(), None))?;
     let val = serde_json::to_value(&evidence)
         .map_err(|error| McpError::internal_error(error.to_string(), None))?;
-    Ok(CallToolResult::structured(val))
-}
-
-fn handle_analyze_javascript_application(
-    session: &BinarySession,
-    args: &Value,
-) -> Result<CallToolResult, McpError> {
-    let input_path = args
-        .get("input_path")
-        .and_then(|v| v.as_str())
-        .ok_or_else(|| {
-            McpError::invalid_params(
-                "analyze_javascript_application requires 'input_path'",
-                None,
-            )
-        })?;
-    let format = args
-        .get("format")
-        .and_then(|v| v.as_str())
-        .unwrap_or("directory");
-    let integrity_policy = args
-        .get("integrity_policy")
-        .and_then(|v| v.as_str())
-        .unwrap_or("fail");
-    let evidence = tracewise_js::analyze_javascript_application(
-        input_path,
-        format,
-        integrity_policy,
-    )
-    .map_err(|error| McpError::invalid_params(error.to_string(), None))?;
-    session
-        .ledger
-        .lock()
-        .unwrap()
-        .record(evidence.clone())
-        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
-    let val = serde_json::to_value(&evidence)
-        .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    let val = crate::schema_order::reorder_to_schema(val, &evidence.operation);
+    // REA delivers a result only if both of its wire representations fit the response budget;
+    // otherwise the (already retained) Evidence is reported as a recoverable constraint.
+    if let Err(overflow) = crate::delivery::check_budget(&val, crate::delivery::result_budget_bytes(), true) {
+        let error = crate::delivery::budget_error(&evidence.operation, &evidence.evidence_id, &overflow);
+        return Ok(CallToolResult::error(vec![Content::text(error.to_body().to_string())]));
+    }
     Ok(CallToolResult::structured(val))
 }
 
@@ -1120,6 +1098,13 @@ fn handle_trace_javascript_semantics(
         .map_err(|error| McpError::internal_error(error.to_string(), None))?;
     let val = serde_json::to_value(&evidence)
         .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    let val = crate::schema_order::reorder_to_schema(val, &evidence.operation);
+    // REA delivers a result only if both of its wire representations fit the response budget;
+    // otherwise the (already retained) Evidence is reported as a recoverable constraint.
+    if let Err(overflow) = crate::delivery::check_budget(&val, crate::delivery::result_budget_bytes(), true) {
+        let error = crate::delivery::budget_error(&evidence.operation, &evidence.evidence_id, &overflow);
+        return Ok(CallToolResult::error(vec![Content::text(error.to_body().to_string())]));
+    }
     Ok(CallToolResult::structured(val))
 }
 
@@ -1167,6 +1152,13 @@ pub(crate) fn remember_evidence(session: &BinarySession, evidence: Evidence) -> 
         .map_err(|error| McpError::internal_error(error.to_string(), None))?;
     let val = serde_json::to_value(&evidence)
         .map_err(|error| McpError::internal_error(error.to_string(), None))?;
+    let val = crate::schema_order::reorder_to_schema(val, &evidence.operation);
+    // REA delivers a result only if both of its wire representations fit the response budget;
+    // otherwise the (already retained) Evidence is reported as a recoverable constraint.
+    if let Err(overflow) = crate::delivery::check_budget(&val, crate::delivery::result_budget_bytes(), true) {
+        let error = crate::delivery::budget_error(&evidence.operation, &evidence.evidence_id, &overflow);
+        return Ok(CallToolResult::error(vec![Content::text(error.to_body().to_string())]));
+    }
     Ok(CallToolResult::structured(val))
 }
 

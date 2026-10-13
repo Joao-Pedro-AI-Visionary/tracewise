@@ -19,6 +19,9 @@ base64 = { workspace = true }
 oxc_allocator = "=0.75.0"
 oxc_parser = "=0.75.0"
 oxc_ast = "=0.75.0"
+oxc_ast_visit = "=0.75.0"
+# Segmented stack for the recursive tree conversion (a chain tree can be as deep as the file is long).
+stacker = "=0.1.25"
 oxc_span = "=0.75.0"
 oxc_semantic = "=0.75.0"
 # 0.75.1 bumped MSRV to 1.86; keep the 1.85-compatible patch.
@@ -32,6 +35,9 @@ zip = { version = "0.6", default-features = false, features = ["deflate"] }
 walkdir = "2.5"
 tempfile = "3.14"
 unicode-normalization = "0.1.24"
+# HTML5 tree construction for REA's parse5-based script/base extraction (pinned: rcdom 0.39 needs html5ever 0.39).
+html5ever = "=0.39.0"
+markup5ever_rcdom = "=0.39.0"
 tokio = { workspace = true }
 reqwest = { workspace = true }
 url = { workspace = true }

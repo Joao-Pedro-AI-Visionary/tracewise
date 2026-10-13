@@ -1,0 +1,1 @@
+{"version":3,"file":"right-bundle.js","sources":["src/feature.ts"],"sourcesContent":["export const feature = \"after\";"],"names":[],"mappings":"AAAA"}

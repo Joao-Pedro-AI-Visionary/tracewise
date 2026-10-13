@@ -47,6 +47,17 @@ pub struct BundleSource {
     pub info_plist: PathBuf,
 }
 
+/// The server working directory, which stands in for REA package root. Empty when the
+/// operating system cannot report one (the schema requires a string).
+fn runtime_root_path() -> String {
+    std::env::current_dir().map(|p| p.to_string_lossy().into_owned()).unwrap_or_default()
+}
+
+/// Path of the running server executable (REA reports the script it was launched with).
+fn runtime_command_path() -> String {
+    std::env::current_exe().map(|p| p.to_string_lossy().into_owned()).unwrap_or_default()
+}
+
 #[derive(Clone)]
 pub struct BinarySession {
     pub ledger: Arc<Mutex<EvidenceLedger>>,
@@ -260,14 +271,14 @@ impl BinarySession {
                 "package": {
                     "name": "tracewise",
                     "version": "0.1.0",
-                    "root_path": "/workspace/tracewise",
+                    "root_path": runtime_root_path(),
                     "build_commit": Value::Null
                 },
                 "server": {
                     "name": "tracewise",
                     "version": "0.1.0",
                     "started_at": &self.started_at,
-                    "command_path": "/workspace/tracewise/target/debug/tracewise"
+                    "command_path": runtime_command_path()
                 },
                 "sdk": {
                     "server": "rmcp-0.11",
@@ -413,5 +424,20 @@ impl BinarySession {
 impl Default for BinarySession {
     fn default() -> Self {
         Self::new()
+    }
+}
+
+#[cfg(test)]
+mod identity_tests {
+    use super::*;
+
+    #[test]
+    fn status_reports_the_running_process_not_a_fixed_path() {
+        let status = BinarySession::new().status();
+        let identity = &status["server_identity"];
+        let exe = std::env::current_exe().unwrap();
+        let cwd = std::env::current_dir().unwrap();
+        assert_eq!(identity["server"]["command_path"], exe.to_string_lossy().as_ref());
+        assert_eq!(identity["package"]["root_path"], cwd.to_string_lossy().as_ref());
     }
 }

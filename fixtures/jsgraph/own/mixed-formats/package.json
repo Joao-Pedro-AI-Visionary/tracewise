@@ -1,0 +1,6 @@
+{
+  "name": "mixed-formats-fixture",
+  "version": "2.3.1",
+  "main": "src/main.cjs",
+  "renderer": "web/index.html"
+}

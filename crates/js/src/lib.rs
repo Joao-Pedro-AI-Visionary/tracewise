@@ -1,4 +1,5 @@
 mod application;
+pub mod jsgraph;
 pub mod electron;
 pub use electron::{
     capture_electron_scenario_tool, inspect_electron_page_tool, list_electron_targets_tool,
@@ -33,7 +34,7 @@ mod types;
 mod unicode;
 
 pub use application::{
-    analyze_javascript_application, compare_application_versions, compare_javascript_export_shapes,
+    analyze_javascript_application, analyze_javascript_application_cancellable, compare_application_versions, compare_javascript_export_shapes,
     trace_application_feature, trace_javascript_semantics,
 };
 pub use error::JsError;

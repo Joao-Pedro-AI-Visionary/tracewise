@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Call the ORIGINAL REA MCP server over stdio: rea_oracle.py <tool> '<json args>' [out.json]"""
 import json,subprocess,sys,os
-NODE="/tmp/node-v22.20.0-linux-x64/bin/node"
-p=subprocess.Popen([NODE,"/workspace/rea-map/src/scripts/rea.mjs","mcp"],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True,cwd="/workspace/rea-map/src")
+NODE=os.environ.get("REA_NODE","/tmp/node-v22.20.0-linux-x64/bin/node")
+REA_SRC=os.environ.get("REA_SRC","/workspace/rea-map/src")
+p=subprocess.Popen([NODE,os.path.join(REA_SRC,"scripts","rea.mjs"),"mcp"],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True,cwd=REA_SRC)
 i=0
 def rq(m,params=None,notify=False):
     global i

@@ -1,0 +1,1 @@
+{"version":3,"file":"left-bundle.js","sources":["src/feature.ts"],"sourcesContent":["export const feature = \"before\";"],"names":[],"mappings":"AAAA"}

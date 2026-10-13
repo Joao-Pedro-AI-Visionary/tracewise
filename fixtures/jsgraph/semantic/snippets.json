@@ -1,0 +1,3482 @@
+[
+ {
+  "name": "snippet_0000.mjs",
+  "source": "\n      const required = require(\"./addon.node#literal.node\");\n      module.exports = require(\"./addon.node#literal.node\");\n      import imported from \"./addon.node#literal.node\";\n      export { default } from \"./addon.node#literal.node\";\n    "
+ },
+ {
+  "name": "snippet_0001.js",
+  "source": "\n      new BrowserWindow({ webPreferences: { preload: \"./kept.js\", sandbox: true }, title: \"App\" });\n      utilityProcess.fork(\"./worker.js\", [], { serviceName: \"kept\", cwd: \"/app\" });\n    "
+ },
+ {
+  "name": "snippet_0002.js",
+  "source": "\n      jsx(\"audio\", { controls: true, preload: \"metadata\", src });\n      (0, React.createElement)(`video`, { preload: \"auto\" });\n      jsx(\"webview\", { preload: \"./guest.js\" });\n      const options = { preload: \"./preload.js\" };\n    "
+ },
+ {
+  "name": "snippet_0003.js",
+  "source": "\n      new BrowserWindow({ webPreferences: { preload: \"./maybe.js\" }, [key]: null });\n      utilityProcess.fork(\"./worker.js\", [], { serviceName: \"maybe\", [key]: null });\n    "
+ },
+ {
+  "name": "snippet_0004.js",
+  "source": "<script data-src=\"decoy.js\"></script>"
+ },
+ {
+  "name": "snippet_0005.js",
+  "source": "<script x:src=\"decoy.js\"></script>"
+ },
+ {
+  "name": "snippet_0006.js",
+  "source": "<script title='src=\"decoy.js\"'></script>"
+ },
+ {
+  "name": "snippet_0007.js",
+  "source": "<script title=\">\" src=\"actual.js\"></script>"
+ },
+ {
+  "name": "snippet_0008.js",
+  "source": "<SCRIPT SRC=\"actual.js\"></SCRIPT>"
+ },
+ {
+  "name": "snippet_0009.js",
+  "source": "<script src='actual.js'></script>"
+ },
+ {
+  "name": "snippet_0010.js",
+  "source": "<script data-src=\"decoy.js\" src=\"actual.js\"></script>"
+ },
+ {
+  "name": "snippet_0011.js",
+  "source": "<script src=\"actual.js\" src=\"decoy.js\"></script>"
+ },
+ {
+  "name": "snippet_0012.js",
+  "source": "<script src=\"\" src=\"decoy.js\"></script>"
+ },
+ {
+  "name": "snippet_0013.js",
+  "source": "<script src=\"actual&#46;js\"></script>"
+ },
+ {
+  "name": "snippet_0014.js",
+  "source": "<!-- <script src=\"decoy.js\"></script> -->"
+ },
+ {
+  "name": "snippet_0015.js",
+  "source": "<textarea><script src=\"decoy.js\"></script></textarea>"
+ },
+ {
+  "name": "snippet_0016.js",
+  "source": "<style><script src=\"decoy.js\"></script></style>"
+ },
+ {
+  "name": "snippet_0017.js",
+  "source": "<svg><script src=\"decoy.js\"></script></svg>"
+ },
+ {
+  "name": "snippet_0018.js",
+  "source": "<svg><foreignObject><script src=\"actual.js\"></script></foreignObject></svg>"
+ },
+ {
+  "name": "snippet_0019.js",
+  "source": "<script type=\"application/json\" src=\"actual.js\"></script>"
+ },
+ {
+  "name": "snippet_0020.js",
+  "source": "<!-- <base href=\"decoy/\"> --><base title=\">\" href=\"actual/\">"
+ },
+ {
+  "name": "snippet_0021.js",
+  "source": "contextBridge.exposeInMainWorld('desktopApi', { openProject() {}, closeProject() {} });"
+ },
+ {
+  "name": "snippet_0022.mjs",
+  "source": "\n    import fs from \"./fs.js\";\n    import { constants as constantsFs } from \"node:fs\";\n    fs.createReadStream(\"config.json\");\n    constantsFs.createReadStream(\"config.json\");\n    function run(fs) { fs.createReadStream(\"config.json\"); }\n  "
+ },
+ {
+  "name": "snippet_0023.js",
+  "source": "\n      const prefix = \"rea\";\n      function render(value, { mode }) {\n        return prefix + value + mode;\n      }\n      const alias = render;\n      const result = alias(input, { mode: \"fast\" });\n    "
+ },
+ {
+  "name": "snippet_0024.mjs",
+  "source": "export function result() { \n      const prefix = \"rea\";\n      function render(value, { mode }) {\n        return prefix + value + mode;\n      }\n      const alias = render;\n      const result = alias(input, { mode: \"fast\" });\n     }"
+ },
+ {
+  "name": "snippet_0025.js",
+  "source": "\n      async function run(value) {\n        const base = Promise.resolve(value);\n        const chained = base.then(work).finally(cleanup);\n        await chained;\n        Promise.resolve(value).then(work);\n        return Promise.all([base, Promise.resolve(value)]);\n      }\n      const settled = Promise.allSettled([Promise.resolve(1)]);\n    "
+ },
+ {
+  "name": "snippet_0026.mjs",
+  "source": "export function result() { \n      async function run(value) {\n        const base = Promise.resolve(value);\n        const chained = base.then(work).finally(cleanup);\n        await chained;\n        Promise.resolve(value).then(work);\n        return Promise.all([base, Promise.resolve(value)]);\n      }\n      const settled = Promise.allSettled([Promise.resolve(1)]);\n     }"
+ },
+ {
+  "name": "snippet_0027.js",
+  "source": "\n      function run(Promise) {\n        return Promise.resolve(1).then(work);\n      }\n    "
+ },
+ {
+  "name": "snippet_0028.mjs",
+  "source": "export function result() { \n      function run(Promise) {\n        return Promise.resolve(1).then(work);\n      }\n     }"
+ },
+ {
+  "name": "snippet_0029.js",
+  "source": "\n      function calculate(value) {\n        const result = value + 1;\n        return result;\n      }\n    "
+ },
+ {
+  "name": "snippet_0030.mjs",
+  "source": "export function result() { \n      function calculate(value) {\n        const result = value + 1;\n        return result;\n      }\n     }"
+ },
+ {
+  "name": "snippet_0031.js",
+  "source": "function renamed(input){const output=input+1;return output}"
+ },
+ {
+  "name": "snippet_0032.mjs",
+  "source": "export function result() { function renamed(input){const output=input+1;return output} }"
+ },
+ {
+  "name": "snippet_0033.js",
+  "source": "function renamed(input){const output=input+2;return output}"
+ },
+ {
+  "name": "snippet_0034.mjs",
+  "source": "export function result() { function renamed(input){const output=input+2;return output} }"
+ },
+ {
+  "name": "snippet_0035.js",
+  "source": "\n      function first() {}\n      function second(one, two) {}\n      function ordered() { first(); second(1, 2); }\n      function timerOwner() { setTimeout(work, 10); }\n      function networkOwner() { fetch('/data'); }\n      function noEffects() { return 1; }\n    "
+ },
+ {
+  "name": "snippet_0036.mjs",
+  "source": "export function result() { \n      function first() {}\n      function second(one, two) {}\n      function ordered() { first(); second(1, 2); }\n      function timerOwner() { setTimeout(work, 10); }\n      function networkOwner() { fetch('/data'); }\n      function noEffects() { return 1; }\n     }"
+ },
+ {
+  "name": "snippet_0037.js",
+  "source": "\n      function first() {}\n      function second(one, two) {}\n      function ordered() { second(1, 2); first(); }\n      function timerOwner() { setTimeout(work, 10); }\n      function networkOwner() { fetch('/data'); }\n      function noEffects() { return 1; }\n    "
+ },
+ {
+  "name": "snippet_0038.mjs",
+  "source": "export function result() { \n      function first() {}\n      function second(one, two) {}\n      function ordered() { second(1, 2); first(); }\n      function timerOwner() { setTimeout(work, 10); }\n      function networkOwner() { fetch('/data'); }\n      function noEffects() { return 1; }\n     }"
+ },
+ {
+  "name": "snippet_0039.js",
+  "source": "\n      function left(value) { return value; }\n      function right(value) { return value; }\n      const selected = chooseLeft ? left : right;\n      selected(input);\n      receiver[key](input);\n      external(input);\n    "
+ },
+ {
+  "name": "snippet_0040.mjs",
+  "source": "export function result() { \n      function left(value) { return value; }\n      function right(value) { return value; }\n      const selected = chooseLeft ? left : right;\n      selected(input);\n      receiver[key](input);\n      external(input);\n     }"
+ },
+ {
+  "name": "snippet_0041.js",
+  "source": "\n      const source = { token: \"TOKEN\", count: 1 };\n      const { token } = source;\n      const copy = { ...source };\n      source.count = 2;\n      const read = source.token;\n    "
+ },
+ {
+  "name": "snippet_0042.js",
+  "source": "\n      const source = { token: \"TOKEN\" };\n      const key = getKey();\n      const { [key]: dynamic } = source;\n      const { [\"token\"]: literal } = source;\n      const { token: renamed } = source;\n      const { token } = source;\n      const { [1]: numeric } = source;\n    "
+ },
+ {
+  "name": "snippet_0043.js",
+  "source": "\n      function target(first, second, third) { return third; }\n      target(one, ...rest, three);\n    "
+ },
+ {
+  "name": "snippet_0044.mjs",
+  "source": "export function result() { \n      function target(first, second, third) { return third; }\n      target(one, ...rest, three);\n     }"
+ },
+ {
+  "name": "snippet_0045.js",
+  "source": "\n        const captured = 1;\n        function target(value, other) { return value + other + captured; }\n        target(1, 2);\n        target(3, 4);\n        object[first];\n        object[second];\n      "
+ },
+ {
+  "name": "snippet_0046.mjs",
+  "source": "export function result() { \n        const captured = 1;\n        function target(value, other) { return value + other + captured; }\n        target(1, 2);\n        target(3, 4);\n        object[first];\n        object[second];\n       }"
+ },
+ {
+  "name": "snippet_0047.mjs",
+  "source": "\n      export default function parseMarkdown(value) {\n        if (value.startsWith(\"# \"))\n          return { type: \"heading\", depth: 1, text: value.slice(2) };\n        function nested() { return { type: \"nested\" }; }\n        const arrow = () => ({ type: \"arrow\" });\n        void nested; void arrow;\n        return { type: \"paragraph\", text: value.replaceAll(\"x\", \"y\") };\n      }\n    "
+ },
+ {
+  "name": "snippet_0048.mjs",
+  "source": "export function result() { \n      export default function parseMarkdown(value) {\n        if (value.startsWith(\"# \"))\n          return { type: \"heading\", depth: 1, text: value.slice(2) };\n        function nested() { return { type: \"nested\" }; }\n        const arrow = () => ({ type: \"arrow\" });\n        void nested; void arrow;\n        return { type: \"paragraph\", text: value.replaceAll(\"x\", \"y\") };\n      }\n     }"
+ },
+ {
+  "name": "snippet_0049.js",
+  "source": "\n      function run() {\n        const direct = produce();\n        const { field } = unpack();\n        const nested = outer(inner());\n        return direct;\n      }\n    "
+ },
+ {
+  "name": "snippet_0050.mjs",
+  "source": "export function result() { \n      function run() {\n        const direct = produce();\n        const { field } = unpack();\n        const nested = outer(inner());\n        return direct;\n      }\n     }"
+ },
+ {
+  "name": "snippet_0051.js",
+  "source": "\n        const source = { count: 1 };\n        source.count "
+ },
+ {
+  "name": "snippet_0052.js",
+  "source": "\n      const source = { count: 1 };\n      source.count = 2;\n      const value = source.count;\n    "
+ },
+ {
+  "name": "snippet_0053.js",
+  "source": "\n      let count = 1;\n      count += 2;\n    "
+ },
+ {
+  "name": "snippet_0054.js",
+  "source": "\n      const spread = () => ({ type: \"spread\", ...dynamic });\n      const computed = () => ({ type: \"computed\", [key]: 1 });\n      function noReturn() { throw new Error(\"stop\"); }\n      function emptyReturn() { return; }\n    "
+ },
+ {
+  "name": "snippet_0055.mjs",
+  "source": "export function result() { \n      const spread = () => ({ type: \"spread\", ...dynamic });\n      const computed = () => ({ type: \"computed\", [key]: 1 });\n      function noReturn() { throw new Error(\"stop\"); }\n      function emptyReturn() { return; }\n     }"
+ },
+ {
+  "name": "snippet_0056.js",
+  "source": "\n      let current = \"first\";\n      current = \"second\";\n      const left = right;\n      const right = left;\n    "
+ },
+ {
+  "name": "snippet_0057.js",
+  "source": "\n      const key = getKey();\n      const dynamicMember = require(\"electron\")[key];\n      const { [key]: dynamicBinding } = require(\"electron\");\n    "
+ },
+ {
+  "name": "snippet_0058.js",
+  "source": "\n        const retained = \"yes\";\n        const omitted = \"no\";\n        retained;\n        function nested(value) { return retained + value; }\n      "
+ },
+ {
+  "name": "snippet_0059.mjs",
+  "source": "export function result() { \n        const retained = \"yes\";\n        const omitted = \"no\";\n        retained;\n        function nested(value) { return retained + value; }\n       }"
+ },
+ {
+  "name": "snippet_0060.js",
+  "source": "\n      const list = [\"zero\", , \"two\"];\n      const [first, second, third] = list;\n    "
+ },
+ {
+  "name": "snippet_0061.js",
+  "source": "\n      const list = [\"zero\", \"one\"];\n      const numeric = list[1];\n      const quoted = list[\"1\"];\n      const leadingZero = list[\"01\"];\n      const negative = list[-1];\n    "
+ },
+ {
+  "name": "snippet_0062.js",
+  "source": "\n      const values = [\"first\", ...unknownValues, \"last\"];\n      const [first, second] = values;\n    "
+ },
+ {
+  "name": "snippet_0063.js",
+  "source": "\n      const duplicate = { key: \"old\", key: \"new\" };\n      const selected = duplicate.key;\n      const later = { key: \"old\", ...unknownObject, key: \"final\" };\n      const final = later.key;\n    "
+ },
+ {
+  "name": "snippet_0064.js",
+  "source": "\n      const spread = { key: \"old\", ...unknownObject };\n      const dynamic = { key: \"old\", [unknownKey]: \"new\" };\n      const method = { key: \"old\", key() { return \"new\"; } };\n      const spreadValue = spread.key;\n      const dynamicValue = dynamic.key;\n      const methodValue = method.key;\n    "
+ },
+ {
+  "name": "snippet_0065.mjs",
+  "source": "export function result() { \n      const spread = { key: \"old\", ...unknownObject };\n      const dynamic = { key: \"old\", [unknownKey]: \"new\" };\n      const method = { key: \"old\", key() { return \"new\"; } };\n      const spreadValue = spread.key;\n      const dynamicValue = dynamic.key;\n      const methodValue = method.key;\n     }"
+ },
+ {
+  "name": "snippet_0066.js",
+  "source": "\n      const object = { [\"key\"]: \"value\", __proto__: { prototype: true } };\n      const selected = object.key;\n      const prototype = object.__proto__;\n    "
+ },
+ {
+  "name": "snippet_0067.js",
+  "source": "\n    const __proto__ = \"own\";\n    const object = { __proto__ };\n    const selected = object.__proto__;\n  "
+ },
+ {
+  "name": "snippet_0068.js",
+  "source": "const answer = condition ? 1 : +\"invalid\";"
+ },
+ {
+  "name": "snippet_0069.js",
+  "source": "let value = 1; value++; const observed = value;"
+ },
+ {
+  "name": "snippet_0070.js",
+  "source": "let value = 1; --value; const observed = value;"
+ },
+ {
+  "name": "snippet_0071.js",
+  "source": "let value = \"old\"; [value] = [\"new\"]; const observed = value;"
+ },
+ {
+  "name": "snippet_0072.js",
+  "source": "let value = \"old\"; ({key: value} = {key: \"new\"}); const observed = value;"
+ },
+ {
+  "name": "snippet_0073.js",
+  "source": "let value = \"old\"; for (value of [\"new\"]) {} const observed = value;"
+ },
+ {
+  "name": "snippet_0074.js",
+  "source": "let value = \"old\"; for (value in {new: true}) {} const observed = value;"
+ },
+ {
+  "name": "snippet_0075.js",
+  "source": "\n      const key = \"stable\";\n      const owner = \"stable\";\n      let target = \"old\";\n      ({key: target} = {key: \"new\"});\n      ({owner: object.slot} = {owner: \"new\"});\n      const preservedKey = key;\n      const preservedOwner = owner;\n    "
+ },
+ {
+  "name": "snippet_0076.js",
+  "source": "function launch(mode = \"safe\") { return mode; }"
+ },
+ {
+  "name": "snippet_0077.mjs",
+  "source": "export function result() { function launch(mode = \"safe\") { return mode; } }"
+ },
+ {
+  "name": "snippet_0078.js",
+  "source": "function launch({ mode } = { mode: \"safe\" }) { return mode; }"
+ },
+ {
+  "name": "snippet_0079.mjs",
+  "source": "export function result() { function launch({ mode } = { mode: \"safe\" }) { return mode; } }"
+ },
+ {
+  "name": "snippet_0080.js",
+  "source": "function launch([mode] = [\"safe\"]) { return mode; }"
+ },
+ {
+  "name": "snippet_0081.mjs",
+  "source": "export function result() { function launch([mode] = [\"safe\"]) { return mode; } }"
+ },
+ {
+  "name": "snippet_0082.js",
+  "source": "\n      const { mode: retained = \"fallback\" } = { mode: \"actual\" };\n      function caught() {\n        try { risky(); } catch ({ message = \"fallback\" }) { return message; }\n      }\n    "
+ },
+ {
+  "name": "snippet_0083.mjs",
+  "source": "export function result() { \n      const { mode: retained = \"fallback\" } = { mode: \"actual\" };\n      function caught() {\n        try { risky(); } catch ({ message = \"fallback\" }) { return message; }\n      }\n     }"
+ },
+ {
+  "name": "snippet_0084.js",
+  "source": "const routes = {'': 'HOME'}; const root = routes[''];"
+ },
+ {
+  "name": "snippet_0085.js",
+  "source": "const routes = {['']: 'HOME'}; const root = routes[''];"
+ },
+ {
+  "name": "snippet_0086.js",
+  "source": "const routes = {'': 'HOME'}; const {'': root} = routes;"
+ },
+ {
+  "name": "snippet_0087.js",
+  "source": "const routes = {'': 'HOME'}; const {['']: root} = routes;"
+ },
+ {
+  "name": "snippet_0088.js",
+  "source": "const routes = {home: 'HOME'}; const root = routes.home;"
+ },
+ {
+  "name": "snippet_0089.js",
+  "source": "const routes = {'': 'HOME'}; const root = routes[key];"
+ },
+ {
+  "name": "snippet_0090.js",
+  "source": "\n    const target = { ['']() { return 42; } };\n    class Holder { \"\"() { return 2; } }\n    const empty = process.env[''];\n    const dynamic = process.env[key];\n  "
+ },
+ {
+  "name": "snippet_0091.mjs",
+  "source": "export function result() { \n    const target = { ['']() { return 42; } };\n    class Holder { \"\"() { return 2; } }\n    const empty = process.env[''];\n    const dynamic = process.env[key];\n   }"
+ },
+ {
+  "name": "snippet_0092.js",
+  "source": "\n    const { '': fromPattern } = require(\"./table.js\");\n    const fromMember = require(\"./table.js\")[''];\n    const { [key]: dynamicPattern } = require(\"./table.js\");\n    const dynamicMember = require(\"./table.js\")[key];\n    module.exports.root = require(\"./table.js\")[''];\n  "
+ },
+ {
+  "name": "snippet_0093.js",
+  "source": "\n    fetch(\"https://example.test\", { '': value, [key]: 1, body: \"x\" });\n  "
+ },
+ {
+  "name": "snippet_0094.js",
+  "source": "{execute}"
+ },
+ {
+  "name": "snippet_0095.js",
+  "source": "execute = () => 'DEFAULT'"
+ },
+ {
+  "name": "snippet_0096.js",
+  "source": "const task = function execute(depth) {\n    return depth === 0 ? 'DONE' : execute(depth - 1);\n  };\n  execute();"
+ },
+ {
+  "name": "snippet_0097.mjs",
+  "source": "export function result() { const task = function execute(depth) {\n    return depth === 0 ? 'DONE' : execute(depth - 1);\n  };\n  execute(); }"
+ },
+ {
+  "name": "snippet_0098.js",
+  "source": "const task = function execute(value = execute()) { return value; };"
+ },
+ {
+  "name": "snippet_0099.mjs",
+  "source": "export function result() { const task = function execute(value = execute()) { return value; }; }"
+ },
+ {
+  "name": "snippet_0100.js",
+  "source": "const value = require(\"./addon.node\")"
+ },
+ {
+  "name": "snippet_0101.js",
+  "source": "\n    module.exports.result = require(\"./dependency.js\")"
+ },
+ {
+  "name": "snippet_0102.js",
+  "source": "[key].last;\n  "
+ },
+ {
+  "name": "snippet_0103.js",
+  "source": "\n    const root = { untouched: \"retained\" };\n    root"
+ },
+ {
+  "name": "snippet_0104.js",
+  "source": "root.first.last()"
+ },
+ {
+  "name": "snippet_0105.js",
+  "source": "root[\"\"].last()"
+ },
+ {
+  "name": "snippet_0106.js",
+  "source": "(\"\")[\"\"].last()"
+ },
+ {
+  "name": "snippet_0107.js",
+  "source": "root[0].last()"
+ },
+ {
+  "name": "snippet_0108.js",
+  "source": "root[key].last()"
+ },
+ {
+  "name": "snippet_0109.js",
+  "source": "root?.first.last()"
+ },
+ {
+  "name": "snippet_0110.js",
+  "source": "const shared = { mode: \"initial\" }; const options = { [key]: shared }; options.foo.mode = \"updated\"; return shared.mode;"
+ },
+ {
+  "name": "snippet_0111.mjs",
+  "source": "export function result() { const shared = { mode: \"initial\" }; const options = { [key]: shared }; options.foo.mode = \"updated\"; return shared.mode; }"
+ },
+ {
+  "name": "snippet_0112.js",
+  "source": "const shared = { mode: \"initial\" }; const original = [shared]; const copy = [...original]; copy[0].mode = \"updated\"; return shared.mode;"
+ },
+ {
+  "name": "snippet_0113.mjs",
+  "source": "export function result() { const shared = { mode: \"initial\" }; const original = [shared]; const copy = [...original]; copy[0].mode = \"updated\"; return shared.mode; }"
+ },
+ {
+  "name": "snippet_0114.js",
+  "source": "const original = { nested: { mode: \"initial\" } }; const copy = { ...original }; copy.nested.mode = \"updated\"; return original.nested.mode;"
+ },
+ {
+  "name": "snippet_0115.mjs",
+  "source": "export function result() { const original = { nested: { mode: \"initial\" } }; const copy = { ...original }; copy.nested.mode = \"updated\"; return original.nested.mode; }"
+ },
+ {
+  "name": "snippet_0116.js",
+  "source": "const shared = { mode: \"initial\" }; const options = flag ? shared : { mode: \"other\" }; options.mode = \"updated\"; return shared.mode;"
+ },
+ {
+  "name": "snippet_0117.mjs",
+  "source": "export function result() { const shared = { mode: \"initial\" }; const options = flag ? shared : { mode: \"other\" }; options.mode = \"updated\"; return shared.mode; }"
+ },
+ {
+  "name": "snippet_0118.js",
+  "source": "const child = { mode: \"initial\" }; const options = { layer: { child } }; options.layer.child.mode = \"updated\"; return child.mode;"
+ },
+ {
+  "name": "snippet_0119.mjs",
+  "source": "export function result() { const child = { mode: \"initial\" }; const options = { layer: { child } }; options.layer.child.mode = \"updated\"; return child.mode; }"
+ },
+ {
+  "name": "snippet_0120.js",
+  "source": "const options = { mode: \"initial\" }; options.mode = \"updated\"; return options.mode;"
+ },
+ {
+  "name": "snippet_0121.mjs",
+  "source": "export function result() { const options = { mode: \"initial\" }; options.mode = \"updated\"; return options.mode; }"
+ },
+ {
+  "name": "snippet_0122.js",
+  "source": "const options = { count: 1 }; options.count += 1; return options.count;"
+ },
+ {
+  "name": "snippet_0123.mjs",
+  "source": "export function result() { const options = { count: 1 }; options.count += 1; return options.count; }"
+ },
+ {
+  "name": "snippet_0124.js",
+  "source": "const options = { count: 1 }; options.count++; return options.count;"
+ },
+ {
+  "name": "snippet_0125.mjs",
+  "source": "export function result() { const options = { count: 1 }; options.count++; return options.count; }"
+ },
+ {
+  "name": "snippet_0126.js",
+  "source": "const options = { mode: \"initial\" }; delete options.mode; return options.mode;"
+ },
+ {
+  "name": "snippet_0127.mjs",
+  "source": "export function result() { const options = { mode: \"initial\" }; delete options.mode; return options.mode; }"
+ },
+ {
+  "name": "snippet_0128.js",
+  "source": "const options = [\"initial\"]; options[0] = \"updated\"; return options[0];"
+ },
+ {
+  "name": "snippet_0129.mjs",
+  "source": "export function result() { const options = [\"initial\"]; options[0] = \"updated\"; return options[0]; }"
+ },
+ {
+  "name": "snippet_0130.js",
+  "source": "const options = { nested: { mode: \"initial\" } }; options.nested.mode = \"updated\"; return options.nested.mode;"
+ },
+ {
+  "name": "snippet_0131.mjs",
+  "source": "export function result() { const options = { nested: { mode: \"initial\" } }; options.nested.mode = \"updated\"; return options.nested.mode; }"
+ },
+ {
+  "name": "snippet_0132.js",
+  "source": "const options = { mode: \"initial\" }; const alias = options; alias.mode = \"updated\"; return options.mode;"
+ },
+ {
+  "name": "snippet_0133.mjs",
+  "source": "export function result() { const options = { mode: \"initial\" }; const alias = options; alias.mode = \"updated\"; return options.mode; }"
+ },
+ {
+  "name": "snippet_0134.js",
+  "source": "const options = { nested: { mode: \"initial\" } }; const { nested } = options; nested.mode = \"updated\"; return options.nested.mode;"
+ },
+ {
+  "name": "snippet_0135.mjs",
+  "source": "export function result() { const options = { nested: { mode: \"initial\" } }; const { nested } = options; nested.mode = \"updated\"; return options.nested.mode; }"
+ },
+ {
+  "name": "snippet_0136.js",
+  "source": "const nested = { mode: \"initial\" }; const options = { nested }; options.nested.mode = \"updated\"; return nested.mode;"
+ },
+ {
+  "name": "snippet_0137.mjs",
+  "source": "export function result() { const nested = { mode: \"initial\" }; const options = { nested }; options.nested.mode = \"updated\"; return nested.mode; }"
+ },
+ {
+  "name": "snippet_0138.js",
+  "source": "const options = { mode: \"initial\" }; [options.mode] = [\"updated\"]; return options.mode;"
+ },
+ {
+  "name": "snippet_0139.mjs",
+  "source": "export function result() { const options = { mode: \"initial\" }; [options.mode] = [\"updated\"]; return options.mode; }"
+ },
+ {
+  "name": "snippet_0140.js",
+  "source": "const options = { mode: \"initial\" }; for (options.mode of [\"updated\"]) {} return options.mode;"
+ },
+ {
+  "name": "snippet_0141.mjs",
+  "source": "export function result() { const options = { mode: \"initial\" }; for (options.mode of [\"updated\"]) {} return options.mode; }"
+ },
+ {
+  "name": "snippet_0142.js",
+  "source": "const options = { mode: \"initial\" }; const key = getKey(); options[key] = \"updated\"; return options.mode;"
+ },
+ {
+  "name": "snippet_0143.mjs",
+  "source": "export function result() { const options = { mode: \"initial\" }; const key = getKey(); options[key] = \"updated\"; return options.mode; }"
+ },
+ {
+  "name": "snippet_0144.js",
+  "source": "\n      const options = { mode: \"initial\" };\n      { const options = { mode: \"inner\" }; options.mode = \"updated\"; }\n      return options.mode;\n    "
+ },
+ {
+  "name": "snippet_0145.mjs",
+  "source": "export function result() { \n      const options = { mode: \"initial\" };\n      { const options = { mode: \"inner\" }; options.mode = \"updated\"; }\n      return options.mode;\n     }"
+ },
+ {
+  "name": "snippet_0146.js",
+  "source": "\n      const original = { mode: \"initial\" };\n      const copy = { ...original };\n      copy.mode = \"updated\";\n      return original.mode;\n    "
+ },
+ {
+  "name": "snippet_0147.mjs",
+  "source": "export function result() { \n      const original = { mode: \"initial\" };\n      const copy = { ...original };\n      copy.mode = \"updated\";\n      return original.mode;\n     }"
+ },
+ {
+  "name": "snippet_0148.js",
+  "source": "\n      const options = flag ? { mode: \"initial\" } : { mode: \"other\" };\n      options.mode = \"updated\";\n      return options.mode;\n    "
+ },
+ {
+  "name": "snippet_0149.mjs",
+  "source": "export function result() { \n      const options = flag ? { mode: \"initial\" } : { mode: \"other\" };\n      options.mode = \"updated\";\n      return options.mode;\n     }"
+ },
+ {
+  "name": "snippet_0150.js",
+  "source": "\n      const mode = \"initial\";\n      const options = { mode };\n      options.mode = \"updated\";\n      return mode;\n    "
+ },
+ {
+  "name": "snippet_0151.mjs",
+  "source": "export function result() { \n      const mode = \"initial\";\n      const options = { mode };\n      options.mode = \"updated\";\n      return mode;\n     }"
+ },
+ {
+  "name": "snippet_0152.js",
+  "source": "\n        const shared = { mode: \"initial\" };\n        let alias = shared;\n        alias = { mode: \"other\" };\n        alias.mode = \"updated\";\n        return shared.mode;\n      "
+ },
+ {
+  "name": "snippet_0153.mjs",
+  "source": "export function result() { \n        const shared = { mode: \"initial\" };\n        let alias = shared;\n        alias = { mode: \"other\" };\n        alias.mode = \"updated\";\n        return shared.mode;\n       }"
+ },
+ {
+  "name": "snippet_0154.js",
+  "source": "if (flag) alias = { mode: \"other\" }; alias.mode = \"updated\";"
+ },
+ {
+  "name": "snippet_0155.js",
+  "source": "flag && (alias = { mode: \"other\" }); alias.mode = \"updated\";"
+ },
+ {
+  "name": "snippet_0156.js",
+  "source": "flag ||= (alias = { mode: \"other\" }); alias.mode = \"updated\";"
+ },
+ {
+  "name": "snippet_0157.js",
+  "source": "alias ||= { mode: \"other\" }; alias.mode = \"updated\";"
+ },
+ {
+  "name": "snippet_0158.js",
+  "source": "alias ??= { mode: \"other\" }; alias.mode = \"updated\";"
+ },
+ {
+  "name": "snippet_0159.js",
+  "source": "\n        const shared = { mode: \"initial\" };\n        let alias = shared;\n        "
+ },
+ {
+  "name": "snippet_0160.js",
+  "source": "\n        return shared.mode;\n      "
+ },
+ {
+  "name": "snippet_0161.mjs",
+  "source": "export function result() { \n        return shared.mode;\n       }"
+ },
+ {
+  "name": "snippet_0162.js",
+  "source": "\n        const shared = { mode: \"initial\" };\n        let alias = shared;\n        alias = { mode: \"other\" };\n        if (flag) alias.mode = \"updated\";\n        return shared.mode;\n      "
+ },
+ {
+  "name": "snippet_0163.mjs",
+  "source": "export function result() { \n        const shared = { mode: \"initial\" };\n        let alias = shared;\n        alias = { mode: \"other\" };\n        if (flag) alias.mode = \"updated\";\n        return shared.mode;\n       }"
+ },
+ {
+  "name": "snippet_0164.js",
+  "source": "\n        let value;\n        value &&= 2;\n        return value;\n      "
+ },
+ {
+  "name": "snippet_0165.mjs",
+  "source": "export function result() { \n        let value;\n        value &&= 2;\n        return value;\n       }"
+ },
+ {
+  "name": "snippet_0166.js",
+  "source": "\n        const shared = { mode: \"initial\" };\n        let alias = shared;\n        alias &&= { mode: \"other\" };\n        alias.mode = \"updated\";\n        return shared.mode;\n      "
+ },
+ {
+  "name": "snippet_0167.mjs",
+  "source": "export function result() { \n        const shared = { mode: \"initial\" };\n        let alias = shared;\n        alias &&= { mode: \"other\" };\n        alias.mode = \"updated\";\n        return shared.mode;\n       }"
+ },
+ {
+  "name": "snippet_0168.js",
+  "source": "\n        const shared = { mode: \"initial\" };\n        const other = { mode: \"other\" };\n        let alias = shared;\n        alias &&= other;\n        alias.mode = \"updated\";\n        return other.mode;\n      "
+ },
+ {
+  "name": "snippet_0169.mjs",
+  "source": "export function result() { \n        const shared = { mode: \"initial\" };\n        const other = { mode: \"other\" };\n        let alias = shared;\n        alias &&= other;\n        alias.mode = \"updated\";\n        return other.mode;\n       }"
+ },
+ {
+  "name": "snippet_0170.js",
+  "source": "const options = { mode: [\"initial\"] }; return options.mode[0];"
+ },
+ {
+  "name": "snippet_0171.mjs",
+  "source": "export function result() { const options = { mode: [\"initial\"] }; return options.mode[0]; }"
+ },
+ {
+  "name": "snippet_0172.js",
+  "source": "\n      const source = { kind: \"record\", child: { value: 1 } };\n      const copy = { ...source };\n      mutate(copy);\n      return source;\n    "
+ },
+ {
+  "name": "snippet_0173.mjs",
+  "source": "export function result() { \n      const source = { kind: \"record\", child: { value: 1 } };\n      const copy = { ...source };\n      mutate(copy);\n      return source;\n     }"
+ },
+ {
+  "name": "snippet_0174.js",
+  "source": "\n      const child = { value: 1 };\n      const source = [child, \"TOKEN\"];\n      const copy = [...source];\n      mutate(copy);\n      return { token: source[1], value: child.value };\n    "
+ },
+ {
+  "name": "snippet_0175.mjs",
+  "source": "export function result() { \n      const child = { value: 1 };\n      const source = [child, \"TOKEN\"];\n      const copy = [...source];\n      mutate(copy);\n      return { token: source[1], value: child.value };\n     }"
+ },
+ {
+  "name": "snippet_0176.js",
+  "source": "const values = [\"TOKEN\"]; consume(...values); return values[0];"
+ },
+ {
+  "name": "snippet_0177.mjs",
+  "source": "export function result() { const values = [\"TOKEN\"]; consume(...values); return values[0]; }"
+ },
+ {
+  "name": "snippet_0178.js",
+  "source": "\n      const namespace = { token: \"TOKEN\", Factory: class {} };\n      new namespace.Factory();\n      return namespace.token;\n    "
+ },
+ {
+  "name": "snippet_0179.mjs",
+  "source": "export function result() { \n      const namespace = { token: \"TOKEN\", Factory: class {} };\n      new namespace.Factory();\n      return namespace.token;\n     }"
+ },
+ {
+  "name": "snippet_0180.js",
+  "source": "\n      const source = { value: 1 };\n      function observe() { consume(copy); }\n      mutate(source);\n      const copy = source.value;\n      return copy;\n    "
+ },
+ {
+  "name": "snippet_0181.mjs",
+  "source": "export function result() { \n      const source = { value: 1 };\n      function observe() { consume(copy); }\n      mutate(source);\n      const copy = source.value;\n      return copy;\n     }"
+ },
+ {
+  "name": "snippet_0182.js",
+  "source": "mutate(source as unknown);"
+ },
+ {
+  "name": "snippet_0183.js",
+  "source": "mutate((0, source));"
+ },
+ {
+  "name": "snippet_0184.js",
+  "source": "let alias; mutate(alias = source);"
+ },
+ {
+  "name": "snippet_0185.js",
+  "source": "mutate(flag ? source : {});"
+ },
+ {
+  "name": "snippet_0186.js",
+  "source": "let alias = source; mutate(alias ||= {});"
+ },
+ {
+  "name": "snippet_0187.js",
+  "source": "let alias = source; mutate(alias ??= {});"
+ },
+ {
+  "name": "snippet_0188.js",
+  "source": "\n      const source = { value: 1 };\n      "
+ },
+ {
+  "name": "snippet_0189.js",
+  "source": "\n      return source.value;\n    "
+ },
+ {
+  "name": "snippet_0190.mjs",
+  "source": "export function result() { \n      return source.value;\n     }"
+ },
+ {
+  "name": "snippet_0191.mjs",
+  "source": "export async function result() {\n      const source = { value: 1 };\n      mutate(await source);\n      return source.value;\n    }"
+ },
+ {
+  "name": "snippet_0192.mjs",
+  "source": "export function result() { export async function result() {\n      const source = { value: 1 };\n      mutate(await source);\n      return source.value;\n    } }"
+ },
+ {
+  "name": "snippet_0193.js",
+  "source": "const { ...copy } = source; mutate(copy);"
+ },
+ {
+  "name": "snippet_0194.js",
+  "source": "const { ...copy } = source; mutate(copy.child);"
+ },
+ {
+  "name": "snippet_0195.js",
+  "source": "const [ ...copy ] = [source.child]; mutate(copy);"
+ },
+ {
+  "name": "snippet_0196.js",
+  "source": "const [ first, ...copy ] = [null, source.child]; mutate(copy[0]);"
+ },
+ {
+  "name": "snippet_0197.js",
+  "source": "const [ ...[copy] ] = [source.child]; mutate(copy);"
+ },
+ {
+  "name": "snippet_0198.js",
+  "source": "const [ ...[copy = source.child] ] = []; mutate(copy);"
+ },
+ {
+  "name": "snippet_0199.js",
+  "source": "const { value = source.child } = {}; mutate(value);"
+ },
+ {
+  "name": "snippet_0200.js",
+  "source": "const [ value = source.child ] = []; mutate(value);"
+ },
+ {
+  "name": "snippet_0201.js",
+  "source": "\n      const source = { kind: \"record\", child: { value: 1 } };\n      "
+ },
+ {
+  "name": "snippet_0202.js",
+  "source": "\n      return source;\n    "
+ },
+ {
+  "name": "snippet_0203.mjs",
+  "source": "export function result() { \n      return source;\n     }"
+ },
+ {
+  "name": "snippet_0204.js",
+  "source": "\n      const source = { value: \"TOKEN\" };\n      const { value = source } = { value: 1 };\n      mutate(value);\n      return source.value;\n    "
+ },
+ {
+  "name": "snippet_0205.mjs",
+  "source": "export function result() { \n      const source = { value: \"TOKEN\" };\n      const { value = source } = { value: 1 };\n      mutate(value);\n      return source.value;\n     }"
+ },
+ {
+  "name": "snippet_0206.js",
+  "source": "\n      const unused = { value: \"TOKEN\" };\n      const { box: { value = unused } = { value: 1 } } = {};\n      mutate(value);\n      return unused.value;\n    "
+ },
+ {
+  "name": "snippet_0207.mjs",
+  "source": "export function result() { \n      const unused = { value: \"TOKEN\" };\n      const { box: { value = unused } = { value: 1 } } = {};\n      mutate(value);\n      return unused.value;\n     }"
+ },
+ {
+  "name": "snippet_0208.js",
+  "source": "\n      const fallback = { value: 1 };\n      const source = { child: { value: 2 } };\n      function observe() { mutate(copy); }\n      remove(source);\n      const { child: copy = fallback } = source;\n      mutate(copy);\n      return fallback.value;\n    "
+ },
+ {
+  "name": "snippet_0209.mjs",
+  "source": "export function result() { \n      const fallback = { value: 1 };\n      const source = { child: { value: 2 } };\n      function observe() { mutate(copy); }\n      remove(source);\n      const { child: copy = fallback } = source;\n      mutate(copy);\n      return fallback.value;\n     }"
+ },
+ {
+  "name": "snippet_0210.js",
+  "source": "\n      const fallback = { value: 1 };\n      const source = { child: 1 };\n      function observe() { copy.value = 2; }\n      remove(source);\n      const { child: copy = fallback } = source;\n      observe();\n      return fallback.value;\n    "
+ },
+ {
+  "name": "snippet_0211.mjs",
+  "source": "export function result() { \n      const fallback = { value: 1 };\n      const source = { child: 1 };\n      function observe() { copy.value = 2; }\n      remove(source);\n      const { child: copy = fallback } = source;\n      observe();\n      return fallback.value;\n     }"
+ },
+ {
+  "name": "snippet_0212.js",
+  "source": "\n      const source = { child: { value: \"TOKEN\" } };\n      const { ...copy } = source;\n      copy.child = {};\n      return source.child.value;\n    "
+ },
+ {
+  "name": "snippet_0213.mjs",
+  "source": "export function result() { \n      const source = { child: { value: \"TOKEN\" } };\n      const { ...copy } = source;\n      copy.child = {};\n      return source.child.value;\n     }"
+ },
+ {
+  "name": "snippet_0214.js",
+  "source": "\n      const source = { kind: \"record\", child: { value: 1 } };\n      const { ...copy } = source;\n      copy.child.value = 2;\n      return { kind: source.kind, value: source.child.value };\n    "
+ },
+ {
+  "name": "snippet_0215.mjs",
+  "source": "export function result() { \n      const source = { kind: \"record\", child: { value: 1 } };\n      const { ...copy } = source;\n      copy.child.value = 2;\n      return { kind: source.kind, value: source.child.value };\n     }"
+ },
+ {
+  "name": "snippet_0216.js",
+  "source": "const source = { skipped: {}, child: { value: 1 } }; const { skipped, ...copy } = source; mutate(copy); return source.child.value;"
+ },
+ {
+  "name": "snippet_0217.mjs",
+  "source": "export function result() { const source = { skipped: {}, child: { value: 1 } }; const { skipped, ...copy } = source; mutate(copy); return source.child.value; }"
+ },
+ {
+  "name": "snippet_0218.js",
+  "source": "const source = [{}, { value: 1 }]; const [head, ...copy] = source; mutate(copy[0]); return source[1].value;"
+ },
+ {
+  "name": "snippet_0219.mjs",
+  "source": "export function result() { const source = [{}, { value: 1 }]; const [head, ...copy] = source; mutate(copy[0]); return source[1].value; }"
+ },
+ {
+  "name": "snippet_0220.js",
+  "source": "const source = [{}, { value: 1 }]; const [head, ...copy] = source; copy[0].value = 2; return source[1].value;"
+ },
+ {
+  "name": "snippet_0221.mjs",
+  "source": "export function result() { const source = [{}, { value: 1 }]; const [head, ...copy] = source; copy[0].value = 2; return source[1].value; }"
+ },
+ {
+  "name": "snippet_0222.js",
+  "source": "const source = { child: { value: 1 } }; const copy = { child: {}, ...source }; mutate(copy.child); return source.child.value;"
+ },
+ {
+  "name": "snippet_0223.mjs",
+  "source": "export function result() { const source = { child: { value: 1 } }; const copy = { child: {}, ...source }; mutate(copy.child); return source.child.value; }"
+ },
+ {
+  "name": "snippet_0224.js",
+  "source": "const source = { child: { value: 1 } }; const copy = { ...source, [key]: {} }; mutate(copy.child); return source.child.value;"
+ },
+ {
+  "name": "snippet_0225.mjs",
+  "source": "export function result() { const source = { child: { value: 1 } }; const copy = { ...source, [key]: {} }; mutate(copy.child); return source.child.value; }"
+ },
+ {
+  "name": "snippet_0226.js",
+  "source": "const source = [{ value: 1 }]; const copy = [{}, ...source]; mutate(copy[1]); return source[0].value;"
+ },
+ {
+  "name": "snippet_0227.mjs",
+  "source": "export function result() { const source = [{ value: 1 }]; const copy = [{}, ...source]; mutate(copy[1]); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0228.js",
+  "source": "const source = [{ value: 1 }]; const copy = [...other, ...source]; mutate(copy[0]); return source[0].value;"
+ },
+ {
+  "name": "snippet_0229.mjs",
+  "source": "export function result() { const source = [{ value: 1 }]; const copy = [...other, ...source]; mutate(copy[0]); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0230.js",
+  "source": "const source = [{ value: 1 }]; mutate([... [...source]]); return source[0].value;"
+ },
+ {
+  "name": "snippet_0231.mjs",
+  "source": "export function result() { const source = [{ value: 1 }]; mutate([... [...source]]); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0232.js",
+  "source": "const child = { value: 1 }; const source = { child, *[Symbol.iterator]() { yield this.child; } }; const copy = [{}, ...source]; mutate(copy[1]); return child.value;"
+ },
+ {
+  "name": "snippet_0233.mjs",
+  "source": "export function result() { const child = { value: 1 }; const source = { child, *[Symbol.iterator]() { yield this.child; } }; const copy = [{}, ...source]; mutate(copy[1]); return child.value; }"
+ },
+ {
+  "name": "snippet_0234.js",
+  "source": "const child = { value: 1 }; const source = { child, *[Symbol.iterator]() { yield null; yield this.child; } }; const [head, ...copy] = source; mutate(copy); return child.value;"
+ },
+ {
+  "name": "snippet_0235.mjs",
+  "source": "export function result() { const child = { value: 1 }; const source = { child, *[Symbol.iterator]() { yield null; yield this.child; } }; const [head, ...copy] = source; mutate(copy); return child.value; }"
+ },
+ {
+  "name": "snippet_0236.js",
+  "source": "const child = { value: 1 }; const source = [child]; source[Symbol.iterator] = function* () { yield null; yield this[0]; }; const [head, ...copy] = source; mutate(copy); return child.value;"
+ },
+ {
+  "name": "snippet_0237.mjs",
+  "source": "export function result() { const child = { value: 1 }; const source = [child]; source[Symbol.iterator] = function* () { yield null; yield this[0]; }; const [head, ...copy] = source; mutate(copy); return child.value; }"
+ },
+ {
+  "name": "snippet_0238.js",
+  "source": "const child = { value: 1 }; const source = [null, child]; source.__proto__ = { *[Symbol.iterator]() { yield this[1]; } }; const copy = [{}, ...source]; mutate(copy[1]); return child.value;"
+ },
+ {
+  "name": "snippet_0239.mjs",
+  "source": "export function result() { const child = { value: 1 }; const source = [null, child]; source.__proto__ = { *[Symbol.iterator]() { yield this[1]; } }; const copy = [{}, ...source]; mutate(copy[1]); return child.value; }"
+ },
+ {
+  "name": "snippet_0240.js",
+  "source": "const source = [{ value: 1 }, {}]; Array.prototype[Symbol.iterator] = function* () { yield null; yield this[0]; }; const [head, ...copy] = source; mutate(copy[0]); return source[0].value;"
+ },
+ {
+  "name": "snippet_0241.mjs",
+  "source": "export function result() { const source = [{ value: 1 }, {}]; Array.prototype[Symbol.iterator] = function* () { yield null; yield this[0]; }; const [head, ...copy] = source; mutate(copy[0]); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0242.js",
+  "source": "const source = [null, { value: 1 }]; const prototype = Array.prototype; prototype[Symbol.iterator] = function* () { yield this[1]; }; const copy = [{}, ...source]; mutate(copy[1]); return source[1].value;"
+ },
+ {
+  "name": "snippet_0243.mjs",
+  "source": "export function result() { const source = [null, { value: 1 }]; const prototype = Array.prototype; prototype[Symbol.iterator] = function* () { yield this[1]; }; const copy = [{}, ...source]; mutate(copy[1]); return source[1].value; }"
+ },
+ {
+  "name": "snippet_0244.js",
+  "source": "const source = [null, { value: 1 }]; const other = []; other.__proto__[Symbol.iterator] = function* () { yield this[1]; }; const copy = [{}, ...source]; mutate(copy[1]); return source[1].value;"
+ },
+ {
+  "name": "snippet_0245.mjs",
+  "source": "export function result() { const source = [null, { value: 1 }]; const other = []; other.__proto__[Symbol.iterator] = function* () { yield this[1]; }; const copy = [{}, ...source]; mutate(copy[1]); return source[1].value; }"
+ },
+ {
+  "name": "snippet_0246.js",
+  "source": "const source = { child: { value: 1 } }; const copy = { ...source, get child() { return source.child; } }; mutate(copy.child); return source.child.value;"
+ },
+ {
+  "name": "snippet_0247.mjs",
+  "source": "export function result() { const source = { child: { value: 1 } }; const copy = { ...source, get child() { return source.child; } }; mutate(copy.child); return source.child.value; }"
+ },
+ {
+  "name": "snippet_0248.js",
+  "source": "const source = { child: { value: 1 } }; const copy = { ...source, get child() { return source.child; }, set child(value) {} }; mutate(copy.child); return source.child.value;"
+ },
+ {
+  "name": "snippet_0249.mjs",
+  "source": "export function result() { const source = { child: { value: 1 } }; const copy = { ...source, get child() { return source.child; }, set child(value) {} }; mutate(copy.child); return source.child.value; }"
+ },
+ {
+  "name": "snippet_0250.js",
+  "source": "\n      let alias0 = { value: 1 };\n      "
+ },
+ {
+  "name": "snippet_0251.js",
+  "source": "\n      mutate(alias24);\n      return alias0.value;\n    "
+ },
+ {
+  "name": "snippet_0252.mjs",
+  "source": "export function result() { \n      mutate(alias24);\n      return alias0.value;\n     }"
+ },
+ {
+  "name": "snippet_0253.js",
+  "source": "mutate(...source);"
+ },
+ {
+  "name": "snippet_0254.js",
+  "source": "mutate?.(...source);"
+ },
+ {
+  "name": "snippet_0255.js",
+  "source": "new Factory(...source);"
+ },
+ {
+  "name": "snippet_0256.js",
+  "source": "const copy = [...source]; mutate(copy);"
+ },
+ {
+  "name": "snippet_0257.js",
+  "source": "const copy = [{}, ...source]; mutate(copy[1]);"
+ },
+ {
+  "name": "snippet_0258.js",
+  "source": "const copy = [...source]; copy[0].value = 2;"
+ },
+ {
+  "name": "snippet_0259.js",
+  "source": "const [...copy] = source; mutate(copy);"
+ },
+ {
+  "name": "snippet_0260.js",
+  "source": "const [...copy] = source; copy[0].value = 2;"
+ },
+ {
+  "name": "snippet_0261.js",
+  "source": "const wrapper = { source }; const { source: [...copy] } = wrapper; mutate(copy);"
+ },
+ {
+  "name": "snippet_0262.js",
+  "source": "const [copy] = source; mutate(copy);"
+ },
+ {
+  "name": "snippet_0263.js",
+  "source": "let copy; [copy] = source; mutate(copy);"
+ },
+ {
+  "name": "snippet_0264.js",
+  "source": "const { nested: [copy] } = { nested: source }; mutate(copy);"
+ },
+ {
+  "name": "snippet_0265.js",
+  "source": "for (const copy of source) mutate(copy);"
+ },
+ {
+  "name": "snippet_0266.js",
+  "source": "let copy; for (copy of source) mutate(copy);"
+ },
+ {
+  "name": "snippet_0267.js",
+  "source": "\n        const source = { *[Symbol.iterator]() { yield this; }, value: \"TOKEN\" };\n        "
+ },
+ {
+  "name": "snippet_0268.js",
+  "source": "\n        return source.value;\n      "
+ },
+ {
+  "name": "snippet_0269.mjs",
+  "source": "export function result() { \n        return source.value;\n       }"
+ },
+ {
+  "name": "snippet_0270.js",
+  "source": "const [copy] = source;"
+ },
+ {
+  "name": "snippet_0271.js",
+  "source": "const copy = [...source];"
+ },
+ {
+  "name": "snippet_0272.js",
+  "source": "for (const copy of source) {}"
+ },
+ {
+  "name": "snippet_0273.js",
+  "source": "const { nested: [copy] } = { nested: source };"
+ },
+ {
+  "name": "snippet_0274.js",
+  "source": "const [...[[copy]]] = [source];"
+ },
+ {
+  "name": "snippet_0275.js",
+  "source": "const [...{ 0: [copy] }] = [source];"
+ },
+ {
+  "name": "snippet_0276.js",
+  "source": "for (const [copy] of [source]) {}"
+ },
+ {
+  "name": "snippet_0277.js",
+  "source": "const { missing: [copy] = source } = {};"
+ },
+ {
+  "name": "snippet_0278.js",
+  "source": "function consume([copy] = source) {} consume();"
+ },
+ {
+  "name": "snippet_0279.js",
+  "source": "function* copies() { yield* source; } consume(copies());"
+ },
+ {
+  "name": "snippet_0280.js",
+  "source": "\n        const source = { *[Symbol.iterator]() { this.value = \"changed\"; yield this; }, value: \"TOKEN\" };\n        "
+ },
+ {
+  "name": "snippet_0281.js",
+  "source": "const source = [\"TOKEN\"]; "
+ },
+ {
+  "name": "snippet_0282.js",
+  "source": " return source[0];"
+ },
+ {
+  "name": "snippet_0283.mjs",
+  "source": "export function result() {  return source[0]; }"
+ },
+ {
+  "name": "snippet_0284.js",
+  "source": "const { nested: [copy] = source } = { nested: [] };"
+ },
+ {
+  "name": "snippet_0285.js",
+  "source": "const [[copy] = source] = [[]];"
+ },
+ {
+  "name": "snippet_0286.js",
+  "source": "const { a: { b: [copy] = source } = { b: [] } } = {};"
+ },
+ {
+  "name": "snippet_0287.js",
+  "source": "for (const { nested: [copy] = source } of [{ nested: [] }]) {}"
+ },
+ {
+  "name": "snippet_0288.js",
+  "source": "for (const [[copy] = source] of [[[]]]) {}"
+ },
+ {
+  "name": "snippet_0289.js",
+  "source": "for (const { nested: [copy] = source } of []) {}"
+ },
+ {
+  "name": "snippet_0290.js",
+  "source": "source[Symbol.iterator] = function* () { yield this; };"
+ },
+ {
+  "name": "snippet_0291.js",
+  "source": "Array.prototype[Symbol.iterator] = function* () { yield this; };"
+ },
+ {
+  "name": "snippet_0292.js",
+  "source": "\n        const source = [\"TOKEN\"];\n        "
+ },
+ {
+  "name": "snippet_0293.js",
+  "source": "\n        mutate(...source);\n        return source[0];\n      "
+ },
+ {
+  "name": "snippet_0294.mjs",
+  "source": "export function result() { \n        mutate(...source);\n        return source[0];\n       }"
+ },
+ {
+  "name": "snippet_0295.js",
+  "source": "\n        const source = [null, { value: 1 }];\n        "
+ },
+ {
+  "name": "snippet_0296.js",
+  "source": "\n      const globalThis = { Array: { prototype: {} } };\n      globalThis.Array.prototype[Symbol.iterator] = function* () { yield null; };\n      const source = [{ value: \"TOKEN\" }];\n      const [head, ...copy] = source;\n      mutate(copy);\n      return source[0].value;\n    "
+ },
+ {
+  "name": "snippet_0297.mjs",
+  "source": "export function result() { \n      const globalThis = { Array: { prototype: {} } };\n      globalThis.Array.prototype[Symbol.iterator] = function* () { yield null; };\n      const source = [{ value: \"TOKEN\" }];\n      const [head, ...copy] = source;\n      mutate(copy);\n      return source[0].value;\n     }"
+ },
+ {
+  "name": "snippet_0298.js",
+  "source": "const source = { only: { value: \"TOKEN\" } }; const { only, ...copy } = source; mutate(copy); return source.only.value;"
+ },
+ {
+  "name": "snippet_0299.mjs",
+  "source": "export function result() { const source = { only: { value: \"TOKEN\" } }; const { only, ...copy } = source; mutate(copy); return source.only.value; }"
+ },
+ {
+  "name": "snippet_0300.js",
+  "source": "const source = [{ value: \"TOKEN\" }]; const [head, ...copy] = source; mutate(copy); return source[0].value;"
+ },
+ {
+  "name": "snippet_0301.mjs",
+  "source": "export function result() { const source = [{ value: \"TOKEN\" }]; const [head, ...copy] = source; mutate(copy); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0302.js",
+  "source": "const source = { child: { value: \"TOKEN\" } }; const copy = { ...source, child: { value: 2 } }; mutate(copy.child); return source.child.value;"
+ },
+ {
+  "name": "snippet_0303.mjs",
+  "source": "export function result() { const source = { child: { value: \"TOKEN\" } }; const copy = { ...source, child: { value: 2 } }; mutate(copy.child); return source.child.value; }"
+ },
+ {
+  "name": "snippet_0304.js",
+  "source": "const source = [{ value: \"TOKEN\" }]; const copy = [{ value: 0 }, ...source]; mutate(copy[0]); return source[0].value;"
+ },
+ {
+  "name": "snippet_0305.mjs",
+  "source": "export function result() { const source = [{ value: \"TOKEN\" }]; const copy = [{ value: 0 }, ...source]; mutate(copy[0]); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0306.js",
+  "source": "const source = { child: { value: \"TOKEN\" } }; const copy = { ...source, [\"child\"]: { value: 2 } }; mutate(copy); return source.child.value;"
+ },
+ {
+  "name": "snippet_0307.mjs",
+  "source": "export function result() { const source = { child: { value: \"TOKEN\" } }; const copy = { ...source, [\"child\"]: { value: 2 } }; mutate(copy); return source.child.value; }"
+ },
+ {
+  "name": "snippet_0308.js",
+  "source": "const child = { value: \"TOKEN\" }; const copy = { child, child: {} }; mutate(copy); return child.value;"
+ },
+ {
+  "name": "snippet_0309.mjs",
+  "source": "export function result() { const child = { value: \"TOKEN\" }; const copy = { child, child: {} }; mutate(copy); return child.value; }"
+ },
+ {
+  "name": "snippet_0310.js",
+  "source": "const source = [{ value: \"TOKEN\" }, { value: 2 }]; const [head, ...copy] = source; mutate(copy[0]); return source[0].value;"
+ },
+ {
+  "name": "snippet_0311.mjs",
+  "source": "export function result() { const source = [{ value: \"TOKEN\" }, { value: 2 }]; const [head, ...copy] = source; mutate(copy[0]); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0312.js",
+  "source": "const source = [{ value: \"TOKEN\" }, { value: 2 }]; const copy = [{}, ...source]; mutate(copy[2]); return source[0].value;"
+ },
+ {
+  "name": "snippet_0313.mjs",
+  "source": "export function result() { const source = [{ value: \"TOKEN\" }, { value: 2 }]; const copy = [{}, ...source]; mutate(copy[2]); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0314.js",
+  "source": "const source = [{ value: \"TOKEN\" }]; const copy = [, ...source]; mutate(copy[0]); return source[0].value;"
+ },
+ {
+  "name": "snippet_0315.mjs",
+  "source": "export function result() { const source = [{ value: \"TOKEN\" }]; const copy = [, ...source]; mutate(copy[0]); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0316.js",
+  "source": "const source = [{ value: \"TOKEN\" }]; const copy = [...source]; mutate(copy[\"01\"]); return source[0].value;"
+ },
+ {
+  "name": "snippet_0317.mjs",
+  "source": "export function result() { const source = [{ value: \"TOKEN\" }]; const copy = [...source]; mutate(copy[\"01\"]); return source[0].value; }"
+ },
+ {
+  "name": "snippet_0318.js",
+  "source": "const source = { only: { value: \"TOKEN\" } }; const { [\"only\"]: consumed, ...copy } = source; mutate(copy); return source.only.value;"
+ },
+ {
+  "name": "snippet_0319.mjs",
+  "source": "export function result() { const source = { only: { value: \"TOKEN\" } }; const { [\"only\"]: consumed, ...copy } = source; mutate(copy); return source.only.value; }"
+ },
+ {
+  "name": "snippet_0320.js",
+  "source": "const source = { child: { value: \"TOKEN\" } }; const copy = { ...source, child() {} }; mutate(copy); return source.child.value;"
+ },
+ {
+  "name": "snippet_0321.mjs",
+  "source": "export function result() { const source = { child: { value: \"TOKEN\" } }; const copy = { ...source, child() {} }; mutate(copy); return source.child.value; }"
+ },
+ {
+  "name": "snippet_0322.js",
+  "source": "const source = { token: \"TOKEN\", count: 1 }; source.count = 2; return source.token;"
+ },
+ {
+  "name": "snippet_0323.mjs",
+  "source": "export function result() { const source = { token: \"TOKEN\", count: 1 }; source.count = 2; return source.token; }"
+ },
+ {
+  "name": "snippet_0324.js",
+  "source": "const source = { token: \"TOKEN\", count: 1 }; const alias = source; alias.count++; return source.token;"
+ },
+ {
+  "name": "snippet_0325.mjs",
+  "source": "export function result() { const source = { token: \"TOKEN\", count: 1 }; const alias = source; alias.count++; return source.token; }"
+ },
+ {
+  "name": "snippet_0326.js",
+  "source": "const source = { token: \"TOKEN\", count: 1 }; delete source.count; return source.token;"
+ },
+ {
+  "name": "snippet_0327.mjs",
+  "source": "export function result() { const source = { token: \"TOKEN\", count: 1 }; delete source.count; return source.token; }"
+ },
+ {
+  "name": "snippet_0328.js",
+  "source": "const source = { nested: { token: \"TOKEN\", count: 1 } }; source.nested.count = 2; return source.nested.token;"
+ },
+ {
+  "name": "snippet_0329.mjs",
+  "source": "export function result() { const source = { nested: { token: \"TOKEN\", count: 1 } }; source.nested.count = 2; return source.nested.token; }"
+ },
+ {
+  "name": "snippet_0330.js",
+  "source": "const source = { nested: { token: \"TOKEN\", count: 1 } }; const { nested } = source; nested.count = 2; return source.nested.token;"
+ },
+ {
+  "name": "snippet_0331.mjs",
+  "source": "export function result() { const source = { nested: { token: \"TOKEN\", count: 1 } }; const { nested } = source; nested.count = 2; return source.nested.token; }"
+ },
+ {
+  "name": "snippet_0332.js",
+  "source": "const child = { token: \"TOKEN\", count: 1 }; const source = { child }; source.child.count = 2; return child.token;"
+ },
+ {
+  "name": "snippet_0333.mjs",
+  "source": "export function result() { const child = { token: \"TOKEN\", count: 1 }; const source = { child }; source.child.count = 2; return child.token; }"
+ },
+ {
+  "name": "snippet_0334.js",
+  "source": "const source = [\"TOKEN\", 1]; source[1] = 2; return source[0];"
+ },
+ {
+  "name": "snippet_0335.mjs",
+  "source": "export function result() { const source = [\"TOKEN\", 1]; source[1] = 2; return source[0]; }"
+ },
+ {
+  "name": "snippet_0336.js",
+  "source": "const source = [\"TOKEN\"]; source.extra = 2; return source[0];"
+ },
+ {
+  "name": "snippet_0337.mjs",
+  "source": "export function result() { const source = [\"TOKEN\"]; source.extra = 2; return source[0]; }"
+ },
+ {
+  "name": "snippet_0338.js",
+  "source": "const source = [\"TOKEN\"]; source[\"01\"] = 2; return source[0];"
+ },
+ {
+  "name": "snippet_0339.mjs",
+  "source": "export function result() { const source = [\"TOKEN\"]; source[\"01\"] = 2; return source[0]; }"
+ },
+ {
+  "name": "snippet_0340.js",
+  "source": "const source = [\"TOKEN\"]; source[1000000000] = 2; return source[0];"
+ },
+ {
+  "name": "snippet_0341.mjs",
+  "source": "export function result() { const source = [\"TOKEN\"]; source[1000000000] = 2; return source[0]; }"
+ },
+ {
+  "name": "snippet_0342.js",
+  "source": "const child = { token: \"TOKEN\", count: 1 }; const source = [child]; source[0].count = 2; return child.token;"
+ },
+ {
+  "name": "snippet_0343.mjs",
+  "source": "export function result() { const child = { token: \"TOKEN\", count: 1 }; const source = [child]; source[0].count = 2; return child.token; }"
+ },
+ {
+  "name": "snippet_0344.js",
+  "source": "const source = { token: \"TOKEN\" }; source.added = 2; return source.token;"
+ },
+ {
+  "name": "snippet_0345.mjs",
+  "source": "export function result() { const source = { token: \"TOKEN\" }; source.added = 2; return source.token; }"
+ },
+ {
+  "name": "snippet_0346.js",
+  "source": "const source = { token: \"TOKEN\", count: 1, other: 1 }; source.count = 2; source.other = 2; return source.token;"
+ },
+ {
+  "name": "snippet_0347.mjs",
+  "source": "export function result() { const source = { token: \"TOKEN\", count: 1, other: 1 }; source.count = 2; source.other = 2; return source.token; }"
+ },
+ {
+  "name": "snippet_0348.js",
+  "source": "const left = { token: \"TOKEN\", count: 1 }; const right = { count: 1 }; const source = { left, right }; source.right.count = 2; return left.count + \":\" + left.token;"
+ },
+ {
+  "name": "snippet_0349.mjs",
+  "source": "export function result() { const left = { token: \"TOKEN\", count: 1 }; const right = { count: 1 }; const source = { left, right }; source.right.count = 2; return left.count + \":\" + left.token; }"
+ },
+ {
+  "name": "snippet_0350.js",
+  "source": "const source = { token: \"TOKEN\", count: 1 }; source.count = 2; return source.count;"
+ },
+ {
+  "name": "snippet_0351.mjs",
+  "source": "export function result() { const source = { token: \"TOKEN\", count: 1 }; source.count = 2; return source.count; }"
+ },
+ {
+  "name": "snippet_0352.js",
+  "source": "const shared = { mode: \"initial\" }; const alias = shared satisfies { mode: string }; alias.mode = \"updated\"; return shared.mode;"
+ },
+ {
+  "name": "snippet_0353.mjs",
+  "source": "export function result() { const shared = { mode: \"initial\" }; const alias = shared satisfies { mode: string }; alias.mode = \"updated\"; return shared.mode; }"
+ },
+ {
+  "name": "snippet_0354.js",
+  "source": "const shared = { nested: { mode: \"initial\" } }; const alias = shared satisfies { nested: { mode: string } }; alias.nested.mode = \"updated\"; return shared.nested.mode;"
+ },
+ {
+  "name": "snippet_0355.mjs",
+  "source": "export function result() { const shared = { nested: { mode: \"initial\" } }; const alias = shared satisfies { nested: { mode: string } }; alias.nested.mode = \"updated\"; return shared.nested.mode; }"
+ },
+ {
+  "name": "snippet_0356.js",
+  "source": "const shared = { mode: \"initial\" }; const alias = (shared satisfies { mode: string }) as { mode: string }; delete alias.mode; return shared.mode;"
+ },
+ {
+  "name": "snippet_0357.mjs",
+  "source": "export function result() { const shared = { mode: \"initial\" }; const alias = (shared satisfies { mode: string }) as { mode: string }; delete alias.mode; return shared.mode; }"
+ },
+ {
+  "name": "snippet_0358.js",
+  "source": "const shared = [1]; const alias = shared satisfies number[]; alias[0]++; return shared[0];"
+ },
+ {
+  "name": "snippet_0359.mjs",
+  "source": "export function result() { const shared = [1]; const alias = shared satisfies number[]; alias[0]++; return shared[0]; }"
+ },
+ {
+  "name": "snippet_0360.js",
+  "source": "\n      const shared = { mode: \"initial\", token: \"TOKEN\" };\n      const alias = shared satisfies { mode: string; token: string };\n      alias.mode = \"updated\";\n      return shared.token;\n    "
+ },
+ {
+  "name": "snippet_0361.mjs",
+  "source": "export function result() { \n      const shared = { mode: \"initial\", token: \"TOKEN\" };\n      const alias = shared satisfies { mode: string; token: string };\n      alias.mode = \"updated\";\n      return shared.token;\n     }"
+ },
+ {
+  "name": "snippet_0362.js",
+  "source": "const source = { token: \"TOKEN\" }; "
+ },
+ {
+  "name": "snippet_0363.js",
+  "source": " return [source.token, source.p1999];"
+ },
+ {
+  "name": "snippet_0364.mjs",
+  "source": "export function result() {  return [source.token, source.p1999]; }"
+ },
+ {
+  "name": "snippet_0365.js",
+  "source": " return shared.token;"
+ },
+ {
+  "name": "snippet_0366.mjs",
+  "source": "export function result() {  return shared.token; }"
+ },
+ {
+  "name": "snippet_0367.js",
+  "source": "const first = { t: \"A\" }; const second = { t: \"B\" }; const kept = { t: \"C\" }; const box = { a() { return first; }, b() { return second; }, c() { return first; } }; box.a(); return [first.t, second.t, kept.t];"
+ },
+ {
+  "name": "snippet_0368.mjs",
+  "source": "export function result() { const first = { t: \"A\" }; const second = { t: \"B\" }; const kept = { t: \"C\" }; const box = { a() { return first; }, b() { return second; }, c() { return first; } }; box.a(); return [first.t, second.t, kept.t]; }"
+ },
+ {
+  "name": "snippet_0369.js",
+  "source": " return [shared.token];"
+ },
+ {
+  "name": "snippet_0370.mjs",
+  "source": "export function result() {  return [shared.token]; }"
+ },
+ {
+  "name": "snippet_0371.mjs",
+  "source": "\n      import { spawn as launch } from \"node:child_process\";\n      function run() {\n        const child = launch(\n          \"/bin/tool\",\n          [\"--mode\", \"fast\"],\n          { env: { MODE: \"test\" }, stdio: [\"ignore\", \"pipe\", \"pipe\"] },\n        );\n        child.on(\"exit\", onExit);\n        child.once(\"error\", onError);\n        child.kill(\"SIGINT\");\n      }\n    "
+ },
+ {
+  "name": "snippet_0372.mjs",
+  "source": "\n      import { readFileSync } from \"node:fs\";\n      import * as http from \"node:http\";\n      async function run(schema) {\n        const endpoint = process.env.API_URL ?? \"https://fallback.test\";\n        const mode = process.argv[2];\n        const raw = readFileSync(\"./config.json\", \"utf8\");\n        const parsed = JSON.parse(raw);\n        const port = Number(process.env.PORT);\n        const validated = schema.parse(parsed);\n        const response = await fetch(endpoint, {\n          method: \"POST\",\n          body: validated,\n        });\n        const body = await response.json();\n        http.request(\"https://audit.test\", { body });\n        return { mode, port, body };\n      }\n    "
+ },
+ {
+  "name": "snippet_0373.mjs",
+  "source": "export function result() { \n      import { readFileSync } from \"node:fs\";\n      import * as http from \"node:http\";\n      async function run(schema) {\n        const endpoint = process.env.API_URL ?? \"https://fallback.test\";\n        const mode = process.argv[2];\n        const raw = readFileSync(\"./config.json\", \"utf8\");\n        const parsed = JSON.parse(raw);\n        const port = Number(process.env.PORT);\n        const validated = schema.parse(parsed);\n        const response = await fetch(endpoint, {\n          method: \"POST\",\n          body: validated,\n        });\n        const body = await response.json();\n        http.request(\"https://audit.test\", { body });\n        return { mode, port, body };\n      }\n     }"
+ },
+ {
+  "name": "snippet_0374.mjs",
+  "source": "\n      import { open } from \"node:fs/promises\";\n      import { connect as dial } from \"node:net\";\n      async function run(path) {\n        const file = await open(path);\n        const socket = dial({ port: 9000 });\n        await file.close();\n        socket.destroy();\n      }\n    "
+ },
+ {
+  "name": "snippet_0375.js",
+  "source": "const value = (Promise.resolve(1) as Promise<number>);"
+ },
+ {
+  "name": "snippet_0376.js",
+  "source": "const run = () => (Promise.resolve(1) as Promise<number>);"
+ },
+ {
+  "name": "snippet_0377.js",
+  "source": "const value = consume(Promise.resolve(1)).then(work);"
+ },
+ {
+  "name": "snippet_0378.js",
+  "source": "const value = consume(Promise.resolve(1));"
+ },
+ {
+  "name": "snippet_0379.js",
+  "source": "async function run() { await consume(Promise.resolve(1)); }"
+ },
+ {
+  "name": "snippet_0380.js",
+  "source": "function run() { return consume(Promise.resolve(1)); }"
+ },
+ {
+  "name": "snippet_0381.mjs",
+  "source": "export function result() { function run() { return consume(Promise.resolve(1)); } }"
+ },
+ {
+  "name": "snippet_0382.js",
+  "source": "const value = [Promise.resolve(1)];"
+ },
+ {
+  "name": "snippet_0383.js",
+  "source": "const value = Promise.all([{promise: Promise.resolve(1)}]);"
+ },
+ {
+  "name": "snippet_0384.js",
+  "source": "const value = Promise.resolve(1);"
+ },
+ {
+  "name": "snippet_0385.js",
+  "source": "async function run() { await Promise.resolve(1); }"
+ },
+ {
+  "name": "snippet_0386.js",
+  "source": "function run() { return Promise.resolve(1); }"
+ },
+ {
+  "name": "snippet_0387.mjs",
+  "source": "export function result() { function run() { return Promise.resolve(1); } }"
+ },
+ {
+  "name": "snippet_0388.js",
+  "source": "const value = Promise.resolve(1).then(work);"
+ },
+ {
+  "name": "snippet_0389.js",
+  "source": "const value = Promise.all([Promise.resolve(1)]);"
+ },
+ {
+  "name": "snippet_0390.js",
+  "source": "Promise.resolve(1);"
+ },
+ {
+  "name": "snippet_0391.js",
+  "source": "Promise.resolve(1)"
+ },
+ {
+  "name": "snippet_0392.js",
+  "source": "((Promise.resolve(1)))"
+ },
+ {
+  "name": "snippet_0393.js",
+  "source": "(Promise.resolve(1) as Promise<number>)"
+ },
+ {
+  "name": "snippet_0394.js",
+  "source": "(Promise.resolve(1) satisfies Promise<number>)"
+ },
+ {
+  "name": "snippet_0395.js",
+  "source": "Promise.resolve(1)!"
+ },
+ {
+  "name": "snippet_0396.js",
+  "source": "((Promise.resolve(1) as Promise<number>)!)"
+ },
+ {
+  "name": "snippet_0397.js",
+  "source": "(new Promise(resolve => resolve(1)) as Promise<number>)"
+ },
+ {
+  "name": "snippet_0398.js",
+  "source": "(Promise.all([Promise.resolve(1)]) as Promise<number[]>)"
+ },
+ {
+  "name": "snippet_0399.js",
+  "source": "(Promise.resolve(1).then(value => value) as Promise<number>)"
+ },
+ {
+  "name": "snippet_0400.js",
+  "source": "const outer = () => () => (Promise.resolve(1) as Promise<number>);"
+ },
+ {
+  "name": "snippet_0401.js",
+  "source": "const outer = () => { const inner = () => Promise.resolve(1)!; return inner; };"
+ },
+ {
+  "name": "snippet_0402.mjs",
+  "source": "export function result() { const outer = () => { const inner = () => Promise.resolve(1)!; return inner; }; }"
+ },
+ {
+  "name": "snippet_0403.js",
+  "source": "consume((Promise.resolve(1) as Promise<number>))"
+ },
+ {
+  "name": "snippet_0404.js",
+  "source": "[(Promise.resolve(1) as Promise<number>)]"
+ },
+ {
+  "name": "snippet_0405.js",
+  "source": "({ task: Promise.resolve(1)! })"
+ },
+ {
+  "name": "snippet_0406.js",
+  "source": "(condition ? Promise.resolve(1)! : other)"
+ },
+ {
+  "name": "snippet_0407.js",
+  "source": "((0, Promise.resolve(1)) as Promise<number>)"
+ },
+ {
+  "name": "snippet_0408.js",
+  "source": "await (Promise.resolve(1) as Promise<number>)"
+ },
+ {
+  "name": "snippet_0409.js",
+  "source": "const run = () => { return (Promise.resolve(1) as Promise<number>); };"
+ },
+ {
+  "name": "snippet_0410.mjs",
+  "source": "export function result() { const run = () => { return (Promise.resolve(1) as Promise<number>); }; }"
+ },
+ {
+  "name": "snippet_0411.js",
+  "source": "function first() { return Promise.resolve(1); }"
+ },
+ {
+  "name": "snippet_0412.mjs",
+  "source": "export function result() { function first() { return Promise.resolve(1); } }"
+ },
+ {
+  "name": "snippet_0413.js",
+  "source": "function second() { return Promise.resolve(2); }"
+ },
+ {
+  "name": "snippet_0414.mjs",
+  "source": "export function result() { function second() { return Promise.resolve(2); } }"
+ },
+ {
+  "name": "snippet_0415.js",
+  "source": "function unrelated() { return Promise.resolve(2); }\nconst pending = Promise.resolve(1);"
+ },
+ {
+  "name": "snippet_0416.mjs",
+  "source": "export function result() { function unrelated() { return Promise.resolve(2); }\nconst pending = Promise.resolve(1); }"
+ },
+ {
+  "name": "snippet_0417.js",
+  "source": "call(, \"kept\", , 42)"
+ },
+ {
+  "name": "snippet_0418.js",
+  "source": "call?.(, \"kept\")"
+ },
+ {
+  "name": "snippet_0419.js",
+  "source": "new Thing(, \"kept\")"
+ },
+ {
+  "name": "snippet_0420.js",
+  "source": "function select(first, second) { return second; } const value = 42; select(, value);"
+ },
+ {
+  "name": "snippet_0421.mjs",
+  "source": "export function result() { function select(first, second) { return second; } const value = 42; select(, value); }"
+ },
+ {
+  "name": "snippet_0422.js",
+  "source": "const values=[1]; const prototype=Array.prototype; prototype[Symbol.iterator]=custom; for(const item of values) { mutate(item); } return values[0];"
+ },
+ {
+  "name": "snippet_0423.mjs",
+  "source": "export function result() { const values=[1]; const prototype=Array.prototype; prototype[Symbol.iterator]=custom; for(const item of values) { mutate(item); } return values[0]; }"
+ },
+ {
+  "name": "snippet_0424.js",
+  "source": "; alias.deep.value=2; return source;"
+ },
+ {
+  "name": "snippet_0425.mjs",
+  "source": "export function result() { ; alias.deep.value=2; return source; }"
+ },
+ {
+  "name": "snippet_0426.js",
+  "source": "use(node);"
+ },
+ {
+  "name": "snippet_0427.js",
+  "source": "node.value = 2;"
+ },
+ {
+  "name": "snippet_0428.js",
+  "source": "const alias = flag ? owner.child : owner; alias.value = 2;"
+ },
+ {
+  "name": "snippet_0429.js",
+  "source": "const alias = flag ? owner : owner.child; alias.value = 2;"
+ },
+ {
+  "name": "snippet_0430.js",
+  "source": "const alias = flag ? owner.child : owner; alias[key] = 2;"
+ },
+ {
+  "name": "snippet_0431.js",
+  "source": "const alias = flag ? owner.child : owner; alias.child = 2;"
+ },
+ {
+  "name": "snippet_0432.js",
+  "source": "let alias = owner; let i = 0; while (i++ < 1) { alias = flag ? alias.child : alias; alias.value = 2; }"
+ },
+ {
+  "name": "snippet_0433.js",
+  "source": "const shared = { value: 1, child: { value: 1 } }; const owner = { child: shared }; "
+ },
+ {
+  "name": "snippet_0434.js",
+  "source": "mutate(source.left, source.right);"
+ },
+ {
+  "name": "snippet_0435.js",
+  "source": "const alias = flag ? source.left : source.right; mutate(alias);"
+ },
+ {
+  "name": "snippet_0436.js",
+  "source": "const copy = flag ? [source.left] : [source.right]; mutate(copy);"
+ },
+ {
+  "name": "snippet_0437.js",
+  "source": "const alias = flag ? source.left : source.right; alias.value = 2;"
+ },
+ {
+  "name": "snippet_0438.js",
+  "source": "const source = { left: { value: 1 }, right: { value: 2 }, keep: { value: 3 } }; "
+ },
+ {
+  "name": "snippet_0439.js",
+  "source": " return source.keep.value;"
+ },
+ {
+  "name": "snippet_0440.mjs",
+  "source": "export function result() {  return source.keep.value; }"
+ },
+ {
+  "name": "snippet_0441.js",
+  "source": "alias.value = 2;"
+ },
+ {
+  "name": "snippet_0442.js",
+  "source": "mutate(alias);"
+ },
+ {
+  "name": "snippet_0443.js",
+  "source": "const left={value:1}; const right={value:2}; const source={left,right}; const alias=flag?source.left:source.right; "
+ },
+ {
+  "name": "snippet_0444.js",
+  "source": "const shared={left:{value:1},right:{value:2},keep:{value:3}}; const source={nested:shared}; const alias=flag?source.nested.left:source.nested.right; "
+ },
+ {
+  "name": "snippet_0445.js",
+  "source": " return shared.keep.value;"
+ },
+ {
+  "name": "snippet_0446.mjs",
+  "source": "export function result() {  return shared.keep.value; }"
+ },
+ {
+  "name": "snippet_0447.js",
+  "source": "const alias0 = [1]; "
+ },
+ {
+  "name": "snippet_0448.js",
+  "source": "const alias0 = { value: { token: 1 } }; "
+ },
+ {
+  "name": "snippet_0449.js",
+  "source": " consume(alias20); return alias0.value.token;"
+ },
+ {
+  "name": "snippet_0450.mjs",
+  "source": "export function result() {  consume(alias20); return alias0.value.token; }"
+ },
+ {
+  "name": "snippet_0451.js",
+  "source": "child: {}"
+ },
+ {
+  "name": "snippet_0452.js",
+  "source": "other: {}"
+ },
+ {
+  "name": "snippet_0453.js",
+  "source": "mutate(alias)"
+ },
+ {
+  "name": "snippet_0454.js",
+  "source": "alias.method()"
+ },
+ {
+  "name": "snippet_0455.js",
+  "source": "new Factory(alias)"
+ },
+ {
+  "name": "snippet_0456.js",
+  "source": "tag`${alias}`"
+ },
+ {
+  "name": "snippet_0457.js",
+  "source": "mutate((0, alias))"
+ },
+ {
+  "name": "snippet_0458.js",
+  "source": "const source={value:1}; let alias=source; alias={}; "
+ },
+ {
+  "name": "snippet_0459.js",
+  "source": "; return source.value;"
+ },
+ {
+  "name": "snippet_0460.mjs",
+  "source": "export function result() { ; return source.value; }"
+ },
+ {
+  "name": "snippet_0461.js",
+  "source": "mutate(alias); alias={};"
+ },
+ {
+  "name": "snippet_0462.js",
+  "source": "if(flag) alias={}; mutate(alias);"
+ },
+ {
+  "name": "snippet_0463.js",
+  "source": "alias={}; if(flag) mutate(alias);"
+ },
+ {
+  "name": "snippet_0464.js",
+  "source": "alias={}; flag && mutate(alias);"
+ },
+ {
+  "name": "snippet_0465.js",
+  "source": "alias={}; flag ? mutate(alias) : noop();"
+ },
+ {
+  "name": "snippet_0466.js",
+  "source": "function invoke(){mutate(alias);} alias={}; invoke();"
+ },
+ {
+  "name": "snippet_0467.js",
+  "source": "alias={}; mutate(alias); alias=source;"
+ },
+ {
+  "name": "snippet_0468.js",
+  "source": "const source={value:1}; let alias=source; "
+ },
+ {
+  "name": "snippet_0469.js",
+  "source": " return source.value;"
+ },
+ {
+  "name": "snippet_0470.mjs",
+  "source": "export function result() {  return source.value; }"
+ },
+ {
+  "name": "snippet_0471.js",
+  "source": "let {...copy}={child};"
+ },
+ {
+  "name": "snippet_0472.js",
+  "source": "copy={child:{}};"
+ },
+ {
+  "name": "snippet_0473.js",
+  "source": "copy.child.value=2;"
+ },
+ {
+  "name": "snippet_0474.js",
+  "source": "let [...copy]=[child];"
+ },
+ {
+  "name": "snippet_0475.js",
+  "source": "copy=[{}];"
+ },
+ {
+  "name": "snippet_0476.js",
+  "source": "copy[0].value=2;"
+ },
+ {
+  "name": "snippet_0477.js",
+  "source": "let {copy=child}={};"
+ },
+ {
+  "name": "snippet_0478.js",
+  "source": "copy={};"
+ },
+ {
+  "name": "snippet_0479.js",
+  "source": "copy.value=2;"
+ },
+ {
+  "name": "snippet_0480.js",
+  "source": "let [copy=child]=[];"
+ },
+ {
+  "name": "snippet_0481.js",
+  "source": "mutate(copy);"
+ },
+ {
+  "name": "snippet_0482.js",
+  "source": "const child={value:1}; "
+ },
+ {
+  "name": "snippet_0483.js",
+  "source": " return child.value;"
+ },
+ {
+  "name": "snippet_0484.mjs",
+  "source": "export function result() {  return child.value; }"
+ },
+ {
+  "name": "snippet_0485.js",
+  "source": "const ignored = mutate(source);"
+ },
+ {
+  "name": "snippet_0486.js",
+  "source": "void mutate(source);"
+ },
+ {
+  "name": "snippet_0487.js",
+  "source": "consume(mutate(source));"
+ },
+ {
+  "name": "snippet_0488.js",
+  "source": "const source={value:1}; const snapshot=source.value; "
+ },
+ {
+  "name": "snippet_0489.js",
+  "source": " return snapshot;"
+ },
+ {
+  "name": "snippet_0490.mjs",
+  "source": "export function result() {  return snapshot; }"
+ },
+ {
+  "name": "snippet_0491.js",
+  "source": "const source={value:1}; "
+ },
+ {
+  "name": "snippet_0492.js",
+  "source": " const snapshot=source.value; return snapshot;"
+ },
+ {
+  "name": "snippet_0493.mjs",
+  "source": "export function result() {  const snapshot=source.value; return snapshot; }"
+ },
+ {
+  "name": "snippet_0494.mjs",
+  "source": "export async function result() {\n        const source={value:1}; const snapshot=source.value;\n        await mutate(source); return snapshot;\n      }"
+ },
+ {
+  "name": "snippet_0495.mjs",
+  "source": "export function result() { export async function result() {\n        const source={value:1}; const snapshot=source.value;\n        await mutate(source); return snapshot;\n      } }"
+ },
+ {
+  "name": "snippet_0496.js",
+  "source": "({value:1} as {value:number})"
+ },
+ {
+  "name": "snippet_0497.js",
+  "source": "({value:1} satisfies {value:number})"
+ },
+ {
+  "name": "snippet_0498.js",
+  "source": "({value:1})!"
+ },
+ {
+  "name": "snippet_0499.js",
+  "source": "; const snapshot=source.value; mutate(source); return snapshot;"
+ },
+ {
+  "name": "snippet_0500.mjs",
+  "source": "export function result() { ; const snapshot=source.value; mutate(source); return snapshot; }"
+ },
+ {
+  "name": "snippet_0501.js",
+  "source": "; mutate(source); const snapshot=source.value; return snapshot;"
+ },
+ {
+  "name": "snippet_0502.mjs",
+  "source": "export function result() { ; mutate(source); const snapshot=source.value; return snapshot; }"
+ },
+ {
+  "name": "snippet_0503.js",
+  "source": "(source as {value:number})"
+ },
+ {
+  "name": "snippet_0504.js",
+  "source": "(source satisfies {value:number})"
+ },
+ {
+  "name": "snippet_0505.js",
+  "source": "; const snapshot=alias.value; mutate(alias); return snapshot;"
+ },
+ {
+  "name": "snippet_0506.mjs",
+  "source": "export function result() { ; const snapshot=alias.value; mutate(alias); return snapshot; }"
+ },
+ {
+  "name": "snippet_0507.js",
+  "source": "{child:{}}"
+ },
+ {
+  "name": "snippet_0508.js",
+  "source": "{child:copy=fallback}"
+ },
+ {
+  "name": "snippet_0509.js",
+  "source": "[copy=fallback]"
+ },
+ {
+  "name": "snippet_0510.js",
+  "source": "const source={value:1}, snapshot=source.value; mutate(source);"
+ },
+ {
+  "name": "snippet_0511.js",
+  "source": "const source={value:1}, snapshot=source.value, ignored=mutate(source);"
+ },
+ {
+  "name": "snippet_0512.js",
+  "source": "const source={value:1}, ignored=mutate(source), snapshot=source.value; return snapshot;"
+ },
+ {
+  "name": "snippet_0513.mjs",
+  "source": "export function result() { const source={value:1}, ignored=mutate(source), snapshot=source.value; return snapshot; }"
+ },
+ {
+  "name": "snippet_0514.js",
+  "source": "\n        const source = { *[Symbol.iterator]() { yield this; }, value: 1 };\n        const snapshot = source.value;\n        "
+ },
+ {
+  "name": "snippet_0515.js",
+  "source": "\n        return snapshot;\n      "
+ },
+ {
+  "name": "snippet_0516.mjs",
+  "source": "export function result() { \n        return snapshot;\n       }"
+ },
+ {
+  "name": "snippet_0517.js",
+  "source": "const [copy] = alias;"
+ },
+ {
+  "name": "snippet_0518.js",
+  "source": "const copy = [...alias];"
+ },
+ {
+  "name": "snippet_0519.js",
+  "source": "for (const copy of alias) {}"
+ },
+ {
+  "name": "snippet_0520.js",
+  "source": "\n        const source = { *[Symbol.iterator]() { yield this; }, value: 1 };\n        let alias = source;\n        alias = [];\n        "
+ },
+ {
+  "name": "snippet_0521.js",
+  "source": "const snapshot=source.value;"
+ },
+ {
+  "name": "snippet_0522.js",
+  "source": "const {value:snapshot}=source;"
+ },
+ {
+  "name": "snippet_0523.js",
+  "source": "const copy={value:source.value};"
+ },
+ {
+  "name": "snippet_0524.js",
+  "source": "const copy={[\"snapshot\"]:source.value};"
+ },
+ {
+  "name": "snippet_0525.js",
+  "source": "const copy={[\"\"]:source.value};"
+ },
+ {
+  "name": "snippet_0526.js",
+  "source": "const copy={[0]:source.value};"
+ },
+ {
+  "name": "snippet_0527.js",
+  "source": "const copy={[(\"snapshot\" as string)]:source.value};"
+ },
+ {
+  "name": "snippet_0528.js",
+  "source": "const copy=[source.value];"
+ },
+ {
+  "name": "snippet_0529.js",
+  "source": " mutate(source); return "
+ },
+ {
+  "name": "snippet_0530.mjs",
+  "source": "export function result() {  mutate(source); return  }"
+ },
+ {
+  "name": "snippet_0531.js",
+  "source": "const source={value:1}; mutate(source); "
+ },
+ {
+  "name": "snippet_0532.js",
+  "source": "; mutate(copy); return snapshot;"
+ },
+ {
+  "name": "snippet_0533.mjs",
+  "source": "export function result() { ; mutate(copy); return snapshot; }"
+ },
+ {
+  "name": "snippet_0534.js",
+  "source": "const copy={child:source.child};"
+ },
+ {
+  "name": "snippet_0535.js",
+  "source": "const copy=[source.child];"
+ },
+ {
+  "name": "snippet_0536.js",
+  "source": "const source={child:{value:1}}; "
+ },
+ {
+  "name": "snippet_0537.js",
+  "source": "; mutate(copy); return snapshot.value;"
+ },
+ {
+  "name": "snippet_0538.mjs",
+  "source": "export function result() { ; mutate(copy); return snapshot.value; }"
+ },
+ {
+  "name": "snippet_0539.js",
+  "source": "const alias=source; const snapshot=alias.value; mutate(alias); return snapshot;"
+ },
+ {
+  "name": "snippet_0540.mjs",
+  "source": "export function result() { const alias=source; const snapshot=alias.value; mutate(alias); return snapshot; }"
+ },
+ {
+  "name": "snippet_0541.js",
+  "source": "const alias=source.child; const snapshot=alias.value; mutate(alias); return snapshot;"
+ },
+ {
+  "name": "snippet_0542.mjs",
+  "source": "export function result() { const alias=source.child; const snapshot=alias.value; mutate(alias); return snapshot; }"
+ },
+ {
+  "name": "snippet_0543.js",
+  "source": "const source={value:1,child:{value:1}}; "
+ },
+ {
+  "name": "snippet_0544.js",
+  "source": "const source={value:1}; var alias; const snapshot=alias?.value; mutate(source); alias=source; return snapshot;"
+ },
+ {
+  "name": "snippet_0545.mjs",
+  "source": "export function result() { const source={value:1}; var alias; const snapshot=alias?.value; mutate(source); alias=source; return snapshot; }"
+ },
+ {
+  "name": "snippet_0546.mjs",
+  "source": "const child={value:1}; export function result(){const source={child}; const alias=source.child; const snapshot=alias.value; mutate(alias); return snapshot;}"
+ },
+ {
+  "name": "snippet_0547.mjs",
+  "source": "export function result() { const child={value:1}; export function result(){const source={child}; const alias=source.child; const snapshot=alias.value; mutate(alias); return snapshot;} }"
+ },
+ {
+  "name": "snippet_0548.mjs",
+  "source": "const source={value:1}; export function result(){const snapshot=source.value; mutate(source); return snapshot;}"
+ },
+ {
+  "name": "snippet_0549.mjs",
+  "source": "export function result() { const source={value:1}; export function result(){const snapshot=source.value; mutate(source); return snapshot;} }"
+ },
+ {
+  "name": "snippet_0550.js",
+  "source": "const source={value:1}; for(let i=0;i<2;i++){const snapshot=source.value; mutate(source); if(i===1)return snapshot;}"
+ },
+ {
+  "name": "snippet_0551.mjs",
+  "source": "export function result() { const source={value:1}; for(let i=0;i<2;i++){const snapshot=source.value; mutate(source); if(i===1)return snapshot;} }"
+ },
+ {
+  "name": "snippet_0552.js",
+  "source": "const copy={child:source.child}; return copy.child.value;"
+ },
+ {
+  "name": "snippet_0553.mjs",
+  "source": "export function result() { const copy={child:source.child}; return copy.child.value; }"
+ },
+ {
+  "name": "snippet_0554.js",
+  "source": "const copy=source.child; return copy.value;"
+ },
+ {
+  "name": "snippet_0555.mjs",
+  "source": "export function result() { const copy=source.child; return copy.value; }"
+ },
+ {
+  "name": "snippet_0556.js",
+  "source": "const copy=[source.child]; return copy[0].value;"
+ },
+ {
+  "name": "snippet_0557.mjs",
+  "source": "export function result() { const copy=[source.child]; return copy[0].value; }"
+ },
+ {
+  "name": "snippet_0558.js",
+  "source": "mutate(source); return"
+ },
+ {
+  "name": "snippet_0559.mjs",
+  "source": "export function result() { mutate(source); return }"
+ },
+ {
+  "name": "snippet_0560.js",
+  "source": "const saved=alias;"
+ },
+ {
+  "name": "snippet_0561.js",
+  "source": "alias=saved;"
+ },
+ {
+  "name": "snippet_0562.js",
+  "source": "alias.value=9;"
+ },
+ {
+  "name": "snippet_0563.js",
+  "source": "const saved={child:alias};"
+ },
+ {
+  "name": "snippet_0564.js",
+  "source": "alias=saved.child;"
+ },
+ {
+  "name": "snippet_0565.js",
+  "source": "const {...saved}={child:alias};"
+ },
+ {
+  "name": "snippet_0566.js",
+  "source": "const [...saved]=[alias];"
+ },
+ {
+  "name": "snippet_0567.js",
+  "source": "alias=saved[0];"
+ },
+ {
+  "name": "snippet_0568.js",
+  "source": "const {saved=alias}={};"
+ },
+ {
+  "name": "snippet_0569.js",
+  "source": "mutate(saved);"
+ },
+ {
+  "name": "snippet_0570.js",
+  "source": "mutate(saved.child);"
+ },
+ {
+  "name": "snippet_0571.js",
+  "source": "mutate(saved[0]);"
+ },
+ {
+  "name": "snippet_0572.js",
+  "source": "const [saved=alias]=[];"
+ },
+ {
+  "name": "snippet_0573.js",
+  "source": "saved.method();"
+ },
+ {
+  "name": "snippet_0574.js",
+  "source": "mutate(alias,saved);"
+ },
+ {
+  "name": "snippet_0575.js",
+  "source": "mutate(saved,alias);"
+ },
+ {
+  "name": "snippet_0576.js",
+  "source": " alias={}; "
+ },
+ {
+  "name": "snippet_0577.js",
+  "source": "let {...alias}={child:source};"
+ },
+ {
+  "name": "snippet_0578.js",
+  "source": "alias={child:{}};"
+ },
+ {
+  "name": "snippet_0579.js",
+  "source": "saved.child.value=9;"
+ },
+ {
+  "name": "snippet_0580.js",
+  "source": "let [...alias]=[source];"
+ },
+ {
+  "name": "snippet_0581.js",
+  "source": "alias=[{}];"
+ },
+ {
+  "name": "snippet_0582.js",
+  "source": "saved[0].value=9;"
+ },
+ {
+  "name": "snippet_0583.js",
+  "source": "let {alias=source}={};"
+ },
+ {
+  "name": "snippet_0584.js",
+  "source": "alias={};"
+ },
+ {
+  "name": "snippet_0585.js",
+  "source": "saved.value=9;"
+ },
+ {
+  "name": "snippet_0586.js",
+  "source": "let [alias=source]=[];"
+ },
+ {
+  "name": "snippet_0587.js",
+  "source": " const saved=alias; "
+ },
+ {
+  "name": "snippet_0588.js",
+  "source": "const result = 1; result;"
+ },
+ {
+  "name": "snippet_0589.js",
+  "source": "const { value: renamed } = require(\"fixture\");"
+ },
+ {
+  "name": "snippet_0590.js",
+  "source": "const duplicate = 'first'; const duplicate = 'second';"
+ },
+ {
+  "name": "snippet_0591.mjs",
+  "source": "\n        export default function recovered(value) {\n          const duplicate = 1;\n          const duplicate = 2;\n          return { type: \"item\", text: render(value) };\n        }\n      "
+ },
+ {
+  "name": "snippet_0592.mjs",
+  "source": "export function result() { \n        export default function recovered(value) {\n          const duplicate = 1;\n          const duplicate = 2;\n          return { type: \"item\", text: render(value) };\n        }\n       }"
+ },
+ {
+  "name": "snippet_0593.mjs",
+  "source": "\n      import {\n        setTimeout as later,\n        clearTimeout as cancel,\n      } from \"node:timers\";\n      function run(bus, dynamicName) {\n        const handle = later(work, 25);\n        bus.on(\"ready\", handler);\n        bus.once(dynamicName, handler);\n        bus.emit(\"ready\");\n        bus.off(\"ready\", handler);\n        cancel(handle);\n      }\n    "
+ },
+ {
+  "name": "snippet_0594.js",
+  "source": "\n      function run(setTimeout, clearTimeout) {\n        const handle = setTimeout(work, 1);\n        clearTimeout(handle);\n      }\n    "
+ },
+ {
+  "name": "snippet_0595.js",
+  "source": "\n      const key = resolveKey();\n      fetch(\"https://example.test\", { [key]: 1, body: \"x\" });\n      spawn(\"/bin/tool\", { [key]: vars });\n    "
+ },
+ {
+  "name": "snippet_0596.mjs",
+  "source": "\n        import { spawn } from \"node:child_process\";\n        import { open } from \"node:fs/promises\";\n        Promise.resolve(1);\n        bus.on(\"ready\", handler);\n        setTimeout(work, 1);\n        spawn(\"/bin/tool\");\n        const endpoint = process.env.API_URL;\n        fetch(\"https://example.test\");\n        JSON.parse(raw);\n        open(path);\n      "
+ },
+ {
+  "name": "snippet_0597.js",
+  "source": "const value = choice ? -0 : 0;"
+ },
+ {
+  "name": "snippet_0598.mjs",
+  "source": "\n      import { ipcRenderer as ir } from \"electron\";\n      const { ipcMain: bus } = require(\"electron\");\n      const forwarded = bus;\n      let assigned;\n      assigned = ir;\n      ir.invoke(\"outside\");\n      bus.handle(\"main\", handler);\n      function local(ipcRenderer) {\n        const bus = require(\"./local-bus.js\");\n        ipcRenderer.send(\"shadowed\");\n        return bus;\n      }\n    "
+ },
+ {
+  "name": "snippet_0599.mjs",
+  "source": "export function result() { \n      import { ipcRenderer as ir } from \"electron\";\n      const { ipcMain: bus } = require(\"electron\");\n      const forwarded = bus;\n      let assigned;\n      assigned = ir;\n      ir.invoke(\"outside\");\n      bus.handle(\"main\", handler);\n      function local(ipcRenderer) {\n        const bus = require(\"./local-bus.js\");\n        ipcRenderer.send(\"shadowed\");\n        return bus;\n      }\n     }"
+ },
+ {
+  "name": "snippet_0600.js",
+  "source": "function run(require) { const bus = require(\"electron\").ipcMain; return bus; }"
+ },
+ {
+  "name": "snippet_0601.mjs",
+  "source": "export function result() { function run(require) { const bus = require(\"electron\").ipcMain; return bus; } }"
+ },
+ {
+  "name": "snippet_0602.js",
+  "source": "function run() { const { ipcMain: bus } = require(\"electron\"); function require() {} return bus; }"
+ },
+ {
+  "name": "snippet_0603.mjs",
+  "source": "export function result() { function run() { const { ipcMain: bus } = require(\"electron\"); function require() {} return bus; } }"
+ },
+ {
+  "name": "snippet_0604.js",
+  "source": "{ const bus = require(\"electron\").ipcMain; const require = localLoader; }"
+ },
+ {
+  "name": "snippet_0605.mjs",
+  "source": "import require from \"./loader.js\"; const bus = require(\"electron\").ipcMain;"
+ },
+ {
+  "name": "snippet_0606.js",
+  "source": "\n      const { ipcMain: bus } = require(\"electron\");\n      const forwarded = bus;\n      let assigned;\n      assigned = require(\"electron\").ipcMain;\n      { const require = localLoader; require(\"./local.js\"); }\n    "
+ },
+ {
+  "name": "snippet_0607.js",
+  "source": "${prefix}"
+ },
+ {
+  "name": "snippet_0608.js",
+  "source": "${suffix}"
+ },
+ {
+  "name": "snippet_0609.js",
+  "source": "for (let value = \"inside\"; ready; step()) { consume(value); }"
+ },
+ {
+  "name": "snippet_0610.js",
+  "source": "for (const value of entries) { consume(value); }"
+ },
+ {
+  "name": "snippet_0611.js",
+  "source": "for (const value in entries) { consume(value); }"
+ },
+ {
+  "name": "snippet_0612.js",
+  "source": "\n      const value = \"outside\";\n      "
+ },
+ {
+  "name": "snippet_0613.js",
+  "source": "\n      consume(value);\n    "
+ },
+ {
+  "name": "snippet_0614.js",
+  "source": "\n      const value = \"outside\";\n      for (const value of entries) { callbacks.push(() => value); }\n      consume(value);\n    "
+ },
+ {
+  "name": "snippet_0615.js",
+  "source": "\n      function run() { for (var value of entries) { consume(value); } return value; }\n    "
+ },
+ {
+  "name": "snippet_0616.mjs",
+  "source": "export function result() { \n      function run() { for (var value of entries) { consume(value); } return value; }\n     }"
+ },
+ {
+  "name": "snippet_0617.js",
+  "source": "\n      const Service = \"outside\";\n      const Wrapper = class Service {\n        create() { return new Service(); }\n      };\n      consume(Service);\n    "
+ },
+ {
+  "name": "snippet_0618.mjs",
+  "source": "export function result() { \n      const Service = \"outside\";\n      const Wrapper = class Service {\n        create() { return new Service(); }\n      };\n      consume(Service);\n     }"
+ },
+ {
+  "name": "snippet_0619.js",
+  "source": "\n      const Wrapper = class Internal { create() { return new Internal(); } };\n      consume(Internal);\n    "
+ },
+ {
+  "name": "snippet_0620.mjs",
+  "source": "export function result() { \n      const Wrapper = class Internal { create() { return new Internal(); } };\n      consume(Internal);\n     }"
+ },
+ {
+  "name": "snippet_0621.mjs",
+  "source": "\n      export { ipcRenderer as bridge } from \"electron\";\n      export * from \"./wrapper.js\";\n      export const localValue = 1;\n      const addon = require(\"./native.node\");\n      module.exports.addon = addon;\n      export default function namedDefault() {}\n    "
+ },
+ {
+  "name": "snippet_0622.js",
+  "source": "\n      const key = resolveKey();\n      exports[key] = addon;\n      module.exports[key] = addon;\n      const target = { [key]() { return 1; } };\n      class Holder { [key]() { return 2; } }\n    "
+ },
+ {
+  "name": "snippet_0623.mjs",
+  "source": "export function result() { \n      const key = resolveKey();\n      exports[key] = addon;\n      module.exports[key] = addon;\n      const target = { [key]() { return 1; } };\n      class Holder { [key]() { return 2; } }\n     }"
+ },
+ {
+  "name": "snippet_0624.js",
+  "source": "\n      let a, b, c;\n      ({ a } = source);\n      [b] = list;\n      ({ nested: { c } } = source);\n      for (a of list) {}\n      let d;\n      try { risky(); } catch ({ message }) { report(message); }\n    "
+ },
+ {
+  "name": "snippet_0625.js",
+  "source": "\n      let total = 0;\n      total += 1;\n      total++;\n      total = 2;\n      const observed = total;\n    "
+ },
+ {
+  "name": "snippet_0626.js",
+  "source": "\n      function load(source) {\n        with (host) { consume(target); }\n        eval(\"var injected = 1;\");\n      }\n    "
+ },
+ {
+  "name": "snippet_0627.js",
+  "source": "\n      function shadowed(module, exports) {\n        module.exports.value = 1;\n        exports.other = 2;\n        exports[key] = 3;\n        module.exports[key] = 4;\n        unrelated[key] = 5;\n      }\n    "
+ },
+ {
+  "name": "snippet_0628.js",
+  "source": "\n      const kind = select();\n      switch (kind) {\n        case \"a\": let shared = 1; break;\n        case \"b\": shared = 2; break;\n      }\n    "
+ },
+ {
+  "name": "snippet_0629.js",
+  "source": "\n      class Holder {\n        static { let isolated = 1; }\n        static { let isolated = 2; }\n      }\n    "
+ },
+ {
+  "name": "snippet_0630.js",
+  "source": "\n      class Service {\n        run() {}\n        get value() { return 1; }\n        #privateMethod() {}\n      }\n      const arrow = () => 1;\n      const object = { method() {} };\n    "
+ },
+ {
+  "name": "snippet_0631.mjs",
+  "source": "export function result() { \n      class Service {\n        run() {}\n        get value() { return 1; }\n        #privateMethod() {}\n      }\n      const arrow = () => 1;\n      const object = { method() {} };\n     }"
+ },
+ {
+  "name": "snippet_0632.js",
+  "source": "(choice ? \"one\" : \"two\")"
+ },
+ {
+  "name": "snippet_0633.js",
+  "source": "(choice ? \"one\" : other ? \"two\" : \"three\")"
+ },
+ {
+  "name": "snippet_0634.js",
+  "source": "unsupported()"
+ },
+ {
+  "name": "snippet_0635.js",
+  "source": "({ key: \"value\" })"
+ },
+ {
+  "name": "snippet_0636.js",
+  "source": "condition ? (choice ? \"two\" : \"one\") : \"three\""
+ },
+ {
+  "name": "snippet_0637.js",
+  "source": "condition ? \"three\" : (choice ? \"two\" : \"one\")"
+ },
+ {
+  "name": "snippet_0638.js",
+  "source": "condition ? (choice ? \"two\" : \"one\") : (other ? \"one\" : \"three\")"
+ },
+ {
+  "name": "snippet_0639.js",
+  "source": "condition ? (choice ? \"two\" : \"one\") : (other ? \"one\" : \"two\")"
+ },
+ {
+  "name": "snippet_0640.js",
+  "source": "condition ? (choice ? \"one\" : \"one\") : \"one\""
+ },
+ {
+  "name": "snippet_0641.js",
+  "source": "condition ? (choice ? \"one\" : \"two\") : null"
+ },
+ {
+  "name": "snippet_0642.js",
+  "source": "condition ? null : (choice ? \"one\" : \"two\")"
+ },
+ {
+  "name": "snippet_0643.js",
+  "source": "condition ? (choice ? \"one\" : \"two\") : (other ? \"three\" : missing)"
+ },
+ {
+  "name": "snippet_0644.js",
+  "source": "(choice ? \"\" : \"one\")"
+ },
+ {
+  "name": "snippet_0645.js",
+  "source": "(choice ? \"\" : other ? \"one\" : \"two\")"
+ },
+ {
+  "name": "snippet_0646.js",
+  "source": "(choice ? 0 : \"one\")"
+ },
+ {
+  "name": "snippet_0647.js",
+  "source": "(choice ? 0 : other ? \"one\" : \"two\")"
+ },
+ {
+  "name": "snippet_0648.js",
+  "source": "(choice ? null : \"one\")"
+ },
+ {
+  "name": "snippet_0649.js",
+  "source": "(choice ? null : other ? \"one\" : \"two\")"
+ },
+ {
+  "name": "snippet_0650.js",
+  "source": "(choice ? \"\" : \"one\") || \"two\""
+ },
+ {
+  "name": "snippet_0651.js",
+  "source": "(choice ? 0 : \"one\") && \"two\""
+ },
+ {
+  "name": "snippet_0652.js",
+  "source": "(choice ? null : \"one\") ?? \"two\""
+ },
+ {
+  "name": "snippet_0653.js",
+  "source": "(choice ? \"a\" : \"b\")"
+ },
+ {
+  "name": "snippet_0654.js",
+  "source": "const value0 = \"x\";"
+ },
+ {
+  "name": "snippet_0655.js",
+  "source": "const answer = value100;"
+ },
+ {
+  "name": "snippet_0656.js",
+  "source": "\n      const shared = \"outer\";\n      function readsOuter() { return shared; }\n      function readsShadow() { const shared = \"inner\"; return shared; }\n      function readsMutation() {\n        let shared = \"before\";\n        shared = \"after\";\n        return shared;\n      }\n    "
+ },
+ {
+  "name": "snippet_0657.mjs",
+  "source": "export function result() { \n      const shared = \"outer\";\n      function readsOuter() { return shared; }\n      function readsShadow() { const shared = \"inner\"; return shared; }\n      function readsMutation() {\n        let shared = \"before\";\n        shared = \"after\";\n        return shared;\n      }\n     }"
+ },
+ {
+  "name": "snippet_0658.js",
+  "source": "; const answer = left + right;"
+ },
+ {
+  "name": "snippet_0659.js",
+  "source": "const answer = true;"
+ },
+ {
+  "name": "snippet_0660.js",
+  "source": "(choice ? \"a\" : \"b\") + (other ? \"1\" : \"2\")"
+ },
+ {
+  "name": "snippet_0661.mjs",
+  "source": "\nimport { readFile } from \"node:fs\";\nconst shared = { token: \"TOKEN\" };\nexport function load(path) {\n  return new Promise((resolve) => setTimeout(() => resolve(readFile(path)), 1));\n}\nexport const box = { get() { return shared; } };\nbox.get().value = process.env.MODE ?? \"default\";\n"
+ },
+ {
+  "name": "snippet_0662.mjs",
+  "source": "export function result() { \nimport { readFile } from \"node:fs\";\nconst shared = { token: \"TOKEN\" };\nexport function load(path) {\n  return new Promise((resolve) => setTimeout(() => resolve(readFile(path)), 1));\n}\nexport const box = { get() { return shared; } };\nbox.get().value = process.env.MODE ?? \"default\";\n }"
+ },
+ {
+  "name": "snippet_0663.js",
+  "source": "ambient.open(\"/local\")"
+ },
+ {
+  "name": "snippet_0664.js",
+  "source": "ambient.open(\"/global\")"
+ },
+ {
+  "name": "snippet_0665.js",
+  "source": "NativeWindow()"
+ },
+ {
+  "name": "snippet_0666.js",
+  "source": "limits $direction ambiguity to traversable $relation candidates (incoming=$incoming)"
+ },
+ {
+  "name": "snippet_0667.js",
+  "source": "var arg = []; mutate(arg);"
+ },
+ {
+  "name": "snippet_0668.js",
+  "source": "mutate(arg); var arg = [];"
+ },
+ {
+  "name": "snippet_0669.js",
+  "source": "if (flag) { var arg = []; } mutate(arg);"
+ },
+ {
+  "name": "snippet_0670.js",
+  "source": "\n    exports[\"\"].value = 1;\n    exports[\"\"] = 0;\n    exports[key].value = 2;\n    this.exports.ignored = 3;\n    class Example { #private = 0; read() { this.#private = 1; } }\n  "
+ },
+ {
+  "name": "snippet_0671.js",
+  "source": "\n    (globalThis.webpackChunkLeft || globalThis.webpackChunkRight).push([[1], { 1: function() {} }]);\n    globalThis.webpackChunkOuter.webpackChunkInner.push([[2], { 2: function() {} }]);\n  "
+ },
+ {
+  "name": "snippet_0672.js",
+  "source": "\n      const push = \"push\";\n      const arr = {};\n      arr[push]([[1], { 1: function () {} }]);\n    "
+ },
+ {
+  "name": "snippet_0673.js",
+  "source": "//# sourceMappingURL=app.js.map"
+ },
+ {
+  "name": "snippet_0674.js",
+  "source": "const marker = \"😀\";"
+ },
+ {
+  "name": "snippet_0675.js",
+  "source": "const value = 1;\r/*#  sourceMappingURL=\r\n app.js.map */"
+ },
+ {
+  "name": "snippet_0676.js",
+  "source": "const marker = \"😀\";\r  "
+ },
+ {
+  "name": "snippet_0677.js",
+  "source": "(globalThis.webpackChunkApp satisfies unknown).push([[1], { \"entry\": function () {} }]);"
+ },
+ {
+  "name": "snippet_0678.js",
+  "source": "//@ sourceMappingURL=app.js.map"
+ },
+ {
+  "name": "snippet_0679.js",
+  "source": "/*# sourceMappingURL=app.js.map */"
+ },
+ {
+  "name": "snippet_0680.js",
+  "source": "code();\n/*# sourceMappingURL=vendor.abc.map */"
+ },
+ {
+  "name": "snippet_0681.js",
+  "source": "//# sourceMappingURL=first.map\n/*# sourceMappingURL=second.map */"
+ },
+ {
+  "name": "snippet_0682.js",
+  "source": "const label = \"ğ\";\n//# sourceMappingURL="
+ },
+ {
+  "name": "snippet_0683.js",
+  "source": "sourceMappingURL=x"
+ },
+ {
+  "name": "snippet_0684.js",
+  "source": "//# sourceMappingURL="
+ },
+ {
+  "name": "snippet_0685.js",
+  "source": "//# sourceMappingURL= \t"
+ },
+ {
+  "name": "snippet_0686.js",
+  "source": "/*# sourceMappingURL= */"
+ },
+ {
+  "name": "snippet_0687.js",
+  "source": "//# sourceMappingURLx=app.js.map"
+ },
+ {
+  "name": "snippet_0688.js",
+  "source": "ğ/*@ sourceMappingURL =﻿app.js.map* ignored */"
+ },
+ {
+  "name": "snippet_0689.js",
+  "source": "const value = 1;"
+ },
+ {
+  "name": "snippet_0690.js",
+  "source": "const documentation = \"//# sourceMappingURL=ghost.map \";"
+ },
+ {
+  "name": "snippet_0691.js",
+  "source": "const documentation = \"/*# sourceMappingURL=ghost.map */\";"
+ },
+ {
+  "name": "snippet_0692.js",
+  "source": "const documentation = `//# sourceMappingURL=ghost.map `;"
+ },
+ {
+  "name": "snippet_0693.js",
+  "source": "const pattern = /[//# sourceMappingURL=ghost.map ]/;"
+ },
+ {
+  "name": "snippet_0694.js",
+  "source": "const view = <div>//# sourceMappingURL=ghost.map </div>;"
+ },
+ {
+  "name": "snippet_0695.js",
+  "source": "const documentation: string = \"//# sourceMappingURL=ghost.map \";"
+ },
+ {
+  "name": "snippet_0696.js",
+  "source": "/* Documentation example: //# sourceMappingURL=ghost.map */"
+ },
+ {
+  "name": "snippet_0697.js",
+  "source": "const template = `/*# sourceMappingURL=template.map */`;"
+ },
+ {
+  "name": "snippet_0698.js",
+  "source": "//# sourceMappingURL=real.map"
+ },
+ {
+  "name": "snippet_0699.js",
+  "source": "const value: number = 1;\n//# sourceMappingURL=typed.map"
+ },
+ {
+  "name": "snippet_0700.js",
+  "source": "const view = <div />;\n//# sourceMappingURL=typed.map"
+ },
+ {
+  "name": "snippet_0701.js",
+  "source": "const value = 1; /*@ sourceMappingURL=typed.map */"
+ },
+ {
+  "name": "snippet_0702.js",
+  "source": "const text = `${(() => { /*# sourceMappingURL=typed.map */ return 1; })()}`;"
+ },
+ {
+  "name": "snippet_0703.mjs",
+  "source": "export function result() { const text = `${(() => { /*# sourceMappingURL=typed.map */ return 1; })()}`; }"
+ },
+ {
+  "name": "snippet_0704.js",
+  "source": "let value; let value;\n//# sourceMappingURL=recovered.map"
+ },
+ {
+  "name": "snippet_0705.js",
+  "source": "path.resolve(__dirname, \"preload.cjs\")"
+ },
+ {
+  "name": "snippet_0706.js",
+  "source": "path.posix.resolve(\"ignored\", __dirname, \"preload.js\")"
+ },
+ {
+  "name": "snippet_0707.js",
+  "source": "path.resolve(\"/ignored\", __dirname, \"preload.js\")"
+ },
+ {
+  "name": "snippet_0708.mjs",
+  "source": "path.posix.resolve(\"ignored\", dirname(fileURLToPath(import.meta.url)), \"preload.js\")"
+ },
+ {
+  "name": "snippet_0709.js",
+  "source": "path.resolve(\"ignored\", path.dirname(__filename), \"preload.js\")"
+ },
+ {
+  "name": "snippet_0710.js",
+  "source": "path.resolve(__dirname, \"../preload.js\")"
+ },
+ {
+  "name": "snippet_0711.js",
+  "source": "path.resolve(__dirname, \"sub\", __dirname, \"preload.js\")"
+ },
+ {
+  "name": "snippet_0712.js",
+  "source": "path.resolve(__dirname, \"/shared\", \"preload.js\")"
+ },
+ {
+  "name": "snippet_0713.js",
+  "source": "path.resolve(__dirname)"
+ },
+ {
+  "name": "snippet_0714.js",
+  "source": "path.posix.resolve(`/app`, `/shared`, \"preload.js\")"
+ },
+ {
+  "name": "snippet_0715.js",
+  "source": "path.posix.resolve(\"\" + \"/app\", \"preload.js\")"
+ },
+ {
+  "name": "snippet_0716.js",
+  "source": "path.resolve()"
+ },
+ {
+  "name": "snippet_0717.js",
+  "source": "path.posix.resolve()"
+ },
+ {
+  "name": "snippet_0718.js",
+  "source": "path.resolve(\"sub\", \"../preload.js\")"
+ },
+ {
+  "name": "snippet_0719.js",
+  "source": "path.resolve(\"\", \"\")"
+ },
+ {
+  "name": "snippet_0720.js",
+  "source": "path.resolve(runtimeBase, \"/app/preload.js\")"
+ },
+ {
+  "name": "snippet_0721.js",
+  "source": "path.resolve(\"/app\", runtimeFile)"
+ },
+ {
+  "name": "snippet_0722.js",
+  "source": "path.resolve(runtimeBase, __dirname, \"preload.js\")"
+ },
+ {
+  "name": "snippet_0723.js",
+  "source": "path.resolve(__dirname, runtimeFile)"
+ },
+ {
+  "name": "snippet_0724.js",
+  "source": "path.resolve(...parts, \"/app/preload.js\")"
+ },
+ {
+  "name": "snippet_0725.js",
+  "source": "path.resolve(\"/app\", ...parts)"
+ },
+ {
+  "name": "snippet_0726.js",
+  "source": "path.resolve(42, \"/app/preload.js\")"
+ },
+ {
+  "name": "snippet_0727.js",
+  "source": "path.resolve(\"/app\", null)"
+ },
+ {
+  "name": "snippet_0728.js",
+  "source": "path.resolve(`/app/${runtimeFile}`)"
+ },
+ {
+  "name": "snippet_0729.js",
+  "source": "path.win32.resolve(\"/app\", \"/shared/preload.js\")"
+ },
+ {
+  "name": "snippet_0730.js",
+  "source": "path.win32.resolve(__dirname, \"preload.js\")"
+ },
+ {
+  "name": "snippet_0731.js",
+  "source": "win32.resolve(\"/app\", \"preload.js\")"
+ },
+ {
+  "name": "snippet_0732.js",
+  "source": "resolve(\"/app\", \"preload.js\")"
+ },
+ {
+  "name": "snippet_0733.js",
+  "source": "path.join(\"/app\", \"/shared/preload.js\")"
+ },
+ {
+  "name": "snippet_0734.js",
+  "source": "path.posix.join(\"/app\", \"preload/\")"
+ },
+ {
+  "name": "snippet_0735.js",
+  "source": "path.join(\"sub\", \"../preload.js\")"
+ },
+ {
+  "name": "snippet_0736.js",
+  "source": "path.join(__dirname, \"preload.js\")"
+ },
+ {
+  "name": "snippet_0737.js",
+  "source": "path.join(\"ignored\", __dirname, \"preload.js\")"
+ },
+ {
+  "name": "snippet_0738.mjs",
+  "source": "path.join(dirname(fileURLToPath(import.meta.url)), \"preload.js\")"
+ },
+ {
+  "name": "snippet_0739.js",
+  "source": "join(\"sub\", \"preload.js\")"
+ },
+ {
+  "name": "snippet_0740.js",
+  "source": "path.join()"
+ },
+ {
+  "name": "snippet_0741.js",
+  "source": "path.join(__dirname)"
+ },
+ {
+  "name": "snippet_0742.js",
+  "source": "path.join(\"/app\", runtimeFile)"
+ },
+ {
+  "name": "snippet_0743.js",
+  "source": "path.join(...parts)"
+ },
+ {
+  "name": "snippet_0744.js",
+  "source": "(value) { return JSON.stringify(value); }"
+ },
+ {
+  "name": "snippet_0745.mjs",
+  "source": "export function result() { (value) { return JSON.stringify(value); } }"
+ },
+ {
+  "name": "snippet_0746.mjs",
+  "source": "export function inspect(value) { return JSON.stringify(value); }\n"
+ },
+ {
+  "name": "snippet_0747.mjs",
+  "source": "export function result() { export function inspect(value) { return JSON.stringify(value); }\n }"
+ },
+ {
+  "name": "snippet_0748.mjs",
+  "source": "export const value = 1;\n"
+ },
+ {
+  "name": "snippet_0749.js",
+  "source": "fetch('');"
+ },
+ {
+  "name": "snippet_0750.js",
+  "source": "new WebSocket('');"
+ },
+ {
+  "name": "snippet_0751.js",
+  "source": "navigator.serviceWorker.register('');"
+ },
+ {
+  "name": "snippet_0752.js",
+  "source": "new Worker('');"
+ },
+ {
+  "name": "snippet_0753.js",
+  "source": "const x = require('');"
+ },
+ {
+  "name": "snippet_0754.mjs",
+  "source": "import y from ''; y();"
+ },
+ {
+  "name": "snippet_0755.mjs",
+  "source": "import('');"
+ },
+ {
+  "name": "snippet_0756.js",
+  "source": "localStorage.getItem('');"
+ },
+ {
+  "name": "snippet_0757.js",
+  "source": "localStorage.setItem('', 1);"
+ },
+ {
+  "name": "snippet_0758.js",
+  "source": "indexedDB.open('');"
+ },
+ {
+  "name": "snippet_0759.js",
+  "source": "win.loadFile('');"
+ },
+ {
+  "name": "snippet_0760.js",
+  "source": "win.loadURL('');"
+ },
+ {
+  "name": "snippet_0761.js",
+  "source": "app.get('', handler);"
+ },
+ {
+  "name": "snippet_0762.js",
+  "source": "process.on('', () => 1);"
+ },
+ {
+  "name": "snippet_0763.js",
+  "source": "const { EventEmitter } = require('events'); new EventEmitter().on('', () => 1);"
+ },
+ {
+  "name": "snippet_0764.js",
+  "source": "const { spawn } = require('child_process'); spawn('/bin/x').on('', () => 1);"
+ },
+ {
+  "name": "snippet_0765.js",
+  "source": "const { ipcMain } = require('electron'); ipcMain.handle('', () => 1);"
+ },
+ {
+  "name": "snippet_0766.js",
+  "source": "const { ipcRenderer } = require('electron'); ipcRenderer.invoke('');"
+ },
+ {
+  "name": "snippet_0767.js",
+  "source": "const { contextBridge } = require('electron'); contextBridge.exposeInMainWorld('', {});"
+ },
+ {
+  "name": "snippet_0768.js",
+  "source": "Module.data = { ready: true };"
+ },
+ {
+  "name": "snippet_0769.js",
+  "source": "fetch(''); fetch('\"\"'); fetch('/api'); process.on('', () => 1);"
+ },
+ {
+  "name": "snippet_0770.js",
+  "source": "fetch(''); fetch('\"\"');"
+ },
+ {
+  "name": "snippet_0771.js",
+  "source": "const { ipcMain } = require('electron'); ipcMain.handle('', () => 1); ipcMain.handle('\"\"', () => 2);"
+ },
+ {
+  "name": "snippet_0772.js",
+  "source": "const { contextBridge } = require('electron'); contextBridge.exposeInMainWorld('', {}); contextBridge.exposeInMainWorld('\"\"', {});"
+ },
+ {
+  "name": "snippet_0773.js",
+  "source": "flag ? require(\"./dependency.js\").value : require(\"./dependency.js\").value"
+ },
+ {
+  "name": "snippet_0774.js",
+  "source": "require(\"./dependency.js\").value || require(\"./dependency.js\").value"
+ },
+ {
+  "name": "snippet_0775.js",
+  "source": "flag ? require(\"./dependency.js\").value : localValue"
+ },
+ {
+  "name": "snippet_0776.js",
+  "source": "require(\"./dependency.js\").value ?? localValue"
+ },
+ {
+  "name": "snippet_0777.mjs",
+  "source": ";\nexport { selected };\n"
+ },
+ {
+  "name": "snippet_0778.js",
+  "source": "exports.value = 1;\n"
+ },
+ {
+  "name": "snippet_0779.js",
+  "source": "Result schema rejected 1 issue at /semantic_graph/nodes/42/application_node_ids/0 (custom)"
+ },
+ {
+  "name": "snippet_0780.mjs",
+  "source": "export const value = -0;\n"
+ },
+ {
+  "name": "snippet_0781.mjs",
+  "source": "export const root = { value: -0 };\n"
+ },
+ {
+  "name": "snippet_0782.js",
+  "source": "module.exports = 1;\n"
+ },
+ {
+  "name": "snippet_0783.js",
+  "source": "self.onmessage = null;\n"
+ },
+ {
+  "name": "snippet_0784.js",
+  "source": "fetch('https://api.example.com/v1/users');"
+ },
+ {
+  "name": "snippet_0785.js",
+  "source": "localStorage.setItem('token', 1);"
+ },
+ {
+  "name": "snippet_0786.js",
+  "source": "new Worker('./worker.js');"
+ },
+ {
+  "name": "snippet_0787.js",
+  "source": "const dep = require('./dep.js'); dep();"
+ },
+ {
+  "name": "snippet_0788.mjs",
+  "source": "import('./dep.js');"
+ },
+ {
+  "name": "snippet_0789.mjs",
+  "source": "export const value: number;\n"
+ },
+ {
+  "name": "snippet_0790.mjs",
+  "source": "export const value: number;"
+ },
+ {
+  "name": "snippet_0791.mjs",
+  "source": "export const value = \"ready\" satisfies string;\n"
+ },
+ {
+  "name": "snippet_0792.mjs",
+  "source": "\n    const dependency = require(\"./dependency.ts\")[\"value\" as const] satisfies number;\n    export { dependency };\n    function render<T>() { return \"ready\"; }\n    export const specialized = render<string> satisfies () => string;\n    specialized();\n  "
+ },
+ {
+  "name": "snippet_0793.mjs",
+  "source": "export function result() { \n    const dependency = require(\"./dependency.ts\")[\"value\" as const] satisfies number;\n    export { dependency };\n    function render<T>() { return \"ready\"; }\n    export const specialized = render<string> satisfies () => string;\n    specialized();\n   }"
+ },
+ {
+  "name": "snippet_0794.mjs",
+  "source": "export const identity = <T,>(value: T) => value;"
+ },
+ {
+  "name": "snippet_0795.mjs",
+  "source": "export const identity = <T>(value: T) => value;"
+ },
+ {
+  "name": "snippet_0796.js",
+  "source": "const value = <Widget />;"
+ },
+ {
+  "name": "snippet_0797.mjs",
+  "source": "\n        new BrowserWindow({ webPreferences: {\n          preload: path.resolve(\"ignored\", __dirname, \"preload.cjs\")\n        }});\n        new BrowserWindow({ webPreferences: {\n          preload: fileURLToPath(new URL(\"./preload.mjs\", import.meta.url))\n        }});\n        new BrowserWindow({ webPreferences: {\n          preload: path.join(path.dirname(__filename), \"legacy-preload.js\")\n        }});\n        new BrowserWindow({ webPreferences: {\n          preload: path.posix.resolve(\"/ignored\", dirname(fileURLToPath(import.meta.url)), \"esm-preload.js\")\n        }});\n        new BrowserWindow({ webPreferences: {\n          preload: path.posix.resolve(__dirname, \"/shared\", \"absolute-preload.js/\")\n        }});\n        new BrowserWindow({ webPreferences: {\n          preload: path.posix.resolve(`/templates`, \"template-preload.js\")\n        }});\n        new BrowserWindow({ webPreferences: {\n          preload: new URL(\"./remote-base.js\", location.href)\n        }});\n        window.loadURL(\"file:///renderer/index.html\");\n      "
+ },
+ {
+  "name": "snippet_0798.mjs",
+  "source": "fileURLToPath(new URL(\"./invalid%.cjs\", import.meta.url))"
+ },
+ {
+  "name": "snippet_0799.mjs",
+  "source": "fileURLToPath(new URL(\"./preload%2fname.cjs\", import.meta.url))"
+ },
+ {
+  "name": "snippet_0800.mjs",
+  "source": "fileURLToPath(new URL(\"./preload%5cname.cjs\", import.meta.url))"
+ },
+ {
+  "name": "snippet_0801.mjs",
+  "source": "fileURLToPath(new URL(\"./%2e/preload.cjs\", import.meta.url))"
+ },
+ {
+  "name": "snippet_0802.mjs",
+  "source": "fileURLToPath(new URL(\"https://example.test/preload.cjs\", import.meta.url))"
+ },
+ {
+  "name": "snippet_0803.mjs",
+  "source": "fileURLToPath(new URL(\"//example.test/preload.cjs\", import.meta.url))"
+ },
+ {
+  "name": "snippet_0804.mjs",
+  "source": "fileURLToPath(new URL(\"#fragment\", import.meta.url))"
+ },
+ {
+  "name": "snippet_0805.mjs",
+  "source": "fileURLToPath(new URL(\"?cache=1\", import.meta.url))"
+ },
+ {
+  "name": "snippet_0806.js",
+  "source": "fileURLToPath(new URL(\"./preload.cjs\", runtimeBase))"
+ },
+ {
+  "name": "snippet_0807.mjs",
+  "source": "fileURLToPath(new URL(runtimePath, import.meta.url))"
+ },
+ {
+  "name": "snippet_0808.mjs",
+  "source": "convertFileURLToPath(new URL(\"./preload.cjs\", import.meta.url))"
+ },
+ {
+  "name": "snippet_0809.js",
+  "source": "module.exports = \"real preload\";\n"
+ },
+ {
+  "name": "snippet_0810.js",
+  "source": "module.exports = \"encoded-name decoy\";\n"
+ },
+ {
+  "name": "snippet_0811.js",
+  "source": "path.join(__dirname, \"preload%20?#.cjs\")"
+ },
+ {
+  "name": "snippet_0812.mjs",
+  "source": "\nimport \"fs\"; import \"node:test\";"
+ },
+ {
+  "name": "snippet_0813.js",
+  "source": "\nrequire(\"fs\"); require(\"node:test\");"
+ },
+ {
+  "name": "snippet_0814.mjs",
+  "source": "export default \"encoded decoy\";"
+ },
+ {
+  "name": "snippet_0815.js",
+  "source": "module.exports=\"literal decoy\";"
+ },
+ {
+  "name": "snippet_0816.js",
+  "source": "\n      const popup = window;\n      popup.open(url, \"/preview\");\n      {\n        const indexedDB = { open() {} };\n        indexedDB.open(\"PROPFIND\", \"/dav\");\n        indexedDB.open(databaseName, \"2\");\n      }\n      const xhr = new XMLHttpRequest();\n      xhr.open(method, \"/api\");\n      parent.open(\"GET\", \"/parent-target\");\n      self.open(\"POST\", \"/self-target\");\n      document.open(\"GET\", \"/document-target\");\n      {\n        const parent = new XMLHttpRequest();\n        parent.open(method, \"/shadowed-parent\");\n      }\n      indexedDB.open(\"records\", \"2\");\n    "
+ },
+ {
+  "name": "snippet_0817.js",
+  "source": "\n      const outer = 2;\n      function add(value) { return value + outer; }\n      const input = 40;\n      const answer = add(input);\n    "
+ },
+ {
+  "name": "snippet_0818.mjs",
+  "source": "export function result() { \n      const outer = 2;\n      function add(value) { return value + outer; }\n      const input = 40;\n      const answer = add(input);\n     }"
+ },
+ {
+  "name": "snippet_0819.js",
+  "source": "\n      const handlers = { ready() { return 1; } };\n      const key = process.argv[2];\n      handlers[key]();\n    "
+ },
+ {
+  "name": "snippet_0820.mjs",
+  "source": "export function result() { \n      const handlers = { ready() { return 1; } };\n      const key = process.argv[2];\n      handlers[key]();\n     }"
+ },
+ {
+  "name": "snippet_0821.js",
+  "source": "(true ? \"a\" : \"b\")"
+ },
+ {
+  "name": "snippet_0822.js",
+  "source": "\n      function left(value) { return value; }\n      function right(value) { return value; }\n      const input = 1;\n      const selected = Math.random() ? left : right;\n      selected(input);\n    "
+ },
+ {
+  "name": "snippet_0823.mjs",
+  "source": "export function result() { \n      function left(value) { return value; }\n      function right(value) { return value; }\n      const input = 1;\n      const selected = Math.random() ? left : right;\n      selected(input);\n     }"
+ },
+ {
+  "name": "snippet_0824.js",
+  "source": "\n      const outer = 2;\n      function identity(value) { return value; }\n      function readOuter() { return outer; }\n      const input = 40;\n      const output = identity(input);\n    "
+ },
+ {
+  "name": "snippet_0825.mjs",
+  "source": "export function result() { \n      const outer = 2;\n      function identity(value) { return value; }\n      function readOuter() { return outer; }\n      const input = 40;\n      const output = identity(input);\n     }"
+ },
+ {
+  "name": "snippet_0826.js",
+  "source": "\n      async function run(value) {\n        const owned = new Promise((resolve) => resolve(value));\n        await Promise.resolve(owned);\n        Promise.resolve(value).then(work).finally(cleanup);\n        value.then(work);\n        return Promise.all([owned, Promise.resolve(value)]);\n      }\n    "
+ },
+ {
+  "name": "snippet_0827.mjs",
+  "source": "export function result() { \n      async function run(value) {\n        const owned = new Promise((resolve) => resolve(value));\n        await Promise.resolve(owned);\n        Promise.resolve(value).then(work).finally(cleanup);\n        value.then(work);\n        return Promise.all([owned, Promise.resolve(value)]);\n      }\n     }"
+ },
+ {
+  "name": "snippet_0828.js",
+  "source": "\n      function first(value) { return value + 1; }\n      function second(input) { return input + 1; }\n    "
+ },
+ {
+  "name": "snippet_0829.mjs",
+  "source": "export function result() { \n      function first(value) { return value + 1; }\n      function second(input) { return input + 1; }\n     }"
+ },
+ {
+  "name": "snippet_0830.js",
+  "source": "const value = Promise.all([{ promise: Promise.resolve(1) }]);"
+ },
+ {
+  "name": "snippet_0831.js",
+  "source": "\n      const empty = process.env[''];\n      const named = process.env.HOME;\n      const dynamic = process.env[name];\n    "
+ },
+ {
+  "name": "snippet_0832.js",
+  "source": "\n      const target = {\n        ['']() { return 42; },\n        ['\"\"']() { return 2; },\n        [key]() { return 1; },\n      };\n    "
+ },
+ {
+  "name": "snippet_0833.mjs",
+  "source": "export function result() { \n      const target = {\n        ['']() { return 42; },\n        ['\"\"']() { return 2; },\n        [key]() { return 1; },\n      };\n     }"
+ },
+ {
+  "name": "snippet_0834.js",
+  "source": "const answer = 40 + 2;"
+ },
+ {
+  "name": "snippet_0835.js",
+  "source": "external;\n"
+ },
+ {
+  "name": "snippet_0836.js",
+  "source": "\n    const root = { a: { id: 'left' }, b: { id: 'right' }, 'a.id': 'dotted', '': { 'a/b~c': 'escaped' } };\n    const left = root.a.id;\n    const right = root['b']['id'];\n    const missing = root.id;\n    const dotted = root['a.id'];\n    const escaped = root['']['a/b~c'];\n  "
+ },
+ {
+  "name": "snippet_0837.js",
+  "source": "\n    const root = { left: { id: 'before' }, right: { id: 'untouched' } };\n    root.left.id = produce();\n    const { right: { id: selected } } = root;\n    const [first, missing] = [1, , 3];\n  "
+ },
+ {
+  "name": "snippet_0838.js",
+  "source": "\n    const root = { id: 'root', a: { id: 'nested' } };\n    const selected = root[key].id;\n  "
+ },
+ {
+  "name": "snippet_0839.js",
+  "source": "{ a: null }"
+ },
+ {
+  "name": "snippet_0840.js",
+  "source": "{ a: 1 }"
+ },
+ {
+  "name": "snippet_0841.js",
+  "source": "{ a: {} }"
+ },
+ {
+  "name": "snippet_0842.js",
+  "source": "{ a: [] }"
+ },
+ {
+  "name": "snippet_0843.js",
+  "source": "root.length = 0;"
+ },
+ {
+  "name": "snippet_0844.js",
+  "source": "root.length = query(); root[0] = 9;"
+ },
+ {
+  "name": "snippet_0845.js",
+  "source": "const root = [, 1]; "
+ },
+ {
+  "name": "snippet_0846.js",
+  "source": " const length = root.length;"
+ },
+ {
+  "name": "snippet_0847.js",
+  "source": "const root = { known: \"value\", ...dynamic };"
+ },
+ {
+  "name": "snippet_0848.js",
+  "source": "const root = [\"value\", ...dynamic];"
+ },
+ {
+  "name": "snippet_0849.js",
+  "source": "alias = { mode: \"other\" }; if (flag) alias.mode = \"updated\";"
+ },
+ {
+  "name": "snippet_0850.js",
+  "source": "alias = { mode: \"other\" }; flag && (alias.mode = \"updated\");"
+ },
+ {
+  "name": "snippet_0851.js",
+  "source": "\n    const shared = { mode: \"initial\" };\n    let alias = shared;\n    "
+ },
+ {
+  "name": "snippet_0852.js",
+  "source": "; const selected = root.a.b.c;"
+ },
+ {
+  "name": "snippet_0853.js",
+  "source": "\n      function run(bus, dynamicName) {\n        const handle = setInterval(tick, 10);\n        bus.on(\"ready\", handler);\n        bus.once(dynamicName, handler);\n        bus.emit(\"ready\");\n        bus.removeListener(\"ready\", handler);\n        clearInterval(handle);\n      }\n    "
+ },
+ {
+  "name": "snippet_0854.mjs",
+  "source": "\n      import { spawn } from \"node:child_process\";\n      function run(command) {\n        const child = spawn(\n          command,\n          [\"--mode\", \"fast\"],\n          { env: process.env, stdio: \"pipe\" },\n        );\n        child.on(\"exit\", onExit);\n        child.once(\"error\", onError);\n        child.kill(\"SIGTERM\");\n      }\n    "
+ },
+ {
+  "name": "snippet_0855.mjs",
+  "source": "\n      import { spawn } from \"node:child_process\";\n      async function run() {\n        const { data } = await fetch(\"https://example.test\");\n        const [ child ] = spawn(\"worker\", []);\n        child.on(\"exit\", done);\n        const { handle } = setTimeout(done, 5);\n        clearTimeout(handle);\n        return data.json();\n      }\n    "
+ },
+ {
+  "name": "snippet_0856.mjs",
+  "source": "export function result() { \n      import { spawn } from \"node:child_process\";\n      async function run() {\n        const { data } = await fetch(\"https://example.test\");\n        const [ child ] = spawn(\"worker\", []);\n        child.on(\"exit\", done);\n        const { handle } = setTimeout(done, 5);\n        clearTimeout(handle);\n        return data.json();\n      }\n     }"
+ },
+ {
+  "name": "snippet_0857.mjs",
+  "source": "\n      import { spawn } from \"node:child_process\";\n      function run() {\n        const child = wrap(spawn(\"worker\", []));\n        child.on(\"exit\", done);\n        const handle = String(setTimeout(done, 5));\n        clearTimeout(handle);\n      }\n    "
+ },
+ {
+  "name": "snippet_0858.mjs",
+  "source": "\n      import { readFileSync } from \"node:fs\";\n      async function run(schema) {\n        const endpoint = process.env.API_URL ?? \"https://fallback.test\";\n        const raw = readFileSync(\"./config.json\", \"utf8\");\n        const parsed = JSON.parse(raw);\n        const port = Number(process.argv[2]);\n        const validated = schema.parse(parsed);\n        const response = await fetch(endpoint, {\n          method: \"POST\",\n          body: validated,\n        });\n        return response.json();\n      }\n    "
+ },
+ {
+  "name": "snippet_0859.mjs",
+  "source": "export function result() { \n      import { readFileSync } from \"node:fs\";\n      async function run(schema) {\n        const endpoint = process.env.API_URL ?? \"https://fallback.test\";\n        const raw = readFileSync(\"./config.json\", \"utf8\");\n        const parsed = JSON.parse(raw);\n        const port = Number(process.argv[2]);\n        const validated = schema.parse(parsed);\n        const response = await fetch(endpoint, {\n          method: \"POST\",\n          body: validated,\n        });\n        return response.json();\n      }\n     }"
+ },
+ {
+  "name": "snippet_0860.mjs",
+  "source": "\n      import { open } from \"node:fs/promises\";\n      import { connect } from \"node:net\";\n      async function run(path) {\n        const file = await open(path);\n        const socket = connect({ port: 9000 });\n        await file.close();\n        socket.end();\n      }\n    "
+ },
+ {
+  "name": "snippet_0861.js",
+  "source": "\n      const source = { count: 1 };\n      source.count "
+ },
+ {
+  "name": "snippet_0862.js",
+  "source": "\n    const source = { token: \"TOKEN\" };\n    const key = getKey();\n    const { [key]: value } = source;\n  "
+ },
+ {
+  "name": "snippet_0863.js",
+  "source": "\n      function increment(value) { return value + 1; }\n      const input = 1;\n      const output = increment(input);\n    "
+ },
+ {
+  "name": "snippet_0864.mjs",
+  "source": "export function result() { \n      function increment(value) { return value + 1; }\n      const input = 1;\n      const output = increment(input);\n     }"
+ },
+ {
+  "name": "snippet_0865.js",
+  "source": "\n    function inspect(host, source) {\n      with (host) { consume(target); }\n      eval(source);\n    }\n  "
+ },
+ {
+  "name": "snippet_0866.js",
+  "source": "\n    function shadowed(eval, source) { eval(source); }\n    function optional(source) { eval?.(source); }\n    function indirect(source) { (0, eval)(source); }\n  "
+ },
+ {
+  "name": "snippet_0867.js",
+  "source": "\n    const selected = choose();\n    switch (selected) {\n      case 1: let selected = 1; let local = 1; break;\n      case 2: local = 2; break;\n    }\n  "
+ },
+ {
+  "name": "snippet_0868.js",
+  "source": "\n    const host = getHost();\n    const outer = 3;\n    function inspect() {\n      with (host) {\n        const local = 1;\n        consume(local, outer);\n      }\n    }\n  "
+ },
+ {
+  "name": "snippet_0869.js",
+  "source": "\n    class Example {\n      static { var first = 1; }\n      static { var second = 2; consume(first); }\n    }\n  "
+ }
+]

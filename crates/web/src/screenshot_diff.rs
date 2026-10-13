@@ -277,8 +277,8 @@ mod tests {
 
     #[test]
     fn test_screenshot_diff_against_oracle() {
-        let bytes_a = std::fs::read("/workspace/tracewise/fixtures/web/shot_a.png").unwrap();
-        let bytes_b = std::fs::read("/workspace/tracewise/fixtures/web/shot_b.png").unwrap();
+        let bytes_a = std::fs::read(concat!(env!("CARGO_MANIFEST_DIR"), "/../../fixtures/web/shot_a.png")).unwrap();
+        let bytes_b = std::fs::read(concat!(env!("CARGO_MANIFEST_DIR"), "/../../fixtures/web/shot_b.png")).unwrap();
 
         let sha_a = hex::encode(Sha256::digest(&bytes_a));
         let sha_b = hex::encode(Sha256::digest(&bytes_b));
@@ -304,7 +304,7 @@ mod tests {
         .unwrap();
 
         let oracle_str = std::fs::read_to_string(
-            "/workspace/tracewise/fixtures/web/oracle_compare_web_screenshots.json",
+            concat!(env!("CARGO_MANIFEST_DIR"), "/../../fixtures/web/oracle_compare_web_screenshots.json"),
         )
         .unwrap();
         let oracle: serde_json::Value = serde_json::from_str(&oracle_str).unwrap();

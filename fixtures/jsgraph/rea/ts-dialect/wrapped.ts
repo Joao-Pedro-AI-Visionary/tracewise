@@ -1,0 +1,1 @@
+const value = <unknown>require("./dep.js");

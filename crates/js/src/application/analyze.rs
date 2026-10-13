@@ -7,6 +7,8 @@ use tracewise_domain::evidence::{
 };
 
 use crate::error::JsError;
+use crate::jsgraph::control::Cancel;
+use crate::jsgraph::error::AnalysisFailure;
 
 use super::reconstruct::reconstruct_javascript_application;
 
@@ -15,8 +17,19 @@ pub fn analyze_javascript_application(
     format: &str,
     integrity_policy: &str,
 ) -> Result<Evidence, JsError> {
-    let result = reconstruct_javascript_application(input_path, format, integrity_policy)?;
-    let subject = subject_for(input_path, &result)?;
+    analyze_javascript_application_cancellable(input_path, format, integrity_policy, &Cancel::new())
+        .map_err(JsError::from)
+}
+
+/// Like [`analyze_javascript_application`], stopping at the next checkpoint once `cancel` is set.
+pub fn analyze_javascript_application_cancellable(
+    input_path: &str,
+    format: &str,
+    integrity_policy: &str,
+    cancel: &Cancel,
+) -> Result<Evidence, AnalysisFailure> {
+    let result = reconstruct_javascript_application(input_path, format, integrity_policy, cancel)?;
+    let subject = subject_for(&result)?;
     let limitations = string_array(result.get("limitations"))?;
     create_evidence(
         Some(subject),
@@ -45,10 +58,10 @@ pub fn analyze_javascript_application(
             evidence_links: None,
         },
     )
-    .map_err(JsError::from)
+    .map_err(|error| AnalysisFailure::from(JsError::from(error)))
 }
 
-fn subject_for(input_path: &str, result: &Value) -> Result<EvidenceSubject, JsError> {
+fn subject_for(result: &Value) -> Result<EvidenceSubject, JsError> {
     let root = result
         .get("root_artifact_sha256")
         .and_then(|v| v.as_str())
@@ -57,6 +70,10 @@ fn subject_for(input_path: &str, result: &Value) -> Result<EvidenceSubject, JsEr
         .get("format")
         .and_then(|v| v.as_str())
         .ok_or_else(|| JsError::InvalidInput("format missing".into()))?;
+    let input_path = result
+        .get("input_path")
+        .and_then(|v| v.as_str())
+        .ok_or_else(|| JsError::InvalidInput("input_path missing".into()))?;
     let name = std::path::Path::new(input_path)
         .file_name()
         .map(|f| f.to_string_lossy().to_string())

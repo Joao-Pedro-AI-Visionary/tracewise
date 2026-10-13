@@ -1,8 +1,8 @@
 //! Shared guard for tests that need the original REA or an external tool.
 //!
 //! A test that cannot find its oracle must never turn green by returning early
-//! when the environment promises one. With `TRACEWISE_REQUIRE_ORACLE=1` (set by
-//! `/workspace/tools/env.sh`) a missing prerequisite panics and says what is
+//! when the environment promises one. With `TRACEWISE_REQUIRE_ORACLE=1` (set by the
+//! development environment script) a missing prerequisite panics and says what is
 //! missing; without it the test prints the reason and skips, so contributors
 //! without a local REA can still run the rest of the suite.
 
@@ -27,7 +27,7 @@ pub fn require_or_skip(test: &str, missing: &[&str]) -> bool {
     if missing.is_empty() {
         return true;
     }
-    let reason = format!("{test}: missing prerequisites {missing:?} (run `source /workspace/tools/env.sh`; tools live under /workspace/tools and the REA under /workspace/rea-map)");
+    let reason = format!("{test}: missing prerequisites {missing:?} (needs Node 22 and a compiled REA checkout at the listed paths; set {REQUIRE_ENV}=1 to turn this skip into a failure)");
     assert!(!oracle_required(), "{REQUIRE_ENV}=1 but {reason}");
     eprintln!("SKIP: {reason}");
     false
