@@ -18,7 +18,7 @@ Tracewise is a Rust rewrite of [REA](https://github.com/morluto/rea) by morluto 
 
 ## Status
 
-`tools/list` serves **172 tools**: the 170 tools of REA at commit `0fa0b04`, with identical names and schemas, plus `infer_api_spec` and `generate_api_client`. Every tool dispatches to a Rust implementation; the one partial implementation is listed under [What is not proven here](#what-is-not-proven-here).
+`tools/list` serves **172 tools**: the 170 tools of REA at commit `0fa0b04`, with identical names and schemas, plus `infer_api_spec` and `generate_api_client`. Every tool dispatches to a Rust implementation.
 
 | Family | Tools | How parity was checked |
 | --- | ---: | --- |
@@ -52,16 +52,15 @@ How it is checked, always against the compiled REA running live (no recorded ans
 
 ### What is not proven here
 
-- **JavaScript application graph (work in progress).** `analyze_javascript_application` currently rebuilds the graph only for the pinned fixture apps and refuses any other app with a structured error. The tools that consume that graph (`trace_javascript_semantics`, `trace_application_feature`, `compare_application_versions`, `compare_javascript_export_shapes`, `compare_source_to_bundle`) are therefore limited to those fixtures until the oxc-based builder lands.
-
 - **macOS-only paths.** `observe_native_ui`, `capture_native_ui_scenario`, `observe_native_calls` and the LLDB/assetutil/codesign host paths need macOS. On Linux they return the same `unsupported_host` errors as REA. The real macOS behavior was not run.
 - **Commercial engines.** Hopper, IDA and JEB were never installed. Their providers are verified against test doubles that run the real REA bridge code. Behavior against the real products is unverified.
 - **Text formats reconstructed without the Apple tool.** The `designated_requirement` text of `inspect_signature`, the exact `lipo -detailed_info` text of `list_architectures` and the per-rendition fields of `inspect_asset_catalog` were not compared with the Apple tools.
 - **macOS builds.** The workspace passes `cargo check` for `aarch64-apple-darwin`. It has not been linked or run on a Mac.
-- **JavaScript files Babel only recovers from.** REA parses with Babel's `errorRecovery` and analyzes a partial tree for files with recoverable syntax errors (redeclarations, strict-mode early errors, some missing semicolons, and similar). oxc is strict and the port does not rebuild Babel's recovered tree, so an application containing such a file gets an explicit "not converted by this port" error instead of REA's partial result; the recognized cases are exercised by `fixtures/jsgraph/syntax_errors.txt`. One known case (a file ending in a lone `\`) is recorded as a parse failure where Babel recovers. Files Babel cannot parse either are recorded as parse failures, as in REA.
+- **JavaScript files Babel only recovers from.** REA parses with Babel's `errorRecovery`. For a fixed list of recoverable sloppy-mode errors (`with`, legacy octal literals and escapes, redeclarations, `eval`/`arguments` bindings, `delete x`, reserved words, `break`/`continue` targets and similar), each verified against the live Babel parse to give the same tree and error count, the port records that file as `parse_status: "partial"` like REA. Any other recoverable diagnostic (for example `let let`, `export { undeclared }`, duplicate block-level functions) still makes the analysis return an explicit "not converted by this port" error instead of a different answer. A file ending in a lone `\` is recorded as a parse failure where Babel recovers.
 - **Lone surrogates.** A string literal such as `'\ud800'` has no exact Rust `String`. Function fingerprints reproduce REA's output; other string fields that carry such a value (event names, commands, endpoints, configuration keys) can differ.
-- **Parser nesting limit.** Babel's limit depends on the JavaScript stack and the construct; the port treats more than 1,500 nested brackets as a parse failure and refuses syntax trees deeper than 10,000 levels with a structured error. Between a few hundred and about 1,500 nested brackets the two can disagree.
-- **Smaller edges.** An ambiguous top-level `await (x)` (Babel reads it as a call), and a few `file:` source-map URLs whose path segments look like Windows drive letters (the `url` crate and Node's WHATWG parser disagree) are known to differ. Performance and memory on large real-world applications have not been characterized.
+- **Nesting limits (not compared).** The nesting guard lives inside the parser (a vendored `oxc_parser` 0.75.0 with a weighted depth budget, see `vendor/oxc_parser/TRACEWISE_PATCH.md`): input past it is a parse failure for that file, as when Babel overflows Node's stack. Syntax trees that parse but are deeper than 200,000 levels are refused for the whole application. Babel's limit depends on the construct and on Node's stack (about 350 nested arrays, 400 parentheses, 500 calls, 800 blocks on the measuring machine), so between the two limits the answers differ: for example parentheses nested 400 or 600 deep, or arrays nested 1,500 deep, overflow REA's stack and parse here. That band is not compared. Details: [`docs/progress/jsgraph-depth.md`](docs/progress/jsgraph-depth.md).
+- **Smaller edges.** An ambiguous top-level `await (x)` (Babel reads it as a call), and a few `file:` source-map URLs whose path segments look like Windows drive letters (the `url` crate and Node's WHATWG parser disagree) are known to differ.
+- **Memory.** Analysis time is similar to REA's or lower, and time and memory grow linearly with the number of files, but memory per file is much higher. Measured through the MCP surface on synthetic 120-line files, Tracewise used 152 / 910 / 3,517 MB against REA's 321 / 428 / 668 MB for 1 / 8 / 32 files, about 105 MB per file against about 11 MB. Projects of about 1,500 such files run out of memory in both. Streaming serialization and hashing of the result is the identified improvement.
 
 Per-family details, including dependencies and known divergences, are in [`docs/progress/`](docs/progress/).
 
@@ -132,7 +131,11 @@ cargo test --workspace --no-fail-fast
 
 Last full run of the suite: <!-- TEST_COUNT -->.
 
-The parity tests call the original REA, so they need a checkout of REA at `0fa0b04` built with Node 22, plus the engines listed above. The JavaScript application-graph tests (`jsgraph_*`) find it through `REA_SRC` and run the Node scripts in `fixtures/jsgraph/oracle/`; the other families go through `fixtures/rea_oracle.py`, which currently expects REA at the path of the development machine (adjust it locally). Without the oracle the parity tests skip and say why; with `TRACEWISE_REQUIRE_ORACLE=1` they fail.
+### Running the parity tests (and what a green CI run means)
+
+- **REA oracle.** The parity tests run the original REA live. They need a checkout of REA at commit `0fa0b04`, built, and Node 22 on `PATH`. Point `REA_SRC` at the REA source directory; the JavaScript application-graph tests (`jsgraph_*`) read it and run the Node drivers in `fixtures/jsgraph/oracle/`. `fixtures/rea_oracle.py`, used by the other families, reads `REA_SRC` and `REA_NODE` (the Node binary) too.
+- **Skips pass silently.** Without the oracle (or without an optional engine) a parity test prints why and returns early, so it **passes without comparing anything**. A plain `cargo test` on a machine without REA is therefore not evidence of parity. Set `TRACEWISE_REQUIRE_ORACLE=1` to turn every missing oracle or engine into a failure; a CI job that claims parity must set it.
+- **Checkout layout.** Several integration tests and unit tests still assume the repository is checked out at `/workspace/tracewise`, and some look for engines under `/workspace/tools` and REA under `/workspace/rea-map/src`. Outside that layout those tests fail or skip. Making them use `CARGO_MANIFEST_DIR` and environment variables everywhere is pending.
 
 Workspace layout: `domain` (evidence model), `contracts` (tool catalog), `server` (MCP dispatch), `cli`, `web`, `js`, `managed`, `android`, `device` (adb, firmware, native runtime), `native` (Mach-O/ELF/PE/plist/EVM), `engines` (Ghidra/Hopper/IDA), `proc-supervisor`.
 

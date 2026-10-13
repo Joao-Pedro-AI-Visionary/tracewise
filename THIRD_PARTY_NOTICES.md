@@ -75,15 +75,12 @@ These are also Rust rewrites of morluto/rea's TypeScript (MIT, license above) th
 - `fixtures/jsgraph/npm/commander-14.0.3/`: unmodified published package `commander@14.0.3` (MIT, Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>), pinned in `fixtures/jsgraph/npm/PINS.json`.
 - `fixtures/jsgraph/dts/`: TypeScript declaration files copied unmodified from `@types/node`, `isomorphic-git`, `mdast-util-to-hast`, `@jridgewell/trace-mapping`, `jose` and `vfile` (MIT) and from `@typescript/typescript-linux-x64` (Apache-2.0; its `LICENSE` and `NOTICE.txt` are kept). Each package's license file sits next to its files; digests are pinned in `fixtures/jsgraph/dts/PINS.json`.
 - Origin and license per directory: `fixtures/jsgraph/ATTRIBUTION.md`.
+- `vendor/oxc_parser` is `oxc_parser` 0.75.0 from https://github.com/oxc-project/oxc (MIT License, Copyright (c) 2024-present VoidZero Inc. & Contributors, Copyright (c) 2023 Boshen; full text in `vendor/oxc_parser/LICENSE`, taken unchanged from tag `crates_v0.75.0`) with a recursion depth limit added; the change is described in `vendor/oxc_parser/TRACEWISE_PATCH.md`. The other `oxc_*` crates and `stacker` (MIT OR Apache-2.0) come from crates.io unmodified.
 
 ## Third-party test fixtures (not part of the binary)
 
 - `fixtures/managed/real_primitives_net8.dll`, `real_primitives_net462.dll`, `real_systemevents_net8.dll`: assemblies from the NuGet packages Microsoft.Extensions.Primitives 8.0.0 and Microsoft.Win32.SystemEvents 8.0.0, Copyright (c) .NET Foundation and Contributors, MIT License (same text as the MIT license above, with that copyright notice). Origin and hashes in `fixtures/managed/PROVENANCE.txt`.
 - `fixtures/native_static/assets/vendor/*.car`: catalogs from bartoszj/acextract (MIT, Copyright (c) 2014 Bartosz Janda) and coollazy/AssetsParser (Apache-2.0). License texts in `LICENSE-acextract` and `LICENSE-AssetsParser` in the same folder; per-file origin in that folder's `README.md`.
 - Rust dependencies of `crates/native` under licenses other than MIT/Apache-2.0 (Unicode-3.0, Swift Runtime Library Exception): see `crates/native/NOTICE.md`.
-- The port of REA's `application/javascript/*` and `domain/javascript/*` (commit 0fa0b04, MIT) to Rust reproduces the logic of the original; the license above covers that material.
-- The new dependencies of `tracewise-js` are `html5ever` and `markup5ever_rcdom` (MIT OR Apache-2.0, Servo project), used instead of REA's `parse5` to extract `<script>` and `<base>` from HTML.
-- The fixtures under `fixtures/jsgraph/` have their origin and license in `fixtures/jsgraph/ATTRIBUTION.md` (trees generated from REA's test fixtures, MIT; npm packages `ms@2.1.3` and `escape-html@1.0.3`, MIT, with integrity pinned in `fixtures/jsgraph/npm/PINS.json`).
-- `vendor/oxc_parser` is `oxc_parser` 0.75.0 (MIT, Boshen and the Oxc contributors, https://github.com/oxc-project/oxc) with a recursion depth limit added; the change is described in `vendor/oxc_parser/TRACEWISE_PATCH.md`. The other `oxc_*` crates and `stacker` (MIT OR Apache-2.0) come from crates.io unmodified.
 
 External tools used only by the tests (Ghidra, JDK, jadx-headless-mcp, Apktool, Binwalk, Unblob, mitmproxy, Chrome, Electron, Node, REA itself) are not redistributed.

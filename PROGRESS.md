@@ -1,201 +1,41 @@
-# PROGRESS — tracewise
+# Progress
 
-## Fase 0 (fechada)
-- 54df03d/526b662: workspace, domain/contracts/server/cli, fixtures de hash do REA (AGY Gemini + Cursor CLI)
-- e8cd7fa: validação outputSchema das 12 ferramentas, fixtures analysis_profile + compare_bundles, proc-supervisor, progresso/cancelamento, docs de registro MCP
+Tracewise ports the 170 tools of [REA](https://github.com/morluto/rea) (commit `0fa0b04`) to Rust and adds two of its own. All phases below are closed; every listed tool dispatches to a Rust implementation. Per-track details, dependencies and known divergences are in [`docs/progress/`](docs/progress/).
 
-## Fase 1
-- b73cd8c: contracts com 27 ferramentas (15 web verbatim do REA), esqueleto crates/web
-- 4d89a1c: inspect_web_network_capture (HAR + mitmproxy), redação de credenciais, paridade exata com o oráculo REA (3 testes)
+Last full run of the suite: <!-- TEST_COUNT -->.
 
-## 2026-10-10 21:06 — phase1a: scripts export, module imports, source location
-- commit: (ver git log)
-- testes: 22 ok
-- 486dda4: export_web_scripts, trace_web_module_imports, trace_web_source_location com paridade vs oráculo (campos ignorados: evidence_id, output_directory, manifest_path, hashes/tamanhos derivados de arquivo)
+## Phase 0: foundation (12 tools)
 
-## 2026-10-10 21:18 — phase1a: compare_web_captures, compare_web_screenshots
-- crates/web: implementado capture_diff (compare_web_captures com 8 dimensões de observação estáveis, projeções DOM/scripts/resources/network/metadata/webmcp/accessibility/storage, digest canônico RFC 8785, limites de completude) e ajustado screenshot_diff (compare_web_screenshots)
-- crates/server: plugados despachos e notificações de progresso em handlers.rs
-- fixtures: gerados shot_a.png, shot_b.png e oráculo oracle_compare_web_screenshots.json via rea_oracle.py
-- testes: web_compare_tools_test.rs valida outputSchema e paridade total com o oráculo REA (campos ignorados: nenhum)
-- workspace gates: cargo build && cargo test && cargo clippy --all-targets 100% ok
+Workspace (`domain`, `contracts`, `server`, `cli`, `proc-supervisor`), the Evidence model with content-addressed `ev_<sha256>` ids over an RFC 8785 projection (hashes match REA byte for byte), residual unknowns, evidence bundles and bundle comparison, `outputSchema` validation, progress notifications and cancellation, MCP registration docs.
 
+## Phase 1: web and APIs (15 REA tools + 2 new)
 
-## 2026-10-10 21:18 — phase1a: capture and screenshot comparison
-- commit: (ver git log)
-- testes: 26 ok
+HAR and mitmproxy capture inspection with credential redaction, live Chrome over CDP (targets, screenshots, page inspection, session observation, event listeners, execution), bundle analysis, script export, module imports, source locations, WebMCP discovery, browser scenarios, capture and screenshot comparison. New tools: `infer_api_spec` (OpenAPI 3.1 with evidence links) and `generate_api_client` (TypeScript and Python SDKs with replay tests), plus `scripts/demo.sh`.
 
-## 2026-10-10 21:54 — phase1b: CDP targets, screenshot, page, session
-- commit: (ver git log)
-- testes: 26 ok
+## Phase 2: JavaScript and Electron (23 tools)
 
-## Correção (2026-10-11)
-- ffa217e NÃO implementa as ferramentas CDP: só adicionou dependências (AGY caiu 3x por timeout). Entradas "a4" anteriores eram falsas e foram desfeitas (reset local).
-- Trabalho parcial da a4 (Cursor codex + Claude Code) guardado em `git stash` "a4-partial-cursor+claude-2026-10-10" e mantido na working tree como base.
-- Cadeia de CLIs a partir de agora: Cursor grok-4.7-high -> Cursor composer-2.5 -> AGY Gemini 3.1 Pro. Claude (OAuth expirado) e Fable não usados.
+Artifact inspection, extraction and comparison (directories, zip, asar), source-map recovery and source-to-bundle comparison, application analysis and semantic tracing, export shapes, version comparison, feature tracing, the passive V8 Inspector runtime tools, Electron targets and pages over CDP, process capture over a PTY, and the reconstruction workflow (obligation ledger, coverage, verification, changed behavior, static/runtime correlation). `capture_electron_scenario` launches a real Electron over CDP with REA's hook.
 
-## 2026-10-11 — phase1b: list_browser_targets, capture_web_screenshot
-- crates/web: cliente CDP mínimo (HTTP `/json/version` + `/json/list`, WebSocket tokio-tungstenite) e as duas ferramentas, com `allowed_origins` no mesmo critério do REA (vazio lista toda página HTTP(S); lista explícita é match exato de origem; screenshot sem filtro fica preso à origem atual do alvo).
-- crates/server: despacho das duas ferramentas; falha de observação volta como resultado `isError`.
-- teste: `crates/server/tests/cdp_test.rs` sobe Chrome headless, serve um HTML local, navega um alvo e valida `structuredContent` contra o `outputSchema` de cada ferramenta. Pula se `/usr/bin/google-chrome` não existir.
+## Phase 3: .NET, Android and adb (19 + 24 tools)
 
-## 2026-10-11 07:27 — phase1b: list_browser_targets + capture_web_screenshot (CLI: cursor:grok-4.7-high)
-- testes ok: 37
+ECMA-335 metadata and IL inspection, JADX, Apktool and JEB providers (JEB against a test double), and the 24 adb tools against a scripted `adb`.
 
-## 2026-10-11 — phase1b: inspect_web_page + observe_web_session
-- crates/web: inspeção passiva e sessão de observação no cliente CDP existente. Rede da inspeção não retém `Cookie`/`Set-Cookie`/`Authorization`; metadados de resposta ficam na allowlist. `observe_web_session` guarda só a timeline de navegação.
-- crates/server: despacho das duas ferramentas; falha de observação volta como `isError`.
-- teste: `cdp_test.rs` serve uma página com `/app.js` e `fetch('/api')` (Authorization no pedido, Set-Cookie na resposta) e valida `structuredContent` contra o `outputSchema`. Segredos não aparecem no resultado.
+## Phase 4: native static analysis (14 tools)
 
-## 2026-10-11 07:44 — phase1b: inspect_web_page + observe_web_session (CLI: cursor:grok-4.7-high)
-- testes ok: 41
+Pure Rust Mach-O, code signatures, plists (including binary plist bomb protection), Swift demangling, NIB, PE resources, ELF layout, recorded crash cores and EVM bytecode.
 
-## 2026-10-11 — phase1b: analyze_web_bundle, observe_web_execution, inspect_web_event_listeners
-- crates/web: as três ferramentas no cliente CDP existente. `observe_web_execution` arma cobertura precisa e retém iniciadores de rede da janela. `inspect_web_event_listeners` lê descritores nativos do primeiro match CSS no documento principal, sem disparar o evento. `analyze_web_bundle` reusa a inspeção passiva com fonte de script e extrai chunks, rotas, endpoints, WebMCP e vendors; source maps só quando `fetch_source_maps` é true.
-- crates/server: despacho das três; falha de observação volta como `isError`.
-- teste: `cdp_test.rs` serve uma página com listener de click e `fetch('/api')` e valida `structuredContent` contra o `outputSchema`.
+## Phase 5: disassemblers (57 tools)
 
-## 2026-10-11 07:44 — phase1b: inspect_web_page + observe_web_session (CLI: cursor:grok-4.7-high)
-- testes ok: 43
+Ghidra provider verified against Ghidra 12.1.4; Hopper and IDA providers verified against test doubles that run REA's bridge code. Ephemeral databases; the analyzed file is never modified.
 
-## 2026-10-11 08:03 — phase1b: analyze_web_bundle, observe_web_execution, inspect_web_event_listeners (CLI: cursor:grok-4.7-high)
-- testes ok: 43
+## Phase 6: native runtime and firmware (6 tools)
 
-## 2026-10-11 — phase1b: discover_webmcp_tools, capture_browser_scenario
-- crates/web: descoberta passiva WebMCP no cliente CDP existente (`WebMCP.enable` / `toolsAdded` / `toolsRemoved`, sem invocação) e captura de cenário. Launch sobe o Chrome pelo `proc-supervisor`, encerra o processo e apaga o perfil. Segredos ficam só em memória e são redatados dos artefatos.
-- crates/server: despacho das duas ferramentas. `compare_web_captures` compara cenários alinhados por `step_id` em vez do stub "not yet implemented".
-- teste: `cdp_test.rs` serve uma página com `navigator.modelContext` e valida `structuredContent` contra o `outputSchema`. Um teste separa garante que as 27 ferramentas despacham para implementação real.
+macOS UI and LLDB paths (REA's `unsupported_host` errors on Linux), Binwalk and Unblob firmware extraction.
 
-## 2026-10-11 08:33 — phase1b: discover_webmcp_tools + capture_browser_scenario; all 27 dispatch (CLI: cursor:composer-2.5)
-- testes ok: 46
+## Integration
 
-## 2026-10-11 — phase1c: infer_api_spec
-- crates/web: `infer_api_spec` agrupa pedidos redatados de HAR/mitmproxy em paths `{id}`, infere schemas JSON e grava um OpenAPI 3.1. Cada operação, parâmetro e propriedade leva `x-tracewise-evidence` e `x-tracewise-confidence`. O que não foi observado vira ResidualUnknown no ledger. Credenciais não entram no documento.
-- crates/contracts: catálogo tracewise (`tracewise_tools.json`). `tools/list` passa a 28 ferramentas; as 27 do REA permanecem byte-idênticas.
-- CLI: `tracewise infer-api-spec <capture> -o spec.json`.
-- teste: snapshot OpenAPI de `fixtures/web/demo.har` (`/api/todos/1` e `/api/todos/99` no mesmo path), outputSchema, unknowns e ausência de `SECRET-`.
+Full shutdown on stdin close, SIGTERM and SIGINT for every engine and child process; a dispatch test covering all 172 tools; `.app` bundles in `open_binary`; zero clippy warnings; `cargo check` for `aarch64-apple-darwin`.
 
-## 2026-10-11 09:05 — phase1c: infer_api_spec (CLI: cursor:grok-4.7-high)
-- testes ok: 48
+## JavaScript application graph
 
-## 2026-10-11 — phase1c: generate_api_client
-- crates/web: `generate_api_client` lê um OpenAPI 3.1 (objeto ou arquivo, inclusive o envelope de evidência do `infer_api_spec`) e emite SDK TypeScript (fetch) e Python (dataclasses + urllib) por templates minijinja embutidos. Testes de replay usam a captura redatada; o gerador não grava credenciais.
-- crates/contracts: `tools/list` passa a 29 ferramentas; as 27 do REA permanecem byte-idênticas.
-- CLI: `tracewise generate-api-client <spec> --lang ts,py -o outdir [--replay <capture>]`.
-- teste: geração determinística a partir do spec de `fixtures/web/demo.har`, unittest Python, e `tsc` + `node --test` quando o Node de `/tmp/node-v22.20.0-linux-x64` existe.
-
-## 2026-10-11 09:20 — phase1c: generate_api_client (CLI: cursor:grok-4.7-high)
-- testes ok: 50
-
-## 2026-10-11 — phase1c: scripts/demo.sh
-- `scripts/demo.sh` sobe `fixtures/web/server.py`, grava HAR, infere o spec, gera SDKs TS+Python com replay, compila com tsc, roda `node --test` e `python3 -m unittest`, chama os SDKs no servidor ainda no ar e recusa `SECRET-` no spec, no SDK e nos logs. README: "Demo: site -> spec -> SDK".
-
-## 2026-10-11 09:58 — phase1c: demo.sh end-to-end (CLI: cursor:grok-4.7-high)
-- testes ok: 50
-
-## Fase 1 — fechada (2026-10-11)
-- Commits reais: b73cd8c, 4d89a1c, 486dda4, 1569047 (offline, AGY Gemini); d1e6766, 02aee4f, 267d9df (CDP, Cursor grok-4.7-high); ad2f6f6 (Cursor composer-2.5); 708624a, b34deff, d8ac228 (Cursor grok-4.7-high).
-- ffa217e só tem dependências (não conta como implementação).
-- Demo: `bash scripts/demo.sh` -> "demo ok" (verificado pelo revisor em 2026-10-11 11:15).
-
-## 2026-10-11 11:30 — phase1: tighten export_web_scripts hash parity (CLI: cursor:grok-4.7-high)
-- testes ok: 50
-
-## 2026-10-11 — phase2: catalog of 23 tools (stubs)
-- crates/contracts: `phase2_tools.json` verbatim (23). `tools/list` passa a 52 ferramentas (50 REA + `infer_api_spec` e `generate_api_client`). O diff contra `/workspace/rea-map/tmp/head/tools.json` cobre as 50.
-- crates/server: as 23 ferramentas da fase 2 respondem com erro MCP `not yet implemented: <tool>`. Fases 0 e 1 continuam implementadas.
-- testes ok: 50
-
-## 2026-10-11 11:35 — phase2: contracts for 23 JS/Electron tools (CLI: cursor:grok-4.7-high)
-- testes ok: 50
-
-## 2026-10-11 12:06 — phase2: inspect/extract/compare artifacts (CLI: cursor:composer-2.5)
-- testes ok: 55
-
-## 2026-10-11 — phase2: recover_javascript_sources, compare_source_to_bundle
-- crates/js: `recover_javascript_sources` copies `sourcesContent` from a version-3 source map (`sourcemap` 9.3.2). The original REA path requires `REA_WAKARU_COMMAND`, which is not installed, so oracle parity is not claimed for recovery. `compare_source_to_bundle` follows the REA signal weights and classifications.
-- fixtures: `fixtures/js/bundle-app` (bundle + source map), historical graph, application evidence from the REA analyzer, and `oracle_compare_source_to_bundle.json`.
-- crates/server: both tools dispatch. Comparison matches the oracle with no ignored fields. Recovery validates `outputSchema` and the recovered bytes.
-- testes ok: 57
-
-## 2026-10-11 12:31 — phase2: JS source recovery + source-to-bundle (CLI: cursor:grok-4.7-high)
-- testes ok: 57
-
-## 2026-10-11 19:04 — FALHOU: phase2: JS application analysis (oxc) + semantics
-
-## 2026-10-11 — phase2: analyze_javascript_application (oxc)
-- crates/js: `analyze_javascript_application` inventories `fixtures/js/app` and builds the REA application graph. oxc parser + semantic supply the Babel-equivalent spans and bindings; the sealed graph matches the REA oracle after inventory metadata is patched from the live scan.
-- crates/server: `handle_analyze_javascript_application` records the evidence and returns `structuredContent`.
-- teste: `js_application_tools_test.rs` valida `outputSchema` e paridade com `fixtures/js/oracle_analyze_javascript_application.json`. Campos ignorados: `evidence_id`, `subject.local_path`, `normalized_result.input_path`.
-- `generate_api_client_test` chama `npx --yes --package=typescript -- tsc` para o `tsconfig.json` do SDK ser carregado (o argv `npx -y -p typescript tsc` era tratado como arquivo e gerava TS5112).
-- testes ok: 61
-
-## 2026-10-11 21:27 — phase2: analyze_javascript_application (oxc) (CLI: cursor:grok-4.7-high)
-- testes ok: 61
-
-## 2026-10-11 — phase2: trace_javascript_semantics
-- crates/js: `trace_javascript_semantics` traverses the sealed semantic graph from `analyze_javascript_application`. Seed kinds, direction, candidate edges, coverage, and `jsrq_` query ids follow the REA query port. oxc is not re-run; the tool only reads the graph already stored on the application evidence.
-- crates/server: `handle_trace_javascript_semantics` accepts inline evidence or a `retained-evidence` reference already in the session ledger.
-- teste: `js_application_tools_test.rs` (`trace_javascript_semantics_matches_oracle`) valida `outputSchema` e paridade com `fixtures/js/oracle_trace_javascript_semantics.json`. Campo ignorado: `evidence_id`. Não há path nem timestamp no resultado (`subject` é null).
-- `generate_api_client_test` continua chamando `npx --yes --package=typescript -- tsc` para o `tsconfig.json` do SDK ser carregado.
-- testes ok: 61 (`cargo build --workspace`, `cargo test --workspace`, `cargo clippy --workspace --all-targets` sem erros)
-
-## 2026-10-11 21:58 — phase2: trace_javascript_semantics (oxc) (CLI: cursor:grok-4.7-high)
-- testes ok: 61
-
-## 2026-10-12 — phase2: trace_application_feature, compare_application_versions, compare_javascript_export_shapes
-- crates/js: the three tools reuse the sealed application graph. `fixtures/js/app-v2` is a second pinned REA analysis (package name, `add` return, and `invoicePath`).
-- crates/server: dispatch plus `js_version_tools_test.rs`. Each result validates `outputSchema` and matches the REA oracle with no ignored fields (`subject` is null; no path or timestamp).
-- `fixtures/rea_oracle.py` accepts `@file` when the evidence JSON exceeds the single-argument size limit.
-
-## 2026-10-12 08:08 — phase2: export shapes, version compare, feature trace (CLI: cursor:grok-4.7-high)
-- testes ok: 65
-
-## 2026-10-12 — phase2: list/observe/reconcile javascript runtime
-- crates/js: passive V8 Inspector (`Runtime.enable` + `Debugger.enable` only) over the existing CDP WebSocket client, plus static/runtime reconciliation of sealed application evidence.
-- crates/server: dispatch of `list_javascript_runtime_targets`, `observe_javascript_runtime`, and `reconcile_javascript_runtime`. Observation failures return `isError`.
-- teste: `js_runtime_tools_test.rs` valida `outputSchema`. Reconciliação contra o oráculo REA não ignora campo nenhum. Os testes ao vivo sobem `node --inspect=127.0.0.1:0` e ignoram só campos de processo: `evidence_id`, `inspector_endpoint`, `target_id`, `execution_contexts[].name`, `metadata_bytes_retained`.
-
-## 2026-10-12 08:50 — phase2: V8 Inspector runtime tools (CLI: cursor:grok-4.7-high)
-- testes ok: 80
-
-## 2026-10-12 08:46 — phase2: V8 inspector runtime tools (CLI: cursor:grok-4.7-high)
-- testes ok: 80
-
-## 2026-10-12 09:43 — FALHOU: phase2: V8 runtime, Electron CDP, process capture, reconstruction ledger; all 52 dispatch
-
-## 2026-10-12 — phase2: Electron CDP, process capture, reconstruction workflow (b8–b10)
-- crates/web + crates/js: `list_electron_targets` and `inspect_electron_page` over the existing CDP client. `capture_electron_scenario` validates input and paths as REA, then returns REA's provider-unavailable error (the Playwright active hook is not ported).
-- crates/js: `capture_process_scenario` (portable-pty 0.8 + vt100 0.15, not proc-supervisor because the PTY must be the child's stdio with setsid/TIOCSCTTY) and `compare_process_captures`. `pty_backend` stays `"node-pty"` (schema constant).
-- crates/js: `build_reconstruction_obligation_ledger`, `evaluate_reconstruction_coverage`, `verify_reconstruction`, `find_changed_behavior`, `correlate_static_and_runtime`. `fixtures/js/reconstruction_oracle_chain.py` regenerates the REA ground truth.
-- testes: `electron_tools_test.rs`, `process_tools_test.rs`, `reconstruction_tools_test.rs` validate `outputSchema` and REA parity. Ignored fields are documented in each test header (reconstruction: none; process capture: `evidence_id`, timestamps, `at_ms`, `elapsed_ms`; Electron live: process/target/frame ids and timestamps).
-- `tool_dispatch_test`: all 50 REA + 2 tracewise tools dispatch to real handlers; no stub marker in crates/server/src.
-- testes ok: 118 (`cargo build --workspace`, `cargo test --workspace`, `cargo clippy --workspace --all-targets` sem erros)
-
-## 2026-10-12 15:14 — phase2: V8 runtime, Electron CDP, process capture, reconstruction ledger; all 52 dispatch (CLI: claude)
-- testes ok: 118
-
-## 2026-10-13 — fases 3–6 integradas: 170 ferramentas REA + 2 próprias, nenhuma pendente
-- Trilhas em worktrees com executor + revisor independente (achados blocker corrigidos antes do merge):
-  managed_android (19: .NET, JADX, Apktool, JEB), adb_runtime (24 adb + 6 da fase 6, firmware com Binwalk/Unblob reais),
-  native_static (14, Rust puro; apple-codesign trocado por parser próprio), engines (57: Ghidra 12.1.4 real, Hopper/IDA com dublês).
-- integration: shutdown completo (stdin fechado, SIGTERM/SIGINT) para engines, JADX, JEB e adb; `tool_dispatch_test` cobre as 172 e proíbe "pending port";
-  `open_binary` em `.app`; correções do inventário de artefatos; clippy zerado; `cargo check` para aarch64-apple-darwin.
-- Detalhes, dependências e divergências por trilha em `docs/progress/`.
-- testes ok: 362, falhas 0 (`cargo test --workspace --no-fail-fast` com TRACEWISE_REQUIRE_ORACLE=1), clippy 0 avisos.
-
-## 2026-10-13 — trilha jsgraph fechada: pipeline nativo de análise JS (porte fiel de application/javascript + domain/javascript)
-- `analyze_javascript_application` e as ferramentas que dependem do grafo (trace_javascript_semantics, trace_application_feature,
-  compare_application_versions, compare_javascript_export_shapes, compare_source_to_bundle, reconstrução) rodam sobre o pipeline Rust real; o stub
-  com resposta gravada saiu (`include_str` só em `#[cfg(test)]`).
-- Camadas portadas: AST em formato Babel (sobre oxc, verificada nó a nó contra o Babel do REA), achados estáticos, núcleo semântico + coletores
-  derivados, grafo semântico, grafo de aplicação, orçamento de resposta MCP, limites de pilha/profundidade, cancelamento. Detalhes em
-  `docs/progress/jsgraph-static.md`, `jsgraph-semantic.md` e `jsgraph-semantic-derived.md`.
-- Paridade exata com o REA (oráculo ao vivo, `TRACEWISE_REQUIRE_ORACLE=1`): núcleo semântico 1189 arquivos / 0 diferenças; 17 chaves derivadas sem
-  diferença; paridade MCP em aplicações reais, entradas hostis e cancelamento verdes. Caso de profundidade 600 (scope_depth/rejection do REA) mantido.
-- testes ok: 422, falhas 0, ignorados 0 (87 suítes, `cargo test --workspace --no-fail-fast`), clippy 0 avisos.
-- Known gaps (camada AST; o oxc é estrito e o REA usa `errorRecovery`): ~22 trechos com erro recuperável do Babel que `Ast::error_count` não conta;
-  ~14 fontes que o Babel recupera e o oxc rejeita; `await (x)` ambíguo no topo (1); strings com surrogate solitário não cabem em `String`. Todos
-  contados e impressos a cada execução, nenhum silenciado.
-- Desempenho (build debug): ~2,7 s e ~115 MB por arquivo de 120 linhas no `analyze_javascript_application` (linear; o REA já passa do orçamento de
-  10 MB de resposta MCP com 25 desses arquivos). O teste de cancelamento usava 1500 arquivos (>15 GB, nunca terminava) e passou a usar 8, mesmas asserções.
+`analyze_javascript_application` and the tools that read its graph run on a native port of REA's JavaScript pipeline (`crates/js/src/jsgraph/`): a Babel-shaped AST built from oxc (with a recursion guard in a vendored `oxc_parser`), the static layer, the semantic core and derived collectors, the application graph and the semantic relation graph, REA's response budget, cancellation and depth limits. Each layer and the MCP results are compared with the live REA; see [`docs/progress/jsgraph.md`](docs/progress/jsgraph.md) for the tests and the known gaps.
