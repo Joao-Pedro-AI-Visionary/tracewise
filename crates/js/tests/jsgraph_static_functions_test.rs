@@ -99,7 +99,7 @@ fn source_map_references_match_rea() {
     let mut cases: Vec<(String, Option<String>, String)> = Vec::new();
     let names = [
         "app.ts", "./app.ts", "../src/app.ts", "../../x.ts", "../../../../../deep.ts", "/abs/app.ts", "//host/app.ts", "webpack:///./src/app.ts", "webpack://pkg/./src/app.ts", "webpack:///src/a b.ts",
-        "file:///home/u/app.ts", "file:///C:/proj/app.ts", "file://server/share/app.ts", "file://localhost/etc/app.ts", "http://example.com/app.ts", "https://u:p@example.com:8443/a/b.ts?q#f",
+        "file:///data/u/app.ts", "file:///C:/proj/app.ts", "file://server/share/app.ts", "file://localhost/etc/app.ts", "http://example.com/app.ts", "https://u:p@example.com:8443/a/b.ts?q#f",
         "C:\\proj\\app.ts", "c:/proj/app.ts", "C:/", "C:\\", "C:\\a\\..\\..\\b.ts", "\\\\server\\share\\app.ts", "\\\\server", "\\\\", "\\\\?\\UNC\\s\\x", "\\\\b\u{fc}cher\\s\\f.ts", "\\\\ho st\\s\\f", "src\\win\\app.ts",
         "dir/", "", ".", "..", "./", "a/../b.ts", "a%2Fb.ts", "a%5Cb.ts", "a%20b.ts", "a%zz.ts", "%E0%A4%A.ts", "\u{e9}\u{1F600}.ts", "a?b.ts", "a#b.ts", "?q", "#f", "data:text/plain,x", "mailto:a@b.c",
         "ng://app/./a.ts", "webpack-internal:///./src/a.ts", "x:y/z.ts", "ftp://h/p.ts", "//", "///x.ts", "/", "C:", "c:x.ts",
