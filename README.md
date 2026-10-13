@@ -129,7 +129,7 @@ cargo clippy --workspace --all-targets      # zero warnings
 cargo test --workspace --no-fail-fast
 ```
 
-Last full run of the suite: <!-- TEST_COUNT -->.
+Last full run of the suite: 434 passed, 0 failed, 0 ignored (`cargo test --workspace` with `TRACEWISE_REQUIRE_ORACLE=1`, 2026-10-13; `cargo clippy --workspace --all-targets` clean).
 
 ### Running the parity tests (and what a green CI run means)
 

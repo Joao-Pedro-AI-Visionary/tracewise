@@ -2,7 +2,7 @@
 
 Tracewise ports the 170 tools of [REA](https://github.com/morluto/rea) (commit `0fa0b04`) to Rust and adds two of its own. All phases below are closed; every listed tool dispatches to a Rust implementation. Per-track details, dependencies and known divergences are in [`docs/progress/`](docs/progress/).
 
-Last full run of the suite: <!-- TEST_COUNT -->.
+Last full run of the suite: 434 passed, 0 failed, 0 ignored (`cargo test --workspace` with `TRACEWISE_REQUIRE_ORACLE=1`, 2026-10-13; `cargo clippy --workspace --all-targets` clean).
 
 ## Phase 0: foundation (12 tools)
 
