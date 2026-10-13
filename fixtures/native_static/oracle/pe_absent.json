@@ -1,0 +1,74 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_c1736db45eb70836c37fa6923814940ec1d5f8e7dc88a1b408e3d05bc9a0ca8b\",\"subject\":{\"name\":\"absent.exe\",\"digest\":{\"sha256\":\"93b05576868e6a4d5e2736f9be6e82ee56009f42f2205e0345435e71cb894404\"},\"format\":\"pe\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/pe/absent.exe\"},\"provider\":{\"id\":\"rea-pe-resources\",\"name\":\"REA PE resource parser\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_pe_resources\",\"parameters\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/pe/absent.exe\",\"max_file_bytes\":67108864,\"max_entries\":4096},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/pe/absent.exe\",\"sha256\":\"93b05576868e6a4d5e2736f9be6e82ee56009f42f2205e0345435e71cb894404\",\"bytes\":1536},\"format\":\"pe32\",\"machine\":332,\"directory\":null,\"directories\":[],\"resources\":[],\"icon_groups\":[],\"coverage\":{\"status\":\"complete\",\"examined_entries\":0,\"resources\":0},\"limitations\":[\"Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.\",\"Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.\",\"Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.\",\"Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.\",\"Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/pe/absent.exe\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_c1736db45eb70836c37fa6923814940ec1d5f8e7dc88a1b408e3d05bc9a0ca8b",
+   "subject": {
+    "name": "absent.exe",
+    "digest": {
+     "sha256": "93b05576868e6a4d5e2736f9be6e82ee56009f42f2205e0345435e71cb894404"
+    },
+    "format": "pe",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/pe/absent.exe"
+   },
+   "provider": {
+    "id": "rea-pe-resources",
+    "name": "REA PE resource parser",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_pe_resources",
+   "parameters": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/pe/absent.exe",
+    "max_file_bytes": 67108864,
+    "max_entries": 4096
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "artifact": {
+     "path": "/workspace/wt/native_static/fixtures/native_static/pe/absent.exe",
+     "sha256": "93b05576868e6a4d5e2736f9be6e82ee56009f42f2205e0345435e71cb894404",
+     "bytes": 1536
+    },
+    "format": "pe32",
+    "machine": 332,
+    "directory": null,
+    "directories": [],
+    "resources": [],
+    "icon_groups": [],
+    "coverage": {
+     "status": "complete",
+     "examined_entries": 0,
+     "resources": 0
+    },
+    "limitations": [
+     "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+     "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+     "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+    "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+    "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "/workspace/wt/native_static/fixtures/native_static/pe/absent.exe"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

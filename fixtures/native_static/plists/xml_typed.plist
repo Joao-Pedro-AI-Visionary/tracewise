@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Blob</key>
+	<data>
+	AAH+/w==
+	</data>
+	<key>CFBundleIdentifier</key>
+	<string>com.example.typed</string>
+	<key>List</key>
+	<array>
+		<data>
+		YWI=
+		</data>
+		<date>1999-12-31T23:59:59Z</date>
+	</array>
+	<key>When</key>
+	<date>2020-01-02T03:04:05Z</date>
+</dict>
+</plist>

@@ -1,0 +1,33 @@
+[package]
+name = "tracewise-engines"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Native analysis engines (Ghidra, Hopper, IDA) behind one provider abstraction"
+
+[dependencies]
+tracewise-domain = { path = "../domain" }
+tracewise-contracts = { path = "../contracts" }
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+hex.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+regex.workspace = true
+async-trait = "0.1"
+libc = "0.2"
+getrandom = "=0.3.4"
+tracing = "0.1"
+rmcp = { workspace = true, features = ["client", "transport-child-process", "transport-streamable-http-client"] }
+reqwest = { workspace = true, features = ["stream"] }
+sse-stream = "0.2"
+futures-util.workspace = true
+process-wrap = { version = "8.2", features = ["tokio1"] }
+url.workspace = true
+fancy-regex = "0.14"
+
+[dev-dependencies]
+flate2 = "1.1"
+tempfile = "3"

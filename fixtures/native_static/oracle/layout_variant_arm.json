@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"unsupported_target\",\"category\":\"unsupported_target\",\"message\":\"Unsupported target for inspect_binary_layout at /workspace/wt/native_static/fixtures/native_static/elf/variants/arm: Initial layout profile requires x86-64 ELF objects.\",\"retryable\":false,\"remediation\":{\"action\":\"Select a target supported by this operation or choose an operation supporting the reported target format.\"},\"details\":{\"operation\":\"inspect_binary_layout\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/elf/variants/arm\",\"reason\":\"Initial layout profile requires x86-64 ELF objects.\",\"captured_output\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false}}}}"
+   }
+  ],
+  "isError": true
+ }
+]

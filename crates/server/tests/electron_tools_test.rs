@@ -43,14 +43,13 @@
 //! (`browser_error_body`: code, message, details). REA's `category`,
 //! `retryable` and `remediation` are not compared for them.
 //!
-//! Limits (documented, not ported): REA's only active provider,
-//! `PlaywrightElectronActiveProvider` (Playwright `_electron.launch` with the
-//! injected `electron-active-hook.cjs`). Tracewise answers existing paths with
-//! REA's provider-not-configured error (`capability_unavailable`). The oracle
-//! cannot produce ground truth for that path here: given a non-Electron
-//! executable, REA's Playwright launch throws an unhandled rejection and the
-//! oracle server process exits. The projection + evidence port is validated
-//! against `outputSchema` from a recorded hook snapshot instead of a live run.
+//! Active scenarios: REA's only active provider, `PlaywrightElectronActiveProvider`,
+//! is ported over CDP (`tracewise_web::electron_active`) and tested against a real
+//! Electron in `electron_active_*_test.rs`. This file covers the case where no
+//! Electron is configured (`TRACEWISE_ELECTRON_EXECUTABLE` unset): REA's
+//! provider-not-configured error (`capability_unavailable`). The projection +
+//! evidence port is also validated against `outputSchema` from a recorded hook
+//! snapshot here.
 
 use std::collections::HashSet;
 use std::net::TcpListener;

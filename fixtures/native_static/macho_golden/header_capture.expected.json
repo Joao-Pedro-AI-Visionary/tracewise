@@ -1,0 +1,591 @@
+{
+ "ok": true,
+ "result": {
+  "format": "mach-o",
+  "endian": null,
+  "word_size": 64,
+  "file_type": "2",
+  "flags": [
+   "0x00200085"
+  ],
+  "uuid": "633B21A4-D14A-3312-A5AD-B3CB919DAC72",
+  "entrypoints": {
+   "items": [
+    {
+     "file_offset": 816
+    }
+   ],
+   "total": 1,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "architectures": {
+   "items": [
+    {
+     "name": "arm64",
+     "cpu_type": null,
+     "cpu_subtype": null,
+     "file_offset": null,
+     "size": null,
+     "alignment": null
+    }
+   ],
+   "total": 1,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "build_metadata": {
+   "items": [
+    {
+     "platform": "1",
+     "minimum_os": "26.0",
+     "sdk": "26.4",
+     "tools": [
+      {
+       "name": "3",
+       "version": "1266.8"
+      }
+     ]
+    }
+   ],
+   "total": 1,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "load_commands": {
+   "items": [
+    {
+     "index": 0,
+     "kind": "LC_SEGMENT_64",
+     "fields": {
+      "cmd": "LC_SEGMENT_64",
+      "cmdsize": 72,
+      "segname": "__PAGEZERO",
+      "vmaddr": 0,
+      "vmsize": 4294967296,
+      "fileoff": 0,
+      "filesize": 0,
+      "maxprot": 0,
+      "initprot": 0,
+      "nsects": 0,
+      "flags": 0
+     }
+    },
+    {
+     "index": 1,
+     "kind": "LC_SEGMENT_64",
+     "fields": {
+      "cmd": "LC_SEGMENT_64",
+      "cmdsize": 232,
+      "segname": "__TEXT",
+      "vmaddr": 4294967296,
+      "vmsize": 16384,
+      "fileoff": 0,
+      "filesize": 16384,
+      "maxprot": 5,
+      "initprot": 5,
+      "nsects": 2,
+      "flags": 0
+     }
+    },
+    {
+     "index": 2,
+     "kind": "LC_SEGMENT_64",
+     "fields": {
+      "cmd": "LC_SEGMENT_64",
+      "cmdsize": 72,
+      "segname": "__LINKEDIT",
+      "vmaddr": 4294983680,
+      "vmsize": 16384,
+      "fileoff": 16384,
+      "filesize": 504,
+      "maxprot": 1,
+      "initprot": 1,
+      "nsects": 0,
+      "flags": 0
+     }
+    },
+    {
+     "index": 3,
+     "kind": "LC_DYLD_CHAINED_FIXUPS",
+     "fields": {
+      "cmd": "LC_DYLD_CHAINED_FIXUPS",
+      "cmdsize": 16,
+      "dataoff": 16384,
+      "datasize": 56
+     }
+    },
+    {
+     "index": 4,
+     "kind": "LC_DYLD_EXPORTS_TRIE",
+     "fields": {
+      "cmd": "LC_DYLD_EXPORTS_TRIE",
+      "cmdsize": 16,
+      "dataoff": 16440,
+      "datasize": 64
+     }
+    },
+    {
+     "index": 5,
+     "kind": "LC_SYMTAB",
+     "fields": {
+      "cmd": "LC_SYMTAB",
+      "cmdsize": 24,
+      "symoff": 16512,
+      "nsyms": 3,
+      "stroff": 16560,
+      "strsize": 48
+     }
+    },
+    {
+     "index": 6,
+     "kind": "LC_DYSYMTAB",
+     "fields": {
+      "cmd": "LC_DYSYMTAB",
+      "cmdsize": 80,
+      "ilocalsym": 0,
+      "nlocalsym": 0,
+      "iextdefsym": 0,
+      "nextdefsym": 3,
+      "iundefsym": 3,
+      "nundefsym": 0,
+      "tocoff": 0,
+      "ntoc": 0,
+      "modtaboff": 0,
+      "nmodtab": 0,
+      "extrefsymoff": 0,
+      "nextrefsyms": 0,
+      "indirectsymoff": 0,
+      "nindirectsyms": 0,
+      "extreloff": 0,
+      "nextrel": 0,
+      "locreloff": 0,
+      "nlocrel": 0
+     }
+    },
+    {
+     "index": 7,
+     "kind": "LC_LOAD_DYLINKER",
+     "fields": {
+      "cmd": "LC_LOAD_DYLINKER",
+      "cmdsize": 32,
+      "name": "/usr/lib/dyld (offset 12)"
+     }
+    },
+    {
+     "index": 8,
+     "kind": "LC_UUID",
+     "fields": {
+      "cmd": "LC_UUID",
+      "cmdsize": 24,
+      "uuid": "633B21A4-D14A-3312-A5AD-B3CB919DAC72"
+     }
+    },
+    {
+     "index": 9,
+     "kind": "LC_BUILD_VERSION",
+     "fields": {
+      "cmd": "LC_BUILD_VERSION",
+      "cmdsize": 32,
+      "platform": 1,
+      "minos": "26.0",
+      "sdk": "26.4",
+      "ntools": 1,
+      "tool": 3,
+      "version": "1266.8"
+     }
+    },
+    {
+     "index": 10,
+     "kind": "LC_SOURCE_VERSION",
+     "fields": {
+      "cmd": "LC_SOURCE_VERSION",
+      "cmdsize": 16,
+      "version": "0.0"
+     }
+    },
+    {
+     "index": 11,
+     "kind": "LC_MAIN",
+     "fields": {
+      "cmd": "LC_MAIN",
+      "cmdsize": 24,
+      "entryoff": 816,
+      "stacksize": 0
+     }
+    },
+    {
+     "index": 12,
+     "kind": "LC_LOAD_DYLIB",
+     "fields": {
+      "cmd": "LC_LOAD_DYLIB",
+      "cmdsize": 56,
+      "name": "/usr/lib/libSystem.B.dylib (offset 24)",
+      "time stamp": "2 Wed Dec 31 19:00:02 1969",
+      "current version": "1356.0.0",
+      "compatibility version": "1.0.0"
+     }
+    },
+    {
+     "index": 13,
+     "kind": "LC_FUNCTION_STARTS",
+     "fields": {
+      "cmd": "LC_FUNCTION_STARTS",
+      "cmdsize": 16,
+      "dataoff": 16504,
+      "datasize": 8
+     }
+    },
+    {
+     "index": 14,
+     "kind": "LC_DATA_IN_CODE",
+     "fields": {
+      "cmd": "LC_DATA_IN_CODE",
+      "cmdsize": 16,
+      "dataoff": 16512,
+      "datasize": 0
+     }
+    },
+    {
+     "index": 15,
+     "kind": "LC_CODE_SIGNATURE",
+     "fields": {
+      "cmd": "LC_CODE_SIGNATURE",
+      "cmdsize": 16,
+      "dataoff": 16608,
+      "datasize": 280
+     }
+    }
+   ],
+   "total": 16,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "dependencies": {
+   "items": [
+    {
+     "path": "/usr/lib/dyld",
+     "kind": "LC_LOAD_DYLINKER",
+     "current_version": null,
+     "compatibility_version": null
+    },
+    {
+     "path": "/usr/lib/libSystem.B.dylib",
+     "kind": "LC_LOAD_DYLIB",
+     "current_version": "1356.0.0",
+     "compatibility_version": "1.0.0"
+    }
+   ],
+   "total": 2,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "imports": {
+   "items": [],
+   "total": null,
+   "exhaustive": false,
+   "limitations": [
+    "dyld_info textual imports may omit chained or toolchain-unsupported metadata."
+   ]
+  },
+  "exports": {
+   "items": [
+    {
+     "name": "__mh_execute_header",
+     "address": "0x100000000",
+     "weak": null,
+     "reexport": false,
+     "source": null
+    },
+    {
+     "name": "_main",
+     "address": "0x100000330",
+     "weak": null,
+     "reexport": false,
+     "source": null
+    },
+    {
+     "name": "_owned_value",
+     "address": "0x100000328",
+     "weak": null,
+     "reexport": false,
+     "source": null
+    }
+   ],
+   "total": null,
+   "exhaustive": false,
+   "limitations": [
+    "Merged nm/dyld_info results may be incomplete for stripped binaries."
+   ]
+  },
+  "segments": {
+   "items": [
+    {
+     "name": "__PAGEZERO",
+     "vm_address": "0x0",
+     "vm_size": 4294967296,
+     "file_offset": 0,
+     "file_size": 0,
+     "maximum_permissions": {
+      "read": false,
+      "write": false,
+      "execute": false,
+      "raw": "0"
+     },
+     "initial_permissions": {
+      "read": false,
+      "write": false,
+      "execute": false,
+      "raw": "0"
+     },
+     "sections": {
+      "items": [],
+      "total": 0,
+      "exhaustive": true,
+      "limitations": []
+     }
+    },
+    {
+     "name": "__TEXT",
+     "vm_address": "0x100000000",
+     "vm_size": 16384,
+     "file_offset": 0,
+     "file_size": 16384,
+     "maximum_permissions": {
+      "read": true,
+      "write": false,
+      "execute": true,
+      "raw": "5"
+     },
+     "initial_permissions": {
+      "read": true,
+      "write": false,
+      "execute": true,
+      "raw": "5"
+     },
+     "sections": {
+      "items": [
+       {
+        "segment": "__TEXT",
+        "name": "__text",
+        "address": "0x100000328",
+        "size": 40,
+        "file_offset": 808,
+        "alignment": 4,
+        "flags": [
+         "2147484672"
+        ]
+       },
+       {
+        "segment": "__TEXT",
+        "name": "__unwind_info",
+        "address": "0x100000350",
+        "size": 96,
+        "file_offset": 848,
+        "alignment": 4,
+        "flags": [
+         "0"
+        ]
+       }
+      ],
+      "total": 2,
+      "exhaustive": true,
+      "limitations": []
+     }
+    },
+    {
+     "name": "__LINKEDIT",
+     "vm_address": "0x100004000",
+     "vm_size": 16384,
+     "file_offset": 16384,
+     "file_size": 504,
+     "maximum_permissions": {
+      "read": true,
+      "write": false,
+      "execute": false,
+      "raw": "1"
+     },
+     "initial_permissions": {
+      "read": true,
+      "write": false,
+      "execute": false,
+      "raw": "1"
+     },
+     "sections": {
+      "items": [],
+      "total": 0,
+      "exhaustive": true,
+      "limitations": []
+     }
+    }
+   ],
+   "total": 3,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "provenance": [
+   {
+    "tool": "file",
+    "command": [
+     "/usr/bin/file",
+     "-b",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 31,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "lipo",
+    "command": [
+     "/usr/bin/lipo",
+     "-detailed_info",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 45,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "otool",
+    "command": [
+     "/usr/bin/otool",
+     "-h",
+     "-l",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 2899,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "nm",
+    "command": [
+     "/usr/bin/nm",
+     "-gjU",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 39,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "dyld_info",
+    "command": [
+     "/usr/bin/dyld_info",
+     "-imports",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 31,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "dyld_info",
+    "command": [
+     "/usr/bin/dyld_info",
+     "-exports",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 157,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "dwarfdump",
+    "command": [
+     "/usr/bin/dwarfdump",
+     "--uuid",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 59,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "vtool",
+    "command": [
+     "/usr/bin/vtool",
+     "-show-build",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 51,
+    "stderr_bytes": 0
+   }
+  ],
+  "limitations": [
+   "Imports and exports combine dyld_info and nm; stripped or toolchain-hidden symbols may be absent.",
+   "vtool output is retained as provenance but only otool build metadata is normalized."
+  ]
+ },
+ "limitations": [
+  "Imports and exports combine dyld_info and nm; stripped or toolchain-hidden symbols may be absent.",
+  "vtool output is retained as provenance but only otool build metadata is normalized."
+ ],
+ "locations": [
+  {
+   "kind": "file-offset-range",
+   "start": 0,
+   "end": 0
+  },
+  {
+   "kind": "file-offset-range",
+   "start": 0,
+   "end": 16384
+  },
+  {
+   "kind": "file-offset-range",
+   "start": 16384,
+   "end": 16888
+  }
+ ]
+}

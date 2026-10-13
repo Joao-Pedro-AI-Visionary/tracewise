@@ -232,9 +232,17 @@ fn handle_open_binary(session: &BinarySession, args: &Value) -> Result<CallToolR
     let format_hint = args.get("format").and_then(|v| v.as_str()).map(|s| s.to_string());
     let provider_id = args.get("provider_id").and_then(|v| v.as_str()).map(|s| s.to_string());
 
-    let result = session
-        .open(path, format_hint, provider_id)
-        .map_err(|e| McpError::invalid_params(e.to_string(), None))?;
+    let result = match session.open(path, format_hint, provider_id) {
+        Ok(result) => result,
+        Err(crate::session::OpenError::Target { path, reason, directory_requires_file }) => {
+            return Ok(crate::tracks::managed_android::support::target_unavailable(
+                &path,
+                &reason,
+                directory_requires_file.then_some("directory_requires_file"),
+            ));
+        }
+        Err(other) => return Err(McpError::invalid_params(other.to_string(), None)),
+    };
 
     Ok(CallToolResult::structured(json!({ "result": result })))
 }
@@ -862,13 +870,17 @@ fn handle_infer_api_spec(session: &BinarySession, args: &Value) -> Result<CallTo
     Ok(CallToolResult::structured(val))
 }
 
+/// What the artifact tools inventory: REA's `BinaryTarget.sourcePath`, i.e. the app bundle when the
+/// target was opened from one, else the target file.
+fn artifact_root(session: &BinarySession) -> Option<String> {
+    if let Some(source) = session.source_bundle.lock().unwrap().as_ref() {
+        return Some(source.bundle.to_string_lossy().into_owned());
+    }
+    session.active_target.lock().unwrap().as_ref().map(|s| s.local_path.clone())
+}
+
 fn handle_inspect_artifact(session: &BinarySession, args: &Value) -> Result<CallToolResult, McpError> {
-    let path = session
-        .active_target
-        .lock()
-        .unwrap()
-        .as_ref()
-        .map(|s| s.local_path.clone())
+    let path = artifact_root(session)
         .ok_or_else(|| McpError::invalid_params("inspect_artifact requires an active binary target (open_binary first)", None))?;
     let integrity_policy = args
         .get("integrity_policy")
@@ -891,12 +903,7 @@ fn handle_inspect_artifact(session: &BinarySession, args: &Value) -> Result<Call
 }
 
 fn handle_extract_artifact(session: &BinarySession, args: &Value) -> Result<CallToolResult, McpError> {
-    let path = session
-        .active_target
-        .lock()
-        .unwrap()
-        .as_ref()
-        .map(|s| s.local_path.clone())
+    let path = artifact_root(session)
         .ok_or_else(|| McpError::invalid_params("extract_artifact requires an active binary target (open_binary first)", None))?;
     let integrity_policy = args
         .get("integrity_policy")

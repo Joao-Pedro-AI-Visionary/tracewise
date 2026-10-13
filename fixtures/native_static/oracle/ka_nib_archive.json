@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"unsupported_target\",\"category\":\"unsupported_target\",\"message\":\"Unsupported target for inspect_keyed_archive at /workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/Resources/Main.storyboardc/Window.nib: Selected file is a compiled NIBArchive, not a Foundation plist archive; decode it with decode_interface_builder\",\"retryable\":false,\"remediation\":{\"action\":\"Decode compiled NIBArchive files with decode_interface_builder on the app bundle.\"},\"details\":{\"operation\":\"inspect_keyed_archive\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/Resources/Main.storyboardc/Window.nib\",\"reason\":\"Selected file is a compiled NIBArchive, not a Foundation plist archive; decode it with decode_interface_builder\"}}}"
+   }
+  ],
+  "isError": true
+ }
+]

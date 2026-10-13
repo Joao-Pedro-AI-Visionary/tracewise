@@ -1,0 +1,141 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_d755c8737b74ae558819900f39078c5b45a74cba60909ef15b64ad1f3cc8032f\",\"subject\":{\"name\":\"segv_code3.core\",\"digest\":{\"sha256\":\"aefe54b924d945eb533147f4901255e88dfbbd35d00abaeea809a8f3edc177e3\"},\"format\":\"elf\",\"architecture\":\"x86_64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/cores/segv_code3.core\"},\"provider\":{\"id\":\"pwntools-elf\",\"name\":\"REA pwntools ELF adapter\",\"version\":\"pwntools@4.15.0;pyelftools@0.33;unicorn@2.1.2\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_recorded_crash\",\"parameters\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/cores/segv_code3.core\",\"include_debugger_context\":false},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/cores/segv_code3.core\",\"sha256\":\"aefe54b924d945eb533147f4901255e88dfbbd35d00abaeea809a8f3edc177e3\",\"bytes\":268},\"format\":\"elf-core\",\"architecture\":\"x86_64-little-endian\",\"target_execution\":\"not-performed\",\"live_process_identity\":\"unknown\",\"segments\":[{\"index\":0,\"type\":\"PT_NOTE\",\"header_location\":{\"offset\":\"0x40\",\"bytes\":\"0x38\"},\"offset\":\"0x78\",\"file_size\":\"0x94\",\"memory_size\":\"0x0\",\"virtual_address\":\"0x0\",\"physical_address\":\"0x0\",\"alignment\":\"0x4\",\"flags\":\"0x0\",\"file_backing\":\"file\"}],\"notes\":[{\"index\":0,\"segment_index\":0,\"type\":\"NT_SIGINFO\",\"location\":{\"offset\":\"0x78\",\"bytes\":\"0x94\"},\"owner_location\":{\"offset\":\"0x84\",\"bytes\":\"0x5\"},\"owner_bytes_base64\":\"Q09SRQA=\",\"owner_display\":\"CORE\",\"descriptor_location\":{\"offset\":\"0x8c\",\"bytes\":\"0x80\"},\"descriptor_bytes_base64\":\"CwAAAAAAAAADAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\"}],\"note_padding\":[],\"threads\":[],\"signals\":[{\"note_index\":0,\"number\":11,\"code\":3,\"errno\":0,\"fault_address\":null,\"fault_address_meaning\":\"unknown\",\"thread_association\":\"unknown\"}],\"debugger\":{\"status\":\"not-requested\"},\"note_interpretation_completeness\":\"unknown\",\"decoder_diagnostics\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false},\"diagnostics\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false},\"limitations\":[\"The initial Linux note profile accepts System V/unspecified or GNU/Linux OSABI with ABI version zero; an unspecified OSABI alone does not prove operating-system origin.\",\"Historical PID and signal values are recorded metadata, not current process identity or attach authority.\",\"Only exact Linux CORE NT_PRSTATUS/NT_SIGINFO owners are interpreted; every descriptor and owner retains original bytes. Other note semantics remain unknown.\",\"NT_SIGINFO thread association is unknown. Only SIGSEGV SEGV_MAPERR/SEGV_ACCERR initially establish a fault-address union meaning.\",\"PT_LOAD file bytes are recorded bytes. Undumped memory and current executable/library identity remain unknown; no current host file is resolved from a recorded pathname.\",\"Missing notes/registers/signals do not establish their absence at the original crash. Full unwinding, executable pairing and live control are not provided.\",\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The initial Linux note profile accepts System V/unspecified or GNU/Linux OSABI with ABI version zero; an unspecified OSABI alone does not prove operating-system origin.\",\"Historical PID and signal values are recorded metadata, not current process identity or attach authority.\",\"Only exact Linux CORE NT_PRSTATUS/NT_SIGINFO owners are interpreted; every descriptor and owner retains original bytes. Other note semantics remain unknown.\",\"NT_SIGINFO thread association is unknown. Only SIGSEGV SEGV_MAPERR/SEGV_ACCERR initially establish a fault-address union meaning.\",\"PT_LOAD file bytes are recorded bytes. Undumped memory and current executable/library identity remain unknown; no current host file is resolved from a recorded pathname.\",\"Missing notes/registers/signals do not establish their absence at the original crash. Full unwinding, executable pairing and live control are not provided.\",\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/cores/segv_code3.core\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_d755c8737b74ae558819900f39078c5b45a74cba60909ef15b64ad1f3cc8032f",
+   "subject": {
+    "name": "segv_code3.core",
+    "digest": {
+     "sha256": "aefe54b924d945eb533147f4901255e88dfbbd35d00abaeea809a8f3edc177e3"
+    },
+    "format": "elf",
+    "architecture": "x86_64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/cores/segv_code3.core"
+   },
+   "provider": {
+    "id": "pwntools-elf",
+    "name": "REA pwntools ELF adapter",
+    "version": "pwntools@4.15.0;pyelftools@0.33;unicorn@2.1.2"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_recorded_crash",
+   "parameters": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/cores/segv_code3.core",
+    "include_debugger_context": false
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "artifact": {
+     "path": "/workspace/wt/native_static/fixtures/native_static/cores/segv_code3.core",
+     "sha256": "aefe54b924d945eb533147f4901255e88dfbbd35d00abaeea809a8f3edc177e3",
+     "bytes": 268
+    },
+    "format": "elf-core",
+    "architecture": "x86_64-little-endian",
+    "target_execution": "not-performed",
+    "live_process_identity": "unknown",
+    "segments": [
+     {
+      "index": 0,
+      "type": "PT_NOTE",
+      "header_location": {
+       "offset": "0x40",
+       "bytes": "0x38"
+      },
+      "offset": "0x78",
+      "file_size": "0x94",
+      "memory_size": "0x0",
+      "virtual_address": "0x0",
+      "physical_address": "0x0",
+      "alignment": "0x4",
+      "flags": "0x0",
+      "file_backing": "file"
+     }
+    ],
+    "notes": [
+     {
+      "index": 0,
+      "segment_index": 0,
+      "type": "NT_SIGINFO",
+      "location": {
+       "offset": "0x78",
+       "bytes": "0x94"
+      },
+      "owner_location": {
+       "offset": "0x84",
+       "bytes": "0x5"
+      },
+      "owner_bytes_base64": "Q09SRQA=",
+      "owner_display": "CORE",
+      "descriptor_location": {
+       "offset": "0x8c",
+       "bytes": "0x80"
+      },
+      "descriptor_bytes_base64": "CwAAAAAAAAADAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+     }
+    ],
+    "note_padding": [],
+    "threads": [],
+    "signals": [
+     {
+      "note_index": 0,
+      "number": 11,
+      "code": 3,
+      "errno": 0,
+      "fault_address": null,
+      "fault_address_meaning": "unknown",
+      "thread_association": "unknown"
+     }
+    ],
+    "debugger": {
+     "status": "not-requested"
+    },
+    "note_interpretation_completeness": "unknown",
+    "decoder_diagnostics": {
+     "stdout": "",
+     "stderr": "",
+     "truncated": false
+    },
+    "diagnostics": {
+     "stdout": "",
+     "stderr": "",
+     "truncated": false
+    },
+    "limitations": [
+     "The initial Linux note profile accepts System V/unspecified or GNU/Linux OSABI with ABI version zero; an unspecified OSABI alone does not prove operating-system origin.",
+     "Historical PID and signal values are recorded metadata, not current process identity or attach authority.",
+     "Only exact Linux CORE NT_PRSTATUS/NT_SIGINFO owners are interpreted; every descriptor and owner retains original bytes. Other note semantics remain unknown.",
+     "NT_SIGINFO thread association is unknown. Only SIGSEGV SEGV_MAPERR/SEGV_ACCERR initially establish a fault-address union meaning.",
+     "PT_LOAD file bytes are recorded bytes. Undumped memory and current executable/library identity remain unknown; no current host file is resolved from a recorded pathname.",
+     "Missing notes/registers/signals do not establish their absence at the original crash. Full unwinding, executable pairing and live control are not provided.",
+     "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "The initial Linux note profile accepts System V/unspecified or GNU/Linux OSABI with ABI version zero; an unspecified OSABI alone does not prove operating-system origin.",
+    "Historical PID and signal values are recorded metadata, not current process identity or attach authority.",
+    "Only exact Linux CORE NT_PRSTATUS/NT_SIGINFO owners are interpreted; every descriptor and owner retains original bytes. Other note semantics remain unknown.",
+    "NT_SIGINFO thread association is unknown. Only SIGSEGV SEGV_MAPERR/SEGV_ACCERR initially establish a fault-address union meaning.",
+    "PT_LOAD file bytes are recorded bytes. Undumped memory and current executable/library identity remain unknown; no current host file is resolved from a recorded pathname.",
+    "Missing notes/registers/signals do not establish their absence at the original crash. Full unwinding, executable pairing and live control are not provided.",
+    "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "/workspace/wt/native_static/fixtures/native_static/cores/segv_code3.core"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

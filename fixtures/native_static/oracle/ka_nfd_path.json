@@ -1,0 +1,103 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_8be1bb0efede086b030ce0bc36f32bba6414e27c84191fb4bbee075384c5e3f3\",\"subject\":{\"name\":\"Ib\",\"digest\":{\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_keyed_archive\",\"parameters\":{\"path\":\"Contents/Resources/Café.plist\",\"offset\":0,\"limit\":20000},\"raw_result\":null,\"normalized_result\":{\"target_sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"archive_path\":\"Contents/Resources/Café.plist\",\"archive_sha256\":\"785217feb0a1691f51ce5592fcbb05f406b179a3f4372456e05baf111ee7ce55\",\"archive_format\":\"xml-plist\",\"roots\":{\"root\":{\"CF$UID\":1}},\"objects\":[{\"id\":0,\"kind\":\"nil\",\"class_id\":null,\"class_name\":null,\"status\":\"nil\",\"value\":\"$null\"},{\"id\":1,\"kind\":\"scalar\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":\"x\"}],\"references\":[{\"source\":null,\"path\":[\"root\"],\"target\":1,\"status\":\"resolved\",\"raw\":{\"CF$UID\":1}}],\"total_objects\":2,\"total_references\":1,\"offset\":0,\"next_offset\":null,\"truncated\":false,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"Contents/Resources/Café.plist\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_8be1bb0efede086b030ce0bc36f32bba6414e27c84191fb4bbee075384c5e3f3",
+   "subject": {
+    "name": "Ib",
+    "digest": {
+     "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_keyed_archive",
+   "parameters": {
+    "path": "Contents/Resources/Café.plist",
+    "offset": 0,
+    "limit": 20000
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+    "archive_path": "Contents/Resources/Café.plist",
+    "archive_sha256": "785217feb0a1691f51ce5592fcbb05f406b179a3f4372456e05baf111ee7ce55",
+    "archive_format": "xml-plist",
+    "roots": {
+     "root": {
+      "CF$UID": 1
+     }
+    },
+    "objects": [
+     {
+      "id": 0,
+      "kind": "nil",
+      "class_id": null,
+      "class_name": null,
+      "status": "nil",
+      "value": "$null"
+     },
+     {
+      "id": 1,
+      "kind": "scalar",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": "x"
+     }
+    ],
+    "references": [
+     {
+      "source": null,
+      "path": [
+       "root"
+      ],
+      "target": 1,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 1
+      }
+     }
+    ],
+    "total_objects": 2,
+    "total_references": 1,
+    "offset": 0,
+    "next_offset": null,
+    "truncated": false,
+    "limitations": [
+     "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+     "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+     "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+    "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+    "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Resources/Café.plist"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

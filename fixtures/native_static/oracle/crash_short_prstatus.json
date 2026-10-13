@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"invalid_request\",\"category\":\"invalid_input\",\"message\":\"Analysis input is invalid. Check the arguments and try again.\",\"retryable\":true,\"remediation\":{\"action\":\"Correct the listed arguments and retry.\"},\"details\":{\"operation\":\"inspect_recorded_crash\",\"issues\":[{\"path\":[\"path\"],\"reason\":\"invalid_format\",\"message\":\"Linux amd64 NT_PRSTATUS descriptor is truncated.\"}],\"captured_output\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false}}}}"
+   }
+  ],
+  "isError": true
+ }
+]

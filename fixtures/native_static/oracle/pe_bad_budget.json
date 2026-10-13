@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "Input validation error: Invalid arguments for tool inspect_pe_resources: max_entries: Too small: expected number to be >=1"
+   }
+  ],
+  "isError": true
+ }
+]

@@ -1,0 +1,385 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_302f54356ad47a51df824a327b4711c76fef191a43925d99c806b9b67dadf919\",\"subject\":{\"name\":\"segv_code2.core\",\"digest\":{\"sha256\":\"5c9ae5b5a1ab68feac9c4c1a10bcb0dac08268aa1bfe34fd7c07abe7cda9e313\"},\"format\":\"elf\",\"architecture\":\"x86_64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/cores/segv_code2.core\"},\"provider\":{\"id\":\"pwntools-elf\",\"name\":\"REA pwntools ELF adapter\",\"version\":\"pwntools@4.15.0;pyelftools@0.33;unicorn@2.1.2\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_recorded_crash\",\"parameters\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/cores/segv_code2.core\",\"include_debugger_context\":false},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/cores/segv_code2.core\",\"sha256\":\"5c9ae5b5a1ab68feac9c4c1a10bcb0dac08268aa1bfe34fd7c07abe7cda9e313\",\"bytes\":624},\"format\":\"elf-core\",\"architecture\":\"x86_64-little-endian\",\"target_execution\":\"not-performed\",\"live_process_identity\":\"unknown\",\"segments\":[{\"index\":0,\"type\":\"PT_NOTE\",\"header_location\":{\"offset\":\"0x40\",\"bytes\":\"0x38\"},\"offset\":\"0x78\",\"file_size\":\"0x1f8\",\"memory_size\":\"0x0\",\"virtual_address\":\"0x0\",\"physical_address\":\"0x0\",\"alignment\":\"0x4\",\"flags\":\"0x0\",\"file_backing\":\"file\"}],\"notes\":[{\"index\":0,\"segment_index\":0,\"type\":\"NT_PRSTATUS\",\"location\":{\"offset\":\"0x78\",\"bytes\":\"0x164\"},\"owner_location\":{\"offset\":\"0x84\",\"bytes\":\"0x5\"},\"owner_bytes_base64\":\"Q09SRQA=\",\"owner_display\":\"CORE\",\"descriptor_location\":{\"offset\":\"0x8c\",\"bytes\":\"0x150\"},\"descriptor_bytes_base64\":\"CwAAAAAAAAAAAAAACwAAAAAAAAAAAAAAAAAAAAAAAACSEAAAAQAAAJIQAACSEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAARAAAAAAAAACEAAAAAAAAAMQAAAAAAAABBAAAAAAAAAFEAAAAAAAAAYQAAAAAAAABxAAAAAAAAAIEAAAAAAAAAkQAAAAAAAAChAAAAAAAAALEAAAAAAAAAwQAAAAAAAADRAAAAAAAAAOEAAAAAAAAA8QAAAAAAAAEBAAAAAAAAAREAAAAAAAABIQAAAAAAAAExAAAAAAAAAUEAAAAAAAABUQAAAAAAAAFhAAAAAAAAAXEAAAAAAAABgQAAAAAAAAGRAAAAAAAAAaEAAAAAAAAAAAAAAAAAAA\"},{\"index\":1,\"segment_index\":0,\"type\":\"NT_SIGINFO\",\"location\":{\"offset\":\"0x1dc\",\"bytes\":\"0x94\"},\"owner_location\":{\"offset\":\"0x1e8\",\"bytes\":\"0x5\"},\"owner_bytes_base64\":\"Q09SRQA=\",\"owner_display\":\"CORE\",\"descriptor_location\":{\"offset\":\"0x1f0\",\"bytes\":\"0x80\"},\"descriptor_bytes_base64\":\"CwAAAAcAAAACAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\"}],\"note_padding\":[],\"threads\":[{\"note_index\":0,\"historical_pid\":4242,\"recorded_current_signal\":11,\"registers\":[{\"name\":\"r15\",\"value\":\"0x1000\",\"location\":{\"offset\":\"0xfc\",\"bytes\":\"0x8\"}},{\"name\":\"r14\",\"value\":\"0x1001\",\"location\":{\"offset\":\"0x104\",\"bytes\":\"0x8\"}},{\"name\":\"r13\",\"value\":\"0x1002\",\"location\":{\"offset\":\"0x10c\",\"bytes\":\"0x8\"}},{\"name\":\"r12\",\"value\":\"0x1003\",\"location\":{\"offset\":\"0x114\",\"bytes\":\"0x8\"}},{\"name\":\"rbp\",\"value\":\"0x1004\",\"location\":{\"offset\":\"0x11c\",\"bytes\":\"0x8\"}},{\"name\":\"rbx\",\"value\":\"0x1005\",\"location\":{\"offset\":\"0x124\",\"bytes\":\"0x8\"}},{\"name\":\"r11\",\"value\":\"0x1006\",\"location\":{\"offset\":\"0x12c\",\"bytes\":\"0x8\"}},{\"name\":\"r10\",\"value\":\"0x1007\",\"location\":{\"offset\":\"0x134\",\"bytes\":\"0x8\"}},{\"name\":\"r9\",\"value\":\"0x1008\",\"location\":{\"offset\":\"0x13c\",\"bytes\":\"0x8\"}},{\"name\":\"r8\",\"value\":\"0x1009\",\"location\":{\"offset\":\"0x144\",\"bytes\":\"0x8\"}},{\"name\":\"rax\",\"value\":\"0x100a\",\"location\":{\"offset\":\"0x14c\",\"bytes\":\"0x8\"}},{\"name\":\"rcx\",\"value\":\"0x100b\",\"location\":{\"offset\":\"0x154\",\"bytes\":\"0x8\"}},{\"name\":\"rdx\",\"value\":\"0x100c\",\"location\":{\"offset\":\"0x15c\",\"bytes\":\"0x8\"}},{\"name\":\"rsi\",\"value\":\"0x100d\",\"location\":{\"offset\":\"0x164\",\"bytes\":\"0x8\"}},{\"name\":\"rdi\",\"value\":\"0x100e\",\"location\":{\"offset\":\"0x16c\",\"bytes\":\"0x8\"}},{\"name\":\"orig_rax\",\"value\":\"0x100f\",\"location\":{\"offset\":\"0x174\",\"bytes\":\"0x8\"}},{\"name\":\"rip\",\"value\":\"0x1010\",\"location\":{\"offset\":\"0x17c\",\"bytes\":\"0x8\"}},{\"name\":\"cs\",\"value\":\"0x1011\",\"location\":{\"offset\":\"0x184\",\"bytes\":\"0x8\"}},{\"name\":\"eflags\",\"value\":\"0x1012\",\"location\":{\"offset\":\"0x18c\",\"bytes\":\"0x8\"}},{\"name\":\"rsp\",\"value\":\"0x1013\",\"location\":{\"offset\":\"0x194\",\"bytes\":\"0x8\"}},{\"name\":\"ss\",\"value\":\"0x1014\",\"location\":{\"offset\":\"0x19c\",\"bytes\":\"0x8\"}},{\"name\":\"fs_base\",\"value\":\"0x1015\",\"location\":{\"offset\":\"0x1a4\",\"bytes\":\"0x8\"}},{\"name\":\"gs_base\",\"value\":\"0x1016\",\"location\":{\"offset\":\"0x1ac\",\"bytes\":\"0x8\"}},{\"name\":\"ds\",\"value\":\"0x1017\",\"location\":{\"offset\":\"0x1b4\",\"bytes\":\"0x8\"}},{\"name\":\"es\",\"value\":\"0x1018\",\"location\":{\"offset\":\"0x1bc\",\"bytes\":\"0x8\"}},{\"name\":\"fs\",\"value\":\"0x1019\",\"location\":{\"offset\":\"0x1c4\",\"bytes\":\"0x8\"}},{\"name\":\"gs\",\"value\":\"0x101a\",\"location\":{\"offset\":\"0x1cc\",\"bytes\":\"0x8\"}}]}],\"signals\":[{\"note_index\":1,\"number\":11,\"code\":2,\"errno\":7,\"fault_address\":\"0x10\",\"fault_address_meaning\":\"recorded-sigsegv-address\",\"thread_association\":\"unknown\"}],\"debugger\":{\"status\":\"not-requested\"},\"note_interpretation_completeness\":\"unknown\",\"decoder_diagnostics\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false},\"diagnostics\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false},\"limitations\":[\"The initial Linux note profile accepts System V/unspecified or GNU/Linux OSABI with ABI version zero; an unspecified OSABI alone does not prove operating-system origin.\",\"Historical PID and signal values are recorded metadata, not current process identity or attach authority.\",\"Only exact Linux CORE NT_PRSTATUS/NT_SIGINFO owners are interpreted; every descriptor and owner retains original bytes. Other note semantics remain unknown.\",\"NT_SIGINFO thread association is unknown. Only SIGSEGV SEGV_MAPERR/SEGV_ACCERR initially establish a fault-address union meaning.\",\"PT_LOAD file bytes are recorded bytes. Undumped memory and current executable/library identity remain unknown; no current host file is resolved from a recorded pathname.\",\"Missing notes/registers/signals do not establish their absence at the original crash. Full unwinding, executable pairing and live control are not provided.\",\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The initial Linux note profile accepts System V/unspecified or GNU/Linux OSABI with ABI version zero; an unspecified OSABI alone does not prove operating-system origin.\",\"Historical PID and signal values are recorded metadata, not current process identity or attach authority.\",\"Only exact Linux CORE NT_PRSTATUS/NT_SIGINFO owners are interpreted; every descriptor and owner retains original bytes. Other note semantics remain unknown.\",\"NT_SIGINFO thread association is unknown. Only SIGSEGV SEGV_MAPERR/SEGV_ACCERR initially establish a fault-address union meaning.\",\"PT_LOAD file bytes are recorded bytes. Undumped memory and current executable/library identity remain unknown; no current host file is resolved from a recorded pathname.\",\"Missing notes/registers/signals do not establish their absence at the original crash. Full unwinding, executable pairing and live control are not provided.\",\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/cores/segv_code2.core\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_302f54356ad47a51df824a327b4711c76fef191a43925d99c806b9b67dadf919",
+   "subject": {
+    "name": "segv_code2.core",
+    "digest": {
+     "sha256": "5c9ae5b5a1ab68feac9c4c1a10bcb0dac08268aa1bfe34fd7c07abe7cda9e313"
+    },
+    "format": "elf",
+    "architecture": "x86_64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/cores/segv_code2.core"
+   },
+   "provider": {
+    "id": "pwntools-elf",
+    "name": "REA pwntools ELF adapter",
+    "version": "pwntools@4.15.0;pyelftools@0.33;unicorn@2.1.2"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_recorded_crash",
+   "parameters": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/cores/segv_code2.core",
+    "include_debugger_context": false
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "artifact": {
+     "path": "/workspace/wt/native_static/fixtures/native_static/cores/segv_code2.core",
+     "sha256": "5c9ae5b5a1ab68feac9c4c1a10bcb0dac08268aa1bfe34fd7c07abe7cda9e313",
+     "bytes": 624
+    },
+    "format": "elf-core",
+    "architecture": "x86_64-little-endian",
+    "target_execution": "not-performed",
+    "live_process_identity": "unknown",
+    "segments": [
+     {
+      "index": 0,
+      "type": "PT_NOTE",
+      "header_location": {
+       "offset": "0x40",
+       "bytes": "0x38"
+      },
+      "offset": "0x78",
+      "file_size": "0x1f8",
+      "memory_size": "0x0",
+      "virtual_address": "0x0",
+      "physical_address": "0x0",
+      "alignment": "0x4",
+      "flags": "0x0",
+      "file_backing": "file"
+     }
+    ],
+    "notes": [
+     {
+      "index": 0,
+      "segment_index": 0,
+      "type": "NT_PRSTATUS",
+      "location": {
+       "offset": "0x78",
+       "bytes": "0x164"
+      },
+      "owner_location": {
+       "offset": "0x84",
+       "bytes": "0x5"
+      },
+      "owner_bytes_base64": "Q09SRQA=",
+      "owner_display": "CORE",
+      "descriptor_location": {
+       "offset": "0x8c",
+       "bytes": "0x150"
+      },
+      "descriptor_bytes_base64": "CwAAAAAAAAAAAAAACwAAAAAAAAAAAAAAAAAAAAAAAACSEAAAAQAAAJIQAACSEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAARAAAAAAAAACEAAAAAAAAAMQAAAAAAAABBAAAAAAAAAFEAAAAAAAAAYQAAAAAAAABxAAAAAAAAAIEAAAAAAAAAkQAAAAAAAAChAAAAAAAAALEAAAAAAAAAwQAAAAAAAADRAAAAAAAAAOEAAAAAAAAA8QAAAAAAAAEBAAAAAAAAAREAAAAAAAABIQAAAAAAAAExAAAAAAAAAUEAAAAAAAABUQAAAAAAAAFhAAAAAAAAAXEAAAAAAAABgQAAAAAAAAGRAAAAAAAAAaEAAAAAAAAAAAAAAAAAAA"
+     },
+     {
+      "index": 1,
+      "segment_index": 0,
+      "type": "NT_SIGINFO",
+      "location": {
+       "offset": "0x1dc",
+       "bytes": "0x94"
+      },
+      "owner_location": {
+       "offset": "0x1e8",
+       "bytes": "0x5"
+      },
+      "owner_bytes_base64": "Q09SRQA=",
+      "owner_display": "CORE",
+      "descriptor_location": {
+       "offset": "0x1f0",
+       "bytes": "0x80"
+      },
+      "descriptor_bytes_base64": "CwAAAAcAAAACAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+     }
+    ],
+    "note_padding": [],
+    "threads": [
+     {
+      "note_index": 0,
+      "historical_pid": 4242,
+      "recorded_current_signal": 11,
+      "registers": [
+       {
+        "name": "r15",
+        "value": "0x1000",
+        "location": {
+         "offset": "0xfc",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "r14",
+        "value": "0x1001",
+        "location": {
+         "offset": "0x104",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "r13",
+        "value": "0x1002",
+        "location": {
+         "offset": "0x10c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "r12",
+        "value": "0x1003",
+        "location": {
+         "offset": "0x114",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "rbp",
+        "value": "0x1004",
+        "location": {
+         "offset": "0x11c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "rbx",
+        "value": "0x1005",
+        "location": {
+         "offset": "0x124",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "r11",
+        "value": "0x1006",
+        "location": {
+         "offset": "0x12c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "r10",
+        "value": "0x1007",
+        "location": {
+         "offset": "0x134",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "r9",
+        "value": "0x1008",
+        "location": {
+         "offset": "0x13c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "r8",
+        "value": "0x1009",
+        "location": {
+         "offset": "0x144",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "rax",
+        "value": "0x100a",
+        "location": {
+         "offset": "0x14c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "rcx",
+        "value": "0x100b",
+        "location": {
+         "offset": "0x154",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "rdx",
+        "value": "0x100c",
+        "location": {
+         "offset": "0x15c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "rsi",
+        "value": "0x100d",
+        "location": {
+         "offset": "0x164",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "rdi",
+        "value": "0x100e",
+        "location": {
+         "offset": "0x16c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "orig_rax",
+        "value": "0x100f",
+        "location": {
+         "offset": "0x174",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "rip",
+        "value": "0x1010",
+        "location": {
+         "offset": "0x17c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "cs",
+        "value": "0x1011",
+        "location": {
+         "offset": "0x184",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "eflags",
+        "value": "0x1012",
+        "location": {
+         "offset": "0x18c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "rsp",
+        "value": "0x1013",
+        "location": {
+         "offset": "0x194",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "ss",
+        "value": "0x1014",
+        "location": {
+         "offset": "0x19c",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "fs_base",
+        "value": "0x1015",
+        "location": {
+         "offset": "0x1a4",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "gs_base",
+        "value": "0x1016",
+        "location": {
+         "offset": "0x1ac",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "ds",
+        "value": "0x1017",
+        "location": {
+         "offset": "0x1b4",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "es",
+        "value": "0x1018",
+        "location": {
+         "offset": "0x1bc",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "fs",
+        "value": "0x1019",
+        "location": {
+         "offset": "0x1c4",
+         "bytes": "0x8"
+        }
+       },
+       {
+        "name": "gs",
+        "value": "0x101a",
+        "location": {
+         "offset": "0x1cc",
+         "bytes": "0x8"
+        }
+       }
+      ]
+     }
+    ],
+    "signals": [
+     {
+      "note_index": 1,
+      "number": 11,
+      "code": 2,
+      "errno": 7,
+      "fault_address": "0x10",
+      "fault_address_meaning": "recorded-sigsegv-address",
+      "thread_association": "unknown"
+     }
+    ],
+    "debugger": {
+     "status": "not-requested"
+    },
+    "note_interpretation_completeness": "unknown",
+    "decoder_diagnostics": {
+     "stdout": "",
+     "stderr": "",
+     "truncated": false
+    },
+    "diagnostics": {
+     "stdout": "",
+     "stderr": "",
+     "truncated": false
+    },
+    "limitations": [
+     "The initial Linux note profile accepts System V/unspecified or GNU/Linux OSABI with ABI version zero; an unspecified OSABI alone does not prove operating-system origin.",
+     "Historical PID and signal values are recorded metadata, not current process identity or attach authority.",
+     "Only exact Linux CORE NT_PRSTATUS/NT_SIGINFO owners are interpreted; every descriptor and owner retains original bytes. Other note semantics remain unknown.",
+     "NT_SIGINFO thread association is unknown. Only SIGSEGV SEGV_MAPERR/SEGV_ACCERR initially establish a fault-address union meaning.",
+     "PT_LOAD file bytes are recorded bytes. Undumped memory and current executable/library identity remain unknown; no current host file is resolved from a recorded pathname.",
+     "Missing notes/registers/signals do not establish their absence at the original crash. Full unwinding, executable pairing and live control are not provided.",
+     "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "The initial Linux note profile accepts System V/unspecified or GNU/Linux OSABI with ABI version zero; an unspecified OSABI alone does not prove operating-system origin.",
+    "Historical PID and signal values are recorded metadata, not current process identity or attach authority.",
+    "Only exact Linux CORE NT_PRSTATUS/NT_SIGINFO owners are interpreted; every descriptor and owner retains original bytes. Other note semantics remain unknown.",
+    "NT_SIGINFO thread association is unknown. Only SIGSEGV SEGV_MAPERR/SEGV_ACCERR initially establish a fault-address union meaning.",
+    "PT_LOAD file bytes are recorded bytes. Undumped memory and current executable/library identity remain unknown; no current host file is resolved from a recorded pathname.",
+    "Missing notes/registers/signals do not establish their absence at the original crash. Full unwinding, executable pairing and live control are not provided.",
+    "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "/workspace/wt/native_static/fixtures/native_static/cores/segv_code2.core"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

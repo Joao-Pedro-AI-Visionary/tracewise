@@ -1,0 +1,1255 @@
+{
+ "file_offsets": [
+  {
+   "filesz": 1376,
+   "memsz": 1376,
+   "offset": 0,
+   "vaddr": 4194304
+  },
+  {
+   "filesz": 597,
+   "memsz": 597,
+   "offset": 4096,
+   "vaddr": 4198400
+  },
+  {
+   "filesz": 208,
+   "memsz": 208,
+   "offset": 8192,
+   "vaddr": 4202496
+  },
+  {
+   "filesz": 564,
+   "memsz": 568,
+   "offset": 11768,
+   "vaddr": 4210168
+  }
+ ],
+ "image_base": 4194304,
+ "names": {
+  "4198448": "puts",
+  "4198464": "strlen",
+  "4198480": "printf",
+  "4198726": "engine_leaf",
+  "4198760": "engine_branch",
+  "4198803": "engine_apply",
+  "4198831": "engine_measure",
+  "4198869": "engine_entry",
+  "4198932": "main",
+  "4202512": "engine_banner",
+  "4202534": "aEngineLeafMessage",
+  "4210728": "engine_counter"
+ },
+ "procedures": [
+  {
+   "blocks": [
+    {
+     "end": 4198448,
+     "start": 4198448,
+     "successors": []
+    },
+    {
+     "end": 4198459,
+     "start": 4198454,
+     "successors": []
+    }
+   ],
+   "entry": 4198448,
+   "instructions": [
+    {
+     "address": 4198448,
+     "args": [
+      "QWORD PTR [rip+0x2fca]"
+     ],
+     "length": 6,
+     "mnemonic": "jmp",
+     "refs": [
+      4210688
+     ]
+    },
+    {
+     "address": 4198454,
+     "args": [
+      "0x0"
+     ],
+     "length": 5,
+     "mnemonic": "push",
+     "refs": []
+    },
+    {
+     "address": 4198459,
+     "args": [
+      "401020"
+     ],
+     "length": 5,
+     "mnemonic": "jmp",
+     "refs": [
+      4198432
+     ]
+    }
+   ],
+   "locals": [],
+   "name": "puts",
+   "pseudocode": "// imported stub puts",
+   "signature": "int puts(const char *s)"
+  },
+  {
+   "blocks": [
+    {
+     "end": 4198464,
+     "start": 4198464,
+     "successors": []
+    },
+    {
+     "end": 4198475,
+     "start": 4198470,
+     "successors": []
+    }
+   ],
+   "entry": 4198464,
+   "instructions": [
+    {
+     "address": 4198464,
+     "args": [
+      "QWORD PTR [rip+0x2fc2]"
+     ],
+     "length": 6,
+     "mnemonic": "jmp",
+     "refs": [
+      4210696
+     ]
+    },
+    {
+     "address": 4198470,
+     "args": [
+      "0x1"
+     ],
+     "length": 5,
+     "mnemonic": "push",
+     "refs": []
+    },
+    {
+     "address": 4198475,
+     "args": [
+      "401020"
+     ],
+     "length": 5,
+     "mnemonic": "jmp",
+     "refs": [
+      4198432
+     ]
+    }
+   ],
+   "locals": [],
+   "name": "strlen",
+   "pseudocode": "// imported stub strlen",
+   "signature": "unsigned long strlen(const char *s)"
+  },
+  {
+   "blocks": [
+    {
+     "end": 4198480,
+     "start": 4198480,
+     "successors": []
+    },
+    {
+     "end": 4198491,
+     "start": 4198486,
+     "successors": []
+    }
+   ],
+   "entry": 4198480,
+   "instructions": [
+    {
+     "address": 4198480,
+     "args": [
+      "QWORD PTR [rip+0x2fba]"
+     ],
+     "length": 6,
+     "mnemonic": "jmp",
+     "refs": [
+      4210704
+     ]
+    },
+    {
+     "address": 4198486,
+     "args": [
+      "0x2"
+     ],
+     "length": 5,
+     "mnemonic": "push",
+     "refs": []
+    },
+    {
+     "address": 4198491,
+     "args": [
+      "401020"
+     ],
+     "length": 5,
+     "mnemonic": "jmp",
+     "refs": [
+      4198432
+     ]
+    }
+   ],
+   "locals": [],
+   "name": "printf",
+   "pseudocode": "// imported stub printf",
+   "signature": "int printf(const char *format, ...)"
+  },
+  {
+   "blocks": [
+    {
+     "end": 4198759,
+     "start": 4198726,
+     "successors": []
+    }
+   ],
+   "entry": 4198726,
+   "instructions": [
+    {
+     "address": 4198726,
+     "args": [
+      "rbp"
+     ],
+     "length": 1,
+     "mnemonic": "push",
+     "refs": []
+    },
+    {
+     "address": 4198727,
+     "args": [
+      "rbp",
+      "rsp"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198730,
+     "args": [
+      "rsp",
+      "0x10"
+     ],
+     "length": 4,
+     "mnemonic": "sub",
+     "refs": []
+    },
+    {
+     "address": 4198734,
+     "args": [
+      "DWORD PTR [rbp-0x4]",
+      "edi"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198737,
+     "args": [
+      "edi",
+      "0x402026"
+     ],
+     "length": 5,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198742,
+     "args": [
+      "401030"
+     ],
+     "length": 5,
+     "mnemonic": "call",
+     "refs": [
+      4198448
+     ]
+    },
+    {
+     "address": 4198747,
+     "args": [
+      "edx",
+      "DWORD PTR [rip+0x2ec7]"
+     ],
+     "length": 6,
+     "mnemonic": "mov",
+     "refs": [
+      4210728
+     ]
+    },
+    {
+     "address": 4198753,
+     "args": [
+      "eax",
+      "DWORD PTR [rbp-0x4]"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198756,
+     "args": [
+      "eax",
+      "edx"
+     ],
+     "length": 2,
+     "mnemonic": "add",
+     "refs": []
+    },
+    {
+     "address": 4198758,
+     "args": [],
+     "length": 1,
+     "mnemonic": "leave",
+     "refs": []
+    },
+    {
+     "address": 4198759,
+     "args": [],
+     "length": 1,
+     "mnemonic": "ret",
+     "refs": []
+    }
+   ],
+   "locals": [
+    {
+     "displacement": -4,
+     "name": "var_4"
+    }
+   ],
+   "name": "engine_leaf",
+   "pseudocode": "__attribute__((noinline, used)) int engine_leaf(int value) {\n  puts(\"ENGINE_LEAF_MESSAGE\");\n  return value + engine_counter;\n}",
+   "signature": "int engine_leaf(int value)"
+  },
+  {
+   "blocks": [
+    {
+     "end": 4198775,
+     "start": 4198760,
+     "successors": [
+      4198789,
+      4198777
+     ]
+    },
+    {
+     "end": 4198787,
+     "start": 4198777,
+     "successors": [
+      4198801
+     ]
+    },
+    {
+     "end": 4198796,
+     "start": 4198789,
+     "successors": [
+      4198801
+     ]
+    },
+    {
+     "end": 4198802,
+     "start": 4198801,
+     "successors": []
+    }
+   ],
+   "entry": 4198760,
+   "instructions": [
+    {
+     "address": 4198760,
+     "args": [
+      "rbp"
+     ],
+     "length": 1,
+     "mnemonic": "push",
+     "refs": []
+    },
+    {
+     "address": 4198761,
+     "args": [
+      "rbp",
+      "rsp"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198764,
+     "args": [
+      "rsp",
+      "0x10"
+     ],
+     "length": 4,
+     "mnemonic": "sub",
+     "refs": []
+    },
+    {
+     "address": 4198768,
+     "args": [
+      "DWORD PTR [rbp-0x4]",
+      "edi"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198771,
+     "args": [
+      "DWORD PTR [rbp-0x4]",
+      "0xa"
+     ],
+     "length": 4,
+     "mnemonic": "cmp",
+     "refs": []
+    },
+    {
+     "address": 4198775,
+     "args": [
+      "401185"
+     ],
+     "length": 2,
+     "mnemonic": "jle",
+     "refs": [
+      4198789
+     ]
+    },
+    {
+     "address": 4198777,
+     "args": [
+      "eax",
+      "DWORD PTR [rbp-0x4]"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198780,
+     "args": [
+      "edi",
+      "eax"
+     ],
+     "length": 2,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198782,
+     "args": [
+      "401146"
+     ],
+     "length": 5,
+     "mnemonic": "call",
+     "refs": [
+      4198726
+     ]
+    },
+    {
+     "address": 4198787,
+     "args": [
+      "401191"
+     ],
+     "length": 2,
+     "mnemonic": "jmp",
+     "refs": [
+      4198801
+     ]
+    },
+    {
+     "address": 4198789,
+     "args": [
+      "eax",
+      "DWORD PTR [rbp-0x4]"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198792,
+     "args": [
+      "eax"
+     ],
+     "length": 2,
+     "mnemonic": "neg",
+     "refs": []
+    },
+    {
+     "address": 4198794,
+     "args": [
+      "edi",
+      "eax"
+     ],
+     "length": 2,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198796,
+     "args": [
+      "401146"
+     ],
+     "length": 5,
+     "mnemonic": "call",
+     "refs": [
+      4198726
+     ]
+    },
+    {
+     "address": 4198801,
+     "args": [],
+     "length": 1,
+     "mnemonic": "leave",
+     "refs": []
+    },
+    {
+     "address": 4198802,
+     "args": [],
+     "length": 1,
+     "mnemonic": "ret",
+     "refs": []
+    }
+   ],
+   "locals": [
+    {
+     "displacement": -4,
+     "name": "var_4"
+    }
+   ],
+   "name": "engine_branch",
+   "pseudocode": "__attribute__((noinline, used)) int engine_branch(int value) {\n  if (value > 10) {\n    return engine_leaf(value);\n  }\n  return engine_leaf(-value);\n}",
+   "signature": "int engine_branch(int value)"
+  },
+  {
+   "blocks": [
+    {
+     "end": 4198830,
+     "start": 4198803,
+     "successors": []
+    }
+   ],
+   "entry": 4198803,
+   "instructions": [
+    {
+     "address": 4198803,
+     "args": [
+      "rbp"
+     ],
+     "length": 1,
+     "mnemonic": "push",
+     "refs": []
+    },
+    {
+     "address": 4198804,
+     "args": [
+      "rbp",
+      "rsp"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198807,
+     "args": [
+      "rsp",
+      "0x10"
+     ],
+     "length": 4,
+     "mnemonic": "sub",
+     "refs": []
+    },
+    {
+     "address": 4198811,
+     "args": [
+      "QWORD PTR [rbp-0x8]",
+      "rdi"
+     ],
+     "length": 4,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198815,
+     "args": [
+      "DWORD PTR [rbp-0xc]",
+      "esi"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198818,
+     "args": [
+      "eax",
+      "DWORD PTR [rbp-0xc]"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198821,
+     "args": [
+      "rdx",
+      "QWORD PTR [rbp-0x8]"
+     ],
+     "length": 4,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198825,
+     "args": [
+      "edi",
+      "eax"
+     ],
+     "length": 2,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198827,
+     "args": [
+      "rdx"
+     ],
+     "length": 2,
+     "mnemonic": "call",
+     "refs": []
+    },
+    {
+     "address": 4198829,
+     "args": [],
+     "length": 1,
+     "mnemonic": "leave",
+     "refs": []
+    },
+    {
+     "address": 4198830,
+     "args": [],
+     "length": 1,
+     "mnemonic": "ret",
+     "refs": []
+    }
+   ],
+   "locals": [
+    {
+     "displacement": -8,
+     "name": "var_8"
+    },
+    {
+     "displacement": -12,
+     "name": "var_c"
+    }
+   ],
+   "name": "engine_apply",
+   "pseudocode": "// engine_apply",
+   "signature": "int engine_apply(int (*callback)(int), int value)"
+  },
+  {
+   "blocks": [
+    {
+     "end": 4198868,
+     "start": 4198831,
+     "successors": []
+    }
+   ],
+   "entry": 4198831,
+   "instructions": [
+    {
+     "address": 4198831,
+     "args": [
+      "rbp"
+     ],
+     "length": 1,
+     "mnemonic": "push",
+     "refs": []
+    },
+    {
+     "address": 4198832,
+     "args": [
+      "rbp",
+      "rsp"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198835,
+     "args": [
+      "rsp",
+      "0x10"
+     ],
+     "length": 4,
+     "mnemonic": "sub",
+     "refs": []
+    },
+    {
+     "address": 4198839,
+     "args": [
+      "QWORD PTR [rbp-0x8]",
+      "rdi"
+     ],
+     "length": 4,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198843,
+     "args": [
+      "rax",
+      "QWORD PTR [rbp-0x8]"
+     ],
+     "length": 4,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198847,
+     "args": [
+      "rdi",
+      "rax"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198850,
+     "args": [
+      "401040"
+     ],
+     "length": 5,
+     "mnemonic": "call",
+     "refs": [
+      4198464
+     ]
+    },
+    {
+     "address": 4198855,
+     "args": [
+      "edx",
+      "DWORD PTR [rip+0x2e5b]"
+     ],
+     "length": 6,
+     "mnemonic": "mov",
+     "refs": [
+      4210728
+     ]
+    },
+    {
+     "address": 4198861,
+     "args": [
+      "rdx",
+      "edx"
+     ],
+     "length": 3,
+     "mnemonic": "movsxd",
+     "refs": []
+    },
+    {
+     "address": 4198864,
+     "args": [
+      "rax",
+      "rdx"
+     ],
+     "length": 3,
+     "mnemonic": "add",
+     "refs": []
+    },
+    {
+     "address": 4198867,
+     "args": [],
+     "length": 1,
+     "mnemonic": "leave",
+     "refs": []
+    },
+    {
+     "address": 4198868,
+     "args": [],
+     "length": 1,
+     "mnemonic": "ret",
+     "refs": []
+    }
+   ],
+   "locals": [
+    {
+     "displacement": -8,
+     "name": "var_8"
+    }
+   ],
+   "name": "engine_measure",
+   "pseudocode": "__attribute__((noinline, used)) size_t engine_measure(const char *text) {\n  return strlen(text) + (size_t)engine_counter;\n}",
+   "signature": "unsigned long engine_measure(const char *text)"
+  },
+  {
+   "blocks": [
+    {
+     "end": 4198931,
+     "start": 4198869,
+     "successors": []
+    }
+   ],
+   "entry": 4198869,
+   "instructions": [
+    {
+     "address": 4198869,
+     "args": [
+      "rbp"
+     ],
+     "length": 1,
+     "mnemonic": "push",
+     "refs": []
+    },
+    {
+     "address": 4198870,
+     "args": [
+      "rbp",
+      "rsp"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198873,
+     "args": [
+      "rsp",
+      "0x20"
+     ],
+     "length": 4,
+     "mnemonic": "sub",
+     "refs": []
+    },
+    {
+     "address": 4198877,
+     "args": [
+      "DWORD PTR [rbp-0x14]",
+      "edi"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198880,
+     "args": [
+      "eax",
+      "DWORD PTR [rbp-0x14]"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198883,
+     "args": [
+      "eax",
+      "0x2"
+     ],
+     "length": 3,
+     "mnemonic": "shl",
+     "refs": []
+    },
+    {
+     "address": 4198886,
+     "args": [
+      "edi",
+      "eax"
+     ],
+     "length": 2,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198888,
+     "args": [
+      "401168"
+     ],
+     "length": 5,
+     "mnemonic": "call",
+     "refs": [
+      4198760
+     ]
+    },
+    {
+     "address": 4198893,
+     "args": [
+      "DWORD PTR [rbp-0x4]",
+      "eax"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198896,
+     "args": [
+      "eax",
+      "DWORD PTR [rbp-0x14]"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198899,
+     "args": [
+      "esi",
+      "eax"
+     ],
+     "length": 2,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198901,
+     "args": [
+      "edi",
+      "0x401168"
+     ],
+     "length": 5,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198906,
+     "args": [
+      "401193"
+     ],
+     "length": 5,
+     "mnemonic": "call",
+     "refs": [
+      4198803
+     ]
+    },
+    {
+     "address": 4198911,
+     "args": [
+      "DWORD PTR [rbp-0x4]",
+      "eax"
+     ],
+     "length": 3,
+     "mnemonic": "add",
+     "refs": []
+    },
+    {
+     "address": 4198914,
+     "args": [
+      "edi",
+      "0x402010"
+     ],
+     "length": 5,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198919,
+     "args": [
+      "4011af"
+     ],
+     "length": 5,
+     "mnemonic": "call",
+     "refs": [
+      4198831
+     ]
+    },
+    {
+     "address": 4198924,
+     "args": [
+      "DWORD PTR [rbp-0x4]",
+      "eax"
+     ],
+     "length": 3,
+     "mnemonic": "add",
+     "refs": []
+    },
+    {
+     "address": 4198927,
+     "args": [
+      "eax",
+      "DWORD PTR [rbp-0x4]"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198930,
+     "args": [],
+     "length": 1,
+     "mnemonic": "leave",
+     "refs": []
+    },
+    {
+     "address": 4198931,
+     "args": [],
+     "length": 1,
+     "mnemonic": "ret",
+     "refs": []
+    }
+   ],
+   "locals": [
+    {
+     "displacement": -4,
+     "name": "var_4"
+    },
+    {
+     "displacement": -20,
+     "name": "var_14"
+    }
+   ],
+   "name": "engine_entry",
+   "pseudocode": "__attribute__((noinline, used)) int engine_entry(int argc) {\n  int total = engine_branch(argc * 4);\n  total += engine_apply(engine_branch, argc);\n  total += (int)engine_measure(engine_banner);\n  return total;\n}",
+   "signature": "int engine_entry(int argc)"
+  },
+  {
+   "blocks": [
+    {
+     "end": 4198980,
+     "start": 4198932,
+     "successors": []
+    }
+   ],
+   "entry": 4198932,
+   "instructions": [
+    {
+     "address": 4198932,
+     "args": [
+      "rbp"
+     ],
+     "length": 1,
+     "mnemonic": "push",
+     "refs": []
+    },
+    {
+     "address": 4198933,
+     "args": [
+      "rbp",
+      "rsp"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198936,
+     "args": [
+      "rsp",
+      "0x10"
+     ],
+     "length": 4,
+     "mnemonic": "sub",
+     "refs": []
+    },
+    {
+     "address": 4198940,
+     "args": [
+      "DWORD PTR [rbp-0x4]",
+      "edi"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198943,
+     "args": [
+      "QWORD PTR [rbp-0x10]",
+      "rsi"
+     ],
+     "length": 4,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198947,
+     "args": [
+      "eax",
+      "DWORD PTR [rbp-0x4]"
+     ],
+     "length": 3,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198950,
+     "args": [
+      "edi",
+      "eax"
+     ],
+     "length": 2,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198952,
+     "args": [
+      "4011d5"
+     ],
+     "length": 5,
+     "mnemonic": "call",
+     "refs": [
+      4198869
+     ]
+    },
+    {
+     "address": 4198957,
+     "args": [
+      "esi",
+      "eax"
+     ],
+     "length": 2,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198959,
+     "args": [
+      "edi",
+      "0x40203a"
+     ],
+     "length": 5,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198964,
+     "args": [
+      "eax",
+      "0x0"
+     ],
+     "length": 5,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198969,
+     "args": [
+      "401050"
+     ],
+     "length": 5,
+     "mnemonic": "call",
+     "refs": [
+      4198480
+     ]
+    },
+    {
+     "address": 4198974,
+     "args": [
+      "eax",
+      "0x0"
+     ],
+     "length": 5,
+     "mnemonic": "mov",
+     "refs": []
+    },
+    {
+     "address": 4198979,
+     "args": [],
+     "length": 1,
+     "mnemonic": "leave",
+     "refs": []
+    },
+    {
+     "address": 4198980,
+     "args": [],
+     "length": 1,
+     "mnemonic": "ret",
+     "refs": []
+    }
+   ],
+   "locals": [
+    {
+     "displacement": -4,
+     "name": "var_4"
+    },
+    {
+     "displacement": -16,
+     "name": "var_10"
+    }
+   ],
+   "name": "main",
+   "pseudocode": "int main(int argc, char **argv) {\n  (void)argv;\n  printf(\"%d\\n\", engine_entry(argc));\n  return 0;\n}",
+   "signature": "int main(int argc, char **argv)"
+  }
+ ],
+ "segments": [
+  {
+   "bytes_hex": "f30f1efa4883ec08488b05d12f00004885c07402ffd04883c408c30000000000ff35ca2f0000ff25cc2f00000f1f4000ff25ca2f00006800000000e9e0ffffffff25c22f00006801000000e9d0ffffffff25ba2f00006802000000e9c0fffffff30f1efa31ed4989d15e4889e24883e4f050544531c031c948c7c714124000ff15532f0000f4662e0f1f840000000000f30f1efac3662e0f1f84000000000090b830404000483d304040007413b8000000004885c07409bf30404000ffe06690c366662e0f1f8400000000000f1f4000be304040004881ee304040004889f048c1ee3f48c1f8034801c648d1fe7411b8000000004885c07407bf30404000ffe0c366662e0f1f8400000000000f1f4000f30f1efa803d112f0000007513554889e5e87affffffc605ff2e0000015dc390c366662e0f1f8400000000000f1f4000f30f1efaeb8a554889e54883ec10897dfcbf26204000e8d5feffff8b15c72e00008b45fc01d0c9c3554889e54883ec10897dfc837dfc0a7e0c8b45fc89c7e8c3ffffffeb0c8b45fcf7d889c7e8b5ffffffc9c3554889e54883ec1048897df88975f48b45f4488b55f889c7ffd2c9c3554889e54883ec1048897df8488b45f84889c7e879feffff8b155b2e00004863d24801d0c9c3554889e54883ec20897dec8b45ecc1e00289c7e87bffffff8945fc8b45ec89c6bf68114000e894ffffff0145fcbf10204000e8a3ffffff0145fc8b45fcc9c3554889e54883ec10897dfc488975f08b45fc89c7e8a8ffffff89c6bf3a204000b800000000e812feffffb800000000c9c3000000f30f1efa4883ec084883c408c3",
+   "length": 597,
+   "name": "TEXT",
+   "sections": [
+    {
+     "length": 27,
+     "name": ".init",
+     "start": 4198400
+    },
+    {
+     "length": 64,
+     "name": ".plt",
+     "start": 4198432
+    },
+    {
+     "length": 485,
+     "name": ".text",
+     "start": 4198496
+    },
+    {
+     "length": 13,
+     "name": ".fini",
+     "start": 4198984
+    }
+   ],
+   "start": 4198400
+  },
+  {
+   "bytes_hex": "01000200000000000000000000000000454e47494e455f464958545552455f42414e4e455200454e47494e455f4c4541465f4d4553534147450025640a00",
+   "length": 62,
+   "name": "RODATA",
+   "sections": [
+    {
+     "length": 62,
+     "name": ".rodata",
+     "start": 4202496
+    }
+   ],
+   "start": 4202496
+  },
+  {
+   "bytes_hex": "000000000000000000000000000000000700000000000000",
+   "length": 24,
+   "name": "DATA",
+   "sections": [
+    {
+     "length": 20,
+     "name": ".data",
+     "start": 4210712
+    },
+    {
+     "length": 4,
+     "name": ".bss",
+     "start": 4210732
+    }
+   ],
+   "start": 4210712
+  }
+ ],
+ "strings": [
+  {
+   "address": 4202512,
+   "display": "ENGINE_FIXTURE_BANNER",
+   "length": 22
+  },
+  {
+   "address": 4202534,
+   "display": "ENGINE_LEAF_MESSAGE",
+   "length": 20
+  }
+ ]
+}

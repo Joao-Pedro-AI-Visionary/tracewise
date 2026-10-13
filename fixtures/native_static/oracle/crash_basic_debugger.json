@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"capability_unavailable\",\"category\":\"unsupported_provider\",\"message\":\"REA_PWNDBG_GDB is unavailable at /usr/bin/gdb: ENOENT: no such file or directory, access '/usr/bin/gdb'. Configure the requested core-only context, or omit include_debugger_context for basic recorded evidence.\",\"retryable\":false,\"remediation\":{\"action\":\"REA_PWNDBG_GDB is unavailable at /usr/bin/gdb: ENOENT: no such file or directory, access '/usr/bin/gdb'. Configure the requested core-only context, or omit include_debugger_context for basic recorded evidence.\"},\"details\":{\"provider_id\":\"pwndbg-core\",\"operation\":\"inspect_recorded_crash\",\"reason\":\"REA_PWNDBG_GDB is unavailable at /usr/bin/gdb: ENOENT: no such file or directory, access '/usr/bin/gdb'. Configure the requested core-only context, or omit include_debugger_context for basic recorded evidence.\",\"captured_output\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false}}}}"
+   }
+  ],
+  "isError": true
+ }
+]

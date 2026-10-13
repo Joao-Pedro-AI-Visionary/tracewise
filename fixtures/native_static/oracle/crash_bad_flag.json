@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "Input validation error: Invalid arguments for tool inspect_recorded_crash: include_debugger_context: Invalid input: expected boolean, received string"
+   }
+  ],
+  "isError": true
+ }
+]

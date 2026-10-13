@@ -112,10 +112,13 @@ pub fn scan_artifact_inventory(path: &Path) -> Result<ArtifactInventoryResult, J
     })
 }
 
+/// Nodes by artifact id, occurrences in reader order, and the contradictions still to be resolved.
+type ScannedArtifact = (HashMap<String, ArtifactNode>, Vec<MutableOccurrence>, Vec<PendingContradiction>);
+
 fn scan_reader(
     reader: &dyn ArtifactReader,
     integrity_policy: &str,
-) -> Result<(HashMap<String, ArtifactNode>, Vec<MutableOccurrence>, Vec<PendingContradiction>), JsError> {
+) -> Result<ScannedArtifact, JsError> {
     let mut nodes = HashMap::new();
     let mut occurrences = Vec::new();
     let mut pending = Vec::new();

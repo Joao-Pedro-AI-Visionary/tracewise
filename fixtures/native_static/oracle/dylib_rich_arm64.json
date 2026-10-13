@@ -1,0 +1,1274 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_e640f6f0dcfe74d145d3222b8880ec6d4927a13ae09d31837af5921e0fc8ab97\",\"subject\":{\"name\":\"Rich\",\"digest\":{\"sha256\":\"6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Rich.app/Contents/MacOS/Rich\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"trace_dylib_resolution\",\"parameters\":{\"architecture\":\"arm64\"},\"raw_result\":null,\"normalized_result\":{\"root_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Rich.app\",\"target_sha256\":\"6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020\",\"roots\":[{\"image\":\"Contents/Frameworks/libnotdylib.dylib\",\"architecture\":\"arm64\"},{\"image\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\"}],\"images\":[{\"path\":\"Contents/Frameworks/libbad.dylib\",\"sha256\":\"0e9bf087ecd680fc1305aab60b22a92fe2c686d8ec976a624bdd348fba246309\",\"parse_status\":\"malformed\",\"reason\":\"load commands extend beyond the Mach-O slice\",\"slices\":[]},{\"path\":\"Contents/Frameworks/libcore.dylib\",\"sha256\":\"889a91069123257d0d5e1fa0f13325956c2b7e0d966b8fad5e7084aad53113c7\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":176,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@rpath/libcore.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/libexec.dylib\",\"sha256\":\"5de3c1fb930121b01cee75da8be86848f5da3261f0adb4d575e83576f9aebcb1\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":144,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@executable_path/../Frameworks/libexec.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/libfat.dylib\",\"sha256\":\"f4c6c59d6cefab427157c247452fc747e0227b8e952af88814e264813e9749d0\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":4096,\"slice_size\":120,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":16777228,\"fat_cpu_subtype\":0,\"fat_alignment_exponent\":12,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@rpath/libfat.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false},{\"architecture\":\"x86_64\",\"slice_offset\":8192,\"slice_size\":120,\"cpu_type\":16777223,\"cpu_subtype\":3,\"fat_cpu_type\":16777223,\"fat_cpu_subtype\":3,\"fat_alignment_exponent\":12,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@rpath/libfat.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/liblazy.dylib\",\"sha256\":\"6d0ddc114b4571859c5f7b78c3710ce5163f90dc87941c5c2a642276ba33f4bf\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":120,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@rpath/liblazy.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/libnested.dylib\",\"sha256\":\"ff7abe285d8704b72c6e57168708ea34eac6d65a6a3762411f2084a9a9745233\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":128,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@loader_path/libnested.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/libnotdylib.dylib\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":72,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"execute\",\"file_type_code\":2,\"platform\":1,\"platforms\":[1],\"install_name\":null,\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/libplat.dylib\",\"sha256\":\"6d21683c860db5a8c777a953e6406fbbc73ab1477bf1e3b45f084d26b8665835\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":120,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":2,\"platforms\":[2],\"install_name\":\"@rpath/libplat.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/libre.dylib\",\"sha256\":\"b68f95f98e611c6e5e9b069d3daab8a0db99abaf8947e87fc87b984ae7f40daa\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":120,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@rpath/libre.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/libup.dylib\",\"sha256\":\"d45e1958d245e91d33e075fc22ff486a4e4e1e79ca40097119d706782bd445c2\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":120,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@rpath/libup.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/libuse.dylib\",\"sha256\":\"0d12455d76a1670ce0d7c4030624a7ad03cbe8ba7146308655892c05780d0ad5\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":120,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@rpath/libuse.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/Frameworks/libx86only.dylib\",\"sha256\":\"8c339ba757f3b1804ce4f38a7ac06923b36380ce1a0fafb93c1e405bd79dfc0e\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"x86_64\",\"slice_offset\":0,\"slice_size\":120,\"cpu_type\":16777223,\"cpu_subtype\":3,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@rpath/libx86only.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/MacOS/Rich\",\"sha256\":\"6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":1096,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"execute\",\"file_type_code\":2,\"platform\":1,\"platforms\":[1],\"install_name\":null,\"rpaths\":[\"@executable_path/../Frameworks\",\"@loader_path/../Plugins\",\"/opt/absolute\"],\"dyld_environment\":[\"DYLD_PRINT_RPATHS=1\"],\"code_signature_present\":true}]},{\"path\":\"Contents/MacOS/libsibling.dylib\",\"sha256\":\"6eed0c142d5382fe512a68a2c882b654c4a6b450a718399fe3fae202de354347\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":128,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":1,\"platforms\":[1],\"install_name\":\"@loader_path/libsibling.dylib\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper\",\"sha256\":\"27c49475bfd77c8773b78139ed6c0afa519799563c87a2a6df5e7a3356e05017\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"x86_64\",\"slice_offset\":0,\"slice_size\":176,\"cpu_type\":16777223,\"cpu_subtype\":3,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"execute\",\"file_type_code\":2,\"platform\":1,\"platforms\":[1],\"install_name\":null,\"rpaths\":[\"@executable_path/../../../../../Frameworks\"],\"dyld_environment\":[],\"code_signature_present\":false}]}],\"edges\":[{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libcore.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libcore.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"resolved\",\"resolved_path\":\"Contents/Frameworks/libcore.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/Frameworks/libcore.dylib\"},\"install_name_matches\":true,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_WEAK_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libweak.dylib\",\"weak\":true,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libweak.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"absent\",\"resolved_path\":null},{\"path\":\"Contents/MacOS/../Plugins/libweak.dylib\",\"source\":\"rpath\",\"rpath\":\"@loader_path/../Plugins\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"absent\",\"resolved_path\":null},{\"path\":\"/opt/absolute/libweak.dylib\",\"source\":\"rpath\",\"rpath\":\"/opt/absolute\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"outside-target\",\"resolved_path\":null}],\"resolution\":{\"status\":\"undetermined\",\"image\":null},\"install_name_matches\":null,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_REEXPORT_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libre.dylib\",\"weak\":false,\"upward\":false,\"reexport\":true,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libre.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"resolved\",\"resolved_path\":\"Contents/Frameworks/libre.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/Frameworks/libre.dylib\"},\"install_name_matches\":true,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@executable_path/../Frameworks/libexec.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libexec.dylib\",\"source\":\"executable_path\",\"rpath\":null,\"rpath_owner\":null,\"outcome\":\"resolved\",\"resolved_path\":\"Contents/Frameworks/libexec.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/Frameworks/libexec.dylib\"},\"install_name_matches\":true,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@loader_path/libsibling.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/libsibling.dylib\",\"source\":\"loader_path\",\"rpath\":null,\"rpath_owner\":null,\"outcome\":\"resolved\",\"resolved_path\":\"Contents/MacOS/libsibling.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/MacOS/libsibling.dylib\"},\"install_name_matches\":true,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"/usr/lib/libSystem.B.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"/usr/lib/libSystem.B.dylib\",\"source\":\"literal\",\"rpath\":null,\"rpath_owner\":null,\"outcome\":\"outside-target\",\"resolved_path\":null}],\"resolution\":{\"status\":\"undetermined\",\"image\":null},\"install_name_matches\":null,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"libleaf.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"libleaf.dylib\",\"source\":\"literal\",\"rpath\":null,\"rpath_owner\":null,\"outcome\":\"undetermined\",\"resolved_path\":null}],\"resolution\":{\"status\":\"undetermined\",\"image\":null},\"install_name_matches\":null,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LAZY_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/liblazy.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/liblazy.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"resolved\",\"resolved_path\":\"Contents/Frameworks/liblazy.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/Frameworks/liblazy.dylib\"},\"install_name_matches\":true,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libmissing.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libmissing.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"absent\",\"resolved_path\":null},{\"path\":\"Contents/MacOS/../Plugins/libmissing.dylib\",\"source\":\"rpath\",\"rpath\":\"@loader_path/../Plugins\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"absent\",\"resolved_path\":null},{\"path\":\"/opt/absolute/libmissing.dylib\",\"source\":\"rpath\",\"rpath\":\"/opt/absolute\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"outside-target\",\"resolved_path\":null}],\"resolution\":{\"status\":\"undetermined\",\"image\":null},\"install_name_matches\":null,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libx86only.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libx86only.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"architecture-missing\",\"resolved_path\":\"Contents/Frameworks/libx86only.dylib\"},{\"path\":\"Contents/MacOS/../Plugins/libx86only.dylib\",\"source\":\"rpath\",\"rpath\":\"@loader_path/../Plugins\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"absent\",\"resolved_path\":null},{\"path\":\"/opt/absolute/libx86only.dylib\",\"source\":\"rpath\",\"rpath\":\"/opt/absolute\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"outside-target\",\"resolved_path\":null}],\"resolution\":{\"status\":\"undetermined\",\"image\":null},\"install_name_matches\":null,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libplat.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libplat.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"platform-mismatch\",\"resolved_path\":\"Contents/Frameworks/libplat.dylib\"},{\"path\":\"Contents/MacOS/../Plugins/libplat.dylib\",\"source\":\"rpath\",\"rpath\":\"@loader_path/../Plugins\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"absent\",\"resolved_path\":null},{\"path\":\"/opt/absolute/libplat.dylib\",\"source\":\"rpath\",\"rpath\":\"/opt/absolute\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"outside-target\",\"resolved_path\":null}],\"resolution\":{\"status\":\"undetermined\",\"image\":null},\"install_name_matches\":null,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libnotdylib.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libnotdylib.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"not-loadable\",\"resolved_path\":\"Contents/Frameworks/libnotdylib.dylib\"},{\"path\":\"Contents/MacOS/../Plugins/libnotdylib.dylib\",\"source\":\"rpath\",\"rpath\":\"@loader_path/../Plugins\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"absent\",\"resolved_path\":null},{\"path\":\"/opt/absolute/libnotdylib.dylib\",\"source\":\"rpath\",\"rpath\":\"/opt/absolute\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"outside-target\",\"resolved_path\":null}],\"resolution\":{\"status\":\"undetermined\",\"image\":null},\"install_name_matches\":null,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_UPWARD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libup.dylib\",\"weak\":false,\"upward\":true,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libup.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"resolved\",\"resolved_path\":\"Contents/Frameworks/libup.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/Frameworks/libup.dylib\"},\"install_name_matches\":true,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_use_command\",\"install_name\":\"@rpath/libuse.dylib\",\"weak\":true,\"upward\":false,\"reexport\":false,\"delayed_init\":true,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libuse.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"resolved\",\"resolved_path\":\"Contents/Frameworks/libuse.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/Frameworks/libuse.dylib\"},\"install_name_matches\":true,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libalias.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libalias.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"resolved\",\"resolved_path\":\"Contents/Frameworks/libcore.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/Frameworks/libcore.dylib\"},\"install_name_matches\":false,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libfat.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libfat.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"resolved\",\"resolved_path\":\"Contents/Frameworks/libfat.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/Frameworks/libfat.dylib\"},\"install_name_matches\":true,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/MacOS/Rich\",\"via\":[\"Contents/MacOS/Rich\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/libbad.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/MacOS/../Frameworks/libbad.dylib\",\"source\":\"rpath\",\"rpath\":\"@executable_path/../Frameworks\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"malformed\",\"resolved_path\":\"Contents/Frameworks/libbad.dylib\"},{\"path\":\"Contents/MacOS/../Plugins/libbad.dylib\",\"source\":\"rpath\",\"rpath\":\"@loader_path/../Plugins\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"absent\",\"resolved_path\":null},{\"path\":\"/opt/absolute/libbad.dylib\",\"source\":\"rpath\",\"rpath\":\"/opt/absolute\",\"rpath_owner\":\"Contents/MacOS/Rich\",\"outcome\":\"outside-target\",\"resolved_path\":null}],\"resolution\":{\"status\":\"undetermined\",\"image\":null},\"install_name_matches\":null,\"loader_conditional\":false},{\"root\":\"Contents/MacOS/Rich\",\"architecture\":\"arm64\",\"loader\":\"Contents/Frameworks/libcore.dylib\",\"via\":[\"Contents/MacOS/Rich\",\"Contents/Frameworks/libcore.dylib\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@loader_path/libnested.dylib\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Contents/Frameworks/libnested.dylib\",\"source\":\"loader_path\",\"rpath\":null,\"rpath_owner\":null,\"outcome\":\"resolved\",\"resolved_path\":\"Contents/Frameworks/libnested.dylib\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Contents/Frameworks/libnested.dylib\"},\"install_name_matches\":true,\"loader_conditional\":false}],\"findings\":[{\"kind\":\"dyld-environment-present\",\"edge_index\":null,\"image\":\"Contents/MacOS/Rich\",\"basis\":\"derived\",\"explanation\":\"Contents/MacOS/Rich (arm64) sets dyld environment variables through LC_DYLD_ENVIRONMENT (DYLD_PRINT_RPATHS=1); any image-selection overrides they request are not modeled. Diagnostic settings alone do not alter resolution.\"}],\"coverage\":{\"status\":\"partial\",\"unparsed_images\":[\"Contents/Frameworks/libbad.dylib\"],\"roots_without_architecture\":[\"Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper\"]},\"limitations\":[\"LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.\",\"Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.\",\"Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.\",\"Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.\",\"Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.\",\"@loader_path uses each image's symlink-resolved path within the analyzed root.\",\"Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.\",\"Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.\",\"Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.\",\"Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.\",\"Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.\",\"Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.\",\"@loader_path uses each image's symlink-resolved path within the analyzed root.\",\"Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.\",\"Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libbad.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libcore.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libexec.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libfat.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/liblazy.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libnested.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libnotdylib.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libplat.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libre.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libup.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libuse.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libx86only.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/MacOS/Rich\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/MacOS/libsibling.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_e640f6f0dcfe74d145d3222b8880ec6d4927a13ae09d31837af5921e0fc8ab97",
+   "subject": {
+    "name": "Rich",
+    "digest": {
+     "sha256": "6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Rich.app/Contents/MacOS/Rich"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "trace_dylib_resolution",
+   "parameters": {
+    "architecture": "arm64"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "root_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Rich.app",
+    "target_sha256": "6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020",
+    "roots": [
+     {
+      "image": "Contents/Frameworks/libnotdylib.dylib",
+      "architecture": "arm64"
+     },
+     {
+      "image": "Contents/MacOS/Rich",
+      "architecture": "arm64"
+     }
+    ],
+    "images": [
+     {
+      "path": "Contents/Frameworks/libbad.dylib",
+      "sha256": "0e9bf087ecd680fc1305aab60b22a92fe2c686d8ec976a624bdd348fba246309",
+      "parse_status": "malformed",
+      "reason": "load commands extend beyond the Mach-O slice",
+      "slices": []
+     },
+     {
+      "path": "Contents/Frameworks/libcore.dylib",
+      "sha256": "889a91069123257d0d5e1fa0f13325956c2b7e0d966b8fad5e7084aad53113c7",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 176,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@rpath/libcore.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/libexec.dylib",
+      "sha256": "5de3c1fb930121b01cee75da8be86848f5da3261f0adb4d575e83576f9aebcb1",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 144,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@executable_path/../Frameworks/libexec.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/libfat.dylib",
+      "sha256": "f4c6c59d6cefab427157c247452fc747e0227b8e952af88814e264813e9749d0",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 4096,
+        "slice_size": 120,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": 16777228,
+        "fat_cpu_subtype": 0,
+        "fat_alignment_exponent": 12,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@rpath/libfat.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       },
+       {
+        "architecture": "x86_64",
+        "slice_offset": 8192,
+        "slice_size": 120,
+        "cpu_type": 16777223,
+        "cpu_subtype": 3,
+        "fat_cpu_type": 16777223,
+        "fat_cpu_subtype": 3,
+        "fat_alignment_exponent": 12,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@rpath/libfat.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/liblazy.dylib",
+      "sha256": "6d0ddc114b4571859c5f7b78c3710ce5163f90dc87941c5c2a642276ba33f4bf",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 120,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@rpath/liblazy.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/libnested.dylib",
+      "sha256": "ff7abe285d8704b72c6e57168708ea34eac6d65a6a3762411f2084a9a9745233",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 128,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@loader_path/libnested.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/libnotdylib.dylib",
+      "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 72,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "execute",
+        "file_type_code": 2,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": null,
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/libplat.dylib",
+      "sha256": "6d21683c860db5a8c777a953e6406fbbc73ab1477bf1e3b45f084d26b8665835",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 120,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 2,
+        "platforms": [
+         2
+        ],
+        "install_name": "@rpath/libplat.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/libre.dylib",
+      "sha256": "b68f95f98e611c6e5e9b069d3daab8a0db99abaf8947e87fc87b984ae7f40daa",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 120,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@rpath/libre.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/libup.dylib",
+      "sha256": "d45e1958d245e91d33e075fc22ff486a4e4e1e79ca40097119d706782bd445c2",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 120,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@rpath/libup.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/libuse.dylib",
+      "sha256": "0d12455d76a1670ce0d7c4030624a7ad03cbe8ba7146308655892c05780d0ad5",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 120,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@rpath/libuse.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/Frameworks/libx86only.dylib",
+      "sha256": "8c339ba757f3b1804ce4f38a7ac06923b36380ce1a0fafb93c1e405bd79dfc0e",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "x86_64",
+        "slice_offset": 0,
+        "slice_size": 120,
+        "cpu_type": 16777223,
+        "cpu_subtype": 3,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@rpath/libx86only.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/MacOS/Rich",
+      "sha256": "6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 1096,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "execute",
+        "file_type_code": 2,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": null,
+        "rpaths": [
+         "@executable_path/../Frameworks",
+         "@loader_path/../Plugins",
+         "/opt/absolute"
+        ],
+        "dyld_environment": [
+         "DYLD_PRINT_RPATHS=1"
+        ],
+        "code_signature_present": true
+       }
+      ]
+     },
+     {
+      "path": "Contents/MacOS/libsibling.dylib",
+      "sha256": "6eed0c142d5382fe512a68a2c882b654c4a6b450a718399fe3fae202de354347",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 128,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": "@loader_path/libsibling.dylib",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper",
+      "sha256": "27c49475bfd77c8773b78139ed6c0afa519799563c87a2a6df5e7a3356e05017",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "x86_64",
+        "slice_offset": 0,
+        "slice_size": 176,
+        "cpu_type": 16777223,
+        "cpu_subtype": 3,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "execute",
+        "file_type_code": 2,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": null,
+        "rpaths": [
+         "@executable_path/../../../../../Frameworks"
+        ],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     }
+    ],
+    "edges": [
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libcore.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libcore.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "resolved",
+        "resolved_path": "Contents/Frameworks/libcore.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/Frameworks/libcore.dylib"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_WEAK_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libweak.dylib",
+      "weak": true,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libweak.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "absent",
+        "resolved_path": null
+       },
+       {
+        "path": "Contents/MacOS/../Plugins/libweak.dylib",
+        "source": "rpath",
+        "rpath": "@loader_path/../Plugins",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "absent",
+        "resolved_path": null
+       },
+       {
+        "path": "/opt/absolute/libweak.dylib",
+        "source": "rpath",
+        "rpath": "/opt/absolute",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "outside-target",
+        "resolved_path": null
+       }
+      ],
+      "resolution": {
+       "status": "undetermined",
+       "image": null
+      },
+      "install_name_matches": null,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_REEXPORT_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libre.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": true,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libre.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "resolved",
+        "resolved_path": "Contents/Frameworks/libre.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/Frameworks/libre.dylib"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@executable_path/../Frameworks/libexec.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libexec.dylib",
+        "source": "executable_path",
+        "rpath": null,
+        "rpath_owner": null,
+        "outcome": "resolved",
+        "resolved_path": "Contents/Frameworks/libexec.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/Frameworks/libexec.dylib"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@loader_path/libsibling.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/libsibling.dylib",
+        "source": "loader_path",
+        "rpath": null,
+        "rpath_owner": null,
+        "outcome": "resolved",
+        "resolved_path": "Contents/MacOS/libsibling.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/MacOS/libsibling.dylib"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "/usr/lib/libSystem.B.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "/usr/lib/libSystem.B.dylib",
+        "source": "literal",
+        "rpath": null,
+        "rpath_owner": null,
+        "outcome": "outside-target",
+        "resolved_path": null
+       }
+      ],
+      "resolution": {
+       "status": "undetermined",
+       "image": null
+      },
+      "install_name_matches": null,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "libleaf.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "libleaf.dylib",
+        "source": "literal",
+        "rpath": null,
+        "rpath_owner": null,
+        "outcome": "undetermined",
+        "resolved_path": null
+       }
+      ],
+      "resolution": {
+       "status": "undetermined",
+       "image": null
+      },
+      "install_name_matches": null,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LAZY_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/liblazy.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/liblazy.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "resolved",
+        "resolved_path": "Contents/Frameworks/liblazy.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/Frameworks/liblazy.dylib"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libmissing.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libmissing.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "absent",
+        "resolved_path": null
+       },
+       {
+        "path": "Contents/MacOS/../Plugins/libmissing.dylib",
+        "source": "rpath",
+        "rpath": "@loader_path/../Plugins",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "absent",
+        "resolved_path": null
+       },
+       {
+        "path": "/opt/absolute/libmissing.dylib",
+        "source": "rpath",
+        "rpath": "/opt/absolute",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "outside-target",
+        "resolved_path": null
+       }
+      ],
+      "resolution": {
+       "status": "undetermined",
+       "image": null
+      },
+      "install_name_matches": null,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libx86only.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libx86only.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "architecture-missing",
+        "resolved_path": "Contents/Frameworks/libx86only.dylib"
+       },
+       {
+        "path": "Contents/MacOS/../Plugins/libx86only.dylib",
+        "source": "rpath",
+        "rpath": "@loader_path/../Plugins",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "absent",
+        "resolved_path": null
+       },
+       {
+        "path": "/opt/absolute/libx86only.dylib",
+        "source": "rpath",
+        "rpath": "/opt/absolute",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "outside-target",
+        "resolved_path": null
+       }
+      ],
+      "resolution": {
+       "status": "undetermined",
+       "image": null
+      },
+      "install_name_matches": null,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libplat.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libplat.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "platform-mismatch",
+        "resolved_path": "Contents/Frameworks/libplat.dylib"
+       },
+       {
+        "path": "Contents/MacOS/../Plugins/libplat.dylib",
+        "source": "rpath",
+        "rpath": "@loader_path/../Plugins",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "absent",
+        "resolved_path": null
+       },
+       {
+        "path": "/opt/absolute/libplat.dylib",
+        "source": "rpath",
+        "rpath": "/opt/absolute",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "outside-target",
+        "resolved_path": null
+       }
+      ],
+      "resolution": {
+       "status": "undetermined",
+       "image": null
+      },
+      "install_name_matches": null,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libnotdylib.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libnotdylib.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "not-loadable",
+        "resolved_path": "Contents/Frameworks/libnotdylib.dylib"
+       },
+       {
+        "path": "Contents/MacOS/../Plugins/libnotdylib.dylib",
+        "source": "rpath",
+        "rpath": "@loader_path/../Plugins",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "absent",
+        "resolved_path": null
+       },
+       {
+        "path": "/opt/absolute/libnotdylib.dylib",
+        "source": "rpath",
+        "rpath": "/opt/absolute",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "outside-target",
+        "resolved_path": null
+       }
+      ],
+      "resolution": {
+       "status": "undetermined",
+       "image": null
+      },
+      "install_name_matches": null,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_UPWARD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libup.dylib",
+      "weak": false,
+      "upward": true,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libup.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "resolved",
+        "resolved_path": "Contents/Frameworks/libup.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/Frameworks/libup.dylib"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_use_command",
+      "install_name": "@rpath/libuse.dylib",
+      "weak": true,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": true,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libuse.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "resolved",
+        "resolved_path": "Contents/Frameworks/libuse.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/Frameworks/libuse.dylib"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libalias.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libalias.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "resolved",
+        "resolved_path": "Contents/Frameworks/libcore.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/Frameworks/libcore.dylib"
+      },
+      "install_name_matches": false,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libfat.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libfat.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "resolved",
+        "resolved_path": "Contents/Frameworks/libfat.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/Frameworks/libfat.dylib"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/MacOS/Rich",
+      "via": [
+       "Contents/MacOS/Rich"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/libbad.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/MacOS/../Frameworks/libbad.dylib",
+        "source": "rpath",
+        "rpath": "@executable_path/../Frameworks",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "malformed",
+        "resolved_path": "Contents/Frameworks/libbad.dylib"
+       },
+       {
+        "path": "Contents/MacOS/../Plugins/libbad.dylib",
+        "source": "rpath",
+        "rpath": "@loader_path/../Plugins",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "absent",
+        "resolved_path": null
+       },
+       {
+        "path": "/opt/absolute/libbad.dylib",
+        "source": "rpath",
+        "rpath": "/opt/absolute",
+        "rpath_owner": "Contents/MacOS/Rich",
+        "outcome": "outside-target",
+        "resolved_path": null
+       }
+      ],
+      "resolution": {
+       "status": "undetermined",
+       "image": null
+      },
+      "install_name_matches": null,
+      "loader_conditional": false
+     },
+     {
+      "root": "Contents/MacOS/Rich",
+      "architecture": "arm64",
+      "loader": "Contents/Frameworks/libcore.dylib",
+      "via": [
+       "Contents/MacOS/Rich",
+       "Contents/Frameworks/libcore.dylib"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@loader_path/libnested.dylib",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Contents/Frameworks/libnested.dylib",
+        "source": "loader_path",
+        "rpath": null,
+        "rpath_owner": null,
+        "outcome": "resolved",
+        "resolved_path": "Contents/Frameworks/libnested.dylib"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Contents/Frameworks/libnested.dylib"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     }
+    ],
+    "findings": [
+     {
+      "kind": "dyld-environment-present",
+      "edge_index": null,
+      "image": "Contents/MacOS/Rich",
+      "basis": "derived",
+      "explanation": "Contents/MacOS/Rich (arm64) sets dyld environment variables through LC_DYLD_ENVIRONMENT (DYLD_PRINT_RPATHS=1); any image-selection overrides they request are not modeled. Diagnostic settings alone do not alter resolution."
+     }
+    ],
+    "coverage": {
+     "status": "partial",
+     "unparsed_images": [
+      "Contents/Frameworks/libbad.dylib"
+     ],
+     "roots_without_architecture": [
+      "Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper"
+     ]
+    },
+    "limitations": [
+     "LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.",
+     "Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.",
+     "Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.",
+     "Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.",
+     "Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.",
+     "@loader_path uses each image's symlink-resolved path within the analyzed root.",
+     "Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.",
+     "Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.",
+    "Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.",
+    "Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.",
+    "Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.",
+    "Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.",
+    "@loader_path uses each image's symlink-resolved path within the analyzed root.",
+    "Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.",
+    "Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libbad.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libcore.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libexec.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libfat.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/liblazy.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libnested.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libnotdylib.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libplat.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libre.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libup.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libuse.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libx86only.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/MacOS/Rich"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/MacOS/libsibling.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

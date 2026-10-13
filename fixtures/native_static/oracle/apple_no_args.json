@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "Input validation error: Invalid arguments for tool project_apple_application_graph: inventory_evidence: Invalid input: expected array, received undefined"
+   }
+  ],
+  "isError": true
+ }
+]

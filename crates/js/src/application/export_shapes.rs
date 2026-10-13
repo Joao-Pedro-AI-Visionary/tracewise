@@ -392,7 +392,7 @@ fn pair_variants(left: &[Value], right: &[Value]) -> Result<Pairing, JsError> {
             .get(&format!("{left_index}:{right_index}"))
             .cloned()
             .unwrap_or_default();
-        discriminants.sort_by(|left, right| compare_values(left, right));
+        discriminants.sort_by(compare_values);
         let Some(discriminant) = discriminants.into_iter().next() else {
             continue;
         };
@@ -623,9 +623,9 @@ fn field_change_status(
     if right_presence == "absent" {
         return Ok(Some("removed"));
     }
-    if left_field.is_some() && right_field.is_some() {
-        let unknown = left_field.unwrap()["state"].as_str() == Some("unknown")
-            || right_field.unwrap()["state"].as_str() == Some("unknown");
+    if let (Some(left_field), Some(right_field)) = (left_field, right_field) {
+        let unknown = left_field["state"].as_str() == Some("unknown")
+            || right_field["state"].as_str() == Some("unknown");
         return Ok(Some(if unknown { "unknown" } else { "changed" }));
     }
     Ok(None)
@@ -835,6 +835,7 @@ fn has_partial_property_coverage(shapes: &[Value]) -> bool {
     })
 }
 
+#[allow(clippy::too_many_arguments)]
 fn comparison_coverage(
     left_graph: &Value,
     right_graph: &Value,

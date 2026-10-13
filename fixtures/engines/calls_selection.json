@@ -1,0 +1,9 @@
+[
+  {"name": "open_binary", "arguments": {"path": "/workspace/wt/engines/fixtures/engines/sample_elf"}},
+  {"name": "list_procedures", "arguments": {}},
+  {"name": "binary_overview", "arguments": {}},
+  {"name": "current_document", "arguments": {}},
+  {"name": "open_binary", "arguments": {"path": "/workspace/wt/engines/fixtures/engines/sample_elf", "provider_id": "ghidra"}},
+  {"name": "open_binary", "arguments": {"path": "/workspace/wt/engines/fixtures/engines/sample_elf", "provider_id": "nope"}},
+  {"name": "open_binary", "arguments": {"path": "/workspace/wt/engines/fixtures/engines/sample_elf", "provider_id": "ida"}}
+]

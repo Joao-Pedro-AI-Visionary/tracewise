@@ -1,0 +1,2040 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_bd30d8796e8ec005d9e0d3405b14ae82dd69ca899ca093251955b8330b47e065\",\"subject\":{\"name\":\"libsample.so\",\"digest\":{\"sha256\":\"ca95e9c04697fcf2b2f28e16760fc8b88136a271bb049a24ec99a4b4b002caa7\"},\"format\":\"elf\",\"architecture\":\"x86_64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/elf/libsample.so\"},\"provider\":{\"id\":\"pwntools-elf\",\"name\":\"REA pwntools ELF adapter\",\"version\":\"pwntools@4.15.0;pyelftools@0.33;unicorn@2.1.2\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_binary_layout\",\"parameters\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/elf/libsample.so\"},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/elf/libsample.so\",\"sha256\":\"ca95e9c04697fcf2b2f28e16760fc8b88136a271bb049a24ec99a4b4b002caa7\",\"bytes\":15152},\"format\":\"elf\",\"architecture\":{\"machine\":\"EM_X86_64\",\"bits\":64,\"byte_order\":\"little\"},\"image_type\":\"ET_DYN\",\"entry_point\":{\"reported_value\":\"0x0\",\"meaning\":\"absent\",\"execution_status\":\"unknown\"},\"runtime_load_base\":null,\"sections\":[{\"index\":0,\"name\":{\"display\":\"\",\"bytes_base64\":\"\",\"location\":{\"offset\":\"0x3417\",\"bytes\":\"0x1\"},\"unknown_reason\":null},\"name_offset\":\"0x0\",\"type\":\"SHT_NULL\",\"header_location\":{\"offset\":\"0x34f0\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x0\",\"size\":\"0x0\",\"alignment\":\"0x0\",\"flags\":\"0x0\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"none\"},{\"index\":1,\"name\":{\"display\":\".note.gnu.property\",\"bytes_base64\":\"Lm5vdGUuZ251LnByb3BlcnR5\",\"location\":{\"offset\":\"0x3432\",\"bytes\":\"0x13\"},\"unknown_reason\":null},\"name_offset\":\"0x1b\",\"type\":\"SHT_NOTE\",\"header_location\":{\"offset\":\"0x3530\",\"bytes\":\"0x40\"},\"address\":\"0x2a8\",\"offset\":\"0x2a8\",\"size\":\"0x20\",\"alignment\":\"0x8\",\"flags\":\"0x2\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":2,\"name\":{\"display\":\".note.gnu.build-id\",\"bytes_base64\":\"Lm5vdGUuZ251LmJ1aWxkLWlk\",\"location\":{\"offset\":\"0x3445\",\"bytes\":\"0x13\"},\"unknown_reason\":null},\"name_offset\":\"0x2e\",\"type\":\"SHT_NOTE\",\"header_location\":{\"offset\":\"0x3570\",\"bytes\":\"0x40\"},\"address\":\"0x2c8\",\"offset\":\"0x2c8\",\"size\":\"0x24\",\"alignment\":\"0x4\",\"flags\":\"0x2\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":3,\"name\":{\"display\":\".gnu.hash\",\"bytes_base64\":\"LmdudS5oYXNo\",\"location\":{\"offset\":\"0x3458\",\"bytes\":\"0xa\"},\"unknown_reason\":null},\"name_offset\":\"0x41\",\"type\":\"SHT_GNU_HASH\",\"header_location\":{\"offset\":\"0x35b0\",\"bytes\":\"0x40\"},\"address\":\"0x2f0\",\"offset\":\"0x2f0\",\"size\":\"0x28\",\"alignment\":\"0x8\",\"flags\":\"0x2\",\"link\":4,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":4,\"name\":{\"display\":\".dynsym\",\"bytes_base64\":\"LmR5bnN5bQ==\",\"location\":{\"offset\":\"0x3462\",\"bytes\":\"0x8\"},\"unknown_reason\":null},\"name_offset\":\"0x4b\",\"type\":\"SHT_DYNSYM\",\"header_location\":{\"offset\":\"0x35f0\",\"bytes\":\"0x40\"},\"address\":\"0x318\",\"offset\":\"0x318\",\"size\":\"0xa8\",\"alignment\":\"0x8\",\"flags\":\"0x2\",\"link\":5,\"info\":1,\"entry_size\":\"0x18\",\"file_backing\":\"file\"},{\"index\":5,\"name\":{\"display\":\".dynstr\",\"bytes_base64\":\"LmR5bnN0cg==\",\"location\":{\"offset\":\"0x346a\",\"bytes\":\"0x8\"},\"unknown_reason\":null},\"name_offset\":\"0x53\",\"type\":\"SHT_STRTAB\",\"header_location\":{\"offset\":\"0x3630\",\"bytes\":\"0x40\"},\"address\":\"0x3c0\",\"offset\":\"0x3c0\",\"size\":\"0x68\",\"alignment\":\"0x1\",\"flags\":\"0x2\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":6,\"name\":{\"display\":\".rela.dyn\",\"bytes_base64\":\"LnJlbGEuZHlu\",\"location\":{\"offset\":\"0x3472\",\"bytes\":\"0xa\"},\"unknown_reason\":null},\"name_offset\":\"0x5b\",\"type\":\"SHT_RELA\",\"header_location\":{\"offset\":\"0x3670\",\"bytes\":\"0x40\"},\"address\":\"0x428\",\"offset\":\"0x428\",\"size\":\"0xc0\",\"alignment\":\"0x8\",\"flags\":\"0x2\",\"link\":4,\"info\":0,\"entry_size\":\"0x18\",\"file_backing\":\"file\"},{\"index\":7,\"name\":{\"display\":\".init\",\"bytes_base64\":\"LmluaXQ=\",\"location\":{\"offset\":\"0x347c\",\"bytes\":\"0x6\"},\"unknown_reason\":null},\"name_offset\":\"0x65\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x36b0\",\"bytes\":\"0x40\"},\"address\":\"0x1000\",\"offset\":\"0x1000\",\"size\":\"0x1b\",\"alignment\":\"0x4\",\"flags\":\"0x6\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":8,\"name\":{\"display\":\".plt\",\"bytes_base64\":\"LnBsdA==\",\"location\":{\"offset\":\"0x34d4\",\"bytes\":\"0x5\"},\"unknown_reason\":null},\"name_offset\":\"0xbd\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x36f0\",\"bytes\":\"0x40\"},\"address\":\"0x1020\",\"offset\":\"0x1020\",\"size\":\"0x10\",\"alignment\":\"0x10\",\"flags\":\"0x6\",\"link\":0,\"info\":0,\"entry_size\":\"0x10\",\"file_backing\":\"file\"},{\"index\":9,\"name\":{\"display\":\".plt.got\",\"bytes_base64\":\"LnBsdC5nb3Q=\",\"location\":{\"offset\":\"0x3482\",\"bytes\":\"0x9\"},\"unknown_reason\":null},\"name_offset\":\"0x6b\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x3730\",\"bytes\":\"0x40\"},\"address\":\"0x1030\",\"offset\":\"0x1030\",\"size\":\"0x10\",\"alignment\":\"0x10\",\"flags\":\"0x6\",\"link\":0,\"info\":0,\"entry_size\":\"0x10\",\"file_backing\":\"file\"},{\"index\":10,\"name\":{\"display\":\".text\",\"bytes_base64\":\"LnRleHQ=\",\"location\":{\"offset\":\"0x348b\",\"bytes\":\"0x6\"},\"unknown_reason\":null},\"name_offset\":\"0x74\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x3770\",\"bytes\":\"0x40\"},\"address\":\"0x1040\",\"offset\":\"0x1040\",\"size\":\"0xd4\",\"alignment\":\"0x10\",\"flags\":\"0x6\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":11,\"name\":{\"display\":\".fini\",\"bytes_base64\":\"LmZpbmk=\",\"location\":{\"offset\":\"0x3491\",\"bytes\":\"0x6\"},\"unknown_reason\":null},\"name_offset\":\"0x7a\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x37b0\",\"bytes\":\"0x40\"},\"address\":\"0x1114\",\"offset\":\"0x1114\",\"size\":\"0xd\",\"alignment\":\"0x4\",\"flags\":\"0x6\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":12,\"name\":{\"display\":\".eh_frame_hdr\",\"bytes_base64\":\"LmVoX2ZyYW1lX2hkcg==\",\"location\":{\"offset\":\"0x3497\",\"bytes\":\"0xe\"},\"unknown_reason\":null},\"name_offset\":\"0x80\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x37f0\",\"bytes\":\"0x40\"},\"address\":\"0x2000\",\"offset\":\"0x2000\",\"size\":\"0x24\",\"alignment\":\"0x4\",\"flags\":\"0x2\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":13,\"name\":{\"display\":\".eh_frame\",\"bytes_base64\":\"LmVoX2ZyYW1l\",\"location\":{\"offset\":\"0x34a5\",\"bytes\":\"0xa\"},\"unknown_reason\":null},\"name_offset\":\"0x8e\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x3830\",\"bytes\":\"0x40\"},\"address\":\"0x2028\",\"offset\":\"0x2028\",\"size\":\"0x7c\",\"alignment\":\"0x8\",\"flags\":\"0x2\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":14,\"name\":{\"display\":\".init_array\",\"bytes_base64\":\"LmluaXRfYXJyYXk=\",\"location\":{\"offset\":\"0x34af\",\"bytes\":\"0xc\"},\"unknown_reason\":null},\"name_offset\":\"0x98\",\"type\":\"SHT_INIT_ARRAY\",\"header_location\":{\"offset\":\"0x3870\",\"bytes\":\"0x40\"},\"address\":\"0x3e60\",\"offset\":\"0x2e60\",\"size\":\"0x8\",\"alignment\":\"0x8\",\"flags\":\"0x3\",\"link\":0,\"info\":0,\"entry_size\":\"0x8\",\"file_backing\":\"file\"},{\"index\":15,\"name\":{\"display\":\".fini_array\",\"bytes_base64\":\"LmZpbmlfYXJyYXk=\",\"location\":{\"offset\":\"0x34bb\",\"bytes\":\"0xc\"},\"unknown_reason\":null},\"name_offset\":\"0xa4\",\"type\":\"SHT_FINI_ARRAY\",\"header_location\":{\"offset\":\"0x38b0\",\"bytes\":\"0x40\"},\"address\":\"0x3e68\",\"offset\":\"0x2e68\",\"size\":\"0x8\",\"alignment\":\"0x8\",\"flags\":\"0x3\",\"link\":0,\"info\":0,\"entry_size\":\"0x8\",\"file_backing\":\"file\"},{\"index\":16,\"name\":{\"display\":\".dynamic\",\"bytes_base64\":\"LmR5bmFtaWM=\",\"location\":{\"offset\":\"0x34c7\",\"bytes\":\"0x9\"},\"unknown_reason\":null},\"name_offset\":\"0xb0\",\"type\":\"SHT_DYNAMIC\",\"header_location\":{\"offset\":\"0x38f0\",\"bytes\":\"0x40\"},\"address\":\"0x3e70\",\"offset\":\"0x2e70\",\"size\":\"0x150\",\"alignment\":\"0x8\",\"flags\":\"0x3\",\"link\":5,\"info\":0,\"entry_size\":\"0x10\",\"file_backing\":\"file\"},{\"index\":17,\"name\":{\"display\":\".got\",\"bytes_base64\":\"LmdvdA==\",\"location\":{\"offset\":\"0x3486\",\"bytes\":\"0x5\"},\"unknown_reason\":null},\"name_offset\":\"0x6f\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x3930\",\"bytes\":\"0x40\"},\"address\":\"0x3fc0\",\"offset\":\"0x2fc0\",\"size\":\"0x28\",\"alignment\":\"0x8\",\"flags\":\"0x3\",\"link\":0,\"info\":0,\"entry_size\":\"0x8\",\"file_backing\":\"file\"},{\"index\":18,\"name\":{\"display\":\".got.plt\",\"bytes_base64\":\"LmdvdC5wbHQ=\",\"location\":{\"offset\":\"0x34d0\",\"bytes\":\"0x9\"},\"unknown_reason\":null},\"name_offset\":\"0xb9\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x3970\",\"bytes\":\"0x40\"},\"address\":\"0x3fe8\",\"offset\":\"0x2fe8\",\"size\":\"0x18\",\"alignment\":\"0x8\",\"flags\":\"0x3\",\"link\":0,\"info\":0,\"entry_size\":\"0x8\",\"file_backing\":\"file\"},{\"index\":19,\"name\":{\"display\":\".data\",\"bytes_base64\":\"LmRhdGE=\",\"location\":{\"offset\":\"0x34d9\",\"bytes\":\"0x6\"},\"unknown_reason\":null},\"name_offset\":\"0xc2\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x39b0\",\"bytes\":\"0x40\"},\"address\":\"0x4000\",\"offset\":\"0x3000\",\"size\":\"0xc\",\"alignment\":\"0x8\",\"flags\":\"0x3\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":20,\"name\":{\"display\":\".bss\",\"bytes_base64\":\"LmJzcw==\",\"location\":{\"offset\":\"0x34df\",\"bytes\":\"0x5\"},\"unknown_reason\":null},\"name_offset\":\"0xc8\",\"type\":\"SHT_NOBITS\",\"header_location\":{\"offset\":\"0x39f0\",\"bytes\":\"0x40\"},\"address\":\"0x400c\",\"offset\":\"0x300c\",\"size\":\"0x4\",\"alignment\":\"0x1\",\"flags\":\"0x3\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"none\"},{\"index\":21,\"name\":{\"display\":\".comment\",\"bytes_base64\":\"LmNvbW1lbnQ=\",\"location\":{\"offset\":\"0x34e4\",\"bytes\":\"0x9\"},\"unknown_reason\":null},\"name_offset\":\"0xcd\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x3a30\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x300c\",\"size\":\"0x2d\",\"alignment\":\"0x1\",\"flags\":\"0x30\",\"link\":0,\"info\":0,\"entry_size\":\"0x1\",\"file_backing\":\"file\"},{\"index\":22,\"name\":{\"display\":\".symtab\",\"bytes_base64\":\"LnN5bXRhYg==\",\"location\":{\"offset\":\"0x3418\",\"bytes\":\"0x8\"},\"unknown_reason\":null},\"name_offset\":\"0x1\",\"type\":\"SHT_SYMTAB\",\"header_location\":{\"offset\":\"0x3a70\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x3040\",\"size\":\"0x270\",\"alignment\":\"0x8\",\"flags\":\"0x0\",\"link\":23,\"info\":20,\"entry_size\":\"0x18\",\"file_backing\":\"file\"},{\"index\":23,\"name\":{\"display\":\".strtab\",\"bytes_base64\":\"LnN0cnRhYg==\",\"location\":{\"offset\":\"0x3420\",\"bytes\":\"0x8\"},\"unknown_reason\":null},\"name_offset\":\"0x9\",\"type\":\"SHT_STRTAB\",\"header_location\":{\"offset\":\"0x3ab0\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x32b0\",\"size\":\"0x167\",\"alignment\":\"0x1\",\"flags\":\"0x0\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":24,\"name\":{\"display\":\".shstrtab\",\"bytes_base64\":\"LnNoc3RydGFi\",\"location\":{\"offset\":\"0x3428\",\"bytes\":\"0xa\"},\"unknown_reason\":null},\"name_offset\":\"0x11\",\"type\":\"SHT_STRTAB\",\"header_location\":{\"offset\":\"0x3af0\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x3417\",\"size\":\"0xd6\",\"alignment\":\"0x1\",\"flags\":\"0x0\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"}],\"segments\":[{\"index\":0,\"type\":\"PT_LOAD\",\"header_location\":{\"offset\":\"0x40\",\"bytes\":\"0x38\"},\"offset\":\"0x0\",\"file_size\":\"0x4e8\",\"memory_size\":\"0x4e8\",\"virtual_address\":\"0x0\",\"physical_address\":\"0x0\",\"alignment\":\"0x1000\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":1,\"type\":\"PT_LOAD\",\"header_location\":{\"offset\":\"0x78\",\"bytes\":\"0x38\"},\"offset\":\"0x1000\",\"file_size\":\"0x121\",\"memory_size\":\"0x121\",\"virtual_address\":\"0x1000\",\"physical_address\":\"0x1000\",\"alignment\":\"0x1000\",\"flags\":\"0x5\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":true}},{\"index\":2,\"type\":\"PT_LOAD\",\"header_location\":{\"offset\":\"0xb0\",\"bytes\":\"0x38\"},\"offset\":\"0x2000\",\"file_size\":\"0xa4\",\"memory_size\":\"0xa4\",\"virtual_address\":\"0x2000\",\"physical_address\":\"0x2000\",\"alignment\":\"0x1000\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":3,\"type\":\"PT_LOAD\",\"header_location\":{\"offset\":\"0xe8\",\"bytes\":\"0x38\"},\"offset\":\"0x2e60\",\"file_size\":\"0x1ac\",\"memory_size\":\"0x1b0\",\"virtual_address\":\"0x3e60\",\"physical_address\":\"0x3e60\",\"alignment\":\"0x1000\",\"flags\":\"0x6\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":true,\"execute\":false}},{\"index\":4,\"type\":\"PT_DYNAMIC\",\"header_location\":{\"offset\":\"0x120\",\"bytes\":\"0x38\"},\"offset\":\"0x2e70\",\"file_size\":\"0x150\",\"memory_size\":\"0x150\",\"virtual_address\":\"0x3e70\",\"physical_address\":\"0x3e70\",\"alignment\":\"0x8\",\"flags\":\"0x6\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":true,\"execute\":false}},{\"index\":5,\"type\":\"PT_NOTE\",\"header_location\":{\"offset\":\"0x158\",\"bytes\":\"0x38\"},\"offset\":\"0x2a8\",\"file_size\":\"0x20\",\"memory_size\":\"0x20\",\"virtual_address\":\"0x2a8\",\"physical_address\":\"0x2a8\",\"alignment\":\"0x8\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":6,\"type\":\"PT_NOTE\",\"header_location\":{\"offset\":\"0x190\",\"bytes\":\"0x38\"},\"offset\":\"0x2c8\",\"file_size\":\"0x24\",\"memory_size\":\"0x24\",\"virtual_address\":\"0x2c8\",\"physical_address\":\"0x2c8\",\"alignment\":\"0x4\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":7,\"type\":\"PT_GNU_PROPERTY\",\"header_location\":{\"offset\":\"0x1c8\",\"bytes\":\"0x38\"},\"offset\":\"0x2a8\",\"file_size\":\"0x20\",\"memory_size\":\"0x20\",\"virtual_address\":\"0x2a8\",\"physical_address\":\"0x2a8\",\"alignment\":\"0x8\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":8,\"type\":\"PT_GNU_EH_FRAME\",\"header_location\":{\"offset\":\"0x200\",\"bytes\":\"0x38\"},\"offset\":\"0x2000\",\"file_size\":\"0x24\",\"memory_size\":\"0x24\",\"virtual_address\":\"0x2000\",\"physical_address\":\"0x2000\",\"alignment\":\"0x4\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":9,\"type\":\"PT_GNU_STACK\",\"header_location\":{\"offset\":\"0x238\",\"bytes\":\"0x38\"},\"offset\":\"0x0\",\"file_size\":\"0x0\",\"memory_size\":\"0x0\",\"virtual_address\":\"0x0\",\"physical_address\":\"0x0\",\"alignment\":\"0x10\",\"flags\":\"0x6\",\"file_backing\":\"none\",\"permissions\":{\"read\":true,\"write\":true,\"execute\":false}},{\"index\":10,\"type\":\"PT_GNU_RELRO\",\"header_location\":{\"offset\":\"0x270\",\"bytes\":\"0x38\"},\"offset\":\"0x2e60\",\"file_size\":\"0x1a0\",\"memory_size\":\"0x1a0\",\"virtual_address\":\"0x3e60\",\"physical_address\":\"0x3e60\",\"alignment\":\"0x1\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}}],\"symbols\":[{\"table_index\":4,\"entry_index\":0,\"name\":{\"display\":\"\",\"bytes_base64\":\"\",\"location\":{\"offset\":\"0x3c0\",\"bytes\":\"0x1\"},\"unknown_reason\":null},\"name_offset\":\"0x0\",\"location\":{\"offset\":\"0x318\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":4,\"entry_index\":1,\"name\":{\"display\":\"__cxa_finalize\",\"bytes_base64\":\"X19jeGFfZmluYWxpemU=\",\"location\":{\"offset\":\"0x406\",\"bytes\":\"0xf\"},\"unknown_reason\":null},\"name_offset\":\"0x46\",\"location\":{\"offset\":\"0x330\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_WEAK\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":4,\"entry_index\":2,\"name\":{\"display\":\"_ITM_registerTMCloneTable\",\"bytes_base64\":\"X0lUTV9yZWdpc3RlclRNQ2xvbmVUYWJsZQ==\",\"location\":{\"offset\":\"0x3ec\",\"bytes\":\"0x1a\"},\"unknown_reason\":null},\"name_offset\":\"0x2c\",\"location\":{\"offset\":\"0x348\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_WEAK\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":4,\"entry_index\":3,\"name\":{\"display\":\"_ITM_deregisterTMCloneTable\",\"bytes_base64\":\"X0lUTV9kZXJlZ2lzdGVyVE1DbG9uZVRhYmxl\",\"location\":{\"offset\":\"0x3d0\",\"bytes\":\"0x1c\"},\"unknown_reason\":null},\"name_offset\":\"0x10\",\"location\":{\"offset\":\"0x360\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_WEAK\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":4,\"entry_index\":4,\"name\":{\"display\":\"__gmon_start__\",\"bytes_base64\":\"X19nbW9uX3N0YXJ0X18=\",\"location\":{\"offset\":\"0x3c1\",\"bytes\":\"0xf\"},\"unknown_reason\":null},\"name_offset\":\"0x1\",\"location\":{\"offset\":\"0x378\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_WEAK\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":4,\"entry_index\":5,\"name\":{\"display\":\"lib_value\",\"bytes_base64\":\"bGliX3ZhbHVl\",\"location\":{\"offset\":\"0x415\",\"bytes\":\"0xa\"},\"unknown_reason\":null},\"name_offset\":\"0x55\",\"location\":{\"offset\":\"0x390\",\"bytes\":\"0x18\"},\"value\":\"0x4008\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x4\",\"binding\":\"STB_GLOBAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":19},{\"table_index\":4,\"entry_index\":6,\"name\":{\"display\":\"lib_func\",\"bytes_base64\":\"bGliX2Z1bmM=\",\"location\":{\"offset\":\"0x41f\",\"bytes\":\"0x9\"},\"unknown_reason\":null},\"name_offset\":\"0x5f\",\"location\":{\"offset\":\"0x3a8\",\"bytes\":\"0x18\"},\"value\":\"0x10f9\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x1b\",\"binding\":\"STB_GLOBAL\",\"type\":\"STT_FUNC\",\"visibility\":\"STV_DEFAULT\",\"section_index\":10},{\"table_index\":22,\"entry_index\":0,\"name\":{\"display\":\"\",\"bytes_base64\":\"\",\"location\":{\"offset\":\"0x32b0\",\"bytes\":\"0x1\"},\"unknown_reason\":null},\"name_offset\":\"0x0\",\"location\":{\"offset\":\"0x3040\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":22,\"entry_index\":1,\"name\":{\"display\":\"crtstuff.c\",\"bytes_base64\":\"Y3J0c3R1ZmYuYw==\",\"location\":{\"offset\":\"0x32b1\",\"bytes\":\"0xb\"},\"unknown_reason\":null},\"name_offset\":\"0x1\",\"location\":{\"offset\":\"0x3058\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"no-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FILE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_ABS\"},{\"table_index\":22,\"entry_index\":2,\"name\":{\"display\":\"deregister_tm_clones\",\"bytes_base64\":\"ZGVyZWdpc3Rlcl90bV9jbG9uZXM=\",\"location\":{\"offset\":\"0x32bc\",\"bytes\":\"0x15\"},\"unknown_reason\":null},\"name_offset\":\"0xc\",\"location\":{\"offset\":\"0x3070\",\"bytes\":\"0x18\"},\"value\":\"0x1040\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FUNC\",\"visibility\":\"STV_DEFAULT\",\"section_index\":10},{\"table_index\":22,\"entry_index\":3,\"name\":{\"display\":\"register_tm_clones\",\"bytes_base64\":\"cmVnaXN0ZXJfdG1fY2xvbmVz\",\"location\":{\"offset\":\"0x32be\",\"bytes\":\"0x13\"},\"unknown_reason\":null},\"name_offset\":\"0xe\",\"location\":{\"offset\":\"0x3088\",\"bytes\":\"0x18\"},\"value\":\"0x1070\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FUNC\",\"visibility\":\"STV_DEFAULT\",\"section_index\":10},{\"table_index\":22,\"entry_index\":4,\"name\":{\"display\":\"__do_global_dtors_aux\",\"bytes_base64\":\"X19kb19nbG9iYWxfZHRvcnNfYXV4\",\"location\":{\"offset\":\"0x32d1\",\"bytes\":\"0x16\"},\"unknown_reason\":null},\"name_offset\":\"0x21\",\"location\":{\"offset\":\"0x30a0\",\"bytes\":\"0x18\"},\"value\":\"0x10b0\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FUNC\",\"visibility\":\"STV_DEFAULT\",\"section_index\":10},{\"table_index\":22,\"entry_index\":5,\"name\":{\"display\":\"completed.0\",\"bytes_base64\":\"Y29tcGxldGVkLjA=\",\"location\":{\"offset\":\"0x32e7\",\"bytes\":\"0xc\"},\"unknown_reason\":null},\"name_offset\":\"0x37\",\"location\":{\"offset\":\"0x30b8\",\"bytes\":\"0x18\"},\"value\":\"0x400c\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x1\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":20},{\"table_index\":22,\"entry_index\":6,\"name\":{\"display\":\"__do_global_dtors_aux_fini_array_entry\",\"bytes_base64\":\"X19kb19nbG9iYWxfZHRvcnNfYXV4X2ZpbmlfYXJyYXlfZW50cnk=\",\"location\":{\"offset\":\"0x32f3\",\"bytes\":\"0x27\"},\"unknown_reason\":null},\"name_offset\":\"0x43\",\"location\":{\"offset\":\"0x30d0\",\"bytes\":\"0x18\"},\"value\":\"0x3e68\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":15},{\"table_index\":22,\"entry_index\":7,\"name\":{\"display\":\"frame_dummy\",\"bytes_base64\":\"ZnJhbWVfZHVtbXk=\",\"location\":{\"offset\":\"0x331a\",\"bytes\":\"0xc\"},\"unknown_reason\":null},\"name_offset\":\"0x6a\",\"location\":{\"offset\":\"0x30e8\",\"bytes\":\"0x18\"},\"value\":\"0x10f0\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FUNC\",\"visibility\":\"STV_DEFAULT\",\"section_index\":10},{\"table_index\":22,\"entry_index\":8,\"name\":{\"display\":\"__frame_dummy_init_array_entry\",\"bytes_base64\":\"X19mcmFtZV9kdW1teV9pbml0X2FycmF5X2VudHJ5\",\"location\":{\"offset\":\"0x3326\",\"bytes\":\"0x1f\"},\"unknown_reason\":null},\"name_offset\":\"0x76\",\"location\":{\"offset\":\"0x3100\",\"bytes\":\"0x18\"},\"value\":\"0x3e60\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":14},{\"table_index\":22,\"entry_index\":9,\"name\":{\"display\":\"lib.c\",\"bytes_base64\":\"bGliLmM=\",\"location\":{\"offset\":\"0x3345\",\"bytes\":\"0x6\"},\"unknown_reason\":null},\"name_offset\":\"0x95\",\"location\":{\"offset\":\"0x3118\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"no-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FILE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_ABS\"},{\"table_index\":22,\"entry_index\":10,\"name\":{\"display\":\"crtstuff.c\",\"bytes_base64\":\"Y3J0c3R1ZmYuYw==\",\"location\":{\"offset\":\"0x32b1\",\"bytes\":\"0xb\"},\"unknown_reason\":null},\"name_offset\":\"0x1\",\"location\":{\"offset\":\"0x3130\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"no-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FILE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_ABS\"},{\"table_index\":22,\"entry_index\":11,\"name\":{\"display\":\"__FRAME_END__\",\"bytes_base64\":\"X19GUkFNRV9FTkRfXw==\",\"location\":{\"offset\":\"0x334b\",\"bytes\":\"0xe\"},\"unknown_reason\":null},\"name_offset\":\"0x9b\",\"location\":{\"offset\":\"0x3148\",\"bytes\":\"0x18\"},\"value\":\"0x20a0\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":13},{\"table_index\":22,\"entry_index\":12,\"name\":{\"display\":\"\",\"bytes_base64\":\"\",\"location\":{\"offset\":\"0x32b0\",\"bytes\":\"0x1\"},\"unknown_reason\":null},\"name_offset\":\"0x0\",\"location\":{\"offset\":\"0x3160\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"no-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FILE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_ABS\"},{\"table_index\":22,\"entry_index\":13,\"name\":{\"display\":\"_DYNAMIC\",\"bytes_base64\":\"X0RZTkFNSUM=\",\"location\":{\"offset\":\"0x3359\",\"bytes\":\"0x9\"},\"unknown_reason\":null},\"name_offset\":\"0xa9\",\"location\":{\"offset\":\"0x3178\",\"bytes\":\"0x18\"},\"value\":\"0x3e70\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":16},{\"table_index\":22,\"entry_index\":14,\"name\":{\"display\":\"__TMC_END__\",\"bytes_base64\":\"X19UTUNfRU5EX18=\",\"location\":{\"offset\":\"0x3362\",\"bytes\":\"0xc\"},\"unknown_reason\":null},\"name_offset\":\"0xb2\",\"location\":{\"offset\":\"0x3190\",\"bytes\":\"0x18\"},\"value\":\"0x4010\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":19},{\"table_index\":22,\"entry_index\":15,\"name\":{\"display\":\"__dso_handle\",\"bytes_base64\":\"X19kc29faGFuZGxl\",\"location\":{\"offset\":\"0x336e\",\"bytes\":\"0xd\"},\"unknown_reason\":null},\"name_offset\":\"0xbe\",\"location\":{\"offset\":\"0x31a8\",\"bytes\":\"0x18\"},\"value\":\"0x4000\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":19},{\"table_index\":22,\"entry_index\":16,\"name\":{\"display\":\"_init\",\"bytes_base64\":\"X2luaXQ=\",\"location\":{\"offset\":\"0x337b\",\"bytes\":\"0x6\"},\"unknown_reason\":null},\"name_offset\":\"0xcb\",\"location\":{\"offset\":\"0x31c0\",\"bytes\":\"0x18\"},\"value\":\"0x1000\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FUNC\",\"visibility\":\"STV_DEFAULT\",\"section_index\":7},{\"table_index\":22,\"entry_index\":17,\"name\":{\"display\":\"__GNU_EH_FRAME_HDR\",\"bytes_base64\":\"X19HTlVfRUhfRlJBTUVfSERS\",\"location\":{\"offset\":\"0x3381\",\"bytes\":\"0x13\"},\"unknown_reason\":null},\"name_offset\":\"0xd1\",\"location\":{\"offset\":\"0x31d8\",\"bytes\":\"0x18\"},\"value\":\"0x2000\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":12},{\"table_index\":22,\"entry_index\":18,\"name\":{\"display\":\"_fini\",\"bytes_base64\":\"X2Zpbmk=\",\"location\":{\"offset\":\"0x3394\",\"bytes\":\"0x6\"},\"unknown_reason\":null},\"name_offset\":\"0xe4\",\"location\":{\"offset\":\"0x31f0\",\"bytes\":\"0x18\"},\"value\":\"0x1114\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FUNC\",\"visibility\":\"STV_DEFAULT\",\"section_index\":11},{\"table_index\":22,\"entry_index\":19,\"name\":{\"display\":\"_GLOBAL_OFFSET_TABLE_\",\"bytes_base64\":\"X0dMT0JBTF9PRkZTRVRfVEFCTEVf\",\"location\":{\"offset\":\"0x339a\",\"bytes\":\"0x16\"},\"unknown_reason\":null},\"name_offset\":\"0xea\",\"location\":{\"offset\":\"0x3208\",\"bytes\":\"0x18\"},\"value\":\"0x3fe8\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":18},{\"table_index\":22,\"entry_index\":20,\"name\":{\"display\":\"lib_func\",\"bytes_base64\":\"bGliX2Z1bmM=\",\"location\":{\"offset\":\"0x33b0\",\"bytes\":\"0x9\"},\"unknown_reason\":null},\"name_offset\":\"0x100\",\"location\":{\"offset\":\"0x3220\",\"bytes\":\"0x18\"},\"value\":\"0x10f9\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x1b\",\"binding\":\"STB_GLOBAL\",\"type\":\"STT_FUNC\",\"visibility\":\"STV_DEFAULT\",\"section_index\":10},{\"table_index\":22,\"entry_index\":21,\"name\":{\"display\":\"__cxa_finalize\",\"bytes_base64\":\"X19jeGFfZmluYWxpemU=\",\"location\":{\"offset\":\"0x33b9\",\"bytes\":\"0xf\"},\"unknown_reason\":null},\"name_offset\":\"0x109\",\"location\":{\"offset\":\"0x3238\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_WEAK\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":22,\"entry_index\":22,\"name\":{\"display\":\"_ITM_registerTMCloneTable\",\"bytes_base64\":\"X0lUTV9yZWdpc3RlclRNQ2xvbmVUYWJsZQ==\",\"location\":{\"offset\":\"0x33c8\",\"bytes\":\"0x1a\"},\"unknown_reason\":null},\"name_offset\":\"0x118\",\"location\":{\"offset\":\"0x3250\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_WEAK\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":22,\"entry_index\":23,\"name\":{\"display\":\"_ITM_deregisterTMCloneTable\",\"bytes_base64\":\"X0lUTV9kZXJlZ2lzdGVyVE1DbG9uZVRhYmxl\",\"location\":{\"offset\":\"0x33e2\",\"bytes\":\"0x1c\"},\"unknown_reason\":null},\"name_offset\":\"0x132\",\"location\":{\"offset\":\"0x3268\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_WEAK\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":22,\"entry_index\":24,\"name\":{\"display\":\"lib_value\",\"bytes_base64\":\"bGliX3ZhbHVl\",\"location\":{\"offset\":\"0x33fe\",\"bytes\":\"0xa\"},\"unknown_reason\":null},\"name_offset\":\"0x14e\",\"location\":{\"offset\":\"0x3280\",\"bytes\":\"0x18\"},\"value\":\"0x4008\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x4\",\"binding\":\"STB_GLOBAL\",\"type\":\"STT_OBJECT\",\"visibility\":\"STV_DEFAULT\",\"section_index\":19},{\"table_index\":22,\"entry_index\":25,\"name\":{\"display\":\"__gmon_start__\",\"bytes_base64\":\"X19nbW9uX3N0YXJ0X18=\",\"location\":{\"offset\":\"0x3408\",\"bytes\":\"0xf\"},\"unknown_reason\":null},\"name_offset\":\"0x158\",\"location\":{\"offset\":\"0x3298\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_WEAK\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"}],\"relocations\":[{\"section_index\":6,\"entry_index\":0,\"reported_offset\":\"0x3e60\",\"target\":{\"kind\":\"linked-virtual-address\",\"address\":\"0x3e60\"},\"location\":{\"offset\":\"0x428\",\"bytes\":\"0x18\"},\"type\":8,\"symbol_table_index\":4,\"symbol_index\":0,\"symbol_reference_meaning\":\"zero-symbol-value\",\"addend\":\"4336\"},{\"section_index\":6,\"entry_index\":1,\"reported_offset\":\"0x3e68\",\"target\":{\"kind\":\"linked-virtual-address\",\"address\":\"0x3e68\"},\"location\":{\"offset\":\"0x440\",\"bytes\":\"0x18\"},\"type\":8,\"symbol_table_index\":4,\"symbol_index\":0,\"symbol_reference_meaning\":\"zero-symbol-value\",\"addend\":\"4272\"},{\"section_index\":6,\"entry_index\":2,\"reported_offset\":\"0x4000\",\"target\":{\"kind\":\"linked-virtual-address\",\"address\":\"0x4000\"},\"location\":{\"offset\":\"0x458\",\"bytes\":\"0x18\"},\"type\":8,\"symbol_table_index\":4,\"symbol_index\":0,\"symbol_reference_meaning\":\"zero-symbol-value\",\"addend\":\"16384\"},{\"section_index\":6,\"entry_index\":3,\"reported_offset\":\"0x3fc0\",\"target\":{\"kind\":\"linked-virtual-address\",\"address\":\"0x3fc0\"},\"location\":{\"offset\":\"0x470\",\"bytes\":\"0x18\"},\"type\":6,\"symbol_table_index\":4,\"symbol_index\":1,\"symbol_reference_meaning\":\"symbol-table-entry\",\"addend\":\"0\"},{\"section_index\":6,\"entry_index\":4,\"reported_offset\":\"0x3fc8\",\"target\":{\"kind\":\"linked-virtual-address\",\"address\":\"0x3fc8\"},\"location\":{\"offset\":\"0x488\",\"bytes\":\"0x18\"},\"type\":6,\"symbol_table_index\":4,\"symbol_index\":2,\"symbol_reference_meaning\":\"symbol-table-entry\",\"addend\":\"0\"},{\"section_index\":6,\"entry_index\":5,\"reported_offset\":\"0x3fd0\",\"target\":{\"kind\":\"linked-virtual-address\",\"address\":\"0x3fd0\"},\"location\":{\"offset\":\"0x4a0\",\"bytes\":\"0x18\"},\"type\":6,\"symbol_table_index\":4,\"symbol_index\":3,\"symbol_reference_meaning\":\"symbol-table-entry\",\"addend\":\"0\"},{\"section_index\":6,\"entry_index\":6,\"reported_offset\":\"0x3fd8\",\"target\":{\"kind\":\"linked-virtual-address\",\"address\":\"0x3fd8\"},\"location\":{\"offset\":\"0x4b8\",\"bytes\":\"0x18\"},\"type\":6,\"symbol_table_index\":4,\"symbol_index\":5,\"symbol_reference_meaning\":\"symbol-table-entry\",\"addend\":\"0\"},{\"section_index\":6,\"entry_index\":7,\"reported_offset\":\"0x3fe0\",\"target\":{\"kind\":\"linked-virtual-address\",\"address\":\"0x3fe0\"},\"location\":{\"offset\":\"0x4d0\",\"bytes\":\"0x18\"},\"type\":6,\"symbol_table_index\":4,\"symbol_index\":4,\"symbol_reference_meaning\":\"symbol-table-entry\",\"addend\":\"0\"}],\"packed_relative_relocations\":[],\"relocation_inventory_completeness\":\"unknown\",\"linkage\":{\"needed_libraries\":[],\"interpreters\":[],\"got\":[{\"display_name\":\"frame_dummy\",\"address\":\"0x3e60\"},{\"display_name\":\"__do_global_dtors_aux\",\"address\":\"0x3e68\"},{\"display_name\":\"__dso_handle\",\"address\":\"0x4000\"},{\"display_name\":\"__cxa_finalize\",\"address\":\"0x3fc0\"},{\"display_name\":\"_ITM_registerTMCloneTable\",\"address\":\"0x3fc8\"},{\"display_name\":\"_ITM_deregisterTMCloneTable\",\"address\":\"0x3fd0\"},{\"display_name\":\"lib_value\",\"address\":\"0x3fd8\"},{\"display_name\":\"__gmon_start__\",\"address\":\"0x3fe0\"}],\"plt\":[{\"display_name\":\"lib.c\",\"address\":\"0x103c\"},{\"display_name\":\"__cxa_finalize\",\"address\":\"0x1034\"}],\"convenience_maps_completeness\":\"unknown\",\"runtime_library_paths\":null},\"mitigations\":{\"evidence_kind\":\"inferred\",\"position_independent\":true,\"nx_indicator\":true,\"executable_stack_indicator\":false,\"stack_canary_indicator\":false,\"relro\":\"Partial\"},\"diagnostics\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false},\"limitations\":[\"PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.\",\"SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.\",\"Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.\",\"Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.\",\"Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.\",\"Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.\",\"Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.\",\"GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.\",\"Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.\",\"This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.\",\"Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.\",\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.\",\"SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.\",\"Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.\",\"Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.\",\"Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.\",\"Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.\",\"Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.\",\"GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.\",\"Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.\",\"This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.\",\"Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.\",\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/elf/libsample.so\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_bd30d8796e8ec005d9e0d3405b14ae82dd69ca899ca093251955b8330b47e065",
+   "subject": {
+    "name": "libsample.so",
+    "digest": {
+     "sha256": "ca95e9c04697fcf2b2f28e16760fc8b88136a271bb049a24ec99a4b4b002caa7"
+    },
+    "format": "elf",
+    "architecture": "x86_64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/elf/libsample.so"
+   },
+   "provider": {
+    "id": "pwntools-elf",
+    "name": "REA pwntools ELF adapter",
+    "version": "pwntools@4.15.0;pyelftools@0.33;unicorn@2.1.2"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_binary_layout",
+   "parameters": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/elf/libsample.so"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "artifact": {
+     "path": "/workspace/wt/native_static/fixtures/native_static/elf/libsample.so",
+     "sha256": "ca95e9c04697fcf2b2f28e16760fc8b88136a271bb049a24ec99a4b4b002caa7",
+     "bytes": 15152
+    },
+    "format": "elf",
+    "architecture": {
+     "machine": "EM_X86_64",
+     "bits": 64,
+     "byte_order": "little"
+    },
+    "image_type": "ET_DYN",
+    "entry_point": {
+     "reported_value": "0x0",
+     "meaning": "absent",
+     "execution_status": "unknown"
+    },
+    "runtime_load_base": null,
+    "sections": [
+     {
+      "index": 0,
+      "name": {
+       "display": "",
+       "bytes_base64": "",
+       "location": {
+        "offset": "0x3417",
+        "bytes": "0x1"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x0",
+      "type": "SHT_NULL",
+      "header_location": {
+       "offset": "0x34f0",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x0",
+      "size": "0x0",
+      "alignment": "0x0",
+      "flags": "0x0",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "none"
+     },
+     {
+      "index": 1,
+      "name": {
+       "display": ".note.gnu.property",
+       "bytes_base64": "Lm5vdGUuZ251LnByb3BlcnR5",
+       "location": {
+        "offset": "0x3432",
+        "bytes": "0x13"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x1b",
+      "type": "SHT_NOTE",
+      "header_location": {
+       "offset": "0x3530",
+       "bytes": "0x40"
+      },
+      "address": "0x2a8",
+      "offset": "0x2a8",
+      "size": "0x20",
+      "alignment": "0x8",
+      "flags": "0x2",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 2,
+      "name": {
+       "display": ".note.gnu.build-id",
+       "bytes_base64": "Lm5vdGUuZ251LmJ1aWxkLWlk",
+       "location": {
+        "offset": "0x3445",
+        "bytes": "0x13"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x2e",
+      "type": "SHT_NOTE",
+      "header_location": {
+       "offset": "0x3570",
+       "bytes": "0x40"
+      },
+      "address": "0x2c8",
+      "offset": "0x2c8",
+      "size": "0x24",
+      "alignment": "0x4",
+      "flags": "0x2",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 3,
+      "name": {
+       "display": ".gnu.hash",
+       "bytes_base64": "LmdudS5oYXNo",
+       "location": {
+        "offset": "0x3458",
+        "bytes": "0xa"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x41",
+      "type": "SHT_GNU_HASH",
+      "header_location": {
+       "offset": "0x35b0",
+       "bytes": "0x40"
+      },
+      "address": "0x2f0",
+      "offset": "0x2f0",
+      "size": "0x28",
+      "alignment": "0x8",
+      "flags": "0x2",
+      "link": 4,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 4,
+      "name": {
+       "display": ".dynsym",
+       "bytes_base64": "LmR5bnN5bQ==",
+       "location": {
+        "offset": "0x3462",
+        "bytes": "0x8"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x4b",
+      "type": "SHT_DYNSYM",
+      "header_location": {
+       "offset": "0x35f0",
+       "bytes": "0x40"
+      },
+      "address": "0x318",
+      "offset": "0x318",
+      "size": "0xa8",
+      "alignment": "0x8",
+      "flags": "0x2",
+      "link": 5,
+      "info": 1,
+      "entry_size": "0x18",
+      "file_backing": "file"
+     },
+     {
+      "index": 5,
+      "name": {
+       "display": ".dynstr",
+       "bytes_base64": "LmR5bnN0cg==",
+       "location": {
+        "offset": "0x346a",
+        "bytes": "0x8"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x53",
+      "type": "SHT_STRTAB",
+      "header_location": {
+       "offset": "0x3630",
+       "bytes": "0x40"
+      },
+      "address": "0x3c0",
+      "offset": "0x3c0",
+      "size": "0x68",
+      "alignment": "0x1",
+      "flags": "0x2",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 6,
+      "name": {
+       "display": ".rela.dyn",
+       "bytes_base64": "LnJlbGEuZHlu",
+       "location": {
+        "offset": "0x3472",
+        "bytes": "0xa"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x5b",
+      "type": "SHT_RELA",
+      "header_location": {
+       "offset": "0x3670",
+       "bytes": "0x40"
+      },
+      "address": "0x428",
+      "offset": "0x428",
+      "size": "0xc0",
+      "alignment": "0x8",
+      "flags": "0x2",
+      "link": 4,
+      "info": 0,
+      "entry_size": "0x18",
+      "file_backing": "file"
+     },
+     {
+      "index": 7,
+      "name": {
+       "display": ".init",
+       "bytes_base64": "LmluaXQ=",
+       "location": {
+        "offset": "0x347c",
+        "bytes": "0x6"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x65",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x36b0",
+       "bytes": "0x40"
+      },
+      "address": "0x1000",
+      "offset": "0x1000",
+      "size": "0x1b",
+      "alignment": "0x4",
+      "flags": "0x6",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 8,
+      "name": {
+       "display": ".plt",
+       "bytes_base64": "LnBsdA==",
+       "location": {
+        "offset": "0x34d4",
+        "bytes": "0x5"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xbd",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x36f0",
+       "bytes": "0x40"
+      },
+      "address": "0x1020",
+      "offset": "0x1020",
+      "size": "0x10",
+      "alignment": "0x10",
+      "flags": "0x6",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x10",
+      "file_backing": "file"
+     },
+     {
+      "index": 9,
+      "name": {
+       "display": ".plt.got",
+       "bytes_base64": "LnBsdC5nb3Q=",
+       "location": {
+        "offset": "0x3482",
+        "bytes": "0x9"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x6b",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x3730",
+       "bytes": "0x40"
+      },
+      "address": "0x1030",
+      "offset": "0x1030",
+      "size": "0x10",
+      "alignment": "0x10",
+      "flags": "0x6",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x10",
+      "file_backing": "file"
+     },
+     {
+      "index": 10,
+      "name": {
+       "display": ".text",
+       "bytes_base64": "LnRleHQ=",
+       "location": {
+        "offset": "0x348b",
+        "bytes": "0x6"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x74",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x3770",
+       "bytes": "0x40"
+      },
+      "address": "0x1040",
+      "offset": "0x1040",
+      "size": "0xd4",
+      "alignment": "0x10",
+      "flags": "0x6",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 11,
+      "name": {
+       "display": ".fini",
+       "bytes_base64": "LmZpbmk=",
+       "location": {
+        "offset": "0x3491",
+        "bytes": "0x6"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x7a",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x37b0",
+       "bytes": "0x40"
+      },
+      "address": "0x1114",
+      "offset": "0x1114",
+      "size": "0xd",
+      "alignment": "0x4",
+      "flags": "0x6",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 12,
+      "name": {
+       "display": ".eh_frame_hdr",
+       "bytes_base64": "LmVoX2ZyYW1lX2hkcg==",
+       "location": {
+        "offset": "0x3497",
+        "bytes": "0xe"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x80",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x37f0",
+       "bytes": "0x40"
+      },
+      "address": "0x2000",
+      "offset": "0x2000",
+      "size": "0x24",
+      "alignment": "0x4",
+      "flags": "0x2",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 13,
+      "name": {
+       "display": ".eh_frame",
+       "bytes_base64": "LmVoX2ZyYW1l",
+       "location": {
+        "offset": "0x34a5",
+        "bytes": "0xa"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x8e",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x3830",
+       "bytes": "0x40"
+      },
+      "address": "0x2028",
+      "offset": "0x2028",
+      "size": "0x7c",
+      "alignment": "0x8",
+      "flags": "0x2",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 14,
+      "name": {
+       "display": ".init_array",
+       "bytes_base64": "LmluaXRfYXJyYXk=",
+       "location": {
+        "offset": "0x34af",
+        "bytes": "0xc"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x98",
+      "type": "SHT_INIT_ARRAY",
+      "header_location": {
+       "offset": "0x3870",
+       "bytes": "0x40"
+      },
+      "address": "0x3e60",
+      "offset": "0x2e60",
+      "size": "0x8",
+      "alignment": "0x8",
+      "flags": "0x3",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x8",
+      "file_backing": "file"
+     },
+     {
+      "index": 15,
+      "name": {
+       "display": ".fini_array",
+       "bytes_base64": "LmZpbmlfYXJyYXk=",
+       "location": {
+        "offset": "0x34bb",
+        "bytes": "0xc"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xa4",
+      "type": "SHT_FINI_ARRAY",
+      "header_location": {
+       "offset": "0x38b0",
+       "bytes": "0x40"
+      },
+      "address": "0x3e68",
+      "offset": "0x2e68",
+      "size": "0x8",
+      "alignment": "0x8",
+      "flags": "0x3",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x8",
+      "file_backing": "file"
+     },
+     {
+      "index": 16,
+      "name": {
+       "display": ".dynamic",
+       "bytes_base64": "LmR5bmFtaWM=",
+       "location": {
+        "offset": "0x34c7",
+        "bytes": "0x9"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xb0",
+      "type": "SHT_DYNAMIC",
+      "header_location": {
+       "offset": "0x38f0",
+       "bytes": "0x40"
+      },
+      "address": "0x3e70",
+      "offset": "0x2e70",
+      "size": "0x150",
+      "alignment": "0x8",
+      "flags": "0x3",
+      "link": 5,
+      "info": 0,
+      "entry_size": "0x10",
+      "file_backing": "file"
+     },
+     {
+      "index": 17,
+      "name": {
+       "display": ".got",
+       "bytes_base64": "LmdvdA==",
+       "location": {
+        "offset": "0x3486",
+        "bytes": "0x5"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x6f",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x3930",
+       "bytes": "0x40"
+      },
+      "address": "0x3fc0",
+      "offset": "0x2fc0",
+      "size": "0x28",
+      "alignment": "0x8",
+      "flags": "0x3",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x8",
+      "file_backing": "file"
+     },
+     {
+      "index": 18,
+      "name": {
+       "display": ".got.plt",
+       "bytes_base64": "LmdvdC5wbHQ=",
+       "location": {
+        "offset": "0x34d0",
+        "bytes": "0x9"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xb9",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x3970",
+       "bytes": "0x40"
+      },
+      "address": "0x3fe8",
+      "offset": "0x2fe8",
+      "size": "0x18",
+      "alignment": "0x8",
+      "flags": "0x3",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x8",
+      "file_backing": "file"
+     },
+     {
+      "index": 19,
+      "name": {
+       "display": ".data",
+       "bytes_base64": "LmRhdGE=",
+       "location": {
+        "offset": "0x34d9",
+        "bytes": "0x6"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xc2",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x39b0",
+       "bytes": "0x40"
+      },
+      "address": "0x4000",
+      "offset": "0x3000",
+      "size": "0xc",
+      "alignment": "0x8",
+      "flags": "0x3",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 20,
+      "name": {
+       "display": ".bss",
+       "bytes_base64": "LmJzcw==",
+       "location": {
+        "offset": "0x34df",
+        "bytes": "0x5"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xc8",
+      "type": "SHT_NOBITS",
+      "header_location": {
+       "offset": "0x39f0",
+       "bytes": "0x40"
+      },
+      "address": "0x400c",
+      "offset": "0x300c",
+      "size": "0x4",
+      "alignment": "0x1",
+      "flags": "0x3",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "none"
+     },
+     {
+      "index": 21,
+      "name": {
+       "display": ".comment",
+       "bytes_base64": "LmNvbW1lbnQ=",
+       "location": {
+        "offset": "0x34e4",
+        "bytes": "0x9"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xcd",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x3a30",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x300c",
+      "size": "0x2d",
+      "alignment": "0x1",
+      "flags": "0x30",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x1",
+      "file_backing": "file"
+     },
+     {
+      "index": 22,
+      "name": {
+       "display": ".symtab",
+       "bytes_base64": "LnN5bXRhYg==",
+       "location": {
+        "offset": "0x3418",
+        "bytes": "0x8"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x1",
+      "type": "SHT_SYMTAB",
+      "header_location": {
+       "offset": "0x3a70",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x3040",
+      "size": "0x270",
+      "alignment": "0x8",
+      "flags": "0x0",
+      "link": 23,
+      "info": 20,
+      "entry_size": "0x18",
+      "file_backing": "file"
+     },
+     {
+      "index": 23,
+      "name": {
+       "display": ".strtab",
+       "bytes_base64": "LnN0cnRhYg==",
+       "location": {
+        "offset": "0x3420",
+        "bytes": "0x8"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x9",
+      "type": "SHT_STRTAB",
+      "header_location": {
+       "offset": "0x3ab0",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x32b0",
+      "size": "0x167",
+      "alignment": "0x1",
+      "flags": "0x0",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 24,
+      "name": {
+       "display": ".shstrtab",
+       "bytes_base64": "LnNoc3RydGFi",
+       "location": {
+        "offset": "0x3428",
+        "bytes": "0xa"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x11",
+      "type": "SHT_STRTAB",
+      "header_location": {
+       "offset": "0x3af0",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x3417",
+      "size": "0xd6",
+      "alignment": "0x1",
+      "flags": "0x0",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     }
+    ],
+    "segments": [
+     {
+      "index": 0,
+      "type": "PT_LOAD",
+      "header_location": {
+       "offset": "0x40",
+       "bytes": "0x38"
+      },
+      "offset": "0x0",
+      "file_size": "0x4e8",
+      "memory_size": "0x4e8",
+      "virtual_address": "0x0",
+      "physical_address": "0x0",
+      "alignment": "0x1000",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 1,
+      "type": "PT_LOAD",
+      "header_location": {
+       "offset": "0x78",
+       "bytes": "0x38"
+      },
+      "offset": "0x1000",
+      "file_size": "0x121",
+      "memory_size": "0x121",
+      "virtual_address": "0x1000",
+      "physical_address": "0x1000",
+      "alignment": "0x1000",
+      "flags": "0x5",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": true
+      }
+     },
+     {
+      "index": 2,
+      "type": "PT_LOAD",
+      "header_location": {
+       "offset": "0xb0",
+       "bytes": "0x38"
+      },
+      "offset": "0x2000",
+      "file_size": "0xa4",
+      "memory_size": "0xa4",
+      "virtual_address": "0x2000",
+      "physical_address": "0x2000",
+      "alignment": "0x1000",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 3,
+      "type": "PT_LOAD",
+      "header_location": {
+       "offset": "0xe8",
+       "bytes": "0x38"
+      },
+      "offset": "0x2e60",
+      "file_size": "0x1ac",
+      "memory_size": "0x1b0",
+      "virtual_address": "0x3e60",
+      "physical_address": "0x3e60",
+      "alignment": "0x1000",
+      "flags": "0x6",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": true,
+       "execute": false
+      }
+     },
+     {
+      "index": 4,
+      "type": "PT_DYNAMIC",
+      "header_location": {
+       "offset": "0x120",
+       "bytes": "0x38"
+      },
+      "offset": "0x2e70",
+      "file_size": "0x150",
+      "memory_size": "0x150",
+      "virtual_address": "0x3e70",
+      "physical_address": "0x3e70",
+      "alignment": "0x8",
+      "flags": "0x6",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": true,
+       "execute": false
+      }
+     },
+     {
+      "index": 5,
+      "type": "PT_NOTE",
+      "header_location": {
+       "offset": "0x158",
+       "bytes": "0x38"
+      },
+      "offset": "0x2a8",
+      "file_size": "0x20",
+      "memory_size": "0x20",
+      "virtual_address": "0x2a8",
+      "physical_address": "0x2a8",
+      "alignment": "0x8",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 6,
+      "type": "PT_NOTE",
+      "header_location": {
+       "offset": "0x190",
+       "bytes": "0x38"
+      },
+      "offset": "0x2c8",
+      "file_size": "0x24",
+      "memory_size": "0x24",
+      "virtual_address": "0x2c8",
+      "physical_address": "0x2c8",
+      "alignment": "0x4",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 7,
+      "type": "PT_GNU_PROPERTY",
+      "header_location": {
+       "offset": "0x1c8",
+       "bytes": "0x38"
+      },
+      "offset": "0x2a8",
+      "file_size": "0x20",
+      "memory_size": "0x20",
+      "virtual_address": "0x2a8",
+      "physical_address": "0x2a8",
+      "alignment": "0x8",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 8,
+      "type": "PT_GNU_EH_FRAME",
+      "header_location": {
+       "offset": "0x200",
+       "bytes": "0x38"
+      },
+      "offset": "0x2000",
+      "file_size": "0x24",
+      "memory_size": "0x24",
+      "virtual_address": "0x2000",
+      "physical_address": "0x2000",
+      "alignment": "0x4",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 9,
+      "type": "PT_GNU_STACK",
+      "header_location": {
+       "offset": "0x238",
+       "bytes": "0x38"
+      },
+      "offset": "0x0",
+      "file_size": "0x0",
+      "memory_size": "0x0",
+      "virtual_address": "0x0",
+      "physical_address": "0x0",
+      "alignment": "0x10",
+      "flags": "0x6",
+      "file_backing": "none",
+      "permissions": {
+       "read": true,
+       "write": true,
+       "execute": false
+      }
+     },
+     {
+      "index": 10,
+      "type": "PT_GNU_RELRO",
+      "header_location": {
+       "offset": "0x270",
+       "bytes": "0x38"
+      },
+      "offset": "0x2e60",
+      "file_size": "0x1a0",
+      "memory_size": "0x1a0",
+      "virtual_address": "0x3e60",
+      "physical_address": "0x3e60",
+      "alignment": "0x1",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     }
+    ],
+    "symbols": [
+     {
+      "table_index": 4,
+      "entry_index": 0,
+      "name": {
+       "display": "",
+       "bytes_base64": "",
+       "location": {
+        "offset": "0x3c0",
+        "bytes": "0x1"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x0",
+      "location": {
+       "offset": "0x318",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 4,
+      "entry_index": 1,
+      "name": {
+       "display": "__cxa_finalize",
+       "bytes_base64": "X19jeGFfZmluYWxpemU=",
+       "location": {
+        "offset": "0x406",
+        "bytes": "0xf"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x46",
+      "location": {
+       "offset": "0x330",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_WEAK",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 4,
+      "entry_index": 2,
+      "name": {
+       "display": "_ITM_registerTMCloneTable",
+       "bytes_base64": "X0lUTV9yZWdpc3RlclRNQ2xvbmVUYWJsZQ==",
+       "location": {
+        "offset": "0x3ec",
+        "bytes": "0x1a"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x2c",
+      "location": {
+       "offset": "0x348",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_WEAK",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 4,
+      "entry_index": 3,
+      "name": {
+       "display": "_ITM_deregisterTMCloneTable",
+       "bytes_base64": "X0lUTV9kZXJlZ2lzdGVyVE1DbG9uZVRhYmxl",
+       "location": {
+        "offset": "0x3d0",
+        "bytes": "0x1c"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x10",
+      "location": {
+       "offset": "0x360",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_WEAK",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 4,
+      "entry_index": 4,
+      "name": {
+       "display": "__gmon_start__",
+       "bytes_base64": "X19nbW9uX3N0YXJ0X18=",
+       "location": {
+        "offset": "0x3c1",
+        "bytes": "0xf"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x1",
+      "location": {
+       "offset": "0x378",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_WEAK",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 4,
+      "entry_index": 5,
+      "name": {
+       "display": "lib_value",
+       "bytes_base64": "bGliX3ZhbHVl",
+       "location": {
+        "offset": "0x415",
+        "bytes": "0xa"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x55",
+      "location": {
+       "offset": "0x390",
+       "bytes": "0x18"
+      },
+      "value": "0x4008",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x4",
+      "binding": "STB_GLOBAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 19
+     },
+     {
+      "table_index": 4,
+      "entry_index": 6,
+      "name": {
+       "display": "lib_func",
+       "bytes_base64": "bGliX2Z1bmM=",
+       "location": {
+        "offset": "0x41f",
+        "bytes": "0x9"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x5f",
+      "location": {
+       "offset": "0x3a8",
+       "bytes": "0x18"
+      },
+      "value": "0x10f9",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x1b",
+      "binding": "STB_GLOBAL",
+      "type": "STT_FUNC",
+      "visibility": "STV_DEFAULT",
+      "section_index": 10
+     },
+     {
+      "table_index": 22,
+      "entry_index": 0,
+      "name": {
+       "display": "",
+       "bytes_base64": "",
+       "location": {
+        "offset": "0x32b0",
+        "bytes": "0x1"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x0",
+      "location": {
+       "offset": "0x3040",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 22,
+      "entry_index": 1,
+      "name": {
+       "display": "crtstuff.c",
+       "bytes_base64": "Y3J0c3R1ZmYuYw==",
+       "location": {
+        "offset": "0x32b1",
+        "bytes": "0xb"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x1",
+      "location": {
+       "offset": "0x3058",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "no-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FILE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_ABS"
+     },
+     {
+      "table_index": 22,
+      "entry_index": 2,
+      "name": {
+       "display": "deregister_tm_clones",
+       "bytes_base64": "ZGVyZWdpc3Rlcl90bV9jbG9uZXM=",
+       "location": {
+        "offset": "0x32bc",
+        "bytes": "0x15"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xc",
+      "location": {
+       "offset": "0x3070",
+       "bytes": "0x18"
+      },
+      "value": "0x1040",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FUNC",
+      "visibility": "STV_DEFAULT",
+      "section_index": 10
+     },
+     {
+      "table_index": 22,
+      "entry_index": 3,
+      "name": {
+       "display": "register_tm_clones",
+       "bytes_base64": "cmVnaXN0ZXJfdG1fY2xvbmVz",
+       "location": {
+        "offset": "0x32be",
+        "bytes": "0x13"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xe",
+      "location": {
+       "offset": "0x3088",
+       "bytes": "0x18"
+      },
+      "value": "0x1070",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FUNC",
+      "visibility": "STV_DEFAULT",
+      "section_index": 10
+     },
+     {
+      "table_index": 22,
+      "entry_index": 4,
+      "name": {
+       "display": "__do_global_dtors_aux",
+       "bytes_base64": "X19kb19nbG9iYWxfZHRvcnNfYXV4",
+       "location": {
+        "offset": "0x32d1",
+        "bytes": "0x16"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x21",
+      "location": {
+       "offset": "0x30a0",
+       "bytes": "0x18"
+      },
+      "value": "0x10b0",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FUNC",
+      "visibility": "STV_DEFAULT",
+      "section_index": 10
+     },
+     {
+      "table_index": 22,
+      "entry_index": 5,
+      "name": {
+       "display": "completed.0",
+       "bytes_base64": "Y29tcGxldGVkLjA=",
+       "location": {
+        "offset": "0x32e7",
+        "bytes": "0xc"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x37",
+      "location": {
+       "offset": "0x30b8",
+       "bytes": "0x18"
+      },
+      "value": "0x400c",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x1",
+      "binding": "STB_LOCAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 20
+     },
+     {
+      "table_index": 22,
+      "entry_index": 6,
+      "name": {
+       "display": "__do_global_dtors_aux_fini_array_entry",
+       "bytes_base64": "X19kb19nbG9iYWxfZHRvcnNfYXV4X2ZpbmlfYXJyYXlfZW50cnk=",
+       "location": {
+        "offset": "0x32f3",
+        "bytes": "0x27"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x43",
+      "location": {
+       "offset": "0x30d0",
+       "bytes": "0x18"
+      },
+      "value": "0x3e68",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 15
+     },
+     {
+      "table_index": 22,
+      "entry_index": 7,
+      "name": {
+       "display": "frame_dummy",
+       "bytes_base64": "ZnJhbWVfZHVtbXk=",
+       "location": {
+        "offset": "0x331a",
+        "bytes": "0xc"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x6a",
+      "location": {
+       "offset": "0x30e8",
+       "bytes": "0x18"
+      },
+      "value": "0x10f0",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FUNC",
+      "visibility": "STV_DEFAULT",
+      "section_index": 10
+     },
+     {
+      "table_index": 22,
+      "entry_index": 8,
+      "name": {
+       "display": "__frame_dummy_init_array_entry",
+       "bytes_base64": "X19mcmFtZV9kdW1teV9pbml0X2FycmF5X2VudHJ5",
+       "location": {
+        "offset": "0x3326",
+        "bytes": "0x1f"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x76",
+      "location": {
+       "offset": "0x3100",
+       "bytes": "0x18"
+      },
+      "value": "0x3e60",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 14
+     },
+     {
+      "table_index": 22,
+      "entry_index": 9,
+      "name": {
+       "display": "lib.c",
+       "bytes_base64": "bGliLmM=",
+       "location": {
+        "offset": "0x3345",
+        "bytes": "0x6"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x95",
+      "location": {
+       "offset": "0x3118",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "no-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FILE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_ABS"
+     },
+     {
+      "table_index": 22,
+      "entry_index": 10,
+      "name": {
+       "display": "crtstuff.c",
+       "bytes_base64": "Y3J0c3R1ZmYuYw==",
+       "location": {
+        "offset": "0x32b1",
+        "bytes": "0xb"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x1",
+      "location": {
+       "offset": "0x3130",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "no-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FILE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_ABS"
+     },
+     {
+      "table_index": 22,
+      "entry_index": 11,
+      "name": {
+       "display": "__FRAME_END__",
+       "bytes_base64": "X19GUkFNRV9FTkRfXw==",
+       "location": {
+        "offset": "0x334b",
+        "bytes": "0xe"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x9b",
+      "location": {
+       "offset": "0x3148",
+       "bytes": "0x18"
+      },
+      "value": "0x20a0",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 13
+     },
+     {
+      "table_index": 22,
+      "entry_index": 12,
+      "name": {
+       "display": "",
+       "bytes_base64": "",
+       "location": {
+        "offset": "0x32b0",
+        "bytes": "0x1"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x0",
+      "location": {
+       "offset": "0x3160",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "no-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FILE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_ABS"
+     },
+     {
+      "table_index": 22,
+      "entry_index": 13,
+      "name": {
+       "display": "_DYNAMIC",
+       "bytes_base64": "X0RZTkFNSUM=",
+       "location": {
+        "offset": "0x3359",
+        "bytes": "0x9"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xa9",
+      "location": {
+       "offset": "0x3178",
+       "bytes": "0x18"
+      },
+      "value": "0x3e70",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 16
+     },
+     {
+      "table_index": 22,
+      "entry_index": 14,
+      "name": {
+       "display": "__TMC_END__",
+       "bytes_base64": "X19UTUNfRU5EX18=",
+       "location": {
+        "offset": "0x3362",
+        "bytes": "0xc"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xb2",
+      "location": {
+       "offset": "0x3190",
+       "bytes": "0x18"
+      },
+      "value": "0x4010",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 19
+     },
+     {
+      "table_index": 22,
+      "entry_index": 15,
+      "name": {
+       "display": "__dso_handle",
+       "bytes_base64": "X19kc29faGFuZGxl",
+       "location": {
+        "offset": "0x336e",
+        "bytes": "0xd"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xbe",
+      "location": {
+       "offset": "0x31a8",
+       "bytes": "0x18"
+      },
+      "value": "0x4000",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 19
+     },
+     {
+      "table_index": 22,
+      "entry_index": 16,
+      "name": {
+       "display": "_init",
+       "bytes_base64": "X2luaXQ=",
+       "location": {
+        "offset": "0x337b",
+        "bytes": "0x6"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xcb",
+      "location": {
+       "offset": "0x31c0",
+       "bytes": "0x18"
+      },
+      "value": "0x1000",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FUNC",
+      "visibility": "STV_DEFAULT",
+      "section_index": 7
+     },
+     {
+      "table_index": 22,
+      "entry_index": 17,
+      "name": {
+       "display": "__GNU_EH_FRAME_HDR",
+       "bytes_base64": "X19HTlVfRUhfRlJBTUVfSERS",
+       "location": {
+        "offset": "0x3381",
+        "bytes": "0x13"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xd1",
+      "location": {
+       "offset": "0x31d8",
+       "bytes": "0x18"
+      },
+      "value": "0x2000",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": 12
+     },
+     {
+      "table_index": 22,
+      "entry_index": 18,
+      "name": {
+       "display": "_fini",
+       "bytes_base64": "X2Zpbmk=",
+       "location": {
+        "offset": "0x3394",
+        "bytes": "0x6"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xe4",
+      "location": {
+       "offset": "0x31f0",
+       "bytes": "0x18"
+      },
+      "value": "0x1114",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FUNC",
+      "visibility": "STV_DEFAULT",
+      "section_index": 11
+     },
+     {
+      "table_index": 22,
+      "entry_index": 19,
+      "name": {
+       "display": "_GLOBAL_OFFSET_TABLE_",
+       "bytes_base64": "X0dMT0JBTF9PRkZTRVRfVEFCTEVf",
+       "location": {
+        "offset": "0x339a",
+        "bytes": "0x16"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xea",
+      "location": {
+       "offset": "0x3208",
+       "bytes": "0x18"
+      },
+      "value": "0x3fe8",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 18
+     },
+     {
+      "table_index": 22,
+      "entry_index": 20,
+      "name": {
+       "display": "lib_func",
+       "bytes_base64": "bGliX2Z1bmM=",
+       "location": {
+        "offset": "0x33b0",
+        "bytes": "0x9"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x100",
+      "location": {
+       "offset": "0x3220",
+       "bytes": "0x18"
+      },
+      "value": "0x10f9",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x1b",
+      "binding": "STB_GLOBAL",
+      "type": "STT_FUNC",
+      "visibility": "STV_DEFAULT",
+      "section_index": 10
+     },
+     {
+      "table_index": 22,
+      "entry_index": 21,
+      "name": {
+       "display": "__cxa_finalize",
+       "bytes_base64": "X19jeGFfZmluYWxpemU=",
+       "location": {
+        "offset": "0x33b9",
+        "bytes": "0xf"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x109",
+      "location": {
+       "offset": "0x3238",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_WEAK",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 22,
+      "entry_index": 22,
+      "name": {
+       "display": "_ITM_registerTMCloneTable",
+       "bytes_base64": "X0lUTV9yZWdpc3RlclRNQ2xvbmVUYWJsZQ==",
+       "location": {
+        "offset": "0x33c8",
+        "bytes": "0x1a"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x118",
+      "location": {
+       "offset": "0x3250",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_WEAK",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 22,
+      "entry_index": 23,
+      "name": {
+       "display": "_ITM_deregisterTMCloneTable",
+       "bytes_base64": "X0lUTV9kZXJlZ2lzdGVyVE1DbG9uZVRhYmxl",
+       "location": {
+        "offset": "0x33e2",
+        "bytes": "0x1c"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x132",
+      "location": {
+       "offset": "0x3268",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_WEAK",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 22,
+      "entry_index": 24,
+      "name": {
+       "display": "lib_value",
+       "bytes_base64": "bGliX3ZhbHVl",
+       "location": {
+        "offset": "0x33fe",
+        "bytes": "0xa"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x14e",
+      "location": {
+       "offset": "0x3280",
+       "bytes": "0x18"
+      },
+      "value": "0x4008",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x4",
+      "binding": "STB_GLOBAL",
+      "type": "STT_OBJECT",
+      "visibility": "STV_DEFAULT",
+      "section_index": 19
+     },
+     {
+      "table_index": 22,
+      "entry_index": 25,
+      "name": {
+       "display": "__gmon_start__",
+       "bytes_base64": "X19nbW9uX3N0YXJ0X18=",
+       "location": {
+        "offset": "0x3408",
+        "bytes": "0xf"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x158",
+      "location": {
+       "offset": "0x3298",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_WEAK",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     }
+    ],
+    "relocations": [
+     {
+      "section_index": 6,
+      "entry_index": 0,
+      "reported_offset": "0x3e60",
+      "target": {
+       "kind": "linked-virtual-address",
+       "address": "0x3e60"
+      },
+      "location": {
+       "offset": "0x428",
+       "bytes": "0x18"
+      },
+      "type": 8,
+      "symbol_table_index": 4,
+      "symbol_index": 0,
+      "symbol_reference_meaning": "zero-symbol-value",
+      "addend": "4336"
+     },
+     {
+      "section_index": 6,
+      "entry_index": 1,
+      "reported_offset": "0x3e68",
+      "target": {
+       "kind": "linked-virtual-address",
+       "address": "0x3e68"
+      },
+      "location": {
+       "offset": "0x440",
+       "bytes": "0x18"
+      },
+      "type": 8,
+      "symbol_table_index": 4,
+      "symbol_index": 0,
+      "symbol_reference_meaning": "zero-symbol-value",
+      "addend": "4272"
+     },
+     {
+      "section_index": 6,
+      "entry_index": 2,
+      "reported_offset": "0x4000",
+      "target": {
+       "kind": "linked-virtual-address",
+       "address": "0x4000"
+      },
+      "location": {
+       "offset": "0x458",
+       "bytes": "0x18"
+      },
+      "type": 8,
+      "symbol_table_index": 4,
+      "symbol_index": 0,
+      "symbol_reference_meaning": "zero-symbol-value",
+      "addend": "16384"
+     },
+     {
+      "section_index": 6,
+      "entry_index": 3,
+      "reported_offset": "0x3fc0",
+      "target": {
+       "kind": "linked-virtual-address",
+       "address": "0x3fc0"
+      },
+      "location": {
+       "offset": "0x470",
+       "bytes": "0x18"
+      },
+      "type": 6,
+      "symbol_table_index": 4,
+      "symbol_index": 1,
+      "symbol_reference_meaning": "symbol-table-entry",
+      "addend": "0"
+     },
+     {
+      "section_index": 6,
+      "entry_index": 4,
+      "reported_offset": "0x3fc8",
+      "target": {
+       "kind": "linked-virtual-address",
+       "address": "0x3fc8"
+      },
+      "location": {
+       "offset": "0x488",
+       "bytes": "0x18"
+      },
+      "type": 6,
+      "symbol_table_index": 4,
+      "symbol_index": 2,
+      "symbol_reference_meaning": "symbol-table-entry",
+      "addend": "0"
+     },
+     {
+      "section_index": 6,
+      "entry_index": 5,
+      "reported_offset": "0x3fd0",
+      "target": {
+       "kind": "linked-virtual-address",
+       "address": "0x3fd0"
+      },
+      "location": {
+       "offset": "0x4a0",
+       "bytes": "0x18"
+      },
+      "type": 6,
+      "symbol_table_index": 4,
+      "symbol_index": 3,
+      "symbol_reference_meaning": "symbol-table-entry",
+      "addend": "0"
+     },
+     {
+      "section_index": 6,
+      "entry_index": 6,
+      "reported_offset": "0x3fd8",
+      "target": {
+       "kind": "linked-virtual-address",
+       "address": "0x3fd8"
+      },
+      "location": {
+       "offset": "0x4b8",
+       "bytes": "0x18"
+      },
+      "type": 6,
+      "symbol_table_index": 4,
+      "symbol_index": 5,
+      "symbol_reference_meaning": "symbol-table-entry",
+      "addend": "0"
+     },
+     {
+      "section_index": 6,
+      "entry_index": 7,
+      "reported_offset": "0x3fe0",
+      "target": {
+       "kind": "linked-virtual-address",
+       "address": "0x3fe0"
+      },
+      "location": {
+       "offset": "0x4d0",
+       "bytes": "0x18"
+      },
+      "type": 6,
+      "symbol_table_index": 4,
+      "symbol_index": 4,
+      "symbol_reference_meaning": "symbol-table-entry",
+      "addend": "0"
+     }
+    ],
+    "packed_relative_relocations": [],
+    "relocation_inventory_completeness": "unknown",
+    "linkage": {
+     "needed_libraries": [],
+     "interpreters": [],
+     "got": [
+      {
+       "display_name": "frame_dummy",
+       "address": "0x3e60"
+      },
+      {
+       "display_name": "__do_global_dtors_aux",
+       "address": "0x3e68"
+      },
+      {
+       "display_name": "__dso_handle",
+       "address": "0x4000"
+      },
+      {
+       "display_name": "__cxa_finalize",
+       "address": "0x3fc0"
+      },
+      {
+       "display_name": "_ITM_registerTMCloneTable",
+       "address": "0x3fc8"
+      },
+      {
+       "display_name": "_ITM_deregisterTMCloneTable",
+       "address": "0x3fd0"
+      },
+      {
+       "display_name": "lib_value",
+       "address": "0x3fd8"
+      },
+      {
+       "display_name": "__gmon_start__",
+       "address": "0x3fe0"
+      }
+     ],
+     "plt": [
+      {
+       "display_name": "lib.c",
+       "address": "0x103c"
+      },
+      {
+       "display_name": "__cxa_finalize",
+       "address": "0x1034"
+      }
+     ],
+     "convenience_maps_completeness": "unknown",
+     "runtime_library_paths": null
+    },
+    "mitigations": {
+     "evidence_kind": "inferred",
+     "position_independent": true,
+     "nx_indicator": true,
+     "executable_stack_indicator": false,
+     "stack_canary_indicator": false,
+     "relro": "Partial"
+    },
+    "diagnostics": {
+     "stdout": "",
+     "stderr": "",
+     "truncated": false
+    },
+    "limitations": [
+     "PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.",
+     "SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.",
+     "Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.",
+     "Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.",
+     "Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.",
+     "Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.",
+     "Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.",
+     "GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.",
+     "Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.",
+     "This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.",
+     "Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.",
+     "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.",
+    "SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.",
+    "Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.",
+    "Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.",
+    "Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.",
+    "Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.",
+    "Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.",
+    "GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.",
+    "Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.",
+    "This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.",
+    "Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.",
+    "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "/workspace/wt/native_static/fixtures/native_static/elf/libsample.so"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

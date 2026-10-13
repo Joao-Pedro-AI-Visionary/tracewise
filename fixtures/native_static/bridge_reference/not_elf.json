@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "Selected object does not contain an ELF header.",
+ "stderr": ""
+}

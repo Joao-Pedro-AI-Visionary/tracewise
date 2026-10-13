@@ -1,0 +1,551 @@
+[
+{
+"name": "core",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/jadx-headless-mcp-0.7.1/jadx-headless-mcp-0.7.1-all.jar",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+],
+[
+"search_android_classes",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"query": "ApiDemos"
+}
+],
+[
+"search_android_classes",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"query": ""
+}
+],
+[
+"search_android_classes",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"query": "zzzNoSuchClass"
+}
+],
+[
+"search_android_classes",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"query": "apidemos"
+}
+],
+[
+"inspect_android_class",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos"
+}
+],
+[
+"inspect_android_class",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity"
+}
+],
+[
+"inspect_android_class",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.DoesNotExist"
+}
+],
+[
+"inspect_android_class",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "ApiDemos"
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos",
+"method_name": "onCreate"
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos",
+"method_name": "onCreate",
+"overload_index": 0
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos",
+"method_name": "onCreate",
+"overload_index": 3
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos",
+"method_name": "noSuchMethod"
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "setContentView"
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "setContentView",
+"overload_index": 0
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "setContentView",
+"overload_index": 1
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "setContentView",
+"overload_index": 2
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "setContentView",
+"overload_index": 9
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "<init>",
+"overload_index": 1
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "onCreate"
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos$Missing",
+"method_name": "x"
+}
+],
+[
+"trace_android_references",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos"
+}
+],
+[
+"trace_android_references",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos",
+"method_name": "onCreate"
+}
+],
+[
+"trace_android_references",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity"
+}
+],
+[
+"trace_android_references",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "setContentView"
+}
+],
+[
+"trace_android_references",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "onCreate"
+}
+],
+[
+"trace_android_references",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "androidx.appcompat.app.AppCompatActivity",
+"method_name": "noSuch"
+}
+],
+[
+"trace_android_references",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "no.Such"
+}
+]
+]
+},
+{
+"name": "sdk-validation",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/jadx-headless-mcp-0.7.1/jadx-headless-mcp-0.7.1-all.jar",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11"
+},
+"calls": [
+[
+"inspect_android_package",
+{}
+],
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"extra": 1
+}
+],
+[
+"inspect_android_class",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+],
+[
+"inspect_android_class",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": ""
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos",
+"method_name": "onCreate",
+"overload_index": -1
+}
+],
+[
+"inspect_android_method",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos",
+"method_name": "onCreate",
+"overload_index": 1.5
+}
+],
+[
+"search_android_classes",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+],
+[
+"inspect_android_package",
+{
+"path": ""
+}
+],
+[
+"inspect_android_package",
+{
+"path": "relative.apk"
+}
+]
+]
+},
+{
+"name": "no-config",
+"env": {},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+],
+[
+"search_android_classes",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"query": "x"
+}
+]
+]
+},
+{
+"name": "jar-relative",
+"env": {
+"REA_JADX_MCP_JAR": "jadx.jar",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "jar-missing",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/nope.jar",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "jar-directory",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "jar-not-zip",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/fixtures-android/not-a-zip.apk",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "jar-wrong-classes",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "java-missing",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/jadx-headless-mcp-0.7.1/jadx-headless-mcp-0.7.1-all.jar",
+"JAVA_HOME": "/workspace/tools/nojdk"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "java-no-java-on-path",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/jadx-headless-mcp-0.7.1/jadx-headless-mcp-0.7.1-all.jar"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "heap-invalid",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/jadx-headless-mcp-0.7.1/jadx-headless-mcp-0.7.1-all.jar",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11",
+"REA_JADX_HEAP_MIB": "abc"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "cpu-invalid",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/jadx-headless-mcp-0.7.1/jadx-headless-mcp-0.7.1-all.jar",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11",
+"REA_JADX_ACTIVE_PROCESSOR_COUNT": "0"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "cpu-too-big",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/jadx-headless-mcp-0.7.1/jadx-headless-mcp-0.7.1-all.jar",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11",
+"REA_JADX_ACTIVE_PROCESSOR_COUNT": "3000000000"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+},
+{
+"name": "heap-1024",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/jadx-headless-mcp-0.7.1/jadx-headless-mcp-0.7.1-all.jar",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11",
+"REA_JADX_HEAP_MIB": "1024",
+"REA_JADX_ACTIVE_PROCESSOR_COUNT": "2"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+],
+[
+"inspect_android_class",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk",
+"class_name": "io.appium.android.apis.ApiDemos"
+}
+]
+]
+},
+{
+"name": "targets",
+"env": {
+"REA_JADX_MCP_JAR": "/workspace/tools/jadx-headless-mcp-0.7.1/jadx-headless-mcp-0.7.1-all.jar",
+"JAVA_HOME": "/workspace/tools/temurin-21.0.5+11"
+},
+"calls": [
+[
+"inspect_android_package",
+{
+"path": "/workspace/wt/managed_android/fixtures/managed/basic.dll"
+}
+],
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/nope.apk"
+}
+],
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/not-a-zip.apk"
+}
+],
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.zip"
+}
+],
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android"
+}
+],
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/truncated.apk"
+}
+],
+[
+"inspect_android_class",
+{
+"path": "/workspace/tools/fixtures-android/truncated.apk",
+"class_name": "io.appium.android.apis.ApiDemos"
+}
+],
+[
+"inspect_android_package",
+{
+"path": "/workspace/tools/fixtures-android/ApiDemos-debug.apk"
+}
+]
+]
+}
+]

@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "Input validation error: Invalid arguments for tool inspect_binary_layout: detail: Invalid option: expected one of \"complete\"|\"summary\""
+   }
+  ],
+  "isError": true
+ }
+]

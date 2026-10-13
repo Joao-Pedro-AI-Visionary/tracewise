@@ -220,10 +220,11 @@ fn clone_projection(node: &Projection) -> Projection {
 }
 
 pub(crate) fn candidate_ids_for(source: &SourceFile, index: &Index) -> Vec<String> {
-    let mut groups: Vec<Option<&HashSet<String>>> = Vec::new();
-    groups.push(source.sha256.as_ref().and_then(|sha| index.by_digest.get(sha)));
-    groups.push(index.by_path_suffix.get(&source.path));
-    groups.push(index.by_basename.get(posix_basename(&source.path)));
+    let groups: Vec<Option<&HashSet<String>>> = vec![
+        source.sha256.as_ref().and_then(|sha| index.by_digest.get(sha)),
+        index.by_path_suffix.get(&source.path),
+        index.by_basename.get(posix_basename(&source.path)),
+    ];
     let mut seen = HashSet::new();
     let mut output = Vec::new();
     for group in groups.into_iter().flatten() {
@@ -261,7 +262,7 @@ fn candidate_signals(source: &SourceFile, current: &Projection) -> Vec<Value> {
     let mut signals = Vec::new();
     if let Some(sha) = &source.sha256 {
         if current.digests.contains(sha) {
-            signals.push(signal("exact-source-digest", 100, sha, &[sha.clone()]));
+            signals.push(signal("exact-source-digest", 100, sha, std::slice::from_ref(sha)));
         }
     }
     let source_map_paths = matching_paths(

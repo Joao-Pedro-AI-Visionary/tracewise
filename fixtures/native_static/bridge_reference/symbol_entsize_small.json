@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "Selected ELF failed unchanged upstream structural parsing: seek out of range",
+ "stderr": "Could not populate symbols: seek out of range\n"
+}

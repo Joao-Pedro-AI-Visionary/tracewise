@@ -1,0 +1,461 @@
+[
+ {
+  "name": "attached_malformed_pseudocode",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_MALFORMED": "decompile_function"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_pseudo_code",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   },
+   {
+    "name": "analyze_function",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   }
+  ]
+ },
+ {
+  "name": "attached_malformed_inventory",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_MALFORMED": "list_functions"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   },
+   {
+    "name": "search_procedures",
+    "arguments": {
+     "pattern": "engine"
+    }
+   }
+  ]
+ },
+ {
+  "name": "attached_malformed_strings",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_MALFORMED": "list_strings"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_strings",
+    "arguments": {}
+   },
+   {
+    "name": "search_strings",
+    "arguments": {
+     "pattern": "engine"
+    }
+   }
+  ]
+ },
+ {
+  "name": "attached_malformed_xrefs",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_MALFORMED": "get_xrefs_to"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "xrefs",
+    "arguments": {
+     "address": "0x401146"
+    }
+   }
+  ]
+ },
+ {
+  "name": "attached_malformed_assembly",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_MALFORMED": "disassemble_function"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_assembly",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   },
+   {
+    "name": "read_function_instructions",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   }
+  ]
+ },
+ {
+  "name": "attached_malformed_callees",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_MALFORMED": "get_callees"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_callees",
+    "arguments": {
+     "procedure": "engine_entry"
+    }
+   }
+  ]
+ },
+ {
+  "name": "attached_malformed_callers",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_MALFORMED": "get_callers"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_callers",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   }
+  ]
+ },
+ {
+  "name": "attached_malformed_lookup",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_MALFORMED": "get_function_by_name"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "main"
+    }
+   }
+  ]
+ },
+ {
+  "name": "attached_upstream_error",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_TOOL_ERROR": "get_callees"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_callees",
+    "arguments": {
+     "procedure": "engine_entry"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "main"
+    }
+   }
+  ]
+ },
+ {
+  "name": "attached_truncated_output",
+  "profile": "legacy",
+  "env": {
+   "FAKE_IDA_TRUNCATE": "list_strings"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_strings",
+    "arguments": {}
+   },
+   {
+    "name": "search_strings",
+    "arguments": {
+     "pattern": "engine"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "name": "headless_malformed_pseudocode",
+  "profile": "modern",
+  "env": {
+   "FAKE_IDA_MALFORMED": "decompile"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_pseudo_code",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   },
+   {
+    "name": "analyze_function",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   }
+  ]
+ },
+ {
+  "name": "headless_malformed_inventory",
+  "profile": "modern",
+  "env": {
+   "FAKE_IDA_MALFORMED": "list_funcs"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "name": "headless_malformed_strings",
+  "profile": "modern",
+  "env": {
+   "FAKE_IDA_MALFORMED": "find_regex"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_strings",
+    "arguments": {}
+   },
+   {
+    "name": "search_strings",
+    "arguments": {
+     "pattern": "engine"
+    }
+   }
+  ]
+ },
+ {
+  "name": "headless_malformed_xrefs",
+  "profile": "modern",
+  "env": {
+   "FAKE_IDA_MALFORMED": "xrefs_to"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "xrefs",
+    "arguments": {
+     "address": "0x401146"
+    }
+   }
+  ]
+ },
+ {
+  "name": "headless_malformed_assembly",
+  "profile": "modern",
+  "env": {
+   "FAKE_IDA_MALFORMED": "disasm"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_assembly",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   },
+   {
+    "name": "read_function_instructions",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   }
+  ]
+ },
+ {
+  "name": "headless_malformed_callees",
+  "profile": "modern",
+  "env": {
+   "FAKE_IDA_MALFORMED": "callees"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_callees",
+    "arguments": {
+     "procedure": "engine_entry"
+    }
+   }
+  ]
+ },
+ {
+  "name": "headless_malformed_lookup",
+  "profile": "modern",
+  "env": {
+   "FAKE_IDA_MALFORMED": "lookup_funcs"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "main"
+    }
+   }
+  ]
+ },
+ {
+  "name": "headless_upstream_error",
+  "profile": "modern",
+  "env": {
+   "FAKE_IDA_TOOL_ERROR": "callees"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_callees",
+    "arguments": {
+     "procedure": "engine_entry"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "main"
+    }
+   }
+  ]
+ },
+ {
+  "name": "headless_truncated_output",
+  "profile": "modern",
+  "env": {
+   "FAKE_IDA_TRUNCATE": "decompile"
+  },
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "procedure_pseudo_code",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "main"
+    }
+   }
+  ]
+ }
+]

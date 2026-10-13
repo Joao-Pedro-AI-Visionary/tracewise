@@ -236,6 +236,7 @@ pub fn recover_module(
     })
 }
 
+#[allow(clippy::too_many_arguments)]
 fn walk_bindings(
     node: &BNode,
     source: &str,
@@ -591,6 +592,7 @@ fn walk_uses(
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 fn record_reference(
     node: &BNode,
     source: &str,
@@ -632,16 +634,16 @@ fn record_reference(
     ) {
         let binding = bindings.iter().find(|binding| &binding.binding_id == binding_id);
         if let Some(binding) = binding {
-            if !scope_contains(binding.scope_index, callable.scope_index, scopes) {
-                if !captures.iter().any(|capture| {
+            if !scope_contains(binding.scope_index, callable.scope_index, scopes)
+                && !captures.iter().any(|capture| {
                     capture.binding_id == *binding_id && capture.callable_id == callable.callable_id
-                }) {
-                    captures.push(CaptureFact {
-                        binding_id: binding_id.clone(),
-                        callable_id: callable.callable_id.clone(),
-                        range: range.clone(),
-                    });
-                }
+                })
+            {
+                captures.push(CaptureFact {
+                    binding_id: binding_id.clone(),
+                    callable_id: callable.callable_id.clone(),
+                    range: range.clone(),
+                });
             }
         }
     }
@@ -665,6 +667,7 @@ fn scope_contains(binding_scope: usize, function_scope: usize, scopes: &[Scope])
     false
 }
 
+#[allow(clippy::too_many_arguments)]
 fn record_call(
     node: &BNode,
     source: &str,

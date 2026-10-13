@@ -101,6 +101,9 @@ struct Matching {
     candidates_for_right: HashMap<String, Vec<String>>,
 }
 
+/// Basis, confidence and key extractor of one matching tier.
+type TierSpec = (&'static str, &'static str, fn(&Value) -> Option<String>);
+
 fn match_versions(left_nodes: &[Value], right_nodes: &[Value]) -> Matching {
     let mut left: HashMap<String, Value> = left_nodes
         .iter()
@@ -113,7 +116,7 @@ fn match_versions(left_nodes: &[Value], right_nodes: &[Value]) -> Matching {
     let mut left_candidates: HashMap<String, HashSet<String>> = HashMap::new();
     let mut right_candidates: HashMap<String, HashSet<String>> = HashMap::new();
     let mut pairs = Vec::new();
-    let tiers: &[(&str, &str, fn(&Value) -> Option<String>)] = &[
+    let tiers: &[TierSpec] = &[
         ("exact-content-digest", "exact", content_digest_key),
         ("exact-module-source-digest", "exact", module_source_digest_key),
         ("exact-node-identity", "exact", node_identity_key),
@@ -143,6 +146,7 @@ fn match_versions(left_nodes: &[Value], right_nodes: &[Value]) -> Matching {
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 fn apply_tier(
     left: &mut HashMap<String, Value>,
     right: &mut HashMap<String, Value>,
@@ -452,6 +456,7 @@ fn classify_items(
     Ok(items)
 }
 
+#[allow(clippy::too_many_arguments)]
 fn matched_item(
     pair: &Pair,
     left_evidence: &Evidence,
@@ -994,6 +999,7 @@ fn merge_group(group: &[Value]) -> Result<Value, JsError> {
     recreate_node(&node)
 }
 
+#[allow(clippy::too_many_arguments)]
 fn changed_from_edge(
     item: &Value,
     left_evidence_id: &str,

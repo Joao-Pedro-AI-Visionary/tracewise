@@ -1,0 +1,74 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_8e291dad4a8c84fcde7e26f1f6a3a21abaa4e99ef9831101002bd571fb6e4262\",\"subject\":{\"name\":\"twodirs.exe\",\"digest\":{\"sha256\":\"d9239f1ecf0d5061e7b09ea371181578969dc8dd4d5460eaff6374a140fb74fc\"},\"format\":\"pe\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/pe/twodirs.exe\"},\"provider\":{\"id\":\"rea-pe-resources\",\"name\":\"REA PE resource parser\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_pe_resources\",\"parameters\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/pe/twodirs.exe\",\"max_file_bytes\":67108864,\"max_entries\":4096},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/pe/twodirs.exe\",\"sha256\":\"d9239f1ecf0d5061e7b09ea371181578969dc8dd4d5460eaff6374a140fb74fc\",\"bytes\":1536},\"format\":\"pe32\",\"machine\":332,\"directory\":null,\"directories\":[],\"resources\":[],\"icon_groups\":[],\"coverage\":{\"status\":\"complete\",\"examined_entries\":0,\"resources\":0},\"limitations\":[\"Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.\",\"Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.\",\"Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.\",\"Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.\",\"Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/pe/twodirs.exe\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_8e291dad4a8c84fcde7e26f1f6a3a21abaa4e99ef9831101002bd571fb6e4262",
+   "subject": {
+    "name": "twodirs.exe",
+    "digest": {
+     "sha256": "d9239f1ecf0d5061e7b09ea371181578969dc8dd4d5460eaff6374a140fb74fc"
+    },
+    "format": "pe",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/pe/twodirs.exe"
+   },
+   "provider": {
+    "id": "rea-pe-resources",
+    "name": "REA PE resource parser",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_pe_resources",
+   "parameters": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/pe/twodirs.exe",
+    "max_file_bytes": 67108864,
+    "max_entries": 4096
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "artifact": {
+     "path": "/workspace/wt/native_static/fixtures/native_static/pe/twodirs.exe",
+     "sha256": "d9239f1ecf0d5061e7b09ea371181578969dc8dd4d5460eaff6374a140fb74fc",
+     "bytes": 1536
+    },
+    "format": "pe32",
+    "machine": 332,
+    "directory": null,
+    "directories": [],
+    "resources": [],
+    "icon_groups": [],
+    "coverage": {
+     "status": "complete",
+     "examined_entries": 0,
+     "resources": 0
+    },
+    "limitations": [
+     "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+     "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+     "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+    "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+    "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "/workspace/wt/native_static/fixtures/native_static/pe/twodirs.exe"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

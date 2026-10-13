@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "ELF section-name table index 200 lies outside the declared section count 32.",
+ "stderr": ""
+}

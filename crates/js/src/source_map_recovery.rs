@@ -115,6 +115,7 @@ pub fn recover_javascript_sources(
     .map_err(JsError::from)
 }
 
+#[allow(clippy::too_many_arguments)]
 fn recover_tree(
     input: &Path,
     output: &Path,

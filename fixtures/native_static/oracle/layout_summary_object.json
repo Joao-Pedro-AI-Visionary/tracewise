@@ -1,0 +1,128 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_d0314d96ae83109e69a175a939a7a8c9c9bed5017b97e6df4fbc39fd3dbfcbcd\",\"subject\":{\"name\":\"object.o\",\"digest\":{\"sha256\":\"474e25d898af337b1f3ab9afecc86a29367913a2262327e214f9bb6324b0e277\"},\"format\":\"elf\",\"architecture\":\"x86_64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/elf/object.o\"},\"provider\":{\"id\":\"rea-analysis-view\",\"name\":\"REA analysis view projection\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis-view\",\"operation\":\"inspect_analysis_view\",\"parameters\":{\"parent_evidence_id\":\"ev_9fa6f4eb6c80d83506c5b364c687e96bc27885de2d589bfdc121d9653290585e\",\"view\":{\"kind\":\"summary\"}},\"raw_result\":null,\"normalized_result\":{\"kind\":\"summary\",\"view\":{\"kind\":\"summary\"},\"summary\":{\"bytes\":2704,\"format\":\"elf\",\"architecture\":{\"machine\":\"EM_X86_64\",\"bits\":64,\"byte_order\":\"little\"},\"image_type\":\"ET_REL\",\"entry\":{\"reported_value\":\"0x0\",\"meaning\":\"not-applicable\",\"execution_status\":\"unknown\"},\"counts\":{\"sections\":17,\"segments\":0,\"symbols\":19,\"relocations\":17},\"limitation_count\":12},\"parent_evidence_id\":\"ev_9fa6f4eb6c80d83506c5b364c687e96bc27885de2d589bfdc121d9653290585e\",\"parent_operation\":\"inspect_binary_layout\",\"parent_digest\":\"9fa6f4eb6c80d83506c5b364c687e96bc27885de2d589bfdc121d9653290585e\",\"view_digest\":\"79b9155fb79532b8a03c2bdec846d0c5eb54525f54c19e0997cd2d02cf5f97a9\",\"artifact\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/elf/object.o\",\"sha256\":\"474e25d898af337b1f3ab9afecc86a29367913a2262327e214f9bb6324b0e277\"},\"coverage\":{\"status\":\"complete-within-view\",\"examined\":53,\"total\":53,\"next_offset\":null,\"exhausted\":true},\"limitations\":[\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\",\"GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.\",\"Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.\",\"Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.\",\"Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.\",\"PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.\",\"Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.\",\"Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.\",\"Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.\",\"SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.\",\"Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.\",\"This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.\"],\"unknowns\":[\"entry_point.execution_status is unknown\",\"linkage.convenience_maps_completeness is unknown\",\"linkage.runtime_library_paths are unknown\",\"mitigations.relro is unknown\",\"relocation_inventory_completeness is unknown\",\"runtime_load_base is unknown\"]},\"confidence\":\"derived\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\",\"GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.\",\"Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.\",\"Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.\",\"Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.\",\"PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.\",\"Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.\",\"Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.\",\"Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.\",\"SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.\",\"Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.\",\"This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/elf/object.o\"}],\"evidence_links\":[\"ev_9fa6f4eb6c80d83506c5b364c687e96bc27885de2d589bfdc121d9653290585e\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_d0314d96ae83109e69a175a939a7a8c9c9bed5017b97e6df4fbc39fd3dbfcbcd",
+   "subject": {
+    "name": "object.o",
+    "digest": {
+     "sha256": "474e25d898af337b1f3ab9afecc86a29367913a2262327e214f9bb6324b0e277"
+    },
+    "format": "elf",
+    "architecture": "x86_64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/elf/object.o"
+   },
+   "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis-view",
+   "operation": "inspect_analysis_view",
+   "parameters": {
+    "parent_evidence_id": "ev_9fa6f4eb6c80d83506c5b364c687e96bc27885de2d589bfdc121d9653290585e",
+    "view": {
+     "kind": "summary"
+    }
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "kind": "summary",
+    "view": {
+     "kind": "summary"
+    },
+    "summary": {
+     "bytes": 2704,
+     "format": "elf",
+     "architecture": {
+      "machine": "EM_X86_64",
+      "bits": 64,
+      "byte_order": "little"
+     },
+     "image_type": "ET_REL",
+     "entry": {
+      "reported_value": "0x0",
+      "meaning": "not-applicable",
+      "execution_status": "unknown"
+     },
+     "counts": {
+      "sections": 17,
+      "segments": 0,
+      "symbols": 19,
+      "relocations": 17
+     },
+     "limitation_count": 12
+    },
+    "parent_evidence_id": "ev_9fa6f4eb6c80d83506c5b364c687e96bc27885de2d589bfdc121d9653290585e",
+    "parent_operation": "inspect_binary_layout",
+    "parent_digest": "9fa6f4eb6c80d83506c5b364c687e96bc27885de2d589bfdc121d9653290585e",
+    "view_digest": "79b9155fb79532b8a03c2bdec846d0c5eb54525f54c19e0997cd2d02cf5f97a9",
+    "artifact": {
+     "path": "/workspace/wt/native_static/fixtures/native_static/elf/object.o",
+     "sha256": "474e25d898af337b1f3ab9afecc86a29367913a2262327e214f9bb6324b0e277"
+    },
+    "coverage": {
+     "status": "complete-within-view",
+     "examined": 53,
+     "total": 53,
+     "next_offset": null,
+     "exhausted": true
+    },
+    "limitations": [
+     "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained.",
+     "GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.",
+     "Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.",
+     "Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.",
+     "Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.",
+     "PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.",
+     "Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.",
+     "Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.",
+     "Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.",
+     "SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.",
+     "Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.",
+     "This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger."
+    ],
+    "unknowns": [
+     "entry_point.execution_status is unknown",
+     "linkage.convenience_maps_completeness is unknown",
+     "linkage.runtime_library_paths are unknown",
+     "mitigations.relro is unknown",
+     "relocation_inventory_completeness is unknown",
+     "runtime_load_base is unknown"
+    ]
+   },
+   "confidence": "derived",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained.",
+    "GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.",
+    "Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.",
+    "Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.",
+    "Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.",
+    "PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.",
+    "Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.",
+    "Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.",
+    "Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.",
+    "SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.",
+    "Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.",
+    "This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "/workspace/wt/native_static/fixtures/native_static/elf/object.o"
+    }
+   ],
+   "evidence_links": [
+    "ev_9fa6f4eb6c80d83506c5b364c687e96bc27885de2d589bfdc121d9653290585e"
+   ]
+  }
+ }
+]

@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"unsupported_target\",\"category\":\"unsupported_target\",\"message\":\"Unsupported target for decode_interface_builder at /workspace/wt/native_static/fixtures/native_static/bundles/Rich.app/Contents/MacOS/Rich: decode_interface_builder requires an active .app bundle target\",\"retryable\":false,\"remediation\":{\"action\":\"Select a target supported by this operation or choose an operation supporting the reported target format.\"},\"details\":{\"operation\":\"decode_interface_builder\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Rich.app/Contents/MacOS/Rich\",\"reason\":\"decode_interface_builder requires an active .app bundle target\"}}}"
+   }
+  ],
+  "isError": true
+ }
+]

@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"resource_constraint\",\"category\":\"resource_constraint\",\"message\":\"PE resource directory entry budget exceeded; no partial inventory was returned.\",\"retryable\":false,\"remediation\":{\"action\":\"Review the reported worker memory limits and available host memory. Retry with sufficient memory or a smaller artifact; REA retains tighter inherited limits.\"},\"details\":{\"operation\":\"inspect_pe_resources\",\"resource\":\"memory\",\"reason\":\"PE resource directory entry budget exceeded; no partial inventory was returned.\",\"reported_limits\":{\"max_file_bytes\":67108864,\"max_entries\":3}}}}"
+   }
+  ],
+  "isError": true
+ }
+]

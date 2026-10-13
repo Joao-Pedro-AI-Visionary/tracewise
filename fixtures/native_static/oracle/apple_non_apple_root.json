@@ -1,0 +1,227 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"result\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\",\"architecture\":\"arm64\"}}"
+   }
+  ],
+  "structuredContent": {
+   "result": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App",
+    "format": "mach-o",
+    "kind": "executable",
+    "sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604",
+    "architecture": "arm64"
+   }
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_6d6ad2041f305ffc8b060b2a1f4d9f7b1f65e4c6aff37fd7cfa7af92362a676c\",\"subject\":{\"name\":\"App\",\"digest\":{\"sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\"},\"format\":\"mach-o\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"inspection_id\":\"ai_6f965836d01274b2a25976c1342d9602ab0c409558bf88a9bc2a360a63aa3564\",\"subject\":{\"manifest_id\":\"agm_96a6864a412d148372beb79eea29ee741560a4df7bf0ea3e83ee19710b44e216\",\"root_artifact_id\":\"art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025\",\"root_sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\",\"root_format\":\"mach-o\"},\"substeps\":[{\"substep_id\":\"ais_003e4b09ad2d3eb8959f27b2d16fbb249c2e37e91b97e009359435b15fa6b28f\",\"operation\":\"inventory_artifact\",\"status\":\"completed\",\"evidence_id\":\"ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b\",\"evidence\":{\"evidence_id\":\"ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b\",\"subject\":{\"name\":\"App\",\"digest\":{\"sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\"},\"format\":\"mach-o\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inventory_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"manifest\":{\"manifest_id\":\"agm_96a6864a412d148372beb79eea29ee741560a4df7bf0ea3e83ee19710b44e216\",\"root_artifact_id\":\"art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025\",\"root_sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\",\"root_format\":\"mach-o\",\"graph_sha256\":\"0e3db8ad7c87e45ae1eadefc853616aa735919e5631f32bd6b22e6e38168f9a9\",\"node_count\":1,\"occurrence_count\":1,\"edge_count\":0},\"nodes\":[{\"artifact_id\":\"art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025\",\"format\":\"mach-o\",\"sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\",\"size\":168,\"media_type\":null,\"architecture\":null,\"content_state\":\"materialized\",\"limitations\":[]}],\"occurrences\":[{\"occurrence_id\":\"occ_b06308efcb5260fc9457a935f62dc38f1262d244dc5c90979f2b3e2a831c07e6\",\"artifact_id\":\"art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025\",\"parent_occurrence_id\":null,\"logical_path\":\".\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":168,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]}],\"edges\":[],\"provenance\":[],\"integrity_contradictions\":[],\"limitations\":[\"Artifact has no child container entries.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Artifact has no child container entries.\"],\"locations\":[],\"evidence_links\":[]}}],\"observations\":[{\"observation_id\":\"aio_81db4487cd7d5149d70f5a645a97aad70ada8e9b6606f3361feb918364ccdd3e\",\"kind\":\"root-manifest\",\"subject\":\"art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025\",\"value\":{\"manifest_id\":\"agm_96a6864a412d148372beb79eea29ee741560a4df7bf0ea3e83ee19710b44e216\",\"root_artifact_id\":\"art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025\",\"root_sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\",\"root_format\":\"mach-o\",\"graph_sha256\":\"0e3db8ad7c87e45ae1eadefc853616aa735919e5631f32bd6b22e6e38168f9a9\",\"node_count\":1,\"occurrence_count\":1,\"edge_count\":0},\"evidence_id\":\"ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b\"}],\"hypotheses\":[],\"contradictions\":[],\"unexplored_branches\":[{\"branch_id\":\"aib_6d60cbf718767e1a9761408d69d274806f84b250a803702412109c58f8c4dbf8\",\"reason\":\"format-specific-analysis-required\",\"detail\":\"open_binary was not run by provider-neutral artifact inspection.\",\"next_probe\":{\"operation\":\"open_binary\",\"rationale\":\"Bind one deep native provider before function-level analysis.\",\"authority\":\"native-analysis-provider\"},\"evidence_id\":\"ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b\"}],\"next_probes\":[{\"operation\":\"open_binary\",\"rationale\":\"Bind one deep native provider before function-level analysis.\",\"authority\":\"native-analysis-provider\"}],\"coverage\":{\"status\":\"complete-within-substeps\",\"substeps_completed\":1,\"observations_retained\":1,\"observations_omitted\":0,\"hypotheses_retained\":0,\"hypotheses_omitted\":0,\"unexplored_branches_retained\":1,\"unexplored_branches_omitted\":0,\"next_probes_retained\":1,\"next_probes_omitted\":0},\"evidence_links\":[\"ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b\"],\"limitations\":[\"Artifact has no child container entries.\",\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Artifact has no child container entries.\",\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\"],\"locations\":[],\"evidence_links\":[\"ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_6d6ad2041f305ffc8b060b2a1f4d9f7b1f65e4c6aff37fd7cfa7af92362a676c",
+   "subject": {
+    "name": "App",
+    "digest": {
+     "sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604"
+    },
+    "format": "mach-o",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_artifact",
+   "parameters": {
+    "integrity_policy": "fail"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "inspection_id": "ai_6f965836d01274b2a25976c1342d9602ab0c409558bf88a9bc2a360a63aa3564",
+    "subject": {
+     "manifest_id": "agm_96a6864a412d148372beb79eea29ee741560a4df7bf0ea3e83ee19710b44e216",
+     "root_artifact_id": "art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025",
+     "root_sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604",
+     "root_format": "mach-o"
+    },
+    "substeps": [
+     {
+      "substep_id": "ais_003e4b09ad2d3eb8959f27b2d16fbb249c2e37e91b97e009359435b15fa6b28f",
+      "operation": "inventory_artifact",
+      "status": "completed",
+      "evidence_id": "ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b",
+      "evidence": {
+       "evidence_id": "ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b",
+       "subject": {
+        "name": "App",
+        "digest": {
+         "sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604"
+        },
+        "format": "mach-o",
+        "architecture": null,
+        "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App"
+       },
+       "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+       },
+       "analysis_profile": null,
+       "predicate_type": "rea.analysis",
+       "operation": "inventory_artifact",
+       "parameters": {
+        "integrity_policy": "fail"
+       },
+       "raw_result": null,
+       "normalized_result": {
+        "manifest": {
+         "manifest_id": "agm_96a6864a412d148372beb79eea29ee741560a4df7bf0ea3e83ee19710b44e216",
+         "root_artifact_id": "art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025",
+         "root_sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604",
+         "root_format": "mach-o",
+         "graph_sha256": "0e3db8ad7c87e45ae1eadefc853616aa735919e5631f32bd6b22e6e38168f9a9",
+         "node_count": 1,
+         "occurrence_count": 1,
+         "edge_count": 0
+        },
+        "nodes": [
+         {
+          "artifact_id": "art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025",
+          "format": "mach-o",
+          "sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604",
+          "size": 168,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "materialized",
+          "limitations": []
+         }
+        ],
+        "occurrences": [
+         {
+          "occurrence_id": "occ_b06308efcb5260fc9457a935f62dc38f1262d244dc5c90979f2b3e2a831c07e6",
+          "artifact_id": "art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025",
+          "parent_occurrence_id": null,
+          "logical_path": ".",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 168,
+          "compressed_size": null,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         }
+        ],
+        "edges": [],
+        "provenance": [],
+        "integrity_contradictions": [],
+        "limitations": [
+         "Artifact has no child container entries."
+        ]
+       },
+       "confidence": "observed",
+       "authority": "shipped-artifact",
+       "environment": null,
+       "limitations": [
+        "Artifact has no child container entries."
+       ],
+       "locations": [],
+       "evidence_links": []
+      }
+     }
+    ],
+    "observations": [
+     {
+      "observation_id": "aio_81db4487cd7d5149d70f5a645a97aad70ada8e9b6606f3361feb918364ccdd3e",
+      "kind": "root-manifest",
+      "subject": "art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025",
+      "value": {
+       "manifest_id": "agm_96a6864a412d148372beb79eea29ee741560a4df7bf0ea3e83ee19710b44e216",
+       "root_artifact_id": "art_2404e1fa3982e1911797fb869fef3bd063a18742bb1f832f50561c9e0fe3d025",
+       "root_sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604",
+       "root_format": "mach-o",
+       "graph_sha256": "0e3db8ad7c87e45ae1eadefc853616aa735919e5631f32bd6b22e6e38168f9a9",
+       "node_count": 1,
+       "occurrence_count": 1,
+       "edge_count": 0
+      },
+      "evidence_id": "ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b"
+     }
+    ],
+    "hypotheses": [],
+    "contradictions": [],
+    "unexplored_branches": [
+     {
+      "branch_id": "aib_6d60cbf718767e1a9761408d69d274806f84b250a803702412109c58f8c4dbf8",
+      "reason": "format-specific-analysis-required",
+      "detail": "open_binary was not run by provider-neutral artifact inspection.",
+      "next_probe": {
+       "operation": "open_binary",
+       "rationale": "Bind one deep native provider before function-level analysis.",
+       "authority": "native-analysis-provider"
+      },
+      "evidence_id": "ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b"
+     }
+    ],
+    "next_probes": [
+     {
+      "operation": "open_binary",
+      "rationale": "Bind one deep native provider before function-level analysis.",
+      "authority": "native-analysis-provider"
+     }
+    ],
+    "coverage": {
+     "status": "complete-within-substeps",
+     "substeps_completed": 1,
+     "observations_retained": 1,
+     "observations_omitted": 0,
+     "hypotheses_retained": 0,
+     "hypotheses_omitted": 0,
+     "unexplored_branches_retained": 1,
+     "unexplored_branches_omitted": 0,
+     "next_probes_retained": 1,
+     "next_probes_omitted": 0
+    },
+    "evidence_links": [
+     "ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b"
+    ],
+    "limitations": [
+     "Artifact has no child container entries.",
+     "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Artifact has no child container entries.",
+    "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_35be0201e639824ea441df461fb7fd0ccfc8a5028eae7bc703a9e04b09dfc17b"
+   ]
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"invalid_request\",\"category\":\"invalid_input\",\"message\":\"Analysis input is invalid. Check the arguments and try again.\",\"retryable\":true,\"remediation\":{\"action\":\"Correct the listed arguments and retry.\"},\"details\":{\"operation\":\"project_apple_application_graph\",\"issues\":[{\"path\":[],\"reason\":\"invalid_value\",\"message\":\"Apple application projection requires IPA, directory, ZIP, or DMG inventory Evidence (got mach-o)\"}]}}}"
+   }
+  ],
+  "isError": true
+ }
+]

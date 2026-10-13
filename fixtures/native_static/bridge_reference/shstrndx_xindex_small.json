@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "ELF SHN_XINDEX resolves to ordinary index 0; the escape requires an index at least SHN_LORESERVE (0xff00).",
+ "stderr": ""
+}

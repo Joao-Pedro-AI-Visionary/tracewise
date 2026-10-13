@@ -10,6 +10,7 @@ pub use reconstruction::{
 pub mod reconstruction;
 pub mod process_capture;
 mod classify;
+pub use classify::zip_package_format_for_path;
 mod comparison;
 mod digest;
 mod error;

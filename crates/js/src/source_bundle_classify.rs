@@ -115,6 +115,7 @@ pub(crate) fn classify(
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 pub(crate) fn item_value(
     reference_root: &str,
     graph_id: &str,

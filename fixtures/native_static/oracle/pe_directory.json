@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"artifact_operation_failed\",\"category\":\"execution_failure\",\"message\":\"Artifact contains a conflicting internal path. Inspect the reported path before retrying.\",\"retryable\":false,\"remediation\":{\"action\":\"Artifact contains a conflicting internal path. Inspect the reported path before retrying.\"},\"details\":{\"operation\":\"inspect_pe_resources\",\"reason\":\"path\",\"detail\":\"Expected a regular file without a symlink: /workspace/wt/native_static/fixtures/native_static/pe\"}}}"
+   }
+  ],
+  "isError": true
+ }
+]

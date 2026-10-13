@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "Input validation error: Invalid arguments for tool inspect_recorded_crash: path: Invalid input: expected string, received undefined"
+   }
+  ],
+  "isError": true
+ }
+]

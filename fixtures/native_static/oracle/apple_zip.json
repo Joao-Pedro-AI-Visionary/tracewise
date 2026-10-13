@@ -1,0 +1,1029 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"result\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Fixture.zip\",\"format\":\"zip\",\"kind\":\"archive\",\"sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\",\"architecture\":null}}"
+   }
+  ],
+  "structuredContent": {
+   "result": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/apple/Fixture.zip",
+    "format": "zip",
+    "kind": "archive",
+    "sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161",
+    "architecture": null
+   }
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_22f5e882bc8ea77305f8f384b6aaa88793918cab99c71f3fa2812351cb7e790f\",\"subject\":{\"name\":\"Fixture.zip\",\"digest\":{\"sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Fixture.zip\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"inspection_id\":\"ai_46cde90aad340687880b4455b91f387f683c1a8d213840ec395649af4d147a38\",\"subject\":{\"manifest_id\":\"agm_5d4046657b27cd9cb71f99d9ed69ca955b8c81edd040f814088d6d6870d3ed61\",\"root_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"root_sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\",\"root_format\":\"zip\"},\"substeps\":[{\"substep_id\":\"ais_d2c7f4f81b6bb45cb1221474d3a7b1fed95be55e101d11bb030d543863075fb2\",\"operation\":\"inventory_artifact\",\"status\":\"completed\",\"evidence_id\":\"ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa\",\"evidence\":{\"evidence_id\":\"ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa\",\"subject\":{\"name\":\"Fixture.zip\",\"digest\":{\"sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Fixture.zip\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inventory_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"manifest\":{\"manifest_id\":\"agm_5d4046657b27cd9cb71f99d9ed69ca955b8c81edd040f814088d6d6870d3ed61\",\"root_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"root_sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\",\"root_format\":\"zip\",\"graph_sha256\":\"75edcfa6ac27ab3900e9e1d5fe2644caa09b8fc252f27f53bc54e61cc03d4f9a\",\"node_count\":9,\"occurrence_count\":18,\"edge_count\":17},\"nodes\":[{\"artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"format\":\"zip\",\"sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\",\"size\":3295,\"media_type\":null,\"architecture\":null,\"content_state\":\"materialized\",\"limitations\":[]},{\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"format\":\"file\",\"sha256\":\"53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d\",\"size\":232,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_707e4c3ebadd326190ca513106ce42521df9a1ed28985c2273f4d07fc0bf976f\",\"format\":\"file\",\"sha256\":\"2b2961a431b23c9007efe270c1d7eb79c19d4192d7cd2d924176eb0b19e7d2a1\",\"size\":3,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69\",\"format\":\"file\",\"sha256\":\"26af2039e3563c710de3d6585af9e7b430427ee7767b88b5723bf276186e0043\",\"size\":4,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9\",\"format\":\"file\",\"sha256\":\"1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0\",\"size\":7,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"format\":\"file\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"size\":57,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"format\":\"mach-o\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"size\":72,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4\",\"format\":\"file\",\"sha256\":\"4632198fae5bd0273cc642501a9f53b5102df45cb2db57f5b2bb87937f8a4cf6\",\"size\":116,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"format\":\"mach-o\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"size\":72,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]}],\"occurrences\":[{\"occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"parent_occurrence_id\":null,\"logical_path\":\".\",\"entry_kind\":\"file\",\"artifact_kind\":\"container\",\"artifact_format\":\"zip\",\"declared_size\":3295,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_2e55025e2975154e53aa0099c9748bc14507abb6a740fa8c063b890672668909\",\"artifact_id\":\"art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/._Fixture\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":4,\"compressed_size\":6,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_837ca5ca08384917b33d92bd0e0a022256c69d6280452c1bed7a377837bd10d2\",\"artifact_id\":\"art_707e4c3ebadd326190ca513106ce42521df9a1ed28985c2273f4d07fc0bf976f\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Assets.car\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":3,\"compressed_size\":5,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_dec96db0a7b0b7134e253b348e8fe7604944994c877ec0f6dfdddd9ec2d549e0\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Fixture\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_a4c5f3319ce4ba5cc0e426bd93fad30baef171ce137a097f1153c81dc71e64a0\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Frameworks/React.framework/React\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_04146c71d9f51c184684d2ef87974743f16a7acb4f72bca277ee5642eb79b09d\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Frameworks/libfoo.dylib\",\"entry_kind\":\"file\",\"artifact_kind\":\"dynamic-library\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_e74ac1b1cf68630692843b5358d330f2f890b003fd6ee7eed243b8a8db016de1\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Frameworks/libswiftCore.dylib\",\"entry_kind\":\"file\",\"artifact_kind\":\"dynamic-library\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_64f8df3cca13dfa4d081c03e4c096d94811bde2bf39628679bd656142b005b5c\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib\",\"entry_kind\":\"file\",\"artifact_kind\":\"dynamic-library\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_764db33987b0ff69f815ac65fe6f14c52e70747cc7c754d92de938ac4ca7aba2\",\"artifact_id\":\"art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":116,\"compressed_size\":90,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_50937770d8850b2d5a14abc53771f8d675e8cf931c042041b8f31fe413cca2b2\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/PlugIns/Share.appex/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_c773c6e78b3af429ab6c9c7972e4ee1fc5539711d1f272bdab2b1cd8c7909614\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/PlugIns/Share.appex/Share\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_f10fc21451ae1696cab92d7bf46ad83123c240d366d426317cee6cb27d87acd2\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Watch/Watch.app/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_d7919e02119a83616b181a390c247f512ac849b83f6f1102a92821505be3fac6\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Watch/Watch.app/Watch\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_6df635de724e1cea335ccb3e41cbeca95be941e945bcd5349e3a8433d019cdbc\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/Watch/watch.js\",\"entry_kind\":\"file\",\"artifact_kind\":\"javascript\",\"artifact_format\":\"javascript-bundle\",\"declared_size\":232,\"compressed_size\":63,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_4768c6eb6f61243e64153bb9d99e442a95924ef3a279e7cfde782243b1aba557\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/_CodeSignature/CodeResources\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_3f2fafa3a5e674ee18092c2c3048322acac4cfad30bed3892930369885362f27\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/app.js\",\"entry_kind\":\"file\",\"artifact_kind\":\"javascript\",\"artifact_format\":\"javascript-bundle\",\"declared_size\":232,\"compressed_size\":63,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_5ba827bb282fee040ddb1027ae3d2a2f5fc9c253dd1c8a7facf1f314f136c348\",\"artifact_id\":\"art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/embedded.mobileprovision\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":7,\"compressed_size\":9,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_17aab086560b289eb057a74107b9fb174f950f505ba1adcac2ce8bdad0ebe1e3\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"parent_occurrence_id\":\"occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3\",\"logical_path\":\"Payload/Fixture.app/main.jsbundle\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":232,\"compressed_size\":63,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]}],\"edges\":[{\"edge_id\":\"edge_0ef3fb87f4774f89286e945cbdd4ba9547b20866e93f6f671a1eda297bf72724\",\"ordinal\":0,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_d7919e02119a83616b181a390c247f512ac849b83f6f1102a92821505be3fac6\",\"producer\":null},{\"edge_id\":\"edge_1f142957705eab6966c2ba542601901e776825afc7f0de79705457846d7acdc0\",\"ordinal\":1,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_c773c6e78b3af429ab6c9c7972e4ee1fc5539711d1f272bdab2b1cd8c7909614\",\"producer\":null},{\"edge_id\":\"edge_2850c800574c438b67cd715d29f96f1b79b8de8db0574b3c1a32c24eca216091\",\"ordinal\":2,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_5ba827bb282fee040ddb1027ae3d2a2f5fc9c253dd1c8a7facf1f314f136c348\",\"producer\":null},{\"edge_id\":\"edge_42989c74186518fa9473434eb4fab66f4c5c9b80be40fadfdd49ca255165a789\",\"ordinal\":3,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_64f8df3cca13dfa4d081c03e4c096d94811bde2bf39628679bd656142b005b5c\",\"producer\":null},{\"edge_id\":\"edge_50d140e2e6632318fc50f60d1c43ba88d9716b1080750601f8781779b228fbb9\",\"ordinal\":4,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_dec96db0a7b0b7134e253b348e8fe7604944994c877ec0f6dfdddd9ec2d549e0\",\"producer\":null},{\"edge_id\":\"edge_76aa6d9f4b3a0f9247112a042eb0b2e2f3713ceda15d823fed87a649b4899fd7\",\"ordinal\":5,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_4768c6eb6f61243e64153bb9d99e442a95924ef3a279e7cfde782243b1aba557\",\"producer\":null},{\"edge_id\":\"edge_8300352111e22f50f4ae7cd854d55c159b0c4f5e8b184e5f84b2fa2af531ac5f\",\"ordinal\":6,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_2e55025e2975154e53aa0099c9748bc14507abb6a740fa8c063b890672668909\",\"producer\":null},{\"edge_id\":\"edge_84f316e7b247fc3b43b231f5b6a2549f92cc5c2cd8e71a7047e06b269c48ee61\",\"ordinal\":7,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_04146c71d9f51c184684d2ef87974743f16a7acb4f72bca277ee5642eb79b09d\",\"producer\":null},{\"edge_id\":\"edge_94541abf9241fc860a47b70fb7e46eeb2eef8f69c5e702d790b129e824e24e90\",\"ordinal\":8,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_e74ac1b1cf68630692843b5358d330f2f890b003fd6ee7eed243b8a8db016de1\",\"producer\":null},{\"edge_id\":\"edge_9c500761f4eedb1ba2af683620ae08424e45038bc01d4b387868a407bdbd95ca\",\"ordinal\":9,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_f10fc21451ae1696cab92d7bf46ad83123c240d366d426317cee6cb27d87acd2\",\"producer\":null},{\"edge_id\":\"edge_aa51185175d783835f7ba7d1ff3f2c010bf90645b23cbae02b017ac2f9ae4a10\",\"ordinal\":10,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_764db33987b0ff69f815ac65fe6f14c52e70747cc7c754d92de938ac4ca7aba2\",\"producer\":null},{\"edge_id\":\"edge_b355bb5a412c45bc4d0a7be1a8a3f7de86390a2e5048d146e6bb017922a968ca\",\"ordinal\":11,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_50937770d8850b2d5a14abc53771f8d675e8cf931c042041b8f31fe413cca2b2\",\"producer\":null},{\"edge_id\":\"edge_b552e8d6e9ed41a0108c89c9ee9d34afd23c8293f0f5fe33d978cd9dd214f156\",\"ordinal\":12,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_6df635de724e1cea335ccb3e41cbeca95be941e945bcd5349e3a8433d019cdbc\",\"producer\":null},{\"edge_id\":\"edge_b7e8d6c33ba0f8e4ece1c1c8e8443fd376f8f58d26c1f4eb84f948b6030e19c0\",\"ordinal\":13,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_17aab086560b289eb057a74107b9fb174f950f505ba1adcac2ce8bdad0ebe1e3\",\"producer\":null},{\"edge_id\":\"edge_ce2d4b3e28b595ea50ffefd3a547b922c80f0318c285bcf0254423a3fffce992\",\"ordinal\":14,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_a4c5f3319ce4ba5cc0e426bd93fad30baef171ce137a097f1153c81dc71e64a0\",\"producer\":null},{\"edge_id\":\"edge_f7170a220c57feaa5417b60618eca52d0d0b576c78880de948ed64bea343c3b9\",\"ordinal\":15,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_3f2fafa3a5e674ee18092c2c3048322acac4cfad30bed3892930369885362f27\",\"producer\":null},{\"edge_id\":\"edge_f9574ff0fb4266692f7f1dfa1865929f0a1b9c5f709ae8c087c581a23d435c95\",\"ordinal\":16,\"parent_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"relation\":\"contains\",\"occurrence_id\":\"occ_837ca5ca08384917b33d92bd0e0a022256c69d6280452c1bed7a377837bd10d2\",\"producer\":null}],\"provenance\":[],\"integrity_contradictions\":[],\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[]}}],\"observations\":[{\"observation_id\":\"aio_8b08c1352f60f23b6fb97a45cc6b6a4489c69259483dd122dbdae637fe9399fb\",\"kind\":\"root-manifest\",\"subject\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"value\":{\"manifest_id\":\"agm_5d4046657b27cd9cb71f99d9ed69ca955b8c81edd040f814088d6d6870d3ed61\",\"root_artifact_id\":\"art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce\",\"root_sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\",\"root_format\":\"zip\",\"graph_sha256\":\"75edcfa6ac27ab3900e9e1d5fe2644caa09b8fc252f27f53bc54e61cc03d4f9a\",\"node_count\":9,\"occurrence_count\":18,\"edge_count\":17},\"evidence_id\":\"ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa\"}],\"hypotheses\":[],\"contradictions\":[],\"unexplored_branches\":[],\"next_probes\":[],\"coverage\":{\"status\":\"complete-within-substeps\",\"substeps_completed\":1,\"observations_retained\":1,\"observations_omitted\":0,\"hypotheses_retained\":0,\"hypotheses_omitted\":0,\"unexplored_branches_retained\":0,\"unexplored_branches_omitted\":0,\"next_probes_retained\":0,\"next_probes_omitted\":0},\"evidence_links\":[\"ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa\"],\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[\"ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_22f5e882bc8ea77305f8f384b6aaa88793918cab99c71f3fa2812351cb7e790f",
+   "subject": {
+    "name": "Fixture.zip",
+    "digest": {
+     "sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161"
+    },
+    "format": "zip",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/Fixture.zip"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_artifact",
+   "parameters": {
+    "integrity_policy": "fail"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "inspection_id": "ai_46cde90aad340687880b4455b91f387f683c1a8d213840ec395649af4d147a38",
+    "subject": {
+     "manifest_id": "agm_5d4046657b27cd9cb71f99d9ed69ca955b8c81edd040f814088d6d6870d3ed61",
+     "root_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+     "root_sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161",
+     "root_format": "zip"
+    },
+    "substeps": [
+     {
+      "substep_id": "ais_d2c7f4f81b6bb45cb1221474d3a7b1fed95be55e101d11bb030d543863075fb2",
+      "operation": "inventory_artifact",
+      "status": "completed",
+      "evidence_id": "ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa",
+      "evidence": {
+       "evidence_id": "ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa",
+       "subject": {
+        "name": "Fixture.zip",
+        "digest": {
+         "sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161"
+        },
+        "format": "zip",
+        "architecture": null,
+        "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/Fixture.zip"
+       },
+       "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+       },
+       "analysis_profile": null,
+       "predicate_type": "rea.analysis",
+       "operation": "inventory_artifact",
+       "parameters": {
+        "integrity_policy": "fail"
+       },
+       "raw_result": null,
+       "normalized_result": {
+        "manifest": {
+         "manifest_id": "agm_5d4046657b27cd9cb71f99d9ed69ca955b8c81edd040f814088d6d6870d3ed61",
+         "root_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+         "root_sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161",
+         "root_format": "zip",
+         "graph_sha256": "75edcfa6ac27ab3900e9e1d5fe2644caa09b8fc252f27f53bc54e61cc03d4f9a",
+         "node_count": 9,
+         "occurrence_count": 18,
+         "edge_count": 17
+        },
+        "nodes": [
+         {
+          "artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "format": "zip",
+          "sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161",
+          "size": 3295,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "materialized",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "format": "file",
+          "sha256": "53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d",
+          "size": 232,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_707e4c3ebadd326190ca513106ce42521df9a1ed28985c2273f4d07fc0bf976f",
+          "format": "file",
+          "sha256": "2b2961a431b23c9007efe270c1d7eb79c19d4192d7cd2d924176eb0b19e7d2a1",
+          "size": 3,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69",
+          "format": "file",
+          "sha256": "26af2039e3563c710de3d6585af9e7b430427ee7767b88b5723bf276186e0043",
+          "size": 4,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9",
+          "format": "file",
+          "sha256": "1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0",
+          "size": 7,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "format": "file",
+          "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+          "size": 57,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "format": "mach-o",
+          "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+          "size": 72,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4",
+          "format": "file",
+          "sha256": "4632198fae5bd0273cc642501a9f53b5102df45cb2db57f5b2bb87937f8a4cf6",
+          "size": 116,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "format": "mach-o",
+          "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+          "size": 72,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         }
+        ],
+        "occurrences": [
+         {
+          "occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "parent_occurrence_id": null,
+          "logical_path": ".",
+          "entry_kind": "file",
+          "artifact_kind": "container",
+          "artifact_format": "zip",
+          "declared_size": 3295,
+          "compressed_size": null,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_2e55025e2975154e53aa0099c9748bc14507abb6a740fa8c063b890672668909",
+          "artifact_id": "art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/._Fixture",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 4,
+          "compressed_size": 6,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_837ca5ca08384917b33d92bd0e0a022256c69d6280452c1bed7a377837bd10d2",
+          "artifact_id": "art_707e4c3ebadd326190ca513106ce42521df9a1ed28985c2273f4d07fc0bf976f",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Assets.car",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 3,
+          "compressed_size": 5,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_dec96db0a7b0b7134e253b348e8fe7604944994c877ec0f6dfdddd9ec2d549e0",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Fixture",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_a4c5f3319ce4ba5cc0e426bd93fad30baef171ce137a097f1153c81dc71e64a0",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Frameworks/React.framework/React",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_04146c71d9f51c184684d2ef87974743f16a7acb4f72bca277ee5642eb79b09d",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Frameworks/libfoo.dylib",
+          "entry_kind": "file",
+          "artifact_kind": "dynamic-library",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_e74ac1b1cf68630692843b5358d330f2f890b003fd6ee7eed243b8a8db016de1",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Frameworks/libswiftCore.dylib",
+          "entry_kind": "file",
+          "artifact_kind": "dynamic-library",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_64f8df3cca13dfa4d081c03e4c096d94811bde2bf39628679bd656142b005b5c",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib",
+          "entry_kind": "file",
+          "artifact_kind": "dynamic-library",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_764db33987b0ff69f815ac65fe6f14c52e70747cc7c754d92de938ac4ca7aba2",
+          "artifact_id": "art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 116,
+          "compressed_size": 90,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_50937770d8850b2d5a14abc53771f8d675e8cf931c042041b8f31fe413cca2b2",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/PlugIns/Share.appex/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_c773c6e78b3af429ab6c9c7972e4ee1fc5539711d1f272bdab2b1cd8c7909614",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/PlugIns/Share.appex/Share",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_f10fc21451ae1696cab92d7bf46ad83123c240d366d426317cee6cb27d87acd2",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Watch/Watch.app/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_d7919e02119a83616b181a390c247f512ac849b83f6f1102a92821505be3fac6",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Watch/Watch.app/Watch",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_6df635de724e1cea335ccb3e41cbeca95be941e945bcd5349e3a8433d019cdbc",
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/Watch/watch.js",
+          "entry_kind": "file",
+          "artifact_kind": "javascript",
+          "artifact_format": "javascript-bundle",
+          "declared_size": 232,
+          "compressed_size": 63,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_4768c6eb6f61243e64153bb9d99e442a95924ef3a279e7cfde782243b1aba557",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/_CodeSignature/CodeResources",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_3f2fafa3a5e674ee18092c2c3048322acac4cfad30bed3892930369885362f27",
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/app.js",
+          "entry_kind": "file",
+          "artifact_kind": "javascript",
+          "artifact_format": "javascript-bundle",
+          "declared_size": 232,
+          "compressed_size": 63,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_5ba827bb282fee040ddb1027ae3d2a2f5fc9c253dd1c8a7facf1f314f136c348",
+          "artifact_id": "art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/embedded.mobileprovision",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 7,
+          "compressed_size": 9,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_17aab086560b289eb057a74107b9fb174f950f505ba1adcac2ce8bdad0ebe1e3",
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "parent_occurrence_id": "occ_c010410fc26a2a70bb1df3461c3be27d36d01aa8792927835d0fcb520d24f1f3",
+          "logical_path": "Payload/Fixture.app/main.jsbundle",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 232,
+          "compressed_size": 63,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         }
+        ],
+        "edges": [
+         {
+          "edge_id": "edge_0ef3fb87f4774f89286e945cbdd4ba9547b20866e93f6f671a1eda297bf72724",
+          "ordinal": 0,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_d7919e02119a83616b181a390c247f512ac849b83f6f1102a92821505be3fac6",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_1f142957705eab6966c2ba542601901e776825afc7f0de79705457846d7acdc0",
+          "ordinal": 1,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_c773c6e78b3af429ab6c9c7972e4ee1fc5539711d1f272bdab2b1cd8c7909614",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_2850c800574c438b67cd715d29f96f1b79b8de8db0574b3c1a32c24eca216091",
+          "ordinal": 2,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_5ba827bb282fee040ddb1027ae3d2a2f5fc9c253dd1c8a7facf1f314f136c348",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_42989c74186518fa9473434eb4fab66f4c5c9b80be40fadfdd49ca255165a789",
+          "ordinal": 3,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_64f8df3cca13dfa4d081c03e4c096d94811bde2bf39628679bd656142b005b5c",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_50d140e2e6632318fc50f60d1c43ba88d9716b1080750601f8781779b228fbb9",
+          "ordinal": 4,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_dec96db0a7b0b7134e253b348e8fe7604944994c877ec0f6dfdddd9ec2d549e0",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_76aa6d9f4b3a0f9247112a042eb0b2e2f3713ceda15d823fed87a649b4899fd7",
+          "ordinal": 5,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_4768c6eb6f61243e64153bb9d99e442a95924ef3a279e7cfde782243b1aba557",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_8300352111e22f50f4ae7cd854d55c159b0c4f5e8b184e5f84b2fa2af531ac5f",
+          "ordinal": 6,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_2e55025e2975154e53aa0099c9748bc14507abb6a740fa8c063b890672668909",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_84f316e7b247fc3b43b231f5b6a2549f92cc5c2cd8e71a7047e06b269c48ee61",
+          "ordinal": 7,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_04146c71d9f51c184684d2ef87974743f16a7acb4f72bca277ee5642eb79b09d",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_94541abf9241fc860a47b70fb7e46eeb2eef8f69c5e702d790b129e824e24e90",
+          "ordinal": 8,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_e74ac1b1cf68630692843b5358d330f2f890b003fd6ee7eed243b8a8db016de1",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_9c500761f4eedb1ba2af683620ae08424e45038bc01d4b387868a407bdbd95ca",
+          "ordinal": 9,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_f10fc21451ae1696cab92d7bf46ad83123c240d366d426317cee6cb27d87acd2",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_aa51185175d783835f7ba7d1ff3f2c010bf90645b23cbae02b017ac2f9ae4a10",
+          "ordinal": 10,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_764db33987b0ff69f815ac65fe6f14c52e70747cc7c754d92de938ac4ca7aba2",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_b355bb5a412c45bc4d0a7be1a8a3f7de86390a2e5048d146e6bb017922a968ca",
+          "ordinal": 11,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_50937770d8850b2d5a14abc53771f8d675e8cf931c042041b8f31fe413cca2b2",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_b552e8d6e9ed41a0108c89c9ee9d34afd23c8293f0f5fe33d978cd9dd214f156",
+          "ordinal": 12,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_6df635de724e1cea335ccb3e41cbeca95be941e945bcd5349e3a8433d019cdbc",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_b7e8d6c33ba0f8e4ece1c1c8e8443fd376f8f58d26c1f4eb84f948b6030e19c0",
+          "ordinal": 13,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_17aab086560b289eb057a74107b9fb174f950f505ba1adcac2ce8bdad0ebe1e3",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_ce2d4b3e28b595ea50ffefd3a547b922c80f0318c285bcf0254423a3fffce992",
+          "ordinal": 14,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "embeds",
+          "occurrence_id": "occ_a4c5f3319ce4ba5cc0e426bd93fad30baef171ce137a097f1153c81dc71e64a0",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_f7170a220c57feaa5417b60618eca52d0d0b576c78880de948ed64bea343c3b9",
+          "ordinal": 15,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_3f2fafa3a5e674ee18092c2c3048322acac4cfad30bed3892930369885362f27",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_f9574ff0fb4266692f7f1dfa1865929f0a1b9c5f709ae8c087c581a23d435c95",
+          "ordinal": 16,
+          "parent_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+          "relation": "contains",
+          "occurrence_id": "occ_837ca5ca08384917b33d92bd0e0a022256c69d6280452c1bed7a377837bd10d2",
+          "producer": null
+         }
+        ],
+        "provenance": [],
+        "integrity_contradictions": [],
+        "limitations": [
+         "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+        ]
+       },
+       "confidence": "observed",
+       "authority": "shipped-artifact",
+       "environment": null,
+       "limitations": [
+        "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+       ],
+       "locations": [],
+       "evidence_links": []
+      }
+     }
+    ],
+    "observations": [
+     {
+      "observation_id": "aio_8b08c1352f60f23b6fb97a45cc6b6a4489c69259483dd122dbdae637fe9399fb",
+      "kind": "root-manifest",
+      "subject": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+      "value": {
+       "manifest_id": "agm_5d4046657b27cd9cb71f99d9ed69ca955b8c81edd040f814088d6d6870d3ed61",
+       "root_artifact_id": "art_1fa2ed6c5fc571b1e2635f702d134cd1fd8933880ae03bf260d5b921013e20ce",
+       "root_sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161",
+       "root_format": "zip",
+       "graph_sha256": "75edcfa6ac27ab3900e9e1d5fe2644caa09b8fc252f27f53bc54e61cc03d4f9a",
+       "node_count": 9,
+       "occurrence_count": 18,
+       "edge_count": 17
+      },
+      "evidence_id": "ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa"
+     }
+    ],
+    "hypotheses": [],
+    "contradictions": [],
+    "unexplored_branches": [],
+    "next_probes": [],
+    "coverage": {
+     "status": "complete-within-substeps",
+     "substeps_completed": 1,
+     "observations_retained": 1,
+     "observations_omitted": 0,
+     "hypotheses_retained": 0,
+     "hypotheses_omitted": 0,
+     "unexplored_branches_retained": 0,
+     "unexplored_branches_omitted": 0,
+     "next_probes_retained": 0,
+     "next_probes_omitted": 0
+    },
+    "evidence_links": [
+     "ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa"
+    ],
+    "limitations": [
+     "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+     "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+    "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_35352240bbc7e834dc14b773332d2990c1005aa07e162e3b70a3a40014f1affa"
+   ]
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_60f75fe426a09e4819b593766a79ce7debd624fedaa8592c774ea23847fdcaf0\",\"subject\":{\"name\":\"Fixture.zip\",\"digest\":{\"sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Fixture.zip\"},\"provider\":{\"id\":\"rea-apple-application\",\"name\":\"REA Apple application workflows\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.apple-application-graph\",\"operation\":\"project_apple_application_graph\",\"parameters\":{\"inventory_evidence_ids\":[\"ev_22f5e882bc8ea77305f8f384b6aaa88793918cab99c71f3fa2812351cb7e790f\"]},\"raw_result\":null,\"normalized_result\":{\"projection_id\":\"aap_d3b341272ff20ca08a87e02c813acbf3f72031e54517d060224cda7fe613bece\",\"root_sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\",\"root_format\":\"zip\",\"platforms\":[\"ios\"],\"source_evidence_ids\":[\"ev_22f5e882bc8ea77305f8f384b6aaa88793918cab99c71f3fa2812351cb7e790f\"],\"application_roots\":[\"Payload/Fixture.app\"],\"bundles\":[{\"path\":\"Payload/Fixture.app\",\"parent_path\":null,\"layout\":\"shallow\",\"role\":\"application\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Payload/Fixture.app/Info.plist\",\"executable_candidates\":[\"Payload/Fixture.app/Fixture\"],\"signing_paths\":[\"Payload/Fixture.app/_CodeSignature/CodeResources\",\"Payload/Fixture.app/embedded.mobileprovision\"]},{\"path\":\"Payload/Fixture.app/Frameworks/React.framework\",\"parent_path\":\"Payload/Fixture.app\",\"layout\":\"shallow\",\"role\":\"framework\",\"role_basis\":\"path-convention\",\"info_plist_path\":null,\"executable_candidates\":[\"Payload/Fixture.app/Frameworks/React.framework/React\"],\"signing_paths\":[]},{\"path\":\"Payload/Fixture.app/PlugIns/Share.appex\",\"parent_path\":\"Payload/Fixture.app\",\"layout\":\"shallow\",\"role\":\"app-extension\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Payload/Fixture.app/PlugIns/Share.appex/Info.plist\",\"executable_candidates\":[\"Payload/Fixture.app/PlugIns/Share.appex/Share\"],\"signing_paths\":[]},{\"path\":\"Payload/Fixture.app/Watch/Watch.app\",\"parent_path\":\"Payload/Fixture.app\",\"layout\":\"shallow\",\"role\":\"nested-application\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Payload/Fixture.app/Watch/Watch.app/Info.plist\",\"executable_candidates\":[\"Payload/Fixture.app/Watch/Watch.app/Watch\"],\"signing_paths\":[]}],\"components\":{\"bundle_metadata\":[{\"path\":\"Payload/Fixture.app/Info.plist\",\"artifact_id\":\"art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4\",\"sha256\":\"4632198fae5bd0273cc642501a9f53b5102df45cb2db57f5b2bb87937f8a4cf6\",\"format\":\"plist\"},{\"path\":\"Payload/Fixture.app/PlugIns/Share.appex/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Payload/Fixture.app/Watch/Watch.app/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"}],\"executables\":[{\"path\":\"Payload/Fixture.app/Fixture\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Payload/Fixture.app/Frameworks/React.framework/React\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Payload/Fixture.app/Frameworks/libfoo.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Payload/Fixture.app/Frameworks/libswiftCore.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Payload/Fixture.app/PlugIns/Share.appex/Share\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Payload/Fixture.app/Watch/Watch.app/Watch\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"}],\"frameworks\":[{\"path\":\"Payload/Fixture.app/Frameworks/React.framework/React\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"}],\"native_libraries\":[{\"path\":\"Payload/Fixture.app/Frameworks/libfoo.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Payload/Fixture.app/Frameworks/libswiftCore.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"}],\"javascript\":[{\"path\":\"Payload/Fixture.app/Watch/watch.js\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"sha256\":\"53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d\",\"format\":\"javascript-bundle\"},{\"path\":\"Payload/Fixture.app/app.js\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"sha256\":\"53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d\",\"format\":\"javascript-bundle\"}],\"signing\":[{\"path\":\"Payload/Fixture.app/_CodeSignature/CodeResources\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"file\"},{\"path\":\"Payload/Fixture.app/embedded.mobileprovision\",\"artifact_id\":\"art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9\",\"sha256\":\"1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0\",\"format\":\"file\"}],\"privileged_helpers\":[],\"launchd_plists\":[],\"helpers\":[]},\"symlinks\":[],\"runtime_families\":[\"javascript\",\"native\",\"react-native\",\"swift-objective-c\"],\"bridge_candidates\":[{\"source_path\":\"Payload/Fixture.app/Watch/watch.js\",\"native_path\":\"Payload/Fixture.app/Fixture\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/Watch/watch.js\",\"native_path\":\"Payload/Fixture.app/Frameworks/React.framework/React\",\"basis\":\"react-native-convention\"},{\"source_path\":\"Payload/Fixture.app/Watch/watch.js\",\"native_path\":\"Payload/Fixture.app/Frameworks/libfoo.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/Watch/watch.js\",\"native_path\":\"Payload/Fixture.app/Frameworks/libswiftCore.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/Watch/watch.js\",\"native_path\":\"Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/Watch/watch.js\",\"native_path\":\"Payload/Fixture.app/PlugIns/Share.appex/Share\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/Watch/watch.js\",\"native_path\":\"Payload/Fixture.app/Watch/Watch.app/Watch\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/app.js\",\"native_path\":\"Payload/Fixture.app/Fixture\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/app.js\",\"native_path\":\"Payload/Fixture.app/Frameworks/React.framework/React\",\"basis\":\"react-native-convention\"},{\"source_path\":\"Payload/Fixture.app/app.js\",\"native_path\":\"Payload/Fixture.app/Frameworks/libfoo.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/app.js\",\"native_path\":\"Payload/Fixture.app/Frameworks/libswiftCore.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/app.js\",\"native_path\":\"Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/app.js\",\"native_path\":\"Payload/Fixture.app/PlugIns/Share.appex/Share\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Payload/Fixture.app/app.js\",\"native_path\":\"Payload/Fixture.app/Watch/Watch.app/Watch\",\"basis\":\"javascript-and-native-content\"}],\"bridge_candidate_coverage\":{\"status\":\"complete\",\"total_candidates\":14,\"emitted_candidates\":14,\"omitted_candidates\":0},\"coverage\":{\"status\":\"complete-within-inventory\",\"inventory_complete\":true},\"limitations\":[\"AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.\",\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.\",\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"],\"locations\":[],\"evidence_links\":[\"ev_22f5e882bc8ea77305f8f384b6aaa88793918cab99c71f3fa2812351cb7e790f\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_60f75fe426a09e4819b593766a79ce7debd624fedaa8592c774ea23847fdcaf0",
+   "subject": {
+    "name": "Fixture.zip",
+    "digest": {
+     "sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161"
+    },
+    "format": "zip",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/Fixture.zip"
+   },
+   "provider": {
+    "id": "rea-apple-application",
+    "name": "REA Apple application workflows",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.apple-application-graph",
+   "operation": "project_apple_application_graph",
+   "parameters": {
+    "inventory_evidence_ids": [
+     "ev_22f5e882bc8ea77305f8f384b6aaa88793918cab99c71f3fa2812351cb7e790f"
+    ]
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "projection_id": "aap_d3b341272ff20ca08a87e02c813acbf3f72031e54517d060224cda7fe613bece",
+    "root_sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161",
+    "root_format": "zip",
+    "platforms": [
+     "ios"
+    ],
+    "source_evidence_ids": [
+     "ev_22f5e882bc8ea77305f8f384b6aaa88793918cab99c71f3fa2812351cb7e790f"
+    ],
+    "application_roots": [
+     "Payload/Fixture.app"
+    ],
+    "bundles": [
+     {
+      "path": "Payload/Fixture.app",
+      "parent_path": null,
+      "layout": "shallow",
+      "role": "application",
+      "role_basis": "path-convention",
+      "info_plist_path": "Payload/Fixture.app/Info.plist",
+      "executable_candidates": [
+       "Payload/Fixture.app/Fixture"
+      ],
+      "signing_paths": [
+       "Payload/Fixture.app/_CodeSignature/CodeResources",
+       "Payload/Fixture.app/embedded.mobileprovision"
+      ]
+     },
+     {
+      "path": "Payload/Fixture.app/Frameworks/React.framework",
+      "parent_path": "Payload/Fixture.app",
+      "layout": "shallow",
+      "role": "framework",
+      "role_basis": "path-convention",
+      "info_plist_path": null,
+      "executable_candidates": [
+       "Payload/Fixture.app/Frameworks/React.framework/React"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Payload/Fixture.app/PlugIns/Share.appex",
+      "parent_path": "Payload/Fixture.app",
+      "layout": "shallow",
+      "role": "app-extension",
+      "role_basis": "path-convention",
+      "info_plist_path": "Payload/Fixture.app/PlugIns/Share.appex/Info.plist",
+      "executable_candidates": [
+       "Payload/Fixture.app/PlugIns/Share.appex/Share"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Payload/Fixture.app/Watch/Watch.app",
+      "parent_path": "Payload/Fixture.app",
+      "layout": "shallow",
+      "role": "nested-application",
+      "role_basis": "path-convention",
+      "info_plist_path": "Payload/Fixture.app/Watch/Watch.app/Info.plist",
+      "executable_candidates": [
+       "Payload/Fixture.app/Watch/Watch.app/Watch"
+      ],
+      "signing_paths": []
+     }
+    ],
+    "components": {
+     "bundle_metadata": [
+      {
+       "path": "Payload/Fixture.app/Info.plist",
+       "artifact_id": "art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4",
+       "sha256": "4632198fae5bd0273cc642501a9f53b5102df45cb2db57f5b2bb87937f8a4cf6",
+       "format": "plist"
+      },
+      {
+       "path": "Payload/Fixture.app/PlugIns/Share.appex/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Payload/Fixture.app/Watch/Watch.app/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      }
+     ],
+     "executables": [
+      {
+       "path": "Payload/Fixture.app/Fixture",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Payload/Fixture.app/Frameworks/React.framework/React",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Payload/Fixture.app/Frameworks/libfoo.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Payload/Fixture.app/Frameworks/libswiftCore.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Payload/Fixture.app/PlugIns/Share.appex/Share",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Payload/Fixture.app/Watch/Watch.app/Watch",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      }
+     ],
+     "frameworks": [
+      {
+       "path": "Payload/Fixture.app/Frameworks/React.framework/React",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      }
+     ],
+     "native_libraries": [
+      {
+       "path": "Payload/Fixture.app/Frameworks/libfoo.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Payload/Fixture.app/Frameworks/libswiftCore.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      }
+     ],
+     "javascript": [
+      {
+       "path": "Payload/Fixture.app/Watch/watch.js",
+       "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+       "sha256": "53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d",
+       "format": "javascript-bundle"
+      },
+      {
+       "path": "Payload/Fixture.app/app.js",
+       "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+       "sha256": "53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d",
+       "format": "javascript-bundle"
+      }
+     ],
+     "signing": [
+      {
+       "path": "Payload/Fixture.app/_CodeSignature/CodeResources",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "file"
+      },
+      {
+       "path": "Payload/Fixture.app/embedded.mobileprovision",
+       "artifact_id": "art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9",
+       "sha256": "1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0",
+       "format": "file"
+      }
+     ],
+     "privileged_helpers": [],
+     "launchd_plists": [],
+     "helpers": []
+    },
+    "symlinks": [],
+    "runtime_families": [
+     "javascript",
+     "native",
+     "react-native",
+     "swift-objective-c"
+    ],
+    "bridge_candidates": [
+     {
+      "source_path": "Payload/Fixture.app/Watch/watch.js",
+      "native_path": "Payload/Fixture.app/Fixture",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/Watch/watch.js",
+      "native_path": "Payload/Fixture.app/Frameworks/React.framework/React",
+      "basis": "react-native-convention"
+     },
+     {
+      "source_path": "Payload/Fixture.app/Watch/watch.js",
+      "native_path": "Payload/Fixture.app/Frameworks/libfoo.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/Watch/watch.js",
+      "native_path": "Payload/Fixture.app/Frameworks/libswiftCore.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/Watch/watch.js",
+      "native_path": "Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/Watch/watch.js",
+      "native_path": "Payload/Fixture.app/PlugIns/Share.appex/Share",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/Watch/watch.js",
+      "native_path": "Payload/Fixture.app/Watch/Watch.app/Watch",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/app.js",
+      "native_path": "Payload/Fixture.app/Fixture",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/app.js",
+      "native_path": "Payload/Fixture.app/Frameworks/React.framework/React",
+      "basis": "react-native-convention"
+     },
+     {
+      "source_path": "Payload/Fixture.app/app.js",
+      "native_path": "Payload/Fixture.app/Frameworks/libfoo.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/app.js",
+      "native_path": "Payload/Fixture.app/Frameworks/libswiftCore.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/app.js",
+      "native_path": "Payload/Fixture.app/Frameworks/libswift_Concurrency.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/app.js",
+      "native_path": "Payload/Fixture.app/PlugIns/Share.appex/Share",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Payload/Fixture.app/app.js",
+      "native_path": "Payload/Fixture.app/Watch/Watch.app/Watch",
+      "basis": "javascript-and-native-content"
+     }
+    ],
+    "bridge_candidate_coverage": {
+     "status": "complete",
+     "total_candidates": 14,
+     "emitted_candidates": 14,
+     "omitted_candidates": 0
+    },
+    "coverage": {
+     "status": "complete-within-inventory",
+     "inventory_complete": true
+    },
+    "limitations": [
+     "AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.",
+     "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+     "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+     "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+     "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+     "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+     "A bridge basis is inferred from the native path and is repeated for every managed component."
+    ]
+   },
+   "confidence": "inferred",
+   "authority": "analyst-inference",
+   "environment": null,
+   "limitations": [
+    "AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.",
+    "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+    "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+    "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+    "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+    "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+    "A bridge basis is inferred from the native path and is repeated for every managed component."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_22f5e882bc8ea77305f8f384b6aaa88793918cab99c71f3fa2812351cb7e790f"
+   ]
+  }
+ }
+]

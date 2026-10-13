@@ -1,0 +1,108 @@
+{
+ "ok": true,
+ "result": {
+  "format": "binary",
+  "value": {
+   "Blob": {
+    "$plist_type": "data",
+    "base64": "AAH+/w=="
+   },
+   "CFBundleIdentifier": "com.example.typed",
+   "List": [
+    {
+     "$plist_type": "data",
+     "base64": "YWI="
+    },
+    {
+     "$plist_type": "date",
+     "iso8601": "1999-12-31T23:59:59.000Z"
+    }
+   ],
+   "When": {
+    "$plist_type": "date",
+    "iso8601": "2020-01-02T03:04:05.000Z"
+   }
+  },
+  "bundle": {
+   "identifier": "com.example.typed",
+   "executable": null,
+   "name": null,
+   "version": null,
+   "short_version": null
+  },
+  "source_path": "/workspace/wt/native_static/fixtures/native_static/plists/binary_typed.plist",
+  "provenance": [
+   {
+    "tool": "file",
+    "command": [
+     "/usr/bin/file",
+     "-b",
+     "$PLIST"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 27,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "plutil",
+    "command": [
+     "/usr/bin/plutil",
+     "-convert",
+     "json",
+     "-o",
+     "-",
+     "--",
+     "$PLIST"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 1,
+     "signal": null
+    },
+    "stdout_bytes": 0,
+    "stderr_bytes": 125
+   },
+   {
+    "tool": "plutil",
+    "command": [
+     "/usr/bin/plutil",
+     "-convert",
+     "xml1",
+     "-o",
+     "-",
+     "--",
+     "$PLIST"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 449,
+    "stderr_bytes": 0
+   }
+  ],
+  "limitations": [
+   "plutil cannot express this plist as JSON, so it was decoded from plutil's XML conversion; data and date values are typed objects such as { \"$plist_type\": \"data\", \"base64\": ... }."
+  ]
+ },
+ "limitations": [
+  "plutil cannot express this plist as JSON, so it was decoded from plutil's XML conversion; data and date values are typed objects such as { \"$plist_type\": \"data\", \"base64\": ... }."
+ ],
+ "locations": [
+  {
+   "kind": "artifact-path",
+   "path": "/workspace/wt/native_static/fixtures/native_static/plists/binary_typed.plist"
+  }
+ ]
+}

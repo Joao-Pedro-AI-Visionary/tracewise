@@ -67,19 +67,17 @@ pub fn classify_artifact_bytes(prefix: &[u8], file_size: u64) -> String {
     }
     if prefix.len() >= 2 && prefix[0] == 0x4d && prefix[1] == 0x5a {
         if file_size >= prefix.len() as u64 && prefix.len() >= 64 {
-            if prefix.len() >= 64 {
-                let windows_offset = u32::from_le_bytes([
-                    prefix[0x3c],
-                    prefix[0x3d],
-                    prefix[0x3e],
-                    prefix[0x3f],
-                ]) as usize;
-                if windows_offset >= 64
-                    && windows_offset + 4 <= prefix.len()
-                    && prefix[windows_offset..windows_offset + 4] == [0x50, 0x45, 0, 0]
-                {
-                    return "pe".to_string();
-                }
+            let windows_offset = u32::from_le_bytes([
+                prefix[0x3c],
+                prefix[0x3d],
+                prefix[0x3e],
+                prefix[0x3f],
+            ]) as usize;
+            if windows_offset >= 64
+                && windows_offset + 4 <= prefix.len()
+                && prefix[windows_offset..windows_offset + 4] == [0x50, 0x45, 0, 0]
+            {
+                return "pe".to_string();
             }
         }
         return "unknown".to_string();
@@ -116,7 +114,7 @@ pub fn classify_artifact_path(path: &str) -> (String, String) {
     ("resource".to_string(), "file".to_string())
 }
 
-fn artifact_role_for_format(path: &str, format: &str) -> (String, String) {
+pub fn artifact_role_for_format(path: &str, format: &str) -> (String, String) {
     let by_path = classify_artifact_path(path);
     if format == "file" || format == by_path.1 {
         return by_path;
@@ -135,8 +133,10 @@ fn artifact_role_for_format(path: &str, format: &str) -> (String, String) {
     if format == "plist" {
         return ("plist".to_string(), "plist".to_string());
     }
+    // The path decides the role of a native addon or dynamic library; the bytes decide its format
+    // (a `.dylib` that is a Mach-O is a `mach-o` dynamic-library, not a `file`).
     if by_path.0 == "native-addon" || by_path.0 == "dynamic-library" {
-        return by_path;
+        return (by_path.0, format.to_string());
     }
     ("executable".to_string(), format.to_string())
 }
@@ -170,4 +170,43 @@ pub fn read_classification_prefix(path: &std::path::Path) -> Result<Vec<u8>, std
     let n = file.read(&mut buf)?;
     buf.truncate(n);
     Ok(buf)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    const MACH_O: [u8; 8] = [0xcf, 0xfa, 0xed, 0xfe, 0x0c, 0x00, 0x00, 0x01];
+    const ELF: [u8; 8] = [0x7f, b'E', b'L', b'F', 2, 1, 1, 0];
+
+    fn role(path: &str, bytes: &[u8]) -> (String, String) {
+        classify_artifact_content(path, bytes, 72)
+    }
+
+    /// REA `artifactRoleForFormat`: the path names the role of a library or addon, the bytes name
+    /// its format. A Mach-O `.dylib` is a `mach-o` dynamic-library, not a `file`.
+    #[test]
+    fn a_native_library_keeps_the_role_of_its_path_and_the_format_of_its_bytes() {
+        let expected = |kind: &str, format: &str| (kind.to_string(), format.to_string());
+        assert_eq!(role("Contents/Frameworks/libfoo.dylib", &MACH_O), expected("dynamic-library", "mach-o"));
+        assert_eq!(role("Contents/MacOS/libfoo.so", &MACH_O), expected("dynamic-library", "mach-o"));
+        assert_eq!(role("lib/libfoo.so", &ELF), expected("dynamic-library", "elf"));
+        assert_eq!(role("node_modules/x/build/addon.node", &ELF), expected("native-addon", "elf"));
+        assert_eq!(role("a/b.dylib", &[0xca, 0xfe, 0xba, 0xbe, 0, 0, 0, 2]), expected("dynamic-library", "mach-o-universal"));
+    }
+
+    #[test]
+    fn a_library_suffix_without_native_bytes_is_still_a_file() {
+        let expected = |kind: &str| (kind.to_string(), "file".to_string());
+        assert_eq!(role("a/libfoo.dylib", b"not a library"), expected("dynamic-library"));
+        assert_eq!(role("a/addon.node", b"not an addon"), expected("native-addon"));
+    }
+
+    #[test]
+    fn executables_take_their_kind_from_the_bytes_and_their_role_from_the_path() {
+        assert_eq!(role("Contents/MacOS/App", &MACH_O), ("executable".to_string(), "mach-o".to_string()));
+        // `artifact_role_for_format` is what a root file's kind comes from, not the path alone.
+        assert_eq!(artifact_role_for_format("Contents/MacOS/App", "mach-o").0, "executable");
+        assert_eq!(classify_artifact_path("Contents/MacOS/App").0, "resource");
+    }
 }

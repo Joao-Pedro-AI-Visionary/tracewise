@@ -1,0 +1,14 @@
+{
+  "executable_path": "{ELECTRON}",
+  "application_path": "{APP}/main.js",
+  "application_root": "{APP}",
+  "args": ["--no-sandbox", "--disable-gpu"],
+  "actions": [
+    { "step_id": "ipc", "kind": "click", "selector": "#run", "window_index": 0 },
+    { "step_id": "open-url", "kind": "deep-link", "delivery": "open-url", "url": "rea-readiness://open-url" },
+    { "step_id": "second-instance", "kind": "deep-link", "delivery": "second-instance", "url": "rea-readiness://second-instance" },
+    { "step_id": "renderer-reload", "kind": "renderer-reload", "window_index": 1 },
+    { "step_id": "renderer-crash", "kind": "renderer-crash", "window_index": 1 },
+    { "step_id": "renderer-restart", "kind": "wait", "duration_ms": 250, "window_index": 1 }
+  ]
+}

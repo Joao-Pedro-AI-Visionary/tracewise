@@ -1,0 +1,1029 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"result\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Lower.ipa\",\"format\":\"ipa\",\"kind\":\"archive\",\"sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\",\"architecture\":null}}"
+   }
+  ],
+  "structuredContent": {
+   "result": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/apple/Lower.ipa",
+    "format": "ipa",
+    "kind": "archive",
+    "sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd",
+    "architecture": null
+   }
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_6d616f025b8a4199dce1e4b95fa862a5b2a70a9852c040a4b167fb8ba6415ab9\",\"subject\":{\"name\":\"Lower.ipa\",\"digest\":{\"sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\"},\"format\":\"ipa\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Lower.ipa\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"inspection_id\":\"ai_0026f7b74016df4bb2ed95954522116606331f1988307d55144dc1ec35827153\",\"subject\":{\"manifest_id\":\"agm_c1ba57668bc7409c51739cf2733f12580e37d76fa2a94f1d632626cd4d880a18\",\"root_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"root_sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\",\"root_format\":\"ipa\"},\"substeps\":[{\"substep_id\":\"ais_1d1681b95b8ed39b3a65a48821012019b9b483bbc364d528dce7f849e150e4f0\",\"operation\":\"inventory_artifact\",\"status\":\"completed\",\"evidence_id\":\"ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7\",\"evidence\":{\"evidence_id\":\"ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7\",\"subject\":{\"name\":\"Lower.ipa\",\"digest\":{\"sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\"},\"format\":\"ipa\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Lower.ipa\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inventory_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"manifest\":{\"manifest_id\":\"agm_c1ba57668bc7409c51739cf2733f12580e37d76fa2a94f1d632626cd4d880a18\",\"root_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"root_sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\",\"root_format\":\"ipa\",\"graph_sha256\":\"1df1726e9df887ba4ae49f1801cf0ce5a88fb954353894d9d2dc2b1c2f95d1ba\",\"node_count\":9,\"occurrence_count\":18,\"edge_count\":17},\"nodes\":[{\"artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"format\":\"zip\",\"sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\",\"size\":3227,\"media_type\":null,\"architecture\":null,\"content_state\":\"materialized\",\"limitations\":[]},{\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"format\":\"file\",\"sha256\":\"53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d\",\"size\":232,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_707e4c3ebadd326190ca513106ce42521df9a1ed28985c2273f4d07fc0bf976f\",\"format\":\"file\",\"sha256\":\"2b2961a431b23c9007efe270c1d7eb79c19d4192d7cd2d924176eb0b19e7d2a1\",\"size\":3,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69\",\"format\":\"file\",\"sha256\":\"26af2039e3563c710de3d6585af9e7b430427ee7767b88b5723bf276186e0043\",\"size\":4,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9\",\"format\":\"file\",\"sha256\":\"1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0\",\"size\":7,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"format\":\"file\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"size\":57,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"format\":\"mach-o\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"size\":72,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4\",\"format\":\"file\",\"sha256\":\"4632198fae5bd0273cc642501a9f53b5102df45cb2db57f5b2bb87937f8a4cf6\",\"size\":116,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"format\":\"mach-o\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"size\":72,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]}],\"occurrences\":[{\"occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"parent_occurrence_id\":null,\"logical_path\":\".\",\"entry_kind\":\"file\",\"artifact_kind\":\"container\",\"artifact_format\":\"ipa\",\"declared_size\":3227,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_a66b7467c902290313db7beed6fc01bea6514d4fb61fd1c323973a60ddd30ec1\",\"artifact_id\":\"art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/._Fixture\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":4,\"compressed_size\":6,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_d3d8865bdbddbbf1a8a552a7ac7b834c5d62fb989447cf587ecb8b052bd51699\",\"artifact_id\":\"art_707e4c3ebadd326190ca513106ce42521df9a1ed28985c2273f4d07fc0bf976f\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Assets.car\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":3,\"compressed_size\":5,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_f3812221927624bc218edacc1b823d6a7b93957aa64ca4d4148cb0b5bd4d01b8\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Fixture\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_673d4bc5c40fe9898be86800c8d426278bd9b1f227f164ae67983b81ba54d447\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Frameworks/React.framework/React\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_11d9f5bef0d16bcca846272a31a79b600abf40f1ee30d70bb9f043d9aae83d15\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Frameworks/libfoo.dylib\",\"entry_kind\":\"file\",\"artifact_kind\":\"dynamic-library\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_00b69d255822a544e0abafeb761ca5f853dc3f0c42ea9c0cbac65fb6b94bbd0f\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Frameworks/libswiftCore.dylib\",\"entry_kind\":\"file\",\"artifact_kind\":\"dynamic-library\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_b7e9e483ccc56184d7b5d6d1c505f17a5478f6416d0862cc4c5e8d90711ba27e\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Frameworks/libswift_Concurrency.dylib\",\"entry_kind\":\"file\",\"artifact_kind\":\"dynamic-library\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_e10e55b0c3f43ff49c3973e9113eb229d98f13124adc45aab7a4e1dfe1093e65\",\"artifact_id\":\"art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":116,\"compressed_size\":90,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_1f08caff9248fb72e841b00dbe4ff2001e604f57472612879017e069374dd75d\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/PlugIns/Share.appex/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_7ff5cc38ed5b18d07917c91556ae18eead970f7f9afc7aac1f768858bb27a621\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/PlugIns/Share.appex/Share\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_1dc11c86d008e7ff2a47ea7f37e208db477a449cafd6a7623cde2fe24c45cc57\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Watch/Watch.app/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_393b087ba675fcb74f3d21720ed2ab48b907f22533d6323170c14b8cfeb469cd\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Watch/Watch.app/Watch\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_7c8ce72b79bf8430eaa62d434e690539e52b5533608885b8e17820694449aee6\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/Watch/watch.js\",\"entry_kind\":\"file\",\"artifact_kind\":\"javascript\",\"artifact_format\":\"javascript-bundle\",\"declared_size\":232,\"compressed_size\":63,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_210fe8f28c87d537ddd1c4552d0c05667ff012a03edeb828aa2bc1266897112e\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/_CodeSignature/CodeResources\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_f35758103a3fe631d44a42ac418f3abc02038a13237d46e02db3fbcb4070b8d6\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/app.js\",\"entry_kind\":\"file\",\"artifact_kind\":\"javascript\",\"artifact_format\":\"javascript-bundle\",\"declared_size\":232,\"compressed_size\":63,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_49a3a2d3915ee1af2b67ed46bec1645502b47adb04b34fe71a87da4c49849584\",\"artifact_id\":\"art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/embedded.mobileprovision\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":7,\"compressed_size\":9,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_01076a00e4ca0bd1e9746ab4ad4430a312e5d4a5000041f80d79c6b18bfdc23d\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"parent_occurrence_id\":\"occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630\",\"logical_path\":\"payload/Lower.app/main.jsbundle\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":232,\"compressed_size\":63,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]}],\"edges\":[{\"edge_id\":\"edge_0b65d0718de71d7f5e8c593fb94a6870b5e172aac5925936d5965b927d995594\",\"ordinal\":0,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_a66b7467c902290313db7beed6fc01bea6514d4fb61fd1c323973a60ddd30ec1\",\"producer\":null},{\"edge_id\":\"edge_1560e8c508df739eba29f25b774f8e11e2d097a2c6f13ce1685f3231c07b9cc8\",\"ordinal\":1,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_f35758103a3fe631d44a42ac418f3abc02038a13237d46e02db3fbcb4070b8d6\",\"producer\":null},{\"edge_id\":\"edge_254d66e806231a88f45038828a182f33b9ac04a3addc588b529356f1709efcc3\",\"ordinal\":2,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_1f08caff9248fb72e841b00dbe4ff2001e604f57472612879017e069374dd75d\",\"producer\":null},{\"edge_id\":\"edge_44c33313bdd24d7b8731889bc31bbc3fc7bb61efb9d08c89ae89660e87e81205\",\"ordinal\":3,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_01076a00e4ca0bd1e9746ab4ad4430a312e5d4a5000041f80d79c6b18bfdc23d\",\"producer\":null},{\"edge_id\":\"edge_5dd6a47c2d0a9e5ee442b17dffab316d6642885ca6b2420dd61e9c2a82232ac9\",\"ordinal\":4,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_1dc11c86d008e7ff2a47ea7f37e208db477a449cafd6a7623cde2fe24c45cc57\",\"producer\":null},{\"edge_id\":\"edge_5e3bece08b8515fe3308766da85a9cee5f8a0b4ccc2832a0c4a98247f9f9cdd0\",\"ordinal\":5,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_11d9f5bef0d16bcca846272a31a79b600abf40f1ee30d70bb9f043d9aae83d15\",\"producer\":null},{\"edge_id\":\"edge_66bedfd13667bcca7ee819c138092b03f6b60fd56d38937684acc795b81b2731\",\"ordinal\":6,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_7ff5cc38ed5b18d07917c91556ae18eead970f7f9afc7aac1f768858bb27a621\",\"producer\":null},{\"edge_id\":\"edge_7cab52b71a004afc720cdd0204ed74d2f369ba856c70c54e8d946f7d295209d1\",\"ordinal\":7,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_673d4bc5c40fe9898be86800c8d426278bd9b1f227f164ae67983b81ba54d447\",\"producer\":null},{\"edge_id\":\"edge_83f4c916087feee3e24165bbd22a78a1060d51034ffba852efb75623e2962615\",\"ordinal\":8,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_d3d8865bdbddbbf1a8a552a7ac7b834c5d62fb989447cf587ecb8b052bd51699\",\"producer\":null},{\"edge_id\":\"edge_aa60aa9a3e768f42edd1f8e5da19f0d5efe7b58bad5c3dd90039176ae844233e\",\"ordinal\":9,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_7c8ce72b79bf8430eaa62d434e690539e52b5533608885b8e17820694449aee6\",\"producer\":null},{\"edge_id\":\"edge_bc0fef7add233aa25d20c73786221d8acb42a7f3f96b7d015b2c3d99088cd3c6\",\"ordinal\":10,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_210fe8f28c87d537ddd1c4552d0c05667ff012a03edeb828aa2bc1266897112e\",\"producer\":null},{\"edge_id\":\"edge_bd581bb4ecdd12c69f56536c1cadf8cfd85928b823c84be19bebeb7f7d2fea2e\",\"ordinal\":11,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_393b087ba675fcb74f3d21720ed2ab48b907f22533d6323170c14b8cfeb469cd\",\"producer\":null},{\"edge_id\":\"edge_d5a81ad3727437f8f9eb9b51b57a8c6c8b17cd176b43ce21ef694c626a3270bc\",\"ordinal\":12,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_b7e9e483ccc56184d7b5d6d1c505f17a5478f6416d0862cc4c5e8d90711ba27e\",\"producer\":null},{\"edge_id\":\"edge_e452acc4861b18f535a53add2aa19c1276a338ef2c5fb3e2a1e4d9f07401727a\",\"ordinal\":13,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_49a3a2d3915ee1af2b67ed46bec1645502b47adb04b34fe71a87da4c49849584\",\"producer\":null},{\"edge_id\":\"edge_e48a81dd5e6a2504da4cc9739867628098805004012cb40b505b7424470aeb4a\",\"ordinal\":14,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_f3812221927624bc218edacc1b823d6a7b93957aa64ca4d4148cb0b5bd4d01b8\",\"producer\":null},{\"edge_id\":\"edge_e8d701e0aac64288e36ce1241ccc4c97e0394e5e50616a42847e36cd0e42e0e6\",\"ordinal\":15,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_e10e55b0c3f43ff49c3973e9113eb229d98f13124adc45aab7a4e1dfe1093e65\",\"producer\":null},{\"edge_id\":\"edge_efe44c0018f58701830ee1465ed57a7fcf21442ca1c104a5bafd55b612cd7d24\",\"ordinal\":16,\"parent_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"relation\":\"contains\",\"occurrence_id\":\"occ_00b69d255822a544e0abafeb761ca5f853dc3f0c42ea9c0cbac65fb6b94bbd0f\",\"producer\":null}],\"provenance\":[],\"integrity_contradictions\":[],\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[]}}],\"observations\":[{\"observation_id\":\"aio_bd1ef05a90c285df82d95b21b0c0dfd38544545e9cf4fd9371bdde7a9b16f0fe\",\"kind\":\"root-manifest\",\"subject\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"value\":{\"manifest_id\":\"agm_c1ba57668bc7409c51739cf2733f12580e37d76fa2a94f1d632626cd4d880a18\",\"root_artifact_id\":\"art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a\",\"root_sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\",\"root_format\":\"ipa\",\"graph_sha256\":\"1df1726e9df887ba4ae49f1801cf0ce5a88fb954353894d9d2dc2b1c2f95d1ba\",\"node_count\":9,\"occurrence_count\":18,\"edge_count\":17},\"evidence_id\":\"ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7\"}],\"hypotheses\":[],\"contradictions\":[],\"unexplored_branches\":[],\"next_probes\":[],\"coverage\":{\"status\":\"complete-within-substeps\",\"substeps_completed\":1,\"observations_retained\":1,\"observations_omitted\":0,\"hypotheses_retained\":0,\"hypotheses_omitted\":0,\"unexplored_branches_retained\":0,\"unexplored_branches_omitted\":0,\"next_probes_retained\":0,\"next_probes_omitted\":0},\"evidence_links\":[\"ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7\"],\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[\"ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_6d616f025b8a4199dce1e4b95fa862a5b2a70a9852c040a4b167fb8ba6415ab9",
+   "subject": {
+    "name": "Lower.ipa",
+    "digest": {
+     "sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd"
+    },
+    "format": "ipa",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/Lower.ipa"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_artifact",
+   "parameters": {
+    "integrity_policy": "fail"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "inspection_id": "ai_0026f7b74016df4bb2ed95954522116606331f1988307d55144dc1ec35827153",
+    "subject": {
+     "manifest_id": "agm_c1ba57668bc7409c51739cf2733f12580e37d76fa2a94f1d632626cd4d880a18",
+     "root_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+     "root_sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd",
+     "root_format": "ipa"
+    },
+    "substeps": [
+     {
+      "substep_id": "ais_1d1681b95b8ed39b3a65a48821012019b9b483bbc364d528dce7f849e150e4f0",
+      "operation": "inventory_artifact",
+      "status": "completed",
+      "evidence_id": "ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7",
+      "evidence": {
+       "evidence_id": "ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7",
+       "subject": {
+        "name": "Lower.ipa",
+        "digest": {
+         "sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd"
+        },
+        "format": "ipa",
+        "architecture": null,
+        "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/Lower.ipa"
+       },
+       "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+       },
+       "analysis_profile": null,
+       "predicate_type": "rea.analysis",
+       "operation": "inventory_artifact",
+       "parameters": {
+        "integrity_policy": "fail"
+       },
+       "raw_result": null,
+       "normalized_result": {
+        "manifest": {
+         "manifest_id": "agm_c1ba57668bc7409c51739cf2733f12580e37d76fa2a94f1d632626cd4d880a18",
+         "root_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+         "root_sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd",
+         "root_format": "ipa",
+         "graph_sha256": "1df1726e9df887ba4ae49f1801cf0ce5a88fb954353894d9d2dc2b1c2f95d1ba",
+         "node_count": 9,
+         "occurrence_count": 18,
+         "edge_count": 17
+        },
+        "nodes": [
+         {
+          "artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "format": "zip",
+          "sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd",
+          "size": 3227,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "materialized",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "format": "file",
+          "sha256": "53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d",
+          "size": 232,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_707e4c3ebadd326190ca513106ce42521df9a1ed28985c2273f4d07fc0bf976f",
+          "format": "file",
+          "sha256": "2b2961a431b23c9007efe270c1d7eb79c19d4192d7cd2d924176eb0b19e7d2a1",
+          "size": 3,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69",
+          "format": "file",
+          "sha256": "26af2039e3563c710de3d6585af9e7b430427ee7767b88b5723bf276186e0043",
+          "size": 4,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9",
+          "format": "file",
+          "sha256": "1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0",
+          "size": 7,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "format": "file",
+          "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+          "size": 57,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "format": "mach-o",
+          "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+          "size": 72,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4",
+          "format": "file",
+          "sha256": "4632198fae5bd0273cc642501a9f53b5102df45cb2db57f5b2bb87937f8a4cf6",
+          "size": 116,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "format": "mach-o",
+          "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+          "size": 72,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         }
+        ],
+        "occurrences": [
+         {
+          "occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "parent_occurrence_id": null,
+          "logical_path": ".",
+          "entry_kind": "file",
+          "artifact_kind": "container",
+          "artifact_format": "ipa",
+          "declared_size": 3227,
+          "compressed_size": null,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_a66b7467c902290313db7beed6fc01bea6514d4fb61fd1c323973a60ddd30ec1",
+          "artifact_id": "art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/._Fixture",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 4,
+          "compressed_size": 6,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_d3d8865bdbddbbf1a8a552a7ac7b834c5d62fb989447cf587ecb8b052bd51699",
+          "artifact_id": "art_707e4c3ebadd326190ca513106ce42521df9a1ed28985c2273f4d07fc0bf976f",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Assets.car",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 3,
+          "compressed_size": 5,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_f3812221927624bc218edacc1b823d6a7b93957aa64ca4d4148cb0b5bd4d01b8",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Fixture",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_673d4bc5c40fe9898be86800c8d426278bd9b1f227f164ae67983b81ba54d447",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Frameworks/React.framework/React",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_11d9f5bef0d16bcca846272a31a79b600abf40f1ee30d70bb9f043d9aae83d15",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Frameworks/libfoo.dylib",
+          "entry_kind": "file",
+          "artifact_kind": "dynamic-library",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_00b69d255822a544e0abafeb761ca5f853dc3f0c42ea9c0cbac65fb6b94bbd0f",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Frameworks/libswiftCore.dylib",
+          "entry_kind": "file",
+          "artifact_kind": "dynamic-library",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_b7e9e483ccc56184d7b5d6d1c505f17a5478f6416d0862cc4c5e8d90711ba27e",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Frameworks/libswift_Concurrency.dylib",
+          "entry_kind": "file",
+          "artifact_kind": "dynamic-library",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_e10e55b0c3f43ff49c3973e9113eb229d98f13124adc45aab7a4e1dfe1093e65",
+          "artifact_id": "art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 116,
+          "compressed_size": 90,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_1f08caff9248fb72e841b00dbe4ff2001e604f57472612879017e069374dd75d",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/PlugIns/Share.appex/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_7ff5cc38ed5b18d07917c91556ae18eead970f7f9afc7aac1f768858bb27a621",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/PlugIns/Share.appex/Share",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_1dc11c86d008e7ff2a47ea7f37e208db477a449cafd6a7623cde2fe24c45cc57",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Watch/Watch.app/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_393b087ba675fcb74f3d21720ed2ab48b907f22533d6323170c14b8cfeb469cd",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Watch/Watch.app/Watch",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_7c8ce72b79bf8430eaa62d434e690539e52b5533608885b8e17820694449aee6",
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/Watch/watch.js",
+          "entry_kind": "file",
+          "artifact_kind": "javascript",
+          "artifact_format": "javascript-bundle",
+          "declared_size": 232,
+          "compressed_size": 63,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_210fe8f28c87d537ddd1c4552d0c05667ff012a03edeb828aa2bc1266897112e",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/_CodeSignature/CodeResources",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_f35758103a3fe631d44a42ac418f3abc02038a13237d46e02db3fbcb4070b8d6",
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/app.js",
+          "entry_kind": "file",
+          "artifact_kind": "javascript",
+          "artifact_format": "javascript-bundle",
+          "declared_size": 232,
+          "compressed_size": 63,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_49a3a2d3915ee1af2b67ed46bec1645502b47adb04b34fe71a87da4c49849584",
+          "artifact_id": "art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/embedded.mobileprovision",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 7,
+          "compressed_size": 9,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_01076a00e4ca0bd1e9746ab4ad4430a312e5d4a5000041f80d79c6b18bfdc23d",
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "parent_occurrence_id": "occ_d183fbdbf83a90a55101d8d79896af686fcbb854586e0da4b215647304a1d630",
+          "logical_path": "payload/Lower.app/main.jsbundle",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 232,
+          "compressed_size": 63,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         }
+        ],
+        "edges": [
+         {
+          "edge_id": "edge_0b65d0718de71d7f5e8c593fb94a6870b5e172aac5925936d5965b927d995594",
+          "ordinal": 0,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_a66b7467c902290313db7beed6fc01bea6514d4fb61fd1c323973a60ddd30ec1",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_1560e8c508df739eba29f25b774f8e11e2d097a2c6f13ce1685f3231c07b9cc8",
+          "ordinal": 1,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_f35758103a3fe631d44a42ac418f3abc02038a13237d46e02db3fbcb4070b8d6",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_254d66e806231a88f45038828a182f33b9ac04a3addc588b529356f1709efcc3",
+          "ordinal": 2,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_1f08caff9248fb72e841b00dbe4ff2001e604f57472612879017e069374dd75d",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_44c33313bdd24d7b8731889bc31bbc3fc7bb61efb9d08c89ae89660e87e81205",
+          "ordinal": 3,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_01076a00e4ca0bd1e9746ab4ad4430a312e5d4a5000041f80d79c6b18bfdc23d",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_5dd6a47c2d0a9e5ee442b17dffab316d6642885ca6b2420dd61e9c2a82232ac9",
+          "ordinal": 4,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_1dc11c86d008e7ff2a47ea7f37e208db477a449cafd6a7623cde2fe24c45cc57",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_5e3bece08b8515fe3308766da85a9cee5f8a0b4ccc2832a0c4a98247f9f9cdd0",
+          "ordinal": 5,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_11d9f5bef0d16bcca846272a31a79b600abf40f1ee30d70bb9f043d9aae83d15",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_66bedfd13667bcca7ee819c138092b03f6b60fd56d38937684acc795b81b2731",
+          "ordinal": 6,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_7ff5cc38ed5b18d07917c91556ae18eead970f7f9afc7aac1f768858bb27a621",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_7cab52b71a004afc720cdd0204ed74d2f369ba856c70c54e8d946f7d295209d1",
+          "ordinal": 7,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "embeds",
+          "occurrence_id": "occ_673d4bc5c40fe9898be86800c8d426278bd9b1f227f164ae67983b81ba54d447",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_83f4c916087feee3e24165bbd22a78a1060d51034ffba852efb75623e2962615",
+          "ordinal": 8,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_d3d8865bdbddbbf1a8a552a7ac7b834c5d62fb989447cf587ecb8b052bd51699",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_aa60aa9a3e768f42edd1f8e5da19f0d5efe7b58bad5c3dd90039176ae844233e",
+          "ordinal": 9,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_7c8ce72b79bf8430eaa62d434e690539e52b5533608885b8e17820694449aee6",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_bc0fef7add233aa25d20c73786221d8acb42a7f3f96b7d015b2c3d99088cd3c6",
+          "ordinal": 10,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_210fe8f28c87d537ddd1c4552d0c05667ff012a03edeb828aa2bc1266897112e",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_bd581bb4ecdd12c69f56536c1cadf8cfd85928b823c84be19bebeb7f7d2fea2e",
+          "ordinal": 11,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_393b087ba675fcb74f3d21720ed2ab48b907f22533d6323170c14b8cfeb469cd",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_d5a81ad3727437f8f9eb9b51b57a8c6c8b17cd176b43ce21ef694c626a3270bc",
+          "ordinal": 12,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_b7e9e483ccc56184d7b5d6d1c505f17a5478f6416d0862cc4c5e8d90711ba27e",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_e452acc4861b18f535a53add2aa19c1276a338ef2c5fb3e2a1e4d9f07401727a",
+          "ordinal": 13,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_49a3a2d3915ee1af2b67ed46bec1645502b47adb04b34fe71a87da4c49849584",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_e48a81dd5e6a2504da4cc9739867628098805004012cb40b505b7424470aeb4a",
+          "ordinal": 14,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_f3812221927624bc218edacc1b823d6a7b93957aa64ca4d4148cb0b5bd4d01b8",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_e8d701e0aac64288e36ce1241ccc4c97e0394e5e50616a42847e36cd0e42e0e6",
+          "ordinal": 15,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_e10e55b0c3f43ff49c3973e9113eb229d98f13124adc45aab7a4e1dfe1093e65",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_efe44c0018f58701830ee1465ed57a7fcf21442ca1c104a5bafd55b612cd7d24",
+          "ordinal": 16,
+          "parent_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+          "relation": "contains",
+          "occurrence_id": "occ_00b69d255822a544e0abafeb761ca5f853dc3f0c42ea9c0cbac65fb6b94bbd0f",
+          "producer": null
+         }
+        ],
+        "provenance": [],
+        "integrity_contradictions": [],
+        "limitations": [
+         "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+        ]
+       },
+       "confidence": "observed",
+       "authority": "shipped-artifact",
+       "environment": null,
+       "limitations": [
+        "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+       ],
+       "locations": [],
+       "evidence_links": []
+      }
+     }
+    ],
+    "observations": [
+     {
+      "observation_id": "aio_bd1ef05a90c285df82d95b21b0c0dfd38544545e9cf4fd9371bdde7a9b16f0fe",
+      "kind": "root-manifest",
+      "subject": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+      "value": {
+       "manifest_id": "agm_c1ba57668bc7409c51739cf2733f12580e37d76fa2a94f1d632626cd4d880a18",
+       "root_artifact_id": "art_3361ab6366854e6127069c324180bd917b0804fd21028db440dcc4375ddcb14a",
+       "root_sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd",
+       "root_format": "ipa",
+       "graph_sha256": "1df1726e9df887ba4ae49f1801cf0ce5a88fb954353894d9d2dc2b1c2f95d1ba",
+       "node_count": 9,
+       "occurrence_count": 18,
+       "edge_count": 17
+      },
+      "evidence_id": "ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7"
+     }
+    ],
+    "hypotheses": [],
+    "contradictions": [],
+    "unexplored_branches": [],
+    "next_probes": [],
+    "coverage": {
+     "status": "complete-within-substeps",
+     "substeps_completed": 1,
+     "observations_retained": 1,
+     "observations_omitted": 0,
+     "hypotheses_retained": 0,
+     "hypotheses_omitted": 0,
+     "unexplored_branches_retained": 0,
+     "unexplored_branches_omitted": 0,
+     "next_probes_retained": 0,
+     "next_probes_omitted": 0
+    },
+    "evidence_links": [
+     "ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7"
+    ],
+    "limitations": [
+     "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+     "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+    "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_c400fd87995ecacdb78f1e28ae9dc757b5497ae929ab5844f2035593b6908fc7"
+   ]
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_f430f9a5d45dfcfa48829abc6aeb7006ff1ff0e347764e9a99be6679e76c98aa\",\"subject\":{\"name\":\"Lower.ipa\",\"digest\":{\"sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\"},\"format\":\"ipa\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Lower.ipa\"},\"provider\":{\"id\":\"rea-apple-application\",\"name\":\"REA Apple application workflows\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.apple-application-graph\",\"operation\":\"project_apple_application_graph\",\"parameters\":{\"inventory_evidence_ids\":[\"ev_6d616f025b8a4199dce1e4b95fa862a5b2a70a9852c040a4b167fb8ba6415ab9\"]},\"raw_result\":null,\"normalized_result\":{\"projection_id\":\"aap_9f33ff43bbb008ab07779e91e23a1d07cd081f9fe977bb4f0f325ccd56f2ebce\",\"root_sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\",\"root_format\":\"ipa\",\"platforms\":[\"ios\"],\"source_evidence_ids\":[\"ev_6d616f025b8a4199dce1e4b95fa862a5b2a70a9852c040a4b167fb8ba6415ab9\"],\"application_roots\":[\"payload/Lower.app\"],\"bundles\":[{\"path\":\"payload/Lower.app\",\"parent_path\":null,\"layout\":\"shallow\",\"role\":\"application\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"payload/Lower.app/Info.plist\",\"executable_candidates\":[\"payload/Lower.app/Fixture\"],\"signing_paths\":[\"payload/Lower.app/_CodeSignature/CodeResources\",\"payload/Lower.app/embedded.mobileprovision\"]},{\"path\":\"payload/Lower.app/Frameworks/React.framework\",\"parent_path\":\"payload/Lower.app\",\"layout\":\"shallow\",\"role\":\"framework\",\"role_basis\":\"path-convention\",\"info_plist_path\":null,\"executable_candidates\":[\"payload/Lower.app/Frameworks/React.framework/React\"],\"signing_paths\":[]},{\"path\":\"payload/Lower.app/PlugIns/Share.appex\",\"parent_path\":\"payload/Lower.app\",\"layout\":\"shallow\",\"role\":\"app-extension\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"payload/Lower.app/PlugIns/Share.appex/Info.plist\",\"executable_candidates\":[\"payload/Lower.app/PlugIns/Share.appex/Share\"],\"signing_paths\":[]},{\"path\":\"payload/Lower.app/Watch/Watch.app\",\"parent_path\":\"payload/Lower.app\",\"layout\":\"shallow\",\"role\":\"nested-application\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"payload/Lower.app/Watch/Watch.app/Info.plist\",\"executable_candidates\":[\"payload/Lower.app/Watch/Watch.app/Watch\"],\"signing_paths\":[]}],\"components\":{\"bundle_metadata\":[{\"path\":\"payload/Lower.app/Info.plist\",\"artifact_id\":\"art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4\",\"sha256\":\"4632198fae5bd0273cc642501a9f53b5102df45cb2db57f5b2bb87937f8a4cf6\",\"format\":\"plist\"},{\"path\":\"payload/Lower.app/PlugIns/Share.appex/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"payload/Lower.app/Watch/Watch.app/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"}],\"executables\":[{\"path\":\"payload/Lower.app/Fixture\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"payload/Lower.app/Frameworks/React.framework/React\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"payload/Lower.app/Frameworks/libfoo.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"payload/Lower.app/Frameworks/libswiftCore.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"payload/Lower.app/Frameworks/libswift_Concurrency.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"payload/Lower.app/PlugIns/Share.appex/Share\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"payload/Lower.app/Watch/Watch.app/Watch\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"}],\"frameworks\":[{\"path\":\"payload/Lower.app/Frameworks/React.framework/React\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"}],\"native_libraries\":[{\"path\":\"payload/Lower.app/Frameworks/libfoo.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"payload/Lower.app/Frameworks/libswiftCore.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"payload/Lower.app/Frameworks/libswift_Concurrency.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"}],\"javascript\":[{\"path\":\"payload/Lower.app/Watch/watch.js\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"sha256\":\"53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d\",\"format\":\"javascript-bundle\"},{\"path\":\"payload/Lower.app/app.js\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"sha256\":\"53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d\",\"format\":\"javascript-bundle\"}],\"signing\":[{\"path\":\"payload/Lower.app/_CodeSignature/CodeResources\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"file\"},{\"path\":\"payload/Lower.app/embedded.mobileprovision\",\"artifact_id\":\"art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9\",\"sha256\":\"1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0\",\"format\":\"file\"}],\"privileged_helpers\":[],\"launchd_plists\":[],\"helpers\":[]},\"symlinks\":[],\"runtime_families\":[\"javascript\",\"native\",\"react-native\",\"swift-objective-c\"],\"bridge_candidates\":[{\"source_path\":\"payload/Lower.app/Watch/watch.js\",\"native_path\":\"payload/Lower.app/Fixture\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/Watch/watch.js\",\"native_path\":\"payload/Lower.app/Frameworks/React.framework/React\",\"basis\":\"react-native-convention\"},{\"source_path\":\"payload/Lower.app/Watch/watch.js\",\"native_path\":\"payload/Lower.app/Frameworks/libfoo.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/Watch/watch.js\",\"native_path\":\"payload/Lower.app/Frameworks/libswiftCore.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/Watch/watch.js\",\"native_path\":\"payload/Lower.app/Frameworks/libswift_Concurrency.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/Watch/watch.js\",\"native_path\":\"payload/Lower.app/PlugIns/Share.appex/Share\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/Watch/watch.js\",\"native_path\":\"payload/Lower.app/Watch/Watch.app/Watch\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/app.js\",\"native_path\":\"payload/Lower.app/Fixture\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/app.js\",\"native_path\":\"payload/Lower.app/Frameworks/React.framework/React\",\"basis\":\"react-native-convention\"},{\"source_path\":\"payload/Lower.app/app.js\",\"native_path\":\"payload/Lower.app/Frameworks/libfoo.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/app.js\",\"native_path\":\"payload/Lower.app/Frameworks/libswiftCore.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/app.js\",\"native_path\":\"payload/Lower.app/Frameworks/libswift_Concurrency.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/app.js\",\"native_path\":\"payload/Lower.app/PlugIns/Share.appex/Share\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"payload/Lower.app/app.js\",\"native_path\":\"payload/Lower.app/Watch/Watch.app/Watch\",\"basis\":\"javascript-and-native-content\"}],\"bridge_candidate_coverage\":{\"status\":\"complete\",\"total_candidates\":14,\"emitted_candidates\":14,\"omitted_candidates\":0},\"coverage\":{\"status\":\"complete-within-inventory\",\"inventory_complete\":true},\"limitations\":[\"AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.\",\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.\",\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"],\"locations\":[],\"evidence_links\":[\"ev_6d616f025b8a4199dce1e4b95fa862a5b2a70a9852c040a4b167fb8ba6415ab9\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_f430f9a5d45dfcfa48829abc6aeb7006ff1ff0e347764e9a99be6679e76c98aa",
+   "subject": {
+    "name": "Lower.ipa",
+    "digest": {
+     "sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd"
+    },
+    "format": "ipa",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/Lower.ipa"
+   },
+   "provider": {
+    "id": "rea-apple-application",
+    "name": "REA Apple application workflows",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.apple-application-graph",
+   "operation": "project_apple_application_graph",
+   "parameters": {
+    "inventory_evidence_ids": [
+     "ev_6d616f025b8a4199dce1e4b95fa862a5b2a70a9852c040a4b167fb8ba6415ab9"
+    ]
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "projection_id": "aap_9f33ff43bbb008ab07779e91e23a1d07cd081f9fe977bb4f0f325ccd56f2ebce",
+    "root_sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd",
+    "root_format": "ipa",
+    "platforms": [
+     "ios"
+    ],
+    "source_evidence_ids": [
+     "ev_6d616f025b8a4199dce1e4b95fa862a5b2a70a9852c040a4b167fb8ba6415ab9"
+    ],
+    "application_roots": [
+     "payload/Lower.app"
+    ],
+    "bundles": [
+     {
+      "path": "payload/Lower.app",
+      "parent_path": null,
+      "layout": "shallow",
+      "role": "application",
+      "role_basis": "path-convention",
+      "info_plist_path": "payload/Lower.app/Info.plist",
+      "executable_candidates": [
+       "payload/Lower.app/Fixture"
+      ],
+      "signing_paths": [
+       "payload/Lower.app/_CodeSignature/CodeResources",
+       "payload/Lower.app/embedded.mobileprovision"
+      ]
+     },
+     {
+      "path": "payload/Lower.app/Frameworks/React.framework",
+      "parent_path": "payload/Lower.app",
+      "layout": "shallow",
+      "role": "framework",
+      "role_basis": "path-convention",
+      "info_plist_path": null,
+      "executable_candidates": [
+       "payload/Lower.app/Frameworks/React.framework/React"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "payload/Lower.app/PlugIns/Share.appex",
+      "parent_path": "payload/Lower.app",
+      "layout": "shallow",
+      "role": "app-extension",
+      "role_basis": "path-convention",
+      "info_plist_path": "payload/Lower.app/PlugIns/Share.appex/Info.plist",
+      "executable_candidates": [
+       "payload/Lower.app/PlugIns/Share.appex/Share"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "payload/Lower.app/Watch/Watch.app",
+      "parent_path": "payload/Lower.app",
+      "layout": "shallow",
+      "role": "nested-application",
+      "role_basis": "path-convention",
+      "info_plist_path": "payload/Lower.app/Watch/Watch.app/Info.plist",
+      "executable_candidates": [
+       "payload/Lower.app/Watch/Watch.app/Watch"
+      ],
+      "signing_paths": []
+     }
+    ],
+    "components": {
+     "bundle_metadata": [
+      {
+       "path": "payload/Lower.app/Info.plist",
+       "artifact_id": "art_f0f1b2da38dcd17fa52e99b4bf73a6fa75a427332249d87e1d499d0d859f93f4",
+       "sha256": "4632198fae5bd0273cc642501a9f53b5102df45cb2db57f5b2bb87937f8a4cf6",
+       "format": "plist"
+      },
+      {
+       "path": "payload/Lower.app/PlugIns/Share.appex/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "payload/Lower.app/Watch/Watch.app/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      }
+     ],
+     "executables": [
+      {
+       "path": "payload/Lower.app/Fixture",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "payload/Lower.app/Frameworks/React.framework/React",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "payload/Lower.app/Frameworks/libfoo.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "payload/Lower.app/Frameworks/libswiftCore.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "payload/Lower.app/Frameworks/libswift_Concurrency.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "payload/Lower.app/PlugIns/Share.appex/Share",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "payload/Lower.app/Watch/Watch.app/Watch",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      }
+     ],
+     "frameworks": [
+      {
+       "path": "payload/Lower.app/Frameworks/React.framework/React",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      }
+     ],
+     "native_libraries": [
+      {
+       "path": "payload/Lower.app/Frameworks/libfoo.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "payload/Lower.app/Frameworks/libswiftCore.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "payload/Lower.app/Frameworks/libswift_Concurrency.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      }
+     ],
+     "javascript": [
+      {
+       "path": "payload/Lower.app/Watch/watch.js",
+       "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+       "sha256": "53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d",
+       "format": "javascript-bundle"
+      },
+      {
+       "path": "payload/Lower.app/app.js",
+       "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+       "sha256": "53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d",
+       "format": "javascript-bundle"
+      }
+     ],
+     "signing": [
+      {
+       "path": "payload/Lower.app/_CodeSignature/CodeResources",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "file"
+      },
+      {
+       "path": "payload/Lower.app/embedded.mobileprovision",
+       "artifact_id": "art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9",
+       "sha256": "1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0",
+       "format": "file"
+      }
+     ],
+     "privileged_helpers": [],
+     "launchd_plists": [],
+     "helpers": []
+    },
+    "symlinks": [],
+    "runtime_families": [
+     "javascript",
+     "native",
+     "react-native",
+     "swift-objective-c"
+    ],
+    "bridge_candidates": [
+     {
+      "source_path": "payload/Lower.app/Watch/watch.js",
+      "native_path": "payload/Lower.app/Fixture",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/Watch/watch.js",
+      "native_path": "payload/Lower.app/Frameworks/React.framework/React",
+      "basis": "react-native-convention"
+     },
+     {
+      "source_path": "payload/Lower.app/Watch/watch.js",
+      "native_path": "payload/Lower.app/Frameworks/libfoo.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/Watch/watch.js",
+      "native_path": "payload/Lower.app/Frameworks/libswiftCore.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/Watch/watch.js",
+      "native_path": "payload/Lower.app/Frameworks/libswift_Concurrency.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/Watch/watch.js",
+      "native_path": "payload/Lower.app/PlugIns/Share.appex/Share",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/Watch/watch.js",
+      "native_path": "payload/Lower.app/Watch/Watch.app/Watch",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/app.js",
+      "native_path": "payload/Lower.app/Fixture",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/app.js",
+      "native_path": "payload/Lower.app/Frameworks/React.framework/React",
+      "basis": "react-native-convention"
+     },
+     {
+      "source_path": "payload/Lower.app/app.js",
+      "native_path": "payload/Lower.app/Frameworks/libfoo.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/app.js",
+      "native_path": "payload/Lower.app/Frameworks/libswiftCore.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/app.js",
+      "native_path": "payload/Lower.app/Frameworks/libswift_Concurrency.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/app.js",
+      "native_path": "payload/Lower.app/PlugIns/Share.appex/Share",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "payload/Lower.app/app.js",
+      "native_path": "payload/Lower.app/Watch/Watch.app/Watch",
+      "basis": "javascript-and-native-content"
+     }
+    ],
+    "bridge_candidate_coverage": {
+     "status": "complete",
+     "total_candidates": 14,
+     "emitted_candidates": 14,
+     "omitted_candidates": 0
+    },
+    "coverage": {
+     "status": "complete-within-inventory",
+     "inventory_complete": true
+    },
+    "limitations": [
+     "AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.",
+     "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+     "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+     "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+     "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+     "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+     "A bridge basis is inferred from the native path and is repeated for every managed component."
+    ]
+   },
+   "confidence": "inferred",
+   "authority": "analyst-inference",
+   "environment": null,
+   "limitations": [
+    "AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.",
+    "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+    "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+    "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+    "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+    "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+    "A bridge basis is inferred from the native path and is repeated for every managed component."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_6d616f025b8a4199dce1e4b95fa862a5b2a70a9852c040a4b167fb8ba6415ab9"
+   ]
+  }
+ }
+]

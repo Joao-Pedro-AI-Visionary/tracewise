@@ -1,5 +1,5 @@
 use crate::classify::{
-    classify_artifact_bytes, classify_artifact_content, classify_artifact_path,
+    artifact_role_for_format, classify_artifact_bytes, classify_artifact_content, classify_artifact_path,
     zip_package_format_for_path,
 };
 use crate::digest::digest_canonical_value;
@@ -136,10 +136,9 @@ pub fn create_root_node(
             &serde_json::json!({ "kind": "directory-root", "children": sorted }),
         )?
     };
-    let format = if digest.is_none() {
-        "directory".to_string()
-    } else {
-        classify_artifact_bytes(&digest.unwrap().prefix, digest.unwrap().bytes)
+    let format = match digest {
+        None => "directory".to_string(),
+        Some(digest) => classify_artifact_bytes(&digest.prefix, digest.bytes),
     };
     create_artifact_node(&sha256, digest.map(|d| d.bytes).unwrap_or(0), &format, "materialized")
 }
@@ -164,7 +163,7 @@ pub fn root_occurrence_for(
     {
         "container".to_string()
     } else {
-        classify_artifact_path(path).0
+        artifact_role_for_format(path, format).0
     };
     Ok(MutableOccurrence {
         occurrence_id: occurrence_id_for_location(&node.artifact_id, ".", entry_kind)?,
@@ -194,20 +193,14 @@ pub fn materialize_directory_nodes(
         .filter(|(_, o)| o.entry_kind == "directory")
         .map(|(i, o)| (i, o.logical_path.matches('/').count()))
         .collect();
-    directories.sort_by(|a, b| b.1.cmp(&a.1));
+    directories.sort_by_key(|entry| std::cmp::Reverse(entry.1));
     let directories: Vec<usize> = directories.into_iter().map(|(i, _)| i).collect();
-    let mut children_by_parent: HashMap<String, Vec<(String, Option<String>, String)>> =
-        HashMap::new();
-    for occ in occurrences.iter() {
+    // Children are kept as indices: a directory is hashed over the ids of its child directories,
+    // which are assigned by this very loop (deepest first), so each id is read when it is needed.
+    let mut children_by_parent: HashMap<String, Vec<usize>> = HashMap::new();
+    for (index, occ) in occurrences.iter().enumerate() {
         if let Some(parent_id) = &occ.parent_occurrence_id {
-            children_by_parent
-                .entry(parent_id.clone())
-                .or_default()
-                .push((
-                    occ.logical_path.clone(),
-                    occ.artifact_id.clone(),
-                    occ.entry_kind.clone(),
-                ));
+            children_by_parent.entry(parent_id.clone()).or_default().push(index);
         }
     }
     for idx in directories {
@@ -218,15 +211,17 @@ pub fn materialize_directory_nodes(
             .unwrap_or_default();
         let mut child_specs: Vec<_> = children
             .iter()
-            .map(|(path, aid, kind)| {
-                let name = path
+            .map(|&child| {
+                let child = &occurrences[child];
+                let name = child
+                    .logical_path
                     .strip_prefix(&format!("{}/", directory.logical_path))
-                    .unwrap_or(path)
+                    .unwrap_or(&child.logical_path)
                     .to_string();
                 serde_json::json!({
                     "name": name,
-                    "artifact_id": aid,
-                    "entry_kind": kind,
+                    "artifact_id": child.artifact_id,
+                    "entry_kind": child.entry_kind,
                 })
             })
             .collect();

@@ -308,6 +308,7 @@ async fn perform(session: &mut CdpTargetSession, action: &ScenarioAction, secret
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 async fn make_step(
     session: &mut CdpTargetSession,
     secrets: &ScenarioSecrets,

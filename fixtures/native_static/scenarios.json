@@ -1,0 +1,3071 @@
+[
+ {
+  "id": "dylib_fixture_default",
+  "open": "bundles/Fixture.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_default",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_arm64",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "architecture": "arm64"
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_x86_64",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "architecture": "x86_64"
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_arm64e",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "architecture": "arm64e"
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_root_main",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "roots": [
+      "Contents/MacOS/Rich"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_root_helper",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "roots": [
+      "Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_root_dylib",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "roots": [
+      "Contents/Frameworks/libcore.dylib"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_root_alias",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "roots": [
+      "Contents/Frameworks/libalias.dylib",
+      "Contents/Frameworks/libcore.dylib"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_root_not_macho",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "roots": [
+      "Contents/Info.plist"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_root_missing",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "roots": [
+      "Contents/Nope"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_root_escape",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "roots": [
+      "Contents/Frameworks/libescape.dylib"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_rich_root_directory",
+  "open": "bundles/Rich.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {
+     "roots": [
+      "Contents/Frameworks"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "dylib_flat_default",
+  "open": "bundles/Flat.app",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "dylib_standalone_exe",
+  "open": "bundles/Rich.app/Contents/MacOS/Rich",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "dylib_standalone_dylib",
+  "open": "bundles/Rich.app/Contents/Frameworks/libcore.dylib",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "dylib_plist_target",
+  "open": "bundles/plain/Info.plist",
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "dylib_no_target",
+  "open": null,
+  "calls": [
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "ka_rich_binary",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Rich.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_rich_xml",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/RichXml.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_rich_root_alt",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Rich.plist",
+     "root": "alt"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_rich_root_missing",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Rich.plist",
+     "root": "nope"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_rich_page",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Rich.plist",
+     "offset": 2,
+     "limit": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_rich_page_end",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/RichXml.plist",
+     "offset": 8,
+     "limit": 20000
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_nested",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Sub/Dir/Nested.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_wrong_archiver",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Other.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_no_top",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/NoTop.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_ordinary_plist",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Settings.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_nib_archive",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Main.storyboardc/Window.nib"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_truncated",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Truncated.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_not_plist",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Broken.nib"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_empty_file",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Empty.nib"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_symlink",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Link.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_directory",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Sub"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_missing",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/absent.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_default_path",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "ka_dotdot",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/../Contents/Info.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_absolute",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "/etc/passwd"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_nfd_path",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "Contents/Resources/Café.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_foundation_standalone",
+  "open": "bundles/plain/foundation.plist",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "ka_foundation_standalone_name",
+  "open": "bundles/plain/foundation.plist",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "foundation.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_foundation_standalone_other",
+  "open": "bundles/plain/foundation.plist",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {
+     "path": "other.plist"
+    }
+   }
+  ]
+ },
+ {
+  "id": "ka_macho_target",
+  "open": "bundles/Rich.app/Contents/MacOS/Rich",
+  "calls": [
+   {
+    "name": "inspect_keyed_archive",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "ib_default",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "decode_interface_builder",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "ib_limits",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "decode_interface_builder",
+    "arguments": {
+     "max_documents": 2,
+     "max_objects": 5,
+     "max_connections": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "ib_one_document",
+  "open": "bundles/Ib.app",
+  "calls": [
+   {
+    "name": "decode_interface_builder",
+    "arguments": {
+     "max_documents": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "ib_no_documents",
+  "open": "bundles/Fixture.app",
+  "calls": [
+   {
+    "name": "decode_interface_builder",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "ib_not_bundle",
+  "open": "bundles/plain/Info.plist",
+  "calls": [
+   {
+    "name": "decode_interface_builder",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "ib_macho_target",
+  "open": "bundles/Rich.app/Contents/MacOS/Rich",
+  "calls": [
+   {
+    "name": "decode_interface_builder",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "pe_resource32",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/resource32.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_resource64",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/resource64.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_absent",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/absent.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_damaged",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/damaged.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_inconsistent",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/inconsistent.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_notpe",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/notpe.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_empty",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/empty.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_truncated",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/truncated.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_unicode",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/unicode.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_duplicate",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/duplicate.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_cyclic",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/cyclic.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_unaligned",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/unaligned.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_counts",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/counts.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_shallow",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/shallow.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_shared",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/shared.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_overlap",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/overlap.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_badicon",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/badicon.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_far",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/far.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_twodirs",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/twodirs.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_budget_entries",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/resource32.exe",
+     "max_entries": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_budget_file",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/resource32.exe",
+     "max_file_bytes": 100
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_relative",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "pe/resource32.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_missing",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/missing.exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_directory",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_extra_key",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/resource32.exe",
+     "extra": true
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_bad_budget",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": "$FIX/pe/resource32.exe",
+     "max_entries": 0
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_path_type",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {
+     "path": 5
+    }
+   }
+  ]
+ },
+ {
+  "id": "pe_no_args",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_pe_resources",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "evm_doc_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/doc.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_doc_prefixed_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/doc_prefixed.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_doc_upper_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/doc_upper.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_meta_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/meta.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_empty_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/empty.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_tiny_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/tiny.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_odd_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/odd.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_spaced_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/spaced.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_nonutf8_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/nonutf8.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_bom_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/bom.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_ef00_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/ef00.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_noise_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/noise.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_link_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/link.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_missing_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/missing.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_dir_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/dir.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_doc_bin",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/doc.bin",
+     "encoding": "raw"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_meta_bin",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/meta.bin",
+     "encoding": "raw"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_empty_bin",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/empty.bin",
+     "encoding": "raw"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_ef00_bin",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/ef00.bin",
+     "encoding": "raw"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_zeros_bin",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/zeros.bin",
+     "encoding": "raw"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_noise_bin",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/noise.bin",
+     "encoding": "raw"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_stop_bin",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/stop.bin",
+     "encoding": "raw"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_raw_as_hex",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/doc.bin",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_hex_as_raw",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/doc.hex",
+     "encoding": "raw"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_relative",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "evm/doc.hex",
+     "encoding": "hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_bad_encoding",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/doc.hex",
+     "encoding": "base64"
+    }
+   }
+  ]
+ },
+ {
+  "id": "evm_no_encoding",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_evm_interface",
+    "arguments": {
+     "path": "$FIX/evm/doc.hex"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_pie_default",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/pie_default"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_nopie_lazy",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/nopie_lazy"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_nopie_partial",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/nopie_partial"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_nopie_plain",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/nopie_plain"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_tiny_static",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/tiny_static"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_object_o",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/object.o"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_object_pic_o",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/object_pic.o"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_libsample_so",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/libsample.so"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_relr_pie",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/relr_pie"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_execstack_exe",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/execstack_exe"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_stripped_pie",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/stripped_pie"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_full_relro",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/full_relro"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_debug_pie",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/debug_pie"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_arm",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/arm"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_big_endian",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/big_endian"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_core_type",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/core_type"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_dynamic_no_strtab",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/dynamic_no_strtab"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_dynamic_unterminated",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/dynamic_unterminated"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_elf32",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/elf32"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_empty",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/empty"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_interp_unterminated",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/interp_unterminated"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_load_memsz_small",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/load_memsz_small"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_no_shstrndx",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/no_shstrndx"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_not_elf",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/not_elf"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_object_truncated_rela",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/object_truncated_rela"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_reloc_bad_symbol",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/reloc_bad_symbol"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_reloc_entsize_wrong",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/reloc_entsize_wrong"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_section_offset_beyond",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/section_offset_beyond"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_sectionless",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/sectionless"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_segment_offset_beyond",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/segment_offset_beyond"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_short_header",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/short_header"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_short_ident",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/short_ident"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_shstrndx_not_strtab",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/shstrndx_not_strtab"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_shstrndx_out_of_range",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/shstrndx_out_of_range"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_shstrndx_reserved",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/shstrndx_reserved"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_shstrndx_xindex_small",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/shstrndx_xindex_small"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_small_phentsize",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/small_phentsize"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_small_shentsize",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/small_shentsize"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_stack_executable",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/stack_executable"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_stack_missing",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/stack_missing"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_symbol_bad_link",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/symbol_bad_link"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_symbol_entsize_small",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/symbol_entsize_small"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_symbol_name_out_of_range",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/symbol_name_out_of_range"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_truncated_sections",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/truncated_sections"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_truncated_tiny",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/truncated_tiny"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_variant_type_none",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/variants/type_none"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_summary_pie",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/pie_default",
+     "detail": "summary"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_summary_object",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/object.o",
+     "detail": "summary"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_complete_explicit",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/nopie_plain",
+     "detail": "complete"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_relative",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "elf/pie_default"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_missing",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/absent"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_directory",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_bad_detail",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/pie_default",
+     "detail": "everything"
+    }
+   }
+  ]
+ },
+ {
+  "id": "layout_no_args",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "layout_extra_key",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_binary_layout",
+    "arguments": {
+     "path": "$FIX/elf/pie_default",
+     "extra": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_abi_version_1",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/abi_version_1.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_basic",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/basic.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_big_endian",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/big_endian.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_elf32",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/elf32.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_empty",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/empty.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_empty_owner",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/empty_owner.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_foreign_owner",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/foreign_owner.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_header_version_2",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/header_version_2.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_ident_version_2",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/ident_version_2.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_load_beyond_file",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/load_beyond_file.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_load_filesz_gt_memsz",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/load_filesz_gt_memsz.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_machine_arm",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/machine_arm.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_negative",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/negative.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_no_load",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/no_load.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_no_notes",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/no_notes.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_not_elf",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/not_elf.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_note_dirty_tail",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/note_dirty_tail.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_note_overflow",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/note_overflow.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_note_padding",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/note_padding.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_osabi_freebsd",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/osabi_freebsd.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_osabi_gnu",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/osabi_gnu.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_phdr_beyond",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/phdr_beyond.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_phnum_xnum",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/phnum_xnum.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_segv_code2",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/segv_code2.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_segv_code3",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/segv_code3.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_short_header",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/short_header.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_short_ident",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/short_ident.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_short_prstatus",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/short_prstatus.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_short_siginfo",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/short_siginfo.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_sigill",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/sigill.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_small_phentsize",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/small_phentsize.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_type_exec",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/type_exec.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_unterminated_owner",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/unterminated_owner.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_basic_debugger",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/basic.core",
+     "include_debugger_context": true
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_basic_explicit_false",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/basic.core",
+     "include_debugger_context": false
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_relative",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "cores/basic.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_missing",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/absent.core"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_directory",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_bad_flag",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/basic.core",
+     "include_debugger_context": "yes"
+    }
+   }
+  ]
+ },
+ {
+  "id": "crash_no_args",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "crash_extra_key",
+  "open": null,
+  "calls": [
+   {
+    "name": "inspect_recorded_crash",
+    "arguments": {
+     "path": "$FIX/cores/basic.core",
+     "x": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_mac",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_shallow",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Shallow.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_nocontents",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/NoContents.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_heavy",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Heavy.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_ipa",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Fixture.ipa"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_zip",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Fixture.zip"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_zipped_mac",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Zipped.zip"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_noapp_zip",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/NoApp.zip"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_lower_ipa",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Lower.ipa"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_inner_inventory",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1,
+       "inner": true
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_both_wrappers",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      },
+      {
+       "$result": 1,
+       "inner": true
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_tampered_id",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1,
+       "set": {
+        "evidence_id": "ev_0000000000000000000000000000000000000000000000000000000000000000"
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_tampered_body",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1,
+       "set": {
+        "limitations": [
+         "x"
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_extra_key",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1,
+       "set": {
+        "extra": 1
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_missing_limitations",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1,
+       "drop": [
+        "limitations"
+       ]
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_bad_confidence",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1,
+       "set": {
+        "confidence": "zzz",
+        "authority": "zzz"
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_wrong_operation",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/bundles/Fixture.app"
+    }
+   },
+   {
+    "name": "trace_dylib_resolution",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 3
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_mixed_manifests",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Fixture.ipa"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      },
+      {
+       "$result": 3
+      }
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_empty_list",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": []
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_no_args",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "id": "apple_extra_arg",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/apple/Mac.app"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ],
+     "x": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_string_arg",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": "a"
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_not_object",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      "abc"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "apple_non_apple_root",
+  "open": null,
+  "only": "project_apple_application_graph",
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "$FIX/bundles/Fixture.app/Contents/MacOS/App"
+    }
+   },
+   {
+    "name": "inspect_artifact",
+    "arguments": {}
+   },
+   {
+    "name": "project_apple_application_graph",
+    "arguments": {
+     "inventory_evidence": [
+      {
+       "$result": 1
+      }
+     ]
+    }
+   }
+  ]
+ }
+]

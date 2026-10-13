@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"unsupported_target\",\"category\":\"unsupported_target\",\"message\":\"Unsupported target for trace_dylib_resolution at /workspace/wt/native_static/fixtures/native_static/bundles/plain/Info.plist: trace_dylib_resolution requires an active Mach-O or .app bundle target\",\"retryable\":false,\"remediation\":{\"action\":\"Select a target supported by this operation or choose an operation supporting the reported target format.\"},\"details\":{\"operation\":\"trace_dylib_resolution\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/plain/Info.plist\",\"reason\":\"trace_dylib_resolution requires an active Mach-O or .app bundle target\"}}}"
+   }
+  ],
+  "isError": true
+ }
+]

@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "ELF dependency requires DT_STRTAB and DT_STRSZ.",
+ "stderr": ""
+}

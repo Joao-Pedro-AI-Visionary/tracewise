@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "unsupported-target",
+ "message": "Selected ELF type is outside the EXEC/DYN/REL layout profile; recorded core analysis is separate.",
+ "stderr": ""
+}

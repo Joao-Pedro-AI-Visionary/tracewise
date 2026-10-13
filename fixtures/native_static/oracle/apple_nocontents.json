@@ -1,0 +1,406 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"result\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/apple/NoContents.app/Exec\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"architecture\":\"arm64\"}}"
+   }
+  ],
+  "structuredContent": {
+   "result": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/apple/NoContents.app/Exec",
+    "format": "mach-o",
+    "kind": "executable",
+    "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+    "architecture": "arm64"
+   }
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_7c01e04dd516ed036f4abefe4cb24eaafbb46b7b0c6b33d5a55ef8e929f11a20\",\"subject\":{\"name\":\"NoContents.app\",\"digest\":{\"sha256\":\"2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1\"},\"format\":\"directory\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/NoContents.app\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"inspection_id\":\"ai_07c6d0ae75153d88d94e83e24496be9128ea9b57f5924b53e01f0a26ea404110\",\"subject\":{\"manifest_id\":\"agm_e3016489299dbe7a8d21474037c435ec7c83717ebe640bb41306523fda7c4b9d\",\"root_artifact_id\":\"art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66\",\"root_sha256\":\"2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1\",\"root_format\":\"directory\"},\"substeps\":[{\"substep_id\":\"ais_b808d9e8d6c3072b4b18c9afbdae7751196d3c1d29b52fd37af4b85cb934918e\",\"operation\":\"inventory_artifact\",\"status\":\"completed\",\"evidence_id\":\"ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a\",\"evidence\":{\"evidence_id\":\"ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a\",\"subject\":{\"name\":\"NoContents.app\",\"digest\":{\"sha256\":\"2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1\"},\"format\":\"directory\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/NoContents.app\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inventory_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"manifest\":{\"manifest_id\":\"agm_e3016489299dbe7a8d21474037c435ec7c83717ebe640bb41306523fda7c4b9d\",\"root_artifact_id\":\"art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66\",\"root_sha256\":\"2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1\",\"root_format\":\"directory\",\"graph_sha256\":\"c1634ced3c7e6674994a655621c7e24b50d846ce27db6df5a6c6f9ecca08f34e\",\"node_count\":3,\"occurrence_count\":3,\"edge_count\":2},\"nodes\":[{\"artifact_id\":\"art_4e6402266651c2cbba7eb3c98bc3790027430e0fb0226bc37b2537f07df6a102\",\"format\":\"file\",\"sha256\":\"1a234bc4f07cf752e5244294d9f4f928f8af60d39ab53fb20e8174fe4ee735d0\",\"size\":113,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66\",\"format\":\"directory\",\"sha256\":\"2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1\",\"size\":0,\"media_type\":null,\"architecture\":null,\"content_state\":\"materialized\",\"limitations\":[]},{\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"format\":\"mach-o\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"size\":72,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]}],\"occurrences\":[{\"occurrence_id\":\"occ_d9d20a68b2958bb3276e0e2caa41372460d80085f3dd9466ba55523a738de8b7\",\"artifact_id\":\"art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66\",\"parent_occurrence_id\":null,\"logical_path\":\".\",\"entry_kind\":\"directory\",\"artifact_kind\":\"container\",\"artifact_format\":\"directory\",\"declared_size\":4096,\"compressed_size\":null,\"executable\":true,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_f72f87727afa021bac0334aa28dc8c7f77defa60687cbf0ccd622189a967feb4\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_d9d20a68b2958bb3276e0e2caa41372460d80085f3dd9466ba55523a738de8b7\",\"logical_path\":\"Exec\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_0ba35cddcb6121e88e10b7574025c63d3e8045399ade757f9a9da63147c06a4f\",\"artifact_id\":\"art_4e6402266651c2cbba7eb3c98bc3790027430e0fb0226bc37b2537f07df6a102\",\"parent_occurrence_id\":\"occ_d9d20a68b2958bb3276e0e2caa41372460d80085f3dd9466ba55523a738de8b7\",\"logical_path\":\"Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":113,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]}],\"edges\":[{\"edge_id\":\"edge_906fb17b15715ce5a9808e7d100adb098a446a361bb987718a40ecc2fd802917\",\"ordinal\":0,\"parent_artifact_id\":\"art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66\",\"relation\":\"contains\",\"occurrence_id\":\"occ_0ba35cddcb6121e88e10b7574025c63d3e8045399ade757f9a9da63147c06a4f\",\"producer\":null},{\"edge_id\":\"edge_fe12b81369bd75631cb4820a007a63a4b321295561ac9a211405f9ac66ca7358\",\"ordinal\":1,\"parent_artifact_id\":\"art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66\",\"relation\":\"contains\",\"occurrence_id\":\"occ_f72f87727afa021bac0334aa28dc8c7f77defa60687cbf0ccd622189a967feb4\",\"producer\":null}],\"provenance\":[],\"integrity_contradictions\":[],\"limitations\":[]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[],\"locations\":[],\"evidence_links\":[]}}],\"observations\":[{\"observation_id\":\"aio_b503e210fc24a52b9c23a31f3d2be32ac7ad46251c7ffcd7510a45c26ddd24b5\",\"kind\":\"root-manifest\",\"subject\":\"art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66\",\"value\":{\"manifest_id\":\"agm_e3016489299dbe7a8d21474037c435ec7c83717ebe640bb41306523fda7c4b9d\",\"root_artifact_id\":\"art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66\",\"root_sha256\":\"2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1\",\"root_format\":\"directory\",\"graph_sha256\":\"c1634ced3c7e6674994a655621c7e24b50d846ce27db6df5a6c6f9ecca08f34e\",\"node_count\":3,\"occurrence_count\":3,\"edge_count\":2},\"evidence_id\":\"ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a\"}],\"hypotheses\":[],\"contradictions\":[],\"unexplored_branches\":[{\"branch_id\":\"aib_57df187b6fa57e87b59d339fd9178490d0de09dfa7e6acfcee865e4a18abca67\",\"reason\":\"format-specific-analysis-required\",\"detail\":\"analyze_javascript_application was not run by provider-neutral artifact inspection.\",\"next_probe\":{\"operation\":\"analyze_javascript_application\",\"rationale\":\"Recover bounded JavaScript modules, source maps, Electron boundaries, and application relationships.\",\"authority\":\"ast-static-analysis\"},\"evidence_id\":\"ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a\"}],\"next_probes\":[{\"operation\":\"analyze_javascript_application\",\"rationale\":\"Recover bounded JavaScript modules, source maps, Electron boundaries, and application relationships.\",\"authority\":\"ast-static-analysis\"}],\"coverage\":{\"status\":\"complete-within-substeps\",\"substeps_completed\":1,\"observations_retained\":1,\"observations_omitted\":0,\"hypotheses_retained\":0,\"hypotheses_omitted\":0,\"unexplored_branches_retained\":1,\"unexplored_branches_omitted\":0,\"next_probes_retained\":1,\"next_probes_omitted\":0},\"evidence_links\":[\"ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a\"],\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\"],\"locations\":[],\"evidence_links\":[\"ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_7c01e04dd516ed036f4abefe4cb24eaafbb46b7b0c6b33d5a55ef8e929f11a20",
+   "subject": {
+    "name": "NoContents.app",
+    "digest": {
+     "sha256": "2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1"
+    },
+    "format": "directory",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/NoContents.app"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_artifact",
+   "parameters": {
+    "integrity_policy": "fail"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "inspection_id": "ai_07c6d0ae75153d88d94e83e24496be9128ea9b57f5924b53e01f0a26ea404110",
+    "subject": {
+     "manifest_id": "agm_e3016489299dbe7a8d21474037c435ec7c83717ebe640bb41306523fda7c4b9d",
+     "root_artifact_id": "art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66",
+     "root_sha256": "2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1",
+     "root_format": "directory"
+    },
+    "substeps": [
+     {
+      "substep_id": "ais_b808d9e8d6c3072b4b18c9afbdae7751196d3c1d29b52fd37af4b85cb934918e",
+      "operation": "inventory_artifact",
+      "status": "completed",
+      "evidence_id": "ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a",
+      "evidence": {
+       "evidence_id": "ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a",
+       "subject": {
+        "name": "NoContents.app",
+        "digest": {
+         "sha256": "2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1"
+        },
+        "format": "directory",
+        "architecture": null,
+        "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/NoContents.app"
+       },
+       "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+       },
+       "analysis_profile": null,
+       "predicate_type": "rea.analysis",
+       "operation": "inventory_artifact",
+       "parameters": {
+        "integrity_policy": "fail"
+       },
+       "raw_result": null,
+       "normalized_result": {
+        "manifest": {
+         "manifest_id": "agm_e3016489299dbe7a8d21474037c435ec7c83717ebe640bb41306523fda7c4b9d",
+         "root_artifact_id": "art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66",
+         "root_sha256": "2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1",
+         "root_format": "directory",
+         "graph_sha256": "c1634ced3c7e6674994a655621c7e24b50d846ce27db6df5a6c6f9ecca08f34e",
+         "node_count": 3,
+         "occurrence_count": 3,
+         "edge_count": 2
+        },
+        "nodes": [
+         {
+          "artifact_id": "art_4e6402266651c2cbba7eb3c98bc3790027430e0fb0226bc37b2537f07df6a102",
+          "format": "file",
+          "sha256": "1a234bc4f07cf752e5244294d9f4f928f8af60d39ab53fb20e8174fe4ee735d0",
+          "size": 113,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66",
+          "format": "directory",
+          "sha256": "2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1",
+          "size": 0,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "materialized",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "format": "mach-o",
+          "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+          "size": 72,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         }
+        ],
+        "occurrences": [
+         {
+          "occurrence_id": "occ_d9d20a68b2958bb3276e0e2caa41372460d80085f3dd9466ba55523a738de8b7",
+          "artifact_id": "art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66",
+          "parent_occurrence_id": null,
+          "logical_path": ".",
+          "entry_kind": "directory",
+          "artifact_kind": "container",
+          "artifact_format": "directory",
+          "declared_size": 4096,
+          "compressed_size": null,
+          "executable": true,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_f72f87727afa021bac0334aa28dc8c7f77defa60687cbf0ccd622189a967feb4",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_d9d20a68b2958bb3276e0e2caa41372460d80085f3dd9466ba55523a738de8b7",
+          "logical_path": "Exec",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": null,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_0ba35cddcb6121e88e10b7574025c63d3e8045399ade757f9a9da63147c06a4f",
+          "artifact_id": "art_4e6402266651c2cbba7eb3c98bc3790027430e0fb0226bc37b2537f07df6a102",
+          "parent_occurrence_id": "occ_d9d20a68b2958bb3276e0e2caa41372460d80085f3dd9466ba55523a738de8b7",
+          "logical_path": "Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 113,
+          "compressed_size": null,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         }
+        ],
+        "edges": [
+         {
+          "edge_id": "edge_906fb17b15715ce5a9808e7d100adb098a446a361bb987718a40ecc2fd802917",
+          "ordinal": 0,
+          "parent_artifact_id": "art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66",
+          "relation": "contains",
+          "occurrence_id": "occ_0ba35cddcb6121e88e10b7574025c63d3e8045399ade757f9a9da63147c06a4f",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_fe12b81369bd75631cb4820a007a63a4b321295561ac9a211405f9ac66ca7358",
+          "ordinal": 1,
+          "parent_artifact_id": "art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66",
+          "relation": "contains",
+          "occurrence_id": "occ_f72f87727afa021bac0334aa28dc8c7f77defa60687cbf0ccd622189a967feb4",
+          "producer": null
+         }
+        ],
+        "provenance": [],
+        "integrity_contradictions": [],
+        "limitations": []
+       },
+       "confidence": "observed",
+       "authority": "shipped-artifact",
+       "environment": null,
+       "limitations": [],
+       "locations": [],
+       "evidence_links": []
+      }
+     }
+    ],
+    "observations": [
+     {
+      "observation_id": "aio_b503e210fc24a52b9c23a31f3d2be32ac7ad46251c7ffcd7510a45c26ddd24b5",
+      "kind": "root-manifest",
+      "subject": "art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66",
+      "value": {
+       "manifest_id": "agm_e3016489299dbe7a8d21474037c435ec7c83717ebe640bb41306523fda7c4b9d",
+       "root_artifact_id": "art_8740df4976d96270f0eed4438cc0f2e4541b392af264d7df08738a3f503aef66",
+       "root_sha256": "2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1",
+       "root_format": "directory",
+       "graph_sha256": "c1634ced3c7e6674994a655621c7e24b50d846ce27db6df5a6c6f9ecca08f34e",
+       "node_count": 3,
+       "occurrence_count": 3,
+       "edge_count": 2
+      },
+      "evidence_id": "ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a"
+     }
+    ],
+    "hypotheses": [],
+    "contradictions": [],
+    "unexplored_branches": [
+     {
+      "branch_id": "aib_57df187b6fa57e87b59d339fd9178490d0de09dfa7e6acfcee865e4a18abca67",
+      "reason": "format-specific-analysis-required",
+      "detail": "analyze_javascript_application was not run by provider-neutral artifact inspection.",
+      "next_probe": {
+       "operation": "analyze_javascript_application",
+       "rationale": "Recover bounded JavaScript modules, source maps, Electron boundaries, and application relationships.",
+       "authority": "ast-static-analysis"
+      },
+      "evidence_id": "ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a"
+     }
+    ],
+    "next_probes": [
+     {
+      "operation": "analyze_javascript_application",
+      "rationale": "Recover bounded JavaScript modules, source maps, Electron boundaries, and application relationships.",
+      "authority": "ast-static-analysis"
+     }
+    ],
+    "coverage": {
+     "status": "complete-within-substeps",
+     "substeps_completed": 1,
+     "observations_retained": 1,
+     "observations_omitted": 0,
+     "hypotheses_retained": 0,
+     "hypotheses_omitted": 0,
+     "unexplored_branches_retained": 1,
+     "unexplored_branches_omitted": 0,
+     "next_probes_retained": 1,
+     "next_probes_omitted": 0
+    },
+    "evidence_links": [
+     "ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a"
+    ],
+    "limitations": [
+     "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_e5127ddf95ad3df577c6abdbddc5bbf87aa8ec80215289392f672bc709271d4a"
+   ]
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_c7fab958d8c6395c91e22622a0dbe4aba3c3d37873f5e7e2f436620c22ac65c0\",\"subject\":{\"name\":\"NoContents.app\",\"digest\":{\"sha256\":\"2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1\"},\"format\":\"directory\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/NoContents.app\"},\"provider\":{\"id\":\"rea-apple-application\",\"name\":\"REA Apple application workflows\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.apple-application-graph\",\"operation\":\"project_apple_application_graph\",\"parameters\":{\"inventory_evidence_ids\":[\"ev_7c01e04dd516ed036f4abefe4cb24eaafbb46b7b0c6b33d5a55ef8e929f11a20\"]},\"raw_result\":null,\"normalized_result\":{\"projection_id\":\"aap_4468931e1228bd1513b698f8bf800f49935835da4d5fcde95346f094398e18f8\",\"root_sha256\":\"2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1\",\"root_format\":\"directory\",\"platforms\":[\"ios\"],\"source_evidence_ids\":[\"ev_7c01e04dd516ed036f4abefe4cb24eaafbb46b7b0c6b33d5a55ef8e929f11a20\"],\"application_roots\":[\".\"],\"bundles\":[{\"path\":\".\",\"parent_path\":null,\"layout\":\"shallow\",\"role\":\"application\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Info.plist\",\"executable_candidates\":[\"Exec\"],\"signing_paths\":[]}],\"components\":{\"bundle_metadata\":[{\"path\":\"Info.plist\",\"artifact_id\":\"art_4e6402266651c2cbba7eb3c98bc3790027430e0fb0226bc37b2537f07df6a102\",\"sha256\":\"1a234bc4f07cf752e5244294d9f4f928f8af60d39ab53fb20e8174fe4ee735d0\",\"format\":\"plist\"}],\"executables\":[{\"path\":\"Exec\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"}],\"frameworks\":[],\"native_libraries\":[],\"javascript\":[],\"signing\":[],\"privileged_helpers\":[],\"launchd_plists\":[],\"helpers\":[]},\"symlinks\":[],\"runtime_families\":[\"native\"],\"bridge_candidates\":[],\"bridge_candidate_coverage\":{\"status\":\"complete\",\"total_candidates\":0,\"emitted_candidates\":0,\"omitted_candidates\":0},\"coverage\":{\"status\":\"complete-within-inventory\",\"inventory_complete\":true},\"limitations\":[\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"],\"locations\":[],\"evidence_links\":[\"ev_7c01e04dd516ed036f4abefe4cb24eaafbb46b7b0c6b33d5a55ef8e929f11a20\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_c7fab958d8c6395c91e22622a0dbe4aba3c3d37873f5e7e2f436620c22ac65c0",
+   "subject": {
+    "name": "NoContents.app",
+    "digest": {
+     "sha256": "2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1"
+    },
+    "format": "directory",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/NoContents.app"
+   },
+   "provider": {
+    "id": "rea-apple-application",
+    "name": "REA Apple application workflows",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.apple-application-graph",
+   "operation": "project_apple_application_graph",
+   "parameters": {
+    "inventory_evidence_ids": [
+     "ev_7c01e04dd516ed036f4abefe4cb24eaafbb46b7b0c6b33d5a55ef8e929f11a20"
+    ]
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "projection_id": "aap_4468931e1228bd1513b698f8bf800f49935835da4d5fcde95346f094398e18f8",
+    "root_sha256": "2f7e047fc0e1f22ef47a7e8b6fa8ae7acdac21a260417f7da541b00450620dd1",
+    "root_format": "directory",
+    "platforms": [
+     "ios"
+    ],
+    "source_evidence_ids": [
+     "ev_7c01e04dd516ed036f4abefe4cb24eaafbb46b7b0c6b33d5a55ef8e929f11a20"
+    ],
+    "application_roots": [
+     "."
+    ],
+    "bundles": [
+     {
+      "path": ".",
+      "parent_path": null,
+      "layout": "shallow",
+      "role": "application",
+      "role_basis": "path-convention",
+      "info_plist_path": "Info.plist",
+      "executable_candidates": [
+       "Exec"
+      ],
+      "signing_paths": []
+     }
+    ],
+    "components": {
+     "bundle_metadata": [
+      {
+       "path": "Info.plist",
+       "artifact_id": "art_4e6402266651c2cbba7eb3c98bc3790027430e0fb0226bc37b2537f07df6a102",
+       "sha256": "1a234bc4f07cf752e5244294d9f4f928f8af60d39ab53fb20e8174fe4ee735d0",
+       "format": "plist"
+      }
+     ],
+     "executables": [
+      {
+       "path": "Exec",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      }
+     ],
+     "frameworks": [],
+     "native_libraries": [],
+     "javascript": [],
+     "signing": [],
+     "privileged_helpers": [],
+     "launchd_plists": [],
+     "helpers": []
+    },
+    "symlinks": [],
+    "runtime_families": [
+     "native"
+    ],
+    "bridge_candidates": [],
+    "bridge_candidate_coverage": {
+     "status": "complete",
+     "total_candidates": 0,
+     "emitted_candidates": 0,
+     "omitted_candidates": 0
+    },
+    "coverage": {
+     "status": "complete-within-inventory",
+     "inventory_complete": true
+    },
+    "limitations": [
+     "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+     "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+     "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+     "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+     "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+     "A bridge basis is inferred from the native path and is repeated for every managed component."
+    ]
+   },
+   "confidence": "inferred",
+   "authority": "analyst-inference",
+   "environment": null,
+   "limitations": [
+    "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+    "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+    "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+    "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+    "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+    "A bridge basis is inferred from the native path and is repeated for every managed component."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_7c01e04dd516ed036f4abefe4cb24eaafbb46b7b0c6b33d5a55ef8e929f11a20"
+   ]
+  }
+ }
+]

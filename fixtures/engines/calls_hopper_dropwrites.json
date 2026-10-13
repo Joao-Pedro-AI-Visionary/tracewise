@@ -1,0 +1,11 @@
+[
+  {"name": "open_binary", "arguments": {"path": "/workspace/wt/engines/fixtures/engines/sample_elf"}},
+  {"name": "set_address_name", "arguments": {"address": "0x401146", "name": "dropped_name"}},
+  {"name": "set_addresses_names", "arguments": {"names": {"0x401168": "dropped_a", "0x401193": "dropped_b"}}},
+  {"name": "set_comment", "arguments": {"address": "0x401146", "comment": "dropped comment"}},
+  {"name": "set_inline_comment", "arguments": {"address": "0x401146", "comment": "dropped inline"}},
+  {"name": "set_bookmark", "arguments": {"address": "0x401146", "name": "dropped"}},
+  {"name": "annotate_native_function", "arguments": {"procedure": "engine_leaf", "name": "dropped_fn", "comment": "dropped"}},
+  {"name": "list_bookmarks", "arguments": {}},
+  {"name": "address_name", "arguments": {"address": "0x401146"}}
+]

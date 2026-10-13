@@ -1,0 +1,117 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_fd1241e175e7ac1deb31b303dd4e11a7121570fdd01457786c31546fa3da70a3\",\"subject\":{\"name\":\"Ib\",\"digest\":{\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_keyed_archive\",\"parameters\":{\"path\":\"Contents/Resources/RichXml.plist\",\"offset\":8,\"limit\":20000},\"raw_result\":null,\"normalized_result\":{\"target_sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"archive_path\":\"Contents/Resources/RichXml.plist\",\"archive_sha256\":\"9f472368e9d3fe37a6c113bdb4ef6fee3c4d63b268cb441f55b4dbfc4c8aef1c\",\"archive_format\":\"xml-plist\",\"roots\":{\"alt\":{\"CF$UID\":3},\"root\":{\"CF$UID\":1}},\"objects\":[{\"id\":8,\"kind\":\"class-descriptor\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":{\"$classes\":[\"Fixture.Record\",\"NSObject\"],\"$classname\":\"Fixture.Record\"}}],\"references\":[{\"source\":null,\"path\":[\"alt\"],\"target\":3,\"status\":\"resolved\",\"raw\":{\"CF$UID\":3}},{\"source\":null,\"path\":[\"root\"],\"target\":1,\"status\":\"resolved\",\"raw\":{\"CF$UID\":1}}],\"total_objects\":9,\"total_references\":16,\"offset\":8,\"next_offset\":null,\"truncated\":true,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\",\"3 observed integer literal(s) in the original archive exceed the exact range of a JSON number. Decoded numbers may lose integer precision unless represented as { \\\"$plist_type\\\": \\\"integer\\\", \\\"decimal\\\": \\\"<exact digits>\\\" }; the original archive bytes retain those literals.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\",\"3 observed integer literal(s) in the original archive exceed the exact range of a JSON number. Decoded numbers may lose integer precision unless represented as { \\\"$plist_type\\\": \\\"integer\\\", \\\"decimal\\\": \\\"<exact digits>\\\" }; the original archive bytes retain those literals.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"Contents/Resources/RichXml.plist\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_fd1241e175e7ac1deb31b303dd4e11a7121570fdd01457786c31546fa3da70a3",
+   "subject": {
+    "name": "Ib",
+    "digest": {
+     "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_keyed_archive",
+   "parameters": {
+    "path": "Contents/Resources/RichXml.plist",
+    "offset": 8,
+    "limit": 20000
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+    "archive_path": "Contents/Resources/RichXml.plist",
+    "archive_sha256": "9f472368e9d3fe37a6c113bdb4ef6fee3c4d63b268cb441f55b4dbfc4c8aef1c",
+    "archive_format": "xml-plist",
+    "roots": {
+     "alt": {
+      "CF$UID": 3
+     },
+     "root": {
+      "CF$UID": 1
+     }
+    },
+    "objects": [
+     {
+      "id": 8,
+      "kind": "class-descriptor",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": {
+       "$classes": [
+        "Fixture.Record",
+        "NSObject"
+       ],
+       "$classname": "Fixture.Record"
+      }
+     }
+    ],
+    "references": [
+     {
+      "source": null,
+      "path": [
+       "alt"
+      ],
+      "target": 3,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 3
+      }
+     },
+     {
+      "source": null,
+      "path": [
+       "root"
+      ],
+      "target": 1,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 1
+      }
+     }
+    ],
+    "total_objects": 9,
+    "total_references": 16,
+    "offset": 8,
+    "next_offset": null,
+    "truncated": true,
+    "limitations": [
+     "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+     "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+     "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.",
+     "3 observed integer literal(s) in the original archive exceed the exact range of a JSON number. Decoded numbers may lose integer precision unless represented as { \"$plist_type\": \"integer\", \"decimal\": \"<exact digits>\" }; the original archive bytes retain those literals."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+    "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+    "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.",
+    "3 observed integer literal(s) in the original archive exceed the exact range of a JSON number. Decoded numbers may lose integer precision unless represented as { \"$plist_type\": \"integer\", \"decimal\": \"<exact digits>\" }; the original archive bytes retain those literals."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Resources/RichXml.plist"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

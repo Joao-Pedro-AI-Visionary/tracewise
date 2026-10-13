@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "Too small e_shentsize: 10",
+ "stderr": ""
+}

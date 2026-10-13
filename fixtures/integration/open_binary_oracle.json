@@ -1,0 +1,327 @@
+[
+  {
+    "id": "mac_app",
+    "path": "$FIX/apple/Mac.app",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/apple/Mac.app/Contents/MacOS/Mac\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"architecture\":\"arm64\"}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/apple/Mac.app/Contents/MacOS/Mac",
+          "format": "mach-o",
+          "kind": "executable",
+          "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+          "architecture": "arm64"
+        }
+      }
+    }
+  },
+  {
+    "id": "app_without_contents",
+    "path": "$FIX/apple/NoContents.app",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/apple/NoContents.app/Exec\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"architecture\":\"arm64\"}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/apple/NoContents.app/Exec",
+          "format": "mach-o",
+          "kind": "executable",
+          "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+          "architecture": "arm64"
+        }
+      }
+    }
+  },
+  {
+    "id": "flat_ios_layout",
+    "path": "$FIX/apple/Shallow.app",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/apple/Shallow.app/Shallow\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"architecture\":\"arm64\"}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/apple/Shallow.app/Shallow",
+          "format": "mach-o",
+          "kind": "executable",
+          "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+          "architecture": "arm64"
+        }
+      }
+    }
+  },
+  {
+    "id": "heavy_app",
+    "path": "$FIX/apple/Heavy.app",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/apple/Heavy.app/Main\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"architecture\":\"arm64\"}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/apple/Heavy.app/Main",
+          "format": "mach-o",
+          "kind": "executable",
+          "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+          "architecture": "arm64"
+        }
+      }
+    }
+  },
+  {
+    "id": "bundle_fixture_app",
+    "path": "$FIX/bundles/Fixture.app",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\",\"architecture\":\"arm64\"}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App",
+          "format": "mach-o",
+          "kind": "executable",
+          "sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604",
+          "architecture": "arm64"
+        }
+      }
+    }
+  },
+  {
+    "id": "bundle_flat_app",
+    "path": "$FIX/bundles/Flat.app",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/bundles/Flat.app/Flat\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"fbf991f50951f2f13dd66de5a7ce75faf565fce560befe1581e344fe464fa270\",\"architecture\":\"arm64\"}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/bundles/Flat.app/Flat",
+          "format": "mach-o",
+          "kind": "executable",
+          "sha256": "fbf991f50951f2f13dd66de5a7ce75faf565fce560befe1581e344fe464fa270",
+          "architecture": "arm64"
+        }
+      }
+    }
+  },
+  {
+    "id": "bundle_ib_app",
+    "path": "$FIX/bundles/Ib.app",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"architecture\":\"arm64\"}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib",
+          "format": "mach-o",
+          "kind": "executable",
+          "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+          "architecture": "arm64"
+        }
+      }
+    }
+  },
+  {
+    "id": "bundle_rich_app",
+    "path": "$FIX/bundles/Rich.app",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/bundles/Rich.app/Contents/MacOS/Rich\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020\",\"architecture\":\"arm64\"}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/bundles/Rich.app/Contents/MacOS/Rich",
+          "format": "mach-o",
+          "kind": "executable",
+          "sha256": "6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020",
+          "architecture": "arm64"
+        }
+      }
+    }
+  },
+  {
+    "id": "app_without_a_supported_layout",
+    "path": "$FIX/apple/Upper.app",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"error\":{\"code\":\"target_unavailable\",\"category\":\"unavailable\",\"message\":\"Cannot open artifact: app Info.plist is missing or no supported bundle layout was found: $ROOT/fixtures/native_static/apple/Upper.app. Check that the path exists, is readable, and points to a supported file.\",\"retryable\":false,\"remediation\":{\"action\":\"Cannot open artifact: app Info.plist is missing or no supported bundle layout was found: $ROOT/fixtures/native_static/apple/Upper.app. Check that the path exists, is readable, and points to a supported file.\"},\"details\":{\"path\":\"$ROOT/fixtures/native_static/apple/Upper.app\",\"reason\":\"app Info.plist is missing or no supported bundle layout was found: $ROOT/fixtures/native_static/apple/Upper.app\"}}}"
+        }
+      ],
+      "isError": true
+    }
+  },
+  {
+    "id": "directory_that_is_not_an_app",
+    "path": "$FIX/apple/Loose",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"error\":{\"code\":\"target_unavailable\",\"category\":\"unavailable\",\"message\":\"open_binary accepts files and macOS app bundles. This target is a directory; JavaScript/Electron application directories can be analyzed directly with analyze_javascript_application or `rea analyze <directory>`.\",\"retryable\":false,\"remediation\":{\"action\":\"For a JavaScript/Electron application directory, call analyze_javascript_application with input_path or run `rea analyze <directory>`. For binary analysis, select its executable file.\"},\"details\":{\"path\":\"$ROOT/fixtures/native_static/apple/Loose\",\"reason\":\"this opening route requires a file or app bundle\",\"constraint\":\"directory_requires_file\"}}}"
+        }
+      ],
+      "isError": true
+    }
+  },
+  {
+    "id": "directory_without_app_suffix",
+    "path": "$FIX/apple/NoApp",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"error\":{\"code\":\"target_unavailable\",\"category\":\"unavailable\",\"message\":\"open_binary accepts files and macOS app bundles. This target is a directory; JavaScript/Electron application directories can be analyzed directly with analyze_javascript_application or `rea analyze <directory>`.\",\"retryable\":false,\"remediation\":{\"action\":\"For a JavaScript/Electron application directory, call analyze_javascript_application with input_path or run `rea analyze <directory>`. For binary analysis, select its executable file.\"},\"details\":{\"path\":\"$ROOT/fixtures/native_static/apple/NoApp\",\"reason\":\"this opening route requires a file or app bundle\",\"constraint\":\"directory_requires_file\"}}}"
+        }
+      ],
+      "isError": true
+    }
+  },
+  {
+    "id": "plain_directory_of_plists",
+    "path": "$FIX/bundles/plain",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"error\":{\"code\":\"target_unavailable\",\"category\":\"unavailable\",\"message\":\"open_binary accepts files and macOS app bundles. This target is a directory; JavaScript/Electron application directories can be analyzed directly with analyze_javascript_application or `rea analyze <directory>`.\",\"retryable\":false,\"remediation\":{\"action\":\"For a JavaScript/Electron application directory, call analyze_javascript_application with input_path or run `rea analyze <directory>`. For binary analysis, select its executable file.\"},\"details\":{\"path\":\"$ROOT/fixtures/native_static/bundles/plain\",\"reason\":\"this opening route requires a file or app bundle\",\"constraint\":\"directory_requires_file\"}}}"
+        }
+      ],
+      "isError": true
+    }
+  },
+  {
+    "id": "ipa",
+    "path": "$FIX/apple/Fixture.ipa",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/apple/Fixture.ipa\",\"format\":\"ipa\",\"kind\":\"archive\",\"sha256\":\"23a3285e789e4b53d57eac7b2300e9763c3ec7492eb9be16aff45f7603482bfc\",\"architecture\":null}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/apple/Fixture.ipa",
+          "format": "ipa",
+          "kind": "archive",
+          "sha256": "23a3285e789e4b53d57eac7b2300e9763c3ec7492eb9be16aff45f7603482bfc",
+          "architecture": null
+        }
+      }
+    }
+  },
+  {
+    "id": "ipa_lowercase_suffix",
+    "path": "$FIX/apple/Lower.ipa",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/apple/Lower.ipa\",\"format\":\"ipa\",\"kind\":\"archive\",\"sha256\":\"c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd\",\"architecture\":null}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/apple/Lower.ipa",
+          "format": "ipa",
+          "kind": "archive",
+          "sha256": "c1faa12f8b9dda4f1a01100373cad0fc2afac7d6f6f478fc8836b41224beaafd",
+          "architecture": null
+        }
+      }
+    }
+  },
+  {
+    "id": "zip",
+    "path": "$FIX/apple/Fixture.zip",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/apple/Fixture.zip\",\"format\":\"zip\",\"kind\":\"archive\",\"sha256\":\"d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161\",\"architecture\":null}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/apple/Fixture.zip",
+          "format": "zip",
+          "kind": "archive",
+          "sha256": "d361f4e3d40788f8f59bae9b81200113dc00f55bf337a1831e9b777d45c70161",
+          "architecture": null
+        }
+      }
+    }
+  },
+  {
+    "id": "zip_of_a_bundle",
+    "path": "$FIX/apple/Zipped.zip",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/apple/Zipped.zip\",\"format\":\"zip\",\"kind\":\"archive\",\"sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\",\"architecture\":null}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/apple/Zipped.zip",
+          "format": "zip",
+          "kind": "archive",
+          "sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8",
+          "architecture": null
+        }
+      }
+    }
+  },
+  {
+    "id": "mach_o_inside_a_bundle",
+    "path": "$FIX/bundles/Fixture.app/Contents/MacOS/App",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"result\":{\"path\":\"$ROOT/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App\",\"format\":\"mach-o\",\"kind\":\"executable\",\"sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\",\"architecture\":\"arm64\"}}"
+        }
+      ],
+      "structuredContent": {
+        "result": {
+          "path": "$ROOT/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App",
+          "format": "mach-o",
+          "kind": "executable",
+          "sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604",
+          "architecture": "arm64"
+        }
+      }
+    }
+  }
+]

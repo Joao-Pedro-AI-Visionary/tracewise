@@ -1,0 +1,308 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_27f811f75aad0c818601c31de0682baedd9b63e30de0ed70fa6223c99705f795\",\"subject\":{\"name\":\"Ib\",\"digest\":{\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"decode_interface_builder\",\"parameters\":{\"max_documents\":2,\"max_objects\":5,\"max_connections\":2},\"raw_result\":null,\"normalized_result\":{\"target_sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"documents\":[{\"relative_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"archive_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\",\"document_kind\":\"storyboard_scene\",\"object_count\":4,\"connection_count\":2,\"hierarchy_complete\":false}],\"graph\":{\"target_sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"provider\":{\"id\":\"rea-artifact-graph\",\"version\":\"1\",\"tool_version\":\"rea-interface-builder/1\"},\"nodes\":[{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":root\",\"kind\":\"storyboard\",\"name\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"location\":null,\"attributes\":{\"document_kind\":\"storyboard_scene\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"compiled document\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"0\\\"]\",\"kind\":\"unknown\",\"name\":\"UINib\",\"location\":null,\"attributes\":{\"nibValues\":{},\"interface_builder_object_id\":\"0\",\"class_name\":\"UINib\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"object 0\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"1\\\"]\",\"kind\":\"view\",\"name\":\"UIView\",\"location\":null,\"attributes\":{\"nibValues\":{\"UISubviews\":{\"objectID\":\"6\"}},\"interface_builder_object_id\":\"1\",\"class_name\":\"UIView\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"object 1\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"2\\\"]\",\"kind\":\"control\",\"name\":\"Submit\",\"location\":null,\"attributes\":{\"nibValues\":{\"UISuperview\":{\"objectID\":\"1\"},\"UIAccessibilityLabel\":\"Submit\"},\"interface_builder_object_id\":\"2\",\"class_name\":\"UIButton\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"object 2\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"3\\\"]\",\"kind\":\"placeholder\",\"name\":\"IBFilesOwner\",\"location\":null,\"attributes\":{\"nibValues\":{\"UIProxiedObjectIdentifier\":\"IBFilesOwner\"},\"interface_builder_object_id\":\"3\",\"class_name\":\"UIProxyObject\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"object 3\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]}],\"edges\":[{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":action-edge:[\\\"2:connection:0\\\",\\\"source\\\"]\",\"from\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"2\\\"]\",\"to\":null,\"relation\":\"target_action\",\"resolution\":\"unresolved\",\"reason\":\"endpoint_omitted_by_object_limit\",\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"action source 2\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}],\"limitations\":[]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":outlet-edge:[\\\"3:connection:0\\\",\\\"source\\\"]\",\"from\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"3\\\"]\",\"to\":null,\"relation\":\"contains\",\"resolution\":\"unresolved\",\"reason\":\"endpoint_omitted_by_object_limit\",\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"outlet source 3\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}],\"limitations\":[]}],\"coverage\":[{\"facet\":\"objects:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"status\":\"complete\",\"reason\":null,\"examined\":4,\"omitted\":0},{\"facet\":\"connections:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"status\":\"partial\",\"reason\":\"connection_limit_reached\",\"examined\":2,\"omitted\":3},{\"facet\":\"hierarchy:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"status\":\"unsupported\",\"reason\":\"archive_hierarchy_not_decoded\",\"examined\":0,\"omitted\":0},{\"facet\":\"classes:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"status\":\"complete\",\"reason\":null,\"examined\":8,\"omitted\":0},{\"facet\":\"graph_nodes\",\"status\":\"partial\",\"reason\":\"max_objects_reached\",\"examined\":5,\"omitted\":3},{\"facet\":\"archive_decode\",\"status\":\"partial\",\"reason\":\"document_limit_reached\",\"examined\":2,\"omitted\":6}],\"truncated\":true},\"limitations\":[\"The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.\",\"A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.\",\"Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.\",\"Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.\",\"Some Interface Builder archives could not be decoded: Contents/Resources/Broken.nib: missing root element\",\"Contents/Resources/Empty.nib: omitted because max documents.\",\"Contents/Resources/Keyed.nib: omitted because max documents.\",\"Contents/Resources/Legacy.nib: omitted because max documents.\",\"Contents/Resources/LegacyBinary.nib: omitted because max documents.\",\"Contents/Resources/Main.storyboardc/Window.nib: omitted because max documents.\",\"Contents/Resources/Plain.nib: omitted because max documents.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.\",\"A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.\",\"Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.\",\"Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.\",\"Some Interface Builder archives could not be decoded: Contents/Resources/Broken.nib: missing root element\",\"Contents/Resources/Empty.nib: omitted because max documents.\",\"Contents/Resources/Keyed.nib: omitted because max documents.\",\"Contents/Resources/Legacy.nib: omitted because max documents.\",\"Contents/Resources/LegacyBinary.nib: omitted because max documents.\",\"Contents/Resources/Main.storyboardc/Window.nib: omitted because max documents.\",\"Contents/Resources/Plain.nib: omitted because max documents.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_27f811f75aad0c818601c31de0682baedd9b63e30de0ed70fa6223c99705f795",
+   "subject": {
+    "name": "Ib",
+    "digest": {
+     "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "decode_interface_builder",
+   "parameters": {
+    "max_documents": 2,
+    "max_objects": 5,
+    "max_connections": 2
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+    "documents": [
+     {
+      "relative_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+      "archive_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea",
+      "document_kind": "storyboard_scene",
+      "object_count": 4,
+      "connection_count": 2,
+      "hierarchy_complete": false
+     }
+    ],
+    "graph": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "provider": {
+      "id": "rea-artifact-graph",
+      "version": "1",
+      "tool_version": "rea-interface-builder/1"
+     },
+     "nodes": [
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":root",
+       "kind": "storyboard",
+       "name": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "location": null,
+       "attributes": {
+        "document_kind": "storyboard_scene"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "compiled document",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"0\"]",
+       "kind": "unknown",
+       "name": "UINib",
+       "location": null,
+       "attributes": {
+        "nibValues": {},
+        "interface_builder_object_id": "0",
+        "class_name": "UINib"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "object 0",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"1\"]",
+       "kind": "view",
+       "name": "UIView",
+       "location": null,
+       "attributes": {
+        "nibValues": {
+         "UISubviews": {
+          "objectID": "6"
+         }
+        },
+        "interface_builder_object_id": "1",
+        "class_name": "UIView"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "object 1",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"2\"]",
+       "kind": "control",
+       "name": "Submit",
+       "location": null,
+       "attributes": {
+        "nibValues": {
+         "UISuperview": {
+          "objectID": "1"
+         },
+         "UIAccessibilityLabel": "Submit"
+        },
+        "interface_builder_object_id": "2",
+        "class_name": "UIButton"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "object 2",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"3\"]",
+       "kind": "placeholder",
+       "name": "IBFilesOwner",
+       "location": null,
+       "attributes": {
+        "nibValues": {
+         "UIProxiedObjectIdentifier": "IBFilesOwner"
+        },
+        "interface_builder_object_id": "3",
+        "class_name": "UIProxyObject"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "object 3",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      }
+     ],
+     "edges": [
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":action-edge:[\"2:connection:0\",\"source\"]",
+       "from": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"2\"]",
+       "to": null,
+       "relation": "target_action",
+       "resolution": "unresolved",
+       "reason": "endpoint_omitted_by_object_limit",
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "action source 2",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ],
+       "limitations": []
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":outlet-edge:[\"3:connection:0\",\"source\"]",
+       "from": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"3\"]",
+       "to": null,
+       "relation": "contains",
+       "resolution": "unresolved",
+       "reason": "endpoint_omitted_by_object_limit",
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "outlet source 3",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ],
+       "limitations": []
+      }
+     ],
+     "coverage": [
+      {
+       "facet": "objects:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "status": "complete",
+       "reason": null,
+       "examined": 4,
+       "omitted": 0
+      },
+      {
+       "facet": "connections:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "status": "partial",
+       "reason": "connection_limit_reached",
+       "examined": 2,
+       "omitted": 3
+      },
+      {
+       "facet": "hierarchy:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "status": "unsupported",
+       "reason": "archive_hierarchy_not_decoded",
+       "examined": 0,
+       "omitted": 0
+      },
+      {
+       "facet": "classes:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "status": "complete",
+       "reason": null,
+       "examined": 8,
+       "omitted": 0
+      },
+      {
+       "facet": "graph_nodes",
+       "status": "partial",
+       "reason": "max_objects_reached",
+       "examined": 5,
+       "omitted": 3
+      },
+      {
+       "facet": "archive_decode",
+       "status": "partial",
+       "reason": "document_limit_reached",
+       "examined": 2,
+       "omitted": 6
+      }
+     ],
+     "truncated": true
+    },
+    "limitations": [
+     "The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.",
+     "A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.",
+     "Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.",
+     "Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.",
+     "Some Interface Builder archives could not be decoded: Contents/Resources/Broken.nib: missing root element",
+     "Contents/Resources/Empty.nib: omitted because max documents.",
+     "Contents/Resources/Keyed.nib: omitted because max documents.",
+     "Contents/Resources/Legacy.nib: omitted because max documents.",
+     "Contents/Resources/LegacyBinary.nib: omitted because max documents.",
+     "Contents/Resources/Main.storyboardc/Window.nib: omitted because max documents.",
+     "Contents/Resources/Plain.nib: omitted because max documents."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.",
+    "A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.",
+    "Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.",
+    "Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.",
+    "Some Interface Builder archives could not be decoded: Contents/Resources/Broken.nib: missing root element",
+    "Contents/Resources/Empty.nib: omitted because max documents.",
+    "Contents/Resources/Keyed.nib: omitted because max documents.",
+    "Contents/Resources/Legacy.nib: omitted because max documents.",
+    "Contents/Resources/LegacyBinary.nib: omitted because max documents.",
+    "Contents/Resources/Main.storyboardc/Window.nib: omitted because max documents.",
+    "Contents/Resources/Plain.nib: omitted because max documents."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

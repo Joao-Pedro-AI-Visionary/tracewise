@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"unsupported_target\",\"category\":\"unsupported_target\",\"message\":\"Unsupported target for inspect_keyed_archive at /workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/Resources/Other.plist: Selected property list is not an NSKeyedArchiver archive: its $archiver is \\\"Other\\\"\",\"retryable\":false,\"remediation\":{\"action\":\"Select an NSKeyedArchiver archive; inspect_keyed_archive decodes only those. inspect_plist, which reads ordinary property lists, requires a macOS host.\"},\"details\":{\"operation\":\"inspect_keyed_archive\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/Resources/Other.plist\",\"reason\":\"Selected property list is not an NSKeyedArchiver archive: its $archiver is \\\"Other\\\"\"}}}"
+   }
+  ],
+  "isError": true
+ }
+]

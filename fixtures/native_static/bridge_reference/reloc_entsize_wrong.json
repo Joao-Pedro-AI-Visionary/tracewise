@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "Selected ELF failed unchanged upstream structural parsing: Expected sh_entsize of SHT_RELA section to be 24",
+ "stderr": ""
+}

@@ -1,0 +1,701 @@
+{
+ "ok": true,
+ "result": {
+  "format": "mach-o",
+  "endian": null,
+  "word_size": 64,
+  "file_type": "2",
+  "flags": [
+   "0x00200085"
+  ],
+  "uuid": "DD511BAA-DF23-31EA-A44A-0E09FC69C471",
+  "entrypoints": {
+   "items": [
+    {
+     "file_offset": 1136
+    }
+   ],
+   "total": 1,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "architectures": {
+   "items": [
+    {
+     "name": "arm64",
+     "cpu_type": null,
+     "cpu_subtype": null,
+     "file_offset": null,
+     "size": null,
+     "alignment": null
+    }
+   ],
+   "total": 1,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "build_metadata": {
+   "items": [
+    {
+     "platform": "1",
+     "minimum_os": "26.0",
+     "sdk": "26.5",
+     "tools": [
+      {
+       "name": "3",
+       "version": "1267.0"
+      }
+     ]
+    }
+   ],
+   "total": 1,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "load_commands": {
+   "items": [
+    {
+     "index": 0,
+     "kind": "LC_SEGMENT_64",
+     "fields": {
+      "cmd": "LC_SEGMENT_64",
+      "cmdsize": 72,
+      "segname": "__PAGEZERO",
+      "vmaddr": 0,
+      "vmsize": 4294967296,
+      "fileoff": 0,
+      "filesize": 0,
+      "maxprot": 0,
+      "initprot": 0,
+      "nsects": 0,
+      "flags": 0
+     }
+    },
+    {
+     "index": 1,
+     "kind": "LC_SEGMENT_64",
+     "fields": {
+      "cmd": "LC_SEGMENT_64",
+      "cmdsize": 392,
+      "segname": "__TEXT",
+      "vmaddr": 4294967296,
+      "vmsize": 16384,
+      "fileoff": 0,
+      "filesize": 16384,
+      "maxprot": 5,
+      "initprot": 5,
+      "nsects": 4,
+      "flags": 0
+     }
+    },
+    {
+     "index": 2,
+     "kind": "LC_SEGMENT_64",
+     "fields": {
+      "cmd": "LC_SEGMENT_64",
+      "cmdsize": 152,
+      "segname": "__DATA_CONST",
+      "vmaddr": 4294983680,
+      "vmsize": 16384,
+      "fileoff": 16384,
+      "filesize": 16384,
+      "maxprot": 3,
+      "initprot": 3,
+      "nsects": 1,
+      "flags": 16
+     }
+    },
+    {
+     "index": 3,
+     "kind": "LC_SEGMENT_64",
+     "fields": {
+      "cmd": "LC_SEGMENT_64",
+      "cmdsize": 72,
+      "segname": "__LINKEDIT",
+      "vmaddr": 4295000064,
+      "vmsize": 16384,
+      "fileoff": 32768,
+      "filesize": 824,
+      "maxprot": 1,
+      "initprot": 1,
+      "nsects": 0,
+      "flags": 0
+     }
+    },
+    {
+     "index": 4,
+     "kind": "LC_DYLD_CHAINED_FIXUPS",
+     "fields": {
+      "cmd": "LC_DYLD_CHAINED_FIXUPS",
+      "cmdsize": 16,
+      "dataoff": 32768,
+      "datasize": 112
+     }
+    },
+    {
+     "index": 5,
+     "kind": "LC_DYLD_EXPORTS_TRIE",
+     "fields": {
+      "cmd": "LC_DYLD_EXPORTS_TRIE",
+      "cmdsize": 16,
+      "dataoff": 32880,
+      "datasize": 96
+     }
+    },
+    {
+     "index": 6,
+     "kind": "LC_SYMTAB",
+     "fields": {
+      "cmd": "LC_SYMTAB",
+      "cmdsize": 24,
+      "symoff": 32984,
+      "nsyms": 6,
+      "stroff": 33096,
+      "strsize": 88
+     }
+    },
+    {
+     "index": 7,
+     "kind": "LC_DYSYMTAB",
+     "fields": {
+      "cmd": "LC_DYSYMTAB",
+      "cmdsize": 80,
+      "ilocalsym": 0,
+      "nlocalsym": 0,
+      "iextdefsym": 0,
+      "nextdefsym": 5,
+      "iundefsym": 5,
+      "nundefsym": 1,
+      "tocoff": 0,
+      "ntoc": 0,
+      "modtaboff": 0,
+      "nmodtab": 0,
+      "extrefsymoff": 0,
+      "nextrefsyms": 0,
+      "indirectsymoff": 33080,
+      "nindirectsyms": 4,
+      "extreloff": 0,
+      "nextrel": 0,
+      "locreloff": 0,
+      "nlocrel": 0
+     }
+    },
+    {
+     "index": 8,
+     "kind": "LC_LOAD_DYLINKER",
+     "fields": {
+      "cmd": "LC_LOAD_DYLINKER",
+      "cmdsize": 32,
+      "name": "/usr/lib/dyld (offset 12)"
+     }
+    },
+    {
+     "index": 9,
+     "kind": "LC_UUID",
+     "fields": {
+      "cmd": "LC_UUID",
+      "cmdsize": 24,
+      "uuid": "DD511BAA-DF23-31EA-A44A-0E09FC69C471"
+     }
+    },
+    {
+     "index": 10,
+     "kind": "LC_BUILD_VERSION",
+     "fields": {
+      "cmd": "LC_BUILD_VERSION",
+      "cmdsize": 32,
+      "platform": 1,
+      "minos": "26.0",
+      "sdk": "26.5",
+      "ntools": 1,
+      "tool": 3,
+      "version": "1267.0"
+     }
+    },
+    {
+     "index": 11,
+     "kind": "LC_SOURCE_VERSION",
+     "fields": {
+      "cmd": "LC_SOURCE_VERSION",
+      "cmdsize": 16,
+      "version": "0.0"
+     }
+    },
+    {
+     "index": 12,
+     "kind": "LC_MAIN",
+     "fields": {
+      "cmd": "LC_MAIN",
+      "cmdsize": 24,
+      "entryoff": 1136,
+      "stacksize": 0
+     }
+    },
+    {
+     "index": 13,
+     "kind": "LC_LOAD_DYLIB",
+     "fields": {
+      "cmd": "LC_LOAD_DYLIB",
+      "cmdsize": 56,
+      "name": "/usr/lib/libSystem.B.dylib (offset 24)",
+      "time stamp": "2 Thu Jan  1 08:00:02 1970",
+      "current version": "1356.0.0",
+      "compatibility version": "1.0.0"
+     }
+    },
+    {
+     "index": 14,
+     "kind": "LC_FUNCTION_STARTS",
+     "fields": {
+      "cmd": "LC_FUNCTION_STARTS",
+      "cmdsize": 16,
+      "dataoff": 32976,
+      "datasize": 8
+     }
+    },
+    {
+     "index": 15,
+     "kind": "LC_DATA_IN_CODE",
+     "fields": {
+      "cmd": "LC_DATA_IN_CODE",
+      "cmdsize": 16,
+      "dataoff": 32984,
+      "datasize": 0
+     }
+    },
+    {
+     "index": 16,
+     "kind": "LC_CODE_SIGNATURE",
+     "fields": {
+      "cmd": "LC_CODE_SIGNATURE",
+      "cmdsize": 16,
+      "dataoff": 33184,
+      "datasize": 408
+     }
+    }
+   ],
+   "total": 17,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "dependencies": {
+   "items": [
+    {
+     "path": "/usr/lib/dyld",
+     "kind": "LC_LOAD_DYLINKER",
+     "current_version": null,
+     "compatibility_version": null
+    },
+    {
+     "path": "/usr/lib/libSystem.B.dylib",
+     "kind": "LC_LOAD_DYLIB",
+     "current_version": "1356.0.0",
+     "compatibility_version": "1.0.0"
+    }
+   ],
+   "total": 2,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "imports": {
+   "items": [
+    {
+     "name": "_puts",
+     "address": null,
+     "weak": null,
+     "reexport": null,
+     "source": "libSystem"
+    },
+    {
+     "name": "_fixture_weak",
+     "address": null,
+     "weak": null,
+     "reexport": null,
+     "source": "<weak-def-coalesce>"
+    }
+   ],
+   "total": null,
+   "exhaustive": false,
+   "limitations": [
+    "dyld_info textual imports may omit chained or toolchain-unsupported metadata."
+   ]
+  },
+  "exports": {
+   "items": [
+    {
+     "name": "__mh_execute_header",
+     "address": "0x100000000",
+     "weak": null,
+     "reexport": false,
+     "source": null
+    },
+    {
+     "name": "_fixture_absolute",
+     "address": "0x42",
+     "weak": null,
+     "reexport": false,
+     "source": null
+    },
+    {
+     "name": "_fixture_export",
+     "address": "0x100000468",
+     "weak": null,
+     "reexport": false,
+     "source": null
+    },
+    {
+     "name": "_fixture_weak",
+     "address": "0x100000460",
+     "weak": true,
+     "reexport": false,
+     "source": null
+    },
+    {
+     "name": "_main",
+     "address": "0x100000470",
+     "weak": null,
+     "reexport": false,
+     "source": null
+    }
+   ],
+   "total": null,
+   "exhaustive": false,
+   "limitations": [
+    "Merged nm/dyld_info results may be incomplete for stripped binaries."
+   ]
+  },
+  "segments": {
+   "items": [
+    {
+     "name": "__PAGEZERO",
+     "vm_address": "0x0",
+     "vm_size": 4294967296,
+     "file_offset": 0,
+     "file_size": 0,
+     "maximum_permissions": {
+      "read": false,
+      "write": false,
+      "execute": false,
+      "raw": "0"
+     },
+     "initial_permissions": {
+      "read": false,
+      "write": false,
+      "execute": false,
+      "raw": "0"
+     },
+     "sections": {
+      "items": [],
+      "total": 0,
+      "exhaustive": true,
+      "limitations": []
+     }
+    },
+    {
+     "name": "__TEXT",
+     "vm_address": "0x100000000",
+     "vm_size": 16384,
+     "file_offset": 0,
+     "file_size": 16384,
+     "maximum_permissions": {
+      "read": true,
+      "write": false,
+      "execute": true,
+      "raw": "5"
+     },
+     "initial_permissions": {
+      "read": true,
+      "write": false,
+      "execute": true,
+      "raw": "5"
+     },
+     "sections": {
+      "items": [
+       {
+        "segment": "__TEXT",
+        "name": "__text",
+        "address": "0x100000460",
+        "size": 80,
+        "file_offset": 1120,
+        "alignment": 4,
+        "flags": [
+         "2147484672"
+        ]
+       },
+       {
+        "segment": "__TEXT",
+        "name": "__stubs",
+        "address": "0x1000004b0",
+        "size": 24,
+        "file_offset": 1200,
+        "alignment": 4,
+        "flags": [
+         "2147484680"
+        ]
+       },
+       {
+        "segment": "__TEXT",
+        "name": "__cstring",
+        "address": "0x1000004c8",
+        "size": 8,
+        "file_offset": 1224,
+        "alignment": 1,
+        "flags": [
+         "2"
+        ]
+       },
+       {
+        "segment": "__TEXT",
+        "name": "__unwind_info",
+        "address": "0x1000004d0",
+        "size": 96,
+        "file_offset": 1232,
+        "alignment": 4,
+        "flags": [
+         "0"
+        ]
+       }
+      ],
+      "total": 4,
+      "exhaustive": true,
+      "limitations": []
+     }
+    },
+    {
+     "name": "__DATA_CONST",
+     "vm_address": "0x100004000",
+     "vm_size": 16384,
+     "file_offset": 16384,
+     "file_size": 16384,
+     "maximum_permissions": {
+      "read": true,
+      "write": true,
+      "execute": false,
+      "raw": "3"
+     },
+     "initial_permissions": {
+      "read": true,
+      "write": true,
+      "execute": false,
+      "raw": "3"
+     },
+     "sections": {
+      "items": [
+       {
+        "segment": "__DATA_CONST",
+        "name": "__got",
+        "address": "0x100004000",
+        "size": 16,
+        "file_offset": 16384,
+        "alignment": 8,
+        "flags": [
+         "6"
+        ]
+       }
+      ],
+      "total": 1,
+      "exhaustive": true,
+      "limitations": []
+     }
+    },
+    {
+     "name": "__LINKEDIT",
+     "vm_address": "0x100008000",
+     "vm_size": 16384,
+     "file_offset": 32768,
+     "file_size": 824,
+     "maximum_permissions": {
+      "read": true,
+      "write": false,
+      "execute": false,
+      "raw": "1"
+     },
+     "initial_permissions": {
+      "read": true,
+      "write": false,
+      "execute": false,
+      "raw": "1"
+     },
+     "sections": {
+      "items": [],
+      "total": 0,
+      "exhaustive": true,
+      "limitations": []
+     }
+    }
+   ],
+   "total": 4,
+   "exhaustive": true,
+   "limitations": []
+  },
+  "provenance": [
+   {
+    "tool": "file",
+    "command": [
+     "/usr/bin/file",
+     "-b",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 31,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "lipo",
+    "command": [
+     "/usr/bin/lipo",
+     "-detailed_info",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 82,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "otool",
+    "command": [
+     "/usr/bin/otool",
+     "-h",
+     "-l",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 3878,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "nm",
+    "command": [
+     "/usr/bin/nm",
+     "-gjU",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 74,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "dyld_info",
+    "command": [
+     "/usr/bin/dyld_info",
+     "-imports",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 125,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "dyld_info",
+    "command": [
+     "/usr/bin/dyld_info",
+     "-exports",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 254,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "dwarfdump",
+    "command": [
+     "/usr/bin/dwarfdump",
+     "--uuid",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 59,
+    "stderr_bytes": 0
+   },
+   {
+    "tool": "vtool",
+    "command": [
+     "/usr/bin/vtool",
+     "-show-build",
+     "$ARTIFACT"
+    ],
+    "tool_version": null,
+    "version_reason": "fixture",
+    "executable_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exit": {
+     "code": 0,
+     "signal": null
+    },
+    "stdout_bytes": 153,
+    "stderr_bytes": 0
+   }
+  ],
+  "limitations": [
+   "Imports and exports combine dyld_info and nm; stripped or toolchain-hidden symbols may be absent.",
+   "vtool output is retained as provenance but only otool build metadata is normalized."
+  ]
+ },
+ "limitations": [
+  "Imports and exports combine dyld_info and nm; stripped or toolchain-hidden symbols may be absent.",
+  "vtool output is retained as provenance but only otool build metadata is normalized."
+ ],
+ "locations": [
+  {
+   "kind": "file-offset-range",
+   "start": 0,
+   "end": 0
+  },
+  {
+   "kind": "file-offset-range",
+   "start": 0,
+   "end": 16384
+  },
+  {
+   "kind": "file-offset-range",
+   "start": 16384,
+   "end": 32768
+  },
+  {
+   "kind": "file-offset-range",
+   "start": 32768,
+   "end": 33592
+  }
+ ]
+}

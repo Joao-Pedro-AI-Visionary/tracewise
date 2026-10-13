@@ -9,6 +9,7 @@
 use rmcp::model::{CallToolResult, Content};
 use rmcp::ErrorData as McpError;
 use serde_json::{json, Value};
+use tracewise_web::electron_active::ElectronCaptureError;
 use tracewise_web::error::WebError;
 
 use crate::handlers::browser_tool_result;
@@ -46,10 +47,15 @@ pub async fn handle_capture_electron_scenario(
         )
     })?;
     match tracewise_js::capture_electron_scenario_tool(&input).await {
-        Err(error @ (WebError::Input { .. } | WebError::CapabilityUnavailable { .. })) => {
+        Err(ElectronCaptureError::Web(error @ (WebError::Input { .. } | WebError::CapabilityUnavailable { .. }))) => {
             Ok(CallToolResult::error(vec![Content::text(scenario_error_body(&error).to_string())]))
         }
-        outcome => browser_tool_result(session, outcome),
+        // REA `cleanup_incomplete`: the body keeps whatever was collected.
+        Err(ElectronCaptureError::CleanupIncomplete(info)) => {
+            Ok(CallToolResult::error(vec![Content::text(info.body().to_string())]))
+        }
+        Err(ElectronCaptureError::Web(error)) => browser_tool_result(session, Err(error)),
+        Ok(evidence) => browser_tool_result(session, Ok(evidence)),
     }
 }
 

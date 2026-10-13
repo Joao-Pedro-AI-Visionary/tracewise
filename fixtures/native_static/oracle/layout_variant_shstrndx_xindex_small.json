@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"invalid_request\",\"category\":\"invalid_input\",\"message\":\"Analysis input is invalid. Check the arguments and try again.\",\"retryable\":true,\"remediation\":{\"action\":\"Correct the listed arguments and retry.\"},\"details\":{\"operation\":\"inspect_binary_layout\",\"issues\":[{\"path\":[\"path\"],\"reason\":\"invalid_format\",\"message\":\"ELF SHN_XINDEX resolves to ordinary index 0; the escape requires an index at least SHN_LORESERVE (0xff00).\"}],\"captured_output\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false}}}}"
+   }
+  ],
+  "isError": true
+ }
+]

@@ -15,6 +15,7 @@ pub mod capture_diff;
 pub mod cdp_completeness;
 pub mod cdp_connection;
 pub mod cdp_documents;
+pub mod electron_active;
 pub mod electron_file_scope;
 pub mod electron_inspection;
 pub mod electron_scenario;

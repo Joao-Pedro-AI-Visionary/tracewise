@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "ELF contains a file-backed range outside the selected snapshot.",
+ "stderr": ""
+}

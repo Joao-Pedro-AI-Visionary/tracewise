@@ -1,0 +1,365 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"result\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/apple/NoApp.zip\",\"format\":\"zip\",\"kind\":\"archive\",\"sha256\":\"5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2\",\"architecture\":null}}"
+   }
+  ],
+  "structuredContent": {
+   "result": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/apple/NoApp.zip",
+    "format": "zip",
+    "kind": "archive",
+    "sha256": "5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2",
+    "architecture": null
+   }
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_4bb764510d2d0b2063922584b95f40216045383b5d45196d595ddfd92c39b62e\",\"subject\":{\"name\":\"NoApp.zip\",\"digest\":{\"sha256\":\"5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/NoApp.zip\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"inspection_id\":\"ai_6e311d60034aac76c8897e3302174057f28c0484570b72d191f7c313b1b05672\",\"subject\":{\"manifest_id\":\"agm_28201b7f34356ce04973c94f654e80262afd23330421a0cef3f0169fa018f058\",\"root_artifact_id\":\"art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165\",\"root_sha256\":\"5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2\",\"root_format\":\"zip\"},\"substeps\":[{\"substep_id\":\"ais_24cfbb342ee3099d28c065ca0e1b8a06186e17a9ab7faaf5982bed819f71d3a5\",\"operation\":\"inventory_artifact\",\"status\":\"completed\",\"evidence_id\":\"ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a\",\"evidence\":{\"evidence_id\":\"ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a\",\"subject\":{\"name\":\"NoApp.zip\",\"digest\":{\"sha256\":\"5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/NoApp.zip\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inventory_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"manifest\":{\"manifest_id\":\"agm_28201b7f34356ce04973c94f654e80262afd23330421a0cef3f0169fa018f058\",\"root_artifact_id\":\"art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165\",\"root_sha256\":\"5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2\",\"root_format\":\"zip\",\"graph_sha256\":\"c684ae068cd21750a44de31f11476d41f0fab507412e2e04b5a6fa36fc7541bb\",\"node_count\":3,\"occurrence_count\":3,\"edge_count\":2},\"nodes\":[{\"artifact_id\":\"art_07994c69f22a011fe75629dd7ca0bdc37e6da57db3542d0cbac0bef1b6e1ab94\",\"format\":\"file\",\"sha256\":\"76c475039816aeca476d2fc8bf1c450a6c1492b2a43097988bcb3051e1747338\",\"size\":12,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165\",\"format\":\"zip\",\"sha256\":\"5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2\",\"size\":252,\"media_type\":null,\"architecture\":null,\"content_state\":\"materialized\",\"limitations\":[]},{\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"format\":\"mach-o\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"size\":72,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]}],\"occurrences\":[{\"occurrence_id\":\"occ_14960127e4092b7bca1a10976700293d0d436427bae25a25198a976316fa7d40\",\"artifact_id\":\"art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165\",\"parent_occurrence_id\":null,\"logical_path\":\".\",\"entry_kind\":\"file\",\"artifact_kind\":\"container\",\"artifact_format\":\"zip\",\"declared_size\":252,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_eb0b847131c223822fd483a53591fd09928fa64eb713e1015cfe1d45c88bf0e0\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_14960127e4092b7bca1a10976700293d0d436427bae25a25198a976316fa7d40\",\"logical_path\":\"lib.dylib\",\"entry_kind\":\"file\",\"artifact_kind\":\"dynamic-library\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_f9b33736301d38d93c5c80f9a1bacdab35c63ed0e1ccd366ba1aca4fb724501d\",\"artifact_id\":\"art_07994c69f22a011fe75629dd7ca0bdc37e6da57db3542d0cbac0bef1b6e1ab94\",\"parent_occurrence_id\":\"occ_14960127e4092b7bca1a10976700293d0d436427bae25a25198a976316fa7d40\",\"logical_path\":\"readme.txt\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":12,\"compressed_size\":14,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]}],\"edges\":[{\"edge_id\":\"edge_e5366c33e5173c58129bd8e03b147c462a4b49c3652ebf42c4ceb7c9cfe52b93\",\"ordinal\":0,\"parent_artifact_id\":\"art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165\",\"relation\":\"contains\",\"occurrence_id\":\"occ_eb0b847131c223822fd483a53591fd09928fa64eb713e1015cfe1d45c88bf0e0\",\"producer\":null},{\"edge_id\":\"edge_e66c36f76f2812c88fffe4674f333e7b6c9e5bc2cb8aa838e083aa09dc5ec334\",\"ordinal\":1,\"parent_artifact_id\":\"art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165\",\"relation\":\"contains\",\"occurrence_id\":\"occ_f9b33736301d38d93c5c80f9a1bacdab35c63ed0e1ccd366ba1aca4fb724501d\",\"producer\":null}],\"provenance\":[],\"integrity_contradictions\":[],\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[]}}],\"observations\":[{\"observation_id\":\"aio_46bada32930a32a9a4ed0508ea7025627240364107f2f5d15ee82493c823f535\",\"kind\":\"root-manifest\",\"subject\":\"art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165\",\"value\":{\"manifest_id\":\"agm_28201b7f34356ce04973c94f654e80262afd23330421a0cef3f0169fa018f058\",\"root_artifact_id\":\"art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165\",\"root_sha256\":\"5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2\",\"root_format\":\"zip\",\"graph_sha256\":\"c684ae068cd21750a44de31f11476d41f0fab507412e2e04b5a6fa36fc7541bb\",\"node_count\":3,\"occurrence_count\":3,\"edge_count\":2},\"evidence_id\":\"ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a\"}],\"hypotheses\":[],\"contradictions\":[],\"unexplored_branches\":[],\"next_probes\":[],\"coverage\":{\"status\":\"complete-within-substeps\",\"substeps_completed\":1,\"observations_retained\":1,\"observations_omitted\":0,\"hypotheses_retained\":0,\"hypotheses_omitted\":0,\"unexplored_branches_retained\":0,\"unexplored_branches_omitted\":0,\"next_probes_retained\":0,\"next_probes_omitted\":0},\"evidence_links\":[\"ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a\"],\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[\"ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_4bb764510d2d0b2063922584b95f40216045383b5d45196d595ddfd92c39b62e",
+   "subject": {
+    "name": "NoApp.zip",
+    "digest": {
+     "sha256": "5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2"
+    },
+    "format": "zip",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/NoApp.zip"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_artifact",
+   "parameters": {
+    "integrity_policy": "fail"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "inspection_id": "ai_6e311d60034aac76c8897e3302174057f28c0484570b72d191f7c313b1b05672",
+    "subject": {
+     "manifest_id": "agm_28201b7f34356ce04973c94f654e80262afd23330421a0cef3f0169fa018f058",
+     "root_artifact_id": "art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165",
+     "root_sha256": "5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2",
+     "root_format": "zip"
+    },
+    "substeps": [
+     {
+      "substep_id": "ais_24cfbb342ee3099d28c065ca0e1b8a06186e17a9ab7faaf5982bed819f71d3a5",
+      "operation": "inventory_artifact",
+      "status": "completed",
+      "evidence_id": "ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a",
+      "evidence": {
+       "evidence_id": "ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a",
+       "subject": {
+        "name": "NoApp.zip",
+        "digest": {
+         "sha256": "5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2"
+        },
+        "format": "zip",
+        "architecture": null,
+        "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/NoApp.zip"
+       },
+       "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+       },
+       "analysis_profile": null,
+       "predicate_type": "rea.analysis",
+       "operation": "inventory_artifact",
+       "parameters": {
+        "integrity_policy": "fail"
+       },
+       "raw_result": null,
+       "normalized_result": {
+        "manifest": {
+         "manifest_id": "agm_28201b7f34356ce04973c94f654e80262afd23330421a0cef3f0169fa018f058",
+         "root_artifact_id": "art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165",
+         "root_sha256": "5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2",
+         "root_format": "zip",
+         "graph_sha256": "c684ae068cd21750a44de31f11476d41f0fab507412e2e04b5a6fa36fc7541bb",
+         "node_count": 3,
+         "occurrence_count": 3,
+         "edge_count": 2
+        },
+        "nodes": [
+         {
+          "artifact_id": "art_07994c69f22a011fe75629dd7ca0bdc37e6da57db3542d0cbac0bef1b6e1ab94",
+          "format": "file",
+          "sha256": "76c475039816aeca476d2fc8bf1c450a6c1492b2a43097988bcb3051e1747338",
+          "size": 12,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165",
+          "format": "zip",
+          "sha256": "5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2",
+          "size": 252,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "materialized",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "format": "mach-o",
+          "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+          "size": 72,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         }
+        ],
+        "occurrences": [
+         {
+          "occurrence_id": "occ_14960127e4092b7bca1a10976700293d0d436427bae25a25198a976316fa7d40",
+          "artifact_id": "art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165",
+          "parent_occurrence_id": null,
+          "logical_path": ".",
+          "entry_kind": "file",
+          "artifact_kind": "container",
+          "artifact_format": "zip",
+          "declared_size": 252,
+          "compressed_size": null,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_eb0b847131c223822fd483a53591fd09928fa64eb713e1015cfe1d45c88bf0e0",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_14960127e4092b7bca1a10976700293d0d436427bae25a25198a976316fa7d40",
+          "logical_path": "lib.dylib",
+          "entry_kind": "file",
+          "artifact_kind": "dynamic-library",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_f9b33736301d38d93c5c80f9a1bacdab35c63ed0e1ccd366ba1aca4fb724501d",
+          "artifact_id": "art_07994c69f22a011fe75629dd7ca0bdc37e6da57db3542d0cbac0bef1b6e1ab94",
+          "parent_occurrence_id": "occ_14960127e4092b7bca1a10976700293d0d436427bae25a25198a976316fa7d40",
+          "logical_path": "readme.txt",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 12,
+          "compressed_size": 14,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         }
+        ],
+        "edges": [
+         {
+          "edge_id": "edge_e5366c33e5173c58129bd8e03b147c462a4b49c3652ebf42c4ceb7c9cfe52b93",
+          "ordinal": 0,
+          "parent_artifact_id": "art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165",
+          "relation": "contains",
+          "occurrence_id": "occ_eb0b847131c223822fd483a53591fd09928fa64eb713e1015cfe1d45c88bf0e0",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_e66c36f76f2812c88fffe4674f333e7b6c9e5bc2cb8aa838e083aa09dc5ec334",
+          "ordinal": 1,
+          "parent_artifact_id": "art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165",
+          "relation": "contains",
+          "occurrence_id": "occ_f9b33736301d38d93c5c80f9a1bacdab35c63ed0e1ccd366ba1aca4fb724501d",
+          "producer": null
+         }
+        ],
+        "provenance": [],
+        "integrity_contradictions": [],
+        "limitations": [
+         "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+        ]
+       },
+       "confidence": "observed",
+       "authority": "shipped-artifact",
+       "environment": null,
+       "limitations": [
+        "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+       ],
+       "locations": [],
+       "evidence_links": []
+      }
+     }
+    ],
+    "observations": [
+     {
+      "observation_id": "aio_46bada32930a32a9a4ed0508ea7025627240364107f2f5d15ee82493c823f535",
+      "kind": "root-manifest",
+      "subject": "art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165",
+      "value": {
+       "manifest_id": "agm_28201b7f34356ce04973c94f654e80262afd23330421a0cef3f0169fa018f058",
+       "root_artifact_id": "art_81b25eef207c842d06419bd1ebb7801de516ef1fee72feafb3f53eed6bea7165",
+       "root_sha256": "5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2",
+       "root_format": "zip",
+       "graph_sha256": "c684ae068cd21750a44de31f11476d41f0fab507412e2e04b5a6fa36fc7541bb",
+       "node_count": 3,
+       "occurrence_count": 3,
+       "edge_count": 2
+      },
+      "evidence_id": "ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a"
+     }
+    ],
+    "hypotheses": [],
+    "contradictions": [],
+    "unexplored_branches": [],
+    "next_probes": [],
+    "coverage": {
+     "status": "complete-within-substeps",
+     "substeps_completed": 1,
+     "observations_retained": 1,
+     "observations_omitted": 0,
+     "hypotheses_retained": 0,
+     "hypotheses_omitted": 0,
+     "unexplored_branches_retained": 0,
+     "unexplored_branches_omitted": 0,
+     "next_probes_retained": 0,
+     "next_probes_omitted": 0
+    },
+    "evidence_links": [
+     "ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a"
+    ],
+    "limitations": [
+     "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+     "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+    "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_3869e1c0e19132b1ff6c817a541c8abfd6eeed356c3aef922ad24c91ae204f7a"
+   ]
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_b555a9ef59ec29278beda5cb54f25c3ff3f1c28a1d43fa8cffa63c1d393c251e\",\"subject\":{\"name\":\"NoApp.zip\",\"digest\":{\"sha256\":\"5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/NoApp.zip\"},\"provider\":{\"id\":\"rea-apple-application\",\"name\":\"REA Apple application workflows\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.apple-application-graph\",\"operation\":\"project_apple_application_graph\",\"parameters\":{\"inventory_evidence_ids\":[\"ev_4bb764510d2d0b2063922584b95f40216045383b5d45196d595ddfd92c39b62e\"]},\"raw_result\":null,\"normalized_result\":{\"projection_id\":\"aap_49dbdf32e992a4e60cb9d211a75f477b80b5a1e752e4aaf48dcab66f00106fc9\",\"root_sha256\":\"5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2\",\"root_format\":\"zip\",\"platforms\":[],\"source_evidence_ids\":[\"ev_4bb764510d2d0b2063922584b95f40216045383b5d45196d595ddfd92c39b62e\"],\"application_roots\":[],\"bundles\":[],\"components\":{\"bundle_metadata\":[],\"executables\":[],\"frameworks\":[],\"native_libraries\":[],\"javascript\":[],\"signing\":[],\"privileged_helpers\":[],\"launchd_plists\":[],\"helpers\":[]},\"symlinks\":[],\"runtime_families\":[],\"bridge_candidates\":[],\"bridge_candidate_coverage\":{\"status\":\"complete\",\"total_candidates\":0,\"emitted_candidates\":0,\"omitted_candidates\":0},\"coverage\":{\"status\":\"complete-within-inventory\",\"inventory_complete\":true},\"limitations\":[\"No application bundle (Payload/*.app or *.app/Contents) was present in the supplied inventory pages.\",\"2 inventoried entries outside every application root are not attributed to the application.\",\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"No application bundle (Payload/*.app or *.app/Contents) was present in the supplied inventory pages.\",\"2 inventoried entries outside every application root are not attributed to the application.\",\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"],\"locations\":[],\"evidence_links\":[\"ev_4bb764510d2d0b2063922584b95f40216045383b5d45196d595ddfd92c39b62e\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_b555a9ef59ec29278beda5cb54f25c3ff3f1c28a1d43fa8cffa63c1d393c251e",
+   "subject": {
+    "name": "NoApp.zip",
+    "digest": {
+     "sha256": "5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2"
+    },
+    "format": "zip",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/NoApp.zip"
+   },
+   "provider": {
+    "id": "rea-apple-application",
+    "name": "REA Apple application workflows",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.apple-application-graph",
+   "operation": "project_apple_application_graph",
+   "parameters": {
+    "inventory_evidence_ids": [
+     "ev_4bb764510d2d0b2063922584b95f40216045383b5d45196d595ddfd92c39b62e"
+    ]
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "projection_id": "aap_49dbdf32e992a4e60cb9d211a75f477b80b5a1e752e4aaf48dcab66f00106fc9",
+    "root_sha256": "5d58b789b42dec37477b947a804412b95139c32419ac66547a955150298a9eb2",
+    "root_format": "zip",
+    "platforms": [],
+    "source_evidence_ids": [
+     "ev_4bb764510d2d0b2063922584b95f40216045383b5d45196d595ddfd92c39b62e"
+    ],
+    "application_roots": [],
+    "bundles": [],
+    "components": {
+     "bundle_metadata": [],
+     "executables": [],
+     "frameworks": [],
+     "native_libraries": [],
+     "javascript": [],
+     "signing": [],
+     "privileged_helpers": [],
+     "launchd_plists": [],
+     "helpers": []
+    },
+    "symlinks": [],
+    "runtime_families": [],
+    "bridge_candidates": [],
+    "bridge_candidate_coverage": {
+     "status": "complete",
+     "total_candidates": 0,
+     "emitted_candidates": 0,
+     "omitted_candidates": 0
+    },
+    "coverage": {
+     "status": "complete-within-inventory",
+     "inventory_complete": true
+    },
+    "limitations": [
+     "No application bundle (Payload/*.app or *.app/Contents) was present in the supplied inventory pages.",
+     "2 inventoried entries outside every application root are not attributed to the application.",
+     "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+     "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+     "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+     "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+     "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+     "A bridge basis is inferred from the native path and is repeated for every managed component."
+    ]
+   },
+   "confidence": "inferred",
+   "authority": "analyst-inference",
+   "environment": null,
+   "limitations": [
+    "No application bundle (Payload/*.app or *.app/Contents) was present in the supplied inventory pages.",
+    "2 inventoried entries outside every application root are not attributed to the application.",
+    "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+    "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+    "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+    "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+    "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+    "A bridge basis is inferred from the native path and is repeated for every managed component."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_4bb764510d2d0b2063922584b95f40216045383b5d45196d595ddfd92c39b62e"
+   ]
+  }
+ }
+]

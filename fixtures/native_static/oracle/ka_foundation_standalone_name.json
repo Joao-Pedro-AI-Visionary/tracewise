@@ -1,0 +1,254 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_f61aa9a64fba2b395ee9b053c555530cfb6290ebe600f0e31749bee6d63c6348\",\"subject\":{\"name\":\"foundation.plist\",\"digest\":{\"sha256\":\"93c2bf33ad960be6fba6d45c28462c4bda73ff371fe16725d087087f044479ec\"},\"format\":\"plist\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/plain/foundation.plist\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_keyed_archive\",\"parameters\":{\"path\":\"foundation.plist\",\"offset\":0,\"limit\":20000},\"raw_result\":null,\"normalized_result\":{\"target_sha256\":\"93c2bf33ad960be6fba6d45c28462c4bda73ff371fe16725d087087f044479ec\",\"archive_path\":\"foundation.plist\",\"archive_sha256\":\"93c2bf33ad960be6fba6d45c28462c4bda73ff371fe16725d087087f044479ec\",\"archive_format\":\"xml-plist\",\"roots\":{\"root\":{\"CF$UID\":1}},\"objects\":[{\"id\":0,\"kind\":\"nil\",\"class_id\":null,\"class_name\":null,\"status\":\"nil\",\"value\":\"$null\"},{\"id\":1,\"kind\":\"archived-object\",\"class_id\":5,\"class_name\":\"NSArray\",\"status\":\"unknown-class\",\"value\":{\"$class\":{\"CF$UID\":5},\"NS.objects\":[{\"CF$UID\":2},{\"CF$UID\":2}]}},{\"id\":2,\"kind\":\"archived-object\",\"class_id\":4,\"class_name\":\"main.ReaArchiveRecord\",\"status\":\"unknown-class\",\"value\":{\"$class\":{\"CF$UID\":4},\"conditional\":{\"CF$UID\":0},\"cycle\":{\"CF$UID\":2},\"payload\":{\"CF$UID\":3}}},{\"id\":3,\"kind\":\"dictionary\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":{\"$plist_type\":\"data\",\"base64\":\"AAEC/w==\"}},{\"id\":4,\"kind\":\"class-descriptor\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":{\"$classes\":[\"main.ReaArchiveRecord\",\"NSObject\"],\"$classname\":\"main.ReaArchiveRecord\"}},{\"id\":5,\"kind\":\"class-descriptor\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":{\"$classes\":[\"NSArray\",\"NSObject\"],\"$classname\":\"NSArray\"}}],\"references\":[{\"source\":null,\"path\":[\"root\"],\"target\":1,\"status\":\"resolved\",\"raw\":{\"CF$UID\":1}},{\"source\":1,\"path\":[\"$class\"],\"target\":5,\"status\":\"resolved\",\"raw\":{\"CF$UID\":5}},{\"source\":1,\"path\":[\"NS.objects\",0],\"target\":2,\"status\":\"resolved\",\"raw\":{\"CF$UID\":2}},{\"source\":1,\"path\":[\"NS.objects\",1],\"target\":2,\"status\":\"resolved\",\"raw\":{\"CF$UID\":2}},{\"source\":2,\"path\":[\"$class\"],\"target\":4,\"status\":\"resolved\",\"raw\":{\"CF$UID\":4}},{\"source\":2,\"path\":[\"conditional\"],\"target\":0,\"status\":\"nil\",\"raw\":{\"CF$UID\":0}},{\"source\":2,\"path\":[\"cycle\"],\"target\":2,\"status\":\"resolved\",\"raw\":{\"CF$UID\":2}},{\"source\":2,\"path\":[\"payload\"],\"target\":3,\"status\":\"resolved\",\"raw\":{\"CF$UID\":3}}],\"total_objects\":6,\"total_references\":8,\"offset\":0,\"next_offset\":null,\"truncated\":false,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"foundation.plist\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_f61aa9a64fba2b395ee9b053c555530cfb6290ebe600f0e31749bee6d63c6348",
+   "subject": {
+    "name": "foundation.plist",
+    "digest": {
+     "sha256": "93c2bf33ad960be6fba6d45c28462c4bda73ff371fe16725d087087f044479ec"
+    },
+    "format": "plist",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/plain/foundation.plist"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_keyed_archive",
+   "parameters": {
+    "path": "foundation.plist",
+    "offset": 0,
+    "limit": 20000
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "target_sha256": "93c2bf33ad960be6fba6d45c28462c4bda73ff371fe16725d087087f044479ec",
+    "archive_path": "foundation.plist",
+    "archive_sha256": "93c2bf33ad960be6fba6d45c28462c4bda73ff371fe16725d087087f044479ec",
+    "archive_format": "xml-plist",
+    "roots": {
+     "root": {
+      "CF$UID": 1
+     }
+    },
+    "objects": [
+     {
+      "id": 0,
+      "kind": "nil",
+      "class_id": null,
+      "class_name": null,
+      "status": "nil",
+      "value": "$null"
+     },
+     {
+      "id": 1,
+      "kind": "archived-object",
+      "class_id": 5,
+      "class_name": "NSArray",
+      "status": "unknown-class",
+      "value": {
+       "$class": {
+        "CF$UID": 5
+       },
+       "NS.objects": [
+        {
+         "CF$UID": 2
+        },
+        {
+         "CF$UID": 2
+        }
+       ]
+      }
+     },
+     {
+      "id": 2,
+      "kind": "archived-object",
+      "class_id": 4,
+      "class_name": "main.ReaArchiveRecord",
+      "status": "unknown-class",
+      "value": {
+       "$class": {
+        "CF$UID": 4
+       },
+       "conditional": {
+        "CF$UID": 0
+       },
+       "cycle": {
+        "CF$UID": 2
+       },
+       "payload": {
+        "CF$UID": 3
+       }
+      }
+     },
+     {
+      "id": 3,
+      "kind": "dictionary",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": {
+       "$plist_type": "data",
+       "base64": "AAEC/w=="
+      }
+     },
+     {
+      "id": 4,
+      "kind": "class-descriptor",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": {
+       "$classes": [
+        "main.ReaArchiveRecord",
+        "NSObject"
+       ],
+       "$classname": "main.ReaArchiveRecord"
+      }
+     },
+     {
+      "id": 5,
+      "kind": "class-descriptor",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": {
+       "$classes": [
+        "NSArray",
+        "NSObject"
+       ],
+       "$classname": "NSArray"
+      }
+     }
+    ],
+    "references": [
+     {
+      "source": null,
+      "path": [
+       "root"
+      ],
+      "target": 1,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 1
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "$class"
+      ],
+      "target": 5,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 5
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "NS.objects",
+       0
+      ],
+      "target": 2,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 2
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "NS.objects",
+       1
+      ],
+      "target": 2,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 2
+      }
+     },
+     {
+      "source": 2,
+      "path": [
+       "$class"
+      ],
+      "target": 4,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 4
+      }
+     },
+     {
+      "source": 2,
+      "path": [
+       "conditional"
+      ],
+      "target": 0,
+      "status": "nil",
+      "raw": {
+       "CF$UID": 0
+      }
+     },
+     {
+      "source": 2,
+      "path": [
+       "cycle"
+      ],
+      "target": 2,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 2
+      }
+     },
+     {
+      "source": 2,
+      "path": [
+       "payload"
+      ],
+      "target": 3,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 3
+      }
+     }
+    ],
+    "total_objects": 6,
+    "total_references": 8,
+    "offset": 0,
+    "next_offset": null,
+    "truncated": false,
+    "limitations": [
+     "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+     "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+     "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+    "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+    "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "foundation.plist"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

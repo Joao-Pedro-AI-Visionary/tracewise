@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "ELF relocation section 10 entry 0 references missing symbol 9999 in table 6.",
+ "stderr": "Could not populate GOT: seek out of range\n"
+}

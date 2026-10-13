@@ -1,0 +1,169 @@
+[
+ {
+  "name": "open_binary",
+  "arguments": {
+   "path": "/tmp/tracewise-ida-parity/sample_elf"
+  }
+ },
+ {
+  "name": "inspect_native_data_type",
+  "arguments": {
+   "type": "/MyStruct"
+  }
+ },
+ {
+  "name": "inspect_native_data_type",
+  "arguments": {
+   "address": "0x404028"
+  }
+ },
+ {
+  "name": "resolve_native_call_targets",
+  "arguments": {
+   "address": "0x40117e"
+  }
+ },
+ {
+  "name": "inline_comment",
+  "arguments": {
+   "address": "0x401146"
+  }
+ },
+ {
+  "name": "next_address",
+  "arguments": {
+   "address": "0x401146"
+  }
+ },
+ {
+  "name": "prev_address",
+  "arguments": {
+   "address": "0x401146"
+  }
+ },
+ {
+  "name": "trace_native_values",
+  "arguments": {
+   "procedure": "engine_branch"
+  }
+ },
+ {
+  "name": "get_objc_classes",
+  "arguments": {}
+ },
+ {
+  "name": "get_objc_protocols",
+  "arguments": {}
+ },
+ {
+  "name": "analyze_swift_types",
+  "arguments": {}
+ },
+ {
+  "name": "current_address",
+  "arguments": {}
+ },
+ {
+  "name": "current_procedure",
+  "arguments": {}
+ },
+ {
+  "name": "goto_address",
+  "arguments": {
+   "address": "0x401146"
+  }
+ },
+ {
+  "name": "list_bookmarks",
+  "arguments": {}
+ },
+ {
+  "name": "set_addresses_names",
+  "arguments": {
+   "names": {
+    "0x401146": "renamed_leaf"
+   }
+  }
+ },
+ {
+  "name": "set_bookmark",
+  "arguments": {
+   "address": "0x401146",
+   "name": "mark"
+  }
+ },
+ {
+  "name": "set_comment",
+  "arguments": {
+   "address": "0x401146",
+   "comment": "note"
+  }
+ },
+ {
+  "name": "set_inline_comment",
+  "arguments": {
+   "address": "0x401146",
+   "comment": "note"
+  }
+ },
+ {
+  "name": "unset_bookmark",
+  "arguments": {
+   "address": "0x401146"
+  }
+ },
+ {
+  "name": "address_name",
+  "arguments": {
+   "address": "0x401146"
+  }
+ },
+ {
+  "name": "list_names",
+  "arguments": {
+   "address": "0x401146"
+  }
+ },
+ {
+  "name": "read_bytes",
+  "arguments": {
+   "address": "0x401146",
+   "length": 8
+  }
+ },
+ {
+  "name": "inspect_native_instruction",
+  "arguments": {
+   "address": "0x401146"
+  }
+ },
+ {
+  "name": "inspect_native_load_image",
+  "arguments": {}
+ },
+ {
+  "name": "annotate_native_function",
+  "arguments": {
+   "procedure": "engine_leaf",
+   "name": "renamed"
+  }
+ },
+ {
+  "name": "procedure_info",
+  "arguments": {
+   "procedure": "engine_leaf"
+  }
+ },
+ {
+  "name": "procedure_references",
+  "arguments": {
+   "procedure": "engine_leaf"
+  }
+ },
+ {
+  "name": "resolve_containing_procedure",
+  "arguments": {
+   "address": "0x401150"
+  }
+ }
+]

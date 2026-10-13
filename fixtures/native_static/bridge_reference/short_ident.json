@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "Selected ELF identification is truncated.",
+ "stderr": ""
+}

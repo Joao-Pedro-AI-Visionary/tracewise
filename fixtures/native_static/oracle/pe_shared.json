@@ -1,0 +1,220 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_d5a9423c64b2022654b6d0724850d40cc166167b01002f999317e75f2af15233\",\"subject\":{\"name\":\"shared.exe\",\"digest\":{\"sha256\":\"88bcf10ba9dfa1f10443d1dd0dc855ddb51db8a21686fe8c92939d99b4fa3b35\"},\"format\":\"pe\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/pe/shared.exe\"},\"provider\":{\"id\":\"rea-pe-resources\",\"name\":\"REA PE resource parser\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_pe_resources\",\"parameters\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/pe/shared.exe\",\"max_file_bytes\":67108864,\"max_entries\":4096},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/pe/shared.exe\",\"sha256\":\"88bcf10ba9dfa1f10443d1dd0dc855ddb51db8a21686fe8c92939d99b4fa3b35\",\"bytes\":1536},\"format\":\"pe32\",\"machine\":332,\"directory\":{\"rva\":8192,\"location\":{\"offset\":1024,\"bytes\":144},\"data_directory_location\":{\"offset\":264,\"bytes\":8}},\"directories\":[{\"location\":{\"offset\":1024,\"bytes\":24},\"characteristics\":0,\"timestamp\":0,\"major_version\":0,\"minor_version\":0,\"named_entries\":0,\"id_entries\":1},{\"location\":{\"offset\":1048,\"bytes\":32},\"characteristics\":0,\"timestamp\":0,\"major_version\":0,\"minor_version\":0,\"named_entries\":0,\"id_entries\":2},{\"location\":{\"offset\":1080,\"bytes\":24},\"characteristics\":0,\"timestamp\":0,\"major_version\":0,\"minor_version\":0,\"named_entries\":0,\"id_entries\":1},{\"location\":{\"offset\":1120,\"bytes\":24},\"characteristics\":0,\"timestamp\":0,\"major_version\":0,\"minor_version\":0,\"named_entries\":0,\"id_entries\":1}],\"resources\":[{\"index\":0,\"type\":{\"kind\":\"id\",\"id\":3},\"name\":{\"kind\":\"id\",\"id\":1},\"language\":{\"kind\":\"id\",\"id\":1033},\"entry_locations\":[{\"offset\":1040,\"bytes\":8},{\"offset\":1064,\"bytes\":8},{\"offset\":1096,\"bytes\":8}],\"data_entry_location\":{\"offset\":1104,\"bytes\":16},\"code_page\":65001,\"reserved\":0,\"payload\":{\"rva\":8328,\"location\":{\"offset\":1160,\"bytes\":4},\"sha256\":\"d1ed0d26ea9bd962c0f13e5ffe5bfea928bb8c9ca808dbcaa565e02a3ae1e1db\"}},{\"index\":1,\"type\":{\"kind\":\"id\",\"id\":3},\"name\":{\"kind\":\"id\",\"id\":2},\"language\":{\"kind\":\"id\",\"id\":1033},\"entry_locations\":[{\"offset\":1040,\"bytes\":8},{\"offset\":1072,\"bytes\":8},{\"offset\":1136,\"bytes\":8}],\"data_entry_location\":{\"offset\":1144,\"bytes\":16},\"code_page\":65001,\"reserved\":0,\"payload\":{\"rva\":8328,\"location\":{\"offset\":1160,\"bytes\":4},\"sha256\":\"d1ed0d26ea9bd962c0f13e5ffe5bfea928bb8c9ca808dbcaa565e02a3ae1e1db\"}}],\"icon_groups\":[],\"coverage\":{\"status\":\"complete\",\"examined_entries\":5,\"resources\":2},\"limitations\":[\"Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.\",\"Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.\",\"Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.\",\"Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.\",\"Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/pe/shared.exe\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_d5a9423c64b2022654b6d0724850d40cc166167b01002f999317e75f2af15233",
+   "subject": {
+    "name": "shared.exe",
+    "digest": {
+     "sha256": "88bcf10ba9dfa1f10443d1dd0dc855ddb51db8a21686fe8c92939d99b4fa3b35"
+    },
+    "format": "pe",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/pe/shared.exe"
+   },
+   "provider": {
+    "id": "rea-pe-resources",
+    "name": "REA PE resource parser",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_pe_resources",
+   "parameters": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/pe/shared.exe",
+    "max_file_bytes": 67108864,
+    "max_entries": 4096
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "artifact": {
+     "path": "/workspace/wt/native_static/fixtures/native_static/pe/shared.exe",
+     "sha256": "88bcf10ba9dfa1f10443d1dd0dc855ddb51db8a21686fe8c92939d99b4fa3b35",
+     "bytes": 1536
+    },
+    "format": "pe32",
+    "machine": 332,
+    "directory": {
+     "rva": 8192,
+     "location": {
+      "offset": 1024,
+      "bytes": 144
+     },
+     "data_directory_location": {
+      "offset": 264,
+      "bytes": 8
+     }
+    },
+    "directories": [
+     {
+      "location": {
+       "offset": 1024,
+       "bytes": 24
+      },
+      "characteristics": 0,
+      "timestamp": 0,
+      "major_version": 0,
+      "minor_version": 0,
+      "named_entries": 0,
+      "id_entries": 1
+     },
+     {
+      "location": {
+       "offset": 1048,
+       "bytes": 32
+      },
+      "characteristics": 0,
+      "timestamp": 0,
+      "major_version": 0,
+      "minor_version": 0,
+      "named_entries": 0,
+      "id_entries": 2
+     },
+     {
+      "location": {
+       "offset": 1080,
+       "bytes": 24
+      },
+      "characteristics": 0,
+      "timestamp": 0,
+      "major_version": 0,
+      "minor_version": 0,
+      "named_entries": 0,
+      "id_entries": 1
+     },
+     {
+      "location": {
+       "offset": 1120,
+       "bytes": 24
+      },
+      "characteristics": 0,
+      "timestamp": 0,
+      "major_version": 0,
+      "minor_version": 0,
+      "named_entries": 0,
+      "id_entries": 1
+     }
+    ],
+    "resources": [
+     {
+      "index": 0,
+      "type": {
+       "kind": "id",
+       "id": 3
+      },
+      "name": {
+       "kind": "id",
+       "id": 1
+      },
+      "language": {
+       "kind": "id",
+       "id": 1033
+      },
+      "entry_locations": [
+       {
+        "offset": 1040,
+        "bytes": 8
+       },
+       {
+        "offset": 1064,
+        "bytes": 8
+       },
+       {
+        "offset": 1096,
+        "bytes": 8
+       }
+      ],
+      "data_entry_location": {
+       "offset": 1104,
+       "bytes": 16
+      },
+      "code_page": 65001,
+      "reserved": 0,
+      "payload": {
+       "rva": 8328,
+       "location": {
+        "offset": 1160,
+        "bytes": 4
+       },
+       "sha256": "d1ed0d26ea9bd962c0f13e5ffe5bfea928bb8c9ca808dbcaa565e02a3ae1e1db"
+      }
+     },
+     {
+      "index": 1,
+      "type": {
+       "kind": "id",
+       "id": 3
+      },
+      "name": {
+       "kind": "id",
+       "id": 2
+      },
+      "language": {
+       "kind": "id",
+       "id": 1033
+      },
+      "entry_locations": [
+       {
+        "offset": 1040,
+        "bytes": 8
+       },
+       {
+        "offset": 1072,
+        "bytes": 8
+       },
+       {
+        "offset": 1136,
+        "bytes": 8
+       }
+      ],
+      "data_entry_location": {
+       "offset": 1144,
+       "bytes": 16
+      },
+      "code_page": 65001,
+      "reserved": 0,
+      "payload": {
+       "rva": 8328,
+       "location": {
+        "offset": 1160,
+        "bytes": 4
+       },
+       "sha256": "d1ed0d26ea9bd962c0f13e5ffe5bfea928bb8c9ca808dbcaa565e02a3ae1e1db"
+      }
+     }
+    ],
+    "icon_groups": [],
+    "coverage": {
+     "status": "complete",
+     "examined_entries": 5,
+     "resources": 2
+    },
+    "limitations": [
+     "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+     "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+     "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Static PE32/PE32+ type/name/language resource inventory; payloads other than RT_GROUP_ICON remain opaque.",
+    "Icon candidates are resource-table relationships. Language fallback, image decoding and actual shell/window loading are not observed.",
+    "Exact shared byte ranges are retained; non-identical overlapping resource structures or payloads are rejected."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "/workspace/wt/native_static/fixtures/native_static/pe/shared.exe"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

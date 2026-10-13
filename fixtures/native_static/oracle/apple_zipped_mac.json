@@ -1,0 +1,2135 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"result\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Zipped.zip\",\"format\":\"zip\",\"kind\":\"archive\",\"sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\",\"architecture\":null}}"
+   }
+  ],
+  "structuredContent": {
+   "result": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/apple/Zipped.zip",
+    "format": "zip",
+    "kind": "archive",
+    "sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8",
+    "architecture": null
+   }
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_51bf792b542ccf32a3653a5f78a2569f4c74368d181abe0ec301a5b391a012a9\",\"subject\":{\"name\":\"Zipped.zip\",\"digest\":{\"sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Zipped.zip\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"inspection_id\":\"ai_5f5c8fe0a06f1355b20ddd4d84c71628b35e401c8a51bdbdae4e0c003f203b99\",\"subject\":{\"manifest_id\":\"agm_70ea6185df468879196976914e3a80eb6edb4907cede9eec4da94b392affd42b\",\"root_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"root_sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\",\"root_format\":\"zip\"},\"substeps\":[{\"substep_id\":\"ais_2a15a1f4d39f1432a1e75afcad9904aef8953b0468c43de2affbc96346e68e86\",\"operation\":\"inventory_artifact\",\"status\":\"completed\",\"evidence_id\":\"ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5\",\"evidence\":{\"evidence_id\":\"ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5\",\"subject\":{\"name\":\"Zipped.zip\",\"digest\":{\"sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Zipped.zip\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inventory_artifact\",\"parameters\":{\"integrity_policy\":\"fail\"},\"raw_result\":null,\"normalized_result\":{\"manifest\":{\"manifest_id\":\"agm_70ea6185df468879196976914e3a80eb6edb4907cede9eec4da94b392affd42b\",\"root_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"root_sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\",\"root_format\":\"zip\",\"graph_sha256\":\"c56458d1f4474fa9b337dfea1a29ec94730e0cda985192a1aea297fbb4ae052a\",\"node_count\":10,\"occurrence_count\":46,\"edge_count\":45},\"nodes\":[{\"artifact_id\":\"art_1e26a54dff3cac8937b451c8def50be8d70466ae8f116ec0e2fd3acba9db3717\",\"format\":\"file\",\"sha256\":\"21233dfd48586ed8c1daf90cd6496bcc8c8ae1bd10cf2a912460c50f840fec0b\",\"size\":112,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"format\":\"file\",\"sha256\":\"53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d\",\"size\":232,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_65a242b7817305b4793921d925e0d5a46b4ce7209472fc9c044e26e023fbcb00\",\"format\":\"file\",\"sha256\":\"2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881\",\"size\":1,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69\",\"format\":\"file\",\"sha256\":\"26af2039e3563c710de3d6585af9e7b430427ee7767b88b5723bf276186e0043\",\"size\":4,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9\",\"format\":\"file\",\"sha256\":\"1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0\",\"size\":7,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"format\":\"zip\",\"sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\",\"size\":10061,\"media_type\":null,\"architecture\":null,\"content_state\":\"materialized\",\"limitations\":[]},{\"artifact_id\":\"art_d2932e7f03a8bb3b4cb0fa2f398b264690827eb4e2dd537cb1c0016dbad2578f\",\"format\":\"file\",\"sha256\":\"ae4b3280e56e2faf83f414a6e3dabe9d5fbe18976544c05fed121accb85b53fc\",\"size\":3,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"format\":\"file\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"size\":57,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"format\":\"mach-o\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"size\":72,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]},{\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"format\":\"mach-o\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"size\":72,\"media_type\":null,\"architecture\":null,\"content_state\":\"embedded\",\"limitations\":[]}],\"occurrences\":[{\"occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"parent_occurrence_id\":null,\"logical_path\":\".\",\"entry_kind\":\"file\",\"artifact_kind\":\"container\",\"artifact_format\":\"zip\",\"declared_size\":10061,\"compressed_size\":null,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_602b947e47054fc9e7affd7c58e28ff65412535f02de7c238440bbdfe30526d5\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/Flutter.framework/Flutter\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_1d657c444edf35d37b91b3f2e926c3deff063b85aad326c3bd94254b61f49dcb\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Kit\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_f784728ef89856e247afc70fe00bcee64f3ffaf1b152bdee9baa4513d9cb5a30\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_14b493cae1b15a496893240b748e1b03b747d2006fac52fd717f7a0ec9185dc3\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"framework\",\"artifact_format\":\"file\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_eae038a19f2de0358ad3d6306a2ce5317abce42502fc6aec121cb18c4a02e89b\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/_CodeSignature/CodeResources\",\"entry_kind\":\"file\",\"artifact_kind\":\"framework\",\"artifact_format\":\"file\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_b199aefca5b6508df94c8732d22a000a6a8edab52ddc513870a562d55b92857d\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/React.framework/React\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_c230fbdfc6797c962fd5196f4b59cdcfc8bdf5d0acca0870cae2fd6aadfc082a\",\"artifact_id\":\"art_65a242b7817305b4793921d925e0d5a46b4ce7209472fc9c044e26e023fbcb00\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/.DS_Store\",\"entry_kind\":\"file\",\"artifact_kind\":\"framework\",\"artifact_format\":\"file\",\"declared_size\":1,\"compressed_size\":3,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_f9569088eeb806abfc06ed20fd6864ae86e249c57c34067f7546e17ad07efb9e\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_83a6720ce7f4023d8675b8a8ee5b9091a1209d2fadb8abc2108fe2a1c25e7496\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Resources/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"framework\",\"artifact_format\":\"file\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_894721014429ea9975880aa043563cc615c0da5e70085fac9b2c2995bcf96a49\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_10db38aa6e2c951a27a4291282017a1cb7663b5c327a1e8a59107fbdb6da399f\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_cb91b3b1072a7d220f7d79a2593382ddc5240c14bc8340fca300f650661585ea\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/hermes.framework/hermes\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_e91c9c7a09817e5726d442417e96f34ddf2a15a076b34b3e46468cc805c2c78f\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Frameworks/libswiftCore.dylib\",\"entry_kind\":\"file\",\"artifact_kind\":\"dynamic-library\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_df59393c47d56605e8390da2cc96ef1992981128e8833f2f5d410aebc157469c\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Helpers/Helper.app/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_fe98c3f528fee5a1ff4f14283b5f86a39a74d2f7d5d92f171750e8f3bff5857d\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Helpers/Helper.app/Contents/MacOS/Helper\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_ca770d248f59ad21538d30ae55f7657832b2563da25a674b678bef5d71e34460\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Helpers/tool\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_4dee22861caec9040759ed9621b16f7c87c5912393504a5ef7e6552dfa99fbce\",\"artifact_id\":\"art_1e26a54dff3cac8937b451c8def50be8d70466ae8f116ec0e2fd3acba9db3717\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":112,\"compressed_size\":87,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_7e07adff476ab477c4dd2a4990f18e73e0864bd289c10ae0d2655e6306c83428\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Library/LaunchAgents/com.example.agent.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_f91b99ff97290f2d61fcf7d3078fa3102400acb629dde6e69eb2b8301c0f84d0\",\"artifact_id\":\"art_65a242b7817305b4793921d925e0d5a46b4ce7209472fc9c044e26e023fbcb00\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Library/LaunchAgents/notes.txt\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":1,\"compressed_size\":3,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_236f7569d0a20e0f1c00f0ff5f24a2bc7bc927fb17e9358b97fd3ae2a40707ee\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Library/LaunchDaemons/com.example.helper.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_99708d3e54de30a6077e33301949f1eed49960a48ed11eba519c05c64214dfc0\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Library/LaunchServices/com.example.helper\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_d100d4f0c839de5e3d35de69c0eea3f21094295da69bce4f346fe89e44dcf37c\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Library/LoginItems/Login.app/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_fd4ece463bd40a4f1482881cec6ac3b23b2a883e9b313a116a7f69cdf68f6d42\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Library/LoginItems/Login.app/Contents/MacOS/Login\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_3da844da2fb13999a87873b4285b67f037bfa08b403a96dcf879033965c3c659\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Library/SystemExtensions/Drv.dext/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_7cde845cacec9e3095a6f2eab354d15322fc1cea2010176ceec3bd728de17e7e\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_65fa854671ea7d4f5d4e7d9bd2e6b2e08c4f95ceeba58de047fc207606825e56\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/MacOS/Net\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_01d4971f8466557928e5869137c878141abffb17590ae4f1c19ae2e4fe214e77\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/MacOS/Mac\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_3d7ebbe9eb08ae3e9bd7cc553d1bca30d883a21e88adb0c994c84007c4d8f6bf\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/MacOS/libfoo.so\",\"entry_kind\":\"file\",\"artifact_kind\":\"dynamic-library\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_acda6dc4a02660eb19c39dcc2a367aa8cac7d7f42f1b534ea91b1fbcb98e3644\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Nested/Other.app/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_0ac381fd1bb2c81dfb1ef2097cfb894f68c36945930ba14bd5674e036d345529\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Nested/Other.app/Contents/MacOS/Other\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_9e3c4bf0b410c8cb8dfc77bf8efe1d7287e4dbe501f8ab1a0a8d58bfec993a66\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/PlugIns/Gen.qlgenerator/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_12f195ad65dfbeb9e104dd7e1bf381ccb8346ad35e7b93d87c3986066ebdc0b8\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/PlugIns/Imp.mdimporter/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_30e58cc9eafbbb72cc892f28a0232ecaca31a8774f70a76dc379de74daa87ced\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/PlugIns/Share.appex/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_e5243a0aa872672ec8a4ca826e923dbdeb090e1a9b15eba4b3a901c6f8219146\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/PlugIns/Share.appex/Contents/MacOS/Share\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_ea6d8dcc5249259363299a70576cea141c572483e858d446901162e18db1ca0a\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/PlugIns/Y.bundle/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_822f51d13932e6fd1654f87b81f4f43430bd5552c4c330730388a97e6c00a134\",\"artifact_id\":\"art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Resources/._data.bin\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":4,\"compressed_size\":6,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_fcd14364f4d73a228460597370be4ba771e7757f36171d4fcac6a4e63dcfb2ca\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Resources/Z.bundle/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_0900bbbb98820345034e9516f7a0e0c7f976453247bd85f6a3ec5f10d1a2f771\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Resources/Z.bundle/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_8dc47bc6a1a3ab0b9dafe0fcae7f24f753beaff7d1e8a4f032a2b06ce4354cb7\",\"artifact_id\":\"art_d2932e7f03a8bb3b4cb0fa2f398b264690827eb4e2dd537cb1c0016dbad2578f\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Resources/data.bin\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":3,\"compressed_size\":5,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_f044c93ca4f08a5437cad9be500485b74dbdfbd6d7654f82bfe1fec4888eaf7c\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Resources/main.jsbundle\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":232,\"compressed_size\":63,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_2faf0f31bcc29720b228428cedfad0c4498547db836c847201c2293ef0be6bf0\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/Resources/plain.js\",\"entry_kind\":\"file\",\"artifact_kind\":\"javascript\",\"artifact_format\":\"javascript-bundle\",\"declared_size\":232,\"compressed_size\":63,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_53821f5f6f9cb8ee8d94efded68e4185ba383de453c16b8b9b68d2ae8e243b0c\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/XPCServices/Svc.xpc/Contents/Info.plist\",\"entry_kind\":\"file\",\"artifact_kind\":\"plist\",\"artifact_format\":\"plist\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_a7090bcde4b9dbfc1c7cdefc7e29cc6f6329078011fbeefdfdf8d52d1b760f26\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/XPCServices/Svc.xpc/Contents/MacOS/Svc\",\"entry_kind\":\"file\",\"artifact_kind\":\"executable\",\"artifact_format\":\"mach-o\",\"declared_size\":72,\"compressed_size\":26,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_c04c38909319fff074229b839b1c0b23a3eccc100b3dc8a1ab12017b602db432\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/_CodeSignature/CodeResources\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":57,\"compressed_size\":44,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]},{\"occurrence_id\":\"occ_89a8d6b69c6b87bc18b41fb727016541a8be59d9b4b038eec7c8f2804bfc3c86\",\"artifact_id\":\"art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9\",\"parent_occurrence_id\":\"occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9\",\"logical_path\":\"Zipped.app/Contents/embedded.provisionprofile\",\"entry_kind\":\"file\",\"artifact_kind\":\"resource\",\"artifact_format\":\"file\",\"declared_size\":7,\"compressed_size\":9,\"executable\":false,\"encrypted\":false,\"hash_status\":\"verified\",\"source_location\":null,\"limitations\":[]}],\"edges\":[{\"edge_id\":\"edge_00a401c0d5141771f57c3e9809d0d2ed88460cd4703b4ff5fcf5346807e39233\",\"ordinal\":0,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_c230fbdfc6797c962fd5196f4b59cdcfc8bdf5d0acca0870cae2fd6aadfc082a\",\"producer\":null},{\"edge_id\":\"edge_0b2cbb0ed7bea86d9334f6d20574b1374b7c3f0eadef3da38fbd089c9df74ec5\",\"ordinal\":1,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_f91b99ff97290f2d61fcf7d3078fa3102400acb629dde6e69eb2b8301c0f84d0\",\"producer\":null},{\"edge_id\":\"edge_100b11732ae9e032064900348231e71dc5a86cc192105a2c96572d229a678d24\",\"ordinal\":2,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_602b947e47054fc9e7affd7c58e28ff65412535f02de7c238440bbdfe30526d5\",\"producer\":null},{\"edge_id\":\"edge_19bda1e8677359630be63b8760503df352ce063ce4b0fd4b378ccc38da6f68fe\",\"ordinal\":3,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_fd4ece463bd40a4f1482881cec6ac3b23b2a883e9b313a116a7f69cdf68f6d42\",\"producer\":null},{\"edge_id\":\"edge_1bc41f01ec372b1b41e44f0d7e361667daf7aad9238f887880f684bdb6bc46cf\",\"ordinal\":4,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_ca770d248f59ad21538d30ae55f7657832b2563da25a674b678bef5d71e34460\",\"producer\":null},{\"edge_id\":\"edge_2b1a2130ffafd3658dfdea4396b8d3636d003f6d28b093dbec02c33468ffd261\",\"ordinal\":5,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_01d4971f8466557928e5869137c878141abffb17590ae4f1c19ae2e4fe214e77\",\"producer\":null},{\"edge_id\":\"edge_37c4c594a551e4fb885b0435e71202f563d8cb0d2139b2719f6ea911c39790c8\",\"ordinal\":6,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_894721014429ea9975880aa043563cc615c0da5e70085fac9b2c2995bcf96a49\",\"producer\":null},{\"edge_id\":\"edge_382481ea8ee8044ef0593ab563fc584fd44b3033541cfa234a5d3e3976becfaa\",\"ordinal\":7,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_9e3c4bf0b410c8cb8dfc77bf8efe1d7287e4dbe501f8ab1a0a8d58bfec993a66\",\"producer\":null},{\"edge_id\":\"edge_3b88b4ea6b304fe7491fcbbefa066f9fe9d5164c9d234680396a802219ade95f\",\"ordinal\":8,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_236f7569d0a20e0f1c00f0ff5f24a2bc7bc927fb17e9358b97fd3ae2a40707ee\",\"producer\":null},{\"edge_id\":\"edge_40a304483c414a9ef3e44931aaea01177899265b0313dfdddf59d779ae9ab6e7\",\"ordinal\":9,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_83a6720ce7f4023d8675b8a8ee5b9091a1209d2fadb8abc2108fe2a1c25e7496\",\"producer\":null},{\"edge_id\":\"edge_4171a285ef529dcd87f7b270d1eb4556dba80e1a7663aa3cdcc32a803e63efa9\",\"ordinal\":10,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_65fa854671ea7d4f5d4e7d9bd2e6b2e08c4f95ceeba58de047fc207606825e56\",\"producer\":null},{\"edge_id\":\"edge_4e601aa284a4ea57cff9deaffcb3dcd09759fa3ec2e4ec84a1301a5953ea3dc9\",\"ordinal\":11,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_12f195ad65dfbeb9e104dd7e1bf381ccb8346ad35e7b93d87c3986066ebdc0b8\",\"producer\":null},{\"edge_id\":\"edge_51e3a07aa2ebe5b571f0dd980223007f4c28964472666f7ee4afdf6519273c34\",\"ordinal\":12,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_7e07adff476ab477c4dd2a4990f18e73e0864bd289c10ae0d2655e6306c83428\",\"producer\":null},{\"edge_id\":\"edge_54211b18f2b71d60f9371b0179453a3407919982aae7e71b8f830d364e7a0f61\",\"ordinal\":13,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_f9569088eeb806abfc06ed20fd6864ae86e249c57c34067f7546e17ad07efb9e\",\"producer\":null},{\"edge_id\":\"edge_61446de92d99cd27b7d44f195c2e8ae124a1a0fdbdd6ebc1c766bdeba289be2e\",\"ordinal\":14,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_a7090bcde4b9dbfc1c7cdefc7e29cc6f6329078011fbeefdfdf8d52d1b760f26\",\"producer\":null},{\"edge_id\":\"edge_6558b4b9e45efb9e33cd76b8c6f9b2092269e227c67dbc434d9d83bb503171ee\",\"ordinal\":15,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_7cde845cacec9e3095a6f2eab354d15322fc1cea2010176ceec3bd728de17e7e\",\"producer\":null},{\"edge_id\":\"edge_661cb5c0085687aaef20f09450bb257837305b39ed05d69319bed49fe9d54999\",\"ordinal\":16,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_e5243a0aa872672ec8a4ca826e923dbdeb090e1a9b15eba4b3a901c6f8219146\",\"producer\":null},{\"edge_id\":\"edge_6a46ac55fbe48e6545d9ae7ce09c38016d637aae7d19a4de92bb89c78dc0187b\",\"ordinal\":17,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_0900bbbb98820345034e9516f7a0e0c7f976453247bd85f6a3ec5f10d1a2f771\",\"producer\":null},{\"edge_id\":\"edge_6a923a9be6e58a213cd3c6fdb4d68b143d2d3442c0f40de7bea90618e76e6584\",\"ordinal\":18,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_df59393c47d56605e8390da2cc96ef1992981128e8833f2f5d410aebc157469c\",\"producer\":null},{\"edge_id\":\"edge_71970159923238501f0ccea2558cde2441925b2d2ea8843c9797d2b9b42a16fb\",\"ordinal\":19,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_d100d4f0c839de5e3d35de69c0eea3f21094295da69bce4f346fe89e44dcf37c\",\"producer\":null},{\"edge_id\":\"edge_76d21e7b44272a5f6002d230e32716ff7f1eebae952a194025166ecccc66257b\",\"ordinal\":20,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_cb91b3b1072a7d220f7d79a2593382ddc5240c14bc8340fca300f650661585ea\",\"producer\":null},{\"edge_id\":\"edge_7fdca2d449aba46a046e6db23d11770a56592edb07fd9e1d2a9b442e421d3797\",\"ordinal\":21,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_f784728ef89856e247afc70fe00bcee64f3ffaf1b152bdee9baa4513d9cb5a30\",\"producer\":null},{\"edge_id\":\"edge_814c2c6fecb394436b722c73d38bb28f7025db22f441889cb32c94d7cff33bfc\",\"ordinal\":22,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_eae038a19f2de0358ad3d6306a2ce5317abce42502fc6aec121cb18c4a02e89b\",\"producer\":null},{\"edge_id\":\"edge_817f80bb2fd2be15188f4917f522268a0a90c100874c1139a1f6788623353511\",\"ordinal\":23,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_53821f5f6f9cb8ee8d94efded68e4185ba383de453c16b8b9b68d2ae8e243b0c\",\"producer\":null},{\"edge_id\":\"edge_8efe664070e33ca6dbc18b7957c3c39f570bd92c9483dba15e9403cc82ad2769\",\"ordinal\":24,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_822f51d13932e6fd1654f87b81f4f43430bd5552c4c330730388a97e6c00a134\",\"producer\":null},{\"edge_id\":\"edge_926f36994c6c87f74706282e9d36b7c18d586f61461a6751d1552ea4ed234ba7\",\"ordinal\":25,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_f044c93ca4f08a5437cad9be500485b74dbdfbd6d7654f82bfe1fec4888eaf7c\",\"producer\":null},{\"edge_id\":\"edge_9b48e0f02c66de528abe6ae1505e4627c11f3d4f9f860968a383bc63fef53a9a\",\"ordinal\":26,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_3da844da2fb13999a87873b4285b67f037bfa08b403a96dcf879033965c3c659\",\"producer\":null},{\"edge_id\":\"edge_9e8920f7db6390d14c518a5f0c4d244d37fc1a311cc4e500533b579ca5d67327\",\"ordinal\":27,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_e91c9c7a09817e5726d442417e96f34ddf2a15a076b34b3e46468cc805c2c78f\",\"producer\":null},{\"edge_id\":\"edge_a3a302302d5697e969b8e5084e378603ad86af5be8f07757bd2af15f15ef0808\",\"ordinal\":28,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_1d657c444edf35d37b91b3f2e926c3deff063b85aad326c3bd94254b61f49dcb\",\"producer\":null},{\"edge_id\":\"edge_a47e64190a5efd156e25947007183c522e22044e4fe81d0e623e7069064813b2\",\"ordinal\":29,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_ea6d8dcc5249259363299a70576cea141c572483e858d446901162e18db1ca0a\",\"producer\":null},{\"edge_id\":\"edge_a4bf4af455d6db2f81f9970fb87e5302f25dc722479a0cc3a14ffcbc66f0b764\",\"ordinal\":30,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_30e58cc9eafbbb72cc892f28a0232ecaca31a8774f70a76dc379de74daa87ced\",\"producer\":null},{\"edge_id\":\"edge_b35170f59ab9d2f3c00c9fdc084ed8706cb18f069130cd72f76aefcfa1347da6\",\"ordinal\":31,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_fcd14364f4d73a228460597370be4ba771e7757f36171d4fcac6a4e63dcfb2ca\",\"producer\":null},{\"edge_id\":\"edge_b383bdfc189023de82cef64eba15ad34aec6c610ccf50fb1f638f2166f27c6dd\",\"ordinal\":32,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_99708d3e54de30a6077e33301949f1eed49960a48ed11eba519c05c64214dfc0\",\"producer\":null},{\"edge_id\":\"edge_b43b5edf9df54dba2d61c1399d71b83bc180a69cfa1808a180afdda07cd03af6\",\"ordinal\":33,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_10db38aa6e2c951a27a4291282017a1cb7663b5c327a1e8a59107fbdb6da399f\",\"producer\":null},{\"edge_id\":\"edge_bebeaa01619f281e77222a4eb902b54eda10139bdde5da5adc13b946287f1254\",\"ordinal\":34,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_c04c38909319fff074229b839b1c0b23a3eccc100b3dc8a1ab12017b602db432\",\"producer\":null},{\"edge_id\":\"edge_bfae31818e239fac7db9c5a993f7c6cb5bc49b3f1bde01860826fdfbd59ca049\",\"ordinal\":35,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_89a8d6b69c6b87bc18b41fb727016541a8be59d9b4b038eec7c8f2804bfc3c86\",\"producer\":null},{\"edge_id\":\"edge_c47d8ba5c2eb6351274983dfcc4f7dd64527515870484c7e8f389de2fe5cc530\",\"ordinal\":36,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_b199aefca5b6508df94c8732d22a000a6a8edab52ddc513870a562d55b92857d\",\"producer\":null},{\"edge_id\":\"edge_c5b454bd9d85092e17964ccce346ec190b84172a9d7b04c96dc3f12a09e2865b\",\"ordinal\":37,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_4dee22861caec9040759ed9621b16f7c87c5912393504a5ef7e6552dfa99fbce\",\"producer\":null},{\"edge_id\":\"edge_d2d8660386ff7616c781fe5ec3d516252784e8145c3749932c6f349b4092e3a9\",\"ordinal\":38,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_8dc47bc6a1a3ab0b9dafe0fcae7f24f753beaff7d1e8a4f032a2b06ce4354cb7\",\"producer\":null},{\"edge_id\":\"edge_d485e3ca16ef21be9014d579afc365bfdabbc934ed806e1f3f2c101e9f04951b\",\"ordinal\":39,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_0ac381fd1bb2c81dfb1ef2097cfb894f68c36945930ba14bd5674e036d345529\",\"producer\":null},{\"edge_id\":\"edge_d67fe75d30db9b2e80b4f9569105ee5ef4bffff9d1c956dce18fb8f02acc110e\",\"ordinal\":40,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_3d7ebbe9eb08ae3e9bd7cc553d1bca30d883a21e88adb0c994c84007c4d8f6bf\",\"producer\":null},{\"edge_id\":\"edge_d83af548e586d0742a28962c891af65badb5eaf89155a2e1bade91f6ecd8053b\",\"ordinal\":41,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_2faf0f31bcc29720b228428cedfad0c4498547db836c847201c2293ef0be6bf0\",\"producer\":null},{\"edge_id\":\"edge_ed2b91b2c9058ed359d23b7dd4c5c24977c31c1a2988885e055687bd9a6f7b24\",\"ordinal\":42,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_acda6dc4a02660eb19c39dcc2a367aa8cac7d7f42f1b534ea91b1fbcb98e3644\",\"producer\":null},{\"edge_id\":\"edge_ed820645d5cf26ff0f943dff921de19a034ca9090f9365f8fc33f551479ca196\",\"ordinal\":43,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"embeds\",\"occurrence_id\":\"occ_14b493cae1b15a496893240b748e1b03b747d2006fac52fd717f7a0ec9185dc3\",\"producer\":null},{\"edge_id\":\"edge_f4937deafb5e48a89648576dc77c5404297bfe712f8437429740bf961b33e9ba\",\"ordinal\":44,\"parent_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"relation\":\"contains\",\"occurrence_id\":\"occ_fe98c3f528fee5a1ff4f14283b5f86a39a74d2f7d5d92f171750e8f3bff5857d\",\"producer\":null}],\"provenance\":[],\"integrity_contradictions\":[],\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[]}}],\"observations\":[{\"observation_id\":\"aio_1a1efc57719a3617e7101d6259a2a5a638b77c609ebbac5fbb1786ad7dade436\",\"kind\":\"root-manifest\",\"subject\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"value\":{\"manifest_id\":\"agm_70ea6185df468879196976914e3a80eb6edb4907cede9eec4da94b392affd42b\",\"root_artifact_id\":\"art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca\",\"root_sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\",\"root_format\":\"zip\",\"graph_sha256\":\"c56458d1f4474fa9b337dfea1a29ec94730e0cda985192a1aea297fbb4ae052a\",\"node_count\":10,\"occurrence_count\":46,\"edge_count\":45},\"evidence_id\":\"ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5\"}],\"hypotheses\":[],\"contradictions\":[],\"unexplored_branches\":[],\"next_probes\":[],\"coverage\":{\"status\":\"complete-within-substeps\",\"substeps_completed\":1,\"observations_retained\":1,\"observations_omitted\":0,\"hypotheses_retained\":0,\"hypotheses_omitted\":0,\"unexplored_branches_retained\":0,\"unexplored_branches_omitted\":0,\"next_probes_retained\":0,\"next_probes_omitted\":0},\"evidence_links\":[\"ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5\"],\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.\",\"ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences.\"],\"locations\":[],\"evidence_links\":[\"ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_51bf792b542ccf32a3653a5f78a2569f4c74368d181abe0ec301a5b391a012a9",
+   "subject": {
+    "name": "Zipped.zip",
+    "digest": {
+     "sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8"
+    },
+    "format": "zip",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/Zipped.zip"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_artifact",
+   "parameters": {
+    "integrity_policy": "fail"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "inspection_id": "ai_5f5c8fe0a06f1355b20ddd4d84c71628b35e401c8a51bdbdae4e0c003f203b99",
+    "subject": {
+     "manifest_id": "agm_70ea6185df468879196976914e3a80eb6edb4907cede9eec4da94b392affd42b",
+     "root_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+     "root_sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8",
+     "root_format": "zip"
+    },
+    "substeps": [
+     {
+      "substep_id": "ais_2a15a1f4d39f1432a1e75afcad9904aef8953b0468c43de2affbc96346e68e86",
+      "operation": "inventory_artifact",
+      "status": "completed",
+      "evidence_id": "ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5",
+      "evidence": {
+       "evidence_id": "ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5",
+       "subject": {
+        "name": "Zipped.zip",
+        "digest": {
+         "sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8"
+        },
+        "format": "zip",
+        "architecture": null,
+        "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/Zipped.zip"
+       },
+       "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+       },
+       "analysis_profile": null,
+       "predicate_type": "rea.analysis",
+       "operation": "inventory_artifact",
+       "parameters": {
+        "integrity_policy": "fail"
+       },
+       "raw_result": null,
+       "normalized_result": {
+        "manifest": {
+         "manifest_id": "agm_70ea6185df468879196976914e3a80eb6edb4907cede9eec4da94b392affd42b",
+         "root_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+         "root_sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8",
+         "root_format": "zip",
+         "graph_sha256": "c56458d1f4474fa9b337dfea1a29ec94730e0cda985192a1aea297fbb4ae052a",
+         "node_count": 10,
+         "occurrence_count": 46,
+         "edge_count": 45
+        },
+        "nodes": [
+         {
+          "artifact_id": "art_1e26a54dff3cac8937b451c8def50be8d70466ae8f116ec0e2fd3acba9db3717",
+          "format": "file",
+          "sha256": "21233dfd48586ed8c1daf90cd6496bcc8c8ae1bd10cf2a912460c50f840fec0b",
+          "size": 112,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "format": "file",
+          "sha256": "53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d",
+          "size": 232,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_65a242b7817305b4793921d925e0d5a46b4ce7209472fc9c044e26e023fbcb00",
+          "format": "file",
+          "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+          "size": 1,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69",
+          "format": "file",
+          "sha256": "26af2039e3563c710de3d6585af9e7b430427ee7767b88b5723bf276186e0043",
+          "size": 4,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9",
+          "format": "file",
+          "sha256": "1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0",
+          "size": 7,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "format": "zip",
+          "sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8",
+          "size": 10061,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "materialized",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_d2932e7f03a8bb3b4cb0fa2f398b264690827eb4e2dd537cb1c0016dbad2578f",
+          "format": "file",
+          "sha256": "ae4b3280e56e2faf83f414a6e3dabe9d5fbe18976544c05fed121accb85b53fc",
+          "size": 3,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "format": "file",
+          "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+          "size": 57,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "format": "mach-o",
+          "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+          "size": 72,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         },
+         {
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "format": "mach-o",
+          "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+          "size": 72,
+          "media_type": null,
+          "architecture": null,
+          "content_state": "embedded",
+          "limitations": []
+         }
+        ],
+        "occurrences": [
+         {
+          "occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "parent_occurrence_id": null,
+          "logical_path": ".",
+          "entry_kind": "file",
+          "artifact_kind": "container",
+          "artifact_format": "zip",
+          "declared_size": 10061,
+          "compressed_size": null,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_602b947e47054fc9e7affd7c58e28ff65412535f02de7c238440bbdfe30526d5",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/Flutter.framework/Flutter",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_1d657c444edf35d37b91b3f2e926c3deff063b85aad326c3bd94254b61f49dcb",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/Kit.framework/Kit",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_f784728ef89856e247afc70fe00bcee64f3ffaf1b152bdee9baa4513d9cb5a30",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_14b493cae1b15a496893240b748e1b03b747d2006fac52fd717f7a0ec9185dc3",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "framework",
+          "artifact_format": "file",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_eae038a19f2de0358ad3d6306a2ce5317abce42502fc6aec121cb18c4a02e89b",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/_CodeSignature/CodeResources",
+          "entry_kind": "file",
+          "artifact_kind": "framework",
+          "artifact_format": "file",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_b199aefca5b6508df94c8732d22a000a6a8edab52ddc513870a562d55b92857d",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/React.framework/React",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_c230fbdfc6797c962fd5196f4b59cdcfc8bdf5d0acca0870cae2fd6aadfc082a",
+          "artifact_id": "art_65a242b7817305b4793921d925e0d5a46b4ce7209472fc9c044e26e023fbcb00",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/.DS_Store",
+          "entry_kind": "file",
+          "artifact_kind": "framework",
+          "artifact_format": "file",
+          "declared_size": 1,
+          "compressed_size": 3,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_f9569088eeb806abfc06ed20fd6864ae86e249c57c34067f7546e17ad07efb9e",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_83a6720ce7f4023d8675b8a8ee5b9091a1209d2fadb8abc2108fe2a1c25e7496",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Resources/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "framework",
+          "artifact_format": "file",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_894721014429ea9975880aa043563cc615c0da5e70085fac9b2c2995bcf96a49",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_10db38aa6e2c951a27a4291282017a1cb7663b5c327a1e8a59107fbdb6da399f",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_cb91b3b1072a7d220f7d79a2593382ddc5240c14bc8340fca300f650661585ea",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/hermes.framework/hermes",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_e91c9c7a09817e5726d442417e96f34ddf2a15a076b34b3e46468cc805c2c78f",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Frameworks/libswiftCore.dylib",
+          "entry_kind": "file",
+          "artifact_kind": "dynamic-library",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_df59393c47d56605e8390da2cc96ef1992981128e8833f2f5d410aebc157469c",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Helpers/Helper.app/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_fe98c3f528fee5a1ff4f14283b5f86a39a74d2f7d5d92f171750e8f3bff5857d",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Helpers/Helper.app/Contents/MacOS/Helper",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_ca770d248f59ad21538d30ae55f7657832b2563da25a674b678bef5d71e34460",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Helpers/tool",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_4dee22861caec9040759ed9621b16f7c87c5912393504a5ef7e6552dfa99fbce",
+          "artifact_id": "art_1e26a54dff3cac8937b451c8def50be8d70466ae8f116ec0e2fd3acba9db3717",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 112,
+          "compressed_size": 87,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_7e07adff476ab477c4dd2a4990f18e73e0864bd289c10ae0d2655e6306c83428",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Library/LaunchAgents/com.example.agent.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_f91b99ff97290f2d61fcf7d3078fa3102400acb629dde6e69eb2b8301c0f84d0",
+          "artifact_id": "art_65a242b7817305b4793921d925e0d5a46b4ce7209472fc9c044e26e023fbcb00",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Library/LaunchAgents/notes.txt",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 1,
+          "compressed_size": 3,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_236f7569d0a20e0f1c00f0ff5f24a2bc7bc927fb17e9358b97fd3ae2a40707ee",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Library/LaunchDaemons/com.example.helper.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_99708d3e54de30a6077e33301949f1eed49960a48ed11eba519c05c64214dfc0",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Library/LaunchServices/com.example.helper",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_d100d4f0c839de5e3d35de69c0eea3f21094295da69bce4f346fe89e44dcf37c",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Library/LoginItems/Login.app/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_fd4ece463bd40a4f1482881cec6ac3b23b2a883e9b313a116a7f69cdf68f6d42",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Library/LoginItems/Login.app/Contents/MacOS/Login",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_3da844da2fb13999a87873b4285b67f037bfa08b403a96dcf879033965c3c659",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Library/SystemExtensions/Drv.dext/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_7cde845cacec9e3095a6f2eab354d15322fc1cea2010176ceec3bd728de17e7e",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_65fa854671ea7d4f5d4e7d9bd2e6b2e08c4f95ceeba58de047fc207606825e56",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/MacOS/Net",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_01d4971f8466557928e5869137c878141abffb17590ae4f1c19ae2e4fe214e77",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/MacOS/Mac",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_3d7ebbe9eb08ae3e9bd7cc553d1bca30d883a21e88adb0c994c84007c4d8f6bf",
+          "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/MacOS/libfoo.so",
+          "entry_kind": "file",
+          "artifact_kind": "dynamic-library",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_acda6dc4a02660eb19c39dcc2a367aa8cac7d7f42f1b534ea91b1fbcb98e3644",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Nested/Other.app/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_0ac381fd1bb2c81dfb1ef2097cfb894f68c36945930ba14bd5674e036d345529",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Nested/Other.app/Contents/MacOS/Other",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_9e3c4bf0b410c8cb8dfc77bf8efe1d7287e4dbe501f8ab1a0a8d58bfec993a66",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/PlugIns/Gen.qlgenerator/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_12f195ad65dfbeb9e104dd7e1bf381ccb8346ad35e7b93d87c3986066ebdc0b8",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/PlugIns/Imp.mdimporter/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_30e58cc9eafbbb72cc892f28a0232ecaca31a8774f70a76dc379de74daa87ced",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/PlugIns/Share.appex/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_e5243a0aa872672ec8a4ca826e923dbdeb090e1a9b15eba4b3a901c6f8219146",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/PlugIns/Share.appex/Contents/MacOS/Share",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_ea6d8dcc5249259363299a70576cea141c572483e858d446901162e18db1ca0a",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/PlugIns/Y.bundle/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_822f51d13932e6fd1654f87b81f4f43430bd5552c4c330730388a97e6c00a134",
+          "artifact_id": "art_a389c8f9fa81dcf1f3e1dfac7b0d5829aaabe87b923868b0595d11c39bddcf69",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Resources/._data.bin",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 4,
+          "compressed_size": 6,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_fcd14364f4d73a228460597370be4ba771e7757f36171d4fcac6a4e63dcfb2ca",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Resources/Z.bundle/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_0900bbbb98820345034e9516f7a0e0c7f976453247bd85f6a3ec5f10d1a2f771",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Resources/Z.bundle/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_8dc47bc6a1a3ab0b9dafe0fcae7f24f753beaff7d1e8a4f032a2b06ce4354cb7",
+          "artifact_id": "art_d2932e7f03a8bb3b4cb0fa2f398b264690827eb4e2dd537cb1c0016dbad2578f",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Resources/data.bin",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 3,
+          "compressed_size": 5,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_f044c93ca4f08a5437cad9be500485b74dbdfbd6d7654f82bfe1fec4888eaf7c",
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Resources/main.jsbundle",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 232,
+          "compressed_size": 63,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_2faf0f31bcc29720b228428cedfad0c4498547db836c847201c2293ef0be6bf0",
+          "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/Resources/plain.js",
+          "entry_kind": "file",
+          "artifact_kind": "javascript",
+          "artifact_format": "javascript-bundle",
+          "declared_size": 232,
+          "compressed_size": 63,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_53821f5f6f9cb8ee8d94efded68e4185ba383de453c16b8b9b68d2ae8e243b0c",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/XPCServices/Svc.xpc/Contents/Info.plist",
+          "entry_kind": "file",
+          "artifact_kind": "plist",
+          "artifact_format": "plist",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_a7090bcde4b9dbfc1c7cdefc7e29cc6f6329078011fbeefdfdf8d52d1b760f26",
+          "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/XPCServices/Svc.xpc/Contents/MacOS/Svc",
+          "entry_kind": "file",
+          "artifact_kind": "executable",
+          "artifact_format": "mach-o",
+          "declared_size": 72,
+          "compressed_size": 26,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_c04c38909319fff074229b839b1c0b23a3eccc100b3dc8a1ab12017b602db432",
+          "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/_CodeSignature/CodeResources",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 57,
+          "compressed_size": 44,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         },
+         {
+          "occurrence_id": "occ_89a8d6b69c6b87bc18b41fb727016541a8be59d9b4b038eec7c8f2804bfc3c86",
+          "artifact_id": "art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9",
+          "parent_occurrence_id": "occ_080d4e0bae25cf03aeda89c4be4f58996540e25684c9fdca9438bbee2087b6b9",
+          "logical_path": "Zipped.app/Contents/embedded.provisionprofile",
+          "entry_kind": "file",
+          "artifact_kind": "resource",
+          "artifact_format": "file",
+          "declared_size": 7,
+          "compressed_size": 9,
+          "executable": false,
+          "encrypted": false,
+          "hash_status": "verified",
+          "source_location": null,
+          "limitations": []
+         }
+        ],
+        "edges": [
+         {
+          "edge_id": "edge_00a401c0d5141771f57c3e9809d0d2ed88460cd4703b4ff5fcf5346807e39233",
+          "ordinal": 0,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_c230fbdfc6797c962fd5196f4b59cdcfc8bdf5d0acca0870cae2fd6aadfc082a",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_0b2cbb0ed7bea86d9334f6d20574b1374b7c3f0eadef3da38fbd089c9df74ec5",
+          "ordinal": 1,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_f91b99ff97290f2d61fcf7d3078fa3102400acb629dde6e69eb2b8301c0f84d0",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_100b11732ae9e032064900348231e71dc5a86cc192105a2c96572d229a678d24",
+          "ordinal": 2,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_602b947e47054fc9e7affd7c58e28ff65412535f02de7c238440bbdfe30526d5",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_19bda1e8677359630be63b8760503df352ce063ce4b0fd4b378ccc38da6f68fe",
+          "ordinal": 3,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_fd4ece463bd40a4f1482881cec6ac3b23b2a883e9b313a116a7f69cdf68f6d42",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_1bc41f01ec372b1b41e44f0d7e361667daf7aad9238f887880f684bdb6bc46cf",
+          "ordinal": 4,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_ca770d248f59ad21538d30ae55f7657832b2563da25a674b678bef5d71e34460",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_2b1a2130ffafd3658dfdea4396b8d3636d003f6d28b093dbec02c33468ffd261",
+          "ordinal": 5,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_01d4971f8466557928e5869137c878141abffb17590ae4f1c19ae2e4fe214e77",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_37c4c594a551e4fb885b0435e71202f563d8cb0d2139b2719f6ea911c39790c8",
+          "ordinal": 6,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_894721014429ea9975880aa043563cc615c0da5e70085fac9b2c2995bcf96a49",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_382481ea8ee8044ef0593ab563fc584fd44b3033541cfa234a5d3e3976becfaa",
+          "ordinal": 7,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_9e3c4bf0b410c8cb8dfc77bf8efe1d7287e4dbe501f8ab1a0a8d58bfec993a66",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_3b88b4ea6b304fe7491fcbbefa066f9fe9d5164c9d234680396a802219ade95f",
+          "ordinal": 8,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_236f7569d0a20e0f1c00f0ff5f24a2bc7bc927fb17e9358b97fd3ae2a40707ee",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_40a304483c414a9ef3e44931aaea01177899265b0313dfdddf59d779ae9ab6e7",
+          "ordinal": 9,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_83a6720ce7f4023d8675b8a8ee5b9091a1209d2fadb8abc2108fe2a1c25e7496",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_4171a285ef529dcd87f7b270d1eb4556dba80e1a7663aa3cdcc32a803e63efa9",
+          "ordinal": 10,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_65fa854671ea7d4f5d4e7d9bd2e6b2e08c4f95ceeba58de047fc207606825e56",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_4e601aa284a4ea57cff9deaffcb3dcd09759fa3ec2e4ec84a1301a5953ea3dc9",
+          "ordinal": 11,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_12f195ad65dfbeb9e104dd7e1bf381ccb8346ad35e7b93d87c3986066ebdc0b8",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_51e3a07aa2ebe5b571f0dd980223007f4c28964472666f7ee4afdf6519273c34",
+          "ordinal": 12,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_7e07adff476ab477c4dd2a4990f18e73e0864bd289c10ae0d2655e6306c83428",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_54211b18f2b71d60f9371b0179453a3407919982aae7e71b8f830d364e7a0f61",
+          "ordinal": 13,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_f9569088eeb806abfc06ed20fd6864ae86e249c57c34067f7546e17ad07efb9e",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_61446de92d99cd27b7d44f195c2e8ae124a1a0fdbdd6ebc1c766bdeba289be2e",
+          "ordinal": 14,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_a7090bcde4b9dbfc1c7cdefc7e29cc6f6329078011fbeefdfdf8d52d1b760f26",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_6558b4b9e45efb9e33cd76b8c6f9b2092269e227c67dbc434d9d83bb503171ee",
+          "ordinal": 15,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_7cde845cacec9e3095a6f2eab354d15322fc1cea2010176ceec3bd728de17e7e",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_661cb5c0085687aaef20f09450bb257837305b39ed05d69319bed49fe9d54999",
+          "ordinal": 16,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_e5243a0aa872672ec8a4ca826e923dbdeb090e1a9b15eba4b3a901c6f8219146",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_6a46ac55fbe48e6545d9ae7ce09c38016d637aae7d19a4de92bb89c78dc0187b",
+          "ordinal": 17,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_0900bbbb98820345034e9516f7a0e0c7f976453247bd85f6a3ec5f10d1a2f771",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_6a923a9be6e58a213cd3c6fdb4d68b143d2d3442c0f40de7bea90618e76e6584",
+          "ordinal": 18,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_df59393c47d56605e8390da2cc96ef1992981128e8833f2f5d410aebc157469c",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_71970159923238501f0ccea2558cde2441925b2d2ea8843c9797d2b9b42a16fb",
+          "ordinal": 19,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_d100d4f0c839de5e3d35de69c0eea3f21094295da69bce4f346fe89e44dcf37c",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_76d21e7b44272a5f6002d230e32716ff7f1eebae952a194025166ecccc66257b",
+          "ordinal": 20,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_cb91b3b1072a7d220f7d79a2593382ddc5240c14bc8340fca300f650661585ea",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_7fdca2d449aba46a046e6db23d11770a56592edb07fd9e1d2a9b442e421d3797",
+          "ordinal": 21,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_f784728ef89856e247afc70fe00bcee64f3ffaf1b152bdee9baa4513d9cb5a30",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_814c2c6fecb394436b722c73d38bb28f7025db22f441889cb32c94d7cff33bfc",
+          "ordinal": 22,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_eae038a19f2de0358ad3d6306a2ce5317abce42502fc6aec121cb18c4a02e89b",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_817f80bb2fd2be15188f4917f522268a0a90c100874c1139a1f6788623353511",
+          "ordinal": 23,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_53821f5f6f9cb8ee8d94efded68e4185ba383de453c16b8b9b68d2ae8e243b0c",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_8efe664070e33ca6dbc18b7957c3c39f570bd92c9483dba15e9403cc82ad2769",
+          "ordinal": 24,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_822f51d13932e6fd1654f87b81f4f43430bd5552c4c330730388a97e6c00a134",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_926f36994c6c87f74706282e9d36b7c18d586f61461a6751d1552ea4ed234ba7",
+          "ordinal": 25,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_f044c93ca4f08a5437cad9be500485b74dbdfbd6d7654f82bfe1fec4888eaf7c",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_9b48e0f02c66de528abe6ae1505e4627c11f3d4f9f860968a383bc63fef53a9a",
+          "ordinal": 26,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_3da844da2fb13999a87873b4285b67f037bfa08b403a96dcf879033965c3c659",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_9e8920f7db6390d14c518a5f0c4d244d37fc1a311cc4e500533b579ca5d67327",
+          "ordinal": 27,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_e91c9c7a09817e5726d442417e96f34ddf2a15a076b34b3e46468cc805c2c78f",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_a3a302302d5697e969b8e5084e378603ad86af5be8f07757bd2af15f15ef0808",
+          "ordinal": 28,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_1d657c444edf35d37b91b3f2e926c3deff063b85aad326c3bd94254b61f49dcb",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_a47e64190a5efd156e25947007183c522e22044e4fe81d0e623e7069064813b2",
+          "ordinal": 29,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_ea6d8dcc5249259363299a70576cea141c572483e858d446901162e18db1ca0a",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_a4bf4af455d6db2f81f9970fb87e5302f25dc722479a0cc3a14ffcbc66f0b764",
+          "ordinal": 30,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_30e58cc9eafbbb72cc892f28a0232ecaca31a8774f70a76dc379de74daa87ced",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_b35170f59ab9d2f3c00c9fdc084ed8706cb18f069130cd72f76aefcfa1347da6",
+          "ordinal": 31,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_fcd14364f4d73a228460597370be4ba771e7757f36171d4fcac6a4e63dcfb2ca",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_b383bdfc189023de82cef64eba15ad34aec6c610ccf50fb1f638f2166f27c6dd",
+          "ordinal": 32,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_99708d3e54de30a6077e33301949f1eed49960a48ed11eba519c05c64214dfc0",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_b43b5edf9df54dba2d61c1399d71b83bc180a69cfa1808a180afdda07cd03af6",
+          "ordinal": 33,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_10db38aa6e2c951a27a4291282017a1cb7663b5c327a1e8a59107fbdb6da399f",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_bebeaa01619f281e77222a4eb902b54eda10139bdde5da5adc13b946287f1254",
+          "ordinal": 34,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_c04c38909319fff074229b839b1c0b23a3eccc100b3dc8a1ab12017b602db432",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_bfae31818e239fac7db9c5a993f7c6cb5bc49b3f1bde01860826fdfbd59ca049",
+          "ordinal": 35,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_89a8d6b69c6b87bc18b41fb727016541a8be59d9b4b038eec7c8f2804bfc3c86",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_c47d8ba5c2eb6351274983dfcc4f7dd64527515870484c7e8f389de2fe5cc530",
+          "ordinal": 36,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_b199aefca5b6508df94c8732d22a000a6a8edab52ddc513870a562d55b92857d",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_c5b454bd9d85092e17964ccce346ec190b84172a9d7b04c96dc3f12a09e2865b",
+          "ordinal": 37,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_4dee22861caec9040759ed9621b16f7c87c5912393504a5ef7e6552dfa99fbce",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_d2d8660386ff7616c781fe5ec3d516252784e8145c3749932c6f349b4092e3a9",
+          "ordinal": 38,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_8dc47bc6a1a3ab0b9dafe0fcae7f24f753beaff7d1e8a4f032a2b06ce4354cb7",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_d485e3ca16ef21be9014d579afc365bfdabbc934ed806e1f3f2c101e9f04951b",
+          "ordinal": 39,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_0ac381fd1bb2c81dfb1ef2097cfb894f68c36945930ba14bd5674e036d345529",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_d67fe75d30db9b2e80b4f9569105ee5ef4bffff9d1c956dce18fb8f02acc110e",
+          "ordinal": 40,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_3d7ebbe9eb08ae3e9bd7cc553d1bca30d883a21e88adb0c994c84007c4d8f6bf",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_d83af548e586d0742a28962c891af65badb5eaf89155a2e1bade91f6ecd8053b",
+          "ordinal": 41,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_2faf0f31bcc29720b228428cedfad0c4498547db836c847201c2293ef0be6bf0",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_ed2b91b2c9058ed359d23b7dd4c5c24977c31c1a2988885e055687bd9a6f7b24",
+          "ordinal": 42,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_acda6dc4a02660eb19c39dcc2a367aa8cac7d7f42f1b534ea91b1fbcb98e3644",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_ed820645d5cf26ff0f943dff921de19a034ca9090f9365f8fc33f551479ca196",
+          "ordinal": 43,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "embeds",
+          "occurrence_id": "occ_14b493cae1b15a496893240b748e1b03b747d2006fac52fd717f7a0ec9185dc3",
+          "producer": null
+         },
+         {
+          "edge_id": "edge_f4937deafb5e48a89648576dc77c5404297bfe712f8437429740bf961b33e9ba",
+          "ordinal": 44,
+          "parent_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+          "relation": "contains",
+          "occurrence_id": "occ_fe98c3f528fee5a1ff4f14283b5f86a39a74d2f7d5d92f171750e8f3bff5857d",
+          "producer": null
+         }
+        ],
+        "provenance": [],
+        "integrity_contradictions": [],
+        "limitations": [
+         "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+        ]
+       },
+       "confidence": "observed",
+       "authority": "shipped-artifact",
+       "environment": null,
+       "limitations": [
+        "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+       ],
+       "locations": [],
+       "evidence_links": []
+      }
+     }
+    ],
+    "observations": [
+     {
+      "observation_id": "aio_1a1efc57719a3617e7101d6259a2a5a638b77c609ebbac5fbb1786ad7dade436",
+      "kind": "root-manifest",
+      "subject": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+      "value": {
+       "manifest_id": "agm_70ea6185df468879196976914e3a80eb6edb4907cede9eec4da94b392affd42b",
+       "root_artifact_id": "art_d1d186bc7171b8c212071af6b89a241ffae2c97a62465d328fec8bd2fc2843ca",
+       "root_sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8",
+       "root_format": "zip",
+       "graph_sha256": "c56458d1f4474fa9b337dfea1a29ec94730e0cda985192a1aea297fbb4ae052a",
+       "node_count": 10,
+       "occurrence_count": 46,
+       "edge_count": 45
+      },
+      "evidence_id": "ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5"
+     }
+    ],
+    "hypotheses": [],
+    "contradictions": [],
+    "unexplored_branches": [],
+    "next_probes": [],
+    "coverage": {
+     "status": "complete-within-substeps",
+     "substeps_completed": 1,
+     "observations_retained": 1,
+     "observations_omitted": 0,
+     "hypotheses_retained": 0,
+     "hypotheses_omitted": 0,
+     "unexplored_branches_retained": 0,
+     "unexplored_branches_omitted": 0,
+     "next_probes_retained": 0,
+     "next_probes_omitted": 0
+    },
+    "evidence_links": [
+     "ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5"
+    ],
+    "limitations": [
+     "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+     "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+    "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_55ca58e156d4d378bae456bfc7153e677d22111caec6c081914b55cf5fc001e5"
+   ]
+  }
+ },
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_9c828f7f15a0b51b787b97fd6990b18240e5d056c0026a8814f2899343f5a92a\",\"subject\":{\"name\":\"Zipped.zip\",\"digest\":{\"sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\"},\"format\":\"zip\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/apple/Zipped.zip\"},\"provider\":{\"id\":\"rea-apple-application\",\"name\":\"REA Apple application workflows\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.apple-application-graph\",\"operation\":\"project_apple_application_graph\",\"parameters\":{\"inventory_evidence_ids\":[\"ev_51bf792b542ccf32a3653a5f78a2569f4c74368d181abe0ec301a5b391a012a9\"]},\"raw_result\":null,\"normalized_result\":{\"projection_id\":\"aap_f62a7be27b37f65d61fca0ee4a7f8fa9083f5b291670b6a0faf5799664b7cc17\",\"root_sha256\":\"4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8\",\"root_format\":\"zip\",\"platforms\":[\"macos\"],\"source_evidence_ids\":[\"ev_51bf792b542ccf32a3653a5f78a2569f4c74368d181abe0ec301a5b391a012a9\"],\"application_roots\":[\"Zipped.app\"],\"bundles\":[{\"path\":\"Zipped.app\",\"parent_path\":null,\"layout\":\"macos-deep\",\"role\":\"application\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/Info.plist\",\"executable_candidates\":[\"Zipped.app/Contents/MacOS/Mac\",\"Zipped.app/Contents/MacOS/libfoo.so\"],\"signing_paths\":[\"Zipped.app/Contents/_CodeSignature/CodeResources\",\"Zipped.app/Contents/embedded.provisionprofile\"]},{\"path\":\"Zipped.app/Contents/Frameworks/Flutter.framework\",\"parent_path\":\"Zipped.app\",\"layout\":\"shallow\",\"role\":\"framework\",\"role_basis\":\"path-convention\",\"info_plist_path\":null,\"executable_candidates\":[\"Zipped.app/Contents/Frameworks/Flutter.framework/Flutter\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Frameworks/Kit.framework\",\"parent_path\":\"Zipped.app\",\"layout\":\"versioned-framework\",\"role\":\"framework\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Info.plist\",\"executable_candidates\":[\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit\"],\"signing_paths\":[\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/_CodeSignature/CodeResources\"]},{\"path\":\"Zipped.app/Contents/Frameworks/React.framework\",\"parent_path\":\"Zipped.app\",\"layout\":\"shallow\",\"role\":\"framework\",\"role_basis\":\"path-convention\",\"info_plist_path\":null,\"executable_candidates\":[\"Zipped.app/Contents/Frameworks/React.framework/React\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Frameworks/Two.framework\",\"parent_path\":\"Zipped.app\",\"layout\":\"versioned-framework\",\"role\":\"framework\",\"role_basis\":\"path-convention\",\"info_plist_path\":null,\"executable_candidates\":[\"Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two\",\"Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Frameworks/UnityFramework.framework\",\"parent_path\":\"Zipped.app\",\"layout\":\"shallow\",\"role\":\"framework\",\"role_basis\":\"path-convention\",\"info_plist_path\":null,\"executable_candidates\":[\"Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Frameworks/hermes.framework\",\"parent_path\":\"Zipped.app\",\"layout\":\"shallow\",\"role\":\"framework\",\"role_basis\":\"path-convention\",\"info_plist_path\":null,\"executable_candidates\":[\"Zipped.app/Contents/Frameworks/hermes.framework/hermes\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Helpers/Helper.app\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"helper-application\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/Helpers/Helper.app/Contents/Info.plist\",\"executable_candidates\":[\"Zipped.app/Contents/Helpers/Helper.app/Contents/MacOS/Helper\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Library/LoginItems/Login.app\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"login-item\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/Library/LoginItems/Login.app/Contents/Info.plist\",\"executable_candidates\":[\"Zipped.app/Contents/Library/LoginItems/Login.app/Contents/MacOS/Login\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Library/SystemExtensions/Drv.dext\",\"parent_path\":\"Zipped.app\",\"layout\":\"shallow\",\"role\":\"driver-extension\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/Library/SystemExtensions/Drv.dext/Info.plist\",\"executable_candidates\":[],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Library/SystemExtensions/Net.systemextension\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"system-extension\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/Info.plist\",\"executable_candidates\":[\"Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/MacOS/Net\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Nested/Other.app\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"nested-application\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/Nested/Other.app/Contents/Info.plist\",\"executable_candidates\":[\"Zipped.app/Contents/Nested/Other.app/Contents/MacOS/Other\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/PlugIns/Gen.qlgenerator\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"plug-in\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/PlugIns/Gen.qlgenerator/Contents/Info.plist\",\"executable_candidates\":[],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/PlugIns/Imp.mdimporter\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"plug-in\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/PlugIns/Imp.mdimporter/Contents/Info.plist\",\"executable_candidates\":[],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/PlugIns/Share.appex\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"app-extension\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/PlugIns/Share.appex/Contents/Info.plist\",\"executable_candidates\":[\"Zipped.app/Contents/PlugIns/Share.appex/Contents/MacOS/Share\"],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/PlugIns/Y.bundle\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"plug-in\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/PlugIns/Y.bundle/Contents/Info.plist\",\"executable_candidates\":[],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/Resources/Z.bundle\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"resource-bundle\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/Resources/Z.bundle/Contents/Info.plist\",\"executable_candidates\":[],\"signing_paths\":[]},{\"path\":\"Zipped.app/Contents/XPCServices/Svc.xpc\",\"parent_path\":\"Zipped.app\",\"layout\":\"macos-deep\",\"role\":\"xpc-service\",\"role_basis\":\"path-convention\",\"info_plist_path\":\"Zipped.app/Contents/XPCServices/Svc.xpc/Contents/Info.plist\",\"executable_candidates\":[\"Zipped.app/Contents/XPCServices/Svc.xpc/Contents/MacOS/Svc\"],\"signing_paths\":[]}],\"components\":{\"bundle_metadata\":[{\"path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"file\"},{\"path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Resources/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"file\"},{\"path\":\"Zipped.app/Contents/Helpers/Helper.app/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/Info.plist\",\"artifact_id\":\"art_1e26a54dff3cac8937b451c8def50be8d70466ae8f116ec0e2fd3acba9db3717\",\"sha256\":\"21233dfd48586ed8c1daf90cd6496bcc8c8ae1bd10cf2a912460c50f840fec0b\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/Library/LoginItems/Login.app/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/Library/SystemExtensions/Drv.dext/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/Nested/Other.app/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/PlugIns/Gen.qlgenerator/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/PlugIns/Imp.mdimporter/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/PlugIns/Share.appex/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/PlugIns/Y.bundle/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/Resources/Z.bundle/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/Resources/Z.bundle/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"},{\"path\":\"Zipped.app/Contents/XPCServices/Svc.xpc/Contents/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\"}],\"executables\":[{\"path\":\"Zipped.app/Contents/Frameworks/Flutter.framework/Flutter\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Kit\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/React.framework/React\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/hermes.framework/hermes\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/libswiftCore.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Helpers/Helper.app/Contents/MacOS/Helper\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Helpers/tool\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Library/LaunchServices/com.example.helper\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Library/LoginItems/Login.app/Contents/MacOS/Login\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/MacOS/Net\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/MacOS/Mac\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/MacOS/libfoo.so\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Nested/Other.app/Contents/MacOS/Other\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/PlugIns/Share.appex/Contents/MacOS/Share\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/XPCServices/Svc.xpc/Contents/MacOS/Svc\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"}],\"frameworks\":[{\"path\":\"Zipped.app/Contents/Frameworks/Flutter.framework/Flutter\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Kit\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"file\"},{\"path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/_CodeSignature/CodeResources\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"file\"},{\"path\":\"Zipped.app/Contents/Frameworks/React.framework/React\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/.DS_Store\",\"artifact_id\":\"art_65a242b7817305b4793921d925e0d5a46b4ce7209472fc9c044e26e023fbcb00\",\"sha256\":\"2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881\",\"format\":\"file\"},{\"path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Resources/Info.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"file\"},{\"path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/Frameworks/hermes.framework/hermes\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"}],\"native_libraries\":[{\"path\":\"Zipped.app/Contents/Frameworks/libswiftCore.dylib\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"},{\"path\":\"Zipped.app/Contents/MacOS/libfoo.so\",\"artifact_id\":\"art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457\",\"sha256\":\"8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442\",\"format\":\"mach-o\"}],\"javascript\":[{\"path\":\"Zipped.app/Contents/Resources/plain.js\",\"artifact_id\":\"art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437\",\"sha256\":\"53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d\",\"format\":\"javascript-bundle\"}],\"signing\":[{\"path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/_CodeSignature/CodeResources\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"file\"},{\"path\":\"Zipped.app/Contents/_CodeSignature/CodeResources\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"file\"},{\"path\":\"Zipped.app/Contents/embedded.provisionprofile\",\"artifact_id\":\"art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9\",\"sha256\":\"1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0\",\"format\":\"file\"}],\"privileged_helpers\":[{\"path\":\"Zipped.app/Contents/Library/LaunchServices/com.example.helper\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"}],\"launchd_plists\":[{\"path\":\"Zipped.app/Contents/Library/LaunchAgents/com.example.agent.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\",\"domain\":\"agent\"},{\"path\":\"Zipped.app/Contents/Library/LaunchDaemons/com.example.helper.plist\",\"artifact_id\":\"art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0\",\"sha256\":\"4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c\",\"format\":\"plist\",\"domain\":\"daemon\"}],\"helpers\":[{\"path\":\"Zipped.app/Contents/Helpers/tool\",\"artifact_id\":\"art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"format\":\"mach-o\"}]},\"symlinks\":[],\"runtime_families\":[\"flutter\",\"javascript\",\"native\",\"react-native\",\"swift-objective-c\",\"unity\"],\"bridge_candidates\":[{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Frameworks/Flutter.framework/Flutter\",\"basis\":\"flutter-convention\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Kit\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Frameworks/React.framework/React\",\"basis\":\"react-native-convention\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework\",\"basis\":\"unity-convention\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Frameworks/hermes.framework/hermes\",\"basis\":\"react-native-convention\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Frameworks/libswiftCore.dylib\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Helpers/Helper.app/Contents/MacOS/Helper\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Helpers/tool\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Library/LaunchServices/com.example.helper\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Library/LoginItems/Login.app/Contents/MacOS/Login\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/MacOS/Net\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/MacOS/Mac\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/MacOS/libfoo.so\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/Nested/Other.app/Contents/MacOS/Other\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/PlugIns/Share.appex/Contents/MacOS/Share\",\"basis\":\"javascript-and-native-content\"},{\"source_path\":\"Zipped.app/Contents/Resources/plain.js\",\"native_path\":\"Zipped.app/Contents/XPCServices/Svc.xpc/Contents/MacOS/Svc\",\"basis\":\"javascript-and-native-content\"}],\"bridge_candidate_coverage\":{\"status\":\"complete\",\"total_candidates\":19,\"emitted_candidates\":19,\"omitted_candidates\":0},\"coverage\":{\"status\":\"complete-within-inventory\",\"inventory_complete\":true},\"limitations\":[\"A versioned framework has several version directories or no Versions/*/Resources/Info.plist; the Info.plist that Versions/Current selects is unknown because symlink targets are not inventoried.\",\"AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.\",\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"]},\"confidence\":\"inferred\",\"authority\":\"analyst-inference\",\"environment\":null,\"limitations\":[\"A versioned framework has several version directories or no Versions/*/Resources/Info.plist; the Info.plist that Versions/Current selects is unknown because symlink targets are not inventoried.\",\"AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.\",\"Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.\",\"Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.\",\"Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.\",\"Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.\",\"Bridge candidates are path-based hypotheses, not observed runtime calls.\",\"A bridge basis is inferred from the native path and is repeated for every managed component.\"],\"locations\":[],\"evidence_links\":[\"ev_51bf792b542ccf32a3653a5f78a2569f4c74368d181abe0ec301a5b391a012a9\"]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_9c828f7f15a0b51b787b97fd6990b18240e5d056c0026a8814f2899343f5a92a",
+   "subject": {
+    "name": "Zipped.zip",
+    "digest": {
+     "sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8"
+    },
+    "format": "zip",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/apple/Zipped.zip"
+   },
+   "provider": {
+    "id": "rea-apple-application",
+    "name": "REA Apple application workflows",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.apple-application-graph",
+   "operation": "project_apple_application_graph",
+   "parameters": {
+    "inventory_evidence_ids": [
+     "ev_51bf792b542ccf32a3653a5f78a2569f4c74368d181abe0ec301a5b391a012a9"
+    ]
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "projection_id": "aap_f62a7be27b37f65d61fca0ee4a7f8fa9083f5b291670b6a0faf5799664b7cc17",
+    "root_sha256": "4c6ac677f61735efc3b36ccbac3f7805a91e08d382b796744fa1ac1ac568c1c8",
+    "root_format": "zip",
+    "platforms": [
+     "macos"
+    ],
+    "source_evidence_ids": [
+     "ev_51bf792b542ccf32a3653a5f78a2569f4c74368d181abe0ec301a5b391a012a9"
+    ],
+    "application_roots": [
+     "Zipped.app"
+    ],
+    "bundles": [
+     {
+      "path": "Zipped.app",
+      "parent_path": null,
+      "layout": "macos-deep",
+      "role": "application",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/Info.plist",
+      "executable_candidates": [
+       "Zipped.app/Contents/MacOS/Mac",
+       "Zipped.app/Contents/MacOS/libfoo.so"
+      ],
+      "signing_paths": [
+       "Zipped.app/Contents/_CodeSignature/CodeResources",
+       "Zipped.app/Contents/embedded.provisionprofile"
+      ]
+     },
+     {
+      "path": "Zipped.app/Contents/Frameworks/Flutter.framework",
+      "parent_path": "Zipped.app",
+      "layout": "shallow",
+      "role": "framework",
+      "role_basis": "path-convention",
+      "info_plist_path": null,
+      "executable_candidates": [
+       "Zipped.app/Contents/Frameworks/Flutter.framework/Flutter"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Frameworks/Kit.framework",
+      "parent_path": "Zipped.app",
+      "layout": "versioned-framework",
+      "role": "framework",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Info.plist",
+      "executable_candidates": [
+       "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit"
+      ],
+      "signing_paths": [
+       "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/_CodeSignature/CodeResources"
+      ]
+     },
+     {
+      "path": "Zipped.app/Contents/Frameworks/React.framework",
+      "parent_path": "Zipped.app",
+      "layout": "shallow",
+      "role": "framework",
+      "role_basis": "path-convention",
+      "info_plist_path": null,
+      "executable_candidates": [
+       "Zipped.app/Contents/Frameworks/React.framework/React"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Frameworks/Two.framework",
+      "parent_path": "Zipped.app",
+      "layout": "versioned-framework",
+      "role": "framework",
+      "role_basis": "path-convention",
+      "info_plist_path": null,
+      "executable_candidates": [
+       "Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two",
+       "Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Frameworks/UnityFramework.framework",
+      "parent_path": "Zipped.app",
+      "layout": "shallow",
+      "role": "framework",
+      "role_basis": "path-convention",
+      "info_plist_path": null,
+      "executable_candidates": [
+       "Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Frameworks/hermes.framework",
+      "parent_path": "Zipped.app",
+      "layout": "shallow",
+      "role": "framework",
+      "role_basis": "path-convention",
+      "info_plist_path": null,
+      "executable_candidates": [
+       "Zipped.app/Contents/Frameworks/hermes.framework/hermes"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Helpers/Helper.app",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "helper-application",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/Helpers/Helper.app/Contents/Info.plist",
+      "executable_candidates": [
+       "Zipped.app/Contents/Helpers/Helper.app/Contents/MacOS/Helper"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Library/LoginItems/Login.app",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "login-item",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/Library/LoginItems/Login.app/Contents/Info.plist",
+      "executable_candidates": [
+       "Zipped.app/Contents/Library/LoginItems/Login.app/Contents/MacOS/Login"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Library/SystemExtensions/Drv.dext",
+      "parent_path": "Zipped.app",
+      "layout": "shallow",
+      "role": "driver-extension",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/Library/SystemExtensions/Drv.dext/Info.plist",
+      "executable_candidates": [],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Library/SystemExtensions/Net.systemextension",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "system-extension",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/Info.plist",
+      "executable_candidates": [
+       "Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/MacOS/Net"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Nested/Other.app",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "nested-application",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/Nested/Other.app/Contents/Info.plist",
+      "executable_candidates": [
+       "Zipped.app/Contents/Nested/Other.app/Contents/MacOS/Other"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/PlugIns/Gen.qlgenerator",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "plug-in",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/PlugIns/Gen.qlgenerator/Contents/Info.plist",
+      "executable_candidates": [],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/PlugIns/Imp.mdimporter",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "plug-in",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/PlugIns/Imp.mdimporter/Contents/Info.plist",
+      "executable_candidates": [],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/PlugIns/Share.appex",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "app-extension",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/PlugIns/Share.appex/Contents/Info.plist",
+      "executable_candidates": [
+       "Zipped.app/Contents/PlugIns/Share.appex/Contents/MacOS/Share"
+      ],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/PlugIns/Y.bundle",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "plug-in",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/PlugIns/Y.bundle/Contents/Info.plist",
+      "executable_candidates": [],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/Resources/Z.bundle",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "resource-bundle",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/Resources/Z.bundle/Contents/Info.plist",
+      "executable_candidates": [],
+      "signing_paths": []
+     },
+     {
+      "path": "Zipped.app/Contents/XPCServices/Svc.xpc",
+      "parent_path": "Zipped.app",
+      "layout": "macos-deep",
+      "role": "xpc-service",
+      "role_basis": "path-convention",
+      "info_plist_path": "Zipped.app/Contents/XPCServices/Svc.xpc/Contents/Info.plist",
+      "executable_candidates": [
+       "Zipped.app/Contents/XPCServices/Svc.xpc/Contents/MacOS/Svc"
+      ],
+      "signing_paths": []
+     }
+    ],
+    "components": {
+     "bundle_metadata": [
+      {
+       "path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "file"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Resources/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "file"
+      },
+      {
+       "path": "Zipped.app/Contents/Helpers/Helper.app/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/Info.plist",
+       "artifact_id": "art_1e26a54dff3cac8937b451c8def50be8d70466ae8f116ec0e2fd3acba9db3717",
+       "sha256": "21233dfd48586ed8c1daf90cd6496bcc8c8ae1bd10cf2a912460c50f840fec0b",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/Library/LoginItems/Login.app/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/Library/SystemExtensions/Drv.dext/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/Nested/Other.app/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/PlugIns/Gen.qlgenerator/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/PlugIns/Imp.mdimporter/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/PlugIns/Share.appex/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/PlugIns/Y.bundle/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/Resources/Z.bundle/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/Resources/Z.bundle/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      },
+      {
+       "path": "Zipped.app/Contents/XPCServices/Svc.xpc/Contents/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist"
+      }
+     ],
+     "executables": [
+      {
+       "path": "Zipped.app/Contents/Frameworks/Flutter.framework/Flutter",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Kit.framework/Kit",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/React.framework/React",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/hermes.framework/hermes",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/libswiftCore.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Helpers/Helper.app/Contents/MacOS/Helper",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Helpers/tool",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Library/LaunchServices/com.example.helper",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Library/LoginItems/Login.app/Contents/MacOS/Login",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/MacOS/Net",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/MacOS/Mac",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/MacOS/libfoo.so",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Nested/Other.app/Contents/MacOS/Other",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/PlugIns/Share.appex/Contents/MacOS/Share",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/XPCServices/Svc.xpc/Contents/MacOS/Svc",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      }
+     ],
+     "frameworks": [
+      {
+       "path": "Zipped.app/Contents/Frameworks/Flutter.framework/Flutter",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Kit.framework/Kit",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "file"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/_CodeSignature/CodeResources",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "file"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/React.framework/React",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/.DS_Store",
+       "artifact_id": "art_65a242b7817305b4793921d925e0d5a46b4ce7209472fc9c044e26e023fbcb00",
+       "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+       "format": "file"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Resources/Info.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "file"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/Frameworks/hermes.framework/hermes",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      }
+     ],
+     "native_libraries": [
+      {
+       "path": "Zipped.app/Contents/Frameworks/libswiftCore.dylib",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      },
+      {
+       "path": "Zipped.app/Contents/MacOS/libfoo.so",
+       "artifact_id": "art_e8274a23363722cc3fd39caae270f583f44d00e2dcf1b0f85f8c061d8cc0a457",
+       "sha256": "8f2ea5129325099575781d0884a057a0c73560e1e4afe08375a54dbc42405442",
+       "format": "mach-o"
+      }
+     ],
+     "javascript": [
+      {
+       "path": "Zipped.app/Contents/Resources/plain.js",
+       "artifact_id": "art_573ccb6e4ee29b472d9787f73474bf41074a0e7b6931d6e79a00cdf891ea3437",
+       "sha256": "53e678a8d3532ab3b0504c8fb0c25c0a1627a895035564f3129bf95f6cff878d",
+       "format": "javascript-bundle"
+      }
+     ],
+     "signing": [
+      {
+       "path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/_CodeSignature/CodeResources",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "file"
+      },
+      {
+       "path": "Zipped.app/Contents/_CodeSignature/CodeResources",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "file"
+      },
+      {
+       "path": "Zipped.app/Contents/embedded.provisionprofile",
+       "artifact_id": "art_b4bcd05f14269699ce44b61beab9da7f262437dcab54df8d517903225f2682a9",
+       "sha256": "1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0",
+       "format": "file"
+      }
+     ],
+     "privileged_helpers": [
+      {
+       "path": "Zipped.app/Contents/Library/LaunchServices/com.example.helper",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      }
+     ],
+     "launchd_plists": [
+      {
+       "path": "Zipped.app/Contents/Library/LaunchAgents/com.example.agent.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist",
+       "domain": "agent"
+      },
+      {
+       "path": "Zipped.app/Contents/Library/LaunchDaemons/com.example.helper.plist",
+       "artifact_id": "art_e026696025646b4c7f88e9800e45343ca12a833ca86a41e5412e36b5b7bd14b0",
+       "sha256": "4b902f1c8327204f4973a0e2b62cae9534846d3b9f76bdcc508e83964301100c",
+       "format": "plist",
+       "domain": "daemon"
+      }
+     ],
+     "helpers": [
+      {
+       "path": "Zipped.app/Contents/Helpers/tool",
+       "artifact_id": "art_f6580bc2f87776b3eb9074bb7d9ef98269a7e17a38304cf0c10c00b20c01cff3",
+       "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+       "format": "mach-o"
+      }
+     ]
+    },
+    "symlinks": [],
+    "runtime_families": [
+     "flutter",
+     "javascript",
+     "native",
+     "react-native",
+     "swift-objective-c",
+     "unity"
+    ],
+    "bridge_candidates": [
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Frameworks/Flutter.framework/Flutter",
+      "basis": "flutter-convention"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Frameworks/Kit.framework/Kit",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Frameworks/Kit.framework/Versions/A/Kit",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Frameworks/React.framework/React",
+      "basis": "react-native-convention"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/A/Two",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Frameworks/Two.framework/Versions/B/Two",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Frameworks/UnityFramework.framework/UnityFramework",
+      "basis": "unity-convention"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Frameworks/hermes.framework/hermes",
+      "basis": "react-native-convention"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Frameworks/libswiftCore.dylib",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Helpers/Helper.app/Contents/MacOS/Helper",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Helpers/tool",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Library/LaunchServices/com.example.helper",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Library/LoginItems/Login.app/Contents/MacOS/Login",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Library/SystemExtensions/Net.systemextension/Contents/MacOS/Net",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/MacOS/Mac",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/MacOS/libfoo.so",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/Nested/Other.app/Contents/MacOS/Other",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/PlugIns/Share.appex/Contents/MacOS/Share",
+      "basis": "javascript-and-native-content"
+     },
+     {
+      "source_path": "Zipped.app/Contents/Resources/plain.js",
+      "native_path": "Zipped.app/Contents/XPCServices/Svc.xpc/Contents/MacOS/Svc",
+      "basis": "javascript-and-native-content"
+     }
+    ],
+    "bridge_candidate_coverage": {
+     "status": "complete",
+     "total_candidates": 19,
+     "emitted_candidates": 19,
+     "omitted_candidates": 0
+    },
+    "coverage": {
+     "status": "complete-within-inventory",
+     "inventory_complete": true
+    },
+    "limitations": [
+     "A versioned framework has several version directories or no Versions/*/Resources/Info.plist; the Info.plist that Versions/Current selects is unknown because symlink targets are not inventoried.",
+     "AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.",
+     "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+     "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+     "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+     "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+     "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+     "A bridge basis is inferred from the native path and is repeated for every managed component."
+    ]
+   },
+   "confidence": "inferred",
+   "authority": "analyst-inference",
+   "environment": null,
+   "limitations": [
+    "A versioned framework has several version directories or no Versions/*/Resources/Info.plist; the Info.plist that Versions/Current selects is unknown because symlink targets are not inventoried.",
+    "AppleDouble sidecar entries (._* files and __MACOSX/) describe neighbouring files and are excluded from bundle roles.",
+    "Bundle roles follow path conventions. Read each info_plist_path with inspect_plist for CFBundleExecutable, identifiers, and declared services.",
+    "Bundle identifiers and signing claims require dedicated plist and CMS parsing; this projection reports only exact paths and hashes.",
+    "Runtime families are inferred from inventory formats and bounded framework path conventions, not observed runtime loading.",
+    "Generic framework and dylib paths do not establish Swift or Objective-C; this inventory projection does not decode language metadata.",
+    "Bridge candidates are path-based hypotheses, not observed runtime calls.",
+    "A bridge basis is inferred from the native path and is repeated for every managed component."
+   ],
+   "locations": [],
+   "evidence_links": [
+    "ev_51bf792b542ccf32a3653a5f78a2569f4c74368d181abe0ec301a5b391a012a9"
+   ]
+  }
+ }
+]

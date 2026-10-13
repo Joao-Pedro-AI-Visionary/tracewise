@@ -52,7 +52,8 @@ impl ZipArtifactReader {
                     },
                     declared_size: Some(entry.size()),
                     compressed_size: Some(entry.compressed_size()),
-                    executable: entry.unix_mode().map(|m| m & 0o111 != 0).unwrap_or(false),
+                    // zip.js: `executable = !symlink && (mode & 0o111) != 0`.
+                    executable: !symlink && entry.unix_mode().map(|m| m & 0o111 != 0).unwrap_or(false),
                     encrypted: false,
                     declared_sha256: None,
                     unpacked: false,

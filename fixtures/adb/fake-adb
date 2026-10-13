@@ -1,0 +1,510 @@
+#!/usr/bin/env python3
+"""Fake `adb` for the tracewise adb parity tests.
+
+Imitates the observable behaviour of Android Debug Bridge 34 against a small
+scripted device. It is pointed to by REA_ADB_PATH, exactly like the real
+binary, and is shared by the ORIGINAL REA (oracle) and the Rust port so both
+see byte-identical adb output.
+
+Environment:
+  FAKE_ADB_DEVICE_ROOT  directory acting as the device filesystem (required for
+                        file tools)
+  FAKE_ADB_STATE        directory holding packages.json and argv.log (required)
+  FAKE_ADB_MODE         comma separated misbehaviours:
+                        no_sha256sum, wrong_sha256sum, install_failure_exit0,
+                        uninstall_failure_exit0, garbage_devices, garbage_ps,
+                        no_wm_size, screencap_garbage, bugreport_no_path,
+                        pull_fail, pull_fail_lock_parent, slow_pull, no_launcher, am_refused, big_logcat,
+                        unauthorized_all, apk_dup_names
+  FAKE_ADB_VERSION_FAIL set: `adb version` exits 1 with empty output
+Every invocation appends its argv (JSON, one line) to $FAKE_ADB_STATE/argv.log.
+"""
+import hashlib
+import json
+import os
+import shlex
+import stat
+import struct
+import sys
+import time
+import zipfile
+import zlib
+
+ARGV = sys.argv[1:]
+STATE = os.environ.get("FAKE_ADB_STATE", "")
+ROOT = os.environ.get("FAKE_ADB_DEVICE_ROOT", "")
+MODES = set(filter(None, os.environ.get("FAKE_ADB_MODE", "").split(",")))
+
+KNOWN_SERIALS = {"emulator-5554", "R58M123ABC", "192.168.0.5:5555"}
+
+DEFAULT_PACKAGES = [
+    {"name": "android", "path": "/system/framework/framework-res.apk", "third_party": False},
+    {"name": "com.android.systemui", "path": "/system_ext/priv-app/SystemUI/SystemUI.apk", "third_party": False},
+    {"name": "com.example.app", "path": "/data/app/~~abc123==/com.example.app-xyz==/base.apk", "third_party": True,
+     "splits": ["split_config.arm64_v8a.apk", "split_config.en.apk"]},
+    {"name": "com.whatsapp", "path": "/data/app/~~def456==/com.whatsapp-uvw==/base.apk", "third_party": True},
+    {"name": "com.whatsapp.w4b", "path": "/data/app/~~ghi789==/com.whatsapp.w4b-rst==/base.apk", "third_party": True},
+]
+
+
+def log_argv():
+    if STATE:
+        os.makedirs(STATE, exist_ok=True)
+        with open(os.path.join(STATE, "argv.log"), "a", encoding="utf-8") as handle:
+            handle.write(json.dumps(ARGV) + "\n")
+
+
+def packages():
+    path = os.path.join(STATE, "packages.json")
+    if not os.path.exists(path):
+        with open(path, "w", encoding="utf-8") as handle:
+            json.dump(DEFAULT_PACKAGES, handle)
+    with open(path, encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def save_packages(items):
+    with open(os.path.join(STATE, "packages.json"), "w", encoding="utf-8") as handle:
+        json.dump(items, handle)
+
+
+def out(text="", code=0):
+    sys.stdout.write(text)
+    sys.stdout.flush()
+    sys.exit(code)
+
+
+def fail(message, code=1):
+    sys.stderr.write(message)
+    sys.stderr.flush()
+    sys.exit(code)
+
+
+def device_path(path):
+    return os.path.join(ROOT, path.lstrip("/"))
+
+
+def main():
+    log_argv()
+    args = list(ARGV)
+    if args[:1] == ["version"]:
+        if os.environ.get("FAKE_ADB_VERSION_FAIL"):
+            fail("", 1)
+        out(
+            "Android Debug Bridge version 1.0.41\n"
+            "Version 34.0.5-debian\n"
+            "Installed as /usr/lib/android-sdk/platform-tools/adb\n"
+            "Running on Linux 6.6.0 (x86_64)\n"
+        )
+    if args[:2] == ["devices", "-l"]:
+        if "garbage_devices" in MODES:
+            out("List of devices attached\nthis is not a device line\n")
+        out(
+            "* daemon not running; starting now at tcp:5037\n"
+            "* daemon started successfully\n"
+            "List of devices attached\n"
+            "emulator-5554          device product:sdk_gphone64_x86_64 model:sdk_gphone64_x86_64 device:emu64xa transport_id:1\n"
+            "R58M123ABC             device usb:1-1 product:o1sxeea model:SM_G991B device:o1s transport_id:2\n"
+            "192.168.0.5:5555       offline transport_id:3\n"
+            "0123456789ABCDEF       unauthorized usb:1-2 transport_id:4\n"
+            "\n"
+        )
+    serial = None
+    if args[:1] == ["-s"]:
+        serial = args[1]
+        args = args[2:]
+        if "unauthorized_all" in MODES:
+            fail("error: device unauthorized.\nThis adbd's $ADB_VENDOR_KEYS is not set; try 'adb kill-server' if that seems wrong.\n")
+        if serial == "OFFLINE":
+            fail("error: device offline\n")
+        if serial not in KNOWN_SERIALS:
+            fail("adb: device '%s' not found\n" % serial)
+    if not args:
+        fail("adb: missing command\n")
+    command, rest = args[0], args[1:]
+    if command == "shell":
+        shell(" ".join(rest))
+    elif command == "exec-out":
+        exec_out(rest)
+    elif command == "pull":
+        pull(rest)
+    elif command == "push":
+        push(rest)
+    elif command == "install":
+        install(rest)
+    elif command == "uninstall":
+        uninstall(rest)
+    elif command == "bugreport":
+        bugreport(rest)
+    else:
+        fail("adb: unknown command %s\n" % command)
+
+
+# ---------------------------------------------------------------- shell ----
+
+def shell(line):
+    words = shlex.split(line)
+    if not words:
+        out("")
+    head = words[0]
+    if head == "getprop":
+        out(getprop())
+    elif words[:3] == ["pm", "list", "packages"]:
+        out(pm_list(words[3:]))
+    elif words[:2] == ["pm", "path"]:
+        out(pm_path(words[2]))
+    elif words[:2] == ["pm", "list"] and words[2:3] == ["features"]:
+        out(features())
+    elif head == "logcat":
+        out(logcat(words[1:]))
+    elif words[:2] == ["dumpsys", "package"]:
+        out(dumpsys_package(words[2]))
+    elif words[:3] == ["dumpsys", "window", "windows"]:
+        out(
+            "WINDOW MANAGER WINDOWS (dumpsys window windows)\n"
+            "  Window #0 Window{1a2b3c u0 StatusBar}:\n"
+            "  mCurrentFocus=Window{abcdef u0 com.example.app/com.example.app.Main}\n"
+            "  mFocusedApp=ActivityRecord{123abc u0 com.example.app/.Main t12}\n"
+        )
+    elif words[:2] == ["ps", "-A"]:
+        out(ps())
+    elif head == "ls":
+        out(ls(words[1:]))
+    elif words[:2] == ["service", "list"]:
+        out(
+            "Found 3 services:\n"
+            "0\tcarrier_config: [com.android.internal.telephony.ICarrierConfigLoader]\n"
+            "1\tpackage: [android.content.pm.IPackageManager]\n"
+            "2\tcustom_service: []\n"
+        )
+    elif words[:2] == ["wm", "size"]:
+        if "no_wm_size" in MODES:
+            out("something unexpected\n")
+        out("Physical size: 1080x2340\nOverride size: 720x1560\n")
+    elif words[:2] == ["wm", "density"]:
+        out("Physical density: 420\n")
+    elif words[:2] == ["settings", "get"]:
+        settings = {
+            ("secure", "adb_enabled"): "1",
+            ("global", "adb_enabled"): "1",
+            ("system", "screen_brightness"): "102",
+            ("global", "device_name"): "Pixel 7 Pro",
+        }
+        out(settings.get((words[2], words[3]), "null") + "\n")
+    elif words[:2] == ["test", "-e"]:
+        sys.exit(0 if os.path.exists(device_path(words[2])) else 1)
+    elif head == "sha256sum":
+        sha256sum(words[1])
+    elif words[:3] == ["cmd", "package", "resolve-activity"]:
+        resolve_activity(words[-1])
+    elif words[:2] == ["am", "start"]:
+        am_start(words[2:])
+    elif words[:2] == ["am", "force-stop"]:
+        out("")
+    else:
+        fail("/system/bin/sh: %s: inaccessible or not found\n" % head, 127)
+
+
+def getprop():
+    props = {
+        "ro.build.version.release": "14",
+        "ro.build.version.sdk": "34",
+        "ro.build.version.security_patch": "2026-01-05",
+        "ro.build.id": "UE1A.230829.036",
+        "ro.build.fingerprint": "google/sdk_gphone64_x86_64/emu64xa:14/UE1A.230829.036/1:userdebug/dev-keys",
+        "ro.build.characteristics": "emulator",
+        "ro.debuggable": "1",
+        "ro.kernel.qemu": "1",
+        "ro.product.brand": "google",
+        "ro.product.device": "emu64xa",
+        "ro.product.manufacturer": "Google",
+        "ro.product.model": "sdk_gphone64_x86_64",
+        "ro.product.cpu.abilist": "x86_64,arm64-v8a",
+        "ro.secret.not_whitelisted": "hidden",
+        "ro.empty.value": "",
+    }
+    return "".join("[%s]: [%s]\n" % item for item in props.items())
+
+
+def pm_list(flags):
+    items = packages()
+    if "-3" in flags:
+        items = [i for i in items if i["third_party"]]
+    if "-s" in flags:
+        items = [i for i in items if not i["third_party"]]
+    text = "".join("package:%s=%s\n" % (i["path"], i["name"]) for i in items)
+    if "garbage_ps" in MODES:
+        text += "WARNING: unexpected line\n"
+    return text
+
+
+def pm_path(name):
+    for item in packages():
+        if item["name"] == name:
+            lines = ["package:" + item["path"]]
+            base_dir = item["path"].rsplit("/", 1)[0]
+            for split in item.get("splits", []):
+                lines.append("package:%s/%s" % (base_dir, split))
+            if "apk_dup_names" in MODES:
+                lines.append("package:/other/" + item["path"].rsplit("/", 1)[1])
+            return "\n".join(lines) + "\n"
+    return ""
+
+
+def features():
+    return (
+        "feature:reqGlEsVersion=0x30002\n"
+        "feature:android.hardware.camera\n"
+        "feature:android.software.webview\n"
+        "feature:android.hardware.touchscreen=1\n"
+        "oddly formatted line\n"
+    )
+
+
+def logcat(flags):
+    buffer_name = flags[flags.index("-b") + 1] if "-b" in flags else "main"
+    count = int(flags[flags.index("-t") + 1]) if "-t" in flags else 500
+    pid = flags[flags.index("--pid") + 1] if "--pid" in flags else None
+    if "big_logcat" in MODES:
+        lines = ["08-10 13:00:%02d.000 I/Tag( 123): line %d" % (i % 60, i) for i in range(count + 7)]
+    elif buffer_name == "main":
+        lines = [
+            "08-10 13:00:00.000  1000  1000 I Tag: first message",
+            "08-10 13:00:01.000  2000  2001 W Other: second é message",
+            "08-10 13:00:02.000  1000  1000 E Tag: third message",
+        ]
+    elif buffer_name == "crash":
+        lines = []
+    else:
+        lines = ["08-10 13:00:03.000  1000  1000 D %s: only line" % buffer_name]
+    if pid is not None:
+        lines = [l for l in lines if (" %s " % pid) in l]
+    lines = lines[-count:] if count else lines
+    return "".join(l + "\n" for l in lines)
+
+
+def dumpsys_package(name):
+    for item in packages():
+        if item["name"] == name:
+            return (
+                "Packages:\n"
+                "  Package [%s] (abc123):\n"
+                "    userId=10234\n"
+                "    versionCode=45 minSdk=24 targetSdk=34\n"
+                "    versionName=1.2.3\n"
+                "    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ]\n"
+                "    firstInstallTime=2026-01-02 03:04:05\n"
+                "    lastUpdateTime=2026-02-03 04:05:06\n"
+                "    installerPackageName=com.android.vending\n"
+                "    requested permissions:\n"
+                "      android.permission.INTERNET\n"
+                "      android.permission.CAMERA\n"
+                "      android.permission.ACCESS_NETWORK_STATE\n"
+                "    install permissions:\n"
+                "      android.permission.INTERNET: granted=true\n"
+            ) % name
+    return "Unable to find package: %s\n" % name
+
+
+def ps():
+    if "garbage_ps" in MODES:
+        return "USER PID PPID VSZ RSS WCHAN ADDR S NAME\nroot 1 0 1 1 0 0 S init\nweird line here\n"
+    return (
+        "USER            PID   PPID     VSZ    RSS WCHAN            ADDR S NAME\n"
+        "root              1      0 10866796  4160 0                  0 S init\n"
+        "u0_a123        1234    567 14229372 78900 0                  0 S com.example.app\n"
+        "system          900      1 13000000 55000 do_epoll_wait      0 S system_server\n"
+    )
+
+
+def ls(flags):
+    target = [f for f in flags if not f.startswith("-")][0]
+    local = device_path(target)
+    if not os.path.lexists(local):
+        fail("ls: %s: No such file or directory\n" % target)
+    if os.path.isdir(local) and not os.path.islink(local):
+        names = [".", ".."] + sorted(os.listdir(local))
+        rows = []
+        for name in names:
+            rows.append(ls_row(os.path.join(local, name), name))
+        return "total %d\n" % (len(rows) * 4) + "".join(rows)
+    return ls_row(local, target)
+
+
+def ls_row(local, name):
+    info = os.lstat(local)
+    mode = info.st_mode
+    kind = "d" if stat.S_ISDIR(mode) else "l" if stat.S_ISLNK(mode) else "-" if stat.S_ISREG(mode) else "c"
+    perms = kind + "".join(
+        ch if mode & bit else "-"
+        for ch, bit in zip(
+            "rwxrwxrwx",
+            [0o400, 0o200, 0o100, 0o040, 0o020, 0o010, 0o004, 0o002, 0o001],
+        )
+    )
+    suffix = ""
+    if stat.S_ISLNK(mode):
+        suffix = " -> " + os.readlink(local)
+    return "%s 2 shell shell %d 2026-01-01 10:00 %s%s\n" % (perms, info.st_size, name, suffix)
+
+
+def sha256sum(path):
+    if "no_sha256sum" in MODES:
+        fail("/system/bin/sh: sha256sum: inaccessible or not found\n", 127)
+    local = device_path(path)
+    if not os.path.isfile(local):
+        fail("sha256sum: %s: No such file or directory\n" % path)
+    digest = hashlib.sha256(open(local, "rb").read()).hexdigest()
+    if "wrong_sha256sum" in MODES:
+        digest = "0" * 64
+    out("%s  %s\n" % (digest, path))
+
+
+def resolve_activity(name):
+    if "no_launcher" in MODES or name not in {p["name"] for p in packages()}:
+        out("No activity found\n")
+    out(
+        "priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true\n"
+        "%s/%s.Main\n" % (name, name)
+    )
+
+
+def am_start(flags):
+    if "am_refused" in MODES:
+        out("Error: Activity class {com.example/com.example.Missing} does not exist.\n")
+    comp = flags[flags.index("-n") + 1] if "-n" in flags else "com.example.app/.Main"
+    action = flags[flags.index("-a") + 1] if "-a" in flags else "android.intent.action.MAIN"
+    data = flags[flags.index("-d") + 1] if "-d" in flags else None
+    parts = ["act=" + action]
+    if data:
+        parts.append("dat=" + data)
+    else:
+        parts.append("cat=[android.intent.category.LAUNCHER]")
+    if "-n" in flags:
+        parts.append("cmp=" + comp)
+    out(
+        "Starting: Intent { %s }\n"
+        "Status: ok\n"
+        "LaunchState: COLD\n"
+        "Activity: %s\n"
+        "TotalTime: 321\n"
+        "WaitTime: 330\n"
+        "Complete\n" % (" ".join(parts), comp)
+    )
+
+
+# ------------------------------------------------------------- non-shell ----
+
+def exec_out(rest):
+    if rest[:2] == ["screencap", "-p"]:
+        if "screencap_garbage" in MODES:
+            sys.stdout.buffer.write(b"not a png")
+            sys.stdout.flush()
+            sys.exit(0)
+        sys.stdout.buffer.write(make_png(1080, 2340))
+        sys.stdout.flush()
+        sys.exit(0)
+    fail("exec-out: unsupported\n")
+
+
+def make_png(width, height):
+    def chunk(tag, data):
+        body = tag + data
+        return struct.pack(">I", len(data)) + body + struct.pack(">I", zlib.crc32(body) & 0xFFFFFFFF)
+
+    # Tiny real PNG whose IHDR claims the requested size (single scanline data
+    # is not decoded by REA; only the header is read).
+    raw = zlib.compress(b"\x00\x00\x00\x00")
+    ihdr = struct.pack(">IIBBBBB", width, height, 8, 0, 0, 0, 0)
+    return b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", ihdr) + chunk(b"IDAT", raw) + chunk(b"IEND", b"")
+
+
+def installed_apk_paths():
+    found = set()
+    for item in packages():
+        found.add(item["path"])
+        base_dir = item["path"].rsplit("/", 1)[0]
+        for split in item.get("splits", []):
+            found.add(base_dir + "/" + split)
+        if "apk_dup_names" in MODES:
+            found.add("/other/" + item["path"].rsplit("/", 1)[1])
+    return found
+
+
+def pull(rest):
+    if "slow_pull" in MODES:
+        time.sleep(60)
+    if "pull_fail_lock_parent" in MODES:
+        # Make the package directory impossible to remove: lock its parent.
+        os.chmod(os.path.dirname(os.path.dirname(rest[1])), 0o555)
+        fail("adb: error: failed to copy remote read failed\n")
+    if "pull_fail" in MODES:
+        fail("adb: error: failed to copy '%s' to '%s': remote read failed\n" % (rest[0], rest[1]))
+    remote, local = rest[0], rest[1]
+    source = device_path(remote)
+    if os.path.exists(source):
+        data = open(source, "rb").read()
+    elif remote in installed_apk_paths():
+        # Installed APKs are synthesized: deterministic bytes per device path.
+        data = ("fake apk bytes for " + remote + "\n").encode()
+    else:
+        fail("adb: error: failed to stat remote object '%s': No such file or directory\n" % remote)
+    with open(local, "wb") as handle:
+        handle.write(data)
+    out("%s: 1 file pulled, 0 skipped. 1.2 MB/s (%d bytes in 0.001s)\n" % (remote, len(data)))
+
+
+def push(rest):
+    local, remote = rest[0], rest[1]
+    target = device_path(remote)
+    if not os.path.isdir(os.path.dirname(target)):
+        fail("adb: error: failed to copy '%s' to '%s': remote couldn't create file: No such file or directory\n" % (local, remote))
+    data = open(local, "rb").read()
+    with open(target, "wb") as handle:
+        handle.write(data)
+    out("%s: 1 file pushed, 0 skipped. 0.1 MB/s (%d bytes in 0.001s)\n" % (local, len(data)))
+
+
+def install(rest):
+    replace = "-r" in rest
+    apk = [r for r in rest if not r.startswith("-")][0]
+    stem = os.path.basename(apk)
+    name = stem[:-4] if stem.endswith(".apk") else stem
+    items = packages()
+    exists = any(i["name"] == name for i in items)
+    if exists and not replace:
+        message = "Failure [INSTALL_FAILED_ALREADY_EXISTS: Attempt to re-install %s without first uninstalling.]\n" % name
+        if "install_failure_exit0" in MODES:
+            out("Performing Streamed Install\n" + message)
+        sys.stdout.write("Performing Streamed Install\n")
+        fail("adb: failed to install %s: %s" % (apk, message))
+    if not exists:
+        items.append({"name": name, "path": "/data/app/~~new==/%s-1/base.apk" % name, "third_party": True})
+        save_packages(items)
+    out("Performing Streamed Install\nSuccess\n")
+
+
+def uninstall(rest):
+    name = rest[0]
+    items = packages()
+    if not any(i["name"] == name for i in items):
+        if "uninstall_failure_exit0" in MODES:
+            out("Failure [DELETE_FAILED_INTERNAL_ERROR]\n")
+        fail("Failure [DELETE_FAILED_INTERNAL_ERROR]\n")
+    save_packages([i for i in items if i["name"] != name])
+    out("Success\n")
+
+
+def bugreport(rest):
+    directory = rest[0] if rest else "."
+    if "bugreport_no_path" in MODES:
+        out("generating bugreport...\n")
+    path = os.path.join(directory, "bugreport-sdk_gphone64_x86_64-UE1A.230829.036-2026-01-01-10-00-00.zip")
+    info = zipfile.ZipInfo("bugreport.txt", date_time=(2026, 1, 1, 10, 0, 0))
+    with zipfile.ZipFile(path, "w") as archive:
+        archive.writestr(info, "dumpstate output\n" * 8)
+    out("Bug report copied to %s\n" % path)
+
+
+if __name__ == "__main__":
+    main()

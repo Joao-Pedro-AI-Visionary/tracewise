@@ -1,0 +1,662 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_e1f373c66154ebe5a55faa1ea8eb1b62fb2ffd97d246f9b55354ef9414826483\",\"subject\":{\"name\":\"tiny_static\",\"digest\":{\"sha256\":\"331ba252e8a2dd21a9660d82c28b60eb651925fc54c254027d8a0e07cd67ce68\"},\"format\":\"elf\",\"architecture\":\"x86_64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/elf/tiny_static\"},\"provider\":{\"id\":\"pwntools-elf\",\"name\":\"REA pwntools ELF adapter\",\"version\":\"pwntools@4.15.0;pyelftools@0.33;unicorn@2.1.2\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_binary_layout\",\"parameters\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/elf/tiny_static\"},\"raw_result\":null,\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/elf/tiny_static\",\"sha256\":\"331ba252e8a2dd21a9660d82c28b60eb651925fc54c254027d8a0e07cd67ce68\",\"bytes\":9144},\"format\":\"elf\",\"architecture\":{\"machine\":\"EM_X86_64\",\"bits\":64,\"byte_order\":\"little\"},\"image_type\":\"ET_EXEC\",\"entry_point\":{\"reported_value\":\"0x401000\",\"meaning\":\"linked-virtual-address\",\"execution_status\":\"unknown\"},\"runtime_load_base\":null,\"sections\":[{\"index\":0,\"name\":{\"display\":\"\",\"bytes_base64\":\"\",\"location\":{\"offset\":\"0x2118\",\"bytes\":\"0x1\"},\"unknown_reason\":null},\"name_offset\":\"0x0\",\"type\":\"SHT_NULL\",\"header_location\":{\"offset\":\"0x2178\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x0\",\"size\":\"0x0\",\"alignment\":\"0x0\",\"flags\":\"0x0\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"none\"},{\"index\":1,\"name\":{\"display\":\".note.gnu.property\",\"bytes_base64\":\"Lm5vdGUuZ251LnByb3BlcnR5\",\"location\":{\"offset\":\"0x2133\",\"bytes\":\"0x13\"},\"unknown_reason\":null},\"name_offset\":\"0x1b\",\"type\":\"SHT_NOTE\",\"header_location\":{\"offset\":\"0x21b8\",\"bytes\":\"0x40\"},\"address\":\"0x4001c8\",\"offset\":\"0x1c8\",\"size\":\"0x20\",\"alignment\":\"0x8\",\"flags\":\"0x2\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":2,\"name\":{\"display\":\".note.gnu.build-id\",\"bytes_base64\":\"Lm5vdGUuZ251LmJ1aWxkLWlk\",\"location\":{\"offset\":\"0x2146\",\"bytes\":\"0x13\"},\"unknown_reason\":null},\"name_offset\":\"0x2e\",\"type\":\"SHT_NOTE\",\"header_location\":{\"offset\":\"0x21f8\",\"bytes\":\"0x40\"},\"address\":\"0x4001e8\",\"offset\":\"0x1e8\",\"size\":\"0x24\",\"alignment\":\"0x4\",\"flags\":\"0x2\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":3,\"name\":{\"display\":\".text\",\"bytes_base64\":\"LnRleHQ=\",\"location\":{\"offset\":\"0x2159\",\"bytes\":\"0x6\"},\"unknown_reason\":null},\"name_offset\":\"0x41\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x2238\",\"bytes\":\"0x40\"},\"address\":\"0x401000\",\"offset\":\"0x1000\",\"size\":\"0x14\",\"alignment\":\"0x1\",\"flags\":\"0x6\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":4,\"name\":{\"display\":\".eh_frame\",\"bytes_base64\":\"LmVoX2ZyYW1l\",\"location\":{\"offset\":\"0x215f\",\"bytes\":\"0xa\"},\"unknown_reason\":null},\"name_offset\":\"0x47\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x2278\",\"bytes\":\"0x40\"},\"address\":\"0x402000\",\"offset\":\"0x2000\",\"size\":\"0x38\",\"alignment\":\"0x8\",\"flags\":\"0x2\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":5,\"name\":{\"display\":\".comment\",\"bytes_base64\":\"LmNvbW1lbnQ=\",\"location\":{\"offset\":\"0x2169\",\"bytes\":\"0x9\"},\"unknown_reason\":null},\"name_offset\":\"0x51\",\"type\":\"SHT_PROGBITS\",\"header_location\":{\"offset\":\"0x22b8\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x2038\",\"size\":\"0x2d\",\"alignment\":\"0x1\",\"flags\":\"0x30\",\"link\":0,\"info\":0,\"entry_size\":\"0x1\",\"file_backing\":\"file\"},{\"index\":6,\"name\":{\"display\":\".symtab\",\"bytes_base64\":\"LnN5bXRhYg==\",\"location\":{\"offset\":\"0x2119\",\"bytes\":\"0x8\"},\"unknown_reason\":null},\"name_offset\":\"0x1\",\"type\":\"SHT_SYMTAB\",\"header_location\":{\"offset\":\"0x22f8\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x2068\",\"size\":\"0x90\",\"alignment\":\"0x8\",\"flags\":\"0x0\",\"link\":7,\"info\":2,\"entry_size\":\"0x18\",\"file_backing\":\"file\"},{\"index\":7,\"name\":{\"display\":\".strtab\",\"bytes_base64\":\"LnN0cnRhYg==\",\"location\":{\"offset\":\"0x2121\",\"bytes\":\"0x8\"},\"unknown_reason\":null},\"name_offset\":\"0x9\",\"type\":\"SHT_STRTAB\",\"header_location\":{\"offset\":\"0x2338\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x20f8\",\"size\":\"0x20\",\"alignment\":\"0x1\",\"flags\":\"0x0\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"},{\"index\":8,\"name\":{\"display\":\".shstrtab\",\"bytes_base64\":\"LnNoc3RydGFi\",\"location\":{\"offset\":\"0x2129\",\"bytes\":\"0xa\"},\"unknown_reason\":null},\"name_offset\":\"0x11\",\"type\":\"SHT_STRTAB\",\"header_location\":{\"offset\":\"0x2378\",\"bytes\":\"0x40\"},\"address\":\"0x0\",\"offset\":\"0x2118\",\"size\":\"0x5a\",\"alignment\":\"0x1\",\"flags\":\"0x0\",\"link\":0,\"info\":0,\"entry_size\":\"0x0\",\"file_backing\":\"file\"}],\"segments\":[{\"index\":0,\"type\":\"PT_LOAD\",\"header_location\":{\"offset\":\"0x40\",\"bytes\":\"0x38\"},\"offset\":\"0x0\",\"file_size\":\"0x20c\",\"memory_size\":\"0x20c\",\"virtual_address\":\"0x400000\",\"physical_address\":\"0x400000\",\"alignment\":\"0x1000\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":1,\"type\":\"PT_LOAD\",\"header_location\":{\"offset\":\"0x78\",\"bytes\":\"0x38\"},\"offset\":\"0x1000\",\"file_size\":\"0x14\",\"memory_size\":\"0x14\",\"virtual_address\":\"0x401000\",\"physical_address\":\"0x401000\",\"alignment\":\"0x1000\",\"flags\":\"0x5\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":true}},{\"index\":2,\"type\":\"PT_LOAD\",\"header_location\":{\"offset\":\"0xb0\",\"bytes\":\"0x38\"},\"offset\":\"0x2000\",\"file_size\":\"0x38\",\"memory_size\":\"0x38\",\"virtual_address\":\"0x402000\",\"physical_address\":\"0x402000\",\"alignment\":\"0x1000\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":3,\"type\":\"PT_NOTE\",\"header_location\":{\"offset\":\"0xe8\",\"bytes\":\"0x38\"},\"offset\":\"0x1c8\",\"file_size\":\"0x20\",\"memory_size\":\"0x20\",\"virtual_address\":\"0x4001c8\",\"physical_address\":\"0x4001c8\",\"alignment\":\"0x8\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":4,\"type\":\"PT_NOTE\",\"header_location\":{\"offset\":\"0x120\",\"bytes\":\"0x38\"},\"offset\":\"0x1e8\",\"file_size\":\"0x24\",\"memory_size\":\"0x24\",\"virtual_address\":\"0x4001e8\",\"physical_address\":\"0x4001e8\",\"alignment\":\"0x4\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":5,\"type\":\"PT_GNU_PROPERTY\",\"header_location\":{\"offset\":\"0x158\",\"bytes\":\"0x38\"},\"offset\":\"0x1c8\",\"file_size\":\"0x20\",\"memory_size\":\"0x20\",\"virtual_address\":\"0x4001c8\",\"physical_address\":\"0x4001c8\",\"alignment\":\"0x8\",\"flags\":\"0x4\",\"file_backing\":\"file\",\"permissions\":{\"read\":true,\"write\":false,\"execute\":false}},{\"index\":6,\"type\":\"PT_GNU_STACK\",\"header_location\":{\"offset\":\"0x190\",\"bytes\":\"0x38\"},\"offset\":\"0x0\",\"file_size\":\"0x0\",\"memory_size\":\"0x0\",\"virtual_address\":\"0x0\",\"physical_address\":\"0x0\",\"alignment\":\"0x10\",\"flags\":\"0x6\",\"file_backing\":\"none\",\"permissions\":{\"read\":true,\"write\":true,\"execute\":false}}],\"symbols\":[{\"table_index\":6,\"entry_index\":0,\"name\":{\"display\":\"\",\"bytes_base64\":\"\",\"location\":{\"offset\":\"0x20f8\",\"bytes\":\"0x1\"},\"unknown_reason\":null},\"name_offset\":\"0x0\",\"location\":{\"offset\":\"0x2068\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"undefined\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_UNDEF\"},{\"table_index\":6,\"entry_index\":1,\"name\":{\"display\":\"tiny.c\",\"bytes_base64\":\"dGlueS5j\",\"location\":{\"offset\":\"0x20f9\",\"bytes\":\"0x7\"},\"unknown_reason\":null},\"name_offset\":\"0x1\",\"location\":{\"offset\":\"0x2080\",\"bytes\":\"0x18\"},\"value\":\"0x0\",\"value_meaning\":\"no-address\",\"size\":\"0x0\",\"binding\":\"STB_LOCAL\",\"type\":\"STT_FILE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":\"SHN_ABS\"},{\"table_index\":6,\"entry_index\":2,\"name\":{\"display\":\"_start\",\"bytes_base64\":\"X3N0YXJ0\",\"location\":{\"offset\":\"0x2105\",\"bytes\":\"0x7\"},\"unknown_reason\":null},\"name_offset\":\"0xd\",\"location\":{\"offset\":\"0x2098\",\"bytes\":\"0x18\"},\"value\":\"0x401000\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x14\",\"binding\":\"STB_GLOBAL\",\"type\":\"STT_FUNC\",\"visibility\":\"STV_DEFAULT\",\"section_index\":3},{\"table_index\":6,\"entry_index\":3,\"name\":{\"display\":\"__bss_start\",\"bytes_base64\":\"X19ic3Nfc3RhcnQ=\",\"location\":{\"offset\":\"0x2100\",\"bytes\":\"0xc\"},\"unknown_reason\":null},\"name_offset\":\"0x8\",\"location\":{\"offset\":\"0x20b0\",\"bytes\":\"0x18\"},\"value\":\"0x403000\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_GLOBAL\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":4},{\"table_index\":6,\"entry_index\":4,\"name\":{\"display\":\"_edata\",\"bytes_base64\":\"X2VkYXRh\",\"location\":{\"offset\":\"0x210c\",\"bytes\":\"0x7\"},\"unknown_reason\":null},\"name_offset\":\"0x14\",\"location\":{\"offset\":\"0x20c8\",\"bytes\":\"0x18\"},\"value\":\"0x403000\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_GLOBAL\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":4},{\"table_index\":6,\"entry_index\":5,\"name\":{\"display\":\"_end\",\"bytes_base64\":\"X2VuZA==\",\"location\":{\"offset\":\"0x2113\",\"bytes\":\"0x5\"},\"unknown_reason\":null},\"name_offset\":\"0x1b\",\"location\":{\"offset\":\"0x20e0\",\"bytes\":\"0x18\"},\"value\":\"0x403000\",\"value_meaning\":\"linked-virtual-address\",\"size\":\"0x0\",\"binding\":\"STB_GLOBAL\",\"type\":\"STT_NOTYPE\",\"visibility\":\"STV_DEFAULT\",\"section_index\":4}],\"relocations\":[],\"packed_relative_relocations\":[],\"relocation_inventory_completeness\":\"unknown\",\"linkage\":{\"needed_libraries\":[],\"interpreters\":[],\"got\":[],\"plt\":[],\"convenience_maps_completeness\":\"unknown\",\"runtime_library_paths\":null},\"mitigations\":{\"evidence_kind\":\"inferred\",\"position_independent\":false,\"nx_indicator\":true,\"executable_stack_indicator\":false,\"stack_canary_indicator\":false,\"relro\":null},\"diagnostics\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false},\"limitations\":[\"PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.\",\"SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.\",\"Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.\",\"Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.\",\"Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.\",\"Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.\",\"Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.\",\"GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.\",\"Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.\",\"This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.\",\"Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.\",\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.\",\"SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.\",\"Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.\",\"Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.\",\"Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.\",\"Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.\",\"Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.\",\"GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.\",\"Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.\",\"This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.\",\"Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.\",\"Effective owned Python resource soft limits: {\\\"address_space_bytes\\\": 3221225472, \\\"cpu_seconds\\\": 30, \\\"file_size_bytes\\\": 67108864}. Inherited tighter limits are retained.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/elf/tiny_static\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_e1f373c66154ebe5a55faa1ea8eb1b62fb2ffd97d246f9b55354ef9414826483",
+   "subject": {
+    "name": "tiny_static",
+    "digest": {
+     "sha256": "331ba252e8a2dd21a9660d82c28b60eb651925fc54c254027d8a0e07cd67ce68"
+    },
+    "format": "elf",
+    "architecture": "x86_64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/elf/tiny_static"
+   },
+   "provider": {
+    "id": "pwntools-elf",
+    "name": "REA pwntools ELF adapter",
+    "version": "pwntools@4.15.0;pyelftools@0.33;unicorn@2.1.2"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_binary_layout",
+   "parameters": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/elf/tiny_static"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "artifact": {
+     "path": "/workspace/wt/native_static/fixtures/native_static/elf/tiny_static",
+     "sha256": "331ba252e8a2dd21a9660d82c28b60eb651925fc54c254027d8a0e07cd67ce68",
+     "bytes": 9144
+    },
+    "format": "elf",
+    "architecture": {
+     "machine": "EM_X86_64",
+     "bits": 64,
+     "byte_order": "little"
+    },
+    "image_type": "ET_EXEC",
+    "entry_point": {
+     "reported_value": "0x401000",
+     "meaning": "linked-virtual-address",
+     "execution_status": "unknown"
+    },
+    "runtime_load_base": null,
+    "sections": [
+     {
+      "index": 0,
+      "name": {
+       "display": "",
+       "bytes_base64": "",
+       "location": {
+        "offset": "0x2118",
+        "bytes": "0x1"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x0",
+      "type": "SHT_NULL",
+      "header_location": {
+       "offset": "0x2178",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x0",
+      "size": "0x0",
+      "alignment": "0x0",
+      "flags": "0x0",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "none"
+     },
+     {
+      "index": 1,
+      "name": {
+       "display": ".note.gnu.property",
+       "bytes_base64": "Lm5vdGUuZ251LnByb3BlcnR5",
+       "location": {
+        "offset": "0x2133",
+        "bytes": "0x13"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x1b",
+      "type": "SHT_NOTE",
+      "header_location": {
+       "offset": "0x21b8",
+       "bytes": "0x40"
+      },
+      "address": "0x4001c8",
+      "offset": "0x1c8",
+      "size": "0x20",
+      "alignment": "0x8",
+      "flags": "0x2",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 2,
+      "name": {
+       "display": ".note.gnu.build-id",
+       "bytes_base64": "Lm5vdGUuZ251LmJ1aWxkLWlk",
+       "location": {
+        "offset": "0x2146",
+        "bytes": "0x13"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x2e",
+      "type": "SHT_NOTE",
+      "header_location": {
+       "offset": "0x21f8",
+       "bytes": "0x40"
+      },
+      "address": "0x4001e8",
+      "offset": "0x1e8",
+      "size": "0x24",
+      "alignment": "0x4",
+      "flags": "0x2",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 3,
+      "name": {
+       "display": ".text",
+       "bytes_base64": "LnRleHQ=",
+       "location": {
+        "offset": "0x2159",
+        "bytes": "0x6"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x41",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x2238",
+       "bytes": "0x40"
+      },
+      "address": "0x401000",
+      "offset": "0x1000",
+      "size": "0x14",
+      "alignment": "0x1",
+      "flags": "0x6",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 4,
+      "name": {
+       "display": ".eh_frame",
+       "bytes_base64": "LmVoX2ZyYW1l",
+       "location": {
+        "offset": "0x215f",
+        "bytes": "0xa"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x47",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x2278",
+       "bytes": "0x40"
+      },
+      "address": "0x402000",
+      "offset": "0x2000",
+      "size": "0x38",
+      "alignment": "0x8",
+      "flags": "0x2",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 5,
+      "name": {
+       "display": ".comment",
+       "bytes_base64": "LmNvbW1lbnQ=",
+       "location": {
+        "offset": "0x2169",
+        "bytes": "0x9"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x51",
+      "type": "SHT_PROGBITS",
+      "header_location": {
+       "offset": "0x22b8",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x2038",
+      "size": "0x2d",
+      "alignment": "0x1",
+      "flags": "0x30",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x1",
+      "file_backing": "file"
+     },
+     {
+      "index": 6,
+      "name": {
+       "display": ".symtab",
+       "bytes_base64": "LnN5bXRhYg==",
+       "location": {
+        "offset": "0x2119",
+        "bytes": "0x8"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x1",
+      "type": "SHT_SYMTAB",
+      "header_location": {
+       "offset": "0x22f8",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x2068",
+      "size": "0x90",
+      "alignment": "0x8",
+      "flags": "0x0",
+      "link": 7,
+      "info": 2,
+      "entry_size": "0x18",
+      "file_backing": "file"
+     },
+     {
+      "index": 7,
+      "name": {
+       "display": ".strtab",
+       "bytes_base64": "LnN0cnRhYg==",
+       "location": {
+        "offset": "0x2121",
+        "bytes": "0x8"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x9",
+      "type": "SHT_STRTAB",
+      "header_location": {
+       "offset": "0x2338",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x20f8",
+      "size": "0x20",
+      "alignment": "0x1",
+      "flags": "0x0",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     },
+     {
+      "index": 8,
+      "name": {
+       "display": ".shstrtab",
+       "bytes_base64": "LnNoc3RydGFi",
+       "location": {
+        "offset": "0x2129",
+        "bytes": "0xa"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x11",
+      "type": "SHT_STRTAB",
+      "header_location": {
+       "offset": "0x2378",
+       "bytes": "0x40"
+      },
+      "address": "0x0",
+      "offset": "0x2118",
+      "size": "0x5a",
+      "alignment": "0x1",
+      "flags": "0x0",
+      "link": 0,
+      "info": 0,
+      "entry_size": "0x0",
+      "file_backing": "file"
+     }
+    ],
+    "segments": [
+     {
+      "index": 0,
+      "type": "PT_LOAD",
+      "header_location": {
+       "offset": "0x40",
+       "bytes": "0x38"
+      },
+      "offset": "0x0",
+      "file_size": "0x20c",
+      "memory_size": "0x20c",
+      "virtual_address": "0x400000",
+      "physical_address": "0x400000",
+      "alignment": "0x1000",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 1,
+      "type": "PT_LOAD",
+      "header_location": {
+       "offset": "0x78",
+       "bytes": "0x38"
+      },
+      "offset": "0x1000",
+      "file_size": "0x14",
+      "memory_size": "0x14",
+      "virtual_address": "0x401000",
+      "physical_address": "0x401000",
+      "alignment": "0x1000",
+      "flags": "0x5",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": true
+      }
+     },
+     {
+      "index": 2,
+      "type": "PT_LOAD",
+      "header_location": {
+       "offset": "0xb0",
+       "bytes": "0x38"
+      },
+      "offset": "0x2000",
+      "file_size": "0x38",
+      "memory_size": "0x38",
+      "virtual_address": "0x402000",
+      "physical_address": "0x402000",
+      "alignment": "0x1000",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 3,
+      "type": "PT_NOTE",
+      "header_location": {
+       "offset": "0xe8",
+       "bytes": "0x38"
+      },
+      "offset": "0x1c8",
+      "file_size": "0x20",
+      "memory_size": "0x20",
+      "virtual_address": "0x4001c8",
+      "physical_address": "0x4001c8",
+      "alignment": "0x8",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 4,
+      "type": "PT_NOTE",
+      "header_location": {
+       "offset": "0x120",
+       "bytes": "0x38"
+      },
+      "offset": "0x1e8",
+      "file_size": "0x24",
+      "memory_size": "0x24",
+      "virtual_address": "0x4001e8",
+      "physical_address": "0x4001e8",
+      "alignment": "0x4",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 5,
+      "type": "PT_GNU_PROPERTY",
+      "header_location": {
+       "offset": "0x158",
+       "bytes": "0x38"
+      },
+      "offset": "0x1c8",
+      "file_size": "0x20",
+      "memory_size": "0x20",
+      "virtual_address": "0x4001c8",
+      "physical_address": "0x4001c8",
+      "alignment": "0x8",
+      "flags": "0x4",
+      "file_backing": "file",
+      "permissions": {
+       "read": true,
+       "write": false,
+       "execute": false
+      }
+     },
+     {
+      "index": 6,
+      "type": "PT_GNU_STACK",
+      "header_location": {
+       "offset": "0x190",
+       "bytes": "0x38"
+      },
+      "offset": "0x0",
+      "file_size": "0x0",
+      "memory_size": "0x0",
+      "virtual_address": "0x0",
+      "physical_address": "0x0",
+      "alignment": "0x10",
+      "flags": "0x6",
+      "file_backing": "none",
+      "permissions": {
+       "read": true,
+       "write": true,
+       "execute": false
+      }
+     }
+    ],
+    "symbols": [
+     {
+      "table_index": 6,
+      "entry_index": 0,
+      "name": {
+       "display": "",
+       "bytes_base64": "",
+       "location": {
+        "offset": "0x20f8",
+        "bytes": "0x1"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x0",
+      "location": {
+       "offset": "0x2068",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "undefined",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_UNDEF"
+     },
+     {
+      "table_index": 6,
+      "entry_index": 1,
+      "name": {
+       "display": "tiny.c",
+       "bytes_base64": "dGlueS5j",
+       "location": {
+        "offset": "0x20f9",
+        "bytes": "0x7"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x1",
+      "location": {
+       "offset": "0x2080",
+       "bytes": "0x18"
+      },
+      "value": "0x0",
+      "value_meaning": "no-address",
+      "size": "0x0",
+      "binding": "STB_LOCAL",
+      "type": "STT_FILE",
+      "visibility": "STV_DEFAULT",
+      "section_index": "SHN_ABS"
+     },
+     {
+      "table_index": 6,
+      "entry_index": 2,
+      "name": {
+       "display": "_start",
+       "bytes_base64": "X3N0YXJ0",
+       "location": {
+        "offset": "0x2105",
+        "bytes": "0x7"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0xd",
+      "location": {
+       "offset": "0x2098",
+       "bytes": "0x18"
+      },
+      "value": "0x401000",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x14",
+      "binding": "STB_GLOBAL",
+      "type": "STT_FUNC",
+      "visibility": "STV_DEFAULT",
+      "section_index": 3
+     },
+     {
+      "table_index": 6,
+      "entry_index": 3,
+      "name": {
+       "display": "__bss_start",
+       "bytes_base64": "X19ic3Nfc3RhcnQ=",
+       "location": {
+        "offset": "0x2100",
+        "bytes": "0xc"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x8",
+      "location": {
+       "offset": "0x20b0",
+       "bytes": "0x18"
+      },
+      "value": "0x403000",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_GLOBAL",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": 4
+     },
+     {
+      "table_index": 6,
+      "entry_index": 4,
+      "name": {
+       "display": "_edata",
+       "bytes_base64": "X2VkYXRh",
+       "location": {
+        "offset": "0x210c",
+        "bytes": "0x7"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x14",
+      "location": {
+       "offset": "0x20c8",
+       "bytes": "0x18"
+      },
+      "value": "0x403000",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_GLOBAL",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": 4
+     },
+     {
+      "table_index": 6,
+      "entry_index": 5,
+      "name": {
+       "display": "_end",
+       "bytes_base64": "X2VuZA==",
+       "location": {
+        "offset": "0x2113",
+        "bytes": "0x5"
+       },
+       "unknown_reason": null
+      },
+      "name_offset": "0x1b",
+      "location": {
+       "offset": "0x20e0",
+       "bytes": "0x18"
+      },
+      "value": "0x403000",
+      "value_meaning": "linked-virtual-address",
+      "size": "0x0",
+      "binding": "STB_GLOBAL",
+      "type": "STT_NOTYPE",
+      "visibility": "STV_DEFAULT",
+      "section_index": 4
+     }
+    ],
+    "relocations": [],
+    "packed_relative_relocations": [],
+    "relocation_inventory_completeness": "unknown",
+    "linkage": {
+     "needed_libraries": [],
+     "interpreters": [],
+     "got": [],
+     "plt": [],
+     "convenience_maps_completeness": "unknown",
+     "runtime_library_paths": null
+    },
+    "mitigations": {
+     "evidence_kind": "inferred",
+     "position_independent": false,
+     "nx_indicator": true,
+     "executable_stack_indicator": false,
+     "stack_canary_indicator": false,
+     "relro": null
+    },
+    "diagnostics": {
+     "stdout": "",
+     "stderr": "",
+     "truncated": false
+    },
+    "limitations": [
+     "PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.",
+     "SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.",
+     "Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.",
+     "Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.",
+     "Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.",
+     "Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.",
+     "Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.",
+     "GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.",
+     "Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.",
+     "This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.",
+     "Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.",
+     "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "PT_NULL payload fields are unused and retain their reported numbers without file-byte or permission claims. Zero-file-size segments provide no file bytes.",
+    "SHN_XINDEX symbol values remain unresolved in this upstream representation; an external index table does not establish a resolved index in this report.",
+    "Reported values preserve linked addresses, section offsets, TLS offsets, alignment and absolute values separately. Runtime load base and library paths are unknown.",
+    "Names are display strings plus raw bytes and file ranges where resolvable; section/table/entry indices preserve identity and duplicates. Name ranges include their terminating NUL; raw name bytes exclude it.",
+    "Ordinary relocation rows cover REL/RELA. RELR tables retain complete encoded bytes and upstream-decoded offsets as derived evidence; per-offset packed-word locations and implicit addends remain unknown. Relocation inventory completeness is unknown, including other encodings and missing section tables.",
+    "Relocation symbol index zero uses a zero symbol value without a table lookup. Positive indices reference validated original symbol-table entries; raw table and symbol indices remain reported.",
+    "Relocatable relocation targets with SHN_UNDEF or inactive SHT_NULL headers retain their reported section index/offset as unknown; they do not establish an associated target section.",
+    "GOT/PLT are derived upstream convenience maps; PLT inference can emulate selected instructions in Unicorn. They do not establish target runtime behavior; aliases may collapse and warnings may indicate incomplete coverage. Their completeness is unknown.",
+    "Mitigations are upstream static heuristics, not runtime protection. ET_DYN does not prove an executable; absent canary symbols do not prove every function unprotected.",
+    "This profile inspects ELF EXEC/DYN/REL layout only. It does not analyze recorded cores, resolve loaded libraries, launch the target as a host process or start a debugger.",
+    "Symbol/relocation inventories reflect original section tables. A sectionless image can still report dynamic dependency names; missing tables do not prove absence of dynamic symbols or relocations.",
+    "Effective owned Python resource soft limits: {\"address_space_bytes\": 3221225472, \"cpu_seconds\": 30, \"file_size_bytes\": 67108864}. Inherited tighter limits are retained."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "/workspace/wt/native_static/fixtures/native_static/elf/tiny_static"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

@@ -27,6 +27,8 @@ futures-util = { workspace = true }
 chrono = { workspace = true }
 minijinja = { workspace = true }
 proc-supervisor = { path = "../proc-supervisor" }
+# electron_active: process groups, PR_SET_PDEATHSIG, atexit
+libc = "0.2"
 
 [dev-dependencies]
 jsonschema = { workspace = true }

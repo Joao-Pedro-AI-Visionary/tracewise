@@ -1,0 +1,240 @@
+[
+ {
+  "name": "http_attached",
+  "profile": "file:http_attached.json",
+  "server": {
+   "profile": "legacy",
+   "port": 38745
+  },
+  "files": {
+   "http_attached.json": "{\"url\":\"http://127.0.0.1:38745/mcp\",\"mode\":\"attached\",\"headers\":{\"X-Fixture-Key\":\"fixture-key-value\"}}"
+  },
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   },
+   {
+    "name": "search_procedures",
+    "arguments": {
+     "pattern": "^engine_(leaf|branch)$",
+     "mode": "regex",
+     "case_sensitive": true
+    }
+   },
+   {
+    "name": "list_strings",
+    "arguments": {}
+   },
+   {
+    "name": "search_strings",
+    "arguments": {
+     "pattern": "engine"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "0x401150"
+    }
+   },
+   {
+    "name": "procedure_pseudo_code",
+    "arguments": {
+     "procedure": "engine_branch"
+    }
+   },
+   {
+    "name": "procedure_assembly",
+    "arguments": {
+     "procedure": "engine_entry"
+    }
+   },
+   {
+    "name": "procedure_callers",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   },
+   {
+    "name": "procedure_callees",
+    "arguments": {
+     "procedure": "engine_entry"
+    }
+   },
+   {
+    "name": "read_function_instructions",
+    "arguments": {
+     "procedure": "engine_apply"
+    }
+   },
+   {
+    "name": "xrefs",
+    "arguments": {
+     "address": "0x404028"
+    }
+   },
+   {
+    "name": "analyze_function",
+    "arguments": {
+     "procedure": "engine_branch"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "no_such_function"
+    }
+   },
+   {
+    "name": "list_documents",
+    "arguments": {}
+   },
+   {
+    "name": "get_call_graph",
+    "arguments": {
+     "address": "engine_entry"
+    }
+   },
+   {
+    "name": "trace_call_path",
+    "arguments": {
+     "start": "main",
+     "goal": "engine_leaf"
+    }
+   }
+  ]
+ },
+ {
+  "name": "http_headless",
+  "profile": "file:http_headless.json",
+  "server": {
+   "profile": "modern",
+   "port": 38746
+  },
+  "files": {
+   "http_headless.json": "{\"url\":\"http://127.0.0.1:38746/mcp\",\"mode\":\"headless\",\"headers\":{\"X-Fixture-Key\":\"fixture-key-value\"}}"
+  },
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   },
+   {
+    "name": "search_procedures",
+    "arguments": {
+     "pattern": "^engine_(leaf|branch)$",
+     "mode": "regex",
+     "case_sensitive": true
+    }
+   },
+   {
+    "name": "list_strings",
+    "arguments": {}
+   },
+   {
+    "name": "search_strings",
+    "arguments": {
+     "pattern": "engine"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "0x401150"
+    }
+   },
+   {
+    "name": "procedure_pseudo_code",
+    "arguments": {
+     "procedure": "engine_branch"
+    }
+   },
+   {
+    "name": "procedure_assembly",
+    "arguments": {
+     "procedure": "engine_entry"
+    }
+   },
+   {
+    "name": "procedure_callers",
+    "arguments": {
+     "procedure": "engine_leaf"
+    }
+   },
+   {
+    "name": "procedure_callees",
+    "arguments": {
+     "procedure": "engine_entry"
+    }
+   },
+   {
+    "name": "read_function_instructions",
+    "arguments": {
+     "procedure": "engine_apply"
+    }
+   },
+   {
+    "name": "xrefs",
+    "arguments": {
+     "address": "0x404028"
+    }
+   },
+   {
+    "name": "analyze_function",
+    "arguments": {
+     "procedure": "engine_branch"
+    }
+   },
+   {
+    "name": "procedure_address",
+    "arguments": {
+     "procedure": "no_such_function"
+    }
+   },
+   {
+    "name": "list_documents",
+    "arguments": {}
+   },
+   {
+    "name": "get_call_graph",
+    "arguments": {
+     "address": "engine_entry"
+    }
+   },
+   {
+    "name": "trace_call_path",
+    "arguments": {
+     "start": "main",
+     "goal": "engine_leaf"
+    }
+   }
+  ]
+ }
+]

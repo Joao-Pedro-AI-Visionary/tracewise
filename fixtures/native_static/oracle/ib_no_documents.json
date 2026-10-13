@@ -1,0 +1,77 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_9729ac0cd6c71d1cec1de71591f465750e3ad094e2c52ff17cdd6ac0208f9e3c\",\"subject\":{\"name\":\"App\",\"digest\":{\"sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"decode_interface_builder\",\"parameters\":{\"max_documents\":64,\"max_objects\":20000,\"max_connections\":40000},\"raw_result\":null,\"normalized_result\":{\"target_sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\",\"documents\":[],\"graph\":{\"target_sha256\":\"8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604\",\"provider\":{\"id\":\"rea-artifact-graph\",\"version\":\"1\",\"tool_version\":\"rea-interface-builder/1\"},\"nodes\":[],\"edges\":[],\"coverage\":[{\"facet\":\"archive_decode\",\"status\":\"complete\",\"reason\":null,\"examined\":0,\"omitted\":0}],\"truncated\":false},\"limitations\":[\"The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.\",\"A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.\",\"Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.\",\"Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.\",\"A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.\",\"Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.\",\"Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.\"],\"locations\":[],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_9729ac0cd6c71d1cec1de71591f465750e3ad094e2c52ff17cdd6ac0208f9e3c",
+   "subject": {
+    "name": "App",
+    "digest": {
+     "sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Fixture.app/Contents/MacOS/App"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "decode_interface_builder",
+   "parameters": {
+    "max_documents": 64,
+    "max_objects": 20000,
+    "max_connections": 40000
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "target_sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604",
+    "documents": [],
+    "graph": {
+     "target_sha256": "8466266df7ec19008b8156f544489b2ada827b63c4674dfc0373e81cd2099604",
+     "provider": {
+      "id": "rea-artifact-graph",
+      "version": "1",
+      "tool_version": "rea-interface-builder/1"
+     },
+     "nodes": [],
+     "edges": [],
+     "coverage": [
+      {
+       "facet": "archive_decode",
+       "status": "complete",
+       "reason": null,
+       "examined": 0,
+       "omitted": 0
+      }
+     ],
+     "truncated": false
+    },
+    "limitations": [
+     "The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.",
+     "A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.",
+     "Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.",
+     "Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.",
+    "A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.",
+    "Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.",
+    "Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown."
+   ],
+   "locations": [],
+   "evidence_links": []
+  }
+ }
+]

@@ -1,0 +1,19 @@
+[
+  {"id": "mac_app", "path": "$FIX/apple/Mac.app"},
+  {"id": "app_without_contents", "path": "$FIX/apple/NoContents.app"},
+  {"id": "flat_ios_layout", "path": "$FIX/apple/Shallow.app"},
+  {"id": "heavy_app", "path": "$FIX/apple/Heavy.app"},
+  {"id": "bundle_fixture_app", "path": "$FIX/bundles/Fixture.app"},
+  {"id": "bundle_flat_app", "path": "$FIX/bundles/Flat.app"},
+  {"id": "bundle_ib_app", "path": "$FIX/bundles/Ib.app"},
+  {"id": "bundle_rich_app", "path": "$FIX/bundles/Rich.app"},
+  {"id": "app_without_a_supported_layout", "path": "$FIX/apple/Upper.app"},
+  {"id": "directory_that_is_not_an_app", "path": "$FIX/apple/Loose", "tracewise": "directory-target"},
+  {"id": "directory_without_app_suffix", "path": "$FIX/apple/NoApp", "tracewise": "directory-target"},
+  {"id": "plain_directory_of_plists", "path": "$FIX/bundles/plain", "tracewise": "directory-target"},
+  {"id": "ipa", "path": "$FIX/apple/Fixture.ipa"},
+  {"id": "ipa_lowercase_suffix", "path": "$FIX/apple/Lower.ipa"},
+  {"id": "zip", "path": "$FIX/apple/Fixture.zip"},
+  {"id": "zip_of_a_bundle", "path": "$FIX/apple/Zipped.zip"},
+  {"id": "mach_o_inside_a_bundle", "path": "$FIX/bundles/Fixture.app/Contents/MacOS/App"}
+]

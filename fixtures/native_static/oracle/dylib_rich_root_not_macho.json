@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"invalid_request\",\"category\":\"invalid_input\",\"message\":\"Analysis input is invalid. Check the arguments and try again.\",\"retryable\":true,\"remediation\":{\"action\":\"Correct the listed arguments and retry.\"},\"details\":{\"operation\":\"trace_dylib_resolution\",\"issues\":[{\"path\":[\"roots\",0],\"reason\":\"invalid_value\",\"message\":\"Root Contents/Info.plist is not a Mach-O image\"}]}}}"
+   }
+  ],
+  "isError": true
+ }
+]

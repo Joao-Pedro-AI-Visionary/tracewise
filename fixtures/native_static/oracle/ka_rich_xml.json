@@ -1,0 +1,436 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_4aaaf5923934c966f6343120237fda5a0ace1f78b69fdf6104cde2485c350a5a\",\"subject\":{\"name\":\"Ib\",\"digest\":{\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_keyed_archive\",\"parameters\":{\"path\":\"Contents/Resources/RichXml.plist\",\"offset\":0,\"limit\":20000},\"raw_result\":null,\"normalized_result\":{\"target_sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"archive_path\":\"Contents/Resources/RichXml.plist\",\"archive_sha256\":\"9f472368e9d3fe37a6c113bdb4ef6fee3c4d63b268cb441f55b4dbfc4c8aef1c\",\"archive_format\":\"xml-plist\",\"roots\":{\"alt\":{\"CF$UID\":3},\"root\":{\"CF$UID\":1}},\"objects\":[{\"id\":0,\"kind\":\"nil\",\"class_id\":null,\"class_name\":null,\"status\":\"nil\",\"value\":\"$null\"},{\"id\":1,\"kind\":\"archived-object\",\"class_id\":8,\"class_name\":\"Fixture.Record\",\"status\":\"unknown-class\",\"value\":{\"$class\":{\"CF$UID\":8},\"NS.objects\":[{\"CF$UID\":2},{\"CF$UID\":3},{\"CF$UID\":4},{\"CF$UID\":999},{\"CF$UID\":0},{\"CF$UID\":1}]}},{\"id\":2,\"kind\":\"scalar\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":\"plain string\"},{\"id\":3,\"kind\":\"archived-object\",\"class_id\":9,\"class_name\":null,\"status\":\"unresolved-class\",\"value\":{\"$class\":{\"CF$UID\":9},\"big\":{\"$plist_type\":\"integer\",\"decimal\":\"4611686018427387904\"},\"bigneg\":{\"$plist_type\":\"integer\",\"decimal\":\"-9223372036854775808\"},\"blob\":{\"$plist_type\":\"data\",\"base64\":\"AAEC/w==\"},\"count\":42,\"emoji\":\"snowman ☃ 😀\",\"flag\":true,\"missing\":{\"CF$UID\":7},\"negative\":-7,\"nested\":{\"deep\":{\"uid\":{\"CF$UID\":2}},\"list\":[{\"CF$UID\":2},1,\"x\"]},\"none\":false,\"owner\":{\"CF$UID\":1},\"ratio\":1.5,\"when\":{\"$plist_type\":\"date\",\"iso8601\":\"2024-01-02T03:04:05.000Z\"},\"whole\":2}},{\"id\":4,\"kind\":\"archived-object\",\"class_id\":9,\"class_name\":null,\"status\":\"unresolved-class\",\"value\":{\"$class\":{\"CF$UID\":9},\"mask\":{\"$plist_type\":\"integer\",\"decimal\":\"9007199254740993\"},\"name\":{\"CF$UID\":2}}},{\"id\":5,\"kind\":\"scalar\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":3.25},{\"id\":6,\"kind\":\"scalar\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":7},{\"id\":7,\"kind\":\"class-descriptor\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":{\"$classes\":[\"NSMutableArray\",\"NSArray\",\"NSObject\"],\"$classname\":\"NSMutableArray\"}},{\"id\":8,\"kind\":\"class-descriptor\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":{\"$classes\":[\"Fixture.Record\",\"NSObject\"],\"$classname\":\"Fixture.Record\"}}],\"references\":[{\"source\":null,\"path\":[\"alt\"],\"target\":3,\"status\":\"resolved\",\"raw\":{\"CF$UID\":3}},{\"source\":null,\"path\":[\"root\"],\"target\":1,\"status\":\"resolved\",\"raw\":{\"CF$UID\":1}},{\"source\":1,\"path\":[\"$class\"],\"target\":8,\"status\":\"resolved\",\"raw\":{\"CF$UID\":8}},{\"source\":1,\"path\":[\"NS.objects\",0],\"target\":2,\"status\":\"resolved\",\"raw\":{\"CF$UID\":2}},{\"source\":1,\"path\":[\"NS.objects\",1],\"target\":3,\"status\":\"resolved\",\"raw\":{\"CF$UID\":3}},{\"source\":1,\"path\":[\"NS.objects\",2],\"target\":4,\"status\":\"resolved\",\"raw\":{\"CF$UID\":4}},{\"source\":1,\"path\":[\"NS.objects\",3],\"target\":999,\"status\":\"unresolved\",\"raw\":{\"CF$UID\":999}},{\"source\":1,\"path\":[\"NS.objects\",4],\"target\":0,\"status\":\"nil\",\"raw\":{\"CF$UID\":0}},{\"source\":1,\"path\":[\"NS.objects\",5],\"target\":1,\"status\":\"resolved\",\"raw\":{\"CF$UID\":1}},{\"source\":3,\"path\":[\"$class\"],\"target\":9,\"status\":\"unresolved\",\"raw\":{\"CF$UID\":9}},{\"source\":3,\"path\":[\"missing\"],\"target\":7,\"status\":\"resolved\",\"raw\":{\"CF$UID\":7}},{\"source\":3,\"path\":[\"nested\",\"deep\",\"uid\"],\"target\":2,\"status\":\"resolved\",\"raw\":{\"CF$UID\":2}},{\"source\":3,\"path\":[\"nested\",\"list\",0],\"target\":2,\"status\":\"resolved\",\"raw\":{\"CF$UID\":2}},{\"source\":3,\"path\":[\"owner\"],\"target\":1,\"status\":\"resolved\",\"raw\":{\"CF$UID\":1}},{\"source\":4,\"path\":[\"$class\"],\"target\":9,\"status\":\"unresolved\",\"raw\":{\"CF$UID\":9}},{\"source\":4,\"path\":[\"name\"],\"target\":2,\"status\":\"resolved\",\"raw\":{\"CF$UID\":2}}],\"total_objects\":9,\"total_references\":16,\"offset\":0,\"next_offset\":null,\"truncated\":false,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\",\"3 observed integer literal(s) in the original archive exceed the exact range of a JSON number. Decoded numbers may lose integer precision unless represented as { \\\"$plist_type\\\": \\\"integer\\\", \\\"decimal\\\": \\\"<exact digits>\\\" }; the original archive bytes retain those literals.\",\"3 unambiguous integer value(s) are reported with exact decimal text as { \\\"$plist_type\\\": \\\"integer\\\", \\\"decimal\\\": \\\"<exact digits>\\\" }.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\",\"3 observed integer literal(s) in the original archive exceed the exact range of a JSON number. Decoded numbers may lose integer precision unless represented as { \\\"$plist_type\\\": \\\"integer\\\", \\\"decimal\\\": \\\"<exact digits>\\\" }; the original archive bytes retain those literals.\",\"3 unambiguous integer value(s) are reported with exact decimal text as { \\\"$plist_type\\\": \\\"integer\\\", \\\"decimal\\\": \\\"<exact digits>\\\" }.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"Contents/Resources/RichXml.plist\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_4aaaf5923934c966f6343120237fda5a0ace1f78b69fdf6104cde2485c350a5a",
+   "subject": {
+    "name": "Ib",
+    "digest": {
+     "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_keyed_archive",
+   "parameters": {
+    "path": "Contents/Resources/RichXml.plist",
+    "offset": 0,
+    "limit": 20000
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+    "archive_path": "Contents/Resources/RichXml.plist",
+    "archive_sha256": "9f472368e9d3fe37a6c113bdb4ef6fee3c4d63b268cb441f55b4dbfc4c8aef1c",
+    "archive_format": "xml-plist",
+    "roots": {
+     "alt": {
+      "CF$UID": 3
+     },
+     "root": {
+      "CF$UID": 1
+     }
+    },
+    "objects": [
+     {
+      "id": 0,
+      "kind": "nil",
+      "class_id": null,
+      "class_name": null,
+      "status": "nil",
+      "value": "$null"
+     },
+     {
+      "id": 1,
+      "kind": "archived-object",
+      "class_id": 8,
+      "class_name": "Fixture.Record",
+      "status": "unknown-class",
+      "value": {
+       "$class": {
+        "CF$UID": 8
+       },
+       "NS.objects": [
+        {
+         "CF$UID": 2
+        },
+        {
+         "CF$UID": 3
+        },
+        {
+         "CF$UID": 4
+        },
+        {
+         "CF$UID": 999
+        },
+        {
+         "CF$UID": 0
+        },
+        {
+         "CF$UID": 1
+        }
+       ]
+      }
+     },
+     {
+      "id": 2,
+      "kind": "scalar",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": "plain string"
+     },
+     {
+      "id": 3,
+      "kind": "archived-object",
+      "class_id": 9,
+      "class_name": null,
+      "status": "unresolved-class",
+      "value": {
+       "$class": {
+        "CF$UID": 9
+       },
+       "big": {
+        "$plist_type": "integer",
+        "decimal": "4611686018427387904"
+       },
+       "bigneg": {
+        "$plist_type": "integer",
+        "decimal": "-9223372036854775808"
+       },
+       "blob": {
+        "$plist_type": "data",
+        "base64": "AAEC/w=="
+       },
+       "count": 42,
+       "emoji": "snowman ☃ 😀",
+       "flag": true,
+       "missing": {
+        "CF$UID": 7
+       },
+       "negative": -7,
+       "nested": {
+        "deep": {
+         "uid": {
+          "CF$UID": 2
+         }
+        },
+        "list": [
+         {
+          "CF$UID": 2
+         },
+         1,
+         "x"
+        ]
+       },
+       "none": false,
+       "owner": {
+        "CF$UID": 1
+       },
+       "ratio": 1.5,
+       "when": {
+        "$plist_type": "date",
+        "iso8601": "2024-01-02T03:04:05.000Z"
+       },
+       "whole": 2
+      }
+     },
+     {
+      "id": 4,
+      "kind": "archived-object",
+      "class_id": 9,
+      "class_name": null,
+      "status": "unresolved-class",
+      "value": {
+       "$class": {
+        "CF$UID": 9
+       },
+       "mask": {
+        "$plist_type": "integer",
+        "decimal": "9007199254740993"
+       },
+       "name": {
+        "CF$UID": 2
+       }
+      }
+     },
+     {
+      "id": 5,
+      "kind": "scalar",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": 3.25
+     },
+     {
+      "id": 6,
+      "kind": "scalar",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": 7
+     },
+     {
+      "id": 7,
+      "kind": "class-descriptor",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": {
+       "$classes": [
+        "NSMutableArray",
+        "NSArray",
+        "NSObject"
+       ],
+       "$classname": "NSMutableArray"
+      }
+     },
+     {
+      "id": 8,
+      "kind": "class-descriptor",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": {
+       "$classes": [
+        "Fixture.Record",
+        "NSObject"
+       ],
+       "$classname": "Fixture.Record"
+      }
+     }
+    ],
+    "references": [
+     {
+      "source": null,
+      "path": [
+       "alt"
+      ],
+      "target": 3,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 3
+      }
+     },
+     {
+      "source": null,
+      "path": [
+       "root"
+      ],
+      "target": 1,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 1
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "$class"
+      ],
+      "target": 8,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 8
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "NS.objects",
+       0
+      ],
+      "target": 2,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 2
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "NS.objects",
+       1
+      ],
+      "target": 3,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 3
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "NS.objects",
+       2
+      ],
+      "target": 4,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 4
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "NS.objects",
+       3
+      ],
+      "target": 999,
+      "status": "unresolved",
+      "raw": {
+       "CF$UID": 999
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "NS.objects",
+       4
+      ],
+      "target": 0,
+      "status": "nil",
+      "raw": {
+       "CF$UID": 0
+      }
+     },
+     {
+      "source": 1,
+      "path": [
+       "NS.objects",
+       5
+      ],
+      "target": 1,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 1
+      }
+     },
+     {
+      "source": 3,
+      "path": [
+       "$class"
+      ],
+      "target": 9,
+      "status": "unresolved",
+      "raw": {
+       "CF$UID": 9
+      }
+     },
+     {
+      "source": 3,
+      "path": [
+       "missing"
+      ],
+      "target": 7,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 7
+      }
+     },
+     {
+      "source": 3,
+      "path": [
+       "nested",
+       "deep",
+       "uid"
+      ],
+      "target": 2,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 2
+      }
+     },
+     {
+      "source": 3,
+      "path": [
+       "nested",
+       "list",
+       0
+      ],
+      "target": 2,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 2
+      }
+     },
+     {
+      "source": 3,
+      "path": [
+       "owner"
+      ],
+      "target": 1,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 1
+      }
+     },
+     {
+      "source": 4,
+      "path": [
+       "$class"
+      ],
+      "target": 9,
+      "status": "unresolved",
+      "raw": {
+       "CF$UID": 9
+      }
+     },
+     {
+      "source": 4,
+      "path": [
+       "name"
+      ],
+      "target": 2,
+      "status": "resolved",
+      "raw": {
+       "CF$UID": 2
+      }
+     }
+    ],
+    "total_objects": 9,
+    "total_references": 16,
+    "offset": 0,
+    "next_offset": null,
+    "truncated": false,
+    "limitations": [
+     "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+     "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+     "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.",
+     "3 observed integer literal(s) in the original archive exceed the exact range of a JSON number. Decoded numbers may lose integer precision unless represented as { \"$plist_type\": \"integer\", \"decimal\": \"<exact digits>\" }; the original archive bytes retain those literals.",
+     "3 unambiguous integer value(s) are reported with exact decimal text as { \"$plist_type\": \"integer\", \"decimal\": \"<exact digits>\" }."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+    "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+    "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.",
+    "3 observed integer literal(s) in the original archive exceed the exact range of a JSON number. Decoded numbers may lose integer precision unless represented as { \"$plist_type\": \"integer\", \"decimal\": \"<exact digits>\" }; the original archive bytes retain those literals.",
+    "3 unambiguous integer value(s) are reported with exact decimal text as { \"$plist_type\": \"integer\", \"decimal\": \"<exact digits>\" }."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Resources/RichXml.plist"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

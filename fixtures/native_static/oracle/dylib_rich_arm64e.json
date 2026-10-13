@@ -1,0 +1,195 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_5ae7779b1e18c3f2ef20bba8343035678bace0f10ba44432ca1aab95ece0d2be\",\"subject\":{\"name\":\"Rich\",\"digest\":{\"sha256\":\"6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Rich.app/Contents/MacOS/Rich\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"trace_dylib_resolution\",\"parameters\":{\"architecture\":\"arm64e\"},\"raw_result\":null,\"normalized_result\":{\"root_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Rich.app\",\"target_sha256\":\"6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020\",\"roots\":[],\"images\":[{\"path\":\"Contents/Frameworks/libbad.dylib\",\"sha256\":\"0e9bf087ecd680fc1305aab60b22a92fe2c686d8ec976a624bdd348fba246309\",\"parse_status\":\"malformed\",\"reason\":\"load commands extend beyond the Mach-O slice\",\"slices\":[]},{\"path\":\"Contents/Frameworks/libnotdylib.dylib\",\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":72,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"execute\",\"file_type_code\":2,\"platform\":1,\"platforms\":[1],\"install_name\":null,\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Contents/MacOS/Rich\",\"sha256\":\"6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":1096,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"execute\",\"file_type_code\":2,\"platform\":1,\"platforms\":[1],\"install_name\":null,\"rpaths\":[\"@executable_path/../Frameworks\",\"@loader_path/../Plugins\",\"/opt/absolute\"],\"dyld_environment\":[\"DYLD_PRINT_RPATHS=1\"],\"code_signature_present\":true}]},{\"path\":\"Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper\",\"sha256\":\"27c49475bfd77c8773b78139ed6c0afa519799563c87a2a6df5e7a3356e05017\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"x86_64\",\"slice_offset\":0,\"slice_size\":176,\"cpu_type\":16777223,\"cpu_subtype\":3,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"execute\",\"file_type_code\":2,\"platform\":1,\"platforms\":[1],\"install_name\":null,\"rpaths\":[\"@executable_path/../../../../../Frameworks\"],\"dyld_environment\":[],\"code_signature_present\":false}]}],\"edges\":[],\"findings\":[],\"coverage\":{\"status\":\"partial\",\"unparsed_images\":[\"Contents/Frameworks/libbad.dylib\"],\"roots_without_architecture\":[\"Contents/Frameworks/libnotdylib.dylib\",\"Contents/MacOS/Rich\",\"Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper\"]},\"limitations\":[\"LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.\",\"Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.\",\"Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.\",\"Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.\",\"Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.\",\"@loader_path uses each image's symlink-resolved path within the analyzed root.\",\"Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.\",\"Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.\",\"Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.\",\"Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.\",\"Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.\",\"Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.\",\"@loader_path uses each image's symlink-resolved path within the analyzed root.\",\"Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.\",\"Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libbad.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/Frameworks/libnotdylib.dylib\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/MacOS/Rich\"},{\"kind\":\"artifact-path\",\"path\":\"Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_5ae7779b1e18c3f2ef20bba8343035678bace0f10ba44432ca1aab95ece0d2be",
+   "subject": {
+    "name": "Rich",
+    "digest": {
+     "sha256": "6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Rich.app/Contents/MacOS/Rich"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "trace_dylib_resolution",
+   "parameters": {
+    "architecture": "arm64e"
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "root_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Rich.app",
+    "target_sha256": "6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020",
+    "roots": [],
+    "images": [
+     {
+      "path": "Contents/Frameworks/libbad.dylib",
+      "sha256": "0e9bf087ecd680fc1305aab60b22a92fe2c686d8ec976a624bdd348fba246309",
+      "parse_status": "malformed",
+      "reason": "load commands extend beyond the Mach-O slice",
+      "slices": []
+     },
+     {
+      "path": "Contents/Frameworks/libnotdylib.dylib",
+      "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 72,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "execute",
+        "file_type_code": 2,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": null,
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Contents/MacOS/Rich",
+      "sha256": "6b0ac27cd527f158909e3f531ae686e389ac680085e854c169454283cee34020",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 1096,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "execute",
+        "file_type_code": 2,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": null,
+        "rpaths": [
+         "@executable_path/../Frameworks",
+         "@loader_path/../Plugins",
+         "/opt/absolute"
+        ],
+        "dyld_environment": [
+         "DYLD_PRINT_RPATHS=1"
+        ],
+        "code_signature_present": true
+       }
+      ]
+     },
+     {
+      "path": "Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper",
+      "sha256": "27c49475bfd77c8773b78139ed6c0afa519799563c87a2a6df5e7a3356e05017",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "x86_64",
+        "slice_offset": 0,
+        "slice_size": 176,
+        "cpu_type": 16777223,
+        "cpu_subtype": 3,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "execute",
+        "file_type_code": 2,
+        "platform": 1,
+        "platforms": [
+         1
+        ],
+        "install_name": null,
+        "rpaths": [
+         "@executable_path/../../../../../Frameworks"
+        ],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     }
+    ],
+    "edges": [],
+    "findings": [],
+    "coverage": {
+     "status": "partial",
+     "unparsed_images": [
+      "Contents/Frameworks/libbad.dylib"
+     ],
+     "roots_without_architecture": [
+      "Contents/Frameworks/libnotdylib.dylib",
+      "Contents/MacOS/Rich",
+      "Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper"
+     ]
+    },
+    "limitations": [
+     "LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.",
+     "Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.",
+     "Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.",
+     "Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.",
+     "Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.",
+     "@loader_path uses each image's symlink-resolved path within the analyzed root.",
+     "Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.",
+     "Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.",
+    "Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.",
+    "Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.",
+    "Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.",
+    "Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.",
+    "@loader_path uses each image's symlink-resolved path within the analyzed root.",
+    "Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.",
+    "Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libbad.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Frameworks/libnotdylib.dylib"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/MacOS/Rich"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Contents/XPCServices/Helper.xpc/Contents/MacOS/Helper"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

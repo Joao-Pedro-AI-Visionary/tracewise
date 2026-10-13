@@ -1,0 +1,31 @@
+[package]
+name = "tracewise-native"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+tracewise-domain = { path = "../domain" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+thiserror = { workspace = true }
+libc = "0.2"
+indexmap = { version = "2", features = ["serde"] }
+roxmltree = "0.20"
+regex = { workspace = true }
+base64 = { workspace = true }
+chrono = { workspace = true }
+unicode-normalization = "0.1.24"
+evmole = "=0.9.3"
+iced-x86 = { version = "=1.21.0", default-features = false, features = ["std", "decoder", "instr_info"] }
+icu_collator = "=2.3.1"
+symbolic-demangle = { version = "=12.18.3", default-features = false, features = ["swift"] }
+symbolic-common = "=12.18.3"
+sha1 = "=0.10.7"
+cms = { version = "=0.2.3", default-features = false, features = ["std"] }
+x509-cert = { version = "=0.2.5", default-features = false, features = ["std"] }
+der = { version = "=0.7.10", features = ["std", "oid", "alloc"] }

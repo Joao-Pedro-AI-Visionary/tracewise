@@ -1,0 +1,158 @@
+[
+ {
+  "name": "not_configured",
+  "profile": "none",
+  "files": {},
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "name": "shape_rejected",
+  "profile": "file:reg_shape.json",
+  "files": {
+   "reg_shape.json": "{\"command\":\"x\",\"unexpected\":true}"
+  },
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "name": "remote_url_rejected",
+  "profile": "file:reg_url.json",
+  "files": {
+   "reg_url.json": "{\"url\":\"https://example.com/mcp\"}"
+  },
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "name": "credentials_in_url_rejected",
+  "profile": "file:reg_credentials.json",
+  "files": {
+   "reg_credentials.json": "{\"url\":\"http://user:pw@127.0.0.1:9/mcp\"}"
+  },
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "name": "bad_mode_rejected",
+  "profile": "file:reg_mode.json",
+  "files": {
+   "reg_mode.json": "{\"command\":\"x\",\"mode\":\"force_gui\"}"
+  },
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "name": "malformed_json",
+  "profile": "file:reg_malformed.json",
+  "files": {
+   "reg_malformed.json": "not json"
+  },
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "name": "missing_file",
+  "profile": "file:reg_missing.json",
+  "files": {},
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ },
+ {
+  "name": "relative_workspace_root_rejected",
+  "profile": "file:reg_root.json",
+  "files": {
+   "reg_root.json": "{\"command\":\"x\",\"workspaceRoot\":\"relative\"}"
+  },
+  "env": {},
+  "calls": [
+   {
+    "name": "open_binary",
+    "arguments": {
+     "path": "/tmp/tracewise-ida-parity/sample_elf"
+    }
+   },
+   {
+    "name": "list_procedures",
+    "arguments": {}
+   }
+  ]
+ }
+]

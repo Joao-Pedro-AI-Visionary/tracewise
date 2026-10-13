@@ -1,0 +1,139 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_e900aeaab1f20669b23f5af82a8a8c59acf5638beb490e756fa4deef357c78f5\",\"subject\":{\"name\":\"meta.hex\",\"digest\":{\"sha256\":\"19f6366548392c203a31272943f93d084fee6068c21103e622e0d5762ed16222\"},\"format\":\"file\",\"architecture\":null,\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/evm/meta.hex\"},\"provider\":{\"id\":\"evmole-interface\",\"name\":\"REA EVM interface adapter\",\"version\":\"evmole@0.9.3\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_evm_interface\",\"parameters\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/evm/meta.hex\",\"encoding\":\"hex\"},\"raw_result\":{\"metadata\":{\"bytecodeOffset\":168,\"cborLength\":51,\"entries\":[{\"key\":\"ipfs\",\"value\":{\"type\":\"bytes\",\"value\":\"000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021\"}},{\"key\":\"solc\",\"value\":{\"type\":\"bytes\",\"value\":\"000814\"}}]},\"functions\":[{\"selector\":\"2125b65b\",\"bytecodeOffset\":52,\"dispatch\":\"abi\",\"arguments\":\"uint32,address,uint224\",\"stateMutability\":\"pure\"},{\"selector\":\"b69ef8a8\",\"bytecodeOffset\":68,\"dispatch\":\"abi\",\"arguments\":\"\",\"stateMutability\":\"pure\"}]},\"normalized_result\":{\"artifact\":{\"path\":\"/workspace/wt/native_static/fixtures/native_static/evm/meta.hex\",\"sha256\":\"19f6366548392c203a31272943f93d084fee6068c21103e622e0d5762ed16222\",\"bytes\":442,\"encoding\":\"hex\"},\"bytecode\":{\"sha256\":\"1e887afa4b8ed4990dbf8bfe5895857d8d00116d6ca158b9d19e675616842d2e\",\"bytes\":221,\"hex\":\"6080604052348015600e575f80fd5b50600436106030575f3560e01c80632125b65b146034578063b69ef8a8146044575b5f80fd5b6044603f3660046046565b505050565b005b5f805f606084860312156057575f80fd5b833563ffffffff811681146069575f80fd5b925060208401356001600160a01b03811681146083575f80fd5b915060408401356001600160e01b0381168114609d575f80fd5b80915050925092509256a264697066735822000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202164736f6c63430008140033\",\"digest_algorithm\":\"sha256\",\"kind\":\"unknown\",\"deployment_authenticity\":\"unknown\",\"hardfork\":\"unknown\"},\"evidence_kind\":\"inferred\",\"functions\":[{\"selector\":\"0x2125b65b\",\"bytecode_offset\":52,\"dispatch\":\"abi\",\"inferred_arguments\":\"uint32,address,uint224\",\"inferred_state_mutability\":\"pure\"},{\"selector\":\"0xb69ef8a8\",\"bytecode_offset\":68,\"dispatch\":\"abi\",\"inferred_arguments\":\"\",\"inferred_state_mutability\":\"pure\"}],\"discovery_completeness\":\"unknown\",\"runtime_execution\":\"not-performed\",\"diagnostics\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false},\"limitations\":[\"Configured worker resource soft limits: address_space_bytes=3221225472, cpu_seconds=30, file_size_bytes=16777216. Selected from inherited tighter limits; original hard limits are retained. Effective worker limits are not independently probed.\",\"Upstream may also report terminal metadata while recovering selectors. Its reported values are retained in raw_result, but integer precision and non-text-key coverage are unknown in the JS binding; complete original bytecode remains available.\",\"Recovered selectors, argument strings and mutability are upstream inferences, not verified ABI signatures or names. Empty results do not prove the absence of callable dispatch.\",\"Bytecode kind, hardfork and deployed-contract authenticity are unknown. This inspection performs no target runtime execution, chain/RPC lookup or network request.\",\"Original carrier and decoded bytecode SHA-256 are distinct identities; SHA-256 is not the Ethereum Keccak code hash.\",\"The owned worker has a 256 MiB JavaScript heap, 3 GiB virtual address-space limit and 30-second deadline. Virtual address space is distinct from resident memory; limits fail without partial success.\"]},\"confidence\":\"inferred\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Configured worker resource soft limits: address_space_bytes=3221225472, cpu_seconds=30, file_size_bytes=16777216. Selected from inherited tighter limits; original hard limits are retained. Effective worker limits are not independently probed.\",\"Upstream may also report terminal metadata while recovering selectors. Its reported values are retained in raw_result, but integer precision and non-text-key coverage are unknown in the JS binding; complete original bytecode remains available.\",\"Recovered selectors, argument strings and mutability are upstream inferences, not verified ABI signatures or names. Empty results do not prove the absence of callable dispatch.\",\"Bytecode kind, hardfork and deployed-contract authenticity are unknown. This inspection performs no target runtime execution, chain/RPC lookup or network request.\",\"Original carrier and decoded bytecode SHA-256 are distinct identities; SHA-256 is not the Ethereum Keccak code hash.\",\"The owned worker has a 256 MiB JavaScript heap, 3 GiB virtual address-space limit and 30-second deadline. Virtual address space is distinct from resident memory; limits fail without partial success.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/evm/meta.hex\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_e900aeaab1f20669b23f5af82a8a8c59acf5638beb490e756fa4deef357c78f5",
+   "subject": {
+    "name": "meta.hex",
+    "digest": {
+     "sha256": "19f6366548392c203a31272943f93d084fee6068c21103e622e0d5762ed16222"
+    },
+    "format": "file",
+    "architecture": null,
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/evm/meta.hex"
+   },
+   "provider": {
+    "id": "evmole-interface",
+    "name": "REA EVM interface adapter",
+    "version": "evmole@0.9.3"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_evm_interface",
+   "parameters": {
+    "path": "/workspace/wt/native_static/fixtures/native_static/evm/meta.hex",
+    "encoding": "hex"
+   },
+   "raw_result": {
+    "metadata": {
+     "bytecodeOffset": 168,
+     "cborLength": 51,
+     "entries": [
+      {
+       "key": "ipfs",
+       "value": {
+        "type": "bytes",
+        "value": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021"
+       }
+      },
+      {
+       "key": "solc",
+       "value": {
+        "type": "bytes",
+        "value": "000814"
+       }
+      }
+     ]
+    },
+    "functions": [
+     {
+      "selector": "2125b65b",
+      "bytecodeOffset": 52,
+      "dispatch": "abi",
+      "arguments": "uint32,address,uint224",
+      "stateMutability": "pure"
+     },
+     {
+      "selector": "b69ef8a8",
+      "bytecodeOffset": 68,
+      "dispatch": "abi",
+      "arguments": "",
+      "stateMutability": "pure"
+     }
+    ]
+   },
+   "normalized_result": {
+    "artifact": {
+     "path": "/workspace/wt/native_static/fixtures/native_static/evm/meta.hex",
+     "sha256": "19f6366548392c203a31272943f93d084fee6068c21103e622e0d5762ed16222",
+     "bytes": 442,
+     "encoding": "hex"
+    },
+    "bytecode": {
+     "sha256": "1e887afa4b8ed4990dbf8bfe5895857d8d00116d6ca158b9d19e675616842d2e",
+     "bytes": 221,
+     "hex": "6080604052348015600e575f80fd5b50600436106030575f3560e01c80632125b65b146034578063b69ef8a8146044575b5f80fd5b6044603f3660046046565b505050565b005b5f805f606084860312156057575f80fd5b833563ffffffff811681146069575f80fd5b925060208401356001600160a01b03811681146083575f80fd5b915060408401356001600160e01b0381168114609d575f80fd5b80915050925092509256a264697066735822000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202164736f6c63430008140033",
+     "digest_algorithm": "sha256",
+     "kind": "unknown",
+     "deployment_authenticity": "unknown",
+     "hardfork": "unknown"
+    },
+    "evidence_kind": "inferred",
+    "functions": [
+     {
+      "selector": "0x2125b65b",
+      "bytecode_offset": 52,
+      "dispatch": "abi",
+      "inferred_arguments": "uint32,address,uint224",
+      "inferred_state_mutability": "pure"
+     },
+     {
+      "selector": "0xb69ef8a8",
+      "bytecode_offset": 68,
+      "dispatch": "abi",
+      "inferred_arguments": "",
+      "inferred_state_mutability": "pure"
+     }
+    ],
+    "discovery_completeness": "unknown",
+    "runtime_execution": "not-performed",
+    "diagnostics": {
+     "stdout": "",
+     "stderr": "",
+     "truncated": false
+    },
+    "limitations": [
+     "Configured worker resource soft limits: address_space_bytes=3221225472, cpu_seconds=30, file_size_bytes=16777216. Selected from inherited tighter limits; original hard limits are retained. Effective worker limits are not independently probed.",
+     "Upstream may also report terminal metadata while recovering selectors. Its reported values are retained in raw_result, but integer precision and non-text-key coverage are unknown in the JS binding; complete original bytecode remains available.",
+     "Recovered selectors, argument strings and mutability are upstream inferences, not verified ABI signatures or names. Empty results do not prove the absence of callable dispatch.",
+     "Bytecode kind, hardfork and deployed-contract authenticity are unknown. This inspection performs no target runtime execution, chain/RPC lookup or network request.",
+     "Original carrier and decoded bytecode SHA-256 are distinct identities; SHA-256 is not the Ethereum Keccak code hash.",
+     "The owned worker has a 256 MiB JavaScript heap, 3 GiB virtual address-space limit and 30-second deadline. Virtual address space is distinct from resident memory; limits fail without partial success."
+    ]
+   },
+   "confidence": "inferred",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Configured worker resource soft limits: address_space_bytes=3221225472, cpu_seconds=30, file_size_bytes=16777216. Selected from inherited tighter limits; original hard limits are retained. Effective worker limits are not independently probed.",
+    "Upstream may also report terminal metadata while recovering selectors. Its reported values are retained in raw_result, but integer precision and non-text-key coverage are unknown in the JS binding; complete original bytecode remains available.",
+    "Recovered selectors, argument strings and mutability are upstream inferences, not verified ABI signatures or names. Empty results do not prove the absence of callable dispatch.",
+    "Bytecode kind, hardfork and deployed-contract authenticity are unknown. This inspection performs no target runtime execution, chain/RPC lookup or network request.",
+    "Original carrier and decoded bytecode SHA-256 are distinct identities; SHA-256 is not the Ethereum Keccak code hash.",
+    "The owned worker has a 256 MiB JavaScript heap, 3 GiB virtual address-space limit and 30-second deadline. Virtual address space is distinct from resident memory; limits fail without partial success."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "/workspace/wt/native_static/fixtures/native_static/evm/meta.hex"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

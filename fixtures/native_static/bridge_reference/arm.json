@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "unsupported-target",
+ "message": "Initial layout profile requires x86-64 ELF objects.",
+ "stderr": ""
+}

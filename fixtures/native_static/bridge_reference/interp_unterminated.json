@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "ELF interpreter lacks a reported terminator.",
+ "stderr": ""
+}

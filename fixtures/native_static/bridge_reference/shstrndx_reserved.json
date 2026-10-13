@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "ELF section-name index 65296 is reserved and cannot directly reference a section.",
+ "stderr": ""
+}

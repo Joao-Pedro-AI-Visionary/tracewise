@@ -1,0 +1,5 @@
+#!/bin/bash
+# Launcher stand-in for Hopper (`<launcher> [loader args] --analysis -Y <script> --executable <path>`).
+# It re-executes the fake Hopper Python runtime next to it, keeping its own path as argv[0] so the
+# process table still names the launcher (REA/tracewise verify the owned launcher command).
+exec -a "$0" /usr/bin/python3 "$(dirname "$0")/fake_hopper_launcher.py" "$@"

@@ -1,0 +1,2481 @@
+{
+ "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+ "scenarios": [
+  {
+   "id": "mac_default",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car",
+     "source": "vendor/assets_mac.car"
+    }
+   ],
+   "page": {},
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": true,
+    "value": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "catalogs": [
+      {
+       "path": "Contents/Resources/Assets.car",
+       "sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "record_count": 74
+      }
+     ],
+     "total_records": 74,
+     "offset": 0,
+     "limit": 1000,
+     "records": [
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 0,
+       "kind": "catalog",
+       "asset_name": null,
+       "rendition_name": null,
+       "metadata": {
+        "AssetStorageVersion": "CoreThemeDefinition-234:ibtoold-7.3.1",
+        "CoreUIVersion": 366,
+        "Key Format": [
+         "kCRThemeElementName",
+         "kCRThemePartName",
+         "kCRThemeSizeName",
+         "kCRThemeDirectionName",
+         "kCRThemeValueName",
+         "kCRThemeIdentifierName",
+         "kCRThemeDimension1Name",
+         "kCRThemeDimension2Name",
+         "kCRThemeStateName",
+         "kCRThemePresentationStateName",
+         "kCRThemeLayerName",
+         "kCRThemeScaleName",
+         "kCRThemePreviousStateName",
+         "kCRThemePreviousValueName"
+        ],
+        "MainVersion": "@(#)PROGRAM:CoreUI  PROJECT:CoreUI-366.1\n",
+        "SchemaVersion": 4,
+        "StorageVersion": 11,
+        "Timestamp": 0
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 1,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-1.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-1.0.0",
+        "Scale": 1,
+        "PixelWidth": 158,
+        "PixelHeight": 106,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 1764
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 2,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 150,
+        "PixelHeight": 96,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2086
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 3,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-1.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-1.0.0",
+        "Scale": 1,
+        "PixelWidth": 158,
+        "PixelHeight": 106,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2010
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 4,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2715
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 5,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-1.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-1.0.0",
+        "Scale": 1,
+        "PixelWidth": 158,
+        "PixelHeight": 106,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 1737
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 6,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2715
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 7,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-1.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-1.0.0",
+        "Scale": 1,
+        "PixelWidth": 158,
+        "PixelHeight": 106,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2535
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 8,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2631
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 9,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-1.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-1.0.0",
+        "Scale": 1,
+        "PixelWidth": 158,
+        "PixelHeight": 106,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2063
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 10,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2736
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 11,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2783
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 12,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2772
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 13,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2230
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 14,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2744
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 15,
+       "kind": "rendition",
+       "asset_name": "g_3v1",
+       "rendition_name": "cyan.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_3v1",
+        "NameIdentifier": 45070,
+        "RenditionName": "cyan.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 16,
+       "kind": "rendition",
+       "asset_name": "g_3v1",
+       "rendition_name": "cyan@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_3v1",
+        "NameIdentifier": 45070,
+        "RenditionName": "cyan@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 17,
+       "kind": "rendition",
+       "asset_name": "v_device",
+       "rendition_name": "facebook-1-1-1",
+       "metadata": {
+        "AssetType": "Vector",
+        "Name": "v_device",
+        "NameIdentifier": 36373,
+        "RenditionName": "facebook-1-1-1",
+        "Scale": 0,
+        "PixelWidth": 0,
+        "PixelHeight": 0,
+        "Encoding": "PDF",
+        "Opaque": false,
+        "Data Length": 4093,
+        "Layout": 9,
+        "SizeOnDisk": 4317
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 18,
+       "kind": "rendition",
+       "asset_name": "v_device",
+       "rendition_name": "facebook-1-1-1.pdf",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "v_device",
+        "NameIdentifier": 36373,
+        "RenditionName": "facebook-1-1-1.pdf",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 19,
+       "kind": "rendition",
+       "asset_name": "v_device",
+       "rendition_name": "facebook-1-1-1.pdf",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "v_device",
+        "NameIdentifier": 36373,
+        "RenditionName": "facebook-1-1-1.pdf",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 330
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 20,
+       "kind": "rendition",
+       "asset_name": "m_2gb",
+       "rendition_name": "blue.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_2gb",
+        "NameIdentifier": 48929,
+        "RenditionName": "blue.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 21,
+       "kind": "rendition",
+       "asset_name": "m_2gb",
+       "rendition_name": "blue@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_2gb",
+        "NameIdentifier": 48929,
+        "RenditionName": "blue@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 22,
+       "kind": "rendition",
+       "asset_name": "g_mix",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_mix",
+        "NameIdentifier": 39203,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 23,
+       "kind": "rendition",
+       "asset_name": "g_mix",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_mix",
+        "NameIdentifier": 39203,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 24,
+       "kind": "rendition",
+       "asset_name": "d_universal",
+       "rendition_name": "image.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "d_universal",
+        "NameIdentifier": 54316,
+        "RenditionName": "image.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 25,
+       "kind": "rendition",
+       "asset_name": "d_universal",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "d_universal",
+        "NameIdentifier": 54316,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 26,
+       "kind": "rendition",
+       "asset_name": "g_1v2",
+       "rendition_name": "image.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_1v2",
+        "NameIdentifier": 60205,
+        "RenditionName": "image.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 27,
+       "kind": "rendition",
+       "asset_name": "g_1v2",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_1v2",
+        "NameIdentifier": 60205,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 28,
+       "kind": "rendition",
+       "asset_name": "sc_w_a&c",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "sc_w_a&c",
+        "NameIdentifier": 8506,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 330
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 29,
+       "kind": "rendition",
+       "asset_name": "sc_w_a&c",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "sc_w_a&c",
+        "NameIdentifier": 8506,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 30,
+       "kind": "rendition",
+       "asset_name": "s_horizontal",
+       "rendition_name": "image.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_horizontal",
+        "NameIdentifier": 41539,
+        "RenditionName": "image.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 366
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 31,
+       "kind": "rendition",
+       "asset_name": "s_horizontal",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_horizontal",
+        "NameIdentifier": 41539,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 366
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 32,
+       "kind": "rendition",
+       "asset_name": "d_iphone_ipad_mac_watch",
+       "rendition_name": "image.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "d_iphone_ipad_mac_watch",
+        "NameIdentifier": 41541,
+        "RenditionName": "image.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 33,
+       "kind": "rendition",
+       "asset_name": "d_iphone_ipad_mac_watch",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "d_iphone_ipad_mac_watch",
+        "NameIdentifier": 41541,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 34,
+       "kind": "rendition",
+       "asset_name": "r_original",
+       "rendition_name": "image.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "r_original",
+        "NameIdentifier": 20574,
+        "RenditionName": "image.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 330
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 35,
+       "kind": "rendition",
+       "asset_name": "r_original",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "r_original",
+        "NameIdentifier": 20574,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 36,
+       "kind": "rendition",
+       "asset_name": "m_4gb",
+       "rendition_name": "cyan.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_4gb",
+        "NameIdentifier": 4195,
+        "RenditionName": "cyan.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 37,
+       "kind": "rendition",
+       "asset_name": "m_4gb",
+       "rendition_name": "cyan@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_4gb",
+        "NameIdentifier": 4195,
+        "RenditionName": "cyan@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 38,
+       "kind": "rendition",
+       "asset_name": "m_no",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_no",
+        "NameIdentifier": 24425,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 330
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 39,
+       "kind": "rendition",
+       "asset_name": "m_no",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_no",
+        "NameIdentifier": 24425,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 40,
+       "kind": "rendition",
+       "asset_name": "r_default",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "r_default",
+        "NameIdentifier": 15991,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 330
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 41,
+       "kind": "rendition",
+       "asset_name": "r_default",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "r_default",
+        "NameIdentifier": 15991,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 42,
+       "kind": "rendition",
+       "asset_name": "r_template",
+       "rendition_name": "blue.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "r_template",
+        "NameIdentifier": 63615,
+        "RenditionName": "blue.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 43,
+       "kind": "rendition",
+       "asset_name": "r_template",
+       "rendition_name": "blue@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "r_template",
+        "NameIdentifier": 63615,
+        "RenditionName": "blue@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 44,
+       "kind": "rendition",
+       "asset_name": "m_1gb",
+       "rendition_name": "image.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_1gb",
+        "NameIdentifier": 38528,
+        "RenditionName": "image.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 45,
+       "kind": "rendition",
+       "asset_name": "m_1gb",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_1gb",
+        "NameIdentifier": 38528,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 46,
+       "kind": "rendition",
+       "asset_name": "s_none",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_none",
+        "NameIdentifier": 51849,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 47,
+       "kind": "rendition",
+       "asset_name": "s_none",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_none",
+        "NameIdentifier": 51849,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 48,
+       "kind": "rendition",
+       "asset_name": "a_any",
+       "rendition_name": "image.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "a_any",
+        "NameIdentifier": 60298,
+        "RenditionName": "image.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 49,
+       "kind": "rendition",
+       "asset_name": "a_any",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "a_any",
+        "NameIdentifier": 60298,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 50,
+       "kind": "rendition",
+       "asset_name": "d_mac",
+       "rendition_name": "image.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "d_mac",
+        "NameIdentifier": 59532,
+        "RenditionName": "image.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 51,
+       "kind": "rendition",
+       "asset_name": "d_mac",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "d_mac",
+        "NameIdentifier": 59532,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 52,
+       "kind": "rendition",
+       "asset_name": "a_no",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "a_no",
+        "NameIdentifier": 26774,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 53,
+       "kind": "rendition",
+       "asset_name": "a_no",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "a_no",
+        "NameIdentifier": 26774,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 54,
+       "kind": "rendition",
+       "asset_name": "s_horizontal_vertical",
+       "rendition_name": "cyan.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_horizontal_vertical",
+        "NameIdentifier": 11938,
+        "RenditionName": "cyan.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 462
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 55,
+       "kind": "rendition",
+       "asset_name": "s_horizontal_vertical",
+       "rendition_name": "cyan@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_horizontal_vertical",
+        "NameIdentifier": 11938,
+        "RenditionName": "cyan@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 458
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 56,
+       "kind": "rendition",
+       "asset_name": "v_overrides",
+       "rendition_name": "facebook-1-1-1",
+       "metadata": {
+        "AssetType": "Vector",
+        "Name": "v_overrides",
+        "NameIdentifier": 59299,
+        "RenditionName": "facebook-1-1-1",
+        "Scale": 0,
+        "PixelWidth": 0,
+        "PixelHeight": 0,
+        "Encoding": "PDF",
+        "Opaque": false,
+        "Data Length": 4093,
+        "Layout": 9,
+        "SizeOnDisk": 4317
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 57,
+       "kind": "rendition",
+       "asset_name": "v_overrides",
+       "rendition_name": "green-2.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "v_overrides",
+        "NameIdentifier": 59299,
+        "RenditionName": "green-2.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 58,
+       "kind": "rendition",
+       "asset_name": "v_overrides",
+       "rendition_name": "green@2x-3.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "v_overrides",
+        "NameIdentifier": 59299,
+        "RenditionName": "green@2x-3.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 59,
+       "kind": "rendition",
+       "asset_name": "v_universal",
+       "rendition_name": "facebook",
+       "metadata": {
+        "AssetType": "Vector",
+        "Name": "v_universal",
+        "NameIdentifier": 37819,
+        "RenditionName": "facebook",
+        "Scale": 0,
+        "PixelWidth": 0,
+        "PixelHeight": 0,
+        "Encoding": "PDF",
+        "Opaque": false,
+        "Data Length": 4093,
+        "Layout": 9,
+        "SizeOnDisk": 4317
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 60,
+       "kind": "rendition",
+       "asset_name": "v_universal",
+       "rendition_name": "facebook.pdf",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "v_universal",
+        "NameIdentifier": 37819,
+        "RenditionName": "facebook.pdf",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 61,
+       "kind": "rendition",
+       "asset_name": "v_universal",
+       "rendition_name": "facebook.pdf",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "v_universal",
+        "NameIdentifier": 37819,
+        "RenditionName": "facebook.pdf",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 330
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 62,
+       "kind": "rendition",
+       "asset_name": "d_iphone_ipad_mac",
+       "rendition_name": "image.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "d_iphone_ipad_mac",
+        "NameIdentifier": 8393,
+        "RenditionName": "image.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 330
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 63,
+       "kind": "rendition",
+       "asset_name": "d_iphone_ipad_mac",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "d_iphone_ipad_mac",
+        "NameIdentifier": 8393,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 64,
+       "kind": "rendition",
+       "asset_name": "g_2v2",
+       "rendition_name": "blue.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_2v2",
+        "NameIdentifier": 5070,
+        "RenditionName": "blue.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 65,
+       "kind": "rendition",
+       "asset_name": "g_2v2",
+       "rendition_name": "blue@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_2v2",
+        "NameIdentifier": 5070,
+        "RenditionName": "blue@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 66,
+       "kind": "rendition",
+       "asset_name": "sc_wh_a&r&c",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "sc_wh_a&r&c",
+        "NameIdentifier": 732,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 67,
+       "kind": "rendition",
+       "asset_name": "sc_wh_a&r&c",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "sc_wh_a&r&c",
+        "NameIdentifier": 732,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 68,
+       "kind": "rendition",
+       "asset_name": "s_vertical",
+       "rendition_name": "blue.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_vertical",
+        "NameIdentifier": 3303,
+        "RenditionName": "blue.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 366
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 69,
+       "kind": "rendition",
+       "asset_name": "s_vertical",
+       "rendition_name": "blue@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_vertical",
+        "NameIdentifier": 3303,
+        "RenditionName": "blue@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 362
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 70,
+       "kind": "rendition",
+       "asset_name": "sc_h_a&r",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "sc_h_a&r",
+        "NameIdentifier": 24811,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 71,
+       "kind": "rendition",
+       "asset_name": "sc_h_a&r",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "sc_h_a&r",
+        "NameIdentifier": 24811,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 72,
+       "kind": "rendition",
+       "asset_name": "g_none",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_none",
+        "NameIdentifier": 27391,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 73,
+       "kind": "rendition",
+       "asset_name": "g_none",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_none",
+        "NameIdentifier": 27391,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      }
+     ],
+     "resource_key_matches": [],
+     "next_offset": null,
+     "truncated": false,
+     "limitations": [
+      "Rendition metadata is reported as emitted by the installed assetutil version; private fields and platform-specific interpretations are not normalized.",
+      "Asset catalog inspection does not decode or extract rendition image bytes.",
+      "Exact resource-key joins use only recognized image or asset key fields on decoded Interface Builder resource objects; other archive resource references are not inferred."
+     ]
+    }
+   }
+  },
+  {
+   "id": "mac_page",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car",
+     "source": "vendor/assets_mac.car"
+    }
+   ],
+   "page": {
+    "offset": 10,
+    "limit": 5
+   },
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": true,
+    "value": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "catalogs": [
+      {
+       "path": "Contents/Resources/Assets.car",
+       "sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "record_count": 74
+      }
+     ],
+     "total_records": 74,
+     "offset": 10,
+     "limit": 5,
+     "records": [
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 10,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2736
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 11,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2783
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 12,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2772
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 13,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2230
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 14,
+       "kind": "rendition",
+       "asset_name": null,
+       "rendition_name": "ZZZZPackedAsset-2.0.0",
+       "metadata": {
+        "AssetType": "PackedImage",
+        "NameIdentifier": 0,
+        "RenditionName": "ZZZZPackedAsset-2.0.0",
+        "Scale": 2,
+        "PixelWidth": 206,
+        "PixelHeight": 206,
+        "BitsPerComponent": 8,
+        "Encoding": "ARGB",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Compression": "lzfse",
+        "Layout": 1004,
+        "SizeOnDisk": 2744
+       }
+      }
+     ],
+     "resource_key_matches": [],
+     "next_offset": 15,
+     "truncated": true,
+     "limitations": [
+      "Rendition metadata is reported as emitted by the installed assetutil version; private fields and platform-specific interpretations are not normalized.",
+      "Asset catalog inspection does not decode or extract rendition image bytes.",
+      "Exact resource-key joins use only recognized image or asset key fields on decoded Interface Builder resource objects; other archive resource references are not inferred."
+     ]
+    }
+   }
+  },
+  {
+   "id": "mac_page_end",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car",
+     "source": "vendor/assets_mac.car"
+    }
+   ],
+   "page": {
+    "offset": 70,
+    "limit": 50
+   },
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": true,
+    "value": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "catalogs": [
+      {
+       "path": "Contents/Resources/Assets.car",
+       "sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "record_count": 74
+      }
+     ],
+     "total_records": 74,
+     "offset": 70,
+     "limit": 50,
+     "records": [
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 70,
+       "kind": "rendition",
+       "asset_name": "sc_h_a&r",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "sc_h_a&r",
+        "NameIdentifier": 24811,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 71,
+       "kind": "rendition",
+       "asset_name": "sc_h_a&r",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "sc_h_a&r",
+        "NameIdentifier": 24811,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 72,
+       "kind": "rendition",
+       "asset_name": "g_none",
+       "rendition_name": "green.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_none",
+        "NameIdentifier": 27391,
+        "RenditionName": "green.png",
+        "Scale": 1,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 73,
+       "kind": "rendition",
+       "asset_name": "g_none",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "g_none",
+        "NameIdentifier": 27391,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      }
+     ],
+     "resource_key_matches": [],
+     "next_offset": null,
+     "truncated": true,
+     "limitations": [
+      "Rendition metadata is reported as emitted by the installed assetutil version; private fields and platform-specific interpretations are not normalized.",
+      "Asset catalog inspection does not decode or extract rendition image bytes.",
+      "Exact resource-key joins use only recognized image or asset key fields on decoded Interface Builder resource objects; other archive resource references are not inferred."
+     ]
+    }
+   }
+  },
+  {
+   "id": "mac_page_beyond",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car",
+     "source": "vendor/assets_mac.car"
+    }
+   ],
+   "page": {
+    "offset": 500,
+    "limit": 5
+   },
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": true,
+    "value": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "catalogs": [
+      {
+       "path": "Contents/Resources/Assets.car",
+       "sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "record_count": 74
+      }
+     ],
+     "total_records": 74,
+     "offset": 500,
+     "limit": 5,
+     "records": [],
+     "resource_key_matches": [],
+     "next_offset": null,
+     "truncated": true,
+     "limitations": [
+      "Rendition metadata is reported as emitted by the installed assetutil version; private fields and platform-specific interpretations are not normalized.",
+      "Asset catalog inspection does not decode or extract rendition image bytes.",
+      "Exact resource-key joins use only recognized image or asset key fields on decoded Interface Builder resource objects; other archive resource references are not inferred."
+     ]
+    }
+   }
+  },
+  {
+   "id": "tv_matches",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car",
+     "source": "vendor/assets_tv.car"
+    },
+    {
+     "path": "Contents/Resources/Legacy.nib",
+     "text_b64": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBsZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KCTxrZXk+Y29tLmFwcGxlLmlidG9vbC5kb2N1bWVudC5jbGFzc2VzPC9rZXk+Cgk8ZGljdC8+Cgk8a2V5PmNvbS5hcHBsZS5pYnRvb2wuZG9jdW1lbnQuY29ubmVjdGlvbnM8L2tleT4KCTxkaWN0Lz4KCTxrZXk+Y29tLmFwcGxlLmlidG9vbC5kb2N1bWVudC5oaWVyYXJjaHk8L2tleT4KCTxhcnJheS8+Cgk8a2V5PmNvbS5hcHBsZS5pYnRvb2wuZG9jdW1lbnQub2JqZWN0czwva2V5PgoJPGRpY3Q+CgkJPGtleT4xPC9rZXk+CgkJPGRpY3Q+CgkJCTxrZXk+Y3VzdG9tQ2xhc3M8L2tleT4KCQkJPHN0cmluZz5BPC9zdHJpbmc+CgkJCTxrZXk+aW1hZ2VOYW1lPC9rZXk+CgkJCTxzdHJpbmc+ZF90djwvc3RyaW5nPgoJCTwvZGljdD4KCQk8a2V5PjI8L2tleT4KCQk8ZGljdD4KCQkJPGtleT5VSUltYWdlTmFtZTwva2V5PgoJCQk8c3RyaW5nPmdob3N0PC9zdHJpbmc+CgkJCTxrZXk+Y3VzdG9tQ2xhc3M8L2tleT4KCQkJPHN0cmluZz5CPC9zdHJpbmc+CgkJPC9kaWN0PgoJCTxrZXk+Mzwva2V5PgoJCTxkaWN0PgoJCQk8a2V5PmN1c3RvbUNsYXNzPC9rZXk+CgkJCTxzdHJpbmc+Qzwvc3RyaW5nPgoJCQk8a2V5PmxhYmVsPC9rZXk+CgkJCTxzdHJpbmc+ZF90djwvc3RyaW5nPgoJCTwvZGljdD4KCQk8a2V5PjQ8L2tleT4KCQk8ZGljdD4KCQkJPGtleT5jdXN0b21DbGFzczwva2V5PgoJCQk8c3RyaW5nPkQ8L3N0cmluZz4KCQkJPGtleT5pbWFnZTwva2V5PgoJCQk8c3RyaW5nPjwvc3RyaW5nPgoJCTwvZGljdD4KCQk8a2V5PjU8L2tleT4KCQk8ZGljdD4KCQkJPGtleT5OU0ltYWdlTmFtZTwva2V5PgoJCQk8c3RyaW5nPmRfdW5pdmVyc2FsPC9zdHJpbmc+CgkJCTxrZXk+Y3VzdG9tQ2xhc3M8L2tleT4KCQkJPHN0cmluZz5FPC9zdHJpbmc+CgkJPC9kaWN0PgoJPC9kaWN0Pgo8L2RpY3Q+CjwvcGxpc3Q+Cg=="
+    }
+   ],
+   "page": {
+    "limit": 3
+   },
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": true,
+    "value": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "catalogs": [
+      {
+       "path": "Contents/Resources/Assets.car",
+       "sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "record_count": 151
+      }
+     ],
+     "total_records": 151,
+     "offset": 0,
+     "limit": 3,
+     "records": [
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 0,
+       "kind": "catalog",
+       "asset_name": null,
+       "rendition_name": null,
+       "metadata": {
+        "AssetStorageVersion": "CoreThemeDefinition-247:IBCocoaTouchImageCatalogTool-7.3",
+        "CoreUIVersion": 374,
+        "Key Format": [
+         "kCRThemeScaleName",
+         "kCRThemeIdiomName",
+         "kCRThemeSubtypeName",
+         "kCRThemeGraphicsClassName",
+         "kCRThemeMemoryClassName",
+         "kCRThemeSizeClassHorizontalName",
+         "kCRThemeSizeClassVerticalName",
+         "kCRThemeIdentifierName",
+         "kCRThemeElementName",
+         "kCRThemePartName",
+         "kCRThemeStateName",
+         "kCRThemeValueName",
+         "kCRThemeDimension1Name"
+        ],
+        "MainVersion": "@(#)PROGRAM:CoreUI  PROJECT:CoreUI-374.1.1\n",
+        "SchemaVersion": 2,
+        "StorageVersion": 11,
+        "Timestamp": 0
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 1,
+       "kind": "rendition",
+       "asset_name": "v_device",
+       "rendition_name": "facebook-2",
+       "metadata": {
+        "AssetType": "Vector",
+        "Name": "v_device",
+        "NameIdentifier": 36373,
+        "RenditionName": "facebook-2",
+        "Scale": 0,
+        "Idiom": "universal",
+        "PixelWidth": 0,
+        "PixelHeight": 0,
+        "Encoding": "PDF",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Data Length": 6107,
+        "Layout": 9,
+        "SizeOnDisk": 6331
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 2,
+       "kind": "rendition",
+       "asset_name": "v_overrides",
+       "rendition_name": "facebook-2",
+       "metadata": {
+        "AssetType": "Vector",
+        "Name": "v_overrides",
+        "NameIdentifier": 59299,
+        "RenditionName": "facebook-2",
+        "Scale": 0,
+        "Idiom": "universal",
+        "PixelWidth": 0,
+        "PixelHeight": 0,
+        "Encoding": "PDF",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Data Length": 6107,
+        "Layout": 9,
+        "SizeOnDisk": 6331
+       }
+      }
+     ],
+     "resource_key_matches": [
+      {
+       "source_node_id": "ib:\"Contents/Resources/Legacy.nib\":object:[\"1\"]",
+       "source_path": "Contents/Resources/Legacy.nib",
+       "source_archive_sha256": "d0f20917de612dd745503ba63eccb4cc4c54cb7bb47fa2d3cee457879333e361",
+       "field": "imageName",
+       "key": "d_tv",
+       "status": "matched",
+       "renditions": [
+        {
+         "catalog_path": "Contents/Resources/Assets.car",
+         "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+         "record_index": 49,
+         "rendition_name": "cyan.png"
+        }
+       ]
+      },
+      {
+       "source_node_id": "ib:\"Contents/Resources/Legacy.nib\":object:[\"2\"]",
+       "source_path": "Contents/Resources/Legacy.nib",
+       "source_archive_sha256": "d0f20917de612dd745503ba63eccb4cc4c54cb7bb47fa2d3cee457879333e361",
+       "field": "UIImageName",
+       "key": "ghost",
+       "status": "unmatched",
+       "renditions": []
+      },
+      {
+       "source_node_id": "ib:\"Contents/Resources/Legacy.nib\":object:[\"5\"]",
+       "source_path": "Contents/Resources/Legacy.nib",
+       "source_archive_sha256": "d0f20917de612dd745503ba63eccb4cc4c54cb7bb47fa2d3cee457879333e361",
+       "field": "NSImageName",
+       "key": "d_universal",
+       "status": "ambiguous",
+       "renditions": [
+        {
+         "catalog_path": "Contents/Resources/Assets.car",
+         "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+         "record_index": 15,
+         "rendition_name": "image.png"
+        },
+        {
+         "catalog_path": "Contents/Resources/Assets.car",
+         "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+         "record_index": 64,
+         "rendition_name": "image@2x.png"
+        },
+        {
+         "catalog_path": "Contents/Resources/Assets.car",
+         "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+         "record_index": 115,
+         "rendition_name": "image@3x.png"
+        }
+       ]
+      }
+     ],
+     "next_offset": 3,
+     "truncated": true,
+     "limitations": [
+      "Rendition metadata is reported as emitted by the installed assetutil version; private fields and platform-specific interpretations are not normalized.",
+      "Asset catalog inspection does not decode or extract rendition image bytes.",
+      "Exact resource-key joins use only recognized image or asset key fields on decoded Interface Builder resource objects; other archive resource references are not inferred."
+     ]
+    }
+   }
+  },
+  {
+   "id": "mac_ambiguous",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car",
+     "source": "vendor/assets_mac.car"
+    },
+    {
+     "path": "Contents/Resources/Legacy.nib",
+     "text_b64": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBsZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KCTxrZXk+Y29tLmFwcGxlLmlidG9vbC5kb2N1bWVudC5jbGFzc2VzPC9rZXk+Cgk8ZGljdC8+Cgk8a2V5PmNvbS5hcHBsZS5pYnRvb2wuZG9jdW1lbnQuY29ubmVjdGlvbnM8L2tleT4KCTxkaWN0Lz4KCTxrZXk+Y29tLmFwcGxlLmlidG9vbC5kb2N1bWVudC5oaWVyYXJjaHk8L2tleT4KCTxhcnJheS8+Cgk8a2V5PmNvbS5hcHBsZS5pYnRvb2wuZG9jdW1lbnQub2JqZWN0czwva2V5PgoJPGRpY3Q+CgkJPGtleT4xPC9rZXk+CgkJPGRpY3Q+CgkJCTxrZXk+Y3VzdG9tQ2xhc3M8L2tleT4KCQkJPHN0cmluZz5BPC9zdHJpbmc+CgkJCTxrZXk+aW1hZ2U8L2tleT4KCQkJPHN0cmluZz5kX21hYzwvc3RyaW5nPgoJCTwvZGljdD4KCTwvZGljdD4KPC9kaWN0Pgo8L3BsaXN0Pgo="
+    }
+   ],
+   "page": {
+    "limit": 1
+   },
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": true,
+    "value": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "catalogs": [
+      {
+       "path": "Contents/Resources/Assets.car",
+       "sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "record_count": 74
+      }
+     ],
+     "total_records": 74,
+     "offset": 0,
+     "limit": 1,
+     "records": [
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "index": 0,
+       "kind": "catalog",
+       "asset_name": null,
+       "rendition_name": null,
+       "metadata": {
+        "AssetStorageVersion": "CoreThemeDefinition-234:ibtoold-7.3.1",
+        "CoreUIVersion": 366,
+        "Key Format": [
+         "kCRThemeElementName",
+         "kCRThemePartName",
+         "kCRThemeSizeName",
+         "kCRThemeDirectionName",
+         "kCRThemeValueName",
+         "kCRThemeIdentifierName",
+         "kCRThemeDimension1Name",
+         "kCRThemeDimension2Name",
+         "kCRThemeStateName",
+         "kCRThemePresentationStateName",
+         "kCRThemeLayerName",
+         "kCRThemeScaleName",
+         "kCRThemePreviousStateName",
+         "kCRThemePreviousValueName"
+        ],
+        "MainVersion": "@(#)PROGRAM:CoreUI  PROJECT:CoreUI-366.1\n",
+        "SchemaVersion": 4,
+        "StorageVersion": 11,
+        "Timestamp": 0
+       }
+      }
+     ],
+     "resource_key_matches": [
+      {
+       "source_node_id": "ib:\"Contents/Resources/Legacy.nib\":object:[\"1\"]",
+       "source_path": "Contents/Resources/Legacy.nib",
+       "source_archive_sha256": "9de71fa118cb33e031aac99f27f8c622cf1ceb7e7fa81dea1eeff090ac396fae",
+       "field": "image",
+       "key": "d_mac",
+       "status": "ambiguous",
+       "renditions": [
+        {
+         "catalog_path": "Contents/Resources/Assets.car",
+         "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+         "record_index": 50,
+         "rendition_name": "image.png"
+        },
+        {
+         "catalog_path": "Contents/Resources/Assets.car",
+         "catalog_sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+         "record_index": 51,
+         "rendition_name": "image@2x.png"
+        }
+       ]
+      }
+     ],
+     "next_offset": 1,
+     "truncated": true,
+     "limitations": [
+      "Rendition metadata is reported as emitted by the installed assetutil version; private fields and platform-specific interpretations are not normalized.",
+      "Asset catalog inspection does not decode or extract rendition image bytes.",
+      "Exact resource-key joins use only recognized image or asset key fields on decoded Interface Builder resource objects; other archive resource references are not inferred."
+     ]
+    }
+   }
+  },
+  {
+   "id": "two_catalogs",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car",
+     "source": "vendor/assets_mac.car"
+    },
+    {
+     "path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+     "source": "vendor/assets_tv.car"
+    },
+    {
+     "path": "Contents/Resources/OtherAssets.car",
+     "source": "vendor/assets_tv.car"
+    },
+    {
+     "path": "Contents/Resources/Legacy.nib",
+     "text_b64": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBsZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KCTxrZXk+Y29tLmFwcGxlLmlidG9vbC5kb2N1bWVudC5jbGFzc2VzPC9rZXk+Cgk8ZGljdC8+Cgk8a2V5PmNvbS5hcHBsZS5pYnRvb2wuZG9jdW1lbnQuY29ubmVjdGlvbnM8L2tleT4KCTxkaWN0Lz4KCTxrZXk+Y29tLmFwcGxlLmlidG9vbC5kb2N1bWVudC5oaWVyYXJjaHk8L2tleT4KCTxhcnJheS8+Cgk8a2V5PmNvbS5hcHBsZS5pYnRvb2wuZG9jdW1lbnQub2JqZWN0czwva2V5PgoJPGRpY3Q+CgkJPGtleT4xPC9rZXk+CgkJPGRpY3Q+CgkJCTxrZXk+Y3VzdG9tQ2xhc3M8L2tleT4KCQkJPHN0cmluZz5BPC9zdHJpbmc+CgkJCTxrZXk+aW1hZ2VOYW1lPC9rZXk+CgkJCTxzdHJpbmc+ZF90djwvc3RyaW5nPgoJCTwvZGljdD4KCTwvZGljdD4KPC9kaWN0Pgo8L3BsaXN0Pgo="
+    }
+   ],
+   "page": {
+    "offset": 70,
+    "limit": 8
+   },
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": true,
+    "value": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "catalogs": [
+      {
+       "path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+       "sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "record_count": 151
+      },
+      {
+       "path": "Contents/Resources/Assets.car",
+       "sha256": "34b4cff87a8bd28782b3779b2fe335ac637f649e139305fe46a81d89b8d60f3e",
+       "record_count": 74
+      },
+      {
+       "path": "Contents/Resources/OtherAssets.car",
+       "sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "record_count": 151
+      }
+     ],
+     "total_records": 376,
+     "offset": 70,
+     "limit": 8,
+     "records": [
+      {
+       "catalog_path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 70,
+       "kind": "rendition",
+       "asset_name": "m_no",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_no",
+        "NameIdentifier": 24425,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Idiom": "universal",
+        "Layout": 1003,
+        "SizeOnDisk": 330
+       }
+      },
+      {
+       "catalog_path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 71,
+       "kind": "rendition",
+       "asset_name": "r_default",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "r_default",
+        "NameIdentifier": 15991,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Idiom": "universal",
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 72,
+       "kind": "rendition",
+       "asset_name": "r_template",
+       "rendition_name": "blue@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "r_template",
+        "NameIdentifier": 63615,
+        "RenditionName": "blue@2x.png",
+        "Scale": 2,
+        "Idiom": "universal",
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 73,
+       "kind": "rendition",
+       "asset_name": "m_1gb",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "m_1gb",
+        "NameIdentifier": 38528,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Idiom": "universal",
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 74,
+       "kind": "rendition",
+       "asset_name": "s_none",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_none",
+        "NameIdentifier": 51849,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Idiom": "universal",
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 75,
+       "kind": "rendition",
+       "asset_name": "a_any",
+       "rendition_name": "image@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "a_any",
+        "NameIdentifier": 60298,
+        "RenditionName": "image@2x.png",
+        "Scale": 2,
+        "Idiom": "universal",
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 76,
+       "kind": "rendition",
+       "asset_name": "a_no",
+       "rendition_name": "green@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "a_no",
+        "NameIdentifier": 26774,
+        "RenditionName": "green@2x.png",
+        "Scale": 2,
+        "Idiom": "universal",
+        "Layout": 1003,
+        "SizeOnDisk": 334
+       }
+      },
+      {
+       "catalog_path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 77,
+       "kind": "rendition",
+       "asset_name": "s_horizontal_vertical",
+       "rendition_name": "cyan@2x.png",
+       "metadata": {
+        "AssetType": "Internal Link",
+        "Name": "s_horizontal_vertical",
+        "NameIdentifier": 11938,
+        "RenditionName": "cyan@2x.png",
+        "Scale": 2,
+        "Idiom": "universal",
+        "Layout": 1003,
+        "SizeOnDisk": 462
+       }
+      }
+     ],
+     "resource_key_matches": [
+      {
+       "source_node_id": "ib:\"Contents/Resources/Legacy.nib\":object:[\"1\"]",
+       "source_path": "Contents/Resources/Legacy.nib",
+       "source_archive_sha256": "cab37b416bd453d282cb8869f7c213174613eb9d4f75cf968eeb576c288ea0cb",
+       "field": "imageName",
+       "key": "d_tv",
+       "status": "ambiguous",
+       "renditions": [
+        {
+         "catalog_path": "Contents/Frameworks/Kit.framework/Resources/Assets.car",
+         "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+         "record_index": 49,
+         "rendition_name": "cyan.png"
+        },
+        {
+         "catalog_path": "Contents/Resources/OtherAssets.car",
+         "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+         "record_index": 49,
+         "rendition_name": "cyan.png"
+        }
+       ]
+      }
+     ],
+     "next_offset": 78,
+     "truncated": true,
+     "limitations": [
+      "Rendition metadata is reported as emitted by the installed assetutil version; private fields and platform-specific interpretations are not normalized.",
+      "Asset catalog inspection does not decode or extract rendition image bytes.",
+      "Exact resource-key joins use only recognized image or asset key fields on decoded Interface Builder resource objects; other archive resource references are not inferred."
+     ]
+    }
+   }
+  },
+  {
+   "id": "no_catalog",
+   "layout": [],
+   "page": {},
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": true,
+    "value": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "catalogs": [],
+     "total_records": 0,
+     "offset": 0,
+     "limit": 1000,
+     "records": [],
+     "resource_key_matches": [],
+     "next_offset": null,
+     "truncated": false,
+     "limitations": [
+      "Rendition metadata is reported as emitted by the installed assetutil version; private fields and platform-specific interpretations are not normalized.",
+      "Asset catalog inspection does not decode or extract rendition image bytes.",
+      "No compiled Assets.car catalog was found among the app bundle's regular files (symlinks are not followed); any resource keys are reported as unmatched.",
+      "Exact resource-key joins use only recognized image or asset key fields on decoded Interface Builder resource objects; other archive resource references are not inferred."
+     ]
+    }
+   }
+  },
+  {
+   "id": "symlink_and_file",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car",
+     "source": "vendor/assets_tv.car"
+    },
+    {
+     "path": "Contents/Frameworks/Link-Assets.car",
+     "symlink": "../Resources/Assets.car"
+    }
+   ],
+   "page": {
+    "limit": 2
+   },
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": true,
+    "value": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "catalogs": [
+      {
+       "path": "Contents/Resources/Assets.car",
+       "sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "record_count": 151
+      }
+     ],
+     "total_records": 151,
+     "offset": 0,
+     "limit": 2,
+     "records": [
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 0,
+       "kind": "catalog",
+       "asset_name": null,
+       "rendition_name": null,
+       "metadata": {
+        "AssetStorageVersion": "CoreThemeDefinition-247:IBCocoaTouchImageCatalogTool-7.3",
+        "CoreUIVersion": 374,
+        "Key Format": [
+         "kCRThemeScaleName",
+         "kCRThemeIdiomName",
+         "kCRThemeSubtypeName",
+         "kCRThemeGraphicsClassName",
+         "kCRThemeMemoryClassName",
+         "kCRThemeSizeClassHorizontalName",
+         "kCRThemeSizeClassVerticalName",
+         "kCRThemeIdentifierName",
+         "kCRThemeElementName",
+         "kCRThemePartName",
+         "kCRThemeStateName",
+         "kCRThemeValueName",
+         "kCRThemeDimension1Name"
+        ],
+        "MainVersion": "@(#)PROGRAM:CoreUI  PROJECT:CoreUI-374.1.1\n",
+        "SchemaVersion": 2,
+        "StorageVersion": 11,
+        "Timestamp": 0
+       }
+      },
+      {
+       "catalog_path": "Contents/Resources/Assets.car",
+       "catalog_sha256": "9318093f721539952213adbe5cf6db2e10a28106c25e039f87d73d744409b365",
+       "index": 1,
+       "kind": "rendition",
+       "asset_name": "v_device",
+       "rendition_name": "facebook-2",
+       "metadata": {
+        "AssetType": "Vector",
+        "Name": "v_device",
+        "NameIdentifier": 36373,
+        "RenditionName": "facebook-2",
+        "Scale": 0,
+        "Idiom": "universal",
+        "PixelWidth": 0,
+        "PixelHeight": 0,
+        "Encoding": "PDF",
+        "ColorModel": "RGB",
+        "Opaque": false,
+        "Data Length": 6107,
+        "Layout": 9,
+        "SizeOnDisk": 6331
+       }
+      }
+     ],
+     "resource_key_matches": [],
+     "next_offset": 2,
+     "truncated": true,
+     "limitations": [
+      "Rendition metadata is reported as emitted by the installed assetutil version; private fields and platform-specific interpretations are not normalized.",
+      "Asset catalog inspection does not decode or extract rendition image bytes.",
+      "Asset catalog entries that are not regular files were not inspected, so resource keys reported as unmatched may resolve there: Contents/Frameworks/Link-Assets.car (symlink)",
+      "Exact resource-key joins use only recognized image or asset key fields on decoded Interface Builder resource objects; other archive resource references are not inferred."
+     ]
+    }
+   }
+  },
+  {
+   "id": "only_symlink",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car",
+     "symlink": "nowhere"
+    }
+   ],
+   "page": {},
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": false,
+    "error": {
+     "name": "ArtifactReaderFailure",
+     "reason": "path",
+     "message": "Asset catalog entries are not regular files and were not inspected: Contents/Resources/Assets.car (symlink)"
+    }
+   }
+  },
+  {
+   "id": "only_directory",
+   "layout": [
+    {
+     "path": "Contents/Resources/Assets.car/inner.txt",
+     "text": "x"
+    }
+   ],
+   "page": {},
+   "base": [
+    {
+     "path": "Contents/Info.plist",
+     "text_b64": "PHBsaXN0PjxkaWN0PjxrZXk+Q0ZCdW5kbGVFeGVjdXRhYmxlPC9rZXk+PHN0cmluZz5NYWM8L3N0cmluZz48L2RpY3Q+PC9wbGlzdD4="
+    },
+    {
+     "path": "Contents/MacOS/Mac",
+     "bytes_b64": "z/rt/gwAAAEAAAAAAgAAAAEAAAAYAAAAAAAAAAAAAAAyAAAAGAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+   ],
+   "expected": {
+    "ok": false,
+    "error": {
+     "name": "ArtifactReaderFailure",
+     "reason": "path",
+     "message": "Asset catalog entries are not regular files and were not inspected: Contents/Resources/Assets.car (directory)"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"artifact_operation_failed\",\"category\":\"execution_failure\",\"message\":\"Artifact is invalid or has changed. Get a fresh copy and try again.\",\"retryable\":false,\"remediation\":{\"action\":\"Artifact is invalid or has changed. Get a fresh copy and try again.\"},\"details\":{\"operation\":\"inspect_pe_resources\",\"reason\":\"format\",\"detail\":\"Non-identical resource byte ranges overlap.\"}}}"
+   }
+  ],
+  "isError": true
+ }
+]

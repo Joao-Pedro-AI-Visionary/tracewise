@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"artifact_operation_failed\",\"category\":\"execution_failure\",\"message\":\"Artifact could not be read or written. Check file access and try again.\",\"retryable\":false,\"remediation\":{\"action\":\"Artifact could not be read or written. Check file access and try again.\"},\"details\":{\"operation\":\"inspect_pe_resources\",\"reason\":\"io\",\"detail\":\"ENOENT: no such file or directory, lstat '/workspace/wt/native_static/fixtures/native_static/pe/missing.exe'\"}}}"
+   }
+  ],
+  "isError": true
+ }
+]

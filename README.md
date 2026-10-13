@@ -1,119 +1,122 @@
 # Tracewise
 
-Tracewise is a fast, robust Rust rewrite of [REA](https://github.com/morluto/rea) (morluto/rea, MIT).
+**Understand and integrate any system with your AI agent.**
 
-This repository implements **Phase 0 (Foundation)**:
-- Canonical JSON hashing (RFC 8785) and deterministic `ev_<sha256>` semantic projection calculation.
-- Evidence domain model (confidence levels, authority enum, discriminated locations union, provenance links).
-- ResidualUnknown lifecycle with chained revision digests and optimistic concurrency control (`expected_revision`).
-- EvidenceBundle import/export with re-authentication and bundle comparison.
-- EvidenceLedger for in-memory session tracking.
-- MCP (Model Context Protocol) stdio server powered by `rmcp`. `tools/list` exposes 52 tools: the 50 REA tools verbatim (Phase 0, Phase 1, and Phase 2), plus the tracewise-owned `infer_api_spec` and `generate_api_client` tools. Phase 2 currently implements artifact inventory (`inspect_artifact`, `extract_artifact`, `compare_artifacts`), source-map recovery (`recover_javascript_sources`), historical-source comparison (`compare_source_to_bundle`), application analysis (`analyze_javascript_application`), semantic tracing (`trace_javascript_semantics`), feature tracing (`trace_application_feature`), version comparison (`compare_application_versions`), export-shape comparison (`compare_javascript_export_shapes`), passive V8 Inspector observation (`list_javascript_runtime_targets`, `observe_javascript_runtime`, `reconcile_javascript_runtime`), Electron CDP (`list_electron_targets`, `inspect_electron_page`; `capture_electron_scenario` validates input and returns REA's provider-unavailable error because the Playwright active hook is not ported), PTY process capture (`capture_process_scenario`, `compare_process_captures`), and the reconstruction workflow (`build_reconstruction_obligation_ledger`, `evaluate_reconstruction_coverage`, `verify_reconstruction`, `find_changed_behavior`, `correlate_static_and_runtime`). Every tool dispatches to a real implementation.
-- CLI binary `tracewise` with `mcp`, `hash`, `tools`, `infer-api-spec`, and `generate-api-client` subcommands.
+Tracewise is a local MCP server and CLI, written in Rust, that gives coding agents (Claude Code, Cursor, Codex, Gemini CLI and any other MCP client) eyes on software you don't control: undocumented APIs, third-party web apps, minified JavaScript bundles, Electron apps, Android APKs, .NET assemblies, native binaries and firmware.
 
-## Usage
+Every conclusion comes back as **Evidence**: tagged as observed, derived or inferred, content-addressed (`ev_<sha256>` over an RFC 8785 canonical projection, so tampering is detectable), and paired with the residual unknowns it could not resolve.
+
+Tracewise is a Rust rewrite of [REA](https://github.com/morluto/rea) by morluto (MIT). It keeps REA's tool names and JSON schemas byte-for-byte, so existing REA prompts and clients work unchanged, and adds tools aimed at developers who build integrations. See [Credits](#credits).
+
+## What it is for
+
+- **Integrate without docs.** Capture traffic from a browser, a HAR or mitmproxy, then `infer_api_spec` writes an OpenAPI 3.1 document where every endpoint links to the request that proves it, and `generate_api_client` emits typed TypeScript and Python SDKs with replay tests. Cookies and tokens are redacted before anything is stored.
+- **Clone a feature.** Trace a feature through a site, a bundle or an Electron app, build a reconstruction obligation ledger, and verify that your reimplementation covers it.
+- **Migrate legacy.** Recover sources from source maps, compare versions, inspect .NET members and P/Invoke boundaries, read APK classes and methods.
+- **Audit what you ship.** Check your own bundle, APK or binary for leaked endpoints, keys and source maps before release.
+- **Debug the opaque.** Inspect Mach-O/ELF/PE layout, code signatures, recorded crashes, firmware regions, and drive Ghidra, Hopper or IDA when you need a disassembler.
+
+## Status
+
+`tools/list` serves **172 tools**: the 170 tools of REA at commit `0fa0b04`, with identical names and schemas, plus `infer_api_spec` and `generate_api_client`. Every tool dispatches to a Rust implementation; the one partial implementation is listed under [What is not proven here](#what-is-not-proven-here).
+
+| Family | Tools | How parity was checked |
+| --- | ---: | --- |
+| Foundation: sessions, evidence, unknowns, bundles | 12 | REA oracle; evidence hashes match byte-for-byte |
+| Web and APIs: HAR, mitmproxy, live Chrome via CDP, WebMCP, scenarios | 15 + 2 new | REA oracle with real Chrome and mitmproxy 12.2.3 |
+| JavaScript and Electron: artifacts, source maps, oxc analysis, V8 runtime, process capture, reconstruction | 23 | REA oracle |
+| .NET and Android: ECMA-335, JADX, Apktool, JEB | 19 | REA oracle on real assemblies, the ApiDemos APK, jadx-headless-mcp 0.7.1 and Apktool 2.9.3; JEB against a test double |
+| adb | 24 | REA oracle against a scripted `adb` (no device) |
+| Native static, pure Rust: Mach-O, signatures, plist, Swift, NIB, PE resources, ELF layout, crash cores, EVM | 14 | REA oracle where REA runs on Linux; Apple goldens elsewhere |
+| Disassemblers: Ghidra, Hopper, IDA | 57 | REA oracle against Ghidra 12.1.4; Hopper and IDA against test doubles |
+| Native runtime and firmware: macOS UI/LLDB, Binwalk, Unblob | 6 | REA oracle with Binwalk 3.1.0 and Unblob 26.6.4 |
+
+"Parity" means the test runs the original REA and Tracewise on the same input and compares the whole MCP result, field by field. Each test header lists every ignored field and the reason (wall-clock times, host paths, run ids). Tests that need an external engine skip with a reason when it is missing. With `TRACEWISE_REQUIRE_ORACLE=1` they fail instead.
+
+### What is not proven here
+
+- **JavaScript application graph (work in progress).** `analyze_javascript_application` currently rebuilds the graph only for the pinned fixture apps and refuses any other app with a structured error. The tools that consume that graph (`trace_javascript_semantics`, `trace_application_feature`, `compare_application_versions`, `compare_javascript_export_shapes`, `compare_source_to_bundle`) are therefore limited to those fixtures until the oxc-based builder lands.
+
+- **macOS-only paths.** `observe_native_ui`, `capture_native_ui_scenario`, `observe_native_calls` and the LLDB/assetutil/codesign host paths need macOS. On Linux they return the same `unsupported_host` errors as REA. The real macOS behavior was not run.
+- **Commercial engines.** Hopper, IDA and JEB were never installed. Their providers are verified against test doubles that run the real REA bridge code. Behavior against the real products is unverified.
+- **Text formats reconstructed without the Apple tool.** The `designated_requirement` text of `inspect_signature`, the exact `lipo -detailed_info` text of `list_architectures` and the per-rendition fields of `inspect_asset_catalog` were not compared with the Apple tools.
+- **macOS builds.** The workspace passes `cargo check` for `aarch64-apple-darwin`. It has not been linked or run on a Mac.
+
+Per-family details, including dependencies and known divergences, are in [`docs/progress/`](docs/progress/).
+
+## Quick start
 
 ```bash
-# Build the workspace
-cargo build
-
-# Run unit and integration tests
-cargo test
-
-# Run MCP stdio server
-tracewise mcp
-
-Live browser tools attach to a loopback Chrome DevTools endpoint (`http://127.0.0.1:<port>` or `http://[::1]:<port>`). `allowed_origins` is an optional list of exact `http`/`https` origins: an empty list lists every HTTP(S) page, and a capture with no filter is limited to that target's current origin. URLs keep query and fragment; only userinfo credentials are removed.
-
-`inspect_web_page` passively records one page (DOM, accessibility, scripts, resources, attach-window network and console metadata, workers, redacted storage). It does not navigate or evaluate JavaScript. `Cookie`, `Set-Cookie`, and `Authorization` are removed from captured network data; response metadata keeps an allowlist and `values_redacted` stays true. `observe_web_session` records a navigation timeline for `observation_ms` (default 10000, minimum 1) and does not retain headers, bodies, or cookies.
-
-`analyze_web_bundle` reuses that passive capture with script source retained and reports static chunk, route, endpoint, WebMCP and vendor findings. It does not execute the captured JavaScript. `fetch_source_maps` defaults to false. `observe_web_execution` arms one precise-coverage window (`observation_ms` default 10000, minimum 1) and records request initiators for that window; counters reset until coverage is stopped, and the page stays externally owned. `inspect_web_event_listeners` reads native listener descriptors for the first main-document CSS match and does not dispatch the event.
-
-`discover_webmcp_tools` inventories page-registered WebMCP tools through `WebMCP.enable` and `toolsAdded` / `toolsRemoved` (`observation_ms` default 100). Metadata is page-declared and untrusted; discovered tools are never registered or invoked. `capture_browser_scenario` runs one explicit action sequence. `browser.mode = "launch"` starts Chrome through the process supervisor with an owned temporary profile and terminates that process when the capture ends; `connect` attaches to an existing loopback target and leaves it running. Secret values are read from environment variables for the duration of the capture and are redacted from retained URLs, DOM, storage fingerprints and errors. They are not written into the evidence parameters.
-
-# Hash a JSON file canonically
-tracewise hash <file.json>
-
-# List available Phase 0 tools
-tracewise tools
-
-# Infer an OpenAPI 3.1 document from a redacted HAR or mitmproxy capture
-tracewise infer-api-spec <capture> -o spec.json
-
-# Generate typed TypeScript and Python clients from that document
-tracewise generate-api-client spec.json --lang ts,py -o outdir --replay <capture>
+cargo build --release
+./target/release/tracewise tools          # list the tools
+./target/release/tracewise mcp            # MCP server on stdio
 ```
 
-`infer_api_spec` groups captured requests into templated endpoints and writes an OpenAPI 3.1 document. Credential values stay out of the spec; redacted authentication headers are recorded as a security scheme whose scheme is unknown, and every unobserved aspect is a residual unknown.
+Register it with your agent:
 
-`generate_api_client` renders a fetch-based TypeScript SDK and a stdlib Python SDK from that document. `--replay` turns the redacted capture into `node:test` and `unittest` cases. Each generated file is listed with its sha256. The contracts are in [docs/new-tools.md](docs/new-tools.md).
+```bash
+claude mcp add tracewise -- /abs/path/to/tracewise mcp
+```
 
-`recover_javascript_sources` reads a local UTF-8 bundle and its version-3 source map (`sourceMappingURL` or a sibling `.map`) and writes `sourcesContent` into an absent output directory. It does not execute the bundle. The original REA tool shells out to a caller-supplied Wakaru binary; this port uses the `sourcemap` crate because that binary is not bundled. `compare_source_to_bundle` scores a `HistoricalSourceGraph` against authenticated `analyze_javascript_application` evidence with the same signal weights as REA.
+```json
+{
+  "mcpServers": {
+    "tracewise": { "command": "/abs/path/to/tracewise", "args": ["mcp"] }
+  }
+}
+```
 
-`analyze_javascript_application` inventories a local JavaScript application directory and returns the REA application graph. Parsing and binding use oxc (parser + semantic) so node spans and symbol resolution match the original Babel walk on the `fixtures/js/app` fixture. The tool does not execute the application. Oracle comparison ignores `evidence_id`, `subject.local_path`, and `normalized_result.input_path`.
+The JSON form works for Cursor (`~/.cursor/mcp.json`) and any client that reads `mcpServers`. More clients and verification steps: [docs/mcp-registration.md](docs/mcp-registration.md).
 
-`trace_javascript_semantics` walks that sealed graph. Directions are `forward-influence`, `backward-provenance`, `callers`, and `ownership`. Seeds are a semantic node, an application node, a function fingerprint, a literal, a property slot, an endpoint, an event name, or a boundary field. Candidate edges stay out unless `include_ambiguous_dynamic_edges` is true. The tool does not execute the application. On `fixtures/js/app` the oracle comparison ignores `evidence_id` only: `subject` is null, so there is no path or timestamp field. `parameters.application_evidence_id` and the trace `evidence_links` are compared and match the application evidence produced for that same fixture path.
+Requirements: a recent stable Rust (tested with 1.99) and a C/C++ compiler (the Swift demangler is built from C++). Linux is the tested platform.
 
-`trace_application_feature` walks the same sealed application graph from a literal seed (`route`, `string`, `api`, `channel`, `module`, `native-export`, or `node-id`). Directions are `outgoing`, `incoming`, and `both` (default). It does not execute the application. On `fixtures/js/app` the seed `total` matches the REA oracle with no ignored fields: `subject` is null and the result has no path or timestamp.
-
-`compare_application_versions` and `compare_javascript_export_shapes` read two authenticated application graphs. The fixtures are `fixtures/js/app` and `fixtures/js/app-v2` (a second version whose return shape for `add` and package identity differ). Both tools match the REA oracle with no ignored fields. Export variants pair only by reciprocal unique literal discriminants. Version matching uses the REA unique-only identity tiers and does not execute either application.
-
-## Demo: site -> spec -> SDK
-
-`scripts/demo.sh` walks the local fixture API through a redacted capture into typed clients:
-
-1. Starts `fixtures/web/server.py` on a free loopback port.
-2. Records a HAR with `fixtures/web/record_har.py`. The capture includes `Authorization` and `Cookie` values so redaction is exercised.
-3. Runs `tracewise infer-api-spec` and `tracewise generate-api-client --lang ts,py` with `--replay` pointed at that HAR.
-4. Compiles the TypeScript SDK with `tsc` (`npx -y -p typescript tsc`) using Node at `/tmp/node-v22.20.0-linux-x64/bin` when that tree exists, otherwise `node` and `npx` on `PATH`, then runs `node --test`.
-5. Runs `python3 -m unittest` for the Python SDK.
-6. Calls the generated Python and TypeScript clients against the server that is still running (`GET /api/me`, `GET /api/todos`, `GET /api/todos/1`, `POST /api/todos`, `GET /api/todos/99`).
-7. Fails if the marker `SECRET-` appears in the OpenAPI document, the generated SDK, or the command logs, then stops the server.
+## Demo: site to spec to SDK
 
 ```bash
 cargo build -p tracewise --bin tracewise
 ./scripts/demo.sh
 ```
 
-The script exits non-zero when any step fails. It uses `target/debug/tracewise` unless `TRACEWISE` points at another binary.
+The script starts a local fixture API, records a HAR that contains `Authorization` and `Cookie` values, runs `tracewise infer-api-spec` and `tracewise generate-api-client --lang ts,py --replay`, compiles and tests both SDKs, calls the live server through them, and fails if any secret marker reached the spec, the SDKs or the logs. The new tools' contracts are in [docs/new-tools.md](docs/new-tools.md).
 
-## Registering the MCP server
+## Optional engines
 
-### Claude Code
+Static analysis of web captures, JavaScript, .NET and Mach-O/ELF/PE/EVM runs in-process and needs nothing else. The rest uses tools you install yourself. Tracewise reads the same environment variables as REA:
 
-Using the CLI:
+| Capability | Variables |
+| --- | --- |
+| Live browser tools | a loopback Chrome DevTools endpoint you pass in the call (`http://127.0.0.1:<port>`); `capture_browser_scenario` can also launch Chrome itself; `trace_web_module_imports` uses `REA_BROWSER_EXECUTABLE` |
+| Electron active capture | `TRACEWISE_ELECTRON_EXECUTABLE` (`:`-separated allowlist of Electron binaries), optional `TRACEWISE_ELECTRON_RUNTIME_DIR` |
+| mitmproxy captures | `REA_MITMDUMP_COMMAND` (absolute path to mitmdump 12.2.3) |
+| Ghidra | `GHIDRA_INSTALL_DIR`, `JAVA_HOME` (JDK 21) |
+| Hopper | `HOPPER_LAUNCHER_PATH` |
+| IDA (read-only) | `REA_IDA_MCP_CONFIG` (ida-pro-mcp) |
+| Provider choice | `REA_ANALYSIS_PROVIDER` (`ghidra`, `hopper`, `ida`; default auto) |
+| Android | `JAVA_HOME`, `REA_JADX_MCP_JAR` (jadx-headless-mcp 0.7.1), `REA_APKTOOL_COMMAND`, `REA_JEB_MCP_URL` |
+| adb | `REA_ADB_PATH` |
+| Firmware | `REA_BINWALK_COMMAND`, `REA_UNBLOB_COMMAND` |
+| Crash cores with pwndbg | `REA_PWNDBG_GDB`, `REA_PWNDBG_VENV_PATH`, `REA_PWNDBG_GDBINIT` |
+
+Missing engines produce a structured `capability_unavailable` error with a remediation hint, never a crash.
+
+Child processes run in their own process group and are killed when a call is cancelled, when the target changes, or when the server exits (stdin closed, SIGTERM, SIGINT). Temporary directories are removed the same way. Disassembler databases are ephemeral and the analyzed file is never modified.
+
+## Development
+
 ```bash
-claude mcp add tracewise -- /abs/path/tracewise mcp
+cargo build --workspace --all-targets
+cargo clippy --workspace --all-targets      # zero warnings
+cargo test --workspace --no-fail-fast
 ```
 
-Or configure via `.mcp.json` in your project root:
-```json
-{
-  "mcpServers": {
-    "tracewise": {
-      "command": "/abs/path/tracewise",
-      "args": ["mcp"]
-    }
-  }
-}
-```
+The parity tests call the original REA through `fixtures/rea_oracle.py`. To run them, check out REA at `0fa0b04` next to this repository, build it with Node 22, and install the engines listed above. Without them the parity tests skip and say why.
 
-### Cursor
+Workspace layout: `domain` (evidence model), `contracts` (tool catalog), `server` (MCP dispatch), `cli`, `web`, `js`, `managed`, `android`, `device` (adb, firmware, native runtime), `native` (Mach-O/ELF/PE/plist/EVM), `engines` (Ghidra/Hopper/IDA), `proc-supervisor`.
 
-Add to your Cursor MCP settings (`~/.cursor/mcp.json`):
-```json
-{
-  "mcpServers": {
-    "tracewise": {
-      "command": "/abs/path/tracewise",
-      "args": ["mcp"]
-    }
-  }
-}
-```
+## Credits
 
-For more detailed setup, verification steps, and client support, see [docs/mcp-registration.md](docs/mcp-registration.md).
+Tracewise is derived from [REA](https://github.com/morluto/rea), Copyright (c) 2026 morluto, MIT License. The tool catalog and schemas, the evidence model and many behaviors are ported from REA's TypeScript. The Ghidra and Hopper bridge scripts and the JADX bridge are copied from REA with their attribution headers. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the full list, including third-party test fixtures and Rust dependencies under other licenses.
 
 ## License
 
-Licensed under the MIT License. See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+MIT. See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

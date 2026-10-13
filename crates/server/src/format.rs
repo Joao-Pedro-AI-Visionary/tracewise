@@ -22,6 +22,43 @@ pub fn inspect_binary_file(path: &Path) -> Result<BinaryInfo, std::io::Error> {
     })
 }
 
+/// Architecture of the first Mach-O slice, in the vocabulary of `BinaryTarget.architecture`.
+pub(crate) fn mach_o_architecture(path: &Path) -> Option<String> {
+    let file = std::fs::File::open(path).ok()?;
+    let size = file.metadata().ok()?.len();
+    match tracewise_native::macho_dyld::read_macho_image(&file, size).ok()? {
+        tracewise_native::macho_dyld::ImageFacts::Parsed(slices) => {
+            let first = slices.first()?;
+            Some(
+                match first.architecture.as_str() {
+                    "arm64" | "arm64e" | "arm64_32" => "arm64",
+                    "x86_64" | "x86_64h" => "x86_64",
+                    "i386" => "x86",
+                    "arm" => "arm",
+                    _ => return None,
+                }
+                .to_string(),
+            )
+        }
+        _ => None,
+    }
+}
+
+/// Like [`inspect_binary_file`], with the Mach-O header read by the native parser (the slice
+/// architecture of a universal binary, which the byte sniffing below cannot tell). Used for the
+/// program file a bundle declares and for Mach-O targets in general.
+pub(crate) fn inspect_executable_file(path: &Path) -> Result<BinaryInfo, std::io::Error> {
+    use std::io::Read;
+    let mut info = inspect_binary_file(path)?;
+    let mut head = [0u8; 4];
+    let read = std::fs::File::open(path)?.read(&mut head)?;
+    if tracewise_native::macho_dyld::has_macho_magic(&head[..read]) {
+        info.format = "mach-o".to_string();
+        info.architecture = mach_o_architecture(path);
+    }
+    Ok(info)
+}
+
 fn detect_format_and_arch(bytes: &[u8]) -> (String, Option<String>) {
     if bytes.len() >= 4 {
         // ELF: 0x7f, 'E', 'L', 'F'

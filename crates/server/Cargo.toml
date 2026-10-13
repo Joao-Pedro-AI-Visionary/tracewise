@@ -10,6 +10,12 @@ tracewise-domain = { path = "../domain" }
 tracewise-contracts = { path = "../contracts" }
 tracewise-web = { path = "../web" }
 tracewise-js = { path = "../js" }
+tracewise-device = { path = "../device" }
+tracewise-managed = { path = "../managed" }
+tracewise-android = { path = "../android" }
+tracewise-native = { path = "../native" }
+tracewise-engines = { path = "../engines" }
+async-trait = "0.1"
 rmcp.workspace = true
 tokio.workspace = true
 serde.workspace = true
@@ -18,10 +24,13 @@ sha2.workspace = true
 hex.workspace = true
 thiserror.workspace = true
 tracing = "0.1"
+jsonschema = { version = "0.58.6", default-features = false }
+libc = "0.2"
 
 [dev-dependencies]
+regex.workspace = true
+flate2 = "1.1"
 proc-supervisor = { path = "../proc-supervisor" }
 base64.workspace = true
-jsonschema = { version = "0.58.6", default-features = false }
 tokio = { workspace = true, features = ["full", "test-util"] }
 

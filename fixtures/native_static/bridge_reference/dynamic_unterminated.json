@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "ELF dynamic segment 6 has no complete DT_NULL terminator within its reported file range.",
+ "stderr": ""
+}

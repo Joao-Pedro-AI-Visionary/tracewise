@@ -174,3 +174,12 @@
 
 ## 2026-10-12 15:14 — phase2: V8 runtime, Electron CDP, process capture, reconstruction ledger; all 52 dispatch (CLI: claude)
 - testes ok: 118
+
+## 2026-10-13 — fases 3–6 integradas: 170 ferramentas REA + 2 próprias, nenhuma pendente
+- Trilhas em worktrees com executor + revisor independente (achados blocker corrigidos antes do merge):
+  managed_android (19: .NET, JADX, Apktool, JEB), adb_runtime (24 adb + 6 da fase 6, firmware com Binwalk/Unblob reais),
+  native_static (14, Rust puro; apple-codesign trocado por parser próprio), engines (57: Ghidra 12.1.4 real, Hopper/IDA com dublês).
+- integration: shutdown completo (stdin fechado, SIGTERM/SIGINT) para engines, JADX, JEB e adb; `tool_dispatch_test` cobre as 172 e proíbe "pending port";
+  `open_binary` em `.app`; correções do inventário de artefatos; clippy zerado; `cargo check` para aarch64-apple-darwin.
+- Detalhes, dependências e divergências por trilha em `docs/progress/`.
+- testes ok: 362, falhas 0 (`cargo test --workspace --no-fail-fast` com TRACEWISE_REQUIRE_ORACLE=1), clippy 0 avisos.

@@ -1,0 +1,12 @@
+[
+  {"name": "open_binary", "arguments": {"path": "/workspace/wt/engines/fixtures/engines/sample_elf"}},
+  {"name": "analyze_function", "arguments": {"procedure": "engine_leaf"}},
+  {"name": "analyze_function", "arguments": {"procedure": "engine_branch"}},
+  {"name": "analyze_function", "arguments": {"procedure": "engine_apply"}},
+  {"name": "analyze_function", "arguments": {"procedure": "engine_measure"}},
+  {"name": "analyze_function", "arguments": {"procedure": "engine_entry"}},
+  {"name": "analyze_function", "arguments": {"procedure": "main"}},
+  {"name": "analyze_function", "arguments": {"procedure": "0x401030"}},
+  {"name": "annotate_native_function", "arguments": {"procedure": "engine_branch", "name": "engine_branch_v2", "comment": "second version", "inline_comment": "inline v2"}},
+  {"name": "analyze_function", "arguments": {"procedure": "engine_branch_v2"}}
+]

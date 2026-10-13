@@ -1,0 +1,103 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_80d2a3eaf86e909fa8b752336ec03d2194e2a86afabd5e79c84443de2f481ad9\",\"subject\":{\"name\":\"Ib\",\"digest\":{\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"inspect_keyed_archive\",\"parameters\":{\"path\":\"Contents/Resources/Sub/Dir/Nested.plist\",\"offset\":0,\"limit\":20000},\"raw_result\":null,\"normalized_result\":{\"target_sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"archive_path\":\"Contents/Resources/Sub/Dir/Nested.plist\",\"archive_sha256\":\"6e63377180fa5347e8019713f0aa6886fbf9534a5656aef2c372da7213abb368\",\"archive_format\":\"binary-plist\",\"roots\":{\"root\":{\"UID\":1}},\"objects\":[{\"id\":0,\"kind\":\"nil\",\"class_id\":null,\"class_name\":null,\"status\":\"nil\",\"value\":\"$null\"},{\"id\":1,\"kind\":\"scalar\",\"class_id\":null,\"class_name\":null,\"status\":\"observed\",\"value\":\"x\"}],\"references\":[{\"source\":null,\"path\":[\"root\"],\"target\":1,\"status\":\"resolved\",\"raw\":{\"UID\":1}}],\"total_objects\":2,\"total_references\":1,\"offset\":0,\"next_offset\":null,\"truncated\":false,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.\",\"Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.\",\"Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"Contents/Resources/Sub/Dir/Nested.plist\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_80d2a3eaf86e909fa8b752336ec03d2194e2a86afabd5e79c84443de2f481ad9",
+   "subject": {
+    "name": "Ib",
+    "digest": {
+     "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "inspect_keyed_archive",
+   "parameters": {
+    "path": "Contents/Resources/Sub/Dir/Nested.plist",
+    "offset": 0,
+    "limit": 20000
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+    "archive_path": "Contents/Resources/Sub/Dir/Nested.plist",
+    "archive_sha256": "6e63377180fa5347e8019713f0aa6886fbf9534a5656aef2c372da7213abb368",
+    "archive_format": "binary-plist",
+    "roots": {
+     "root": {
+      "UID": 1
+     }
+    },
+    "objects": [
+     {
+      "id": 0,
+      "kind": "nil",
+      "class_id": null,
+      "class_name": null,
+      "status": "nil",
+      "value": "$null"
+     },
+     {
+      "id": 1,
+      "kind": "scalar",
+      "class_id": null,
+      "class_name": null,
+      "status": "observed",
+      "value": "x"
+     }
+    ],
+    "references": [
+     {
+      "source": null,
+      "path": [
+       "root"
+      ],
+      "target": 1,
+      "status": "resolved",
+      "raw": {
+       "UID": 1
+      }
+     }
+    ],
+    "total_objects": 2,
+    "total_references": 1,
+    "offset": 0,
+    "next_offset": null,
+    "truncated": false,
+    "limitations": [
+     "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+     "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+     "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "Archive classes are never instantiated. Class names and serialized fields are observed; class-specific semantics are unknown.",
+    "Conditional references serialized as UID 0 cannot be distinguished from ordinary nil references. Missing fields remain absent in the raw serialized value.",
+    "Root selection selects the named $top entry; object pagination retains original indices and does not recursively expand references."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Resources/Sub/Dir/Nested.plist"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

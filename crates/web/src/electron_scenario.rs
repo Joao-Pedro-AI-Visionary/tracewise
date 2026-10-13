@@ -14,17 +14,16 @@
 //!   retention, IPC/timeline split and limitations) and the Evidence envelope
 //!   (`create_electron_active_evidence`, including `scenario_sha256`).
 //!
-//! NOT ported: REA's only active provider, `PlaywrightElectronActiveProvider`,
-//! which launches the application through Playwright's `_electron.launch`
-//! with the injected `scripts/electron-active-hook.cjs` main-process hook,
-//! drives windows with Playwright locators, reads the hook snapshot through
-//! the Node inspector and verifies owned-process cleanup. Tracewise ships no
-//! Playwright and no Electron runtime, so after canonicalization the tool
-//! returns the same failure REA returns when its active provider is not
-//! configured: `AnalysisCapabilityUnavailableError("rea-playwright-electron-active",
+//! The active provider itself (REA's `PlaywrightElectronActiveProvider`: launch
+//! with the injected `scripts/electron-active-hook.cjs` main-process hook, drive
+//! windows, read the hook snapshot, verify owned-process cleanup) lives in
+//! [`crate::electron_active`]; it controls Electron over CDP instead of
+//! Playwright. Without an operator-configured Electron
+//! (`TRACEWISE_ELECTRON_EXECUTABLE`) the tool returns the failure REA returns
+//! when its active provider is not configured:
+//! `AnalysisCapabilityUnavailableError("rea-playwright-electron-active",
 //! "capture_electron_scenario", "active Electron observation provider is not configured")`.
-//! The projection and evidence functions are kept so a future provider only
-//! has to supply the windows, metrics, Electron version and hook snapshot.
+//! The projection and evidence functions below are shared by both paths.
 
 use std::path::Path;
 
@@ -35,6 +34,7 @@ use tracewise_domain::evidence::{
     EvidenceProvider, ExecutionEnvironment, IsolationLevel,
 };
 
+use crate::electron_active::{self, ElectronActiveConfig, ElectronCaptureError};
 use crate::error::WebError;
 
 pub const OPERATION: &str = "capture_electron_scenario";
@@ -310,15 +310,25 @@ pub fn canonicalize_scenario(input: &Map<String, Value>) -> Result<Map<String, V
     Ok(canonical)
 }
 
-/// Run one scenario: validate paths, then report the missing active provider.
-pub async fn capture_electron_scenario(input: &Map<String, Value>) -> Result<Evidence, WebError> {
-    let _canonical = canonicalize_scenario(input)?;
-    Err(WebError::CapabilityUnavailable {
-        capability: PLAYWRIGHT_ELECTRON_ACTIVE_PROVIDER_ID.to_string(),
-        operation: OPERATION.to_string(),
-        reason: PROVIDER_NOT_CONFIGURED.to_string(),
-        user_message: "This analysis is unavailable for the current target. Choose another analysis or target.".to_string(),
-    })
+/// Run one scenario: validate paths, then use the configured active provider
+/// (`TRACEWISE_ELECTRON_EXECUTABLE`) or report that none is configured.
+pub async fn capture_electron_scenario(input: &Map<String, Value>) -> Result<Evidence, ElectronCaptureError> {
+    let environment: std::collections::HashMap<String, String> = std::env::vars().collect();
+    capture_electron_scenario_with(input, ElectronActiveConfig::from_env().as_ref(), &environment).await
+}
+
+/// [`capture_electron_scenario`] with an explicit configuration and environment
+/// (the environment is what the launched Electron may inherit).
+pub async fn capture_electron_scenario_with(
+    input: &Map<String, Value>,
+    config: Option<&ElectronActiveConfig>,
+    environment: &std::collections::HashMap<String, String>,
+) -> Result<Evidence, ElectronCaptureError> {
+    let canonical = canonicalize_scenario(input)?;
+    match config {
+        None => Err(electron_active::provider_not_configured().into()),
+        Some(config) => electron_active::capture(&canonical, config, environment).await,
+    }
 }
 
 const OBSERVABLE_EVENT_FAMILIES: &[&str] = &[

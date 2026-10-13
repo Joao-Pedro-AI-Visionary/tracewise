@@ -1,0 +1,200 @@
+#!/usr/bin/env python3
+"""Fake Unblob 26.6 for the firmware parity tests.
+
+It extracts a tiny deterministic tree and writes a task-graph report that is
+valid by default; FAKE_FW_MUTATION bends exactly one aspect of it so every
+refusal branch of the report normalizer can be provoked.
+
+Environment:
+  FAKE_FW_MUTATION   none (default) or a mutation listed in MUTATIONS below
+  FAKE_FW_VERSION    `--version` banner (default "26.6.4")
+  FAKE_FW_EXIT       exit status of the extraction run (default 0)
+  FAKE_FW_SLOW       set: leave a stray descendant and stall after extracting (cancellation fixture)
+"""
+import hashlib
+import json
+import os
+import sys
+
+MUTATION = os.environ.get("FAKE_FW_MUTATION", "none")
+argv = sys.argv[1:]
+
+if argv == ["--version"]:
+    sys.stdout.write(os.environ.get("FAKE_FW_VERSION", "26.6.4") + "\n")
+    sys.exit(0)
+
+report_path = argv[argv.index("--report") + 1]
+extract_dir = argv[argv.index("--extract-dir") + 1]
+target = argv[-1]
+size = os.path.getsize(target)
+sha = hashlib.sha256(open(target, "rb").read()).hexdigest()
+
+carve = os.path.join(extract_dir, os.path.basename(target) + "_extract")
+os.makedirs(carve, exist_ok=True)
+payload_bytes = b"extracted payload\n"
+payload = os.path.join(carve, "payload.txt")
+open(payload, "wb").write(payload_bytes)
+payload_sha = hashlib.sha256(payload_bytes).hexdigest()
+
+if MUTATION == "symlink":
+    os.symlink("payload.txt", os.path.join(carve, "alias"))
+if MUTATION == "special":
+    os.mkfifo(os.path.join(carve, "pipe"))
+if MUTATION == "many_files":
+    for index in range(40):
+        open(os.path.join(carve, "extra-%02d.bin" % index), "wb").write(b"x")
+if MUTATION == "huge":
+    # Two files that each fit under prlimit's per-file --fsize (set to the byte
+    # budget) but together exceed the staging budget. The tool then stays alive
+    # long enough for the runner's periodic inventory to see the overshoot, so
+    # the refusal never depends on a race between that poll and the tool's exit.
+    for name in ("huge-1.bin", "huge-2.bin"):
+        open(os.path.join(carve, name), "wb").write(b"h" * 1200)
+    import time
+
+    time.sleep(5)
+if MUTATION == "bytes_disagree":
+    open(payload, "wb").write(b"tampered after report\n")
+if MUTATION == "unsafe_name":
+    open(os.path.join(carve, "back\\slash.txt"), "wb").write(b"b")
+if MUTATION == "decomposed_name":
+    open(os.path.join(carve, "é.txt"), "wb").write(b"d")
+
+
+if os.environ.get("FAKE_FW_SLOW"):
+    import subprocess
+    import time
+
+    subprocess.Popen(
+        [sys.executable, "-c", "import time; time.sleep(300)", os.environ.get("FAKE_FW_MARKER", "tw-fw-stray-default")],
+        stdin=subprocess.DEVNULL,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    time.sleep(120)
+
+
+def task(path, depth, blob):
+    return {"path": path, "depth": depth, "blob_id": blob, "is_multi_file": False}
+
+
+def stat(path, length, is_dir=False, is_file=True, is_link=False):
+    return {
+        "path": path,
+        "size": length,
+        "is_dir": is_dir,
+        "is_file": is_file,
+        "is_link": is_link,
+        "link_target": None,
+        "__typename__": "StatReport",
+    }
+
+
+def chunk(identifier, start, end, handler="fake", encrypted=False, extraction_reports=None):
+    return {
+        "id": identifier,
+        "handler_name": handler,
+        "start_offset": start,
+        "end_offset": end,
+        "size": end - start,
+        "is_encrypted": encrypted,
+        "extraction_reports": extraction_reports or [],
+        "__typename__": "ChunkReport",
+    }
+
+
+root_task = task(target, 0, "")
+carve_task = task(carve, 1, "1:1")
+payload_task = task(payload, 1, "1:1")
+
+root_reports = [
+    stat(target, size),
+    {"md5": "0" * 32, "sha1": "0" * 40, "sha256": sha, "__typename__": "HashReport"},
+    {"magic": "data", "mime_type": "application/octet-stream", "__typename__": "FileMagicReport"},
+    {"carve_dir": carve, "__typename__": "CarveDirectoryReport"},
+    chunk("1:1", 0, size),
+]
+carve_reports = [stat(carve, 4096, is_dir=True, is_file=False)]
+payload_reports = [
+    stat(payload, len(payload_bytes)),
+    {"md5": "0" * 32, "sha1": "0" * 40, "sha256": payload_sha, "__typename__": "HashReport"},
+    {"magic": "ASCII text", "mime_type": "text/plain", "__typename__": "FileMagicReport"},
+]
+records = [
+    {"task": payload_task, "reports": payload_reports, "subtasks": []},
+    {"task": carve_task, "reports": carve_reports, "subtasks": [payload_task]},
+    {"task": root_task, "reports": root_reports, "subtasks": [carve_task]},
+]
+by_name = {"payload": records[0], "carve": records[1], "root": records[2]}
+
+m = MUTATION
+if m == "hash_mismatch":
+    root_reports[1]["sha256"] = "f" * 64
+elif m == "no_root_hash":
+    root_reports.pop(1)
+elif m == "size_mismatch":
+    root_reports[0]["size"] = size + 1
+elif m == "root_not_file":
+    root_reports[0]["is_dir"] = True
+elif m == "duplicate_task":
+    records.append({"task": payload_task, "reports": payload_reports, "subtasks": []})
+elif m == "missing_stat":
+    payload_reports.pop(0)
+elif m == "stat_path_mismatch":
+    payload_reports[0]["path"] = payload + ".other"
+elif m == "no_root":
+    records.pop()
+elif m == "two_roots":
+    records.append({"task": root_task, "reports": root_reports, "subtasks": []})
+elif m == "chunk_bounds":
+    root_reports[4] = chunk("1:1", 10, 10)
+elif m == "chunk_bounds_beyond":
+    root_reports[4] = chunk("1:1", 0, size + 5)
+elif m == "chunk_duplicate":
+    root_reports.append(chunk("1:1", 0, size))
+elif m == "chunk_encrypted":
+    root_reports[4] = chunk("1:1", 0, size, encrypted=True)
+elif m == "chunk_unknown_handler":
+    root_reports[4] = {"id": "1:1", "start_offset": 0, "end_offset": size, "size": size, "randomness": None, "__typename__": "UnknownChunkReport"}
+elif m == "chunk_diagnostic":
+    root_reports[4] = chunk("1:1", 0, size, extraction_reports=[{"__typename__": "ExtractCommandFailedReport", "command": "x", "exit_code": 2}])
+elif m == "unknown_report":
+    root_reports.append({"__typename__": "SomethingNewReport", "detail": [1, 2, {"a": None}]})
+elif m == "multifile":
+    root_reports.append({"id": "9:9", "handler_name": "fake", "name": "multi", "paths": ["a"], "extraction_reports": [{"__typename__": "ExtractCommandFailedReport"}], "__typename__": "MultiFileReport"})
+elif m == "multifile_clean":
+    root_reports.append({"id": "9:9", "handler_name": "fake", "name": "multi", "paths": ["a"], "extraction_reports": [], "__typename__": "MultiFileReport"})
+elif m == "multifile_bad":
+    root_reports.append({"id": 9, "__typename__": "MultiFileReport"})
+elif m == "child_missing":
+    records.pop(0)
+elif m == "child_identity":
+    carve_task_bad = dict(payload_task, depth=7)
+    records[1]["subtasks"] = [carve_task_bad]
+elif m == "disconnected":
+    extra = os.path.join(carve, "orphan.txt")
+    open(extra, "wb").write(b"o")
+    records.append({"task": task(extra, 1, "1:1"), "reports": [stat(extra, 1)], "subtasks": []})
+elif m == "outside_path":
+    outside = "/etc/hostname"
+    records.append({"task": task(outside, 1, "1:1"), "reports": [stat(outside, 1)], "subtasks": []})
+    records[2]["subtasks"].append(task(outside, 1, "1:1"))
+elif m == "depth_limited":
+    records[0]["task"]["depth"] = 9
+    records[0]["subtasks"] = []
+    records[1]["subtasks"] = [dict(payload_task, depth=9)]
+elif m == "absent_file":
+    ghost = os.path.join(carve, "ghost.txt")
+    records.append({"task": task(ghost, 1, "1:1"), "reports": [stat(ghost, 3), {"md5": "0" * 32, "sha1": "0" * 40, "sha256": "a" * 64, "__typename__": "HashReport"}], "subtasks": []})
+    records[1]["subtasks"].append(task(ghost, 1, "1:1"))
+elif m == "reported_size_mismatch":
+    payload_reports[0]["size"] = len(payload_bytes) + 3
+elif m == "bad_shape":
+    records = [{"task": 5, "reports": [], "subtasks": []}]
+elif m == "not_array":
+    records = {"x": 1}
+
+with open(report_path, "w") as handle:
+    json.dump(records, handle)
+sys.stdout.write("fake unblob extraction complete\n")
+sys.exit(int(os.environ.get("FAKE_FW_EXIT", "0")))

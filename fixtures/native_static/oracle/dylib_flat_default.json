@@ -1,0 +1,177 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_504e6060a73a7e52326c5fdd69c3297c833d80a0cbd3c0454e80dbd5ecc6f909\",\"subject\":{\"name\":\"Flat\",\"digest\":{\"sha256\":\"fbf991f50951f2f13dd66de5a7ce75faf565fce560befe1581e344fe464fa270\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Flat.app/Flat\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"trace_dylib_resolution\",\"parameters\":{},\"raw_result\":null,\"normalized_result\":{\"root_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Flat.app\",\"target_sha256\":\"fbf991f50951f2f13dd66de5a7ce75faf565fce560befe1581e344fe464fa270\",\"roots\":[{\"image\":\"Flat\",\"architecture\":\"arm64\"}],\"images\":[{\"path\":\"Flat\",\"sha256\":\"fbf991f50951f2f13dd66de5a7ce75faf565fce560befe1581e344fe464fa270\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":168,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"execute\",\"file_type_code\":2,\"platform\":2,\"platforms\":[2],\"install_name\":null,\"rpaths\":[\"@executable_path/Frameworks\"],\"dyld_environment\":[],\"code_signature_present\":false}]},{\"path\":\"Frameworks/Kit.framework/Kit\",\"sha256\":\"59f655c448dfa7d389e19e367a337d4bea64028cad430a633f12af51e10f4c92\",\"parse_status\":\"parsed\",\"reason\":null,\"slices\":[{\"architecture\":\"arm64\",\"slice_offset\":0,\"slice_size\":128,\"cpu_type\":16777228,\"cpu_subtype\":0,\"fat_cpu_type\":null,\"fat_cpu_subtype\":null,\"fat_alignment_exponent\":null,\"file_type\":\"dylib\",\"file_type_code\":6,\"platform\":2,\"platforms\":[2],\"install_name\":\"@rpath/Kit.framework/Kit\",\"rpaths\":[],\"dyld_environment\":[],\"code_signature_present\":false}]}],\"edges\":[{\"root\":\"Flat\",\"architecture\":\"arm64\",\"loader\":\"Flat\",\"via\":[\"Flat\"],\"command\":\"LC_LOAD_DYLIB\",\"encoding\":\"dylib_command\",\"install_name\":\"@rpath/Kit.framework/Kit\",\"weak\":false,\"upward\":false,\"reexport\":false,\"delayed_init\":false,\"current_version\":\"1.0.0\",\"compatibility_version\":\"1.0.0\",\"candidates\":[{\"path\":\"Frameworks/Kit.framework/Kit\",\"source\":\"rpath\",\"rpath\":\"@executable_path/Frameworks\",\"rpath_owner\":\"Flat\",\"outcome\":\"resolved\",\"resolved_path\":\"Frameworks/Kit.framework/Kit\"}],\"resolution\":{\"status\":\"resolved\",\"image\":\"Frameworks/Kit.framework/Kit\"},\"install_name_matches\":true,\"loader_conditional\":false}],\"findings\":[],\"coverage\":{\"status\":\"complete\",\"unparsed_images\":[],\"roots_without_architecture\":[]},\"limitations\":[\"LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.\",\"Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.\",\"Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.\",\"Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.\",\"Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.\",\"@loader_path uses each image's symlink-resolved path within the analyzed root.\",\"Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.\",\"Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.\",\"Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.\",\"Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.\",\"Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.\",\"Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.\",\"@loader_path uses each image's symlink-resolved path within the analyzed root.\",\"Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.\",\"Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"Flat\"},{\"kind\":\"artifact-path\",\"path\":\"Frameworks/Kit.framework/Kit\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_504e6060a73a7e52326c5fdd69c3297c833d80a0cbd3c0454e80dbd5ecc6f909",
+   "subject": {
+    "name": "Flat",
+    "digest": {
+     "sha256": "fbf991f50951f2f13dd66de5a7ce75faf565fce560befe1581e344fe464fa270"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Flat.app/Flat"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "trace_dylib_resolution",
+   "parameters": {},
+   "raw_result": null,
+   "normalized_result": {
+    "root_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Flat.app",
+    "target_sha256": "fbf991f50951f2f13dd66de5a7ce75faf565fce560befe1581e344fe464fa270",
+    "roots": [
+     {
+      "image": "Flat",
+      "architecture": "arm64"
+     }
+    ],
+    "images": [
+     {
+      "path": "Flat",
+      "sha256": "fbf991f50951f2f13dd66de5a7ce75faf565fce560befe1581e344fe464fa270",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 168,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "execute",
+        "file_type_code": 2,
+        "platform": 2,
+        "platforms": [
+         2
+        ],
+        "install_name": null,
+        "rpaths": [
+         "@executable_path/Frameworks"
+        ],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     },
+     {
+      "path": "Frameworks/Kit.framework/Kit",
+      "sha256": "59f655c448dfa7d389e19e367a337d4bea64028cad430a633f12af51e10f4c92",
+      "parse_status": "parsed",
+      "reason": null,
+      "slices": [
+       {
+        "architecture": "arm64",
+        "slice_offset": 0,
+        "slice_size": 128,
+        "cpu_type": 16777228,
+        "cpu_subtype": 0,
+        "fat_cpu_type": null,
+        "fat_cpu_subtype": null,
+        "fat_alignment_exponent": null,
+        "file_type": "dylib",
+        "file_type_code": 6,
+        "platform": 2,
+        "platforms": [
+         2
+        ],
+        "install_name": "@rpath/Kit.framework/Kit",
+        "rpaths": [],
+        "dyld_environment": [],
+        "code_signature_present": false
+       }
+      ]
+     }
+    ],
+    "edges": [
+     {
+      "root": "Flat",
+      "architecture": "arm64",
+      "loader": "Flat",
+      "via": [
+       "Flat"
+      ],
+      "command": "LC_LOAD_DYLIB",
+      "encoding": "dylib_command",
+      "install_name": "@rpath/Kit.framework/Kit",
+      "weak": false,
+      "upward": false,
+      "reexport": false,
+      "delayed_init": false,
+      "current_version": "1.0.0",
+      "compatibility_version": "1.0.0",
+      "candidates": [
+       {
+        "path": "Frameworks/Kit.framework/Kit",
+        "source": "rpath",
+        "rpath": "@executable_path/Frameworks",
+        "rpath_owner": "Flat",
+        "outcome": "resolved",
+        "resolved_path": "Frameworks/Kit.framework/Kit"
+       }
+      ],
+      "resolution": {
+       "status": "resolved",
+       "image": "Frameworks/Kit.framework/Kit"
+      },
+      "install_name_matches": true,
+      "loader_conditional": false
+     }
+    ],
+    "findings": [],
+    "coverage": {
+     "status": "complete",
+     "unparsed_images": [],
+     "roots_without_architecture": []
+    },
+    "limitations": [
+     "LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.",
+     "Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.",
+     "Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.",
+     "Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.",
+     "Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.",
+     "@loader_path uses each image's symlink-resolved path within the analyzed root.",
+     "Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.",
+     "Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "LC_LAZY_LOAD_DYLIB dependencies are resolved but not traversed, because dyld loads them only on first use.",
+    "Slices are matched by dyld's graded architectures (an x86_64h process also loads x86_64). arm64e processes that disable pointer authentication can also load arm64 slices; that fallback is not modeled.",
+    "Absolute install names and rpaths are outside the analyzed root and are not evaluated, including /System and /usr/lib libraries that the dyld shared cache usually provides.",
+    "Leaf and relative install names depend on dyld fallback paths, DYLD_* variables, and the working directory; they are undetermined.",
+    "Load order follows dyld's dependents-first traversal in load-command order. An image reached through several chains is resolved once per process, with the rpath stack and conditionality of the first chain; a later request whose install name matches an already loaded image reuses it.",
+    "@loader_path uses each image's symlink-resolved path within the analyzed root.",
+    "Code-signing checks that can reject a found image, such as library validation and the hardened runtime, are not evaluated.",
+    "Dylib compatibility versions are not compared. Apple's linker documentation describes a load-time rejection when an image's compatibility version is older than the loader requires, but dyld on macOS 26 was observed to load such an image."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "Flat"
+    },
+    {
+     "kind": "artifact-path",
+     "path": "Frameworks/Kit.framework/Kit"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]

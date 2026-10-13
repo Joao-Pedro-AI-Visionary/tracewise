@@ -1,0 +1,18 @@
+[package]
+name = "tracewise-managed"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+sha1 = "0.10"
+hex = { workspace = true }
+libc = "0.2"
+tracewise-domain = { path = "../domain" }
+
+[dev-dependencies]
+proptest = "=1.6.0"

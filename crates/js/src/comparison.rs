@@ -29,9 +29,7 @@ pub fn compare_artifacts(left: &Evidence, right: &Evidence) -> Result<Value, Dom
     let summary = summarize(&left_inv, &changes, left_covered && right_covered);
     let status = if changes.iter().any(|c| c["classification"] == "contradiction") {
         "contradiction"
-    } else if !left_covered || !right_covered {
-        "unknown"
-    } else if changes.iter().any(|c| c["classification"] == "unknown") {
+    } else if !left_covered || !right_covered || changes.iter().any(|c| c["classification"] == "unknown") {
         "unknown"
     } else if changes.is_empty() {
         "unchanged"

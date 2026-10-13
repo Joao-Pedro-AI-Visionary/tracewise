@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "Selected ELF failed unchanged upstream structural parsing: IntervalTree: Null Interval objects not allowed in IntervalTree: Interval(2032, 8, b'\\x00')",
+ "stderr": ""
+}

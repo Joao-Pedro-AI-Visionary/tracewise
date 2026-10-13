@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "Input validation error: Invalid arguments for tool inspect_evm_interface: encoding: Invalid option: expected one of \"raw\"|\"hex\""
+   }
+  ],
+  "isError": true
+ }
+]

@@ -1,0 +1,11 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"error\":{\"code\":\"unsupported_target\",\"category\":\"unsupported_target\",\"message\":\"Unsupported target for inspect_recorded_crash at /workspace/wt/native_static/fixtures/native_static/cores/big_endian.core: Initial recorded-core profile requires ELF64 little-endian.\",\"retryable\":false,\"remediation\":{\"action\":\"Select a target supported by this operation or choose an operation supporting the reported target format.\"},\"details\":{\"operation\":\"inspect_recorded_crash\",\"path\":\"/workspace/wt/native_static/fixtures/native_static/cores/big_endian.core\",\"reason\":\"Initial recorded-core profile requires ELF64 little-endian.\",\"captured_output\":{\"stdout\":\"\",\"stderr\":\"\",\"truncated\":false}}}}"
+   }
+  ],
+  "isError": true
+ }
+]

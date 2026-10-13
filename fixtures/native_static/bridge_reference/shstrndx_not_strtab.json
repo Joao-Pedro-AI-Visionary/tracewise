@@ -1,0 +1,6 @@
+{
+ "ok": false,
+ "reason": "format",
+ "message": "ELF section-name table 1 is not SHT_STRTAB.",
+ "stderr": ""
+}

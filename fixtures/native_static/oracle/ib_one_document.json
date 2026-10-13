@@ -1,0 +1,433 @@
+[
+ {
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"evidence_id\":\"ev_d4fabd280f7a0b38c04632b14adb55fa5a7663a0662dec8f9916d21c094216f3\",\"subject\":{\"name\":\"Ib\",\"digest\":{\"sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\"},\"format\":\"mach-o\",\"architecture\":\"arm64\",\"local_path\":\"/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib\"},\"provider\":{\"id\":\"rea-artifact-graph\",\"name\":\"REA safe artifact graph provider\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis\",\"operation\":\"decode_interface_builder\",\"parameters\":{\"max_documents\":1,\"max_objects\":20000,\"max_connections\":40000},\"raw_result\":null,\"normalized_result\":{\"target_sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"documents\":[{\"relative_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"archive_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\",\"document_kind\":\"storyboard_scene\",\"object_count\":4,\"connection_count\":2,\"hierarchy_complete\":false}],\"graph\":{\"target_sha256\":\"efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920\",\"provider\":{\"id\":\"rea-artifact-graph\",\"version\":\"1\",\"tool_version\":\"rea-interface-builder/1\"},\"nodes\":[{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":root\",\"kind\":\"storyboard\",\"name\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"location\":null,\"attributes\":{\"document_kind\":\"storyboard_scene\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"compiled document\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"0\\\"]\",\"kind\":\"unknown\",\"name\":\"UINib\",\"location\":null,\"attributes\":{\"nibValues\":{},\"interface_builder_object_id\":\"0\",\"class_name\":\"UINib\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"object 0\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"1\\\"]\",\"kind\":\"view\",\"name\":\"UIView\",\"location\":null,\"attributes\":{\"nibValues\":{\"UISubviews\":{\"objectID\":\"6\"}},\"interface_builder_object_id\":\"1\",\"class_name\":\"UIView\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"object 1\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"2\\\"]\",\"kind\":\"control\",\"name\":\"Submit\",\"location\":null,\"attributes\":{\"nibValues\":{\"UISuperview\":{\"objectID\":\"1\"},\"UIAccessibilityLabel\":\"Submit\"},\"interface_builder_object_id\":\"2\",\"class_name\":\"UIButton\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"object 2\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"3\\\"]\",\"kind\":\"placeholder\",\"name\":\"IBFilesOwner\",\"location\":null,\"attributes\":{\"nibValues\":{\"UIProxiedObjectIdentifier\":\"IBFilesOwner\"},\"interface_builder_object_id\":\"3\",\"class_name\":\"UIProxyObject\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"object 3\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":action:[\\\"2:connection:0\\\"]\",\"kind\":\"action\",\"name\":\"submit:\",\"location\":null,\"attributes\":{\"selector\":\"submit:\",\"destination_id\":\"3\",\"type\":\"action\",\"destination-id\":\"3\",\"label\":\"submit:\",\"source_id\":\"2\",\"archive_object_id\":\"5\",\"ui_event_mask\":64},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"action 2:connection:0\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":selector:[\\\"3\\\",\\\"submit:\\\"]\",\"kind\":\"objc_selector\",\"name\":\"submit:\",\"location\":null,\"attributes\":{\"destination_id\":\"3\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"selector submit:\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":outlet:[\\\"3:connection:0\\\"]\",\"kind\":\"outlet\",\"name\":\"submitButton\",\"location\":null,\"attributes\":{\"type\":\"outlet\",\"destination-id\":\"2\",\"label\":\"submitButton\",\"source_id\":\"3\",\"archive_object_id\":\"4\"},\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"outlet 3:connection:0\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}]}],\"edges\":[{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":action-edge:[\\\"2:connection:0\\\",\\\"source\\\"]\",\"from\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"2\\\"]\",\"to\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":action:[\\\"2:connection:0\\\"]\",\"relation\":\"target_action\",\"resolution\":\"observed\",\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"action source 2\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}],\"limitations\":[]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":action-edge:[\\\"2:connection:0\\\",\\\"selector\\\"]\",\"from\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":action:[\\\"2:connection:0\\\"]\",\"to\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":selector:[\\\"3\\\",\\\"submit:\\\"]\",\"relation\":\"target_action\",\"resolution\":\"observed\",\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"selector submit:\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}],\"limitations\":[]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":action-edge:[\\\"2:connection:0\\\",\\\"destination\\\"]\",\"from\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":action:[\\\"2:connection:0\\\"]\",\"to\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"3\\\"]\",\"relation\":\"target_action\",\"resolution\":\"observed\",\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"action destination 3\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}],\"limitations\":[]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":outlet-edge:[\\\"3:connection:0\\\",\\\"source\\\"]\",\"from\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"3\\\"]\",\"to\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":outlet:[\\\"3:connection:0\\\"]\",\"relation\":\"contains\",\"resolution\":\"observed\",\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"outlet source 3\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}],\"limitations\":[]},{\"id\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":outlet-edge:[\\\"3:connection:0\\\",\\\"destination\\\"]\",\"from\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":outlet:[\\\"3:connection:0\\\"]\",\"to\":\"ib:\\\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\\\":object:[\\\"2\\\"]\",\"relation\":\"outlet_to\",\"resolution\":\"observed\",\"evidence\":[{\"kind\":\"interface_builder_resource\",\"description\":\"outlet submitButton\",\"location\":{\"address\":null,\"file_offset\":null},\"artifact_path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"artifact_sha256\":\"43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea\"}],\"limitations\":[]}],\"coverage\":[{\"facet\":\"objects:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"status\":\"complete\",\"reason\":null,\"examined\":4,\"omitted\":0},{\"facet\":\"connections:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"status\":\"complete\",\"reason\":null,\"examined\":2,\"omitted\":0},{\"facet\":\"hierarchy:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"status\":\"unsupported\",\"reason\":\"archive_hierarchy_not_decoded\",\"examined\":0,\"omitted\":0},{\"facet\":\"classes:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\",\"status\":\"complete\",\"reason\":null,\"examined\":8,\"omitted\":0},{\"facet\":\"archive_decode\",\"status\":\"partial\",\"reason\":\"document_limit_reached\",\"examined\":1,\"omitted\":7}],\"truncated\":true},\"limitations\":[\"The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.\",\"A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.\",\"Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.\",\"Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.\",\"Contents/Resources/Broken.nib: omitted because max documents.\",\"Contents/Resources/Empty.nib: omitted because max documents.\",\"Contents/Resources/Keyed.nib: omitted because max documents.\",\"Contents/Resources/Legacy.nib: omitted because max documents.\",\"Contents/Resources/LegacyBinary.nib: omitted because max documents.\",\"Contents/Resources/Main.storyboardc/Window.nib: omitted because max documents.\",\"Contents/Resources/Plain.nib: omitted because max documents.\"]},\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.\",\"A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.\",\"Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.\",\"Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.\",\"Contents/Resources/Broken.nib: omitted because max documents.\",\"Contents/Resources/Empty.nib: omitted because max documents.\",\"Contents/Resources/Keyed.nib: omitted because max documents.\",\"Contents/Resources/Legacy.nib: omitted because max documents.\",\"Contents/Resources/LegacyBinary.nib: omitted because max documents.\",\"Contents/Resources/Main.storyboardc/Window.nib: omitted because max documents.\",\"Contents/Resources/Plain.nib: omitted because max documents.\"],\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\"}],\"evidence_links\":[]}"
+   }
+  ],
+  "structuredContent": {
+   "evidence_id": "ev_d4fabd280f7a0b38c04632b14adb55fa5a7663a0662dec8f9916d21c094216f3",
+   "subject": {
+    "name": "Ib",
+    "digest": {
+     "sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920"
+    },
+    "format": "mach-o",
+    "architecture": "arm64",
+    "local_path": "/workspace/wt/native_static/fixtures/native_static/bundles/Ib.app/Contents/MacOS/Ib"
+   },
+   "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+   },
+   "analysis_profile": null,
+   "predicate_type": "rea.analysis",
+   "operation": "decode_interface_builder",
+   "parameters": {
+    "max_documents": 1,
+    "max_objects": 20000,
+    "max_connections": 40000
+   },
+   "raw_result": null,
+   "normalized_result": {
+    "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+    "documents": [
+     {
+      "relative_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+      "archive_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea",
+      "document_kind": "storyboard_scene",
+      "object_count": 4,
+      "connection_count": 2,
+      "hierarchy_complete": false
+     }
+    ],
+    "graph": {
+     "target_sha256": "efd44f66cd57b0d73d644c3101a7919a88cfba6ec555fb51eaacaf9032344920",
+     "provider": {
+      "id": "rea-artifact-graph",
+      "version": "1",
+      "tool_version": "rea-interface-builder/1"
+     },
+     "nodes": [
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":root",
+       "kind": "storyboard",
+       "name": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "location": null,
+       "attributes": {
+        "document_kind": "storyboard_scene"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "compiled document",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"0\"]",
+       "kind": "unknown",
+       "name": "UINib",
+       "location": null,
+       "attributes": {
+        "nibValues": {},
+        "interface_builder_object_id": "0",
+        "class_name": "UINib"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "object 0",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"1\"]",
+       "kind": "view",
+       "name": "UIView",
+       "location": null,
+       "attributes": {
+        "nibValues": {
+         "UISubviews": {
+          "objectID": "6"
+         }
+        },
+        "interface_builder_object_id": "1",
+        "class_name": "UIView"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "object 1",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"2\"]",
+       "kind": "control",
+       "name": "Submit",
+       "location": null,
+       "attributes": {
+        "nibValues": {
+         "UISuperview": {
+          "objectID": "1"
+         },
+         "UIAccessibilityLabel": "Submit"
+        },
+        "interface_builder_object_id": "2",
+        "class_name": "UIButton"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "object 2",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"3\"]",
+       "kind": "placeholder",
+       "name": "IBFilesOwner",
+       "location": null,
+       "attributes": {
+        "nibValues": {
+         "UIProxiedObjectIdentifier": "IBFilesOwner"
+        },
+        "interface_builder_object_id": "3",
+        "class_name": "UIProxyObject"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "object 3",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":action:[\"2:connection:0\"]",
+       "kind": "action",
+       "name": "submit:",
+       "location": null,
+       "attributes": {
+        "selector": "submit:",
+        "destination_id": "3",
+        "type": "action",
+        "destination-id": "3",
+        "label": "submit:",
+        "source_id": "2",
+        "archive_object_id": "5",
+        "ui_event_mask": 64
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "action 2:connection:0",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":selector:[\"3\",\"submit:\"]",
+       "kind": "objc_selector",
+       "name": "submit:",
+       "location": null,
+       "attributes": {
+        "destination_id": "3"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "selector submit:",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":outlet:[\"3:connection:0\"]",
+       "kind": "outlet",
+       "name": "submitButton",
+       "location": null,
+       "attributes": {
+        "type": "outlet",
+        "destination-id": "2",
+        "label": "submitButton",
+        "source_id": "3",
+        "archive_object_id": "4"
+       },
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "outlet 3:connection:0",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ]
+      }
+     ],
+     "edges": [
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":action-edge:[\"2:connection:0\",\"source\"]",
+       "from": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"2\"]",
+       "to": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":action:[\"2:connection:0\"]",
+       "relation": "target_action",
+       "resolution": "observed",
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "action source 2",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ],
+       "limitations": []
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":action-edge:[\"2:connection:0\",\"selector\"]",
+       "from": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":action:[\"2:connection:0\"]",
+       "to": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":selector:[\"3\",\"submit:\"]",
+       "relation": "target_action",
+       "resolution": "observed",
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "selector submit:",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ],
+       "limitations": []
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":action-edge:[\"2:connection:0\",\"destination\"]",
+       "from": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":action:[\"2:connection:0\"]",
+       "to": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"3\"]",
+       "relation": "target_action",
+       "resolution": "observed",
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "action destination 3",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ],
+       "limitations": []
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":outlet-edge:[\"3:connection:0\",\"source\"]",
+       "from": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"3\"]",
+       "to": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":outlet:[\"3:connection:0\"]",
+       "relation": "contains",
+       "resolution": "observed",
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "outlet source 3",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ],
+       "limitations": []
+      },
+      {
+       "id": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":outlet-edge:[\"3:connection:0\",\"destination\"]",
+       "from": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":outlet:[\"3:connection:0\"]",
+       "to": "ib:\"Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib\":object:[\"2\"]",
+       "relation": "outlet_to",
+       "resolution": "observed",
+       "evidence": [
+        {
+         "kind": "interface_builder_resource",
+         "description": "outlet submitButton",
+         "location": {
+          "address": null,
+          "file_offset": null
+         },
+         "artifact_path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+         "artifact_sha256": "43501e29c94ff1f8871e64ad4e000baf0281ab82a6011856f5d83d3ec233f7ea"
+        }
+       ],
+       "limitations": []
+      }
+     ],
+     "coverage": [
+      {
+       "facet": "objects:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "status": "complete",
+       "reason": null,
+       "examined": 4,
+       "omitted": 0
+      },
+      {
+       "facet": "connections:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "status": "complete",
+       "reason": null,
+       "examined": 2,
+       "omitted": 0
+      },
+      {
+       "facet": "hierarchy:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "status": "unsupported",
+       "reason": "archive_hierarchy_not_decoded",
+       "examined": 0,
+       "omitted": 0
+      },
+      {
+       "facet": "classes:Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib",
+       "status": "complete",
+       "reason": null,
+       "examined": 8,
+       "omitted": 0
+      },
+      {
+       "facet": "archive_decode",
+       "status": "partial",
+       "reason": "document_limit_reached",
+       "examined": 1,
+       "omitted": 7
+      }
+     ],
+     "truncated": true
+    },
+    "limitations": [
+     "The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.",
+     "A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.",
+     "Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.",
+     "Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.",
+     "Contents/Resources/Broken.nib: omitted because max documents.",
+     "Contents/Resources/Empty.nib: omitted because max documents.",
+     "Contents/Resources/Keyed.nib: omitted because max documents.",
+     "Contents/Resources/Legacy.nib: omitted because max documents.",
+     "Contents/Resources/LegacyBinary.nib: omitted because max documents.",
+     "Contents/Resources/Main.storyboardc/Window.nib: omitted because max documents.",
+     "Contents/Resources/Plain.nib: omitted because max documents."
+    ]
+   },
+   "confidence": "observed",
+   "authority": "shipped-artifact",
+   "environment": null,
+   "limitations": [
+    "The graph reflects recognized Interface Builder archive fields and connections; omitted private or unrecognized archive fields remain unknown.",
+    "A target-action selector is an Interface Builder observation and does not prove that the binary contains a matching implementation.",
+    "Decoded constraints, runtime visibility, dynamic UI creation, and pixel geometry are not inferred from these archives.",
+    "Compiled Interface Builder archives are private serialized object graphs. The decoder reports only recognized keyed-archive objects and connections; unrecognized object classes and fields remain unknown.",
+    "Contents/Resources/Broken.nib: omitted because max documents.",
+    "Contents/Resources/Empty.nib: omitted because max documents.",
+    "Contents/Resources/Keyed.nib: omitted because max documents.",
+    "Contents/Resources/Legacy.nib: omitted because max documents.",
+    "Contents/Resources/LegacyBinary.nib: omitted because max documents.",
+    "Contents/Resources/Main.storyboardc/Window.nib: omitted because max documents.",
+    "Contents/Resources/Plain.nib: omitted because max documents."
+   ],
+   "locations": [
+    {
+     "kind": "artifact-path",
+     "path": "Contents/Resources/Base.lproj/Mobile.storyboardc/View.nib"
+    }
+   ],
+   "evidence_links": []
+  }
+ }
+]
