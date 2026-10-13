@@ -15,7 +15,7 @@ version = "0.1.0"
 edition = "2021"
 license = "MIT"
 authors = ["Joao Rocha"]
-repository = "https://github.com/morluto/rea"
+repository = "https://github.com/Joao-Pedro-AI-Visionary/tracewise"
 
 [workspace.dependencies]
 serde = { version = "1.0", features = ["derive"] }

@@ -1,0 +1,11 @@
+# Content-addressed ids in test fixtures (sha256-derived, not credentials).
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "tracewise evidence and fixture ids"
+paths = ['''^fixtures/''']
+regexes = [
+  '''(ev|res|scr|unk)_[0-9a-f]{64}''',
+  '''[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}''',
+]
