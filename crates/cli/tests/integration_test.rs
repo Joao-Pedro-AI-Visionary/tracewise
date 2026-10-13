@@ -87,8 +87,8 @@ async fn test_mcp_stdio_lifecycle() {
         .expect("Expected tools array");
     assert_eq!(
         tools.len(),
-        52,
-        "Expected 50 REA tools plus infer_api_spec and generate_api_client"
+        172,
+        "Expected 170 REA tools plus infer_api_spec and generate_api_client"
     );
 
     let expected_names = [
@@ -151,7 +151,13 @@ async fn test_mcp_stdio_lifecycle() {
         .map(|t| t["name"].as_str().expect("Tool name must be string"))
         .collect();
 
-    assert_eq!(actual_names, expected_names);
+    // Phases 3-6 sit between the 50 ported REA tools and the tracewise tools.
+    let ported: Vec<&str> = actual_names[..50]
+        .iter()
+        .chain(actual_names[170..].iter())
+        .copied()
+        .collect();
+    assert_eq!(ported, expected_names);
 
     // 4. Send tools/call for binary_session
     let call_session_req = serde_json::json!({

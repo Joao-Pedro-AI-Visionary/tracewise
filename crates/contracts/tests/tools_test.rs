@@ -5,6 +5,7 @@ use tracewise_contracts::{
     all_tool_names, all_tools, all_tools_value, listed_tool_names, listed_tools, listed_tools_value,
     phase0_tool_names, phase0_tools, phase0_tools_value, phase1_tool_names, phase1_tools,
     phase1_tools_value, phase2_tool_names, phase2_tools, phase2_tools_value,
+    later_phase_tool_names, later_phase_tools_of,
 };
 
 fn fixture_path(name: &str) -> String {
@@ -74,11 +75,11 @@ fn test_tools_equal_fixtures() {
     assert_eq!(all_names, all_tool_names());
 
     let listed = listed_tools();
-    assert_eq!(listed.len(), 52);
+    assert_eq!(listed.len(), 172);
     let listed_names: Vec<&str> = listed.iter().map(|t| t.name.as_ref()).collect();
     assert_eq!(listed_names, listed_tool_names());
-    assert_eq!(listed_names[50], "infer_api_spec");
-    assert_eq!(listed_names[51], "generate_api_client");
+    assert_eq!(listed_names[170], "infer_api_spec");
+    assert_eq!(listed_names[171], "generate_api_client");
 
     let listed_val = listed_tools_value();
     let listed_arr = listed_val["tools"].as_array().expect("listed tools");
@@ -86,8 +87,38 @@ fn test_tools_equal_fixtures() {
         .as_array()
         .expect("rea tools")
         .clone();
-    assert_eq!(listed_arr.len(), 52);
+    assert_eq!(listed_arr.len(), 172);
     assert_eq!(&listed_arr[..50], rea_arr.as_slice());
+}
+
+#[test]
+fn later_phase_tools_equal_fixtures() {
+    let expected = [("phase3", 43), ("phase4", 14), ("phase5", 44), ("phase5b", 13), ("phase6", 6)];
+    let mut total = 0;
+    for (label, count) in expected {
+        let fixture: Value = serde_json::from_str(
+            &std::fs::read_to_string(fixture_path(&format!("{label}_tools.json"))).unwrap(),
+        )
+        .unwrap();
+        let tools = later_phase_tools_of(label);
+        assert_eq!(tools.len(), count, "{label}");
+        let contract: Value = serde_json::to_value(serde_json::json!({ "tools": tools })).unwrap();
+        assert_eq!(contract["tools"].as_array().unwrap().len(), fixture["tools"].as_array().unwrap().len());
+        total += count;
+    }
+    assert_eq!(total, 120);
+    assert_eq!(later_phase_tool_names().len(), 120);
+    let listed_val = listed_tools_value();
+    let listed_arr = listed_val["tools"].as_array().unwrap();
+    let mut later = Vec::new();
+    for (label, _) in expected {
+        let fixture: Value = serde_json::from_str(
+            &std::fs::read_to_string(fixture_path(&format!("{label}_tools.json"))).unwrap(),
+        )
+        .unwrap();
+        later.extend(fixture["tools"].as_array().unwrap().iter().cloned());
+    }
+    assert_eq!(&listed_arr[50..170], later.as_slice(), "phase 3-6 tools must be verbatim");
 }
 
 #[test]
@@ -113,17 +144,13 @@ fn test_tools_equal_head_tools_if_exists() {
         .and_then(|v| v.as_array())
         .expect("Expected tools array in head tools.json");
 
-    let contracts_val = all_tools_value();
+    let contracts_val = listed_tools_value();
     let contract_tools = contracts_val
         .get("tools")
         .and_then(|v| v.as_array())
         .expect("Expected tools array in contracts tools");
-
-    assert_eq!(
-        contract_tools.len(),
-        50,
-        "Expected 50 tools across Phase 0, Phase 1, and Phase 2"
-    );
+    let contract_tools = &contract_tools[..170];
+    assert_eq!(head_tools.len(), 170, "REA head exposes 170 tools");
 
     let head_map: std::collections::HashMap<&str, &Value> = head_tools
         .iter()

@@ -145,10 +145,13 @@ async fn execute_tool(
         "correlate_static_and_runtime" => {
             crate::reconstruction_handlers::handle_correlate_static_and_runtime(session, args)
         }
-        _ => Err(McpError::invalid_request(
-            format!("Unknown tool: '{name}'"),
-            None,
-        )),
+        _ => match crate::tracks::dispatch(session, name, args).await {
+            Some(result) => result,
+            None => Err(McpError::invalid_request(
+                format!("Unknown tool: '{name}'"),
+                None,
+            )),
+        },
     };
 
     if result.is_ok() {

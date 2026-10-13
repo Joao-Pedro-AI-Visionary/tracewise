@@ -5,6 +5,20 @@ pub const PHASE0_TOOLS_JSON: &str = include_str!("../phase0_tools.json");
 pub const PHASE1_TOOLS_JSON: &str = include_str!("../phase1_tools.json");
 pub const PHASE2_TOOLS_JSON: &str = include_str!("../phase2_tools.json");
 pub const TRACEWISE_TOOLS_JSON: &str = include_str!("../tracewise_tools.json");
+pub const PHASE3_TOOLS_JSON: &str = include_str!("../phase3_tools.json");
+pub const PHASE4_TOOLS_JSON: &str = include_str!("../phase4_tools.json");
+pub const PHASE5_TOOLS_JSON: &str = include_str!("../phase5_tools.json");
+pub const PHASE5B_TOOLS_JSON: &str = include_str!("../phase5b_tools.json");
+pub const PHASE6_TOOLS_JSON: &str = include_str!("../phase6_tools.json");
+
+/// Phases 3-6 in catalog order: (label, verbatim REA tools JSON).
+pub const LATER_PHASES: [(&str, &str); 5] = [
+    ("phase3", PHASE3_TOOLS_JSON),
+    ("phase4", PHASE4_TOOLS_JSON),
+    ("phase5", PHASE5_TOOLS_JSON),
+    ("phase5b", PHASE5B_TOOLS_JSON),
+    ("phase6", PHASE6_TOOLS_JSON),
+];
 
 #[derive(Debug, Deserialize)]
 struct ToolsContainer {
@@ -97,15 +111,16 @@ pub fn all_tools_value() -> serde_json::Value {
     serde_json::json!({ "tools": arr })
 }
 
-/// Returns the 50 REA tools plus tracewise-owned tools (52 with infer_api_spec and generate_api_client).
+/// Returns the 170 REA tools (phases 0-6) plus tracewise-owned tools (172 with infer_api_spec and generate_api_client).
 pub fn listed_tools() -> Vec<Tool> {
     let mut tools = all_tools();
+    tools.extend(later_phase_tools());
     tools.extend(tracewise_tools());
     tools
 }
 
 /// Returns the JSON catalog served by tools/list.
-/// The first 50 entries stay byte-identical to the REA tools.
+/// The first 170 entries stay byte-identical to the REA tools.
 pub fn listed_tools_value() -> serde_json::Value {
     let mut listed = all_tools_value();
     let extra = tracewise_tools_value();
@@ -113,6 +128,13 @@ pub fn listed_tools_value() -> serde_json::Value {
         .get_mut("tools")
         .and_then(|value| value.as_array_mut())
     {
+        for (_, raw) in LATER_PHASES {
+            let value: serde_json::Value =
+                serde_json::from_str(raw).expect("later phase tools JSON must be valid");
+            if let Some(later) = value.get("tools").and_then(|v| v.as_array()) {
+                arr.extend(later.iter().cloned());
+            }
+        }
         if let Some(extra_arr) = extra.get("tools").and_then(|value| value.as_array()) {
             arr.extend(extra_arr.iter().cloned());
         }
@@ -201,9 +223,42 @@ pub fn tracewise_tool_names() -> &'static [&'static str] {
     &["infer_api_spec", "generate_api_client"]
 }
 
-/// Names returned by tools/list: 50 REA tools, then tracewise-owned tools.
+/// Names returned by tools/list: 170 REA tools, then tracewise-owned tools.
 pub fn listed_tool_names() -> Vec<&'static str> {
     let mut names = all_tool_names();
+    names.extend(later_phase_tool_names());
     names.extend_from_slice(tracewise_tool_names());
     names
+}
+
+/// Tools of one later phase ("phase3", "phase4", "phase5", "phase5b", "phase6").
+pub fn later_phase_tools_of(label: &str) -> Vec<Tool> {
+    let (_, raw) = LATER_PHASES
+        .iter()
+        .find(|(name, _)| *name == label)
+        .unwrap_or_else(|| panic!("unknown phase {label}"));
+    let container: ToolsContainer =
+        serde_json::from_str(raw).expect("later phase tools JSON must deserialize to rmcp Tool definitions");
+    container.tools
+}
+
+/// The 120 REA tools of phases 3-6 in catalog order.
+pub fn later_phase_tools() -> Vec<Tool> {
+    LATER_PHASES
+        .iter()
+        .flat_map(|(label, _)| later_phase_tools_of(label))
+        .collect()
+}
+
+/// Names of the 120 phase 3-6 tools in catalog order.
+pub fn later_phase_tool_names() -> Vec<&'static str> {
+    static NAMES: std::sync::OnceLock<Vec<&'static str>> = std::sync::OnceLock::new();
+    NAMES
+        .get_or_init(|| {
+            later_phase_tools()
+                .into_iter()
+                .map(|tool| &*Box::leak(tool.name.to_string().into_boxed_str()))
+                .collect()
+        })
+        .clone()
 }

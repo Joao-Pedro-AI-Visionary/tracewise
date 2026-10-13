@@ -4,6 +4,7 @@ pub mod handlers;
 pub mod process_handlers;
 pub mod reconstruction_handlers;
 pub mod session;
+pub mod tracks;
 
 use rmcp::model::*;
 use rmcp::service::RequestContext;
