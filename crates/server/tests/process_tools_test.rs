@@ -16,9 +16,13 @@
 //!   (bucketed launch-to-output latency; node needs ~10 ms more than Rust)
 //! - `normalized_result.settlement.elapsed_ms` (settlement polling time)
 //! - `normalized_result.filesystem_checkpoints[1].at_ms` (time of the final snapshot)
+//! - `manifest.executable_sha256`, `manifest.selected_executable_sha256`,
+//!   `manifest.scenario.executable_sha256` and `manifest.full_scenario_sha256`:
+//!   they digest the host `/bin/sh`, which differs between hosts. Ours must
+//!   equal the real `/bin/sh` digest; the oracle's is the oracle host's.
 //!
 //! Everything else — scenario/contract/normalization commitments and their
-//! SHA-256s, the `/bin/sh` digest, exit, rendered lines and serialized xterm
+//! SHA-256s, exit, rendered lines and serialized xterm
 //! state, event journal order, truncation accounting, limitations and
 //! residual unknowns — must match the oracle exactly.
 
@@ -105,6 +109,22 @@ async fn capture_matches_rea_oracle_except_time_fields() {
     validate_schema("capture_process_scenario", &expected);
     strip_time_fields(&mut ours);
     strip_time_fields(&mut expected);
+    let host_sh = {
+        use sha2::{Digest, Sha256};
+        let bytes = std::fs::read(std::fs::canonicalize("/bin/sh").unwrap()).unwrap();
+        Value::String(hex::encode(Sha256::digest(bytes)))
+    };
+    let manifest = &ours["normalized_result"]["manifest"];
+    assert_eq!(manifest["executable_sha256"], host_sh);
+    assert_eq!(manifest["selected_executable_sha256"], host_sh);
+    assert_eq!(manifest["scenario"]["executable_sha256"], host_sh);
+    for evidence in [&mut ours, &mut expected] {
+        let manifest = &mut evidence["normalized_result"]["manifest"];
+        manifest["executable_sha256"] = Value::Null;
+        manifest["selected_executable_sha256"] = Value::Null;
+        manifest["scenario"]["executable_sha256"] = Value::Null;
+        manifest["full_scenario_sha256"] = Value::Null;
+    }
     assert_eq!(ours, expected);
 }
 

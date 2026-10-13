@@ -228,7 +228,19 @@ async fn test_trace_web_module_imports() {
     assert_eq!(norm["importer"], oracle_norm["importer"]);
     assert_eq!(norm["import_map"], oracle_norm["import_map"]);
     assert_eq!(norm["parser"], oracle_norm["parser"]);
-    assert_eq!(norm["engine"], oracle_norm["engine"]);
+    // engine.version is the host Chrome version (the oracle host ran Chrome 154),
+    // so it must equal the Chrome installed here; the engine id must match the oracle.
+    assert_eq!(norm["engine"]["id"], oracle_norm["engine"]["id"]);
+    let host_chrome = std::process::Command::new("google-chrome")
+        .arg("--version")
+        .output()
+        .ok()
+        .and_then(|out| String::from_utf8(out.stdout).ok())
+        .and_then(|text| text.split_whitespace().last().map(str::to_string));
+    match host_chrome {
+        Some(version) => assert_eq!(norm["engine"]["version"], Value::String(version)),
+        None => assert_eq!(norm["engine"], oracle_norm["engine"]),
+    }
     assert_eq!(norm["imports"], oracle_norm["imports"]);
     assert_eq!(norm["diagnostics"], oracle_norm["diagnostics"]);
     assert_eq!(norm["limitations"], oracle_norm["limitations"]);
@@ -251,7 +263,7 @@ async fn test_trace_web_module_imports() {
     assert_eq!(raw["native_report"], oracle_raw["native_report"]);
     assert_eq!(raw["requests"], oracle_raw["requests"]);
     assert_eq!(raw["diagnostics"], oracle_raw["diagnostics"]);
-    assert_eq!(raw["engine"], oracle_raw["engine"]);
+    assert_eq!(raw["engine"], norm["engine"], "raw and normalized engine must agree");
     assert_eq!(raw["executable_path"], oracle_raw["executable_path"]);
 
     // Verify ledger record
