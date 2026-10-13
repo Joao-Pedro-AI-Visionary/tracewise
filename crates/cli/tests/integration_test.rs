@@ -399,7 +399,7 @@ async fn test_mcp_progress() {
     std::fs::write(&temp_path, dummy_elf).unwrap();
 
     // 3. Send tools/call with progressToken
-    let progress_token = "progress-cli-1";
+    let progress_id = "progress-cli-1";
     let call_req = serde_json::json!({
         "jsonrpc": "2.0",
         "id": 10,
@@ -410,7 +410,7 @@ async fn test_mcp_progress() {
                 "path": temp_path.to_str().unwrap()
             },
             "_meta": {
-                "progressToken": progress_token
+                "progressToken": progress_id
             }
         }
     });
@@ -444,7 +444,7 @@ async fn test_mcp_progress() {
 
     // Verify progress tokens match
     for notif in &progress_notifs {
-        assert_eq!(notif["params"]["progressToken"], progress_token);
+        assert_eq!(notif["params"]["progressToken"], progress_id);
     }
 
     // Verify start (0.0) and end (1.0)
