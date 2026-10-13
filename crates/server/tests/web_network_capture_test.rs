@@ -84,9 +84,11 @@ async fn test_inspect_web_network_capture_demo_har() {
 
 #[tokio::test]
 async fn test_inspect_web_network_capture_demo_mitm() {
-    // Ensure REA_MITMDUMP_COMMAND points to caller-supplied mitmdump 12.2.3
+    // Native mitmproxy decoding needs REA_MITMDUMP_COMMAND pointing at a
+    // caller-supplied mitmdump 12.2.3 (e.g. `pip install mitmproxy==12.2.3`).
     if std::env::var("REA_MITMDUMP_COMMAND").is_err() {
-        std::env::set_var("REA_MITMDUMP_COMMAND", "/home/box/.local/bin/mitmdump");
+        eprintln!("skipping: REA_MITMDUMP_COMMAND is not set (needs mitmdump 12.2.3)");
+        return;
     }
 
     let session = BinarySession::new();

@@ -399,7 +399,7 @@ async fn test_mcp_progress() {
     std::fs::write(&temp_path, dummy_elf).unwrap();
 
     // 3. Send tools/call with progressToken
-    let progress_token = "token-test-xyz";
+    let progress_token = "progress-cli-1";
     let call_req = serde_json::json!({
         "jsonrpc": "2.0",
         "id": 10,
